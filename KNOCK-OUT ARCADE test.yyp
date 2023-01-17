@@ -67,6 +67,7 @@
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
     {"id":{"name":"sHurtbox","path":"sprites/sHurtbox/sHurtbox.yy",},"order":8,},
+    {"id":{"name":"oJsonImport","path":"objects/oJsonImport/oJsonImport.yy",},"order":6,},
     {"id":{"name":"sComboCounter_Numbers","path":"sprites/sComboCounter_Numbers/sComboCounter_Numbers.yy",},"order":1,},
     {"id":{"name":"sScrollStageTest","path":"sprites/sScrollStageTest/sScrollStageTest.yy",},"order":0,},
     {"id":{"name":"oMenuManager","path":"objects/oMenuManager/oMenuManager.yy",},"order":1,},
