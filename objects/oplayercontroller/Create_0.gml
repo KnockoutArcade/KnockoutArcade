@@ -1,11 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Determines which player port this object is using (Player 1, Player 2, etc)
 playerID = 1;
+
 // Movment Variables
-hsp = 0;
+hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
-vsp = 0;
+vsp = 0; // Verticle speed
 walkSpeed = 1.5; // How fast the character walks in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
@@ -18,8 +20,7 @@ grounded = true;
 // Controller Controls
 controller = -1;
 
-// Keyboard Controls
-
+// Unused Buffer Variables
 buffer = 0;
 bufferTimer = 0;
 
@@ -63,9 +64,9 @@ enum eState {
 }
 
 enum eAttackType {
-	HIGH,
-	MID,
-	LOW,
+	HIGH, // Must be stand blocking
+	MID, // Block high or low
+	LOW, // Must Block Crouching
 	GRAB
 }
 
@@ -81,11 +82,13 @@ CharacterSprites = {
 	knockdown_Sprite : sRussel_KnockedDown,
 }
 
+// State-related Variables
 state = eState.IDLE;
 prevState = 0;
 inAttackState = false;
 canTurnAround = true;
 
+// Intro
 hasPerformedIntro = true;
 
 opponent = noone;

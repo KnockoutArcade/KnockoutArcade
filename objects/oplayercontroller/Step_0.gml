@@ -57,9 +57,6 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-// Buffer System
-
-buffer = attack;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
