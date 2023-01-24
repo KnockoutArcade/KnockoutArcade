@@ -82,6 +82,9 @@ CharacterSprites = {
 	knockdown_Sprite : sRussel_KnockedDown,
 }
 
+// Which Character we are currently playing as
+selectedCharacter = global.stRusselMoves;
+
 // State-related Variables
 state = eState.IDLE;
 prevState = 0;
