@@ -3,7 +3,7 @@
 
 // Russel Vars
 global.stRusselMoves = {
-	stRusselStandLight : {
+	StandLight : {
 		spriteID : sRussel_Standing_Light,
 		numOfWindows : 4,
 		
@@ -56,7 +56,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselStandLight2 : {
+	StandLight2 : {
 		spriteID : sRussel_Standing_Light2,
 		numOfWindows : 4,
 		
@@ -109,7 +109,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselStandLight3 : {
+	StandLight3 : {
 		spriteID : sRussel_Standing_Light3,
 		numOfWindows : 4,
 		
@@ -162,7 +162,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselStandMedium : {
+	StandMedium : {
 		spriteID : sRussel_Standing_Medium,
 		numOfWindows : 6,
 		
@@ -215,7 +215,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselStandHeavy : {
+	StandHeavy : {
 		spriteID : sRussel_Standing_Heavy,
 		numOfWindows : 7,
 		
@@ -268,7 +268,7 @@ global.stRusselMoves = {
 		
 	},
 		
-	stRusselCrouchingLight : {
+	CrouchingLight : {
 		spriteID : sRussel_Crouching_Light,
 		numOfWindows : 3,
 		
@@ -321,7 +321,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselCrouchingMedium : {
+	CrouchingMedium : {
 		spriteID : sRussel_Crouching_Medium,
 		numOfWindows : 10,
 		
@@ -374,7 +374,7 @@ global.stRusselMoves = {
 		
 	},
 		
-	stRusselCrouchingHeavy : {
+	CrouchingHeavy : {
 		spriteID : sRussel_Crouching_Heavy,
 		numOfWindows : 10,
 		
@@ -427,7 +427,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselJumpingLight : {
+	JumpingLight : {
 		spriteID : sRussel_Jumping_Light,
 		numOfWindows : 2,
 		
@@ -480,7 +480,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselJumpingMedium : {
+	JumpingMedium : {
 		spriteID : sRussel_Jumping_Medium,
 		numOfWindows : 6,
 		
@@ -533,7 +533,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselJumpingHeavy : {
+	JumpingHeavy : {
 		spriteID : sRussel_Jumping_Heavy,
 		numOfWindows : 6,
 		
@@ -586,7 +586,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselGrab : {
+	Grab : {
 		spriteID : sRussel_Grab,
 		numOfWindows : 5,
 		
@@ -642,7 +642,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselForwardThrow : {
+	ForwardThrow : {
 		spriteID : sRussel_ForwardThrow,
 		numOfWindows : 9,
 		
@@ -708,7 +708,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselBackwardThrow : {
+	BackwardThrow : {
 		spriteID : sRussel_BackwardThrow,
 		numOfWindows : 10,
 		
@@ -774,7 +774,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselNeutralSpecial : {
+	NeutralSpecial : {
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
@@ -833,7 +833,7 @@ global.stRusselMoves = {
 		
 	},
 	
-	stRusselSideSpecial : {
+	SideSpecial : {
 		spriteID : sRussel_SideSpecial,
 		numOfWindows : 11,
 		
