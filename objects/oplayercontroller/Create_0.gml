@@ -77,9 +77,20 @@ enum eSpritesToUse {
 }
 
 CharacterSprites = {
+	idle_Sprite : sRussel_Idle,
+	crouch_Sprite : sRussel_Crouch,
+	standBlock_Sprite : sRussel_Block,
+	crouchBlock_Sprite : sRussel_Crouch_Block,
+	walkForward_Sprite : sRussel_Walk_Forward,
+	walkBackward_Sprite : sRussel_Walk_Backward,
+	jumpsquat_Sprite : sRussel_Jumpsquat,
+	jump_Sprite : sRussel_Jump,
 	hurt_Sprite : sRussel_Hurt,
 	grab_Sprite : sRussel_Grab,
+	hold_Sprite : sRussel_Hold,
+	launched_Sprite : sRussel_Launched,
 	knockdown_Sprite : sRussel_KnockedDown,
+	getup_Sprite : sRussel_Getup,
 }
 
 // Which Character we are currently playing as

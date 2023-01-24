@@ -75,7 +75,7 @@ if state == eState.IDLE {
 	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
-	sprite_index = sRussel_Idle;
+	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
 	
 	if (movedir != 0) state = eState.WALKING;
@@ -94,7 +94,7 @@ if state == eState.IDLE {
 if state == eState.CROUCHING {
 	animTimer = 0;
 	cancelable = false;
-	sprite_index = sRussel_Crouch;
+	sprite_index = CharacterSprites.crouch_Sprite;
 	image_speed = 1;
 	//grounded = true;
 	frameAdvantage = false;
@@ -168,8 +168,8 @@ if state == eState.HITSTOP {
 			}
 		}
 		if blockstun > 0 {
-			if isCrouchBlocking sprite_index = sRussel_Crouch_Block;
-			else sprite_index = sRussel_Block; // Set Crouching Anim
+			if isCrouchBlocking sprite_index = CharacterSprites.crouchBlock_Sprite;
+			else sprite_index = CharacterSprites.standBlock_Sprite; // Set Crouching Anim
 			FAvictim = true;
 			
 			if hitstunShuffleTimer mod 2 = 1 shuffle++;
@@ -221,9 +221,9 @@ switch state {
 		grounded = true;
 		isShortHopping = false;
 		
-		if (movedir = image_xscale) sprite_index = sRussel_Walk_Forward;
+		if (movedir = image_xscale) sprite_index = CharacterSprites.walkForward_Sprite;
 		else {
-			sprite_index = sRussel_Walk_Backward;
+			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
 		}
 		image_speed = 1;
@@ -250,7 +250,7 @@ switch state {
 	
 	case eState.JUMPSQUAT: {
 		cancelable = false;
-		sprite_index = sRussel_Jumpsquat;
+		sprite_index = CharacterSprites.jumpsquat_Sprite;
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
@@ -277,7 +277,7 @@ switch state {
 	case eState.JUMPING: {
 		animTimer = 0;
 		cancelable = false;
-		sprite_index = sRussel_Jump;
+		sprite_index = CharacterSprites.jump_Sprite;
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
@@ -583,7 +583,7 @@ switch state {
 		inAttackState = true;
 		
 		
-		sprite_index = sRussel_Hold;
+		sprite_index = CharacterSprites.hold_Sprite;
 		
 		// Transition to a throw
 		if animTimer > 4 {
@@ -596,8 +596,8 @@ switch state {
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
 				with ThrowDistance {
 					owner = other.id;
-					image_xscale = selectedCharacter.ForwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
-					throwToCheck = selectedCharacter.ForwardThrow;
+					image_xscale = other.selectedCharacter.ForwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.ForwardThrow;
 				}
 			} else {
 				state = eState.BACKWARD_THROW;
@@ -608,8 +608,8 @@ switch state {
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
 				with ThrowDistance {
 					owner = other.id;
-					image_xscale = selectedCharacter.BackwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
-					throwToCheck = selectedCharacter.BackwardThrow;
+					image_xscale = other.selectedCharacter.BackwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.BackwardThrow;
 				}
 			}
 		}
@@ -661,7 +661,7 @@ switch state {
 		if animTimer > 58 {
 			state = eState.IDLE;
 			frameAdvantage = true;
-			sprite_index = sRussel_Idle;
+			sprite_index = CharacterSprites.idle_Sprite;
 			x -= 22 * image_xscale;
 		}
 	}
@@ -705,7 +705,7 @@ switch state {
 		}
 		
 		if grounded {
-			sprite_index = sRussel_Hurt;
+			sprite_index = CharacterSprites.hurt_Sprite;
 			if knockbackVel > 0 {
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel--;
@@ -714,7 +714,7 @@ switch state {
 				knockbackVel = 0;
 			}
 		} else {
-			sprite_index = sRussel_Launched;
+			sprite_index = CharacterSprites.launched_Sprite;
 			if image_index > (image_number - 1) image_speed = 0;
 			else image_speed = 1;
 		}
@@ -728,7 +728,7 @@ switch state {
 	
 	case eState.LAUNCHED : {
 		animTimer = 1;
-		sprite_index = sRussel_Launched;
+		sprite_index = CharacterSprites.launched_Sprite;
 			if image_index > (image_number - 1) image_speed = 0;
 			else image_speed = 1;
 		cancelable = false;
@@ -760,7 +760,7 @@ switch state {
 		if animTimer > 39 {
 			state = eState.GETUP;
 			animTimer = 0;
-			sprite_index = sRussel_Getup;
+			sprite_index = CharacterSprites.getup_Sprite;
 			image_index = 0;
 		}
 	}
@@ -792,8 +792,8 @@ switch state {
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
-		if isCrouchBlocking sprite_index = sRussel_Crouch_Block;
-		else sprite_index = sRussel_Block;
+		if isCrouchBlocking sprite_index = CharacterSprites.crouchBlock_Sprite;
+		else sprite_index = CharacterSprites.standBlock_Sprite;
 		grounded = true;
 		
 		if attack > 0 blockbuffer = true;
@@ -982,7 +982,7 @@ if state != eState.HITSTOP {
 		}
 		if state == eState.LAUNCHED {
 			state = eState.KNOCKED_DOWN;
-			sprite_index = sRussel_KnockedDown;
+			sprite_index = CharacterSprites.knockdown_Sprite;
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
@@ -1003,5 +1003,5 @@ if !inAttackState && canTurnAround{
 }
 else {
 	image_speed = 0;
-	if hitstun > 0 sprite_index = sRussel_Hurt; 
+	if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite; 
 }
