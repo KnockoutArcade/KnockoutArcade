@@ -14,6 +14,7 @@ fallSpeed = .25; // How fast a character falls
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
 jumpHsp = 0; // How much momentum the player is carrying with their jump
+isJumpingForward = false; // Whether the player approaching the opponent with their jump or not.
 movedir = 0;
 verticalMoveDir = 0;
 grounded = true;

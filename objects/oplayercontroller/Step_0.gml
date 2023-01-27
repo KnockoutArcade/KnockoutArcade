@@ -83,6 +83,9 @@ if state == eState.IDLE {
 	if verticalMoveDir == 1 {
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
+		// Is the player jumping forward?
+		if movedir = image_xscale isJumpingForward = true;
+		else isJumpingForward = false;
 	} else if verticalMoveDir == -1 {
 		state = eState.CROUCHING;
 	}
@@ -241,6 +244,9 @@ switch state {
 		if verticalMoveDir == 1 {
 			state = eState.JUMPSQUAT;
 			hsp = walkSpeed * movedir;
+			// Is the player jumping forward?
+			if movedir = image_xscale isJumpingForward = true;
+			else isJumpingForward = false;
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
 		}
@@ -288,6 +294,8 @@ switch state {
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		
+		if isJumpingForward superMeter += meterBuildRate;
 		
 		hsp = jumpHsp;
 		if !isShortHopping vsp += fallSpeed;
@@ -978,6 +986,7 @@ if state != eState.HITSTOP {
 	if place_meeting(x, y+vsp+fallSpeed, oWall) {
 		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) y += sign(vsp);
 		
+		isJumpingForward = false;
 		jumpHsp = 0;
 		vsp = 0;
 		if !grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL{
