@@ -49,6 +49,22 @@ function SetupGame(){
 	TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
 	global.gameTimer = 99;
 	
+	// Create Super Meter UI
+		// Player 1
+	p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
+	with p1SuperMeter {
+		owner = other.p1;
+		ui_xOffset = x;
+	}
+		// Player 2
+	p2SuperMeter = instance_create_layer(97, 106, "UI", oSuperMeterUI);
+	with p2SuperMeter {
+		owner = other.p2;
+		ui_xOffset = x;
+		meterDir = 1;
+		sprite_index = sSuperMeterP2;
+	}
+	
 	frameAdvantage = 0;
 	calculateFrameData = false;
 	

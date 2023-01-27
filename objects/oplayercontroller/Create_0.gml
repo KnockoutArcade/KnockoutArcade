@@ -155,5 +155,8 @@ comboCounterID = noone;
 startCombo = false;
 cancelCombo = false;
 
+//Meter Related Variables
+superMeter = 0;
+
 // Palette Init
 PaletteSetup(0, global.RusselPalettes);
