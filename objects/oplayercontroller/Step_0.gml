@@ -82,6 +82,7 @@ if state == eState.IDLE {
 	
 	if verticalMoveDir == 1 {
 		state = eState.JUMPSQUAT;
+		hsp = walkSpeed * movedir;
 	} else if verticalMoveDir == -1 {
 		state = eState.CROUCHING;
 	}
@@ -221,7 +222,10 @@ switch state {
 		grounded = true;
 		isShortHopping = false;
 		
-		if (movedir = image_xscale) sprite_index = CharacterSprites.walkForward_Sprite;
+		if (movedir = image_xscale) {
+			sprite_index = CharacterSprites.walkForward_Sprite;
+			superMeter += meterBuildRate; // Walking forwards builds meter
+		}
 		else {
 			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
@@ -236,6 +240,7 @@ switch state {
 		// Handle Jumping And Crouching
 		if verticalMoveDir == 1 {
 			state = eState.JUMPSQUAT;
+			hsp = walkSpeed * movedir;
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
 		}
@@ -255,7 +260,7 @@ switch state {
 		grounded = true;
 		isShortHopping = false;
 		
-		hsp = walkSpeed * movedir;
+		
 		
 		if animTimer > 4 {
 			state = eState.JUMPING;
@@ -263,10 +268,12 @@ switch state {
 			if verticalMoveDir == 1 {
 				vsp = -jumpSpeed;
 				isShortHopping = false;
+				jumpHsp = hsp;
 			}
 			else {
 				vsp = -(jumpSpeed * 0.75);
 				isShortHopping = true;
+				jumpHsp = hsp;
 			}
 		}
 		
@@ -282,6 +289,7 @@ switch state {
 		grounded = false;
 		canTurnAround = false;
 		
+		hsp = jumpHsp;
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
 		
@@ -970,6 +978,7 @@ if state != eState.HITSTOP {
 	if place_meeting(x, y+vsp+fallSpeed, oWall) {
 		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) y += sign(vsp);
 		
+		jumpHsp = 0;
 		vsp = 0;
 		if !grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL{
 			state = eState.IDLE;

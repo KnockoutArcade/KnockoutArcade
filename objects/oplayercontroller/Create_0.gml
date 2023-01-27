@@ -13,6 +13,7 @@ jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
+jumpHsp = 0; // How much momentum the player is carrying with their jump
 movedir = 0;
 verticalMoveDir = 0;
 grounded = true;
@@ -156,7 +157,8 @@ startCombo = false;
 cancelCombo = false;
 
 //Meter Related Variables
-superMeter = 0;
+superMeter = 0; // the amount of meter the player has
+meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 
 // Palette Init
 PaletteSetup(0, global.RusselPalettes);
