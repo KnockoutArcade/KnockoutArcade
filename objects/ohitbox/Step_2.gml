@@ -97,6 +97,10 @@ if collisionCheck {
 					collision_list[| i].owner.isCrouchBlocking = false;
 				}
 				
+				// Meter Build - P1 gets 75% meter, P2 gets 50%
+				collision_list[| i].owner.superMeter += floor(attackProperty.meterGain[hitboxID] * 0.5);
+				owner.superMeter += floor(attackProperty.meterGain[hitboxID] * 0.75);
+				
 				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
 				owner.pushbackVel = attackProperty.pushback[hitboxID];
 				hasHit = true;
@@ -134,6 +138,10 @@ if collisionCheck {
 				
 				collision_list[| i].owner.hp -= attackProperty.damage[hitboxID];
 				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
+				
+				// Meter Build - P1 gets 100% meter, P2 gets 25%
+				collision_list[| i].owner.superMeter += floor(attackProperty.meterGain[hitboxID] * 0.25);
+				owner.superMeter += floor(attackProperty.meterGain[hitboxID]);
 				
 				if collision_list[| i].owner.grounded == false {
 					collision_list[| i].owner.vsp = attackProperty.airKnockbackV[hitboxID];
