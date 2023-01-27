@@ -44,6 +44,10 @@ if collisionCheck {
 				collision_list[| i].owner.hsp = -2 * collision_list[| i].owner.image_xscale;
 				collision_list[| i].owner.animTimer = 0;
 				
+				// Meter Build - Both players get some meter
+				collision_list[| i].owner.superMeter += 5;
+				owner.superMeter += 5;
+				
 				hasHit = true;
 			} else
 			// Grabbing
