@@ -1,0 +1,336 @@
+{
+  "Name": "Russel",
+  "BaseSprite": "sRussel_Idle",
+  "BaseColor": {
+    "UID": "6c88c9ad-404e-4045-906c-0fba9e8f0eb4",
+    "Name": "Base Palette",
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 255,
+        "Blue": 100,
+        "Green": 137
+      },
+      {
+        "Red": 255,
+        "Blue": 62,
+        "Green": 56
+      },
+      {
+        "Red": 199,
+        "Blue": 117,
+        "Green": 62
+      },
+      {
+        "Red": 92,
+        "Blue": 52,
+        "Green": 43
+      },
+      {
+        "Red": 19,
+        "Blue": 159,
+        "Green": 86
+      },
+      {
+        "Red": 28,
+        "Blue": 66,
+        "Green": 6
+      },
+      {
+        "Red": 247,
+        "Blue": 255,
+        "Green": 255
+      },
+      {
+        "Red": 178,
+        "Blue": 213,
+        "Green": 197
+      },
+      {
+        "Red": 122,
+        "Blue": 51,
+        "Green": 62
+      },
+      {
+        "Red": 255,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 30,
+        "Blue": 28,
+        "Green": 16
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 255
+      },
+      {
+        "Red": 237,
+        "Blue": 156,
+        "Green": 203
+      },
+      {
+        "Red": 171,
+        "Blue": 80,
+        "Green": 124
+      },
+      {
+        "Red": 247,
+        "Blue": 255,
+        "Green": 255
+      },
+      {
+        "Red": 255,
+        "Blue": 255,
+        "Green": 0
+      }
+    ]
+  },
+  "NumberOfPalettes": 2,
+  "Palettes": [
+    {
+      "UID": "8a186ab3-015e-46a2-9951-bc194eb819ae",
+      "Name": "Blue",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 37,
+          "Blue": 184,
+          "Green": 128
+        },
+        {
+          "Red": 37,
+          "Blue": 165,
+          "Green": 78
+        },
+        {
+          "Red": 32,
+          "Blue": 117,
+          "Green": 35
+        },
+        {
+          "Red": 15,
+          "Blue": 46,
+          "Green": 4
+        },
+        {
+          "Red": 107,
+          "Blue": 24,
+          "Green": 83
+        },
+        {
+          "Red": 64,
+          "Blue": 8,
+          "Green": 32
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 248,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 255,
+          "Blue": 255,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "3c97c614-d777-4292-8e4c-c89202efe0ba",
+      "Name": "Yellow",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 227,
+          "Blue": 96,
+          "Green": 224
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 185,
+          "Blue": 60,
+          "Green": 93
+        },
+        {
+          "Red": 86,
+          "Blue": 41,
+          "Green": 62
+        },
+        {
+          "Red": 111,
+          "Blue": 28,
+          "Green": 37
+        },
+        {
+          "Red": 59,
+          "Blue": 17,
+          "Green": 4
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 255,
+          "Blue": 255,
+          "Green": 0
+        }
+      ]
+    }
+  ],
+  "MoveData": [
+    {
+      "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
+      "MoveType": 5,
+      "SpriteName": "sRussel_Standing_Light",
+      "NumberOfFrames": 4,
+      "FrameData": [
+        {
+          "Length": 1,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 3,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 5,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 7,
+          "ImageIndex": 3
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 3,
+          "Lifetime": 4,
+          "AttackWidth": 15,
+          "AttackHeight": 5,
+          "WidthOffset": 12,
+          "HeightOffset": 15,
+          "Group": 1,
+          "Damage": 3,
+          "AttackHitStop": 6,
+          "AttackHitStun": 9,
+          "AttackType": 1,
+          "BlockStun": 3,
+          "KnockBack": 2,
+          "AirKnockbackVertical": 0,
+          "AirKnockbackHorizontal": 1,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0,
+          "LaunchKnockbackHorizontal": 0,
+          "Pushback": 2,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "sSmallHitspark",
+          "ParticleDuration": 5,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0
+        }
+      ],
+      "IsThrow": false,
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 3,
+          "Lifetime": 6,
+          "AttackWidth": 20,
+          "AttackHeight": 6,
+          "WidthOffset": 4,
+          "HeightOffset": 12
+        }
+      ]
+    }
+  ]
+}
