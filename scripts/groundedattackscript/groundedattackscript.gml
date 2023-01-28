@@ -15,6 +15,7 @@ function GroundedAttackScript(moveToDo, onGround, duration, canWalkCancel, walkC
 		hsp = 0;
 	}
 	
+	// Redundant
 	if canWalkCancel {
 		if (animTimer > walkCancelDuration && movedir != 0) {
 			state = eState.WALKING;
