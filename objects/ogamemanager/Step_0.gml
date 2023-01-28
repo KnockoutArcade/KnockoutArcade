@@ -9,13 +9,7 @@ if p1.hp == 0 || p2.hp == 0 {
 	gameHaltTimer++;
 	
 	if gameHaltTimer == 90 {
-		instance_destroy(oPlayerController);
-		instance_destroy(oHitbox);
-		instance_destroy(oPlayerHurtbox);
-		instance_destroy(oHealthbar);
-		instance_destroy(oTimer);
-		
-		instance_destroy(global.camObj);
+		ResetGame();
 		
 		SetupGame();
 		
@@ -40,13 +34,7 @@ if global.gameTimer == 0 {
 	gameHaltTimer++;
 	
 	if gameHaltTimer == 90 {
-		instance_destroy(oPlayerController);
-		instance_destroy(oHitbox);
-		instance_destroy(oPlayerHurtbox);
-		instance_destroy(oHealthbar);
-		instance_destroy(oTimer);
-		
-		instance_destroy(global.camObj);
+		ResetGame();
 		
 		SetupGame();
 		
