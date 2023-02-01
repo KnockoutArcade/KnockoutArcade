@@ -139,6 +139,10 @@ if collisionCheck {
 				collision_list[| i].owner.state = eState.HITSTOP; // Set the victim's state to hitstop
 				collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 				
+				// Combo Scaling
+				owner.combo++;
+				if owner.combo == 2 owner.startCombo = true;
+				var damageScaling = 
 				
 				collision_list[| i].owner.hp -= attackProperty.damage[hitboxID];
 				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
@@ -172,9 +176,7 @@ if collisionCheck {
 				owner.depth = -1;
 				collision_list[| i].owner.depth = 0;
 				
-				// Combos
-				owner.combo++;
-				if owner.combo == 2 owner.startCombo = true;
+				
 
 				// Reset Frame Advantage Counter
 				oGameManager.frameAdvantage = 0;

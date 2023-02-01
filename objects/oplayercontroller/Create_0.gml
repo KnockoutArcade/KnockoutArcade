@@ -152,8 +152,10 @@ FAvictim = false;
 
 heldOpponent = noone;
 
+// Combo Related Variables
 combo = 0;
 comboCounterID = noone;
+comboScaling = 0; // How much the next hit will be scaled
 startCombo = false;
 cancelCombo = false;
 

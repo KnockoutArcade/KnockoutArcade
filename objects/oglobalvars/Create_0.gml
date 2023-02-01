@@ -23,6 +23,7 @@ global.stRusselMoves = {
 			
 			damage : [3],
 			meterGain : [4],
+			comboScaleing : [2],
 			attackHitstop : [6],
 			attackHitstun : [9],
 			attackType : [eAttackType.MID],

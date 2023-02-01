@@ -910,8 +910,7 @@ if opponent.cancelCombo {
 	opponent.cancelCombo = false;
 	
 	if combo > 1 && comboCounterID != noone{
-	comboCounterID.endCombo = true;
-	
+		comboCounterID.endCombo = true;
 	}
 	
 	combo = 0;
