@@ -914,6 +914,7 @@ if opponent.cancelCombo {
 	}
 	
 	combo = 0;
+	comboScaling = 0;
 	comboCounterID = noone;
 }
 
