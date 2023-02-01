@@ -145,7 +145,7 @@ if collisionCheck {
 				var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 				scaleAmount = max(scaleAmount, ScalingMinimum);
 				
-				if owner.combo > 2 scaledDamage -= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
+				if owner.combo > 2 scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
 				scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 				scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
 				owner.comboScaling += attackProperty.comboScaling[hitboxID]; // increase the level of scaling for the combo
