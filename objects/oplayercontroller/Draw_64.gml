@@ -13,7 +13,7 @@ if playerID == 1 {
 	draw_text(20, 30, hitstun);
 	draw_text(20, 50, hp);
 	draw_text(20, 70, combo);
-	draw_text(20, 90, comboScaling);
+	draw_text(20, 90, 1 - (.1 * comboScaling));
 } else {
 	draw_set_alpha(.5);
 	draw_set_color(c_black);
@@ -25,7 +25,7 @@ if playerID == 1 {
 	draw_text(750, 30, hitstun);
 	draw_text(750, 50, hp);
 	draw_text(750, 70, combo);
-	draw_text(750, 90, comboScaling);
+	draw_text(750, 90, 1 - (.1 * comboScaling));
 }
 
 	if hitstun > 0 draw_text(400, 550, "TRUE COMBO");
