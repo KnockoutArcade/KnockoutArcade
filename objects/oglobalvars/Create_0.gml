@@ -186,7 +186,7 @@ global.stRusselMoves = {
 			heightOfset : [12],
 			group : [1],
 			
-			damage: [10],
+			damage: [6],
 			meterGain : [6],
 			comboScaling : [1],
 			attackHitstop : [11],
@@ -241,7 +241,7 @@ global.stRusselMoves = {
 			heightOfset : [0],
 			group : [1],
 			
-			damage: [20],
+			damage: [14],
 			meterGain : [10],
 			comboScaling : [1],
 			attackHitstop : [18], 
