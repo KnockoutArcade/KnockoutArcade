@@ -19,7 +19,7 @@ if p1.hp == 0 || p2.hp == 0 {
 	if gameHaltTimer == 1 {
 		if p1.hp > 0 global.p1Rounds++;
 		if p2.hp > 0 global.p2Rounds++;
-		var particle = instance_create_layer(0, 0, "KO_Text", oParticles);
+		var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 		with particle {
 		sprite_index = sKOText;
 		image_index = true;
@@ -56,7 +56,7 @@ if global.gameTimer == 0 {
 // handle intros
 if p1.hasPerformedIntro && p2.hasPerformedIntro && global.hasCompletedIntros == false {
 	global.hasCompletedIntros = true;
-	var particle = instance_create_layer(0, 0, "Particles", oParticles);
+	var particle = instance_create_layer(80, 0, "Particles", oParticles);
 	with particle {
 		sprite_index = sRound1Start;
 		lifetime = 110;

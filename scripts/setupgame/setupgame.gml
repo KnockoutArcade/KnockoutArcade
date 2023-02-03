@@ -77,7 +77,7 @@ function SetupGame(){
 	gameHaltTimer = 0;
 	
 	if global.hasCompletedIntros == true {
-		var particle = instance_create_layer(0, 0, "Particles", oParticles);
+		var particle = instance_create_layer(80, 0, "Particles", oParticles);
 		with particle {
 			sprite_index = sRound1Start;
 			lifetime = 110;
