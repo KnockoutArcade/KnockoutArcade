@@ -1,8 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame(){
-	p1 = instance_create_layer(32, 104, "Instances", oPlayerController);
-	p2 = instance_create_layer(128, 104, "Instances", oPlayerController);
+	if room != rStageArcade {
+		p1 = instance_create_layer(104, 104, "Instances", oPlayerController);
+		p2 = instance_create_layer(216, 104, "Instances", oPlayerController);
+	} else {
+		p1 = instance_create_layer(32, 104, "Instances", oPlayerController);
+		p2 = instance_create_layer(128, 104, "Instances", oPlayerController);
+	}
 	
 	// Setup Camera
 	global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
