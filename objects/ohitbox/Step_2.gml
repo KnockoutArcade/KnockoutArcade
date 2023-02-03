@@ -139,8 +139,20 @@ if collisionCheck {
 				collision_list[| i].owner.state = eState.HITSTOP; // Set the victim's state to hitstop
 				collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 				
+				// Combo Scaling
+				owner.combo++; // Add 1 to our combo length
+				var scaledDamage = attackProperty.damage[hitboxID]; // Set the initial amount of damage to do
+				var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
+				scaleAmount = max(scaleAmount, ScalingMinimum);
 				
-				collision_list[| i].owner.hp -= attackProperty.damage[hitboxID];
+				if owner.combo > 2 scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
+				scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
+				scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
+				owner.comboScaling += attackProperty.comboScaling[hitboxID]; // increase the level of scaling for the combo
+				if owner.combo == 2 owner.startCombo = true; // Tells the game to display the combo counter when the combo is at least 2 hits long
+				
+				
+				collision_list[| i].owner.hp -= scaledDamage;
 				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
 				
 				// Meter Build - P1 gets 100% meter, P2 gets 25%
@@ -172,9 +184,7 @@ if collisionCheck {
 				owner.depth = -1;
 				collision_list[| i].owner.depth = 0;
 				
-				// Combos
-				owner.combo++;
-				if owner.combo == 2 owner.startCombo = true;
+				
 
 				// Reset Frame Advantage Counter
 				oGameManager.frameAdvantage = 0;
