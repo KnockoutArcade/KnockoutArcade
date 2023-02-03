@@ -149,6 +149,8 @@ if RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4 {
 
 // Advance to match
 if P1hasSelectedAlt && P2hasSelectedAlt && P1menuConfirm && !P1menuAltSelBuffer {
-	if keyboard_check(vk_enter) room = rCameraTestStage;
-	else room = rStageArcade;
+	if keyboard_check(vk_enter) room = rStageArcade;
+	else if keyboard_check(vk_shift) room = rBeverlyStage;
+	else if keyboard_check(vk_control) room = rJayStage;
+	else room = rRusselStage;
 }
