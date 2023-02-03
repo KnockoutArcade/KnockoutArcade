@@ -22,6 +22,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [3],
+			meterGain : [4],
+			comboScaling : [2],
 			attackHitstop : [6],
 			attackHitstun : [9],
 			attackType : [eAttackType.MID],
@@ -75,6 +77,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [3],
+			meterGain : [4],
+			comboScaling : [2],
 			attackHitstop : [10],
 			attackHitstun : [14],
 			attackType : [eAttackType.MID],
@@ -128,6 +132,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [3],
+			meterGain : [4],
+			comboScaling : [2],
 			attackHitstop : [14],
 			attackHitstun : [14],
 			attackType : [eAttackType.MID],
@@ -180,7 +186,9 @@ global.stRusselMoves = {
 			heightOfset : [12],
 			group : [1],
 			
-			damage: [10],
+			damage: [6],
+			meterGain : [6],
+			comboScaling : [1],
 			attackHitstop : [11],
 			attackHitstun : [21],
 			attackType : [eAttackType.MID],
@@ -233,8 +241,10 @@ global.stRusselMoves = {
 			heightOfset : [0],
 			group : [1],
 			
-			damage: [20],
-			attackHitstop : [18], // 15
+			damage: [14],
+			meterGain : [10],
+			comboScaling : [1],
+			attackHitstop : [18], 
 			attackHitstun : [14],
 			attackType : [eAttackType.MID],
 			blockstun : [20],
@@ -287,6 +297,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [4],
+			meterGain : [4],
+			comboScaling : [2],
 			attackHitstop : [6],
 			attackHitstun : [11],
 			attackType : [eAttackType.LOW],
@@ -340,6 +352,8 @@ global.stRusselMoves = {
 			group : [1, 1],
 			
 			damage: [10, 10],
+			meterGain : [8, 6],
+			comboScaling : [2, 2],
 			attackHitstop : [11, 11],
 			attackHitstun : [18, 18],
 			attackType : [eAttackType.MID, eAttackType.MID],
@@ -393,6 +407,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [10],
+			meterGain : [8],
+			comboScaling : [1],
 			attackHitstop : [14],
 			attackHitstun : [11],
 			attackType : [eAttackType.LOW],
@@ -446,6 +462,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage : [5],
+			meterGain : [4],
+			comboScaling : [3],
 			attackHitstop : [6],
 			attackHitstun : [7],
 			attackType : [eAttackType.HIGH],
@@ -499,6 +517,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage: [8],
+			meterGain : [6],
+			comboScaling : [2],
 			attackHitstop : [8],
 			attackHitstun : [10],
 			attackType : [eAttackType.HIGH],
@@ -552,6 +572,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage: [12],
+			meterGain : [8],
+			comboScaling : [2],
 			attackHitstop : [11],
 			attackHitstun : [14],
 			attackType : [eAttackType.HIGH],
@@ -605,6 +627,8 @@ global.stRusselMoves = {
 			group : [1],
 			
 			damage: [0],
+			meterGain : [0],
+			comboScaling : [0],
 			attackHitstop : [0],
 			attackHitstun : [0],
 			attackType : [eAttackType.GRAB],
@@ -661,6 +685,8 @@ global.stRusselMoves = {
 			group : [2],
 			
 			damage: [10],
+			meterGain : [10],
+			comboScaling : [4],
 			attackHitstop : [16],
 			attackHitstun : [10],
 			attackType : [eAttackType.MID],
@@ -727,6 +753,8 @@ global.stRusselMoves = {
 			group : [2],
 			
 			damage: [10],
+			meterGain : [10],
+			comboScaling : [4],
 			attackHitstop : [16],
 			attackHitstun : [10],
 			attackType : [eAttackType.MID],
@@ -786,6 +814,7 @@ global.stRusselMoves = {
 		attackProperty : {
 			start : [10, 31],
 			lifetime : [1, 4],
+			comboScaling : [0, 2],
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
 			widthOffset : [10, 10],
@@ -793,6 +822,7 @@ global.stRusselMoves = {
 			group : [1, 2],
 			
 			damage: [1, 3],
+			meterGain : [1, 4],
 			attackHitstop : [2, 12],
 			attackHitstun : [8, 19],
 			attackType : [eAttackType.MID, eAttackType.MID],
@@ -852,6 +882,8 @@ global.stRusselMoves = {
 			group : [1, 2],
 			
 			damage: [7, 7],
+			meterGain : [4, 4],
+			comboScaling : [1, 1],
 			attackHitstop : [9, 16],
 			attackHitstun : [24, 15],
 			attackType : [eAttackType.MID, eAttackType.MID],
