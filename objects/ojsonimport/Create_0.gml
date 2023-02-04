@@ -1,19 +1,31 @@
-/// @description Imports character data from JSON file
+var i = 0;
+var filePath = working_directory + "/characterdata/";
+var fileName = file_find_first(filePath + "*.json", fa_directory);
 
-global.characterData = undefined;
-
-var filePath = working_directory + "characters.json";
-
-if (file_exists(filePath)) {
-	var json = "";
+while(fileName != "")
+{
+	var importedCharacter;
+	var fullPath = filePath + fileName;
 	
-	var file = file_text_open_read(filePath);
+	if (file_exists(fullPath))
+	{
+		var json = "";
 	
-	while(!file_text_eof(file)) {
-		json += file_text_readln(file);
+		var file = file_text_open_read(fullPath);
+	
+		while(!file_text_eof(file))
+		{
+			json += file_text_readln(file);
+		}
+	
+		file_text_close(file);
+	
+		importedCharacter = json_parse(json);
 	}
 	
-	file_text_close(file);
-	
-	global.characterData = json_parse(json);
+	global.characterData[i] = importedCharacter;
+	fileName = file_find_next();
+	i++;
 }
+
+file_find_close();
