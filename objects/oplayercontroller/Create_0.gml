@@ -31,6 +31,8 @@ animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 depth = 0;
 
+// Player data
+
 enum eState {
 	INTRO,
 	IDLE,
