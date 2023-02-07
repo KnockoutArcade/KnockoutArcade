@@ -98,7 +98,7 @@ CharacterSprites = {
 }
 
 // Which Character we are currently playing as
-selectedCharacter = global.stRusselMoves;
+selectedCharacter = SetupCharacter(global.characterData[0]);
 
 // State-related Variables
 state = eState.IDLE;

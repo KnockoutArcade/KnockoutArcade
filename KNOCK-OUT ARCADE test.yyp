@@ -106,6 +106,7 @@
     {"id":{"name":"sRussel_Crouching_Medium","path":"sprites/sRussel_Crouching_Medium/sRussel_Crouching_Medium.yy",},"order":12,},
     {"id":{"name":"sRussel_Hold","path":"sprites/sRussel_Hold/sRussel_Hold.yy",},"order":20,},
     {"id":{"name":"sRussel_Jumping_Light","path":"sprites/sRussel_Jumping_Light/sRussel_Jumping_Light.yy",},"order":17,},
+    {"id":{"name":"SetupCharacter","path":"scripts/SetupCharacter/SetupCharacter.yy",},"order":13,},
     {"id":{"name":"oHealthbar","path":"objects/oHealthbar/oHealthbar.yy",},"order":4,},
     {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},"order":0,},
     {"id":{"name":"sRussel_Block","path":"sprites/sRussel_Block/sRussel_Block.yy",},"order":6,},

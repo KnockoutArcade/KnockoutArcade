@@ -19,8 +19,8 @@ function SetupGame(){
 	p1.controller = global.player1ControllerSlot;
 	p2.controller = global.player2ControllerSlot;
 	
-	p1.selectedCharacter = global.characterData[0];
-	p2.selectedCharacter = global.characterData[0];
+	p1.selectedCharacter = SetupCharacter(global.characterData[0]);
+	p2.selectedCharacter = SetupCharacter(global.characterData[0]);
 
 	p1.playerID = 1;
 	p2.playerID = 2;
