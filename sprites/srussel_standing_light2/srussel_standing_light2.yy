@@ -25,20 +25,20 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"e5320dff-ad54-4b1a-9c0d-22215a1c94f6","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5320dff-ad54-4b1a-9c0d-22215a1c94f6","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e5320dff-ad54-4b1a-9c0d-22215a1c94f6","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"446baa40-0520-46a5-976c-9d34c7800fa9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e5320dff-ad54-4b1a-9c0d-22215a1c94f6","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"e5320dff-ad54-4b1a-9c0d-22215a1c94f6","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"52ea9197-b5a2-4768-81e2-2aee6d6aadce","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"52ea9197-b5a2-4768-81e2-2aee6d6aadce","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"52ea9197-b5a2-4768-81e2-2aee6d6aadce","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"446baa40-0520-46a5-976c-9d34c7800fa9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"52ea9197-b5a2-4768-81e2-2aee6d6aadce","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"52ea9197-b5a2-4768-81e2-2aee6d6aadce","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"e5e0899d-51d4-490a-967d-a5663e487ebf","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e5e0899d-51d4-490a-967d-a5663e487ebf","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"e5e0899d-51d4-490a-967d-a5663e487ebf","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"446baa40-0520-46a5-976c-9d34c7800fa9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"e5e0899d-51d4-490a-967d-a5663e487ebf","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"e5e0899d-51d4-490a-967d-a5663e487ebf","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"f71a6153-0869-44fb-9eb3-024ef2e861c9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"f71a6153-0869-44fb-9eb3-024ef2e861c9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"f71a6153-0869-44fb-9eb3-024ef2e861c9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"446baa40-0520-46a5-976c-9d34c7800fa9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"f71a6153-0869-44fb-9eb3-024ef2e861c9","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"LayerId":{"name":"ff446fa8-15e4-4916-aada-58890ebf27d0","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"resourceVersion":"1.0","name":"f71a6153-0869-44fb-9eb3-024ef2e861c9","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -87,7 +87,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Standing_Light2",
