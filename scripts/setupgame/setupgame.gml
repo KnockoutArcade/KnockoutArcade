@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame(){
 	if room != rStageArcade {
-		p1 = instance_create_layer(104, 104, "Instances", oRussel);
-		p2 = instance_create_layer(216, 104, "Instances", oBeverly);
+		p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
 	} else {
-		p1 = instance_create_layer(32, 104, "Instances", oRussel);
-		p2 = instance_create_layer(128, 104, "Instances", oBeverly);
+		p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(128, 104, "Instances", global.p2SelectedCharacter);
 	}
 	
 	// Setup Camera
