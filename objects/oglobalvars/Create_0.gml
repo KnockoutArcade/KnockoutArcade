@@ -955,5 +955,7 @@ global.RusselPalettes = {
 }
 
 global.p1PaletteID = 0;
-
 global.p2PaletteID = 1;
+
+global.p1SelectedCharacter = 0;
+global.p2SelectedCharacter = 0;

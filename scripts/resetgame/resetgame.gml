@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ResetGame(){
 	instance_destroy(oPlayerController);
+	instance_destroy(oRussel);
 	instance_destroy(oHitbox);
 	instance_destroy(oPlayerHurtbox);
 	instance_destroy(oHealthbar);
