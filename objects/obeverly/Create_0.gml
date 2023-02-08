@@ -50,7 +50,7 @@ CharacterSprites = {
 }
 
 // Which Character we are currently playing as
-selectedCharacter = global.stRusselMoves;
+selectedCharacter = global.stBeverlyMoves;
 
 // State-related Variables
 state = eState.IDLE;
