@@ -158,11 +158,23 @@ if charSelBoxTimer > 4 {
 }
 
 // Handle frame rates of different character idle anims
-if P1charSelCol == 0 && P1charSelRow == 0 p1charSelFrameRate = 10;
-if P1charSelCol == 1 && P1charSelRow == 0 p1charSelFrameRate = 6;
+if P1charSelCol == 0 && P1charSelRow == 0 {
+	p1charSelFrameRate = 10;
+	p1LocalPalette = global.RusselPalettes;
+}
+if P1charSelCol == 1 && P1charSelRow == 0 {
+	p1charSelFrameRate = 6;
+	p1LocalPalette = global.RusselPalettes;
+}
 
-if P2charSelCol == 0 && P2charSelRow == 0 p2charSelFrameRate = 10;
-if P2charSelCol == 1 && P2charSelRow == 0 p2charSelFrameRate = 6;
+if P2charSelCol == 0 && P2charSelRow == 0 {
+	p2charSelFrameRate = 10;
+	p2LocalPalette = global.RusselPalettes;
+}
+if P2charSelCol == 1 && P2charSelRow == 0 {
+	p2charSelFrameRate = 6;
+	p2LocalPalette = global.RusselPalettes;
+}
 
 // Character Select Animations
 p1charSelAnimTimer++;

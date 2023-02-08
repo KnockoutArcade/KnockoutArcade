@@ -19,8 +19,9 @@ p2charSelAnimTimer = 0;
 P1charSelCurrentFrame = 0;
 P2charSelCurrentFrame = 0;
 
-p1LocalPalette = 0;
-p2LocalPalette = 0;
+// Palettes to use for the selected character
+p1LocalPalette = global.RusselPalettes;
+p2LocalPalette = global.RusselPalettes;
 
 charSelBoxTimer = 0;
 charSelBoxAlt = false;
