@@ -51,14 +51,9 @@ if P1charSelRow < 0 P1charSelRow = charSelRowMax;
 if P1menuConfirm && !P1hasSelectedChar {
 	P1hasSelectedChar = true;
 	P1menuConfirmBuffer = true;
-	if P1charSelCol == 0 && P1charSelRow == 0 {
-		global.p1SelectedCharacter = oRussel;
-		p1charSelFrameRate = 10;
-	}
-	else if P1charSelCol == 1 && P1charSelRow == 0 {
-		global.p1SelectedCharacter = oBeverly;
-		p1charSelFrameRate = 6;
-	}
+	
+	if P1charSelCol == 0 && P1charSelRow == 0 global.p1SelectedCharacter = oRussel;
+	else if P1charSelCol == 1 && P1charSelRow == 0 global.p1SelectedCharacter = oBeverly;
 	else {
 		P1hasSelectedChar = false;
 		P1menuConfirmBuffer = false;
@@ -162,6 +157,13 @@ if charSelBoxTimer > 4 {
 	charSelBoxTimer = 0;
 }
 
+// Handle frame rates of different character idle anims
+if P1charSelCol == 0 && P1charSelRow == 0 p1charSelFrameRate = 10;
+if P1charSelCol == 1 && P1charSelRow == 0 p1charSelFrameRate = 6;
+
+if P2charSelCol == 0 && P2charSelRow == 0 p2charSelFrameRate = 10;
+if P2charSelCol == 1 && P2charSelRow == 0 p2charSelFrameRate = 6;
+
 // Character Select Animations
 p1charSelAnimTimer++;
 if p1charSelAnimTimer > (60 / p1charSelFrameRate) {
@@ -174,6 +176,8 @@ if p2charSelAnimTimer > (60 / p2charSelFrameRate) {
 	p2charSelAnimTimer = 0;
 	P2charSelCurrentFrame++;
 }
+
+
 
 // Ready To Fight Animations
 if P1hasSelectedAlt && P2hasSelectedAlt RTF_animTimer++;

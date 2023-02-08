@@ -19,6 +19,9 @@ p2charSelAnimTimer = 0;
 P1charSelCurrentFrame = 0;
 P2charSelCurrentFrame = 0;
 
+p1LocalPalette = 0;
+p2LocalPalette = 0;
+
 charSelBoxTimer = 0;
 charSelBoxAlt = false;
 
