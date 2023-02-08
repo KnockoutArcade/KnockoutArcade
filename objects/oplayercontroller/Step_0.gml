@@ -276,9 +276,14 @@ switch state {
 				isShortHopping = false;
 				jumpHsp = hsp;
 			}
-			else {
+			else if canShortHop {
 				vsp = -(jumpSpeed * 0.75);
 				isShortHopping = true;
+				jumpHsp = hsp;
+			}
+			else {
+				vsp = -jumpSpeed;
+				isShortHopping = false;
 				jumpHsp = hsp;
 			}
 		}
