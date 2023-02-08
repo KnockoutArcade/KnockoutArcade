@@ -3,10 +3,10 @@
 function SetupGame(){
 	if room != rStageArcade {
 		p1 = instance_create_layer(104, 104, "Instances", oRussel);
-		p2 = instance_create_layer(216, 104, "Instances", oRussel);
+		p2 = instance_create_layer(216, 104, "Instances", oBeverly);
 	} else {
 		p1 = instance_create_layer(32, 104, "Instances", oRussel);
-		p2 = instance_create_layer(128, 104, "Instances", oRussel);
+		p2 = instance_create_layer(128, 104, "Instances", oBeverly);
 	}
 	
 	// Setup Camera

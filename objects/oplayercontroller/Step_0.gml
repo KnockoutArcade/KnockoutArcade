@@ -6,7 +6,7 @@ if hasPerformedIntro = false {
 	sprite_index = sRussel_Intro;
 	state = eState.INTRO;
 	if image_index > (image_number - 1) {
-		sprite_index = sRussel_Idle;
+		sprite_index = CharacterSprites.idle_Sprite;
 		state = eState.IDLE;
 		hasPerformedIntro = true;
 		}

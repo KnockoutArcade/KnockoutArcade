@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "sBeverly_Idle",
-    "path": "sprites/sBeverly_Idle/sBeverly_Idle.yy",
+    "name": "sRussel_Idle",
+    "path": "sprites/sRussel_Idle/sRussel_Idle.yy",
   },
   "persistent": false,
   "parentObjectId": {
@@ -27,7 +27,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
