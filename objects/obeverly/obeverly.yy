@@ -1,14 +1,14 @@
 {
   "spriteId": {
-    "name": "sRussel_Idle",
-    "path": "sprites/sRussel_Idle/sRussel_Idle.yy",
+    "name": "sBeverly_Idle",
+    "path": "sprites/sBeverly_Idle/sBeverly_Idle.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "sRussel_Idle",
-    "path": "sprites/sRussel_Idle/sRussel_Idle.yy",
+    "name": "sBeverly_Idle",
+    "path": "sprites/sBeverly_Idle/sBeverly_Idle.yy",
   },
   "persistent": false,
   "parentObjectId": {
@@ -35,7 +35,7 @@
     "path": "folders/Objects/Characters.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oRussel",
+  "name": "oBeverly",
   "tags": [],
   "resourceType": "GMObject",
 }

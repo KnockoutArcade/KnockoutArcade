@@ -57,6 +57,7 @@
     {"id":{"name":"sKOText","path":"sprites/sKOText/sKOText.yy",},"order":18,},
     {"id":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"order":5,},
     {"id":{"name":"sHitEffect","path":"sprites/sHitEffect/sHitEffect.yy",},"order":11,},
+    {"id":{"name":"oBeverly","path":"objects/oBeverly/oBeverly.yy",},"order":2,},
     {"id":{"name":"sCharSel_PaletteSel","path":"sprites/sCharSel_PaletteSel/sCharSel_PaletteSel.yy",},"order":10,},
     {"id":{"name":"sCharSel_Descriptions","path":"sprites/sCharSel_Descriptions/sCharSel_Descriptions.yy",},"order":3,},
     {"id":{"name":"sTitleScreenCabnet","path":"sprites/sTitleScreenCabnet/sTitleScreenCabnet.yy",},"order":2,},
