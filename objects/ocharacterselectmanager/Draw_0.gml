@@ -215,7 +215,8 @@ shader_set_uniform_f(sh_handle_replace16,
 );
 #endregion
 
-	draw_sprite(sRussel_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+	if global.p1SelectedCharacter == oRussel draw_sprite(sRussel_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+	if global.p1SelectedCharacter == oBeverly draw_sprite(sBeverly_Idle, 0 + P1charSelCurrentFrame, 29, 65);
 	shader_reset();
 	
 	draw_sprite(sCharSel_NameRussel, 0, 14, 69);

@@ -11,8 +11,11 @@ P2cursorCooldown = 5;
 charSelRowMax = 1;
 charSelColMax = 2;
 
-charSelFrameRate = 10;
-charSelAnimTimer = 0;
+p1charSelFrameRate = 10;
+p1charSelAnimTimer = 0;
+p2charSelFrameRate = 10;
+p2charSelAnimTimer = 0;
+
 P1charSelCurrentFrame = 0;
 P2charSelCurrentFrame = 0;
 
