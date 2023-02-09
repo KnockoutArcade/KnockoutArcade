@@ -76,7 +76,6 @@ function SetupGame(){
 	with hudObject {
 		p1Character = global.p1SelectedCharacter;
 		p2Character = global.p2SelectedCharacter;
-		
 	}
 	
 	frameAdvantage = 0;

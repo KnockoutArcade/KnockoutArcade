@@ -52,7 +52,7 @@ if P1menuConfirm && !P1hasSelectedChar {
 	P1hasSelectedChar = true;
 	P1menuConfirmBuffer = true;
 	
-	if P1charSelCol == 0 && P1charSelRow == 0 global.p1SelectedCharacter = oRussel;
+	if P1charSelCol == 0 && P1charSelRow == 0 global.p1SelectedCharacter = oRussel; // When Setting selected characters, always use the object name
 	else if P1charSelCol == 1 && P1charSelRow == 0 global.p1SelectedCharacter = oBeverly;
 	else {
 		P1hasSelectedChar = false;
