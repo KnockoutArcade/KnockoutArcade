@@ -102,7 +102,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_KnockedDown",

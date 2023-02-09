@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"0adbb432-afd0-473e-9280-ef2d7aa2c84e","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0adbb432-afd0-473e-9280-ef2d7aa2c84e","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"LayerId":{"name":"94752078-9501-4bd9-ada9-f56c5bbe4113","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0adbb432-afd0-473e-9280-ef2d7aa2c84e","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"LayerId":{"name":"30f1be91-b621-4692-a4b4-80184ccdf07a","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0adbb432-afd0-473e-9280-ef2d7aa2c84e","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"LayerId":{"name":"94752078-9501-4bd9-ada9-f56c5bbe4113","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Jumpsquat","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"resourceVersion":"1.0","name":"0adbb432-afd0-473e-9280-ef2d7aa2c84e","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Jumpsquat",

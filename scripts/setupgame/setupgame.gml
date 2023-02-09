@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame(){
 	if room != rStageArcade {
-		p1 = instance_create_layer(104, 104, "Instances", oPlayerController);
-		p2 = instance_create_layer(216, 104, "Instances", oPlayerController);
+		p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
 	} else {
-		p1 = instance_create_layer(32, 104, "Instances", oPlayerController);
-		p2 = instance_create_layer(128, 104, "Instances", oPlayerController);
+		p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(128, 104, "Instances", global.p2SelectedCharacter);
 	}
 	
 	// Setup Camera
@@ -71,6 +71,14 @@ function SetupGame(){
 		ui_xOffset = x;
 		meterDir = 1;
 		sprite_index = sSuperMeterP2;
+	}
+	
+	
+	// Set up the HUD
+	hudObject = instance_create_layer(0, 0, "UI", oUIHUD);
+	with hudObject {
+		p1Character = global.p1SelectedCharacter;
+		p2Character = global.p2SelectedCharacter;
 	}
 	
 	frameAdvantage = 0;

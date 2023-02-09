@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "CharacterSelectAssets",
-    "path": "folders/Sprites/CharacterSelectAssets.yy",
+    "name": "CharacterProfiles",
+    "path": "folders/Sprites/CharacterSelectAssets/CharacterProfiles.yy",
   },
   "resourceVersion": "1.0",
   "name": "sCharSel_NameRussel",
