@@ -956,8 +956,8 @@ if state != eState.HITSTOP {
 	// If the opponent is next to a wall, also don't move us
 		if sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0{
 			// If the opponent is moving towards us, and we are both moving.
-			environmentDisplacement = -(walkSpeed) * image_xscale;
-			opponent.environmentDisplacement = -(walkSpeed) * -image_xscale;
+			environmentDisplacement = -(walkSpeed - (walkSpeed - opponent.walkSpeed)) * image_xscale;
+			opponent.environmentDisplacement = -(opponent.walkSpeed - (opponent.walkSpeed - walkSpeed)) * -image_xscale;
 			
 		} else {
 			
