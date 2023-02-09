@@ -9,7 +9,7 @@ if p1Character == oRussel {
 	draw_sprite(sCharacterNames, 0, x+33, 18);
 }
 if p1Character == oBeverly {
-	draw_sprite(sHUDPortraits, 1, x+15, 2);
+	draw_sprite(sHUDPortraits, 1, x+15, 2); 
 	draw_sprite(sCharacterNames, 1, x+33, 18);
 }
 

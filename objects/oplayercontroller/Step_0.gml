@@ -956,8 +956,8 @@ if state != eState.HITSTOP {
 	// If the opponent is next to a wall, also don't move us
 		if sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0{
 			// If the opponent is moving towards us, and we are both moving.
-			environmentDisplacement = -(walkSpeed) * image_xscale;
-			opponent.environmentDisplacement = -(walkSpeed) * -image_xscale;
+			environmentDisplacement = -(walkSpeed - (walkSpeed - opponent.walkSpeed)) * image_xscale;
+			opponent.environmentDisplacement = -(opponent.walkSpeed - (opponent.walkSpeed - walkSpeed)) * -image_xscale;
 			
 		} else {
 			
@@ -965,14 +965,14 @@ if state != eState.HITSTOP {
 				// Wall Detection
 				if place_meeting(x+(walkSpeed*-image_xscale), y, oWall) {
 					environmentDisplacement = -(walkSpeed) * image_xscale;
-					other.environmentDisplacement = -(walkSpeed) * -image_xscale;
+					other.environmentDisplacement = -(other.walkSpeed) * -image_xscale;
 				} else {
-					if x < other.x {
-						environmentDisplacement = -(walkSpeed/2);
-						other.environmentDisplacement = (walkSpeed/2);
-					} else {
-						environmentDisplacement = (walkSpeed/2);
-						other.environmentDisplacement = -(walkSpeed/2);
+					if sign(walkSpeed - other.walkSpeed) == 1 { // If we are the slower player
+						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x); // Im using sign(other.x - x) here so that it pushes players away from each other
+						other.environmentDisplacement = (other.walkSpeed)/2 * sign(other.x - x);
+					} else { // if we are the faster player
+						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x);
+						other.environmentDisplacement = (other.walkSpeed + (other.walkSpeed - walkSpeed))/2 * sign(other.x - x);
 					}
 				}
 			}
