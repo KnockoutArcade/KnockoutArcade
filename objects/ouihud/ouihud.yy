@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sSuperMeterP1",
-    "path": "sprites/sSuperMeterP1/sSuperMeterP1.yy",
+    "name": "sUIBase",
+    "path": "sprites/sUIBase/sUIBase.yy",
   },
   "solid": false,
   "visible": true,
@@ -32,7 +32,7 @@
     "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSuperMeterUI",
+  "name": "oUIHUD",
   "tags": [],
   "resourceType": "GMObject",
 }

@@ -70,6 +70,15 @@ function SetupGame(){
 		sprite_index = sSuperMeterP2;
 	}
 	
+	
+	// Set up the HUD
+	hudObject = instance_create_layer(0, 0, "UI", oUIHUD);
+	with hudObject {
+		p1Character = global.p1SelectedCharacter;
+		p2Character = global.p2SelectedCharacter;
+		
+	}
+	
 	frameAdvantage = 0;
 	calculateFrameData = false;
 	
