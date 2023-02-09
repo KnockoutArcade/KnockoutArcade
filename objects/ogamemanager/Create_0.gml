@@ -19,6 +19,7 @@ global.camObj = noone;
 healthbar1 = noone;
 healthbar1 = noone;
 TimerObject = noone;
+hudObject = noone;
 
 calculateFrameData = false;
 frameAdvantage = 0;

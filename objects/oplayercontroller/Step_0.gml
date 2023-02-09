@@ -6,7 +6,7 @@ if hasPerformedIntro = false {
 	sprite_index = sRussel_Intro;
 	state = eState.INTRO;
 	if image_index > (image_number - 1) {
-		sprite_index = sRussel_Idle;
+		sprite_index = CharacterSprites.idle_Sprite;
 		state = eState.IDLE;
 		hasPerformedIntro = true;
 		}
@@ -276,9 +276,14 @@ switch state {
 				isShortHopping = false;
 				jumpHsp = hsp;
 			}
-			else {
+			else if canShortHop {
 				vsp = -(jumpSpeed * 0.75);
 				isShortHopping = true;
+				jumpHsp = hsp;
+			}
+			else {
+				vsp = -jumpSpeed;
+				isShortHopping = false;
 				jumpHsp = hsp;
 			}
 		}

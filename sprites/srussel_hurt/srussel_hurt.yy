@@ -25,8 +25,8 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"16af36cf-2a2a-4534-890b-60e35d98a780","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"16af36cf-2a2a-4534-890b-60e35d98a780","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"LayerId":{"name":"7797bbf5-2f74-4bce-9c3b-8efcea5108ab","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"16af36cf-2a2a-4534-890b-60e35d98a780","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"LayerId":{"name":"26174ee6-f37d-4cf8-bf44-af9a8f10bee8","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"16af36cf-2a2a-4534-890b-60e35d98a780","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"LayerId":{"name":"7797bbf5-2f74-4bce-9c3b-8efcea5108ab","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Hurt","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"resourceVersion":"1.0","name":"16af36cf-2a2a-4534-890b-60e35d98a780","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -72,7 +72,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Hurt",
