@@ -221,7 +221,8 @@ if P1charSelCol == 0 && P1charSelRow == 0 draw_sprite(sRussel_Idle, 0 + P1charSe
 if P1charSelCol == 1 && P1charSelRow == 0 draw_sprite(sBeverly_Idle, 0 + P1charSelCurrentFrame, 29, 65);
 shader_reset();
 	
-draw_sprite(sCharSel_NameRussel, 0, 14, 69);
+if P1charSelCol == 0 && P1charSelRow == 0 draw_sprite(sCharSel_NameRussel, 0, 14, 69);
+if P1charSelCol == 1 && P1charSelRow == 0 draw_sprite(sCharSel_NameBeverly, 0, 14, 69);
 
 
 
@@ -436,7 +437,8 @@ if P2charSelCol == 0 && P2charSelRow == 0 draw_sprite_ext(sRussel_Idle, 0 + P2ch
 if P2charSelCol == 1 && P2charSelRow == 0 draw_sprite_ext(sBeverly_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 shader_reset();
 	
-draw_sprite(sCharSel_NameRussel, 0, 118, 69);
+if P2charSelCol == 0 && P2charSelRow == 0 draw_sprite(sCharSel_NameRussel, 0, 118, 69);
+if P2charSelCol == 1 && P2charSelRow == 0 draw_sprite(sCharSel_NameBeverly, 0, 118, 69);
 
 
 
