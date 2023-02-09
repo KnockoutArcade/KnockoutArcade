@@ -48,14 +48,24 @@ if P1charSelCol < 0 P1charSelCol = charSelColMax;
 if P1charSelRow > charSelRowMax P1charSelRow = 0;
 if P1charSelRow < 0 P1charSelRow = charSelRowMax;
 
-if P1menuConfirm && !P1hasSelectedChar{
+if P1menuConfirm && !P1hasSelectedChar {
 	P1hasSelectedChar = true;
 	P1menuConfirmBuffer = true;
+	
+	if P1charSelCol == 0 && P1charSelRow == 0 global.p1SelectedCharacter = oRussel; // When Setting selected characters, always use the object name
+	else if P1charSelCol == 1 && P1charSelRow == 0 global.p1SelectedCharacter = oBeverly;
+	else {
+		P1hasSelectedChar = false;
+		P1menuConfirmBuffer = false;
+	}
 }
 
 if P1menuCancel {
 	if P1hasSelectedAlt P1hasSelectedAlt = false;
-	else if P1hasSelectedChar P1hasSelectedChar = false;
+	else if P1hasSelectedChar {
+		P1hasSelectedChar = false;
+		global.p1SelectedCharacter = noone;
+	}
 	
 	RTF_animTimer = 0;
 	RTF_currentFrame = 0;
@@ -94,14 +104,30 @@ if P2charSelCol < 0 P2charSelCol = charSelColMax;
 if P2charSelRow > charSelRowMax P2charSelRow = 0;
 if P2charSelRow < 0 P2charSelRow = charSelRowMax;
 
+
 if P2menuConfirm && !P2hasSelectedChar{
 	P2hasSelectedChar = true;
 	P2menuConfirmBuffer = true;
+	if P2charSelCol == 0 && P2charSelRow == 0 {
+		global.p2SelectedCharacter = oRussel;
+		p2charSelFrameRate = 10;
+	}
+	else if P2charSelCol == 1 && P2charSelRow == 0 {
+		global.p2SelectedCharacter = oBeverly;
+		p2charSelFrameRate = 6;
+	}
+	else {
+		P2hasSelectedChar = false;
+		P2menuConfirmBuffer = false;
+	}
 }
 
 if P2menuCancel {
 	if P2hasSelectedAlt P2hasSelectedAlt = false;
-	else if P2hasSelectedChar P2hasSelectedChar = false;
+	else if P2hasSelectedChar {
+		P2hasSelectedChar = false;
+		global.p2SelectedCharacter = noone;
+	}
 	
 	RTF_animTimer = 0;
 	RTF_currentFrame = 0;
@@ -131,12 +157,39 @@ if charSelBoxTimer > 4 {
 	charSelBoxTimer = 0;
 }
 
+// Handle frame rates of different character idle anims
+if P1charSelCol == 0 && P1charSelRow == 0 {
+	p1charSelFrameRate = 10;
+	p1LocalPalette = global.RusselPalettes;
+}
+if P1charSelCol == 1 && P1charSelRow == 0 {
+	p1charSelFrameRate = 6;
+	p1LocalPalette = global.RusselPalettes;
+}
+
+if P2charSelCol == 0 && P2charSelRow == 0 {
+	p2charSelFrameRate = 10;
+	p2LocalPalette = global.RusselPalettes;
+}
+if P2charSelCol == 1 && P2charSelRow == 0 {
+	p2charSelFrameRate = 6;
+	p2LocalPalette = global.RusselPalettes;
+}
+
 // Character Select Animations
-charSelAnimTimer++;
-if charSelAnimTimer > (60 / charSelFrameRate) {
-	charSelAnimTimer = 0;
+p1charSelAnimTimer++;
+if p1charSelAnimTimer > (60 / p1charSelFrameRate) {
+	p1charSelAnimTimer = 0;
 	P1charSelCurrentFrame++;
 }
+
+p2charSelAnimTimer++;
+if p2charSelAnimTimer > (60 / p2charSelFrameRate) {
+	p2charSelAnimTimer = 0;
+	P2charSelCurrentFrame++;
+}
+
+
 
 // Ready To Fight Animations
 if P1hasSelectedAlt && P2hasSelectedAlt RTF_animTimer++;
@@ -149,6 +202,8 @@ if RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4 {
 
 // Advance to match
 if P1hasSelectedAlt && P2hasSelectedAlt && P1menuConfirm && !P1menuAltSelBuffer {
-	if keyboard_check(vk_enter) room = rCameraTestStage;
-	else room = rStageArcade;
+	if keyboard_check(vk_enter) room = rStageArcade;
+	else if keyboard_check(vk_shift) room = rBeverlyStage;
+	else if keyboard_check(vk_control) room = rJayStage;
+	else room = rRusselStage;
 }

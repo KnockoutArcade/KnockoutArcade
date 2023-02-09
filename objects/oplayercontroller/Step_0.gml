@@ -6,7 +6,7 @@ if hasPerformedIntro = false {
 	sprite_index = sRussel_Intro;
 	state = eState.INTRO;
 	if image_index > (image_number - 1) {
-		sprite_index = sRussel_Idle;
+		sprite_index = CharacterSprites.idle_Sprite;
 		state = eState.IDLE;
 		hasPerformedIntro = true;
 		}
@@ -57,9 +57,6 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-// Buffer System
-
-buffer = attack;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -78,13 +75,17 @@ if state == eState.IDLE {
 	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
-	sprite_index = sRussel_Idle;
+	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
 	
 	if (movedir != 0) state = eState.WALKING;
 	
 	if verticalMoveDir == 1 {
 		state = eState.JUMPSQUAT;
+		hsp = walkSpeed * movedir;
+		// Is the player jumping forward?
+		if movedir = image_xscale isJumpingForward = true;
+		else isJumpingForward = false;
 	} else if verticalMoveDir == -1 {
 		state = eState.CROUCHING;
 	}
@@ -97,7 +98,7 @@ if state == eState.IDLE {
 if state == eState.CROUCHING {
 	animTimer = 0;
 	cancelable = false;
-	sprite_index = sRussel_Crouch;
+	sprite_index = CharacterSprites.crouch_Sprite;
 	image_speed = 1;
 	//grounded = true;
 	frameAdvantage = false;
@@ -127,7 +128,7 @@ if state == eState.HITSTOP {
 		hitstunShuffleTimer++;
 		
 		if hitstun > 0 {
-			if !isGrabbed sprite_index = sRussel_Hurt;
+			if !isGrabbed sprite_index = CharacterSprites.hurt_Sprite;
 			FAvictim = true;
 			blockstun = 0;
 			
@@ -171,8 +172,8 @@ if state == eState.HITSTOP {
 			}
 		}
 		if blockstun > 0 {
-			if isCrouchBlocking sprite_index = sRussel_Crouch_Block;
-			else sprite_index = sRussel_Block;
+			if isCrouchBlocking sprite_index = CharacterSprites.crouchBlock_Sprite;
+			else sprite_index = CharacterSprites.standBlock_Sprite; // Set Crouching Anim
 			FAvictim = true;
 			
 			if hitstunShuffleTimer mod 2 = 1 shuffle++;
@@ -180,6 +181,7 @@ if state == eState.HITSTOP {
 			else x = xHome - min(global.hitstop, 1);
 		}
 		
+		// When Hitstop Ends
 		if (global.hitstop < 1) {
 			state = prevState;
 			if hitstopBuffer {
@@ -223,9 +225,12 @@ switch state {
 		grounded = true;
 		isShortHopping = false;
 		
-		if (movedir = image_xscale) sprite_index = sRussel_Walk_Forward;
+		if (movedir = image_xscale) {
+			sprite_index = CharacterSprites.walkForward_Sprite;
+			superMeter += meterBuildRate; // Walking forwards builds meter
+		}
 		else {
-			sprite_index = sRussel_Walk_Backward;
+			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
 		}
 		image_speed = 1;
@@ -238,6 +243,10 @@ switch state {
 		// Handle Jumping And Crouching
 		if verticalMoveDir == 1 {
 			state = eState.JUMPSQUAT;
+			hsp = walkSpeed * movedir;
+			// Is the player jumping forward?
+			if movedir = image_xscale isJumpingForward = true;
+			else isJumpingForward = false;
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
 		}
@@ -252,12 +261,12 @@ switch state {
 	
 	case eState.JUMPSQUAT: {
 		cancelable = false;
-		sprite_index = sRussel_Jumpsquat;
+		sprite_index = CharacterSprites.jumpsquat_Sprite;
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
 		
-		hsp = walkSpeed * movedir;
+		
 		
 		if animTimer > 4 {
 			state = eState.JUMPING;
@@ -265,10 +274,17 @@ switch state {
 			if verticalMoveDir == 1 {
 				vsp = -jumpSpeed;
 				isShortHopping = false;
+				jumpHsp = hsp;
 			}
-			else {
+			else if canShortHop {
 				vsp = -(jumpSpeed * 0.75);
 				isShortHopping = true;
+				jumpHsp = hsp;
+			}
+			else {
+				vsp = -jumpSpeed;
+				isShortHopping = false;
+				jumpHsp = hsp;
 			}
 		}
 		
@@ -279,11 +295,14 @@ switch state {
 	case eState.JUMPING: {
 		animTimer = 0;
 		cancelable = false;
-		sprite_index = sRussel_Jump;
+		sprite_index = CharacterSprites.jump_Sprite;
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
 		
+		if isJumpingForward superMeter += meterBuildRate;
+		
+		hsp = jumpHsp;
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
 		
@@ -295,7 +314,7 @@ switch state {
 	case eState.STANDING_LIGHT_ATTACK: {
 		hsp = 0;
 		
-		GroundedAttackScript(global.stRusselMoves.stRusselStandLight, true, 7, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight, true, 7, false, 0);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -305,7 +324,7 @@ switch state {
 	case eState.STANDING_LIGHT_ATTACK_2: {
 		hsp = 0;
 		
-		GroundedAttackScript(global.stRusselMoves.stRusselStandLight2, true, 14, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight2, true, 14, false, 0);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -316,7 +335,7 @@ switch state {
 	case eState.STANDING_LIGHT_ATTACK_3: {
 		hsp = 0;
 		
-		GroundedAttackScript(global.stRusselMoves.stRusselStandLight3, true, 22, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight3, true, 22, false, 0);
 		
 	}
 	break;
@@ -326,7 +345,7 @@ switch state {
 		if (animTimer == 3) hsp = 1 * image_xscale;
 		else hsp = 0;
 
-		GroundedAttackScript(global.stRusselMoves.stRusselStandMedium, true, 21, true, 23);
+		GroundedAttackScript(selectedCharacter.StandMedium, true, 21, true, 23);
 		
 		// Cancelable into heavy
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -340,7 +359,7 @@ switch state {
 		if (animTimer == 12) hsp = 24 * image_xscale;
 		else hsp = 0;
 
-		GroundedAttackScript(global.stRusselMoves.stRusselStandHeavy, true, 39, false, 36);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true, 39, false, 36);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -350,12 +369,12 @@ switch state {
 	
 	case eState.CROUCHING_LIGHT_ATTACK: {
 		hsp = 0;
-		sprite_index = global.stRusselMoves.stRusselCrouchingLight.spriteID;
+		sprite_index = selectedCharacter.CrouchingLight.spriteID;
 		grounded = true;
 		image_index = 0;
 		inAttackState = true;
 		
-		PerformAttack(global.stRusselMoves.stRusselCrouchingLight);
+		PerformAttack(selectedCharacter.CrouchingLight);
 		
 		if (animTimer > 9) {
 			state = eState.CROUCHING;
@@ -373,10 +392,10 @@ switch state {
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = global.stRusselMoves.stRusselCrouchingMedium.spriteID;
+		sprite_index = selectedCharacter.CrouchingMedium.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselCrouchingMedium);
+		PerformAttack(selectedCharacter.CrouchingMedium);
 
 		if (animTimer > 26) if (movedir != 0) state = eState.WALKING;
 		
@@ -397,10 +416,10 @@ switch state {
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = global.stRusselMoves.stRusselCrouchingHeavy.spriteID;
+		sprite_index = selectedCharacter.CrouchingHeavy.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselCrouchingHeavy);
+		PerformAttack(selectedCharacter.CrouchingHeavy);
 		
 		hurtboxOffset = -7;
 		hurtbox.image_xscale = 18;
@@ -431,10 +450,10 @@ switch state {
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
 		
-		sprite_index = global.stRusselMoves.stRusselJumpingLight.spriteID;
+		sprite_index = selectedCharacter.JumpingLight.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselJumpingLight);
+		PerformAttack(selectedCharacter.JumpingLight);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -451,10 +470,10 @@ switch state {
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
 		
-		sprite_index = global.stRusselMoves.stRusselJumpingMedium.spriteID;
+		sprite_index = selectedCharacter.JumpingMedium.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselJumpingMedium);
+		PerformAttack(selectedCharacter.JumpingMedium);
 		
 		if (animTimer > 27) {
 			state = eState.JUMPING;
@@ -475,10 +494,10 @@ switch state {
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
 		
-		sprite_index = global.stRusselMoves.stRusselJumpingHeavy.spriteID;
+		sprite_index = selectedCharacter.JumpingHeavy.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselJumpingHeavy);
+		PerformAttack(selectedCharacter.JumpingHeavy);
 		
 		if (animTimer > 27) {
 			state = eState.JUMPING;
@@ -495,7 +514,7 @@ switch state {
 		if grounded {
 			hsp = 0;
 			
-			GroundedAttackScript(global.stRusselMoves.stRusselNeutralSpecial, true, 50, false, 45);
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, 50, false, 45);
 		} else {
 			grounded = false;
 			inAttackState = true;
@@ -504,10 +523,10 @@ switch state {
 			if vsp > 0 vsp += fallSpeed/2;
 			else vsp += fallSpeed;
 		
-			sprite_index = global.stRusselMoves.stRusselNeutralSpecial.spriteID;
+			sprite_index = selectedCharacter.NeutralSpecial.spriteID;
 			image_index = 0;
 		
-			PerformAttack(global.stRusselMoves.stRusselNeutralSpecial);
+			PerformAttack(selectedCharacter.NeutralSpecial);
 		
 			if (animTimer > 50) {
 				state = eState.JUMPING;
@@ -530,7 +549,7 @@ switch state {
 			if animTimer >= 32 {
 				hsp -= (hsp != 0) ? 0.5 * image_xscale : 0;
 			}
-			GroundedAttackScript(global.stRusselMoves.stRusselSideSpecial, true, 44, false, 45);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, 44, false, 45);
 		} else {
 			grounded = false;
 			inAttackState = true;
@@ -548,10 +567,10 @@ switch state {
 			
 			vsp += fallSpeed/2;
 		
-			sprite_index = global.stRusselMoves.stRusselSideSpecial.spriteID;
+			sprite_index = selectedCharacter.SideSpecial.spriteID;
 			image_index = 0;
 		
-			PerformAttack(global.stRusselMoves.stRusselSideSpecial);
+			PerformAttack(selectedCharacter.SideSpecial);
 		
 			if (animTimer > 49) {
 				state = eState.JUMPING;
@@ -567,13 +586,13 @@ switch state {
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = sRussel_Grab;
+		sprite_index = CharacterSprites.grab_Sprite;
 		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
 		hurtboxOffset = -7;
 		
-		PerformAttack(global.stRusselMoves.stRusselGrab);
+		PerformAttack(selectedCharacter.Grab);
 		
 		if animTimer > 24 state = eState.IDLE;
 	}
@@ -585,7 +604,7 @@ switch state {
 		inAttackState = true;
 		
 		
-		sprite_index = sRussel_Hold;
+		sprite_index = CharacterSprites.hold_Sprite;
 		
 		// Transition to a throw
 		if animTimer > 4 {
@@ -598,8 +617,8 @@ switch state {
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
 				with ThrowDistance {
 					owner = other.id;
-					image_xscale = global.stRusselMoves.stRusselForwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
-					throwToCheck = global.stRusselMoves.stRusselForwardThrow;
+					image_xscale = other.selectedCharacter.ForwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.ForwardThrow;
 				}
 			} else {
 				state = eState.BACKWARD_THROW;
@@ -610,8 +629,8 @@ switch state {
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
 				with ThrowDistance {
 					owner = other.id;
-					image_xscale = global.stRusselMoves.stRusselBackwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
-					throwToCheck = global.stRusselMoves.stRusselBackwardThrow;
+					image_xscale = other.selectedCharacter.BackwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.BackwardThrow;
 				}
 			}
 		}
@@ -633,13 +652,13 @@ switch state {
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = global.stRusselMoves.stRusselForwardThrow.spriteID;
+		sprite_index = selectedCharacter.ForwardThrow.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselForwardThrow);
+		PerformAttack(selectedCharacter.ForwardThrow);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if animTimer > global.stRusselMoves.stRusselForwardThrow.attackProperty.start[0] hsp = 0;
+		if animTimer > selectedCharacter.ForwardThrow.attackProperty.start[0] hsp = 0;
 		
 		if animTimer > 42 {
 			state = eState.IDLE;
@@ -652,18 +671,18 @@ switch state {
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = global.stRusselMoves.stRusselBackwardThrow.spriteID;
+		sprite_index = selectedCharacter.BackwardThrow.spriteID;
 		image_index = 0;
 		
-		PerformAttack(global.stRusselMoves.stRusselBackwardThrow);
+		PerformAttack(selectedCharacter.BackwardThrow);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if animTimer > global.stRusselMoves.stRusselBackwardThrow.attackProperty.start[0] hsp = 0;
+		if animTimer > selectedCharacter.BackwardThrow.attackProperty.start[0] hsp = 0;
 		
 		if animTimer > 58 {
 			state = eState.IDLE;
 			frameAdvantage = true;
-			sprite_index = sRussel_Idle;
+			sprite_index = CharacterSprites.idle_Sprite;
 			x -= 22 * image_xscale;
 		}
 	}
@@ -673,7 +692,7 @@ switch state {
 		grounded = true;
 		inAttackState = false;
 		
-		sprite_index = sRussel_Grab;
+		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
 		
 		if animTimer > 10 {
@@ -707,7 +726,7 @@ switch state {
 		}
 		
 		if grounded {
-			sprite_index = sRussel_Hurt;
+			sprite_index = CharacterSprites.hurt_Sprite;
 			if knockbackVel > 0 {
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel--;
@@ -716,7 +735,7 @@ switch state {
 				knockbackVel = 0;
 			}
 		} else {
-			sprite_index = sRussel_Launched;
+			sprite_index = CharacterSprites.launched_Sprite;
 			if image_index > (image_number - 1) image_speed = 0;
 			else image_speed = 1;
 		}
@@ -730,7 +749,7 @@ switch state {
 	
 	case eState.LAUNCHED : {
 		animTimer = 1;
-		sprite_index = sRussel_Launched;
+		sprite_index = CharacterSprites.launched_Sprite;
 			if image_index > (image_number - 1) image_speed = 0;
 			else image_speed = 1;
 		cancelable = false;
@@ -762,7 +781,7 @@ switch state {
 		if animTimer > 39 {
 			state = eState.GETUP;
 			animTimer = 0;
-			sprite_index = sRussel_Getup;
+			sprite_index = CharacterSprites.getup_Sprite;
 			image_index = 0;
 		}
 	}
@@ -794,8 +813,8 @@ switch state {
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
-		if isCrouchBlocking sprite_index = sRussel_Crouch_Block;
-		else sprite_index = sRussel_Block;
+		if isCrouchBlocking sprite_index = CharacterSprites.crouchBlock_Sprite;
+		else sprite_index = CharacterSprites.standBlock_Sprite;
 		grounded = true;
 		
 		if attack > 0 blockbuffer = true;
@@ -887,6 +906,8 @@ else {
 
 
 if hp < 0 hp = 0;
+if superMeter > 100 superMeter = 100;
+if superMeter < 0 superMeter = 0;
 
 // Combo Counter
 if opponent.cancelCombo {
@@ -894,11 +915,11 @@ if opponent.cancelCombo {
 	opponent.cancelCombo = false;
 	
 	if combo > 1 && comboCounterID != noone{
-	comboCounterID.endCombo = true;
-	
+		comboCounterID.endCombo = true;
 	}
 	
 	combo = 0;
+	comboScaling = 0;
 	comboCounterID = noone;
 }
 
@@ -935,8 +956,8 @@ if state != eState.HITSTOP {
 	// If the opponent is next to a wall, also don't move us
 		if sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0{
 			// If the opponent is moving towards us, and we are both moving.
-			environmentDisplacement = -(walkSpeed) * image_xscale;
-			opponent.environmentDisplacement = -(walkSpeed) * -image_xscale;
+			environmentDisplacement = -(walkSpeed - (walkSpeed - opponent.walkSpeed)) * image_xscale;
+			opponent.environmentDisplacement = -(opponent.walkSpeed - (opponent.walkSpeed - walkSpeed)) * -image_xscale;
 			
 		} else {
 			
@@ -944,14 +965,14 @@ if state != eState.HITSTOP {
 				// Wall Detection
 				if place_meeting(x+(walkSpeed*-image_xscale), y, oWall) {
 					environmentDisplacement = -(walkSpeed) * image_xscale;
-					other.environmentDisplacement = -(walkSpeed) * -image_xscale;
+					other.environmentDisplacement = -(other.walkSpeed) * -image_xscale;
 				} else {
-					if x < other.x {
-						environmentDisplacement = -(walkSpeed/2);
-						other.environmentDisplacement = (walkSpeed/2);
-					} else {
-						environmentDisplacement = (walkSpeed/2);
-						other.environmentDisplacement = -(walkSpeed/2);
+					if sign(walkSpeed - other.walkSpeed) == 1 { // If we are the slower player
+						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x); // Im using sign(other.x - x) here so that it pushes players away from each other
+						other.environmentDisplacement = (other.walkSpeed)/2 * sign(other.x - x);
+					} else { // if we are the faster player
+						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x);
+						other.environmentDisplacement = (other.walkSpeed + (other.walkSpeed - walkSpeed))/2 * sign(other.x - x);
 					}
 				}
 			}
@@ -970,6 +991,8 @@ if state != eState.HITSTOP {
 	if place_meeting(x, y+vsp+fallSpeed, oWall) {
 		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) y += sign(vsp);
 		
+		isJumpingForward = false;
+		jumpHsp = 0;
 		vsp = 0;
 		if !grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL{
 			state = eState.IDLE;
@@ -984,7 +1007,7 @@ if state != eState.HITSTOP {
 		}
 		if state == eState.LAUNCHED {
 			state = eState.KNOCKED_DOWN;
-			sprite_index = sRussel_KnockedDown;
+			sprite_index = CharacterSprites.knockdown_Sprite;
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
@@ -1005,5 +1028,5 @@ if !inAttackState && canTurnAround{
 }
 else {
 	image_speed = 0;
-	if hitstun > 0 sprite_index = sRussel_Hurt; 
+	if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite; 
 }

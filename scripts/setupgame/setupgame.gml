@@ -1,8 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame(){
-	p1 = instance_create_layer(32, 104, "Instances", oPlayerController);
-	p2 = instance_create_layer(128, 104, "Instances", oPlayerController);
+	if room != rStageArcade {
+		p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
+	} else {
+		p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+		p2 = instance_create_layer(128, 104, "Instances", global.p2SelectedCharacter);
+	}
 	
 	// Setup Camera
 	global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
@@ -49,6 +54,30 @@ function SetupGame(){
 	TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
 	global.gameTimer = 99;
 	
+	// Create Super Meter UI
+		// Player 1
+	p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
+	with p1SuperMeter {
+		owner = other.p1;
+		ui_xOffset = x;
+	}
+		// Player 2
+	p2SuperMeter = instance_create_layer(97, 106, "UI", oSuperMeterUI);
+	with p2SuperMeter {
+		owner = other.p2;
+		ui_xOffset = x;
+		meterDir = 1;
+		sprite_index = sSuperMeterP2;
+	}
+	
+	
+	// Set up the HUD
+	hudObject = instance_create_layer(0, 0, "UI", oUIHUD);
+	with hudObject {
+		p1Character = global.p1SelectedCharacter;
+		p2Character = global.p2SelectedCharacter;
+	}
+	
 	frameAdvantage = 0;
 	calculateFrameData = false;
 	
@@ -56,7 +85,7 @@ function SetupGame(){
 	gameHaltTimer = 0;
 	
 	if global.hasCompletedIntros == true {
-		var particle = instance_create_layer(0, 0, "Particles", oParticles);
+		var particle = instance_create_layer(80, 0, "Particles", oParticles);
 		with particle {
 			sprite_index = sRound1Start;
 			lifetime = 110;

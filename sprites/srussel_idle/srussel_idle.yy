@@ -25,28 +25,28 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"9968cd45-f6e1-4b00-9b09-b2c90e4e7412","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"9968cd45-f6e1-4b00-9b09-b2c90e4e7412","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"9968cd45-f6e1-4b00-9b09-b2c90e4e7412","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"9968cd45-f6e1-4b00-9b09-b2c90e4e7412","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"9968cd45-f6e1-4b00-9b09-b2c90e4e7412","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"fe2e0d42-204c-440c-8a09-f100b68b1710","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"fe2e0d42-204c-440c-8a09-f100b68b1710","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"fe2e0d42-204c-440c-8a09-f100b68b1710","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"fe2e0d42-204c-440c-8a09-f100b68b1710","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"fe2e0d42-204c-440c-8a09-f100b68b1710","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"2c127a37-4c06-47c2-9ed7-7c3dcee42251","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2c127a37-4c06-47c2-9ed7-7c3dcee42251","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2c127a37-4c06-47c2-9ed7-7c3dcee42251","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"2c127a37-4c06-47c2-9ed7-7c3dcee42251","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"2c127a37-4c06-47c2-9ed7-7c3dcee42251","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"3615c245-ba66-45b1-a12a-6197b4de8097","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3615c245-ba66-45b1-a12a-6197b4de8097","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"3615c245-ba66-45b1-a12a-6197b4de8097","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"3615c245-ba66-45b1-a12a-6197b4de8097","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"3615c245-ba66-45b1-a12a-6197b4de8097","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"4ac3e42d-7d2d-4aa8-9f61-4bd90fd69186","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"4ac3e42d-7d2d-4aa8-9f61-4bd90fd69186","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"4ac3e42d-7d2d-4aa8-9f61-4bd90fd69186","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"4ac3e42d-7d2d-4aa8-9f61-4bd90fd69186","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"4ac3e42d-7d2d-4aa8-9f61-4bd90fd69186","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"0a46f111-0e6a-41ed-bdb7-11ec30d273d3","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"0a46f111-0e6a-41ed-bdb7-11ec30d273d3","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"0a46f111-0e6a-41ed-bdb7-11ec30d273d3","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"8d9fe756-95ec-4dca-8c7f-7ee6a1dd7f20","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"0a46f111-0e6a-41ed-bdb7-11ec30d273d3","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"LayerId":{"name":"c14a5215-9534-4276-b7e8-8b879419e88d","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"resourceVersion":"1.0","name":"0a46f111-0e6a-41ed-bdb7-11ec30d273d3","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -97,7 +97,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Idle",

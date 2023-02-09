@@ -25,20 +25,20 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"c460d3c1-5565-4333-aea1-0af0332e5038","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c460d3c1-5565-4333-aea1-0af0332e5038","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"c460d3c1-5565-4333-aea1-0af0332e5038","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"8af61aa6-04c7-4d53-a70e-d12d94cd3582","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"c460d3c1-5565-4333-aea1-0af0332e5038","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"c460d3c1-5565-4333-aea1-0af0332e5038","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"67e8d837-ae4d-4696-8dbd-e2c6f882a305","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"67e8d837-ae4d-4696-8dbd-e2c6f882a305","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"67e8d837-ae4d-4696-8dbd-e2c6f882a305","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"8af61aa6-04c7-4d53-a70e-d12d94cd3582","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"67e8d837-ae4d-4696-8dbd-e2c6f882a305","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"67e8d837-ae4d-4696-8dbd-e2c6f882a305","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"b85a4822-8b8e-4211-906d-88170e138dde","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"b85a4822-8b8e-4211-906d-88170e138dde","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"b85a4822-8b8e-4211-906d-88170e138dde","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"8af61aa6-04c7-4d53-a70e-d12d94cd3582","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"b85a4822-8b8e-4211-906d-88170e138dde","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"b85a4822-8b8e-4211-906d-88170e138dde","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"ff50b3b5-d949-4fe8-99b1-79e266f9eb3d","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ff50b3b5-d949-4fe8-99b1-79e266f9eb3d","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"ff50b3b5-d949-4fe8-99b1-79e266f9eb3d","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"8af61aa6-04c7-4d53-a70e-d12d94cd3582","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"ff50b3b5-d949-4fe8-99b1-79e266f9eb3d","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"LayerId":{"name":"d69b4201-a5c4-4612-9ff1-f86e0e5484ce","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"resourceVersion":"1.0","name":"ff50b3b5-d949-4fe8-99b1-79e266f9eb3d","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -87,7 +87,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Russel.yy",
+    "path": "folders/Sprites/Characters/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Crouching_Light",
