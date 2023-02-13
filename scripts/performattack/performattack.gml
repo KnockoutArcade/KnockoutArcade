@@ -24,14 +24,16 @@ function PerformAttack(Action){
 	var hitbox = 0;
 	// Animations
 	for (var i = 0; i < Action.numOfWindows; i++) {
-			if animTimer >= Action.window[i][0] image_index = Action.window[i][1];
+			if (animTimer >= Action.window[i].Length) {
+				image_index = Action.window[i].ImageIndex;
+			}
 	}
 	
 	// Throws
-	if Action.isThrow {
+	if (Action.isThrow) {
 		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) {
 			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
-			if animTimer >= Action.opponentPositionData.window[i][0] && heldOpponent != noone{
+			if (animTimer >= Action.opponentPositionData.window[i].Length && heldOpponent != noone) {
 				heldOpponent.x = x + Action.opponentPositionData.window[i][1] * image_xscale;
 				heldOpponent.y = y + Action.opponentPositionData.window[i][2];
 				// Assigns the correct sprite to use. It will be different for every character, but we just want to use that character's hurt sprite
@@ -104,6 +106,5 @@ function PerformAttack(Action){
 				hurtboxProperty = Action.hurtboxProperty;
 			}
 		}
-	}
-	
+	}	
 }

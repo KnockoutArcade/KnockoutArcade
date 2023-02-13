@@ -658,9 +658,11 @@ switch state {
 		PerformAttack(selectedCharacter.ForwardThrow);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if animTimer > selectedCharacter.ForwardThrow.attackProperty.start[0] hsp = 0;
+		if (animTimer > selectedCharacter.ForwardThrow.attackProperty[0].start) {
+			hsp = 0;
+		}
 		
-		if animTimer > 42 {
+		if (animTimer > 42) {
 			state = eState.IDLE;
 			frameAdvantage = true;
 		}

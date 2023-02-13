@@ -27,6 +27,14 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1){
 		nextMove.isThrow = selectedCharacter.MoveData[i].IsThrow;
 		nextMove.window = selectedCharacter.MoveData[i].FrameData;
 		nextMove.hurtboxProperty = selectedCharacter.MoveData[i].HurtboxData;
+
+		if(selectedCharacter.MoveData[i].IsThrow) {
+			nextMove.opponentPositionData = selectedCharacter.MoveData[i].OpponentPositionData;
+		}
+
+		if(selectedCharacter.MoveData[i].RehitData.NumberOfFrames != 0) {
+			nextMove.rehitData = selectedCharacter.MoveData[i].RehitData;
+		}
 		
 		switch(selectedCharacter.MoveData[i].MoveType)
 		{
