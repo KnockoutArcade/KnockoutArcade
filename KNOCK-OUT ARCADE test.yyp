@@ -9,6 +9,7 @@
     {"id":{"name":"sRussel_Intro","path":"sprites/sRussel_Intro/sRussel_Intro.yy",},"order":27,},
     {"id":{"name":"sRussel_Launched","path":"sprites/sRussel_Launched/sRussel_Launched.yy",},"order":13,},
     {"id":{"name":"sRussel_Crouch_Block","path":"sprites/sRussel_Crouch_Block/sRussel_Crouch_Block.yy",},"order":26,},
+    {"id":{"name":"sBeverly_NSpecial_MOCKUP","path":"sprites/sBeverly_NSpecial_MOCKUP/sBeverly_NSpecial_MOCKUP.yy",},"order":1,},
     {"id":{"name":"sJayStage","path":"sprites/sJayStage/sJayStage.yy",},"order":4,},
     {"id":{"name":"sRussel_KnockedDown","path":"sprites/sRussel_KnockedDown/sRussel_KnockedDown.yy",},"order":14,},
     {"id":{"name":"PaletteSetup","path":"scripts/PaletteSetup/PaletteSetup.yy",},"order":9,},
