@@ -763,6 +763,10 @@ global.stRusselMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
 		},
 		
 		hasGroundMovementData : false,
@@ -834,6 +838,10 @@ global.stRusselMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : -70,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : -22,
 		},
 		
 		hasGroundMovementData : false,
@@ -1762,6 +1770,10 @@ global.stBeverlyMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
 		},
 		
 		hasGroundMovementData : false,
@@ -1833,6 +1845,10 @@ global.stBeverlyMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : -70,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
 		},
 		
 		hasGroundMovementData : false,

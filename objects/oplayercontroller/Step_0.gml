@@ -628,6 +628,8 @@ switch state {
 		if animTimer > 42 {
 			state = eState.IDLE;
 			frameAdvantage = true;
+			sprite_index = CharacterSprites.idle_Sprite;
+			x += selectedCharacter.ForwardThrow.opponentPositionData.throwOffset * image_xscale;
 		}
 	}
 	break;
@@ -648,7 +650,7 @@ switch state {
 			state = eState.IDLE;
 			frameAdvantage = true;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x -= 22 * image_xscale;
+			x += selectedCharacter.BackwardThrow.opponentPositionData.throwOffset * image_xscale;
 		}
 	}
 	break;
