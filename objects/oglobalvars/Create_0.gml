@@ -45,6 +45,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		hasMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -99,6 +101,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -155,6 +159,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		hasMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -209,6 +215,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -265,6 +273,17 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		hasMovementData : true,
+
+		MovementData : {
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, 1],  [12, 24, 0, 1],  [13, 0, 0, 1] ]
+			// There are 3 windows here, the first window stops Russel intially when performing the move,
+			// the 2nd is the actual part where he moves,
+			// the 3rd stops him again for the rest of the move.
+		},
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -319,6 +338,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -377,6 +398,8 @@ global.stRusselMoves = {
 		
 		numOfHurtboxes : 1,
 		
+		hasMovementData : false,
+		
 		hurtboxProperty : {
 			start : [5],
 			lifetime : [13],
@@ -429,6 +452,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 2,
 		
@@ -485,6 +510,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		hasMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -540,6 +567,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		hasMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -594,6 +623,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -652,6 +683,8 @@ global.stRusselMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -719,6 +752,8 @@ global.stRusselMoves = {
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
 		},
+		
+		hasMovementData : false,
 		
 		
 		numOfHurtboxes : 1,
@@ -788,6 +823,7 @@ global.stRusselMoves = {
 			distanceFromWall : -70,
 		},
 		
+		hasMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
