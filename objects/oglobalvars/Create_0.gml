@@ -1044,6 +1044,9 @@ global.stBeverlyMoves = {
 		
 		isThrow : false,
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1098,6 +1101,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1154,6 +1160,9 @@ global.stBeverlyMoves = {
 		
 		isThrow : false,
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1208,6 +1217,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1264,6 +1276,18 @@ global.stBeverlyMoves = {
 		
 		isThrow : false,
 		
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
+
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [12, 24, 0, true, true],  [13, 0, 0, true, true] ]
+			// There are 3 windows here, the first window stops Russel intially when performing the move,
+			// the 2nd is the actual part where he moves,
+			// the 3rd stops him again for the rest of the move.
+		},
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1318,6 +1342,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1376,6 +1403,9 @@ global.stBeverlyMoves = {
 		
 		numOfHurtboxes : 1,
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
+		
 		hurtboxProperty : {
 			start : [5],
 			lifetime : [13],
@@ -1428,6 +1458,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 2,
 		
@@ -1484,6 +1517,9 @@ global.stBeverlyMoves = {
 		
 		isThrow : false,
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1539,6 +1575,9 @@ global.stBeverlyMoves = {
 		
 		isThrow : false,
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
+		
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1593,6 +1632,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1651,6 +1693,9 @@ global.stBeverlyMoves = {
 		},
 		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1718,6 +1763,9 @@ global.stBeverlyMoves = {
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
 		},
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		
 		numOfHurtboxes : 1,
@@ -1787,6 +1835,8 @@ global.stBeverlyMoves = {
 			distanceFromWall : -70,
 		},
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1802,49 +1852,65 @@ global.stBeverlyMoves = {
 	},
 	
 	NeutralSpecial : {
-		spriteID : sBeverly_NSpecial_MOCKUP,
-		numOfWindows : 2,
+		spriteID : sRussel_NSpecial,
+		numOfWindows : 25,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[0 , 0], [7, 1]],
+		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
 		
-		numOfHitboxes : 1,
+		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [10],
-			lifetime : [1],
-			comboScaling : [0],
-			attackWidth : [30],
-			attackHeight : [20],
-			widthOffset : [10],
-			heightOfset : [2],
+			start : [10, 31],
+			lifetime : [1, 4],
+			comboScaling : [0, 2],
+			attackWidth : [30, 30],
+			attackHeight : [20, 20],
+			widthOffset : [10, 10],
+			heightOfset : [2, 2],
 			group : [1, 2],
 			
-			damage: [1],
-			meterGain : [1],
-			attackHitstop : [2],
-			attackHitstun : [8],
-			attackType : [eAttackType.MID],
-			blockstun : [4],
-			knockback: [1],
-			airKnockbackV: [-.5],
-			airKnockbackH: [.5],
+			damage: [1, 3],
+			meterGain : [1, 4],
+			attackHitstop : [2, 12],
+			attackHitstun : [8, 19],
+			attackType : [eAttackType.MID, eAttackType.MID],
+			blockstun : [4, 10],
+			knockback: [1, 4],
+			airKnockbackV: [-.5, -1],
+			airKnockbackH: [.5, 2],
 			
-			launches: [false],
-			LaunchKnockbackV: [0],
-			LaunchKnockbackH: [0],
-			pushback: [ 3],
+			launches: [false, false],
+			LaunchKnockbackV: [0, 0],
+			LaunchKnockbackH: [0, 0],
+			pushback: [0, 3],
 			
-			particlexOffset : [20],
-			particleyOffset : [10],
-			particleEffect : [sHitEffect],
-			particleDuration : [5]
+			particlexOffset : [20, 20],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect,sHitEffect],
+			particleDuration : [5,5]
 		},
 		
-	
+		rehitData : {
+			hitbox : 1, // The hitbox to be repeated
+			numOfHits : 8, // How many times should that hitbox activate
+			frames : [12, 14, 16, 18, 20, 22, 24, 26],
+		},
 		
 		isThrow : false,
 		
+		// Movement Data
+		hasGroundMovementData : false,
+		hasAirMovementData : true,
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, false, true],  [1, 0, -2, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : .5, // How much faster or slower we fall
+		},
+		
+		// Hurtbox Data
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1900,6 +1966,24 @@ global.stBeverlyMoves = {
 		
 		
 		isThrow : false,
+		
+		// Movement Data
+		hasGroundMovementData : true,
+		hasAirMovementData : true,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, true, true]]
+		},
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, false, false]],
+			gravityScale : .5, // How much faster or slower we fall
+		},
+		
 		
 		numOfHurtboxes : 2,
 		
