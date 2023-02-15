@@ -496,13 +496,12 @@ switch state {
 
 	case eState.NEUTRAL_SPECIAL: {
 		if grounded {
-			hsp = 0;
 			
 			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, 50, false, 45);
+			
 		} else {
 			grounded = false;
 			inAttackState = true;
-			if animTimer == 1 vsp = -2;
 			
 			if vsp > 0 vsp += fallSpeed/2;
 			else vsp += fallSpeed;
@@ -524,30 +523,13 @@ switch state {
 	case eState.SIDE_SPECIAL: {
 		if grounded {
 			grounded = false;
-			if animTimer == 1 hsp = 0;
-			if animTimer == 6 vsp = -1.5;	
-			if animTimer >= 6 && animTimer < 32 hsp = 2.5*image_xscale;
 			
 			vsp += fallSpeed/2;
 			
-			if animTimer >= 32 {
-				hsp -= (hsp != 0) ? 0.5 * image_xscale : 0;
-			}
 			GroundedAttackScript(selectedCharacter.SideSpecial, true, 44, false, 45);
 		} else {
 			grounded = false;
 			inAttackState = true;
-			if animTimer < 6 {
-				vsp = 0;
-				//hsp = 0;
-			}
-			if animTimer == 6 vsp = -1.5;	
-			
-			if animTimer >= 6 && animTimer < 32 hsp = 2.5*image_xscale;
-			
-			if animTimer >= 32 {
-				hsp -= (abs(hsp) > 1) ? hsp * (0.5) : 0;
-			}
 			
 			vsp += fallSpeed/2;
 		

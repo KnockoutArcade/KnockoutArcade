@@ -45,7 +45,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -102,7 +103,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -159,7 +161,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -216,7 +219,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -273,12 +277,13 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : true,
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
 
-		MovementData : {
+		groundMovementData : { // Movement data for performing the move on the ground
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
-			window : [ [0, 0, 0, 1],  [12, 24, 0, 1],  [13, 0, 0, 1] ]
+			window : [ [0, 0, 0, true, true],  [12, 24, 0, true, true],  [13, 0, 0, true, true] ]
 			// There are 3 windows here, the first window stops Russel intially when performing the move,
 			// the 2nd is the actual part where he moves,
 			// the 3rd stops him again for the rest of the move.
@@ -339,7 +344,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -398,7 +404,8 @@ global.stRusselMoves = {
 		
 		numOfHurtboxes : 1,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		hurtboxProperty : {
 			start : [5],
@@ -453,7 +460,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 2,
 		
@@ -510,7 +518,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -567,7 +576,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -624,7 +634,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -684,7 +695,8 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -753,7 +765,8 @@ global.stRusselMoves = {
 			distanceFromWall : 50,
 		},
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		
 		numOfHurtboxes : 1,
@@ -823,7 +836,8 @@ global.stRusselMoves = {
 			distanceFromWall : -70,
 		},
 		
-		hasMovementData : false,
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -886,6 +900,18 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
+		// Movement Data
+		hasGroundMovementData : false,
+		hasAirMovementData : true,
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, false, true],  [1, 0, -2, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : .5, // How much faster or slower we fall
+		},
+		
+		// Hurtbox Data
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -941,6 +967,24 @@ global.stRusselMoves = {
 		
 		
 		isThrow : false,
+		
+		// Movement Data
+		hasGroundMovementData : true,
+		hasAirMovementData : true,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, true, true]]
+		},
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, false, false]],
+			gravityScale : .5, // How much faster or slower we fall
+		},
+		
 		
 		numOfHurtboxes : 2,
 		
