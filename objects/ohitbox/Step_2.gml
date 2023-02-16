@@ -143,12 +143,30 @@ if collisionCheck {
 				if collision_list[| i].owner.inAttackState {
 					ProcessHit(counterHitProperty, collision_list[| i]);
 					
-					var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
-					with counterParticle {
-						lifetime = global.hitstop;
-						sprite_index = sCOUNTERtext;
-						depth = 2;
+					// Display counterhit text
+					if other.counterHitProperty.counterHitLevel[hitboxID] == 1 {
+						var counterParticle = instance_create_layer(global.camObj.x - 80 + 23, 61, "Particles", oParticles);
+						with counterParticle {
+							lifetime = global.hitstop;
+							sprite_index = sSmallCounter;
+							depth = 2;
+						}
+					} else if other.counterHitProperty.counterHitLevel[hitboxID] == 2 {
+						var counterParticle = instance_create_layer(global.camObj.x - 80 + 30, 70, "Particles", oParticles);
+						with counterParticle {
+							lifetime = global.hitstop;
+							sprite_index = sMediumCounter;
+							depth = 2;
+						}
+					} else if other.counterHitProperty.counterHitLevel[hitboxID] == 3 {
+						var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
+						with counterParticle {
+							lifetime = global.hitstop;
+							sprite_index = sCOUNTERtext;
+							depth = 2;
+						}
 					}
+					
 				} 
 				else { // on Regular Hit
 					ProcessHit(attackProperty, collision_list[| i]);

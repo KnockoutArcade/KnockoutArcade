@@ -45,6 +45,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -128,6 +130,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -211,6 +215,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -294,6 +300,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
 			group : [1],
 			
 			damage: [20],
@@ -383,6 +391,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
 			group : [1],
 			
 			damage: [20],
@@ -477,6 +487,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -560,6 +572,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2, 2],
+			
 			group : [1, 1],
 			
 			damage: [20, 20],
@@ -643,6 +657,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
 			group : [1],
 			
 			damage: [20],
@@ -726,6 +742,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -809,6 +827,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
 			group : [1],
 			
 			damage: [20],
@@ -892,6 +912,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
 			group : [1],
 			
 			damage: [20],
@@ -978,6 +1000,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [0],
@@ -1064,6 +1088,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // This move technically never counter hits, but needs data anyways
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -1164,6 +1190,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // This move technically never counter hits, but needs data anyway
+			counterHitLevel: [1],
+			
 			group : [1],
 			
 			damage: [20],
@@ -1266,6 +1294,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 3],
+			
 			group : [1, 1],
 			
 			damage: [20, 20],
@@ -1359,6 +1389,8 @@ global.stRusselMoves = {
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 2],
+			
 			group : [1, 1],
 			
 			damage: [20, 20],
