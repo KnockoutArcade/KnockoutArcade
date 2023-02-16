@@ -151,9 +151,10 @@ if collisionCheck {
 				owner.comboScaling += attackProperty.comboScaling[hitboxID]; // increase the level of scaling for the combo
 				if owner.combo == 2 owner.startCombo = true; // Tells the game to display the combo counter when the combo is at least 2 hits long
 				
-				
+				// Apply Damage
 				collision_list[| i].owner.hp -= scaledDamage;
 				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
+				
 				
 				// Meter Build - P1 gets 100% meter, P2 gets 25%
 				collision_list[| i].owner.superMeter += floor(attackProperty.meterGain[hitboxID] * 0.25);
@@ -176,6 +177,16 @@ if collisionCheck {
 				collision_list[| i].owner.hitstun = attackProperty.attackHitstun[hitboxID];
 				ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.group[hitboxID]);
 				global.hitstop = attackProperty.attackHitstop[hitboxID];
+				
+				// Counter Hits
+				if collision_list[| i].owner.inAttackState {
+					var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
+					with counterParticle {
+						lifetime = global.hitstop;
+						sprite_index = sCOUNTERtext;
+						depth = 2;
+					}
+				}
 				
 				//Allow Cancelling
 				owner.cancelable = true;
