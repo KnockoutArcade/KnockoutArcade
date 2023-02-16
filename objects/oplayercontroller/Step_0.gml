@@ -313,7 +313,7 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight, true);
+		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -322,7 +322,7 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK_2: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight2, true);
+		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -332,14 +332,14 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK_3: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight3, true);
+		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1);
 		
 	}
 	break;
 	
 	case eState.STANDING_MEDIUM_ATTACK: {
 
-		GroundedAttackScript(selectedCharacter.StandMedium, true);
+		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1);
 		
 		// Cancelable into heavy
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -349,7 +349,7 @@ switch state {
 	
 	case eState.STANDING_HEAVY_ATTACK: {
 		
-		GroundedAttackScript(selectedCharacter.StandHeavy, true);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -370,11 +370,6 @@ switch state {
 		
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true);
 		
-		if (animTimer > 27) {
-			state = eState.CROUCHING;
-			frameAdvantage = true;
-		}
-		
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
 	}
@@ -382,13 +377,8 @@ switch state {
 	
 	
 	case eState.CROUCHING_HEAVY_ATTACK: {
-		grounded = true;
-		inAttackState = true;
 		
-		sprite_index = selectedCharacter.CrouchingHeavy.spriteID;
-		image_index = 0;
-		
-		PerformAttack(selectedCharacter.CrouchingHeavy);
+		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true);
 		
 		hurtboxOffset = -7;
 		hurtbox.image_xscale = 18;
@@ -398,13 +388,6 @@ switch state {
 			hurtbox.image_yscale = 20;
 		}
 		
-		if (animTimer > 34) if (movedir != 0) state = eState.WALKING;
-		
-		if (animTimer > 34) {
-			state = eState.CROUCHING;
-			frameAdvantage = true;
-		}
-		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
 	}
@@ -412,16 +395,8 @@ switch state {
 	
 	
 	case eState.JUMPING_LIGHT_ATTACK: {
-		grounded = false;
-		inAttackState = true;
 		
-		if !isShortHopping vsp += fallSpeed;
-		else vsp += fastFallSpeed;
-		
-		sprite_index = selectedCharacter.JumpingLight.spriteID;
-		image_index = 0;
-		
-		PerformAttack(selectedCharacter.JumpingLight);
+		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -431,22 +406,8 @@ switch state {
 	
 	
 	case eState.JUMPING_MEDIUM_ATTACK: {
-		//cancelable = false;
-		grounded = false;
-		inAttackState = true;
 		
-		if !isShortHopping vsp += fallSpeed;
-		else vsp += fastFallSpeed;
-		
-		sprite_index = selectedCharacter.JumpingMedium.spriteID;
-		image_index = 0;
-		
-		PerformAttack(selectedCharacter.JumpingMedium);
-		
-		if (animTimer > 27) {
-			state = eState.JUMPING;
-			frameAdvantage = true;
-		}
+		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -455,22 +416,8 @@ switch state {
 	
 	
 	case eState.JUMPING_HEAVY_ATTACK: {
-		//cancelable = false;
-		grounded = false;
-		inAttackState = true;
 		
-		if !isShortHopping vsp += fallSpeed;
-		else vsp += fastFallSpeed;
-		
-		sprite_index = selectedCharacter.JumpingHeavy.spriteID;
-		image_index = 0;
-		
-		PerformAttack(selectedCharacter.JumpingHeavy);
-		
-		if (animTimer > 27) {
-			state = eState.JUMPING;
-			frameAdvantage = true;
-		}
+		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -481,24 +428,11 @@ switch state {
 	case eState.NEUTRAL_SPECIAL: {
 		if grounded {
 			
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true);
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);
 			
 		} else {
-			grounded = false;
-			inAttackState = true;
-			
-			if vsp > 0 vsp += fallSpeed/2;
-			else vsp += fallSpeed;
 		
-			sprite_index = selectedCharacter.NeutralSpecial.spriteID;
-			image_index = 0;
-		
-			PerformAttack(selectedCharacter.NeutralSpecial);
-		
-			if (animTimer > 50) {
-				state = eState.JUMPING;
-				frameAdvantage = true;
-			}
+			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);
 		}
 	}
 	break;
@@ -506,26 +440,12 @@ switch state {
 
 	case eState.SIDE_SPECIAL: {
 		if grounded {
-			grounded = false;
 			
-			vsp += fallSpeed/2;
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
 			
-			GroundedAttackScript(selectedCharacter.SideSpecial, true);
 		} else {
-			grounded = false;
-			inAttackState = true;
 			
-			vsp += fallSpeed/2;
-		
-			sprite_index = selectedCharacter.SideSpecial.spriteID;
-			image_index = 0;
-		
-			PerformAttack(selectedCharacter.SideSpecial);
-		
-			if (animTimer > 49) {
-				state = eState.JUMPING;
-				frameAdvantage = true;
-			}
+			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
 		}
 	}
 	break
