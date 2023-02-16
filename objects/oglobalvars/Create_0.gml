@@ -4,6 +4,7 @@
 // Russel Vars
 global.stRusselMoves = {
 	StandLight : {
+		duration : 7, // Total length of this attack in frames
 		spriteID : sRussel_Standing_Light,
 		numOfWindows : 4,
 		
@@ -62,6 +63,7 @@ global.stRusselMoves = {
 	},
 	
 	StandLight2 : {
+		duration : 14,
 		spriteID : sRussel_Standing_Light2,
 		numOfWindows : 4,
 		
@@ -120,6 +122,7 @@ global.stRusselMoves = {
 	},
 	
 	StandLight3 : {
+		duration : 22,
 		spriteID : sRussel_Standing_Light3,
 		numOfWindows : 4,
 		
@@ -178,6 +181,7 @@ global.stRusselMoves = {
 	},
 	
 	StandMedium : {
+		duration : 21,
 		spriteID : sRussel_Standing_Medium,
 		numOfWindows : 6,
 		
@@ -219,8 +223,14 @@ global.stRusselMoves = {
 		
 		isThrow : false,
 		
-		hasGroundMovementData : false,
+		hasGroundMovementData : true,
 		hasAirMovementData : false,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [4, 1, 0, true, true],  [5, 0, 0, true, true] ]
+		},
 		
 		numOfHurtboxes : 1,
 		
@@ -236,6 +246,7 @@ global.stRusselMoves = {
 	},
 	
 	StandHeavy : {
+		duration : 39,
 		spriteID : sRussel_Standing_Heavy,
 		numOfWindows : 7,
 		
@@ -303,6 +314,7 @@ global.stRusselMoves = {
 	},
 		
 	CrouchingLight : {
+		duration : 9,
 		spriteID : sRussel_Crouching_Light,
 		numOfWindows : 3,
 		
@@ -361,6 +373,7 @@ global.stRusselMoves = {
 	},
 	
 	CrouchingMedium : {
+		duration : 27,
 		spriteID : sRussel_Crouching_Medium,
 		numOfWindows : 10,
 		
@@ -419,6 +432,7 @@ global.stRusselMoves = {
 	},
 		
 	CrouchingHeavy : {
+		duration : 34,
 		spriteID : sRussel_Crouching_Heavy,
 		numOfWindows : 10,
 		
@@ -477,6 +491,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingLight : {
+		duration : 999,
 		spriteID : sRussel_Jumping_Light,
 		numOfWindows : 2,
 		
@@ -535,6 +550,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingMedium : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Medium,
 		numOfWindows : 6,
 		
@@ -593,6 +609,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingHeavy : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Heavy,
 		numOfWindows : 6,
 		
@@ -651,6 +668,7 @@ global.stRusselMoves = {
 	},
 	
 	Grab : {
+		duration : 24,
 		spriteID : sRussel_Grab,
 		numOfWindows : 5,
 		
@@ -712,6 +730,7 @@ global.stRusselMoves = {
 	},
 	
 	ForwardThrow : {
+		duration : 42,
 		spriteID : sRussel_ForwardThrow,
 		numOfWindows : 9,
 		
@@ -787,6 +806,7 @@ global.stRusselMoves = {
 	},
 	
 	BackwardThrow : {
+		duration : 58,
 		spriteID : sRussel_BackwardThrow,
 		numOfWindows : 10,
 		
@@ -861,6 +881,7 @@ global.stRusselMoves = {
 	},
 	
 	NeutralSpecial : {
+		duration : 50,
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
@@ -934,6 +955,7 @@ global.stRusselMoves = {
 	},
 	
 	SideSpecial : {
+		duration : 44,
 		spriteID : sRussel_SideSpecial,
 		numOfWindows : 11,
 		

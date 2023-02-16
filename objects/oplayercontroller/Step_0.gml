@@ -313,7 +313,7 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight, true, 7, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight, true);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -322,7 +322,7 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK_2: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight2, true, 14, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight2, true);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -332,14 +332,14 @@ switch state {
 	
 	case eState.STANDING_LIGHT_ATTACK_3: {
 		
-		GroundedAttackScript(selectedCharacter.StandLight3, true, 22, false, 0);
+		GroundedAttackScript(selectedCharacter.StandLight3, true);
 		
 	}
 	break;
 	
 	case eState.STANDING_MEDIUM_ATTACK: {
 
-		GroundedAttackScript(selectedCharacter.StandMedium, true, 21, true, 23);
+		GroundedAttackScript(selectedCharacter.StandMedium, true);
 		
 		// Cancelable into heavy
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -349,7 +349,7 @@ switch state {
 	
 	case eState.STANDING_HEAVY_ATTACK: {
 		
-		GroundedAttackScript(selectedCharacter.StandHeavy, true, 39, false, 36);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -358,17 +358,8 @@ switch state {
 	
 	
 	case eState.CROUCHING_LIGHT_ATTACK: {
-		sprite_index = selectedCharacter.CrouchingLight.spriteID;
-		grounded = true;
-		image_index = 0;
-		inAttackState = true;
 		
-		PerformAttack(selectedCharacter.CrouchingLight);
-		
-		if (animTimer > 9) {
-			state = eState.CROUCHING;
-			frameAdvantage = true;
-		}
+		CrouchingAttackScript(selectedCharacter.CrouchingLight, true);
 		
 		var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if cancelable && global.hitstop < 1 CancelData(cancels, attack, true);
@@ -376,15 +367,8 @@ switch state {
 	break;
 	
 	case eState.CROUCHING_MEDIUM_ATTACK: {
-		grounded = true;
-		inAttackState = true;
 		
-		sprite_index = selectedCharacter.CrouchingMedium.spriteID;
-		image_index = 0;
-		
-		PerformAttack(selectedCharacter.CrouchingMedium);
-
-		if (animTimer > 26) if (movedir != 0) state = eState.WALKING;
+		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true);
 		
 		if (animTimer > 27) {
 			state = eState.CROUCHING;
@@ -497,7 +481,7 @@ switch state {
 	case eState.NEUTRAL_SPECIAL: {
 		if grounded {
 			
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, 50, false, 45);
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true);
 			
 		} else {
 			grounded = false;
@@ -526,7 +510,7 @@ switch state {
 			
 			vsp += fallSpeed/2;
 			
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, 44, false, 45);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true);
 		} else {
 			grounded = false;
 			inAttackState = true;
