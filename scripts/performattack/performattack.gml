@@ -125,6 +125,7 @@ function PerformAttack(Action){
 			
 				// Pass through attack data
 				attackProperty = Action.attackProperty;
+				counterHitProperty = Action.counterHitProperty;
 			}
 		}
 	}
@@ -146,6 +147,7 @@ function PerformAttack(Action){
 			
 						// Pass through attack data
 						attackProperty = Action.attackProperty;
+						counterHitProperty = Action.counterHitProperty;
 						
 					}
 					
