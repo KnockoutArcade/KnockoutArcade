@@ -11,8 +11,8 @@ if playerID == 1 {
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, hitstun);
-	draw_text(20, 50, hp);
-	draw_text(20, 70, combo);
+	draw_text(20, 50, animTimer);
+	draw_text(20, 70, inAttackState);
 	draw_text(20, 90, 1 - (.1 * comboScaling));
 } else {
 	draw_set_alpha(.5);

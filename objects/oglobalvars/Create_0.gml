@@ -44,6 +44,32 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -101,6 +127,32 @@ global.stRusselMoves = {
 			particleyOffset : [0],
 			particleEffect : [sSmallHitspark],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -162,6 +214,32 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -219,6 +297,32 @@ global.stRusselMoves = {
 			particleyOffset : [0],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -284,6 +388,32 @@ global.stRusselMoves = {
 			particleyOffset : [10],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -356,6 +486,32 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -413,6 +569,32 @@ global.stRusselMoves = {
 			particleyOffset : [0, 0],
 			particleEffect : [sHitEffect, sHitEffect],
 			particleDuration : [5, 5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
 		},
 		
 		isThrow : false,
@@ -474,6 +656,32 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -531,6 +739,32 @@ global.stRusselMoves = {
 			particleyOffset : [0],
 			particleEffect : [sSmallHitspark],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -592,6 +826,32 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -649,6 +909,32 @@ global.stRusselMoves = {
 			particleyOffset : [0],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -713,6 +999,32 @@ global.stRusselMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [0],
+			meterGain : [0],
+			comboScaling : [0],
+			attackHitstop : [0], 
+			attackHitstun : [0],
+			knockback: [0],
+			
+			airKnockbackV: [0],
+			airKnockbackH: [0],
+			
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [0],
+			
+			particlexOffset : [10],
+			particleyOffset : [0],
+			particleEffect : [sHitEffect],
+			particleDuration : [5]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -773,6 +1085,32 @@ global.stRusselMoves = {
 			
 			holdXOffset : [0],
 			holdYOffset : [0]
+		},
+		
+		counterHitProperty: { // This move technically never counter hits, but needs data anyways
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : true,
@@ -849,6 +1187,32 @@ global.stRusselMoves = {
 			
 			holdXOffset : [0],
 			holdYOffset : [0]
+		},
+		
+		counterHitProperty: { // This move technically never counter hits, but needs data anyway
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : true,
@@ -929,6 +1293,32 @@ global.stRusselMoves = {
 			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 3],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
+		
 		isThrow : false,
 		
 		// Movement Data
@@ -998,6 +1388,31 @@ global.stRusselMoves = {
 			particleDuration : [5,5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
 		
 		isThrow : false,
 		
@@ -1079,6 +1494,32 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1136,6 +1577,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [0],
 			particleEffect : [sSmallHitspark],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1197,6 +1664,32 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1254,6 +1747,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [0],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1319,6 +1838,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [10],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1391,6 +1936,32 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1448,6 +2019,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [0, 0],
 			particleEffect : [sHitEffect, sHitEffect],
 			particleDuration : [5, 5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
 		},
 		
 		isThrow : false,
@@ -1509,6 +2106,32 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1566,6 +2189,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [0],
 			particleEffect : [sSmallHitspark],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1627,6 +2276,32 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1684,6 +2359,32 @@ global.stBeverlyMoves = {
 			particleyOffset : [0],
 			particleEffect : [sHitEffect],
 			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1748,6 +2449,32 @@ global.stBeverlyMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
 		
 		hasGroundMovementData : false,
@@ -1808,6 +2535,32 @@ global.stBeverlyMoves = {
 			
 			holdXOffset : [0],
 			holdYOffset : [0]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : true,
@@ -1884,6 +2637,32 @@ global.stBeverlyMoves = {
 			
 			holdXOffset : [0],
 			holdYOffset : [0]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : true,
@@ -1964,6 +2743,32 @@ global.stBeverlyMoves = {
 			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 3],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
+		
 		isThrow : false,
 		
 		// Movement Data
@@ -2035,6 +2840,31 @@ global.stBeverlyMoves = {
 			particleDuration : [5,5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
 		
 		isThrow : false,
 		
