@@ -45,6 +45,73 @@ function PerformAttack(Action){
 	}
 	
 	
+	// Momentum Data
+	// Grounded
+	if Action.hasGroundMovementData && grounded{
+		var currentMovementWindow = 0; // The current window that we are using for momentum data
+		for (var i = 0; i < Action.groundMovementData.numOfWindows; i++) {
+			// We iterate through each window from left to right to determine which window should be active.
+			// If animTimer is >= the current window's starting_frame, then it will become the active window.
+			// If more than one window works, this code will allow the largest of the valid windows to be
+			// the active window.
+			if animTimer >= Action.groundMovementData.window[i][0] {
+				currentMovementWindow = i;
+			}
+		}
+		
+		// check hsp overwrite flag
+		// If the overwrite flag hsp is set to 1, then we overwrite the player's current momentum for the desired value
+		// If not, the velocity gets added to our current velocity.
+		if Action.groundMovementData.window[currentMovementWindow][3] == true { // hsp velocity
+			hsp = Action.groundMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+		} 
+		else if Action.groundMovementData.window[currentMovementWindow][3] == false {
+			hsp += Action.groundMovementData.window[currentMovementWindow][1] * image_xscale;
+		}
+		
+		// check vsp overwrite flag
+		if Action.groundMovementData.window[currentMovementWindow][4] == true {
+			vsp = Action.groundMovementData.window[currentMovementWindow][2];
+		}
+		else if Action.groundMovementData.window[currentMovementWindow][4] == false {
+			vsp += Action.groundMovementData.window[currentMovementWindow][2];
+		}
+		
+	} else { // If the move does not have movementdata, then we simply set the hsp to 0
+		if grounded && Action.isThrow == false {
+			hsp = 0; // set hsp to 0 specifically on grounded moves so aerial moves still carry aerial moemntum.
+		}
+	}
+	
+	// Air
+	if Action.hasAirMovementData && !grounded {
+		var currentMovementWindow = 0; // The current window that we are using for momentum data
+		for (var i = 0; i < Action.airMovementData.numOfWindows; i++) {
+			// Same as grounded
+			if animTimer >= Action.airMovementData.window[i][0] {
+				currentMovementWindow = i;
+			}
+		}
+		
+		// check hsp overwrite flag
+		if Action.airMovementData.window[currentMovementWindow][3] == true { // hsp velocity
+			hsp = Action.airMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+		} 
+		else if Action.airMovementData.window[currentMovementWindow][3] == false {
+			hsp += Action.airMovementData.window[currentMovementWindow][1] * image_xscale;
+		}
+		
+		// check vsp overwrite flag
+		if Action.airMovementData.window[currentMovementWindow][4] == true {
+			vsp = Action.airMovementData.window[currentMovementWindow][2];
+		}
+		else if Action.airMovementData.window[currentMovementWindow][4] == false {
+			vsp += Action.airMovementData.window[currentMovementWindow][2];
+		}
+	}
+	
+	
+	
 	// Hitboxes
 	for (var i = 0; i < Action.numOfHitboxes; i++;) {
 		if animTimer == Action.attackProperty.start[i] {
@@ -61,6 +128,7 @@ function PerformAttack(Action){
 			}
 		}
 	}
+	
 	
 	// Re-hitting Hitboxes
 	if variable_struct_exists(Action, "rehitData") {
