@@ -36,6 +36,7 @@
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},
     {"id":{"name":"JumpingAttackScript","path":"scripts/JumpingAttackScript/JumpingAttackScript.yy",},"order":2,},
     {"id":{"name":"sRussel_Hurt","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"order":5,},
+    {"id":{"name":"sCOUNTERtext","path":"sprites/sCOUNTERtext/sCOUNTERtext.yy",},"order":8,},
     {"id":{"name":"sSuperMeterP2","path":"sprites/sSuperMeterP2/sSuperMeterP2.yy",},"order":1,},
     {"id":{"name":"CancelData","path":"scripts/CancelData/CancelData.yy",},"order":10,},
     {"id":{"name":"oComboCounter","path":"objects/oComboCounter/oComboCounter.yy",},"order":0,},
