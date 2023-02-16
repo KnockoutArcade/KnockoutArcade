@@ -1779,11 +1779,11 @@ global.stBeverlyMoves = {
 	},
 	
 	SideSpecial : {
-		spriteID : sRussel_SideSpecial,
-		numOfWindows : 11,
+		spriteID : sBeverly_SideSpecial1_MOCKUP,
+		numOfWindows : 3,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [20, 6], [21, 7], [22, 8], [24, 9], [26, 10], [30, 11]],
+		window : [[4, 1], [8, 2], [22, 3]],
 		
 		numOfHitboxes : 2,
 		
