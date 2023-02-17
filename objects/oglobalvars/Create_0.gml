@@ -1348,17 +1348,17 @@ global.stRusselMoves = {
 	},
 	
 	SideSpecial : {
-		duration : 44,
+		duration : 50, // 44
 		spriteID : sRussel_SideSpecial,
-		numOfWindows : 11,
+		numOfWindows : 16,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [20, 6], [21, 7], [22, 8], [24, 9], [26, 10], [30, 11]],
+		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [17, 6], [21, 7], [22, 8], [26, 9], [28, 10], [29, 11], [32, 12], [40, 13], [46, 14], [48, 15], [49, 16]],
 		
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [8, 22],
+			start : [8, 26],
 			lifetime : [4, 4],
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
@@ -1372,7 +1372,7 @@ global.stRusselMoves = {
 			attackHitstop : [9, 16],
 			attackHitstun : [24, 15],
 			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [16, 10],
+			blockstun : [16, 12],
 			knockback: [6, 6],
 			airKnockbackV: [-.5, 0],
 			airKnockbackH: [2, 4],
@@ -1440,7 +1440,7 @@ global.stRusselMoves = {
 		numOfHurtboxes : 2,
 		
 		hurtboxProperty : {
-			start : [8, 22],
+			start : [8, 26],
 			lifetime : [5, 6],
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
