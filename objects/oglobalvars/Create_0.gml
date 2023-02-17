@@ -1423,7 +1423,7 @@ global.stRusselMoves = {
 		groundMovementData : { // Movement data for performing the move on the ground
 			numOfWindows : 5,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
-			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, true, true]],
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, 1, 0, true, true], [40, .5, 0, true, true]],
 			gravityScale : .5, // How much this move multiplies overall fall speed
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},
@@ -1431,7 +1431,7 @@ global.stRusselMoves = {
 		airMovementData : { // movement data for performing the move in the air
 			numOfWindows : 5,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
-			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, false, false]],
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.25, 0, false, false], [40, 0, 0, false, false]],
 			gravityScale : .5, // How much this move multiplies overall fall speed
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},
