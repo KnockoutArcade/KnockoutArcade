@@ -865,14 +865,16 @@ if state != eState.HITSTOP {
 		isJumpingForward = false;
 		jumpHsp = 0;
 		vsp = 0;
-		if !grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL{
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL) 
+		{
 			state = eState.IDLE;
 			hsp = 0;
 			grounded = true;
 			frameAdvantage = true;
 			inAttackState = false;
 		}
-		if state == eState.NEUTRAL_SPECIAL {
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL) 
+		{
 			grounded = true;
 			hsp = 0;
 		}
