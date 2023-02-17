@@ -15,6 +15,5 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) {
 	if (animTimer > moveToDo.duration) {
 		state = eState.JUMPING;
 		frameAdvantage = true;
-		//hsp = 0;
 	}
 }
