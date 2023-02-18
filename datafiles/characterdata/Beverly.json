@@ -4,8 +4,89 @@
   "BaseColor": {
     "UID": "74ab7666-7e20-4d84-8b4e-b2d9221735f8",
     "Name": "",
-    "NumberOfReplacableColors": 0,
-    "ColorPalette": []
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 0,
+        "Green": 0
+      }
+    ]
   },
   "NumberOfPalettes": 0,
   "Palettes": [],
