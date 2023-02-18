@@ -29,14 +29,14 @@ global.stRusselMoves = {
 			attackHitstun : [9],
 			attackType : [eAttackType.MID],
 			blockstun : [3],
-			knockback: [2],
+			knockback: [1],
 			airKnockbackV: [0],
 			airKnockbackH: [1],
 			
 			launches: [false],
 			LaunchKnockbackV: [0],
 			LaunchKnockbackH: [0],
-			pushback: [2],
+			pushback: [1],
 			
 			particlexOffset : [0],
 			particleyOffset : [0],
@@ -49,17 +49,17 @@ global.stRusselMoves = {
 			
 			group : [1],
 			
-			damage: [20],
-			meterGain : [12],
-			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
+			damage: [5],
+			meterGain : [6],
+			comboScaling : [2],
+			attackHitstop : [10], 
+			attackHitstun : [11],
 			knockback: [5],
 			
 			airKnockbackV: [-2],
 			airKnockbackH: [4],
 			
-			launches: [true],
+			launches: [false],
 			LaunchKnockbackV: [-1],
 			LaunchKnockbackH: [5],
 			pushback: [3],
@@ -114,7 +114,7 @@ global.stRusselMoves = {
 			attackHitstun : [14],
 			attackType : [eAttackType.MID],
 			blockstun : [9],
-			knockback: [2],
+			knockback: [-2],
 			airKnockbackV: [0],
 			airKnockbackH: [1],
 			
