@@ -543,7 +543,7 @@ global.stRusselMoves = {
 		attackProperty : {
 			start : [7, 9],
 			lifetime : [2, 2],
-			attackWidth : [13, 15],
+			attackWidth : [16, 15], // Before: [13, 15]
 			attackHeight : [10, 24],
 			widthOffset : [9, 6],
 			heightOfset : [10, 18],
