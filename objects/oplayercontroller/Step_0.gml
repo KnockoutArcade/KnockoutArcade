@@ -64,14 +64,27 @@ hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
 
-
-
+// Handle storing input for Super Jump
+if (superJumpTimer > 0) 
+{
+	superJumpTimer--;
+} 
+else
+{
+	storedSuperJump = false;
+}
+if (verticalMoveDir == -1)
+{
+	storedSuperJump = true;
+	superJumpTimer = 10;
+}
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if state == eState.IDLE {
 	animTimer = 0;
 	cancelable = false;
 	isShortHopping = false;
+	isSuperJumping = false;
 	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
@@ -86,6 +99,13 @@ if state == eState.IDLE {
 		// Is the player jumping forward?
 		if movedir = image_xscale isJumpingForward = true;
 		else isJumpingForward = false;
+			
+		// handle Super Jumping
+		if (storedSuperJump)
+		{
+			isSuperJumping = true;
+			storedSuperJump = false;
+		}
 	} else if verticalMoveDir == -1 {
 		state = eState.CROUCHING;
 	}
@@ -224,6 +244,7 @@ switch state {
 		cancelable = false;
 		grounded = true;
 		isShortHopping = false;
+		isSuperJumping = false;
 		
 		if (movedir = image_xscale) {
 			sprite_index = CharacterSprites.walkForward_Sprite;
@@ -247,6 +268,13 @@ switch state {
 			// Is the player jumping forward?
 			if movedir = image_xscale isJumpingForward = true;
 			else isJumpingForward = false;
+			
+			// handle Super Jumping
+			if (storedSuperJump)
+			{
+				isSuperJumping = true;
+				storedSuperJump = false;
+			}
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
 		}
@@ -271,19 +299,42 @@ switch state {
 		if animTimer > 4 {
 			state = eState.JUMPING;
 			grounded = false;
-			if verticalMoveDir == 1 {
+			
+			if (canShortHop)
+			{
+				if (verticalMoveDir == 1) 
+				{
+					vsp = -jumpSpeed;
+					isShortHopping = false;
+					jumpHsp = hsp;
+				}
+				else 
+				{
+					vsp = -(jumpSpeed * 0.75);
+					isShortHopping = true;
+					jumpHsp = hsp;
+				}
+			}
+			
+			if (canSuperJump)
+			{
+				if (isSuperJumping)
+				{
+					vsp = -(jumpSpeed * 1.25);
+					jumpHsp = hsp;
+				}
+				else
+				{
+					vsp = -jumpSpeed;
+					jumpHsp = hsp;
+				}
+			}
+			
+			if (!canSuperJump && !canShortHop)
+			{
 				vsp = -jumpSpeed;
 				isShortHopping = false;
-				jumpHsp = hsp;
-			}
-			else if canShortHop {
-				vsp = -(jumpSpeed * 0.75);
-				isShortHopping = true;
-				jumpHsp = hsp;
-			}
-			else {
-				vsp = -jumpSpeed;
-				isShortHopping = false;
+				isSuperJumping = false;
 				jumpHsp = hsp;
 			}
 		}
