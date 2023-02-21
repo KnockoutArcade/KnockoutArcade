@@ -1,4 +1,4 @@
-# Knockout Arcade
+# Knockout Arcade The Project
 
 ## GML Style Guide
 
