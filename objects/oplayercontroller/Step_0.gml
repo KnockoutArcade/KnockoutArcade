@@ -73,6 +73,7 @@ else
 {
 	storedSuperJump = false;
 }
+
 if (verticalMoveDir == -1)
 {
 	storedSuperJump = true;
@@ -105,12 +106,19 @@ if state == eState.IDLE {
 	
 	if (movedir != 0) state = eState.WALKING;
 	
-	if verticalMoveDir == 1 {
+	if (verticalMoveDir == 1)
+	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
 		// Is the player jumping forward?
-		if movedir = image_xscale isJumpingForward = true;
-		else isJumpingForward = false;
+		if (movedir == image_xscale)
+		{
+			isJumpingForward = true;
+		}
+		else 
+		{
+			isJumpingForward = false;
+		}
 			
 		// handle Super Jumping
 		if (storedSuperJump)
@@ -147,11 +155,15 @@ if state == eState.CROUCHING {
 	
 	if (movedir == 0 && verticalMoveDir != -1) state = eState.IDLE;
 	if (movedir != 0 && verticalMoveDir != -1) state = eState.WALKING;
-	if verticalMoveDir == 1 {
+	if (verticalMoveDir == 1) 
+	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
 		// Is the player jumping forward?
-		if movedir = image_xscale isJumpingForward = true;
+		if (movedir == image_xscale)
+		{
+			isJumpingForward = true;
+		}
 		else isJumpingForward = false;
 			
 		// handle Super Jumping
@@ -393,7 +405,7 @@ switch state {
 				
 				hsp = walkSpeed * movedir;
 				// Is the player jumping forward?
-				if (movedir = image_xscale)
+				if (movedir == image_xscale)
 				{
 					isJumpingForward = true;
 				}
