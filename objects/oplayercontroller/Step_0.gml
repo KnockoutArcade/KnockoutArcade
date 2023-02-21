@@ -164,7 +164,10 @@ if state == eState.CROUCHING {
 		{
 			isJumpingForward = true;
 		}
-		else isJumpingForward = false;
+		else 
+		{
+			isJumpingForward = false;
+		}
 			
 		// handle Super Jumping
 		if (storedSuperJump)
