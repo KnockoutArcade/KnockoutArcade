@@ -64,14 +64,40 @@ hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
 
+// Handle storing input for Super Jump
+if (superJumpTimer > 0) 
+{
+	superJumpTimer--;
+} 
+else
+{
+	storedSuperJump = false;
+}
+
+if (verticalMoveDir == -1)
+{
+	storedSuperJump = true;
+	superJumpTimer = 6;
+}
 
 
+// Handle detecting press vs hold up for double jump
+if (verticalMoveDir == 1)
+{
+	heldUpFrames++; // If verticalMoveDir is 1 for multiple frames, then we know that we are holding the button
+}
+else
+{
+	heldUpFrames = 0;
+}
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if state == eState.IDLE {
 	animTimer = 0;
 	cancelable = false;
 	isShortHopping = false;
+	isSuperJumping = false;
+	hasSpentDoubleJump = false;
 	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
@@ -80,12 +106,26 @@ if state == eState.IDLE {
 	
 	if (movedir != 0) state = eState.WALKING;
 	
-	if verticalMoveDir == 1 {
+	if (verticalMoveDir == 1)
+	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
 		// Is the player jumping forward?
-		if movedir = image_xscale isJumpingForward = true;
-		else isJumpingForward = false;
+		if (movedir == image_xscale)
+		{
+			isJumpingForward = true;
+		}
+		else 
+		{
+			isJumpingForward = false;
+		}
+			
+		// handle Super Jumping
+		if (storedSuperJump)
+		{
+			isSuperJumping = true;
+			storedSuperJump = false;
+		}
 	} else if verticalMoveDir == -1 {
 		state = eState.CROUCHING;
 	}
@@ -103,6 +143,7 @@ if state == eState.CROUCHING {
 	//grounded = true;
 	frameAdvantage = false;
 	isShortHopping = false;
+	hasSpentDoubleJump = false;
 		
 	hsp = 0;
 	
@@ -114,8 +155,27 @@ if state == eState.CROUCHING {
 	
 	if (movedir == 0 && verticalMoveDir != -1) state = eState.IDLE;
 	if (movedir != 0 && verticalMoveDir != -1) state = eState.WALKING;
-	if verticalMoveDir == 1 state = eState.JUMPSQUAT;
-	
+	if (verticalMoveDir == 1) 
+	{
+		state = eState.JUMPSQUAT;
+		hsp = walkSpeed * movedir;
+		// Is the player jumping forward?
+		if (movedir == image_xscale)
+		{
+			isJumpingForward = true;
+		}
+		else 
+		{
+			isJumpingForward = false;
+		}
+			
+		// handle Super Jumping
+		if (storedSuperJump)
+		{
+			isSuperJumping = true;
+			storedSuperJump = false;
+		}
+	}
 	PressAttackButton(attack);
 }
 
@@ -224,6 +284,8 @@ switch state {
 		cancelable = false;
 		grounded = true;
 		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
 		
 		if (movedir = image_xscale) {
 			sprite_index = CharacterSprites.walkForward_Sprite;
@@ -247,6 +309,13 @@ switch state {
 			// Is the player jumping forward?
 			if movedir = image_xscale isJumpingForward = true;
 			else isJumpingForward = false;
+			
+			// handle Super Jumping
+			if (storedSuperJump)
+			{
+				isSuperJumping = true;
+				storedSuperJump = false;
+			}
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
 		}
@@ -271,19 +340,42 @@ switch state {
 		if animTimer > 4 {
 			state = eState.JUMPING;
 			grounded = false;
-			if verticalMoveDir == 1 {
+			
+			if (canShortHop)
+			{
+				if (verticalMoveDir == 1) 
+				{
+					vsp = -jumpSpeed;
+					isShortHopping = false;
+					jumpHsp = hsp;
+				}
+				else 
+				{
+					vsp = -(jumpSpeed * 0.75);
+					isShortHopping = true;
+					jumpHsp = hsp;
+				}
+			}
+			
+			if (canSuperJump)
+			{
+				if (isSuperJumping)
+				{
+					vsp = -(jumpSpeed * 1.25);
+					jumpHsp = hsp * 1.35;
+				}
+				else
+				{
+					vsp = -jumpSpeed;
+					jumpHsp = hsp;
+				}
+			}
+			
+			if (!canSuperJump && !canShortHop)
+			{
 				vsp = -jumpSpeed;
 				isShortHopping = false;
-				jumpHsp = hsp;
-			}
-			else if canShortHop {
-				vsp = -(jumpSpeed * 0.75);
-				isShortHopping = true;
-				jumpHsp = hsp;
-			}
-			else {
-				vsp = -jumpSpeed;
-				isShortHopping = false;
+				isSuperJumping = false;
 				jumpHsp = hsp;
 			}
 		}
@@ -305,6 +397,31 @@ switch state {
 		hsp = jumpHsp;
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
+		
+		if (canDoubleJump && !hasSpentDoubleJump)
+		{
+			if (verticalMoveDir == 1 && heldUpFrames <= 1)
+			{
+				vsp = -jumpSpeed;
+				isShortHopping = false;
+				isSuperJumping = false;
+				
+				hsp = walkSpeed * movedir;
+				// Is the player jumping forward?
+				if (movedir == image_xscale)
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+				}
+				
+				jumpHsp = hsp;
+				hasSpentDoubleJump = true;
+				image_index = 0;
+			}
+		}
 		
 		PressAttackButton(attack);
 	}

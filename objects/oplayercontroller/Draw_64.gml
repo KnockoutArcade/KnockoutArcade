@@ -25,7 +25,7 @@ if playerID == 1 {
 	draw_text(750, 30, hitstun);
 	draw_text(750, 50, hp);
 	draw_text(750, 70, combo);
-	draw_text(750, 90, 1 - (.1 * comboScaling));
+	draw_text(750, 90, storedSuperJump);
 }
 
 	if hitstun > 0 draw_text(400, 550, "TRUE COMBO");
