@@ -76,7 +76,7 @@ else
 if (verticalMoveDir == -1)
 {
 	storedSuperJump = true;
-	superJumpTimer = 10;
+	superJumpTimer = 6;
 }
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
@@ -134,8 +134,20 @@ if state == eState.CROUCHING {
 	
 	if (movedir == 0 && verticalMoveDir != -1) state = eState.IDLE;
 	if (movedir != 0 && verticalMoveDir != -1) state = eState.WALKING;
-	if verticalMoveDir == 1 state = eState.JUMPSQUAT;
-	
+	if verticalMoveDir == 1 {
+		state = eState.JUMPSQUAT;
+		hsp = walkSpeed * movedir;
+		// Is the player jumping forward?
+		if movedir = image_xscale isJumpingForward = true;
+		else isJumpingForward = false;
+			
+		// handle Super Jumping
+		if (storedSuperJump)
+		{
+			isSuperJumping = true;
+			storedSuperJump = false;
+		}
+	}
 	PressAttackButton(attack);
 }
 
@@ -321,7 +333,7 @@ switch state {
 				if (isSuperJumping)
 				{
 					vsp = -(jumpSpeed * 1.25);
-					jumpHsp = hsp;
+					jumpHsp = hsp * 1.35;
 				}
 				else
 				{
