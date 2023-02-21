@@ -79,12 +79,24 @@ if (verticalMoveDir == -1)
 	superJumpTimer = 6;
 }
 
+
+// Handle detecting press vs hold up for double jump
+if (verticalMoveDir == 1)
+{
+	heldUpFrames++; // If verticalMoveDir is 1 for multiple frames, then we know that we are holding the button
+}
+else
+{
+	heldUpFrames = 0;
+}
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if state == eState.IDLE {
 	animTimer = 0;
 	cancelable = false;
 	isShortHopping = false;
 	isSuperJumping = false;
+	hasSpentDoubleJump = false;
 	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
@@ -123,6 +135,7 @@ if state == eState.CROUCHING {
 	//grounded = true;
 	frameAdvantage = false;
 	isShortHopping = false;
+	hasSpentDoubleJump = false;
 		
 	hsp = 0;
 	
@@ -257,6 +270,7 @@ switch state {
 		grounded = true;
 		isShortHopping = false;
 		isSuperJumping = false;
+		hasSpentDoubleJump = false;
 		
 		if (movedir = image_xscale) {
 			sprite_index = CharacterSprites.walkForward_Sprite;
@@ -368,6 +382,31 @@ switch state {
 		hsp = jumpHsp;
 		if !isShortHopping vsp += fallSpeed;
 		else vsp += fastFallSpeed;
+		
+		if (canDoubleJump && !hasSpentDoubleJump)
+		{
+			if (verticalMoveDir == 1 && heldUpFrames <= 1)
+			{
+				vsp = -jumpSpeed;
+				isShortHopping = false;
+				isSuperJumping = false;
+				
+				hsp = walkSpeed * movedir;
+				// Is the player jumping forward?
+				if (movedir = image_xscale)
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+				}
+				
+				jumpHsp = hsp;
+				hasSpentDoubleJump = true;
+				image_index = 0;
+			}
+		}
 		
 		PressAttackButton(attack);
 	}

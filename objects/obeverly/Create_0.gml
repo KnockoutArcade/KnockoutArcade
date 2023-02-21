@@ -23,6 +23,7 @@ superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 canDoubleJump = false; // Whether this character can Double Jump or not
 hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
+heldUpFrames = 0; // How long the player has held UP for
 
 jumpHsp = 0; // How much momentum the player is carrying with their jump
 isJumpingForward = false; // Whether the player approaching the opponent with their jump or not.
