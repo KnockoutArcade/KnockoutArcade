@@ -1,5 +1,6 @@
 {
   "resources": [
+    {"id":{"name":"sBeverly_StandLight1_MOCKUP_strip3","path":"sprites/sBeverly_StandLight1_MOCKUP_strip3/sBeverly_StandLight1_MOCKUP_strip3.yy",},"order":8,},
     {"id":{"name":"sTimer9","path":"sprites/sTimer9/sTimer9.yy",},"order":0,},
     {"id":{"name":"sCam","path":"sprites/sCam/sCam.yy",},"order":22,},
     {"id":{"name":"GetPlayerInputs","path":"scripts/GetPlayerInputs/GetPlayerInputs.yy",},"order":5,},
@@ -42,6 +43,7 @@
     {"id":{"name":"sCOUNTERtext","path":"sprites/sCOUNTERtext/sCOUNTERtext.yy",},"order":0,},
     {"id":{"name":"sSuperMeterP2","path":"sprites/sSuperMeterP2/sSuperMeterP2.yy",},"order":1,},
     {"id":{"name":"CancelData","path":"scripts/CancelData/CancelData.yy",},"order":10,},
+    {"id":{"name":"sBeverly_StandLight2_MOCKUP_strip3","path":"sprites/sBeverly_StandLight2_MOCKUP_strip3/sBeverly_StandLight2_MOCKUP_strip3.yy",},"order":9,},
     {"id":{"name":"oComboCounter","path":"objects/oComboCounter/oComboCounter.yy",},"order":0,},
     {"id":{"name":"LateCancelIntoMove","path":"scripts/LateCancelIntoMove/LateCancelIntoMove.yy",},"order":8,},
     {"id":{"name":"sRussel_Jumping_Medium","path":"sprites/sRussel_Jumping_Medium/sRussel_Jumping_Medium.yy",},"order":16,},
@@ -65,6 +67,7 @@
     {"id":{"name":"oCharacterSelectManager","path":"objects/oCharacterSelectManager/oCharacterSelectManager.yy",},"order":3,},
     {"id":{"name":"sBeverly_Idle","path":"sprites/sBeverly_Idle/sBeverly_Idle.yy",},"order":0,},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"order":0,},
+    {"id":{"name":"sBeverly_StandLight3_MOCKUP_strip3","path":"sprites/sBeverly_StandLight3_MOCKUP_strip3/sBeverly_StandLight3_MOCKUP_strip3.yy",},"order":7,},
     {"id":{"name":"sKOText","path":"sprites/sKOText/sKOText.yy",},"order":18,},
     {"id":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"order":5,},
     {"id":{"name":"sHitEffect","path":"sprites/sHitEffect/sHitEffect.yy",},"order":11,},
