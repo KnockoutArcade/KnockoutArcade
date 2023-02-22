@@ -8,7 +8,7 @@ playerID = 1;
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
-walkSpeed = 1.5; // How fast the character walks in pixels/frame
+walkSpeed = 3; // How fast the character walks in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 
@@ -101,8 +101,9 @@ CharacterSprites = {
 	crouch_Sprite : sRussel_Crouch,
 	standBlock_Sprite : sRussel_Block,
 	crouchBlock_Sprite : sRussel_Crouch_Block,
-	walkForward_Sprite : sRussel_Walk_Forward,
+	walkForward_Sprite : sRussel_Run_Forward,
 	walkBackward_Sprite : sRussel_Walk_Backward,
+	runForward_Sprite : sRussel_Run_Forward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,
 	jump_Sprite : sRussel_Jump,
 	hurt_Sprite : sRussel_Hurt,

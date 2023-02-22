@@ -58,7 +58,7 @@
     {"id":{"name":"sBlockEffect","path":"sprites/sBlockEffect/sBlockEffect.yy",},"order":12,},
     {"id":{"name":"sRussel_Standing_Heavy","path":"sprites/sRussel_Standing_Heavy/sRussel_Standing_Heavy.yy",},"order":7,},
     {"id":{"name":"oPlayerHurtbox","path":"objects/oPlayerHurtbox/oPlayerHurtbox.yy",},"order":1,},
-    {"id":{"name":"sRussel_RunForwards","path":"sprites/sRussel_RunForwards/sRussel_RunForwards.yy",},"order":30,},
+    {"id":{"name":"sRussel_Run_Forward","path":"sprites/sRussel_Run_Forward/sRussel_Run_Forward.yy",},"order":30,},
     {"id":{"name":"sCharSel_ReadyToFight","path":"sprites/sCharSel_ReadyToFight/sCharSel_ReadyToFight.yy",},"order":9,},
     {"id":{"name":"SetPlayerButtons","path":"scripts/SetPlayerButtons/SetPlayerButtons.yy",},"order":6,},
     {"id":{"name":"sMediumCounter","path":"sprites/sMediumCounter/sMediumCounter.yy",},"order":2,},
