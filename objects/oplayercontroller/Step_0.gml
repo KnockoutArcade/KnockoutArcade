@@ -399,7 +399,11 @@ switch state {
 		hsp = runSpeed * image_xscale;
 
 
-		if (movedir == 0 && !runButton) state = eState.IDLE;
+		if (!runButton) 
+		{
+			state = eState.IDLE;
+			hsp = 0;
+		}
 		
 		// Handle Jumping And Crouching
 		if verticalMoveDir == 1 {

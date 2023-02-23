@@ -11,7 +11,7 @@ function SetPlayerButtons() {
 			buttonMedium : ord("K"),
 			buttonHeavy : ord("L"),
 			buttonGrab : vk_space,
-			buttonSpecial : 186,    // UTF Code for ;
+			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : vk_rcontrol,
 			buttonRun : vk_lshift,
 		};
@@ -43,7 +43,7 @@ function SetPlayerButtons() {
 			buttonGrab : vk_numpad4,
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
-			buttonRun : 46,
+			buttonRun : 110, // Keyboard code value for numpad "."
 		};
 	} else {
 		global.player2Controls = {
