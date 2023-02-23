@@ -26,6 +26,8 @@ if playerID = 1 {
 	var jumpButton = global.p1ButtonUp;
 	var crouchButton = global.p1ButtonDown;
 	verticalMoveDir = jumpButton + crouchButton;
+	
+	var runButton = global.p1ButtonRun;
 
 	// Attack Buttons
 	var lightattack = global.p1ButtonLight;
@@ -42,6 +44,8 @@ if playerID = 1 {
 	var jumpButton = global.p2ButtonUp;
 	var crouchButton = global.p2ButtonDown;
 	verticalMoveDir = jumpButton + crouchButton;
+
+	var runButton = global.p2ButtonRun;
 
 	// Attack Buttons
 	var lightattack = global.p2ButtonLight;
@@ -91,6 +95,7 @@ else
 	heldUpFrames = 0;
 }
 
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if state == eState.IDLE {
 	animTimer = 0;
@@ -98,14 +103,29 @@ if state == eState.IDLE {
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
-	//grounded = true;
 	
 	if toggleIdleBlock canBlock = true;
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
 	
-	if (movedir != 0) state = eState.WALKING;
+	// Handle running and walking
+	if (movedir == image_xscale && !runButton) 
+	{
+		state = eState.WALKING;
+	} 
+	else if (movedir == -image_xscale)
+	{
+		state = eState.WALKING;
+		canBlock = true;
+	}
 	
+	if (movedir != -image_xscale && runButton)
+	{
+		state = eState.RUN_FORWARD;
+	}
+	
+	
+	// Handle Jumping
 	if (verticalMoveDir == 1)
 	{
 		state = eState.JUMPSQUAT;
@@ -135,6 +155,7 @@ if state == eState.IDLE {
 	PressAttackButton(attack);
 }
 
+
 if state == eState.CROUCHING {
 	animTimer = 0;
 	cancelable = false;
@@ -153,8 +174,28 @@ if state == eState.CROUCHING {
 	if movedir == -image_xscale canBlock = true;
 	else canBlock = false;
 	
-	if (movedir == 0 && verticalMoveDir != -1) state = eState.IDLE;
-	if (movedir != 0 && verticalMoveDir != -1) state = eState.WALKING;
+	if (movedir == 0 && verticalMoveDir != -1) 
+	{
+		state = eState.IDLE;
+	}
+	
+	// Handle running and walking
+	if (movedir == image_xscale && !runButton && verticalMoveDir != -1) 
+	{
+		state = eState.WALKING;
+	} 
+	else if (movedir == -image_xscale && !runButton && verticalMoveDir != -1)
+	{
+		state = eState.WALKING;
+		canBlock = true;
+	}
+	
+	if (movedir == image_xscale && runButton && verticalMoveDir != -1)
+	{
+		state = eState.RUN_FORWARD;
+	}
+	
+	
 	if (verticalMoveDir == 1) 
 	{
 		state = eState.JUMPSQUAT;
@@ -295,6 +336,13 @@ switch state {
 			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
 		}
+		
+		if (movedir == image_xscale && runButton)
+		{
+			state = eState.RUN_FORWARD;
+		}
+		
+		
 		image_speed = 1;
 		
 		hsp = walkSpeed * movedir;
@@ -327,6 +375,56 @@ switch state {
 	}
 	break;
 	
+	
+	case eState.RUN_FORWARD: {
+		animTimer = 0;
+		cancelable = false;
+		grounded = true;
+		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
+		
+		sprite_index = CharacterSprites.runForward_Sprite;
+		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+		
+		if (movedir == -image_xscale) // if we press back, then go back to walking state
+		{
+			state = eState.WALKING;
+			sprite_index = CharacterSprites.walkBackward_Sprite;
+			canBlock = true;
+		}
+
+		image_speed = 1;
+		
+		hsp = runSpeed * image_xscale;
+
+
+		if (movedir == 0 && !runButton) state = eState.IDLE;
+		
+		// Handle Jumping And Crouching
+		if verticalMoveDir == 1 {
+			state = eState.JUMPSQUAT;
+			hsp = runSpeed * movedir;
+			// Is the player jumping forward?
+			if movedir = image_xscale isJumpingForward = true;
+			else isJumpingForward = false;
+			
+			// handle Super Jumping
+			if (storedSuperJump)
+			{
+				isSuperJumping = true;
+				storedSuperJump = false;
+			}
+		} else if verticalMoveDir == -1 {
+			state = eState.CROUCHING;
+		}
+		
+		// Hitstun
+		if hitstun > 0 state = eState.HURT;
+		
+		PressAttackButton(attack);
+	}
+	break;
 	
 	case eState.JUMPSQUAT: {
 		cancelable = false;

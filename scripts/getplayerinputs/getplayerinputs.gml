@@ -15,7 +15,7 @@ function GetPlayerInputs() {
 		global.p1ButtonGrab = keyboard_check_pressed(global.player1Controls.buttonGrab);
 		global.p1ButtonSpecial = keyboard_check_pressed(global.player1Controls.buttonSpecial);
 		global.p1ButtonSuper = keyboard_check_pressed(global.player1Controls.buttonSuper);
-		global.p1ButtonRun = keyboard_check_pressed(global.player1Controls.buttonRun);
+		global.p1ButtonRun = keyboard_check(global.player1Controls.buttonRun);
 	} else {
 		global.p1ButtonLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonLeft) < -.2) * -1;
 		global.p1ButtonRight = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonRight) > .2);
@@ -27,7 +27,7 @@ function GetPlayerInputs() {
 		global.p1ButtonGrab = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonGrab);
 		global.p1ButtonSpecial = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonSpecial);
 		global.p1ButtonSuper = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonSuper);
-		global.p1ButtonRun = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonRun);
+		global.p1ButtonRun = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.buttonRun);
 	};
 
 	if global.player2ControllerType = "KEYBOARD" {
@@ -41,7 +41,7 @@ function GetPlayerInputs() {
 		global.p2ButtonGrab = keyboard_check_pressed(global.player2Controls.buttonGrab);
 		global.p2ButtonSpecial = keyboard_check_pressed(global.player2Controls.buttonSpecial);
 		global.p2ButtonSuper = keyboard_check_pressed(global.player2Controls.buttonSuper);
-		global.p2ButtonRun = keyboard_check_pressed(global.player2Controls.buttonRun);
+		global.p2ButtonRun = keyboard_check(global.player2Controls.buttonRun);
 	} else {
 		global.p2ButtonLeft = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonLeft) < -.2) * -1;
 		global.p2ButtonRight = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonRight) > .2);
@@ -53,7 +53,7 @@ function GetPlayerInputs() {
 		global.p2ButtonGrab = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonGrab);
 		global.p2ButtonSpecial = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonSpecial);
 		global.p2ButtonSuper = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonSuper);
-		global.p2ButtonRun = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonRun);
+		global.p2ButtonRun = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.buttonRun);
 	};
 
 }

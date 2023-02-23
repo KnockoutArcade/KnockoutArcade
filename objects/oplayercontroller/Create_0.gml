@@ -8,7 +8,8 @@ playerID = 1;
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
-walkSpeed = 3; // How fast the character walks in pixels/frame
+walkSpeed = 1.5; // How fast the character walks in pixels/frame
+runSpeed = 3; // How fast the character runs in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 
@@ -53,6 +54,7 @@ enum eState {
 	INTRO,
 	IDLE,
 	WALKING,
+	RUN_FORWARD,
 	JUMPING,
 	JUMPSQUAT,
 	CROUCHING,
@@ -101,7 +103,7 @@ CharacterSprites = {
 	crouch_Sprite : sRussel_Crouch,
 	standBlock_Sprite : sRussel_Block,
 	crouchBlock_Sprite : sRussel_Crouch_Block,
-	walkForward_Sprite : sRussel_Run_Forward,
+	walkForward_Sprite : sRussel_Walk_Forward,
 	walkBackward_Sprite : sRussel_Walk_Backward,
 	runForward_Sprite : sRussel_Run_Forward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,

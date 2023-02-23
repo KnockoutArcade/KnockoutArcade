@@ -43,7 +43,7 @@ function SetPlayerButtons() {
 			buttonGrab : vk_numpad4,
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
-			buttonRun : ord("."),
+			buttonRun : 46,
 		};
 	} else {
 		global.player2Controls = {
