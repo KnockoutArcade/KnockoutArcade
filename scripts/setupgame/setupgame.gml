@@ -1,10 +1,13 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame(){
-	if room != rStageArcade {
+	if (room != rStageArcade)
+	{
 		p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
 		p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
-	} else {
+	} 
+	else
+	{
 		p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
 		p2 = instance_create_layer(128, 104, "Instances", global.p2SelectedCharacter);
 	}
@@ -84,7 +87,8 @@ function SetupGame(){
 	global.gameHalt = false;
 	gameHaltTimer = 0;
 	
-	if global.hasCompletedIntros == true {
+	if (global.hasCompletedIntros) 
+	{
 		var particle = instance_create_layer(80, 0, "Particles", oParticles);
 		with particle {
 			sprite_index = sRound1Start;

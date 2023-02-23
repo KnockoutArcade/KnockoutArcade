@@ -12,7 +12,8 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult) {
 	
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) {
+	if (animTimer > moveToDo.duration) 
+	{
 		state = eState.IDLE;
 		frameAdvantage = true;
 		hsp = 0;

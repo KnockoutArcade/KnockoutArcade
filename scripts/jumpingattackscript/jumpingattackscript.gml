@@ -12,7 +12,8 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) {
 		
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) {
+	if (animTimer > moveToDo.duration) 
+	{
 		state = eState.JUMPING;
 		frameAdvantage = true;
 	}

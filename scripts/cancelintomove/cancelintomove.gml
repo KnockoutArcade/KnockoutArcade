@@ -9,9 +9,13 @@ animOffset = _animOffset;
 hitstopBuffer = true;
 
 // Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
-for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) {
+for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+{
 	var hurtbox = instance_find(oPlayerHurtbox, i);
 	
-	if hurtbox.primary == false  && hurtbox.owner == id instance_destroy(hurtbox);
+	if (!hurtbox.primary) && (hurtbox.owner == id)
+	{ 
+		instance_destroy(hurtbox);
+	}
 }
 }

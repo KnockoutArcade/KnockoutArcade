@@ -9,7 +9,8 @@ function CrouchingAttackScript(moveToDo, onGround) {
 	
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) {
+	if (animTimer > moveToDo.duration) 
+	{
 		state = eState.CROUCHING;
 		frameAdvantage = true;
 		hsp = 0;
