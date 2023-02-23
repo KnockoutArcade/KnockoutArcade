@@ -408,10 +408,17 @@ switch state {
 		// Handle Jumping And Crouching
 		if verticalMoveDir == 1 {
 			state = eState.JUMPSQUAT;
-			hsp = runSpeed * movedir;
+			hsp = runSpeed * image_xscale;
 			// Is the player jumping forward?
-			if movedir = image_xscale isJumpingForward = true;
-			else isJumpingForward = false;
+			if (movedir == image_xscale) 
+			{
+				isJumpingForward = true;
+			}
+			else 
+			{
+				isJumpingForward = false;
+				hsp = walkSpeed * movedir;
+			}
 			
 			// handle Super Jumping
 			if (storedSuperJump)
