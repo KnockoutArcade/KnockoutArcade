@@ -1710,16 +1710,16 @@ global.stBeverlyMoves = {
 	
 	StandMedium : {
 		duration : 21,
-		spriteID : sRussel_Standing_Medium,
-		numOfWindows : 6,
+		spriteID : sBeverly_StandMedium_MOCKUP_strip5,
+		numOfWindows : 5,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[2 , 1], [5, 2], [9, 3], [12, 4], [15, 5], [18, 6]],
+		window : [[2 , 1], [5, 2], [7, 3], [13, 4], [16, 5]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [5],
+			start : [7],
 			lifetime : [4],
 			attackWidth : [20],
 			attackHeight : [8],
