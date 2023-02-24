@@ -380,6 +380,7 @@ switch state {
 		animTimer = 0;
 		cancelable = false;
 		grounded = true;
+		canTurnAround = false;
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
@@ -1050,18 +1051,19 @@ if state != eState.HITSTOP {
 	// Collisions With Players
 	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
 	{
+	
 	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
 	// If the opponent is next to a wall, also don't move us
-		if (sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0)
+		if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
 		{
-			// If the opponent is moving towards us, and we are both moving.
+			// If we are both moving
 			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-			opponent.environmentDisplacement = -(abs(opponent.hsp) - (abs(opponent.hsp) - abs(hsp))) * -image_xscale;
+			opponent.environmentDisplacement = -(abs(hsp) - ( abs(hsp) - abs(opponent.hsp) )) * -image_xscale;
 			
 		} 
-		else 
+		else // if one person is moving and the other isn't
 		{
-			with opponent 
+			with (opponent)
 			{
 				// Wall Detection
 				if (place_meeting(x+(other.hsp), y, oWall)) 
@@ -1071,19 +1073,29 @@ if state != eState.HITSTOP {
 				} 
 				else 
 				{
-					if (sign(walkSpeed - other.walkSpeed) == 1)
-					{ // If we are the slower player
-						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x); // Im using sign(other.x - x) here so that it pushes players away from each other
-						other.environmentDisplacement = (other.walkSpeed)/2 * sign(other.x - x);
-					} 
-					else 
-					{ // if we are the faster player
-						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x);
-						other.environmentDisplacement = (other.walkSpeed + (other.walkSpeed - walkSpeed))/2 * sign(other.x - x);
+					
+					if (hsp == 0)
+					{
+						environmentDisplacement = other.hsp/2;
+						other.environmentDisplacement = -other.hsp/2;
 					}
+					else
+					{
+						environmentDisplacement = -hsp/2;
+						other.environmentDisplacement = hsp/2;
+					}
+					
 				}
 			}
+			
 		}
+		
+		// if we are still colliding with the opponent, slide us out
+		if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
+		{
+			environmentDisplacement += sign(x - opponent.x);
+		}
+		
 	}
 	
 	
@@ -1128,6 +1140,8 @@ x = clamp(x, global.camObj.x-80, global.camObj.x+80);
 y += vsp;
 
 floor(y);
+
+
 // Change the player's direction
 if !inAttackState && canTurnAround{
 	if x < opponent.x image_xscale = 1;
