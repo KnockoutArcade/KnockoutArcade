@@ -1048,26 +1048,36 @@ if startCombo {
 // Collision
 if state != eState.HITSTOP {
 	// Collisions With Players
-	if place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && hitstun < 1 && grounded && opponent.grounded{
+	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+	{
 	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
 	// If the opponent is next to a wall, also don't move us
-		if sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0{
+		if (sign(opponent.hsp) == -sign(hsp) && sign(hsp) != 0 && sign(opponent.hsp) != 0)
+		{
 			// If the opponent is moving towards us, and we are both moving.
-			environmentDisplacement = -(walkSpeed - (walkSpeed - opponent.walkSpeed)) * image_xscale;
-			opponent.environmentDisplacement = -(opponent.walkSpeed - (opponent.walkSpeed - walkSpeed)) * -image_xscale;
+			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
+			opponent.environmentDisplacement = -(abs(opponent.hsp) - (abs(opponent.hsp) - abs(hsp))) * -image_xscale;
 			
-		} else {
-			
-			with opponent {
+		} 
+		else 
+		{
+			with opponent 
+			{
 				// Wall Detection
-				if place_meeting(x+(walkSpeed*-image_xscale), y, oWall) {
-					environmentDisplacement = -(walkSpeed) * image_xscale;
-					other.environmentDisplacement = -(other.walkSpeed) * -image_xscale;
-				} else {
-					if sign(walkSpeed - other.walkSpeed) == 1 { // If we are the slower player
+				if (place_meeting(x+(other.hsp), y, oWall)) 
+				{
+					environmentDisplacement = -(abs(hsp)) * image_xscale;
+					other.environmentDisplacement = -(abs(other.hsp)) * -image_xscale;
+				} 
+				else 
+				{
+					if (sign(walkSpeed - other.walkSpeed) == 1)
+					{ // If we are the slower player
 						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x); // Im using sign(other.x - x) here so that it pushes players away from each other
 						other.environmentDisplacement = (other.walkSpeed)/2 * sign(other.x - x);
-					} else { // if we are the faster player
+					} 
+					else 
+					{ // if we are the faster player
 						environmentDisplacement = (other.walkSpeed)/2 * sign(x - other.x);
 						other.environmentDisplacement = (other.walkSpeed + (other.walkSpeed - walkSpeed))/2 * sign(other.x - x);
 					}
