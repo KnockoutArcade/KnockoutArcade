@@ -1077,7 +1077,7 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 				// Wall Detection
 				if (place_meeting(x+(other.hsp), y, oWall)) 
 				{
-					other.environmentDisplacement = -(abs(other.hsp)) * -image_xscale;
+					other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
 				} 
 				else 
 				{
