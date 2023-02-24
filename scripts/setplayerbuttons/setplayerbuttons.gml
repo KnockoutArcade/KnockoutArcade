@@ -13,7 +13,7 @@ function SetPlayerButtons() {
 			buttonGrab : vk_space,
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : vk_rcontrol,
-			buttonRun : vk_lshift,
+			buttonRun : vk_lcontrol,
 		};
 	} else {
 		global.player1Controls = {
