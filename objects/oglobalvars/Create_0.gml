@@ -1455,17 +1455,17 @@ global.stRusselMoves = {
 global.stBeverlyMoves = {
 	StandLight : {
 		duration : 7, // Total length of this attack in frames
-		spriteID : sRussel_Standing_Light,
-		numOfWindows : 4,
+		spriteID : sBeverly_StandLight1_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[1 , 0], [3, 1], [5, 2], [7, 3]],
+		window : [[1 , 0], [4, 1], [6, 2]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [3],
-			lifetime : [4],
+			start : [4],
+			lifetime : [5],
 			attackWidth : [15],
 			attackHeight : [5],
 			widthOffset : [12],
@@ -1540,11 +1540,11 @@ global.stBeverlyMoves = {
 	
 	StandLight2 : {
 		duration : 14,
-		spriteID : sRussel_Standing_Light2,
-		numOfWindows : 4,
+		spriteID : sBeverly_StandLight2_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[0 , 0], [2, 1], [6, 2], [12, 3]],
+		window : [[0 , 0], [2, 1], [6, 2]],
 		
 		numOfHitboxes : 1,
 		
@@ -1625,11 +1625,11 @@ global.stBeverlyMoves = {
 	
 	StandLight3 : {
 		duration : 22,
-		spriteID : sRussel_Standing_Light3,
-		numOfWindows : 4,
+		spriteID : sBeverly_StandLight3_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[3 , 1], [6, 2], [9, 3], [18, 4]],
+		window : [[3 , 1], [6, 2], [9, 3]],
 		
 		numOfHitboxes : 1,
 		
@@ -1654,8 +1654,8 @@ global.stBeverlyMoves = {
 			airKnockbackH: [1],
 			
 			launches: [true],
-			LaunchKnockbackV: [-3],
-			LaunchKnockbackH: [.1],
+			LaunchKnockbackV: [1],
+			LaunchKnockbackH: [3],
 			pushback: [2],
 			
 			particlexOffset : [10],
@@ -1710,16 +1710,16 @@ global.stBeverlyMoves = {
 	
 	StandMedium : {
 		duration : 21,
-		spriteID : sRussel_Standing_Medium,
-		numOfWindows : 6,
+		spriteID : sBeverly_StandMedium_MOCKUP_strip5,
+		numOfWindows : 5,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[2 , 1], [5, 2], [9, 3], [12, 4], [15, 5], [18, 6]],
+		window : [[2 , 1], [5, 2], [7, 3], [13, 4], [16, 5]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [5],
+			start : [7],
 			lifetime : [4],
 			attackWidth : [20],
 			attackHeight : [8],
@@ -1801,11 +1801,11 @@ global.stBeverlyMoves = {
 	
 	StandHeavy : {
 		duration : 39,
-		spriteID : sRussel_Standing_Heavy,
-		numOfWindows : 7,
+		spriteID : sBeverly_StandHeavy_MOCKUP_strip5,
+		numOfWindows : 5,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[2 , 1], [6, 2], [12, 3], [15, 4], [18, 5], [25, 6], [33, 7]],
+		window : [[2 , 1], [6, 2], [12, 3], [15, 4], [18, 5]],
 		
 		numOfHitboxes : 1,
 		
@@ -1874,7 +1874,7 @@ global.stBeverlyMoves = {
 		groundMovementData : { // Movement data for performing the move on the ground
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
-			window : [ [0, 0, 0, true, true],  [12, 24, 0, true, true],  [13, 0, 0, true, true] ],
+			window : [ [0, 0, 0, true, true],  [12, 12, 0, true, true],  [13, 0, 0, true, true] ],
 			// There are 3 windows here, the first window stops Russel intially when performing the move,
 			// the 2nd is the actual part where he moves,
 			// the 3rd stops him again for the rest of the move.
