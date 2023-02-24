@@ -1058,8 +1058,6 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 		{
 			// If we are both moving
 			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-			//opponent.environmentDisplacement = -(abs(hsp) - ( abs(hsp) - abs(opponent.hsp) )) * -image_xscale;
-			
 		} 
 		else // if one person is moving and the other isn't
 		{
@@ -1068,7 +1066,6 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 				// Wall Detection
 				if (place_meeting(x+(other.hsp), y, oWall)) 
 				{
-					//environmentDisplacement = -(abs(hsp)) * image_xscale;
 					other.environmentDisplacement = -(abs(other.hsp)) * -image_xscale;
 				} 
 				else 
@@ -1076,12 +1073,10 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 					
 					if (hsp == 0)
 					{
-						//environmentDisplacement = other.hsp/2;
 						other.environmentDisplacement = -other.hsp/2;
 					}
-					else
+					else if (sign(hsp) != -image_xscale)
 					{
-						//environmentDisplacement = -hsp/2;
 						other.environmentDisplacement = hsp/2;
 					}
 					
