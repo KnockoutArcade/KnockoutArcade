@@ -77,11 +77,7 @@ function PerformAttack(Action){
 			vsp += Action.groundMovementData.window[currentMovementWindow][2];
 		}
 		
-	} else { // If the move does not have movementdata, then we simply set the hsp to 0
-		if grounded && Action.isThrow == false {
-			hsp = 0; // set hsp to 0 specifically on grounded moves so aerial moves still carry aerial moemntum.
-		}
-	}
+	} 
 	
 	// Air
 	if Action.hasAirMovementData && !grounded {
