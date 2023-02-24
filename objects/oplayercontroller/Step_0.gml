@@ -1047,7 +1047,7 @@ if startCombo {
 
 
 // Collision
-if state != eState.HITSTOP {
+if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 	// Collisions With Players
 	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
 	{
@@ -1058,7 +1058,7 @@ if state != eState.HITSTOP {
 		{
 			// If we are both moving
 			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-			opponent.environmentDisplacement = -(abs(hsp) - ( abs(hsp) - abs(opponent.hsp) )) * -image_xscale;
+			//opponent.environmentDisplacement = -(abs(hsp) - ( abs(hsp) - abs(opponent.hsp) )) * -image_xscale;
 			
 		} 
 		else // if one person is moving and the other isn't
@@ -1068,7 +1068,7 @@ if state != eState.HITSTOP {
 				// Wall Detection
 				if (place_meeting(x+(other.hsp), y, oWall)) 
 				{
-					environmentDisplacement = -(abs(hsp)) * image_xscale;
+					//environmentDisplacement = -(abs(hsp)) * image_xscale;
 					other.environmentDisplacement = -(abs(other.hsp)) * -image_xscale;
 				} 
 				else 
@@ -1076,12 +1076,12 @@ if state != eState.HITSTOP {
 					
 					if (hsp == 0)
 					{
-						environmentDisplacement = other.hsp/2;
+						//environmentDisplacement = other.hsp/2;
 						other.environmentDisplacement = -other.hsp/2;
 					}
 					else
 					{
-						environmentDisplacement = -hsp/2;
+						//environmentDisplacement = -hsp/2;
 						other.environmentDisplacement = hsp/2;
 					}
 					
@@ -1142,12 +1142,14 @@ y += vsp;
 floor(y);
 
 
+
 // Change the player's direction
 if !inAttackState && canTurnAround{
 	if x < opponent.x image_xscale = 1;
 	else if x != opponent.x image_xscale = -1;
 	}
 }
+
 }
 else {
 	image_speed = 0;
