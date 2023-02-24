@@ -10,6 +10,7 @@ environmentDisplacement = 0;
 vsp = 0; // Verticle speed
 walkSpeed = 1.5; // How fast the character walks in pixels/frame
 runSpeed = 3; // How fast the character runs in pixels/frame
+traction = .25; // How much this character slows down each frame in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 

@@ -96,6 +96,20 @@ else
 }
 
 
+// Calculate Traction
+if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT)
+{
+	if (abs(hsp) - traction >= 0)
+	{
+		hsp += traction * -sign(hsp);
+	}
+	else
+	{
+		hsp = 0;
+	}
+}
+
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if state == eState.IDLE {
 	animTimer = 0;
@@ -161,12 +175,9 @@ if state == eState.CROUCHING {
 	cancelable = false;
 	sprite_index = CharacterSprites.crouch_Sprite;
 	image_speed = 1;
-	//grounded = true;
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
-		
-	hsp = 0;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -366,6 +377,7 @@ switch state {
 			}
 		} else if verticalMoveDir == -1 {
 			state = eState.CROUCHING;
+			hsp = 0;
 		}
 		
 		// Hitstun
@@ -403,7 +415,6 @@ switch state {
 		if (!runButton) 
 		{
 			state = eState.IDLE;
-			hsp = 0;
 		}
 		
 		// Handle Jumping And Crouching
@@ -1111,7 +1122,6 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL) 
 		{
 			state = eState.IDLE;
-			hsp = 0;
 			grounded = true;
 			frameAdvantage = true;
 			inAttackState = false;
