@@ -1981,7 +1981,7 @@ global.stBeverlyMoves = {
 	},
 	
 	CrouchingMedium : {
-		duration : 18,
+		duration : 24,
 		spriteID : sBeverly_CrouchMedium_MOCKUP_strip4,
 		numOfWindows : 4,
 		
@@ -2067,11 +2067,11 @@ global.stBeverlyMoves = {
 		
 	CrouchingHeavy : {
 		duration : 34,
-		spriteID : sRussel_Crouching_Heavy,
-		numOfWindows : 10,
+		spriteID : sBeverly_CrouchHeavy_MOCKUP_strip9,
+		numOfWindows : 9,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[5 , 1], [9, 2], [10, 3], [12 , 4], [16 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9], [32 , 10]],
+		window : [[1 , 1], [3, 2], [5, 3], [7 , 4], [9 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9]],
 		
 		numOfHitboxes : 1,
 		

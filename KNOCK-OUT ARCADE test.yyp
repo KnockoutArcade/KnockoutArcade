@@ -59,6 +59,7 @@
     {"id":{"name":"sRussel_Jumping_Heavy","path":"sprites/sRussel_Jumping_Heavy/sRussel_Jumping_Heavy.yy",},"order":18,},
     {"id":{"name":"sTitleScreenBackground","path":"sprites/sTitleScreenBackground/sTitleScreenBackground.yy",},"order":3,},
     {"id":{"name":"sArcadeBackground","path":"sprites/sArcadeBackground/sArcadeBackground.yy",},"order":1,},
+    {"id":{"name":"sBeverly_CrouchHeavy_MOCKUP_strip9","path":"sprites/sBeverly_CrouchHeavy_MOCKUP_strip9/sBeverly_CrouchHeavy_MOCKUP_strip9.yy",},"order":15,},
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":1,},
     {"id":{"name":"sBlockEffect","path":"sprites/sBlockEffect/sBlockEffect.yy",},"order":12,},
     {"id":{"name":"sRussel_Standing_Heavy","path":"sprites/sRussel_Standing_Heavy/sRussel_Standing_Heavy.yy",},"order":7,},
