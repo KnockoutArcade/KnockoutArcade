@@ -1897,11 +1897,11 @@ global.stBeverlyMoves = {
 		
 	CrouchingLight : {
 		duration : 9,
-		spriteID : sRussel_Crouching_Light,
+		spriteID : sBeverly_CrouchLight_MOCKUP_strip4,
 		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[4 , 1], [6, 2], [8, 3]],
+		window : [[2 , 1], [4, 2], [6, 3], [8, 4]],
 		
 		numOfHitboxes : 1,
 		
@@ -1981,70 +1981,70 @@ global.stBeverlyMoves = {
 	},
 	
 	CrouchingMedium : {
-		duration : 27,
-		spriteID : sRussel_Crouching_Medium,
-		numOfWindows : 10,
+		duration : 24,
+		spriteID : sBeverly_CrouchMedium_MOCKUP_strip4,
+		numOfWindows : 4,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[3 , 1], [5, 2], [7, 3], [9, 4], [10, 5], [11, 6], [14, 7], [17, 8], [21, 9], [24, 10]],
+		window : [[3 , 1], [7, 2], [10, 3], [18, 4]],
 		
-		numOfHitboxes : 2,
+		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [7, 9],
-			lifetime : [2, 2],
-			attackWidth : [13, 15],
-			attackHeight : [10, 24],
-			widthOffset : [9, 6],
-			heightOfset : [10, 18],
-			group : [1, 1],
+			start : [7],
+			lifetime : [2],
+			attackWidth : [13],
+			attackHeight : [10],
+			widthOffset : [16],
+			heightOfset : [10],
+			group : [1],
 			
-			damage: [10, 10],
-			meterGain : [8, 6],
-			comboScaling : [2, 2],
-			attackHitstop : [11, 11],
-			attackHitstun : [18, 18],
-			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [12, 12],
-			knockback: [4, 4],
-			airKnockbackV: [-2.5, -2.5],
-			airKnockbackH: [.75, .75],
+			damage: [10],
+			meterGain : [8],
+			comboScaling : [2],
+			attackHitstop : [11],
+			attackHitstun : [18],
+			attackType : [eAttackType.MID],
+			blockstun : [12],
+			knockback: [4],
+			airKnockbackV: [1],
+			airKnockbackH: [1],
 			
-			launches: [true, false],
-			LaunchKnockbackV: [-4, 0],
-			LaunchKnockbackH: [.5, 0],
-			pushback: [2, 2],
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [2],
 			
-			particlexOffset : [10,10],
-			particleyOffset : [0, 0],
-			particleEffect : [sHitEffect, sHitEffect],
-			particleDuration : [5, 5]
+			particlexOffset : [1],
+			particleyOffset : [0],
+			particleEffect : [sHitEffect],
+			particleDuration : [ 5]
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [2, 2],
+			counterHitLevel: [2],
 			
-			group : [1, 1],
+			group : [1],
 			
-			damage: [20, 20],
-			meterGain : [12, 12],
-			comboScaling : [1, 1],
-			attackHitstop : [30, 30], 
-			attackHitstun : [14, 14],
-			knockback: [5, 5],
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [1],
+			airKnockbackH: [1],
 			
-			launches: [true, true],
-			LaunchKnockbackV: [-1, -1],
-			LaunchKnockbackH: [5, 5],
-			pushback: [3, 3],
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [2],
+			pushback: [3],
 			
-			particlexOffset : [18, 18],
-			particleyOffset : [10, 10],
-			particleEffect : [sHitEffect, sHitEffect],
-			particleDuration : [10, 10]
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -2067,11 +2067,11 @@ global.stBeverlyMoves = {
 		
 	CrouchingHeavy : {
 		duration : 34,
-		spriteID : sRussel_Crouching_Heavy,
-		numOfWindows : 10,
+		spriteID : sBeverly_CrouchHeavy_MOCKUP_strip9,
+		numOfWindows : 9,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[5 , 1], [9, 2], [10, 3], [12 , 4], [16 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9], [32 , 10]],
+		window : [[1 , 1], [3, 2], [5, 3], [7 , 4], [9 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9]],
 		
 		numOfHitboxes : 1,
 		
