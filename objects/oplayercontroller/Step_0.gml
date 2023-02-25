@@ -127,7 +127,7 @@ if (state == eState.IDLE)
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
 		// Is the player jumping forward?
-		if (movedir = image_xscale)
+		if (movedir == image_xscale)
 		{
 			isJumpingForward = true;
 		}
@@ -135,13 +135,13 @@ if (state == eState.IDLE)
 		{
 			isJumpingForward = false;
 		}
+			
 		// handle Super Jumping
 		if (storedSuperJump)
 		{
 			isSuperJumping = true;
 			storedSuperJump = false;
 		}
-	} 
 	else if (verticalMoveDir == -1)
 	{
 		state = eState.CROUCHING;
@@ -177,9 +177,35 @@ if (state == eState.CROUCHING)
 		canBlock = false;
 	}
 	
-	if (movedir == 0 && verticalMoveDir != -1) state = eState.IDLE;
-	if (movedir != 0 && verticalMoveDir != -1) state = eState.WALKING;
-	if verticalMoveDir == 1 state = eState.JUMPSQUAT;
+	if (movedir == 0 && verticalMoveDir != -1) 
+	{
+		state = eState.IDLE;
+	}
+	if (movedir != 0 && verticalMoveDir != -1) 
+	{
+		state = eState.WALKING;
+	}
+	if (verticalMoveDir == 1)
+	{
+		state = eState.JUMPSQUAT;
+		hsp = walkSpeed * movedir;
+		// Is the player jumping forward?
+		if (movedir == image_xscale)
+		{
+			isJumpingForward = true;
+		}
+		else 
+		{
+			isJumpingForward = false;
+		}
+			
+		// handle Super Jumping
+		if (storedSuperJump)
+		{
+			isSuperJumping = true;
+			storedSuperJump = false;
+		}
+	}
 	
 	PressAttackButton(attack);
 }
@@ -366,9 +392,24 @@ switch state {
 			state = eState.JUMPSQUAT;
 			hsp = walkSpeed * movedir;
 			// Is the player jumping forward?
-			if movedir = image_xscale isJumpingForward = true;
-			else isJumpingForward = false;
-		} else if verticalMoveDir == -1 {
+			if (movedir = image_xscale)
+			{
+			 	isJumpingForward = true;
+			}
+			else 
+			{
+				isJumpingForward = false;
+			}
+			
+			// handle Super Jumping
+			if (storedSuperJump)
+			{
+				isSuperJumping = true;
+				storedSuperJump = false;
+			}
+		} 
+		else if (verticalMoveDir == -1)
+		{
 			state = eState.CROUCHING;
 		}
 		
@@ -396,17 +437,39 @@ switch state {
 		 {
 			state = eState.JUMPING;
 			grounded = false;
-			if verticalMoveDir == 1 {
-				vsp = -jumpSpeed;
-				isShortHopping = false;
-				jumpHsp = hsp;
+			
+			if (canShortHop)
+			{
+				if (verticalMoveDir == 1) 
+				{
+					vsp = -jumpSpeed;
+					isShortHopping = false;
+					jumpHsp = hsp;
+				}
+				else 
+				{
+					vsp = -(jumpSpeed * 0.75);
+					isShortHopping = true;
+					jumpHsp = hsp;
+				}
 			}
-			else if canShortHop {
-				vsp = -(jumpSpeed * 0.75);
-				isShortHopping = true;
-				jumpHsp = hsp;
+			
+			if (canSuperJump)
+			{
+				if (isSuperJumping)
+				{
+					vsp = -(jumpSpeed * 1.25);
+					jumpHsp = hsp * 1.35;
+				}
+				else
+				{
+					vsp = -jumpSpeed;
+					jumpHsp = hsp;
+				}
 			}
-			else {
+			
+			if (!canSuperJump && !canShortHop)
+			{
 				vsp = -jumpSpeed;
 				isShortHopping = false;
 				isSuperJumping = false;
