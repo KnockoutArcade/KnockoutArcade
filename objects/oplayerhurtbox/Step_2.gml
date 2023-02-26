@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (primary) && (owner.state != eState.HITSTOP)
+if (primary && owner.state != eState.HITSTOP)
 {
 	x = owner.x+(owner.hurtboxOffset*sign(owner.image_xscale));
 	y = owner.y;

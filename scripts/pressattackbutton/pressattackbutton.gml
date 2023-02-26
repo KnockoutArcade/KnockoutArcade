@@ -1,9 +1,11 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PressAttackButton(attack){
+function PressAttackButton(attack)
+{
 	
 	
-	switch attack {
+		switch attack 
+		{
 			case 1:
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
@@ -37,7 +39,7 @@ function PressAttackButton(attack){
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
 				}
-				else if (verticalMoveDir = -1)
+				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_MEDIUM_ATTACK;
 				}
@@ -56,7 +58,7 @@ function PressAttackButton(attack){
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
 				}
-				else if (verticalMoveDir = -1)
+				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_HEAVY_ATTACK;
 				}
@@ -71,7 +73,7 @@ function PressAttackButton(attack){
 			break;
 			
 			case 4:
-				if (state != eState.JUMPING) && (state != eState.JUMPSQUAT) 
+				if (state != eState.JUMPING && state != eState.JUMPSQUAT) 
 				{
 					state = eState.GRAB;
 					sprite_index = sRussel_Grab;
@@ -83,13 +85,13 @@ function PressAttackButton(attack){
 			break;
 			
 			case 5:
-				if (state != eState.JUMPSQUAT) && (movedir == 0)
+				if (state != eState.JUMPSQUAT && movedir == 0)
 				{
 					state = eState.NEUTRAL_SPECIAL;
 					sprite_index = sRussel_NSpecial;
 					image_index = 0;
 				} 
-				else if (state != eState.JUMPSQUAT) && (movedir != 0)
+				else if (state != eState.JUMPSQUAT && movedir != 0)
 				{
 					state = eState.SIDE_SPECIAL;
 					sprite_index = sRussel_SideSpecial;

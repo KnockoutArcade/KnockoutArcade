@@ -15,17 +15,17 @@ function ControllerSetup()
 	var numOfControllers = 0;
 	for (var i = 0; i < gp_num; i++;)	
 	{
-	    if gamepad_is_connected(i) 
+	    if (gamepad_is_connected(i))
 		{
 			numOfControllers++;
-			if numOfControllers == 0 
+			if (numOfControllers == 0) 
 			{
 				global.player1ControllerType = "KEYBOARD";
 				global.player2ControllerType = "KEYBOARD";
 				
 				SetPlayerButtons();
 			}
-			if numOfControllers == 1 
+			if (numOfControllers == 1)
 			{
 				global.player1ControllerSlot = i;
 				global.player1ControllerType = "PAD";
@@ -33,7 +33,7 @@ function ControllerSetup()
 				
 				SetPlayerButtons();
 			}
-			if numOfControllers == 2 
+			if (numOfControllers == 2) 
 			{
 				global.player2ControllerSlot = i;
 				global.player2ControllerType = "PAD";

@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (p1 != noone) && (p2 != noone) && (p1.state != eState.HITSTOP) && (p2.state != eState.HITSTOP)
+if (p1 != noone && p2 != noone && p1.state != eState.HITSTOP && p2.state != eState.HITSTOP)
 {
 	x = (p1.x + p2.x) * .5;
 }

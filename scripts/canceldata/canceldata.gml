@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function CancelData(_array, _attack, _late){
+function CancelData(_array, _attack, _late)
+{
 	
 	for (var i = 0; i < array_length(_array); i++;) {
 		switch _array[i] {
@@ -10,7 +11,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.STANDING_LIGHT_ATTACK : {
-				if (_attack == 1) && (verticalMoveDir != -1) && (grounded) 
+				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
 					if _late
 					{
@@ -25,7 +26,7 @@ function CancelData(_array, _attack, _late){
 			break;
 		
 			case eState.STANDING_LIGHT_ATTACK_2 : {
-				if (_attack == 1 && verticalMoveDir != -1) && (grounded) 
+				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
 					if _late
 					{
@@ -40,7 +41,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.STANDING_LIGHT_ATTACK_3 : {
-				if (_attack == 1 && verticalMoveDir != -1) && (grounded) 
+				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
 					if _late
 					{ 
@@ -55,7 +56,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.STANDING_MEDIUM_ATTACK : {
-				if (_attack == 2 && verticalMoveDir != -1) && (grounded) 
+				if (_attack == 2 && verticalMoveDir != -1 && grounded) 
 				{
 					if _late
 					{ 
@@ -70,7 +71,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.STANDING_HEAVY_ATTACK : {
-				if (_attack == 3) && (verticalMoveDir != -1) && (grounded) 
+				if (_attack == 3 && verticalMoveDir != -1 && grounded) 
 				{
 					if _late 
 					{
@@ -86,7 +87,7 @@ function CancelData(_array, _attack, _late){
 			
 			// Crouching Attacks
 			case eState.CROUCHING_LIGHT_ATTACK : {
-				if (_attack == 1) && (verticalMoveDir == -1) && (grounded) 
+				if (_attack == 1 && verticalMoveDir == -1 && grounded) 
 				{
 					if _late
 					{ 
@@ -101,7 +102,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.CROUCHING_MEDIUM_ATTACK : {
-				if (_attack == 2) && (verticalMoveDir == -1) && (grounded)
+				if (_attack == 2 && verticalMoveDir == -1 && grounded)
 				{
 					if _late
 					{
@@ -116,7 +117,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			
 			case eState.CROUCHING_HEAVY_ATTACK : {
-				if (_attack == 3) && (verticalMoveDir == -1) && (grounded) 
+				if (_attack == 3 && verticalMoveDir == -1 && grounded) 
 				{
 					if _late
 					{
@@ -132,7 +133,7 @@ function CancelData(_array, _attack, _late){
 			
 			// Specials
 			case eState.NEUTRAL_SPECIAL : {
-				if (_attack == 5) && (verticalMoveDir != -1) && (movedir == 0)
+				if (_attack == 5 && verticalMoveDir != -1 && movedir == 0)
 				{
 					if _late
 					{
@@ -147,7 +148,7 @@ function CancelData(_array, _attack, _late){
 			break;
 			 
 			 case eState.SIDE_SPECIAL : {
-				if (_attack == 5) && (verticalMoveDir != -1) && (movedir != 0)
+				if (_attack == 5 && verticalMoveDir != -1 && movedir != 0)
 				{
 					if _late
 					{

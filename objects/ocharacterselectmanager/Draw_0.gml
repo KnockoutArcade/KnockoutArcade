@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (P1charSelCol == P2charSelCol) && (P1charSelRow == P2charSelRow) 
+if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow) 
 {
 	draw_sprite(sCharSel_SelectionBox, 2 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
 } 
@@ -220,21 +220,21 @@ shader_set_uniform_f(sh_handle_replace16,
 );
 #endregion
 
-if (P1charSelCol == 0) && (P1charSelRow == 0)
+if (P1charSelCol == 0 && P1charSelRow == 0)
 {
 	draw_sprite(sRussel_Idle, 0 + P1charSelCurrentFrame, 29, 65);
 }
-if (P1charSelCol == 1) && (P1charSelRow == 0)
+if (P1charSelCol == 1 && P1charSelRow == 0)
 {
  	draw_sprite(sBeverly_Idle, 0 + P1charSelCurrentFrame, 29, 65);
 }
 shader_reset();
 	
-if (P1charSelCol == 0) && (P1charSelRow == 0) 
+if (P1charSelCol == 0 && P1charSelRow == 0) 
 {
 	draw_sprite(sCharSel_NameRussel, 0, 14, 69);
 }
-if (P1charSelCol == 1) && (P1charSelRow == 0)
+if (P1charSelCol == 1 && P1charSelRow == 0)
 {
  	draw_sprite(sCharSel_NameBeverly, 0, 14, 69);
 }
@@ -448,21 +448,23 @@ shader_set_uniform_f(sh_handle_replace16,
 );
 #endregion
 	
-if (P2charSelCol == 0) && (P2charSelRow == 0) 
+if (P2charSelCol == 0 && P2charSelRow == 0) 
 {
 	draw_sprite_ext(sRussel_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 }
-if (P2charSelCol == 1) && (P2charSelRow == 0) 
+
+if (P2charSelCol == 1 && P2charSelRow == 0) 
 {
 	draw_sprite_ext(sBeverly_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 }
 shader_reset();
 	
-if (P2charSelCol == 0) && (P2charSelRow == 0)
+if (P2charSelCol == 0 && P2charSelRow == 0)
 {
 	draw_sprite(sCharSel_NameRussel, 0, 118, 69);
 }
-if (P2charSelCol == 1) && (P2charSelRow == 0) 
+
+if (P2charSelCol == 1 && P2charSelRow == 0) 
 {
 	draw_sprite(sCharSel_NameBeverly, 0, 118, 69);
 }
@@ -494,7 +496,7 @@ if P2hasSelectedChar
 }
 
 
-if (P1hasSelectedAlt) && (P2hasSelectedAlt)
+if (P1hasSelectedAlt && P2hasSelectedAlt)
 {
 	draw_sprite(sCharSel_ReadyToFight, RTF_currentFrame, 0, 0);
 }

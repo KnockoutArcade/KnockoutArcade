@@ -1,9 +1,10 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function GetPlayerInputs() {
+function GetPlayerInputs() 
+{
 	// This code handles all of the inputs for the game
 	// Left and Down return -1 instead of 1 because they are the opposite directions
-	if (global.player1ControllerType = "KEYBOARD") 
+	if (global.player1ControllerType == "KEYBOARD") 
 	{
 		global.p1ButtonLeft = keyboard_check(global.player1Controls.buttonLeft) * -1;
 		global.p1ButtonRight = keyboard_check(global.player1Controls.buttonRight);

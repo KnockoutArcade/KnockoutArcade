@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function LateCancelIntoMove(_prevState, moveToCancel, attackID){
+function LateCancelIntoMove(_prevState, moveToCancel, attackID)
+{
 	prevState = _prevState;
 	hitstopBuffer = true;
 	sprite_index = moveToCancel.spriteID;
@@ -12,7 +13,7 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID){
 	{
 		var hurtbox = instance_find(oPlayerHurtbox, i);
 	
-		if (!hurtbox.primary) && (hurtbox.owner == id)
+		if (!hurtbox.primary && hurtbox.owner == id)
 		{ 
 			instance_destroy(hurtbox);
 		}

@@ -88,7 +88,8 @@ if (collisionCheck)
 				oGameManager.frameAdvantage = 0;
 				
 				var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					lifetime = 10;
 					sprite_index = sHitEffect;
 					image_xscale = other.owner.image_xscale * -1;
@@ -141,7 +142,8 @@ if (collisionCheck)
 				oGameManager.frameAdvantage = 0;
 				
 				var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					lifetime = 10;
 					sprite_index = sBlockEffect;
 					image_xscale = collision_list[| i].owner.image_xscale;
@@ -167,16 +169,18 @@ if (collisionCheck)
 					if (other.counterHitProperty.counterHitLevel[hitboxID] == 1)
 					{
 						var counterParticle = instance_create_layer(global.camObj.x - 80 + 23, 61, "Particles", oParticles);
-						with counterParticle {
+						with (counterParticle) 
+						{
 							lifetime = global.hitstop;
 							sprite_index = sSmallCounter;
 							depth = 2;
 						}
 					}
-					 else if (other.counterHitProperty.counterHitLevel[hitboxID] == 2)
+					else if (other.counterHitProperty.counterHitLevel[hitboxID] == 2)
 					{
-							var counterParticle = instance_create_layer(global.camObj.x - 80 + 30, 70, "Particles", oParticles);
-							with counterParticle {
+						var counterParticle = instance_create_layer(global.camObj.x - 80 + 30, 70, "Particles", oParticles);
+						with (counterParticle) 
+						{
 							lifetime = global.hitstop;
 							sprite_index = sMediumCounter;
 							depth = 2;
@@ -185,7 +189,8 @@ if (collisionCheck)
 					else if (other.counterHitProperty.counterHitLevel[hitboxID] == 3)
 					{
 						var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
-						with counterParticle {
+						with (counterParticle) 
+						{
 							lifetime = global.hitstop;
 							sprite_index = sCOUNTERtext;
 							depth = 2;
@@ -212,7 +217,8 @@ if (collisionCheck)
 				
 					//Draw hit effect
 				var particle = instance_create_layer(x + (attackProperty.particlexOffset[hitboxID] * owner.image_xscale), y - attackProperty.particleyOffset[hitboxID], "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					sprite_index = other.attackProperty.particleEffect[other.hitboxID];
 					image_xscale = sign(other.owner.image_xscale);
 					lifetime = other.attackProperty.particleDuration[other.hitboxID];

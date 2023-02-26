@@ -1,7 +1,8 @@
 /// @function                  CrouchingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function CrouchingAttackScript(moveToDo, onGround) {
+function CrouchingAttackScript(moveToDo, onGround) 
+{
 	sprite_index = moveToDo.spriteID;
 	grounded = onGround;
 	image_index = 0;

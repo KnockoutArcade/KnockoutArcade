@@ -4,14 +4,14 @@
 
 animTimer++;
 
-if (endCombo = true)
+if (endCombo == true)
 {
 	animTimer = 0;
 	state = 1;
 	endCombo = false;
 }
 
-if (state = 0) 
+if (state == 0) 
 {
 	if (animTimer < 8)
 	{
