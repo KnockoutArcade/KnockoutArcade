@@ -8,12 +8,14 @@ function PaletteSetup(_paletteID, _paletteData)
 	var arrayEntryStart = paletteID * numOfColors;
 
 
-	Color = function(r, g, b) constructor {
+	Color = function(r, g, b) constructor 
+	{
 		red = r;
 		green = g;
 		blue = b;
 		
-		static toShaderValue = function(value) {
+		static toShaderValue = function(value) 
+		{
 			return value / 255;
 		}
 	};

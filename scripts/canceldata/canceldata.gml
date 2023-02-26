@@ -13,7 +13,7 @@ function CancelData(_array, _attack, _late)
 			case eState.STANDING_LIGHT_ATTACK : {
 				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.STANDING_LIGHT_ATTACK, selectedCharacter.StandLight, _attack);
 					}
@@ -28,7 +28,7 @@ function CancelData(_array, _attack, _late)
 			case eState.STANDING_LIGHT_ATTACK_2 : {
 				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.STANDING_LIGHT_ATTACK_2, selectedCharacter.StandLight2, _attack);
 					}
@@ -43,7 +43,7 @@ function CancelData(_array, _attack, _late)
 			case eState.STANDING_LIGHT_ATTACK_3 : {
 				if (_attack == 1 && verticalMoveDir != -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{ 
 						LateCancelIntoMove(eState.STANDING_LIGHT_ATTACK_3, selectedCharacter.StandLight3, _attack);
 					}
@@ -58,7 +58,7 @@ function CancelData(_array, _attack, _late)
 			case eState.STANDING_MEDIUM_ATTACK : {
 				if (_attack == 2 && verticalMoveDir != -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{ 
 						LateCancelIntoMove(eState.STANDING_MEDIUM_ATTACK, selectedCharacter.StandMedium, _attack);
 					}
@@ -73,7 +73,7 @@ function CancelData(_array, _attack, _late)
 			case eState.STANDING_HEAVY_ATTACK : {
 				if (_attack == 3 && verticalMoveDir != -1 && grounded) 
 				{
-					if _late 
+					if (_late) 
 					{
 						LateCancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy, _attack);
 					}
@@ -89,7 +89,7 @@ function CancelData(_array, _attack, _late)
 			case eState.CROUCHING_LIGHT_ATTACK : {
 				if (_attack == 1 && verticalMoveDir == -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{ 
 						LateCancelIntoMove(eState.CROUCHING_LIGHT_ATTACK, selectedCharacter.CrouchingLight, _attack);
 					}
@@ -104,7 +104,7 @@ function CancelData(_array, _attack, _late)
 			case eState.CROUCHING_MEDIUM_ATTACK : {
 				if (_attack == 2 && verticalMoveDir == -1 && grounded)
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium, _attack);
 					}
@@ -119,7 +119,7 @@ function CancelData(_array, _attack, _late)
 			case eState.CROUCHING_HEAVY_ATTACK : {
 				if (_attack == 3 && verticalMoveDir == -1 && grounded) 
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.CROUCHING_HEAVY_ATTACK, selectedCharacter.CrouchingHeavy, _attack);
 					}
@@ -135,7 +135,7 @@ function CancelData(_array, _attack, _late)
 			case eState.NEUTRAL_SPECIAL : {
 				if (_attack == 5 && verticalMoveDir != -1 && movedir == 0)
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial, _attack);
 					}
@@ -150,7 +150,7 @@ function CancelData(_array, _attack, _late)
 			 case eState.SIDE_SPECIAL : {
 				if (_attack == 5 && verticalMoveDir != -1 && movedir != 0)
 				{
-					if _late
+					if (_late)
 					{
 						LateCancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial, _attack);
 					}

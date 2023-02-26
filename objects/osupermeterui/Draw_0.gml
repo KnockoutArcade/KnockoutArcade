@@ -27,7 +27,7 @@ if (meterDir = -1)
 {
 	draw_sprite_ext(sSuperMeterBar, meterIndex, x+4 + 53, y+7, ((meterDir * owner.superMeter) / 100) * 53, 1, 0, c_white, 1);
 }
-else if (meterDir = 1) 
+else if (meterDir == 1) 
 {
 	draw_sprite_ext(sSuperMeterBar, meterIndex, x+4, y+7, ((meterDir * owner.superMeter) / 100) * 53, 1, 0, c_white, 1);
 }

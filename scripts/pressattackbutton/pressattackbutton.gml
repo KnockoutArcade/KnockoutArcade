@@ -9,7 +9,7 @@ function PressAttackButton(attack)
 			case 1:
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
-				state = eState.STANDING_LIGHT_ATTACK_2;
+					state = eState.STANDING_LIGHT_ATTACK_2;
 				}
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
 				{

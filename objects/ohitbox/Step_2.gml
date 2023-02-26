@@ -47,7 +47,7 @@ if (collisionCheck)
 		if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 		{
 			// Throw Teching
-			if attackProperty.attackType[hitboxID] == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8 
+			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
 			{
 				owner.state = eState.THROW_TECH;
 				owner.hsp = -2 * owner.image_xscale;

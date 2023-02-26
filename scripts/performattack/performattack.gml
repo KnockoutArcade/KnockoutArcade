@@ -24,7 +24,8 @@ function PerformAttack(Action)
 {
 	var hitbox = 0;
 	// Animations
-	for (var i = 0; i < Action.numOfWindows; i++) {
+	for (var i = 0; i < Action.numOfWindows; i++) 
+	{
 			if (animTimer >= Action.window[i][0])
 			{
 				image_index = Action.window[i][1];
@@ -34,7 +35,8 @@ function PerformAttack(Action)
 	// Throws
 	if (Action.isThrow) 
 	{
-		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) {
+		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) 
+		{
 			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
 			if (animTimer >= Action.opponentPositionData.window[i][0] && heldOpponent != noone)
 			{
@@ -62,7 +64,8 @@ function PerformAttack(Action)
 	if (Action.hasGroundMovementData && grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data
-		for (var i = 0; i < Action.groundMovementData.numOfWindows; i++) {
+		for (var i = 0; i < Action.groundMovementData.numOfWindows; i++) 
+		{
 			// We iterate through each window from left to right to determine which window should be active.
 			// If animTimer is >= the current window's starting_frame, then it will become the active window.
 			// If more than one window works, this code will allow the largest of the valid windows to be

@@ -1320,7 +1320,7 @@ y += vsp;
 
 floor(y);
 // Change the player's direction
-if !inAttackState && canTurnAround
+if (!inAttackState && canTurnAround)
 {
 	if (x < opponent.x)
 	{
