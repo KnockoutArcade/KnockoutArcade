@@ -76,7 +76,8 @@ opponent = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
-with hurtbox {
+with (hurtbox) 
+{
 	primary = true;
 	owner = other.id;
 	image_xscale = 15;

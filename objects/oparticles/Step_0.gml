@@ -1,8 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (lifetime < 1) {
-	if sprite_index = sRound1Start global.game_paused = false;
+if (lifetime < 1) 
+{
+	if (sprite_index = sRound1Start)
+	{
+		global.game_paused = false;
+	}
 	instance_destroy();
 }
 

@@ -1,7 +1,8 @@
 /// @function                  JumpingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) {
+function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
+{
 	sprite_index = moveToDo.spriteID;
 	grounded = onGround;
 	image_index = 0;
@@ -12,7 +13,8 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) {
 		
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) {
+	if (animTimer > moveToDo.duration) 
+	{
 		state = eState.JUMPING;
 		frameAdvantage = true;
 	}
