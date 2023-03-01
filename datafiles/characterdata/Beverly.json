@@ -89,6 +89,7 @@
           "ComboScaling": 4.0
         }
       ],
+      "CounterData": [],
       "IsThrow": true,
       "OpponentPositionData": {
         "NumberOfFrames": 5,
@@ -157,8 +158,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "3040e46f-52a4-4da8-a6e6-579ca058c124",
@@ -235,6 +246,7 @@
           "ComboScaling": 4.0
         }
       ],
+      "CounterData": [],
       "IsThrow": true,
       "OpponentPositionData": {
         "NumberOfFrames": 2,
@@ -276,8 +288,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "b37e1485-d5f2-406e-8117-ac743c7ddccc",
@@ -338,6 +360,7 @@
           "ComboScaling": 0.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -360,8 +383,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "02964764-f1b3-4099-9866-309811d6e312",
@@ -531,6 +564,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -562,8 +596,18 @@
           26
         ]
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "032032e6-71fc-4f2c-bf79-7b5e75d8fe99",
@@ -677,6 +721,7 @@
           "ComboScaling": 1.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -707,8 +752,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
@@ -765,6 +820,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -787,8 +843,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
@@ -845,6 +911,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -858,8 +925,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "68718318-582f-484f-85b8-a8b46471ea81",
@@ -916,6 +993,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -938,8 +1016,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
@@ -1004,6 +1092,7 @@
           "ComboScaling": 1.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1026,8 +1115,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
@@ -1096,6 +1195,7 @@
           "ComboScaling": 1.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1118,8 +1218,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
@@ -1172,6 +1282,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1194,8 +1305,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
@@ -1305,6 +1426,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1327,8 +1449,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
@@ -1409,6 +1541,7 @@
           "ComboScaling": 1.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1439,8 +1572,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
@@ -1489,6 +1632,7 @@
           "ComboScaling": 3.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1511,8 +1655,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
@@ -1577,6 +1731,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1599,8 +1754,18 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     },
     {
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
@@ -1665,6 +1830,7 @@
           "ComboScaling": 2.0
         }
       ],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -1687,8 +1853,22 @@
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
-      "NumberOfMovementData": 0,
-      "MovementData": []
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      }
     }
-  ]
+  ],
+  "Version": "Ver0.9.4",
+  "UID": "718b55f5-9d5c-477a-914d-50ba342e87ad",
+  "LastModified": "2023-02-28T20:07:02.8414555-05:00",
+  "LastModifiedBy": "johnk"
 }
