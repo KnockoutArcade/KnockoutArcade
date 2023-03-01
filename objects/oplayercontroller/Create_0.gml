@@ -15,9 +15,9 @@ jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 
 //Backdash Vars (The state is refered to as Run back for consistency)
-backdashDuration = 20; // The total duration of a character's backdash
+backdashDuration = 25; // The total duration of a character's backdash
 backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
-backdashSpeed = 5; // How fast their backdash moves them back
+backdashSpeed = 4; // How fast their backdash moves them back
 backdashStartup = 3; // The delay before the character starts moving back
 
 

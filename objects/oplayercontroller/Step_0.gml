@@ -133,9 +133,15 @@ if state == eState.IDLE {
 		canBlock = true;
 	}
 	
-	if (movedir != -image_xscale && runButton)
+	if ((movedir == image_xscale || movedir == 0) && runButton)
 	{
 		state = eState.RUN_FORWARD;
+	}
+	else if (movedir == -image_xscale && runButton)
+	{
+		state = eState.RUN_BACKWARD;
+		sprite_index = CharacterSprites.runBackward_Sprite;
+		image_index = 0;
 	}
 	
 	
@@ -201,9 +207,15 @@ if state == eState.CROUCHING {
 		canBlock = true;
 	}
 	
-	if (movedir == image_xscale && runButton && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && runButton && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
+	}
+	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1)
+	{
+		state = eState.RUN_BACKWARD;
+		sprite_index = CharacterSprites.runBackward_Sprite;
+		image_index = 0;
 	}
 	
 	
@@ -348,9 +360,16 @@ switch state {
 			canBlock = true;
 		}
 		
-		if (movedir == image_xscale && runButton)
+		// Handle Transition to Run
+		if ((movedir == image_xscale || movedir == 0) && runButton)
 		{
 			state = eState.RUN_FORWARD;
+		}
+		else if (movedir == -image_xscale && runButton)
+		{
+			state = eState.RUN_BACKWARD;
+			sprite_index = CharacterSprites.runBackward_Sprite;
+			image_index = 0;
 		}
 		
 		
@@ -448,6 +467,48 @@ switch state {
 		PressAttackButton(attack);
 	}
 	break;
+	
+	
+	case eState.RUN_BACKWARD: {
+		cancelable = false;
+		grounded = true;
+		canTurnAround = false;
+		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
+		
+		sprite_index = CharacterSprites.runBackward_Sprite;
+
+		image_speed = 1;
+		
+		// Handle I-Frames
+		if (animTimer <= backdashInvincibility)
+		{
+			invincible = true;
+		}
+		else
+		{
+			invincible = false;	
+		}
+		
+		// Handle Startup
+		if (animTimer == backdashStartup)
+		{
+			hsp = backdashSpeed * -image_xscale;
+		}
+		
+		// Handle Ending
+		if (animTimer >= backdashDuration)
+		{
+			state = eState.IDLE;
+			hsp = 0;
+			invincible = false;
+		}
+		
+		
+	}
+	break;
+	
 	
 	case eState.JUMPSQUAT: {
 		cancelable = false;
