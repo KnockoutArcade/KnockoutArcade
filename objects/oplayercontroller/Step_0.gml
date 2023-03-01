@@ -1336,5 +1336,8 @@ if (!inAttackState && canTurnAround)
 else 
 {
 	image_speed = 0;
-	if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite; 
+	if (hitstun > 0)
+	{
+		sprite_index = CharacterSprites.hurt_Sprite;
+	}
 }

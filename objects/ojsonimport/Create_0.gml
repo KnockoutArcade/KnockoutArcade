@@ -23,7 +23,7 @@ while(fileName != "")
 		importedCharacter = json_parse(json);
 	}
 	
-	global.characterData[i] = importedCharacter;
+	global.characterData[i] = SetupCharacter(importedCharacter);
 	fileName = file_find_next();
 	i++;
 }

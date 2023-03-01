@@ -26,33 +26,36 @@ function PerformAttack(Action)
 	// Animations
 	for (var i = 0; i < Action.numOfWindows; i++) 
 	{
-			if (animTimer >= Action.window[i][0])
+			//if (animTimer >= Action.window[i][0])
+			if(animTimer >= Action.window[i].ImageIndex)
 			{
-				image_index = Action.window[i][1];
+				//image_index = Action.window[i][1];
+				image_index = Action.window[i].Length;
 			}
 	}
 	
 	// Throws
 	if (Action.isThrow) 
 	{
-		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) 
+		for (var i = 0; i < Action.opponentPositionData.NumberOfFrames; i++) 
 		{
 			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
-			if (animTimer >= Action.opponentPositionData.window[i][0] && heldOpponent != noone)
+			if (animTimer >= Action.opponentPositionData.Frames[i].Frame && heldOpponent != noone)
 			{
-				heldOpponent.x = x + Action.opponentPositionData.window[i][1] * image_xscale;
-				heldOpponent.y = y + Action.opponentPositionData.window[i][2];
+				////Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
+				heldOpponent.x = x + Action.opponentPositionData.Frames[i].RelativeX * image_xscale;
+				heldOpponent.y = y + Action.opponentPositionData.Frames[i].RelativeY;
 				// Assigns the correct sprite to use. It will be different for every character, but we just want to use that character's hurt sprite
-				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.HURT_SPRITE)
+				if (Action.opponentPositionData.Frames[i].Sprite == eSpritesToUse.HURT_SPRITE)
 				{
 				 	heldOpponent.sprite_index = heldOpponent.CharacterSprites.hurt_Sprite;
 				}
-				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
+				else if (Action.opponentPositionData.Frames[i].Sprite == eSpritesToUse.KNOCKDOWN_SPRITE)
 				{
 					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
-					heldOpponent.image_index = Action.opponentPositionData.window[i][4];
-					heldOpponent.image_angle = Action.opponentPositionData.window[i][5] * image_xscale;
-					heldOpponent.image_xscale = Action.opponentPositionData.window[i][6] * image_xscale;
+					heldOpponent.image_index = Action.opponentPositionData.Frames[i].Index;
+					heldOpponent.image_angle = Action.opponentPositionData.Frames[i].Rotation * image_xscale;
+					heldOpponent.image_xscale = Action.opponentPositionData.Frames[i].XScale * image_xscale;
 				}
 			}
 		}
@@ -61,16 +64,16 @@ function PerformAttack(Action)
 	
 	// Momentum Data
 	// Grounded
-	if (Action.hasGroundMovementData && grounded)
+	if (Action.groundMovementData.NumberOfWindows > 0 && grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data
-		for (var i = 0; i < Action.groundMovementData.numOfWindows; i++) 
+		for (var i = 0; i < Action.groundMovementData.NumberOfWindows; i++) 
 		{
 			// We iterate through each window from left to right to determine which window should be active.
 			// If animTimer is >= the current window's starting_frame, then it will become the active window.
 			// If more than one window works, this code will allow the largest of the valid windows to be
 			// the active window.
-			if (animTimer >= Action.groundMovementData.window[i][0])
+			if (animTimer >= Action.groundMovementData.Windows[i].StartingFrame)
 			{
 				currentMovementWindow = i;
 			}
@@ -79,23 +82,23 @@ function PerformAttack(Action)
 		// check hsp overwrite flag
 		// If the overwrite flag hsp is set to 1, then we overwrite the player's current momentum for the desired value
 		// If not, the velocity gets added to our current velocity.
-		if (Action.groundMovementData.window[currentMovementWindow][3])
+		if (Action.groundMovementData.Windows[currentMovementWindow].OverwriteHorizontalSpeed)
 		{ // hsp velocity
-			hsp = Action.groundMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+			hsp = Action.groundMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale; // hsp value 
 		} 
-		else if (!Action.groundMovementData.window[currentMovementWindow][3]) 
+		else
 		{
-			hsp += Action.groundMovementData.window[currentMovementWindow][1] * image_xscale;
+			hsp += Action.groundMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale;
 		}
 		
 		// check vsp overwrite flag
-		if (Action.groundMovementData.window[currentMovementWindow][4])
+		if (Action.groundMovementData.Windows[currentMovementWindow].OverwriteVerticalSpeed)
 		{
-			vsp = Action.groundMovementData.window[currentMovementWindow][2];
+			vsp = Action.groundMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
-		else if (!Action.groundMovementData.window[currentMovementWindow][4]) 
+		else
 		{
-			vsp += Action.groundMovementData.window[currentMovementWindow][2];
+			vsp += Action.groundMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
 		
 	} 
@@ -108,52 +111,53 @@ function PerformAttack(Action)
 	}
 	
 	// Air
-	if (Action.hasAirMovementData && !grounded)
+	if (Action.airMovementData.NumberOfWindows > 0 && !grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data
-		for (var i = 0; i < Action.airMovementData.numOfWindows; i++)
+		for (var i = 0; i < Action.airMovementData.NumberOfWindows; i++)
 		{
 			// Same as grounded
-			if (animTimer >= Action.airMovementData.window[i][0]) 
+			if (animTimer >= Action.airMovementData.Windows[i].StartingFrame)
 			{
 				currentMovementWindow = i;
 			}
 		}
 		
 		// check hsp overwrite flag
-		if (Action.airMovementData.window[currentMovementWindow][3])
+		if (Action.airMovementData.Windows[currentMovementWindow].OverwriteHorizontalSpeed)
 		{ // hsp velocity
-			hsp = Action.airMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+			hsp = Action.airMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale; // hsp value 
 		} 
-		else if (!Action.airMovementData.window[currentMovementWindow][3]) 
+		else
 		{
-			hsp += Action.airMovementData.window[currentMovementWindow][1] * image_xscale;
+			hsp += Action.airMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale;
 		}
 		
 		// check vsp overwrite flag
-		if (Action.airMovementData.window[currentMovementWindow][4])
+		if (Action.airMovementData.window[currentMovementWindow].OverwriteVerticalSpeed)
 		{
-			vsp = Action.airMovementData.window[currentMovementWindow][2];
+			vsp = Action.airMovementData.window[currentMovementWindow].VerticalSpeed;
 		}
-		else if (!Action.airMovementData.window[currentMovementWindow][4]) 
+		else
 		{
-			vsp += Action.airMovementData.window[currentMovementWindow][2];
+			vsp += Action.airMovementData.window[currentMovementWindow].VerticalSpeed;
 		}
 	}
 	
 	
 	
 	// Hitboxes
-	for (var i = 0; i < Action.numOfHitboxes; i++;) {
-		if (animTimer == Action.attackProperty.start[i]) 
+	for (var i = 0; i < Action.numOfHitboxes; i++;)
+	{
+		if (animTimer == Action.attackProperty[i].Start) 
 		{
-			hitbox = instance_create_layer(x + (Action.attackProperty.widthOffset[i] * other.image_xscale) + 0.5, y - Action.attackProperty.heightOfset[i], "hitboxes", oHitbox);
+			hitbox = instance_create_layer(x + (Action.attackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.attackProperty[i].HeightOffset, "hitboxes", oHitbox);
 			with (hitbox) 
 			{
-				lifetime = Action.attackProperty.lifetime[i];
+				lifetime = Action.attackProperty[i].Lifetime;
 				hitboxID = i;
-				image_xscale = Action.attackProperty.attackWidth[i] * other.image_xscale;
-				image_yscale = Action.attackProperty.attackHeight[i];
+				image_xscale = Action.attackProperty[i].AttackWidth * other.image_xscale;
+				image_yscale = Action.attackProperty[i].AttackHeight;
 				owner = other.id;
 			
 				// Pass through attack data
@@ -165,19 +169,22 @@ function PerformAttack(Action)
 	
 	
 	// Re-hitting Hitboxes
-	if (variable_struct_exists(Action, "rehitData")) 
+	if(Action.rehitData.NumberOfHits > 0)
 	{
-		for (var i = 0; i < Action.rehitData.hitbox; i++;) {
-			for (var j = 0; j < Action.rehitData.numOfHits; j++;) {
-				if (animTimer == Action.rehitData.frames[j]) 
+		for (var i = 0; i < Action.rehitData.HitBox; i++;)
+		{
+			for (var j = 0; j < Action.rehitData.NumberOfHits; j++;)
+			{
+				if (animTimer == Action.rehitData.HitOnFrames[j])
 				{
-					hitbox = instance_create_layer(x + (Action.attackProperty.widthOffset[i] * other.image_xscale) + 0.5, y - Action.attackProperty.heightOfset[i], "hitboxes", oHitbox);
+					hitbox = instance_create_layer(x + (Action.attackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.attackProperty[i].HeightOfset, "hitboxes", oHitbox);
+					
 					with (hitbox) 
 					{
-						lifetime = Action.attackProperty.lifetime[i];
+						lifetime = Action.attackProperty[i].Lifetime;
 						hitboxID = i;
-						image_xscale = Action.attackProperty.attackWidth[i] * other.image_xscale;
-						image_yscale = Action.attackProperty.attackHeight[i];
+						image_xscale = Action.attackProperty[i].AttackWidth * other.image_xscale;
+						image_yscale = Action.attackProperty[i].AttackHeight;
 						owner = other.id;
 			
 						// Pass through attack data
@@ -197,15 +204,16 @@ function PerformAttack(Action)
 	// Hurtboxes
 	hitbox = 0;
 	for (var i = 0; i < Action.numOfHurtboxes; i++;) {
-		if (animTimer == Action.hurtboxProperty.start[i]) 
+		if (animTimer == Action.hurtboxProperty[i].Start)
 		{
-			hitbox = instance_create_layer(x + (Action.hurtboxProperty.widthOffset[i] * other.image_xscale), y - Action.hurtboxProperty.heightOfset[i], "hitboxes", oPlayerHurtbox);
+			hitbox = instance_create_layer(x + (Action.hurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.hurtboxProperty[i].HeightOfset, "hitboxes", oPlayerHurtbox);
+			
 			with (hitbox) 
 			{
-				lifetime = Action.hurtboxProperty.lifetime[i];
+				lifetime = Action.hurtboxProperty[i].lifetime;
 				hurtboxID = i;
-				image_xscale = Action.hurtboxProperty.attackWidth[i] * other.image_xscale;
-				image_yscale = Action.hurtboxProperty.attackHeight[i];
+				image_xscale = Action.hurtboxProperty[i].AttackWidth * other.image_xscale;
+				image_yscale = Action.hurtboxProperty[i].AttackHeight;
 				owner = other.id;
 				
 				hurtboxProperty = Action.hurtboxProperty;

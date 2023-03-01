@@ -116,7 +116,7 @@ CharacterSprites = {
 }
 
 // Which Character we are currently playing as
-selectedCharacter = SetupCharacter(global.characterData[0]);
+selectedCharacter = global.characterData[1];
 
 // State-related Variables
 state = eState.IDLE;

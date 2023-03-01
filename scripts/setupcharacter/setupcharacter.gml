@@ -1,6 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetupCharacter(selectedCharacter, selectedPaletteId = -1){
+function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
+{
 	var formedCharacter = {};
 	
 	formedCharacter.basePalette = selectedCharacter.BaseColor.ColorPalette;
@@ -19,7 +20,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1){
 	for(var i = 0; i < array_length(selectedCharacter.MoveData); i++;)
 	{
 		var nextMove = {};
-		nextMove.spriteId = selectedCharacter.MoveData[i].SpriteName;
+		nextMove.spriteId = asset_get_index(selectedCharacter.MoveData[i].SpriteName);
 		nextMove.attackProperty = selectedCharacter.MoveData[i].AttackData;
 		nextMove.numOfHitboxes  = selectedCharacter.MoveData[i].NumberOfHitboxes;
 		nextMove.numOfHurtboxes = selectedCharacter.MoveData[i].NumberOfHurtboxes;
@@ -27,12 +28,17 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1){
 		nextMove.isThrow = selectedCharacter.MoveData[i].IsThrow;
 		nextMove.window = selectedCharacter.MoveData[i].FrameData;
 		nextMove.hurtboxProperty = selectedCharacter.MoveData[i].HurtboxData;
+		nextMove.groundMovementData = selectedCharacter.MoveData[i].GroundMovementData;
+		nextMove.airMovementData = selectedCharacter.MoveData[i].AirMovementData;
+		nextMove.counterHitProperty = selectedCharacter.MoveData[i].CounterData;
 
-		if(selectedCharacter.MoveData[i].IsThrow) {
+		if(selectedCharacter.MoveData[i].IsThrow)
+		{
 			nextMove.opponentPositionData = selectedCharacter.MoveData[i].OpponentPositionData;
 		}
 
-		if(selectedCharacter.MoveData[i].RehitData.NumberOfFrames != 0) {
+		if(selectedCharacter.MoveData[i].RehitData.NumberOfHits != 0)
+		{
 			nextMove.rehitData = selectedCharacter.MoveData[i].RehitData;
 		}
 		

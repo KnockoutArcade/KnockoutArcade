@@ -72,7 +72,7 @@ if (P1menuConfirm && !P1hasSelectedChar)
 	
 	if (P1charSelCol == 0 && P1charSelRow == 0) 
 	{
-		global.p1SelectedCharacter = oRussel; // When Setting selected characters, always use the object name
+		global.p1SelectedCharacter = oRussel;
 	}
 	else if (P1charSelCol == 1 && P1charSelRow == 0)
 	{

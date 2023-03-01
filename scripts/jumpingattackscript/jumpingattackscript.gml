@@ -8,8 +8,14 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	image_index = 0;
 	inAttackState = true;
 	
-	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
-	else vsp += fallSpeed * gravityMult;
+	if (vsp > 0)
+	{
+		vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
+	}
+	else
+	{
+		vsp += fallSpeed * gravityMult;
+	}
 		
 	PerformAttack(moveToDo);
 	
