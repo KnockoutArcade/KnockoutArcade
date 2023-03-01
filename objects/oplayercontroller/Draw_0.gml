@@ -12,8 +12,8 @@ shader_set(sh_CharPalettes);
 
 shader_set_uniform_f(sh_handle_range, 1);
 
-// Set up color Matches
-#region
+
+#region Color Matches
 shader_set_uniform_f(sh_handle_match1,
 	colorMatch1.toShaderValue(colorMatch1.red),
 	colorMatch1.toShaderValue(colorMatch1.green),
@@ -112,8 +112,7 @@ shader_set_uniform_f(sh_handle_match16,
 );
 #endregion
 
-// Set up color Replaces
-#region
+#region Color Replaces
 shader_set_uniform_f(sh_handle_replace1,
 	colorReplace1.toShaderValue(colorReplace1.red),
 	colorReplace1.toShaderValue(colorReplace1.green),

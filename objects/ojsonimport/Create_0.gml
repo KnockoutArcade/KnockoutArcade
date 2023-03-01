@@ -1,3 +1,5 @@
+global.numberOfCharacters = 0;
+
 var i = 0;
 var filePath = working_directory + "/characterdata/";
 var fileName = file_find_first(filePath + "*.json", fa_directory);
@@ -24,6 +26,7 @@ while(fileName != "")
 	}
 	
 	global.characterData[i] = SetupCharacter(importedCharacter);
+	global.numberOfCharacters++;
 	fileName = file_find_next();
 	i++;
 }
