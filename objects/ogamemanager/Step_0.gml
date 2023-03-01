@@ -4,11 +4,13 @@
 
 
 // A player is defeated
-if p1.hp == 0 || p2.hp == 0 {
+if (p1.hp == 0 || p2.hp == 0) 
+{
 	global.gameHalt = true;
 	gameHaltTimer++;
 	
-	if gameHaltTimer == 90 {
+	if (gameHaltTimer == 90)
+	{
 		ResetGame();
 		
 		SetupGame();
@@ -16,24 +18,34 @@ if p1.hp == 0 || p2.hp == 0 {
 		global.gameHalt = 0;
 		gameHaltTimer = 0;
 	}
-	if gameHaltTimer == 1 {
-		if p1.hp > 0 global.p1Rounds++;
-		if p2.hp > 0 global.p2Rounds++;
+	if (gameHaltTimer == 1)
+	{
+		if (p1.hp > 0)
+		{
+			global.p1Rounds++;
+		}
+		if (p2.hp > 0)
+		{
+			global.p2Rounds++;
+		} 
 		var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
-		with particle {
+		with (particle) 
+		{
 		sprite_index = sKOText;
 		image_index = true;
 		lifetime = 89;
-	}
+		}
 	}
 }
 
 // Time runs out
-if global.gameTimer == 0 {
+if (global.gameTimer == 0)
+{
 	global.gameHalt = true;
 	gameHaltTimer++;
 	
-	if gameHaltTimer == 90 {
+	if (gameHaltTimer == 90)
+	{
 		ResetGame();
 		
 		SetupGame();
@@ -41,23 +53,33 @@ if global.gameTimer == 0 {
 		global.gameHalt = 0;
 		gameHaltTimer = 0;
 	}
-	if gameHaltTimer == 1 {
-		if p1.hp > p2.hp global.p1Rounds++;
-		if p2.hp > p1.hp global.p2Rounds++;
+	if (gameHaltTimer == 1)
+	{
+		if (p1.hp > p2.hp)
+		{
+			global.p1Rounds++;
+		}
+		if (p2.hp > p1.hp)
+		{
+			global.p2Rounds++;
+		}
 		var particle = instance_create_layer(0, 0, "KO_Text", oParticles);
-		with particle {
+		with (particle) 
+		{
 		sprite_index = sTimeUp;
 		image_index = true;
 		lifetime = 89;
-	}
+		}
 	}
 }
 
 // handle intros
-if p1.hasPerformedIntro && p2.hasPerformedIntro && global.hasCompletedIntros == false {
+if (p1.hasPerformedIntro && p2.hasPerformedIntro && !global.hasCompletedIntros) 
+{
 	global.hasCompletedIntros = true;
 	var particle = instance_create_layer(80, 0, "Particles", oParticles);
-	with particle {
+	with (particle) 
+	{
 		sprite_index = sRound1Start;
 		lifetime = 110;
 	}

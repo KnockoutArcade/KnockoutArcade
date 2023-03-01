@@ -3,7 +3,8 @@
 
 visible = global.toggleHitboxVisibility;
 
-if place_meeting(x, y, oWall) {
+if (place_meeting(x, y, oWall))
+{
 	// While we are touching a wall, move us back 1 pixel at a time. One we are no longer touching the wall,
 	// we will know how far away we need to move
 	while place_meeting(x, y, oWall) {

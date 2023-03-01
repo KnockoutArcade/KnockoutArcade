@@ -4,6 +4,7 @@
 // Russel Vars
 global.stRusselMoves = {
 	StandLight : {
+		duration : 7, // Total length of this attack in frames
 		spriteID : sRussel_Standing_Light,
 		numOfWindows : 4,
 		
@@ -43,7 +44,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -59,6 +89,7 @@ global.stRusselMoves = {
 	},
 	
 	StandLight2 : {
+		duration : 14,
 		spriteID : sRussel_Standing_Light2,
 		numOfWindows : 4,
 		
@@ -98,7 +129,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -114,6 +174,7 @@ global.stRusselMoves = {
 	},
 	
 	StandLight3 : {
+		duration : 22,
 		spriteID : sRussel_Standing_Light3,
 		numOfWindows : 4,
 		
@@ -153,7 +214,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -169,6 +259,7 @@ global.stRusselMoves = {
 	},
 	
 	StandMedium : {
+		duration : 21,
 		spriteID : sRussel_Standing_Medium,
 		numOfWindows : 6,
 		
@@ -208,7 +299,42 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [4, 1, 0, true, true],  [5, 0, 0, true, true] ]
+		},
 		
 		numOfHurtboxes : 1,
 		
@@ -224,6 +350,7 @@ global.stRusselMoves = {
 	},
 	
 	StandHeavy : {
+		duration : 39,
 		spriteID : sRussel_Standing_Heavy,
 		numOfWindows : 7,
 		
@@ -263,7 +390,47 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
+
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [12, 24, 0, true, true],  [13, 0, 0, true, true] ],
+			// There are 3 windows here, the first window stops Russel intially when performing the move,
+			// the 2nd is the actual part where he moves,
+			// the 3rd stops him again for the rest of the move.
+			gravityScale : 1, // How much this move multiplies overall fall speed
+			fallScale : 1, // How much faster or slower we fall, specifically
+		},
 		
 		numOfHurtboxes : 1,
 		
@@ -279,6 +446,7 @@ global.stRusselMoves = {
 	},
 		
 	CrouchingLight : {
+		duration : 9,
 		spriteID : sRussel_Crouching_Light,
 		numOfWindows : 3,
 		
@@ -318,7 +486,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -334,6 +531,7 @@ global.stRusselMoves = {
 	},
 	
 	CrouchingMedium : {
+		duration : 27,
 		spriteID : sRussel_Crouching_Medium,
 		numOfWindows : 10,
 		
@@ -373,9 +571,38 @@ global.stRusselMoves = {
 			particleDuration : [5, 5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
+		
 		isThrow : false,
 		
 		numOfHurtboxes : 1,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		hurtboxProperty : {
 			start : [5],
@@ -389,6 +616,7 @@ global.stRusselMoves = {
 	},
 		
 	CrouchingHeavy : {
+		duration : 34,
 		spriteID : sRussel_Crouching_Heavy,
 		numOfWindows : 10,
 		
@@ -428,7 +656,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 2,
 		
@@ -444,6 +701,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingLight : {
+		duration : 999,
 		spriteID : sRussel_Jumping_Light,
 		numOfWindows : 2,
 		
@@ -483,7 +741,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -499,6 +786,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingMedium : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Medium,
 		numOfWindows : 6,
 		
@@ -538,7 +826,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -554,6 +871,7 @@ global.stRusselMoves = {
 	},
 	
 	JumpingHeavy : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Heavy,
 		numOfWindows : 6,
 		
@@ -593,7 +911,36 @@ global.stRusselMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -609,6 +956,7 @@ global.stRusselMoves = {
 	},
 	
 	Grab : {
+		duration : 24,
 		spriteID : sRussel_Grab,
 		numOfWindows : 5,
 		
@@ -651,7 +999,36 @@ global.stRusselMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [0],
+			meterGain : [0],
+			comboScaling : [0],
+			attackHitstop : [0], 
+			attackHitstun : [0],
+			knockback: [0],
+			
+			airKnockbackV: [0],
+			airKnockbackH: [0],
+			
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [0],
+			
+			particlexOffset : [10],
+			particleyOffset : [0],
+			particleEffect : [sHitEffect],
+			particleDuration : [5]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -667,6 +1044,7 @@ global.stRusselMoves = {
 	},
 	
 	ForwardThrow : {
+		duration : 42,
 		spriteID : sRussel_ForwardThrow,
 		numOfWindows : 9,
 		
@@ -709,6 +1087,32 @@ global.stRusselMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // This move technically never counter hits, but needs data anyways
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : true,
 		
 		opponentPositionData : {
@@ -718,7 +1122,14 @@ global.stRusselMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
 		},
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		
 		numOfHurtboxes : 1,
@@ -735,6 +1146,7 @@ global.stRusselMoves = {
 	},
 	
 	BackwardThrow : {
+		duration : 58,
 		spriteID : sRussel_BackwardThrow,
 		numOfWindows : 10,
 		
@@ -777,6 +1189,32 @@ global.stRusselMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // This move technically never counter hits, but needs data anyway
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : true,
 		
 		opponentPositionData : {
@@ -786,8 +1224,14 @@ global.stRusselMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : -70,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : -22,
 		},
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -803,6 +1247,7 @@ global.stRusselMoves = {
 	},
 	
 	NeutralSpecial : {
+		duration : 50,
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
@@ -848,8 +1293,47 @@ global.stRusselMoves = {
 			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 3],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
+		
 		isThrow : false,
 		
+		// Movement Data
+		hasGroundMovementData : false,
+		hasAirMovementData : true,
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, false, true],  [1, 0, -2, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : 1, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		// Hurtbox Data
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -864,16 +1348,17 @@ global.stRusselMoves = {
 	},
 	
 	SideSpecial : {
+		duration : 50, // 44
 		spriteID : sRussel_SideSpecial,
-		numOfWindows : 11,
+		numOfWindows : 16,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [20, 6], [21, 7], [22, 8], [24, 9], [26, 10], [30, 11]],
+		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [17, 6], [21, 7], [22, 8], [26, 9], [28, 10], [29, 11], [32, 12], [40, 13], [46, 14], [48, 15], [49, 16]],
 		
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [8, 22],
+			start : [8, 26],
 			lifetime : [4, 4],
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
@@ -887,7 +1372,7 @@ global.stRusselMoves = {
 			attackHitstop : [9, 16],
 			attackHitstun : [24, 15],
 			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [16, 10],
+			blockstun : [16, 12],
 			knockback: [6, 6],
 			airKnockbackV: [-.5, 0],
 			airKnockbackH: [2, 4],
@@ -903,13 +1388,59 @@ global.stRusselMoves = {
 			particleDuration : [5,5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
 		
 		isThrow : false,
+		
+		// Movement Data
+		hasGroundMovementData : true,
+		hasAirMovementData : true,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, 1, 0, true, true], [40, .5, 0, true, true]],
+			gravityScale : .5, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.25, 0, false, false], [40, 0, 0, false, false]],
+			gravityScale : .5, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
 		
 		numOfHurtboxes : 2,
 		
 		hurtboxProperty : {
-			start : [8, 22],
+			start : [8, 26],
 			lifetime : [5, 6],
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
@@ -923,17 +1454,18 @@ global.stRusselMoves = {
 // BeverlyVars
 global.stBeverlyMoves = {
 	StandLight : {
-		spriteID : sRussel_Standing_Light,
-		numOfWindows : 4,
+		duration : 7, // Total length of this attack in frames
+		spriteID : sBeverly_StandLight1_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[1 , 0], [3, 1], [5, 2], [7, 3]],
+		window : [[1 , 0], [4, 1], [6, 2]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [3],
-			lifetime : [4],
+			start : [4],
+			lifetime : [5],
 			attackWidth : [15],
 			attackHeight : [5],
 			widthOffset : [12],
@@ -962,7 +1494,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -978,11 +1539,12 @@ global.stBeverlyMoves = {
 	},
 	
 	StandLight2 : {
-		spriteID : sRussel_Standing_Light2,
-		numOfWindows : 4,
+		duration : 14,
+		spriteID : sBeverly_StandLight2_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[0 , 0], [2, 1], [6, 2], [12, 3]],
+		window : [[0 , 0], [2, 1], [6, 2]],
 		
 		numOfHitboxes : 1,
 		
@@ -1017,7 +1579,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1033,11 +1624,12 @@ global.stBeverlyMoves = {
 	},
 	
 	StandLight3 : {
-		spriteID : sRussel_Standing_Light3,
-		numOfWindows : 4,
+		duration : 22,
+		spriteID : sBeverly_StandLight3_MOCKUP_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[3 , 1], [6, 2], [9, 3], [18, 4]],
+		window : [[3 , 1], [6, 2], [9, 3]],
 		
 		numOfHitboxes : 1,
 		
@@ -1062,8 +1654,8 @@ global.stBeverlyMoves = {
 			airKnockbackH: [1],
 			
 			launches: [true],
-			LaunchKnockbackV: [-3],
-			LaunchKnockbackH: [.1],
+			LaunchKnockbackV: [1],
+			LaunchKnockbackH: [3],
 			pushback: [2],
 			
 			particlexOffset : [10],
@@ -1072,7 +1664,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1088,16 +1709,17 @@ global.stBeverlyMoves = {
 	},
 	
 	StandMedium : {
-		spriteID : sRussel_Standing_Medium,
-		numOfWindows : 6,
+		duration : 21,
+		spriteID : sBeverly_StandMedium_MOCKUP_strip5,
+		numOfWindows : 5,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[2 , 1], [5, 2], [9, 3], [12, 4], [15, 5], [18, 6]],
+		window : [[2 , 1], [5, 2], [7, 3], [13, 4], [16, 5]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [5],
+			start : [7],
 			lifetime : [4],
 			attackWidth : [20],
 			attackHeight : [8],
@@ -1127,7 +1749,42 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [4, 1, 0, true, true],  [5, 0, 0, true, true] ]
+		},
 		
 		numOfHurtboxes : 1,
 		
@@ -1143,11 +1800,12 @@ global.stBeverlyMoves = {
 	},
 	
 	StandHeavy : {
-		spriteID : sRussel_Standing_Heavy,
-		numOfWindows : 7,
+		duration : 39,
+		spriteID : sBeverly_StandHeavy_MOCKUP_strip5,
+		numOfWindows : 5,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[2 , 1], [6, 2], [12, 3], [15, 4], [18, 5], [25, 6], [33, 7]],
+		window : [[2 , 1], [6, 2], [12, 3], [15, 4], [18, 5]],
 		
 		numOfHitboxes : 1,
 		
@@ -1182,7 +1840,47 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : true,
+		hasAirMovementData : false,
+
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [12, 12, 0, true, true],  [13, 0, 0, true, true] ],
+			// There are 3 windows here, the first window stops Russel intially when performing the move,
+			// the 2nd is the actual part where he moves,
+			// the 3rd stops him again for the rest of the move.
+			gravityScale : 1, // How much this move multiplies overall fall speed
+			fallScale : 1, // How much faster or slower we fall, specifically
+		},
 		
 		numOfHurtboxes : 1,
 		
@@ -1198,11 +1896,12 @@ global.stBeverlyMoves = {
 	},
 		
 	CrouchingLight : {
-		spriteID : sRussel_Crouching_Light,
+		duration : 9,
+		spriteID : sBeverly_CrouchLight_MOCKUP_strip4,
 		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[4 , 1], [6, 2], [8, 3]],
+		window : [[2 , 1], [4, 2], [6, 3], [8, 4]],
 		
 		numOfHitboxes : 1,
 		
@@ -1237,7 +1936,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1253,48 +1981,78 @@ global.stBeverlyMoves = {
 	},
 	
 	CrouchingMedium : {
-		spriteID : sRussel_Crouching_Medium,
-		numOfWindows : 10,
+		duration : 24,
+		spriteID : sBeverly_CrouchMedium_MOCKUP_strip4,
+		numOfWindows : 4,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[3 , 1], [5, 2], [7, 3], [9, 4], [10, 5], [11, 6], [14, 7], [17, 8], [21, 9], [24, 10]],
+		window : [[3 , 1], [7, 2], [10, 3], [18, 4]],
 		
-		numOfHitboxes : 2,
+		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [7, 9],
-			lifetime : [2, 2],
-			attackWidth : [13, 15],
-			attackHeight : [10, 24],
-			widthOffset : [9, 6],
-			heightOfset : [10, 18],
-			group : [1, 1],
+			start : [7],
+			lifetime : [2],
+			attackWidth : [13],
+			attackHeight : [10],
+			widthOffset : [16],
+			heightOfset : [10],
+			group : [1],
 			
-			damage: [10, 10],
-			meterGain : [8, 6],
-			comboScaling : [2, 2],
-			attackHitstop : [11, 11],
-			attackHitstun : [18, 18],
-			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [12, 12],
-			knockback: [4, 4],
-			airKnockbackV: [-2.5, -2.5],
-			airKnockbackH: [.75, .75],
+			damage: [10],
+			meterGain : [8],
+			comboScaling : [2],
+			attackHitstop : [11],
+			attackHitstun : [18],
+			attackType : [eAttackType.MID],
+			blockstun : [12],
+			knockback: [4],
+			airKnockbackV: [1],
+			airKnockbackH: [1],
 			
-			launches: [true, false],
-			LaunchKnockbackV: [-4, 0],
-			LaunchKnockbackH: [.5, 0],
-			pushback: [2, 2],
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [2],
 			
-			particlexOffset : [10,10],
-			particleyOffset : [0, 0],
-			particleEffect : [sHitEffect, sHitEffect],
-			particleDuration : [5, 5]
+			particlexOffset : [1],
+			particleyOffset : [0],
+			particleEffect : [sHitEffect],
+			particleDuration : [ 5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [1],
+			airKnockbackH: [1],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [2],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
 		
 		numOfHurtboxes : 1,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		hurtboxProperty : {
 			start : [5],
@@ -1308,11 +2066,12 @@ global.stBeverlyMoves = {
 	},
 		
 	CrouchingHeavy : {
-		spriteID : sRussel_Crouching_Heavy,
-		numOfWindows : 10,
+		duration : 34,
+		spriteID : sBeverly_CrouchHeavy_MOCKUP_strip9,
+		numOfWindows : 9,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[5 , 1], [9, 2], [10, 3], [12 , 4], [16 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9], [32 , 10]],
+		window : [[1 , 1], [3, 2], [5, 3], [7 , 4], [9 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9]],
 		
 		numOfHitboxes : 1,
 		
@@ -1347,7 +2106,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 2,
 		
@@ -1363,6 +2151,7 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingLight : {
+		duration : 999,
 		spriteID : sRussel_Jumping_Light,
 		numOfWindows : 2,
 		
@@ -1402,7 +2191,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1418,6 +2236,7 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingMedium : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Medium,
 		numOfWindows : 6,
 		
@@ -1457,7 +2276,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [2],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1473,6 +2321,7 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingHeavy : {
+		duration : 27,
 		spriteID : sRussel_Jumping_Heavy,
 		numOfWindows : 6,
 		
@@ -1512,7 +2361,36 @@ global.stBeverlyMoves = {
 			particleDuration : [5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1528,6 +2406,7 @@ global.stBeverlyMoves = {
 	},
 	
 	Grab : {
+		duration : 24,
 		spriteID : sRussel_Grab,
 		numOfWindows : 5,
 		
@@ -1570,7 +2449,36 @@ global.stBeverlyMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : false,
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1586,6 +2494,7 @@ global.stBeverlyMoves = {
 	},
 	
 	ForwardThrow : {
+		duration : 42,
 		spriteID : sRussel_ForwardThrow,
 		numOfWindows : 9,
 		
@@ -1628,6 +2537,32 @@ global.stBeverlyMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : true,
 		
 		opponentPositionData : {
@@ -1637,7 +2572,14 @@ global.stBeverlyMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : 50,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
 		},
+		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		
 		numOfHurtboxes : 1,
@@ -1654,6 +2596,7 @@ global.stBeverlyMoves = {
 	},
 	
 	BackwardThrow : {
+		duration : 58,
 		spriteID : sRussel_BackwardThrow,
 		numOfWindows : 10,
 		
@@ -1696,6 +2639,32 @@ global.stBeverlyMoves = {
 			holdYOffset : [0]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [1],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
 		isThrow : true,
 		
 		opponentPositionData : {
@@ -1705,8 +2674,14 @@ global.stBeverlyMoves = {
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
 			distanceFromWall : -70,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : -22,
 		},
 		
+		hasGroundMovementData : false,
+		hasAirMovementData : false,
 		
 		numOfHurtboxes : 1,
 		
@@ -1722,6 +2697,7 @@ global.stBeverlyMoves = {
 	},
 	
 	NeutralSpecial : {
+		duration : 50,
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
@@ -1767,8 +2743,47 @@ global.stBeverlyMoves = {
 			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 3],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
+		
 		isThrow : false,
 		
+		// Movement Data
+		hasGroundMovementData : false,
+		hasAirMovementData : true,
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, false, true],  [1, 0, -2, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : 1, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		// Hurtbox Data
 		numOfHurtboxes : 1,
 		
 		hurtboxProperty : {
@@ -1783,11 +2798,14 @@ global.stBeverlyMoves = {
 	},
 	
 	SideSpecial : {
-		spriteID : sRussel_SideSpecial,
-		numOfWindows : 11,
+		
+		duration : 44,
+		spriteID : sBeverly_SideSpecial1_MOCKUP,
+		numOfWindows : 3,
+
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [20, 6], [21, 7], [22, 8], [24, 9], [26, 10], [30, 11]],
+		window : [[4, 1], [8, 2], [22, 3]],
 		
 		numOfHitboxes : 2,
 		
@@ -1822,8 +2840,54 @@ global.stBeverlyMoves = {
 			particleDuration : [5,5]
 		},
 		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3, 2],
+			
+			group : [1, 1],
+			
+			damage: [20, 20],
+			meterGain : [12, 12],
+			comboScaling : [1, 1],
+			attackHitstop : [30, 30], 
+			attackHitstun : [14, 14],
+			knockback: [5, 5],
+			
+			airKnockbackV: [-2, -2],
+			airKnockbackH: [4, 4],
+			
+			launches: [true, true],
+			LaunchKnockbackV: [-1, -1],
+			LaunchKnockbackH: [5, 5],
+			pushback: [3, 3],
+			
+			particlexOffset : [18, 18],
+			particleyOffset : [10, 10],
+			particleEffect : [sHitEffect, sHitEffect],
+			particleDuration : [10, 10]
+		},
 		
 		isThrow : false,
+		
+		// Movement Data
+		hasGroundMovementData : true,
+		hasAirMovementData : true,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, true, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, true, true]],
+			gravityScale : .5, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 5,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, true, true],  [6, 0, -1.5, false, true],  [7, 2.5, 0, true, false], [32, -.5, 0, false, false], [37, 0, 0, false, false]],
+			gravityScale : .5, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
 		
 		numOfHurtboxes : 2,
 		

@@ -7,6 +7,9 @@ owner = noone;
 hasHit = false;
 
 attackProperty = {};
+counterHitProperty = {};
+
+tempI = 0;
 
 hitboxID = 0;
 

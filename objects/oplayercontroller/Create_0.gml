@@ -11,9 +11,26 @@ vsp = 0; // Verticle speed
 walkSpeed = 1.5; // How fast the character walks in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
+
+// A short hop is when the player breifly taps up so they don't jump as high.
+
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
 canShortHop = true; // Whether the player can shorthop or not
+
+// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+
+canSuperJump = false; // Whether this character can Super Jump or not
+isSuperJumping = false; // Is the player currently super jumping?
+storedSuperJump = false; // Whether the player has their super jump stored or not
+superJumpTimer = 0; // The amount of time the player has stored their jump for
+
+// A double jump is when the player jumps again in the air
+
+canDoubleJump = false; // Whether this character can Double Jump or not
+hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
+heldUpFrames = 0; // How long the player has held UP for
+
 jumpHsp = 0; // How much momentum the player is carrying with their jump
 isJumpingForward = false; // Whether the player approaching the opponent with their jump or not.
 movedir = 0;
@@ -114,7 +131,8 @@ opponent = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
-with hurtbox {
+with (hurtbox) 
+{
 	primary = true;
 	owner = other.id;
 	image_xscale = 15;
