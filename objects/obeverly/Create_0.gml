@@ -14,6 +14,12 @@ traction = .5; // How much this character slows down each frame in pixels/frame
 jumpSpeed = 4.5 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
 
+//Backdash Vars (The state is refered to as Run back for consistency)
+backdashDuration = 20; // The total duration of a character's backdash
+backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
+backdashSpeed = 5; // How fast their backdash moves them back
+backdashStartup = 3; // The delay before the character starts moving back
+
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
 canShortHop = false; // Whether the player can shorthop or not
@@ -53,6 +59,7 @@ CharacterSprites = {
 	walkForward_Sprite : sRussel_Walk_Forward,
 	walkBackward_Sprite : sRussel_Walk_Backward,
 	runForward_Sprite : sRussel_Run_Forward,
+	runBackward_Sprite : sRussel_Run_Backward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,
 	jump_Sprite : sRussel_Jump,
 	hurt_Sprite : sRussel_Hurt,

@@ -22,6 +22,7 @@
     {"id":{"name":"rJayStage","path":"rooms/rJayStage/rJayStage.yy",},"order":2,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":13,},
     {"id":{"name":"sTimeUp","path":"sprites/sTimeUp/sTimeUp.yy",},"order":6,},
+    {"id":{"name":"sRussel_Run_Backward","path":"sprites/sRussel_Run_Backward/sRussel_Run_Backward.yy",},"order":31,},
     {"id":{"name":"sCharacterNames","path":"sprites/sCharacterNames/sCharacterNames.yy",},"order":1,},
     {"id":{"name":"oTimer","path":"objects/oTimer/oTimer.yy",},"order":4,},
     {"id":{"name":"oPlayerController","path":"objects/oPlayerController/oPlayerController.yy",},"order":0,},
