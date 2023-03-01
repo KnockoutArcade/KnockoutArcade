@@ -973,6 +973,17 @@ switch state {
 			if (movedir == -image_xscale) canBlock = true;
 			if toggleIdleBlock canBlock = true;
 			if (verticalMoveDir == 1) state = eState.JUMPSQUAT;
+			
+			if (movedir == -image_xscale && runButton)
+			{
+				canBlock = false;
+				state = eState.RUN_BACKWARD;
+				sprite_index = CharacterSprites.runBackward_Sprite;
+				image_index = 0;
+				
+				invincible = true;
+				animTimer = 0;
+			}
 		}
 		
 	}
@@ -1121,7 +1132,7 @@ if startCombo {
 // Collision
 if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 	// Collisions With Players
-	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded && !invincible && !opponent.invincible)
 	{
 	
 	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
@@ -1186,6 +1197,7 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP {
 			grounded = true;
 			frameAdvantage = true;
 			inAttackState = false;
+			canTurnAround = true;
 		}
 		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL) 
 		{
