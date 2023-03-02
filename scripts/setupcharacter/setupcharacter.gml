@@ -22,6 +22,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	{
 		var nextMove = {};
 		nextMove.spriteId = asset_get_index(selectedCharacter.MoveData[i].SpriteName);
+		nextMove.duration = selectedCharacter.MoveData[i].Duration;
 		nextMove.attackProperty = selectedCharacter.MoveData[i].AttackData;
 		nextMove.numOfHitboxes  = selectedCharacter.MoveData[i].NumberOfHitboxes;
 		nextMove.numOfHurtboxes = selectedCharacter.MoveData[i].NumberOfHurtboxes;
@@ -32,15 +33,11 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.groundMovementData = selectedCharacter.MoveData[i].GroundMovementData;
 		nextMove.airMovementData = selectedCharacter.MoveData[i].AirMovementData;
 		nextMove.counterHitProperty = selectedCharacter.MoveData[i].CounterData;
+		nextMove.rehitData = selectedCharacter.MoveData[i].RehitData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{
 			nextMove.opponentPositionData = selectedCharacter.MoveData[i].OpponentPositionData;
-		}
-
-		if(selectedCharacter.MoveData[i].RehitData.NumberOfHits != 0)
-		{
-			nextMove.rehitData = selectedCharacter.MoveData[i].RehitData;
 		}
 		
 		switch(selectedCharacter.MoveData[i].MoveType)
