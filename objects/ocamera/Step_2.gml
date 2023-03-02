@@ -10,7 +10,7 @@ if (p1 != noone && p2 != noone)
 // Move the camera
 if (room != rStageArcade)
 {
-	x = lerp(xTo, x, .5);
+	x = lerp(xTo, x, cameraSpeed);
 	
 	camera_set_view_pos(view_camera[0], clamp(x-(camWidth*.5), 0, camWidth), 0);
 
