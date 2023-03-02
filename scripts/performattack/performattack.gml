@@ -50,10 +50,11 @@ function PerformAttack(Action)
 				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
 				{
 					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
-					heldOpponent.image_index = Action.opponentPositionData.window[i][4];
-					heldOpponent.image_angle = Action.opponentPositionData.window[i][5] * image_xscale;
-					heldOpponent.image_xscale = Action.opponentPositionData.window[i][6] * image_xscale;
 				}
+				
+				heldOpponent.image_index = Action.opponentPositionData.window[i][4];
+				heldOpponent.image_angle = Action.opponentPositionData.window[i][5] * image_xscale;
+				heldOpponent.image_xscale = Action.opponentPositionData.window[i][6] * image_xscale;
 			}
 		}
 	}
