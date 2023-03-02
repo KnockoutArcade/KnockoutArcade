@@ -16,7 +16,7 @@ function GetPlayerInputs()
 		global.p1ButtonGrab = keyboard_check_pressed(global.player1Controls.buttonGrab);
 		global.p1ButtonSpecial = keyboard_check_pressed(global.player1Controls.buttonSpecial);
 		global.p1ButtonSuper = keyboard_check_pressed(global.player1Controls.buttonSuper);
-		global.p1ButtonRun = keyboard_check_pressed(global.player1Controls.buttonRun);
+		global.p1ButtonRun = keyboard_check(global.player1Controls.buttonRun);
 	} 
 	else
 	{
@@ -44,7 +44,7 @@ function GetPlayerInputs()
 		global.p2ButtonGrab = keyboard_check_pressed(global.player2Controls.buttonGrab);
 		global.p2ButtonSpecial = keyboard_check_pressed(global.player2Controls.buttonSpecial);
 		global.p2ButtonSuper = keyboard_check_pressed(global.player2Controls.buttonSuper);
-		global.p2ButtonRun = keyboard_check_pressed(global.player2Controls.buttonRun);
+		global.p2ButtonRun = keyboard_check(global.player2Controls.buttonRun);
 	} 
 	else 
 	{
