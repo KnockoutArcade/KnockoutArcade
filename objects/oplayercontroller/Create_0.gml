@@ -9,8 +9,17 @@ hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
 walkSpeed = 1.5; // How fast the character walks in pixels/frame
+runSpeed = 3; // How fast the character runs in pixels/frame
+traction = .25; // How much this character slows down each frame in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
+
+//Backdash Vars (The state is refered to as Run back for consistency)
+backdashDuration = 25; // The total duration of a character's backdash
+backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
+backdashSpeed = 4; // How fast their backdash moves them back
+backdashStartup = 3; // The delay before the character starts moving back
+
 
 // A short hop is when the player breifly taps up so they don't jump as high.
 
@@ -53,6 +62,8 @@ enum eState {
 	INTRO,
 	IDLE,
 	WALKING,
+	RUN_FORWARD,
+	RUN_BACKWARD,
 	JUMPING,
 	JUMPSQUAT,
 	CROUCHING,
@@ -103,6 +114,8 @@ CharacterSprites = {
 	crouchBlock_Sprite : sRussel_Crouch_Block,
 	walkForward_Sprite : sRussel_Walk_Forward,
 	walkBackward_Sprite : sRussel_Walk_Backward,
+	runForward_Sprite : sRussel_Run_Forward,
+	runBackward_Sprite : sRussel_Run_Backward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,
 	jump_Sprite : sRussel_Jump,
 	hurt_Sprite : sRussel_Hurt,

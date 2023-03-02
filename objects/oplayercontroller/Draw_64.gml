@@ -12,9 +12,9 @@ if (playerID == 1)
 	draw_set_color(c_white);
 	
 	draw_text(20, 10, state);
-	draw_text(20, 30, hitstun);
+	draw_text(20, 30, invincible);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, grounded);
+	draw_text(20, 70, environmentDisplacement);
 	draw_text(20, 90, hsp);
 } 
 else 
@@ -26,10 +26,10 @@ else
 	draw_set_color(c_white);
 	
 	draw_text(750, 10, state);
-	draw_text(750, 30, hitstun);
-	draw_text(750, 50, hp);
-	draw_text(750, 70, combo);
-	draw_text(750, 90, storedSuperJump);
+	draw_text(750, 30, invincible);
+	draw_text(750, 50, animTimer);
+	draw_text(750, 70, environmentDisplacement);
+	draw_text(750, 90, hsp);
 }
 
 	if (hitstun > 0)
