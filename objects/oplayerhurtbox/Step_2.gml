@@ -8,13 +8,11 @@ if (primary && owner.state != eState.HITSTOP)
 } 
 if (!primary)
 {
-	x = owner.x + hurtboxProperty.widthOffset[hurtboxID] * sign(owner.image_xscale);
-	y = owner.y - hurtboxProperty.heightOfset[hurtboxID] * sign(owner.image_yscale);
+	x = owner.x + hurtboxProperty[hurtboxID].WidthOffset * sign(owner.image_xscale);
+	y = owner.y - hurtboxProperty[hurtboxID].HeightOffset * sign(owner.image_yscale);
 	if (!owner.inAttackState)
 	{
 		instance_destroy();
 	}
 }
 image_xscale = abs(image_xscale) * sign(owner.image_xscale);
-
-

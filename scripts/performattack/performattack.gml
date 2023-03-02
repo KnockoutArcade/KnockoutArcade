@@ -177,7 +177,7 @@ function PerformAttack(Action)
 			{
 				if (animTimer == Action.rehitData.HitOnFrames[j])
 				{
-					hitbox = instance_create_layer(x + (Action.attackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.attackProperty[i].HeightOfset, "hitboxes", oHitbox);
+					hitbox = instance_create_layer(x + (Action.attackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.attackProperty[i].HeightOffset, "hitboxes", oHitbox);
 					
 					with (hitbox) 
 					{
@@ -203,14 +203,15 @@ function PerformAttack(Action)
 	
 	// Hurtboxes
 	hitbox = 0;
-	for (var i = 0; i < Action.numOfHurtboxes; i++;) {
+	for (var i = 0; i < Action.numOfHurtboxes; i++;) 
+	{
 		if (animTimer == Action.hurtboxProperty[i].Start)
 		{
-			hitbox = instance_create_layer(x + (Action.hurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.hurtboxProperty[i].HeightOfset, "hitboxes", oPlayerHurtbox);
+			hitbox = instance_create_layer(x + (Action.hurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.hurtboxProperty[i].HeightOffset, "hitboxes", oPlayerHurtbox);
 			
 			with (hitbox) 
 			{
-				lifetime = Action.hurtboxProperty[i].lifetime;
+				lifetime = Action.hurtboxProperty[i].Lifetime;
 				hurtboxID = i;
 				image_xscale = Action.hurtboxProperty[i].AttackWidth * other.image_xscale;
 				image_yscale = Action.hurtboxProperty[i].AttackHeight;

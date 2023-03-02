@@ -3,7 +3,7 @@
 
 function CrouchingAttackScript(moveToDo, onGround) 
 {
-	sprite_index = moveToDo.spriteID;
+	sprite_index = moveToDo.spriteId;
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;

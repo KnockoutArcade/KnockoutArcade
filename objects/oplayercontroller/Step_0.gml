@@ -535,8 +535,8 @@ switch state {
 	break;
 	
 	
-	case eState.STANDING_LIGHT_ATTACK: {
-		
+	case eState.STANDING_LIGHT_ATTACK: 
+	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -681,13 +681,13 @@ switch state {
 		if (grounded)
 		{
 			
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.GravityScale, selectedCharacter.NeutralSpecial.airMovementData.FallScale);
 			
 		} 
 		else 
 		{
 		
-			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.airMovementData.GravityScale, selectedCharacter.NeutralSpecial.airMovementData.FallScale);
 		}
 	}
 	break;
@@ -697,13 +697,13 @@ switch state {
 		if (grounded)
 		{
 			
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.GravityScale, selectedCharacter.SideSpecial.airMovementData.FallScale);
 			
 		} 
 		else 
 		{
 			
-			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.GravityScale, selectedCharacter.SideSpecial.airMovementData.FallScale);
 		}
 	}
 	break
