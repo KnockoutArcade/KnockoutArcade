@@ -53,10 +53,11 @@ function PerformAttack(Action)
 				else if (Action.opponentPositionData.Frames[i].Sprite == eSpritesToUse.KNOCKDOWN_SPRITE)
 				{
 					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
-					heldOpponent.image_index = Action.opponentPositionData.Frames[i].Index;
-					heldOpponent.image_angle = Action.opponentPositionData.Frames[i].Rotation * image_xscale;
-					heldOpponent.image_xscale = Action.opponentPositionData.Frames[i].XScale * image_xscale;
 				}
+				
+				heldOpponent.image_index = Action.opponentPositionData.Frames[i].Index;
+				heldOpponent.image_angle = Action.opponentPositionData.Frames[i].Rotation * image_xscale;
+				heldOpponent.image_xscale = Action.opponentPositionData.Frames[i].XScale * image_xscale;
 			}
 		}
 	}

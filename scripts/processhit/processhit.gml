@@ -44,9 +44,10 @@ function ProcessHit( attackProperty, collision_list)
 	else 
 	{
 		collision_list.owner.vsp = 0;
-		owner.pushbackVel = attackProperty[hitboxID].Pushback;
-		owner.heldOpponent = noone;
 	}
+	
+	owner.pushbackVel = attackProperty.pushback[hitboxID];
+	owner.heldOpponent = noone;
 
 	hasHit = true;
 	collision_list.owner.hitstun = attackProperty[hitboxID].AttackHitStun;

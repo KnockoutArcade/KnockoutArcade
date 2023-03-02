@@ -1019,7 +1019,6 @@ switch state
 	case eState.HURT : 
 	{
 		animTimer = 1;
-		//sprite_index = sRussel_Hurt;
 		cancelable = false;
 		canTurnAround = false;
 		
@@ -1413,7 +1412,7 @@ if (startCombo)
 if state != eState.HITSTOP && opponent.state != eState.HITSTOP 
 {
 	// Collisions With Players
-	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded && !invincible && !opponent.invincible)
+	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
 	{
 	
 	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving

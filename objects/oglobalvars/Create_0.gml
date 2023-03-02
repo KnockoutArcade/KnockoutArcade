@@ -1260,10 +1260,10 @@ global.stRusselMoves = {
 			start : [10, 31],
 			lifetime : [1, 4],
 			comboScaling : [0, 2],
-			attackWidth : [30, 30],
+			attackWidth : [35, 35],
 			attackHeight : [20, 20],
-			widthOffset : [10, 10],
-			heightOffset : [2, 2],
+			widthOffset : [5, 5],
+			heightOfset : [2, 2],
 			group : [1, 2],
 			
 			damage: [1, 3],
