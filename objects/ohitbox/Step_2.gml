@@ -163,12 +163,15 @@ if (collisionCheck)
 				// Properties on Counter Hit
 				if (collision_list[| i].owner.inAttackState)
 				{
+					// Determine if we should display the coutner hit text on the p1 or p2 side
+					var isP2 = (owner.playerID == 2) ? true : false; 
+					
 					ProcessHit(counterHitProperty, collision_list[| i]);
 					
 					// Display counterhit text
 					if (other.counterHitProperty.counterHitLevel[hitboxID] == 1)
 					{
-						var counterParticle = instance_create_layer(global.camObj.x - 80 + 23, 61, "Particles", oParticles);
+						var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 						with (counterParticle) 
 						{
 							lifetime = global.hitstop;
@@ -178,7 +181,7 @@ if (collisionCheck)
 					}
 					else if (other.counterHitProperty.counterHitLevel[hitboxID] == 2)
 					{
-						var counterParticle = instance_create_layer(global.camObj.x - 80 + 30, 70, "Particles", oParticles);
+						var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 						with (counterParticle) 
 						{
 							lifetime = global.hitstop;
