@@ -1060,12 +1060,19 @@ switch state
 		if (grounded)
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
+			
+			// This code handles getting knocked back on the ground.
 			if (knockbackVel > 0)
 			{
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel--;
 			} 
-			else 
+			else if (knockbackVel < 0) 
+			{
+				hsp = knockbackVel * -image_xscale;
+				knockbackVel++;
+			}
+			else
 			{
 				hsp = 0;
 				knockbackVel = 0;
