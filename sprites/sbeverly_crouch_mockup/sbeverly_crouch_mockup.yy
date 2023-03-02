@@ -32,7 +32,7 @@
     "spriteId": {"name":"sBeverly_Crouch_MOCKUP","path":"sprites/sBeverly_Crouch_MOCKUP/sBeverly_Crouch_MOCKUP.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
