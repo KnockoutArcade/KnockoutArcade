@@ -19,7 +19,7 @@ global.stRusselMoves = {
 			attackWidth : [15],
 			attackHeight : [5],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -83,7 +83,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [6],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -104,7 +104,7 @@ global.stRusselMoves = {
 			attackWidth : [25],
 			attackHeight : [8],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -168,7 +168,7 @@ global.stRusselMoves = {
 			attackWidth : [28],
 			attackHeight : [10],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -189,7 +189,7 @@ global.stRusselMoves = {
 			attackWidth : [27],
 			attackHeight : [8],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -253,7 +253,7 @@ global.stRusselMoves = {
 			attackWidth : [10],
 			attackHeight : [35],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -274,7 +274,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [8],
 			widthOffset : [10],
-			heightOfset : [12],
+			heightOffset : [12],
 			group : [1],
 			
 			damage: [6],
@@ -344,7 +344,7 @@ global.stRusselMoves = {
 			attackWidth : [22],
 			attackHeight : [6],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -365,7 +365,7 @@ global.stRusselMoves = {
 			attackWidth : [23],
 			attackHeight : [20],
 			widthOffset : [-1],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage: [14],
@@ -440,7 +440,7 @@ global.stRusselMoves = {
 			attackWidth : [22],
 			attackHeight : [16],
 			widthOffset : [-1],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -461,7 +461,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [5],
 			widthOffset : [8],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage : [4],
@@ -525,7 +525,7 @@ global.stRusselMoves = {
 			attackWidth : [25],
 			attackHeight : [10],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -546,7 +546,7 @@ global.stRusselMoves = {
 			attackWidth : [13, 15],
 			attackHeight : [10, 24],
 			widthOffset : [9, 6],
-			heightOfset : [10, 18],
+			heightOffset : [10, 18],
 			group : [1, 1],
 			
 			damage: [10, 10],
@@ -610,7 +610,7 @@ global.stRusselMoves = {
 			attackWidth : [15],
 			attackHeight : [20],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -631,7 +631,7 @@ global.stRusselMoves = {
 			attackWidth : [30],
 			attackHeight : [5],
 			widthOffset : [8],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage : [10],
@@ -695,7 +695,7 @@ global.stRusselMoves = {
 			attackWidth : [40, 20],
 			attackHeight : [15, 15],
 			widthOffset : [-1, -1],
-			heightOfset : [0, 0]
+			heightOffset : [0, 0]
 		}
 		
 	},
@@ -716,7 +716,7 @@ global.stRusselMoves = {
 			attackWidth : [12],
 			attackHeight : [10],
 			widthOffset : [6],
-			heightOfset : [3],
+			heightOffset : [3],
 			group : [1],
 			
 			damage : [5],
@@ -780,7 +780,7 @@ global.stRusselMoves = {
 			attackWidth : [36],
 			attackHeight : [20],
 			widthOffset : [-18],
-			heightOfset : [6]
+			heightOffset : [6]
 		}
 		
 	},
@@ -801,7 +801,7 @@ global.stRusselMoves = {
 			attackWidth : [32],
 			attackHeight : [12],
 			widthOffset : [-6],
-			heightOfset : [2],
+			heightOffset : [2],
 			group : [1],
 			
 			damage: [8],
@@ -865,7 +865,7 @@ global.stRusselMoves = {
 			attackWidth : [34],
 			attackHeight : [15],
 			widthOffset : [-6],
-			heightOfset : [2]
+			heightOffset : [2]
 		}
 		
 	},
@@ -886,7 +886,7 @@ global.stRusselMoves = {
 			attackWidth : [15],
 			attackHeight : [10],
 			widthOffset : [0],
-			heightOfset : [-10],
+			heightOffset : [-10],
 			group : [1],
 			
 			damage: [12],
@@ -950,7 +950,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [-10]
+			heightOffset : [-10]
 		}
 		
 	},
@@ -971,7 +971,7 @@ global.stRusselMoves = {
 			attackWidth : [17],
 			attackHeight : [20],
 			widthOffset : [0],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage: [0],
@@ -1038,7 +1038,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1059,7 +1059,7 @@ global.stRusselMoves = {
 			attackWidth : [35],
 			attackHeight : [20],
 			widthOffset : [0],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [2],
 			
 			damage: [10],
@@ -1140,7 +1140,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1161,7 +1161,7 @@ global.stRusselMoves = {
 			attackWidth : [10],
 			attackHeight : [20],
 			widthOffset : [-50],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [2],
 			
 			damage: [10],
@@ -1241,7 +1241,7 @@ global.stRusselMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1263,7 +1263,7 @@ global.stRusselMoves = {
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
 			widthOffset : [10, 10],
-			heightOfset : [2, 2],
+			heightOffset : [2, 2],
 			group : [1, 2],
 			
 			damage: [1, 3],
@@ -1342,7 +1342,7 @@ global.stRusselMoves = {
 			attackWidth : [30],
 			attackHeight : [30],
 			widthOffset : [6],
-			heightOfset : [2]
+			heightOffset : [2]
 		}
 		
 	},
@@ -1363,7 +1363,7 @@ global.stRusselMoves = {
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
 			widthOffset : [0, 0],
-			heightOfset : [2, 2],
+			heightOffset : [2, 2],
 			group : [1, 2],
 			
 			damage: [7, 7],
@@ -1445,7 +1445,7 @@ global.stRusselMoves = {
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
 			widthOffset : [0, 0],
-			heightOfset : [2, 2]
+			heightOffset : [2, 2]
 		}
 		
 	},
@@ -1469,7 +1469,7 @@ global.stBeverlyMoves = {
 			attackWidth : [15],
 			attackHeight : [5],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -1533,7 +1533,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [6],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -1554,7 +1554,7 @@ global.stBeverlyMoves = {
 			attackWidth : [25],
 			attackHeight : [8],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -1618,7 +1618,7 @@ global.stBeverlyMoves = {
 			attackWidth : [28],
 			attackHeight : [10],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -1639,7 +1639,7 @@ global.stBeverlyMoves = {
 			attackWidth : [27],
 			attackHeight : [8],
 			widthOffset : [12],
-			heightOfset : [15],
+			heightOffset : [15],
 			group : [1],
 			
 			damage : [3],
@@ -1703,7 +1703,7 @@ global.stBeverlyMoves = {
 			attackWidth : [10],
 			attackHeight : [35],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1724,7 +1724,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [8],
 			widthOffset : [10],
-			heightOfset : [12],
+			heightOffset : [12],
 			group : [1],
 			
 			damage: [6],
@@ -1794,7 +1794,7 @@ global.stBeverlyMoves = {
 			attackWidth : [22],
 			attackHeight : [6],
 			widthOffset : [4],
-			heightOfset : [12]
+			heightOffset : [12]
 		}
 		
 	},
@@ -1815,7 +1815,7 @@ global.stBeverlyMoves = {
 			attackWidth : [23],
 			attackHeight : [20],
 			widthOffset : [-1],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage: [14],
@@ -1890,7 +1890,7 @@ global.stBeverlyMoves = {
 			attackWidth : [22],
 			attackHeight : [16],
 			widthOffset : [-1],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1911,7 +1911,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [5],
 			widthOffset : [8],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage : [4],
@@ -1975,7 +1975,7 @@ global.stBeverlyMoves = {
 			attackWidth : [25],
 			attackHeight : [10],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -1996,7 +1996,7 @@ global.stBeverlyMoves = {
 			attackWidth : [13],
 			attackHeight : [10],
 			widthOffset : [16],
-			heightOfset : [10],
+			heightOffset : [10],
 			group : [1],
 			
 			damage: [10],
@@ -2060,7 +2060,7 @@ global.stBeverlyMoves = {
 			attackWidth : [15],
 			attackHeight : [20],
 			widthOffset : [4],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -2081,7 +2081,7 @@ global.stBeverlyMoves = {
 			attackWidth : [30],
 			attackHeight : [5],
 			widthOffset : [8],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage : [10],
@@ -2145,7 +2145,7 @@ global.stBeverlyMoves = {
 			attackWidth : [40, 20],
 			attackHeight : [15, 15],
 			widthOffset : [-1, -1],
-			heightOfset : [0, 0]
+			heightOffset : [0, 0]
 		}
 		
 	},
@@ -2166,7 +2166,7 @@ global.stBeverlyMoves = {
 			attackWidth : [12],
 			attackHeight : [10],
 			widthOffset : [6],
-			heightOfset : [3],
+			heightOffset : [3],
 			group : [1],
 			
 			damage : [5],
@@ -2230,7 +2230,7 @@ global.stBeverlyMoves = {
 			attackWidth : [36],
 			attackHeight : [20],
 			widthOffset : [-18],
-			heightOfset : [6]
+			heightOffset : [6]
 		}
 		
 	},
@@ -2251,7 +2251,7 @@ global.stBeverlyMoves = {
 			attackWidth : [32],
 			attackHeight : [12],
 			widthOffset : [-6],
-			heightOfset : [2],
+			heightOffset : [2],
 			group : [1],
 			
 			damage: [8],
@@ -2315,7 +2315,7 @@ global.stBeverlyMoves = {
 			attackWidth : [34],
 			attackHeight : [15],
 			widthOffset : [-6],
-			heightOfset : [2]
+			heightOffset : [2]
 		}
 		
 	},
@@ -2336,7 +2336,7 @@ global.stBeverlyMoves = {
 			attackWidth : [15],
 			attackHeight : [10],
 			widthOffset : [0],
-			heightOfset : [-10],
+			heightOffset : [-10],
 			group : [1],
 			
 			damage: [12],
@@ -2400,7 +2400,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [-10]
+			heightOffset : [-10]
 		}
 		
 	},
@@ -2421,7 +2421,7 @@ global.stBeverlyMoves = {
 			attackWidth : [17],
 			attackHeight : [20],
 			widthOffset : [0],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [1],
 			
 			damage: [0],
@@ -2488,7 +2488,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -2509,7 +2509,7 @@ global.stBeverlyMoves = {
 			attackWidth : [35],
 			attackHeight : [20],
 			widthOffset : [0],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [2],
 			
 			damage: [10],
@@ -2590,7 +2590,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -2611,7 +2611,7 @@ global.stBeverlyMoves = {
 			attackWidth : [10],
 			attackHeight : [20],
 			widthOffset : [-50],
-			heightOfset : [0],
+			heightOffset : [0],
 			group : [2],
 			
 			damage: [10],
@@ -2691,7 +2691,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [25],
 			widthOffset : [-6],
-			heightOfset : [0]
+			heightOffset : [0]
 		}
 		
 	},
@@ -2713,7 +2713,7 @@ global.stBeverlyMoves = {
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
 			widthOffset : [10, 10],
-			heightOfset : [2, 2],
+			heightOffset : [2, 2],
 			group : [1, 2],
 			
 			damage: [1, 3],
@@ -2792,7 +2792,7 @@ global.stBeverlyMoves = {
 			attackWidth : [30],
 			attackHeight : [30],
 			widthOffset : [6],
-			heightOfset : [2]
+			heightOffset : [2]
 		}
 		
 	},
@@ -2815,7 +2815,7 @@ global.stBeverlyMoves = {
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
 			widthOffset : [0, 0],
-			heightOfset : [2, 2],
+			heightOffset : [2, 2],
 			group : [1, 2],
 			
 			damage: [7, 7],
@@ -2897,7 +2897,7 @@ global.stBeverlyMoves = {
 			attackWidth : [30, 30],
 			attackHeight : [20, 20],
 			widthOffset : [0, 0],
-			heightOfset : [2, 2]
+			heightOffset : [2, 2]
 		}
 		
 	},
