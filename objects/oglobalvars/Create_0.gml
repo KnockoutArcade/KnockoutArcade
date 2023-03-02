@@ -543,7 +543,7 @@ global.stRusselMoves = {
 		attackProperty : {
 			start : [7, 9],
 			lifetime : [2, 2],
-			attackWidth : [13, 15],
+			attackWidth : [16, 15], // before: [13, 15]
 			attackHeight : [10, 24],
 			widthOffset : [9, 6],
 			heightOfset : [10, 18],
@@ -576,10 +576,10 @@ global.stRusselMoves = {
 			
 			group : [1, 1],
 			
-			damage: [20, 20],
+			damage: [12, 12],
 			meterGain : [12, 12],
-			comboScaling : [1, 1],
-			attackHitstop : [30, 30], 
+			comboScaling : [2, 1],
+			attackHitstop : [25, 18], 
 			attackHitstun : [14, 14],
 			knockback: [5, 5],
 			
@@ -587,8 +587,8 @@ global.stRusselMoves = {
 			airKnockbackH: [4, 4],
 			
 			launches: [true, true],
-			LaunchKnockbackV: [-1, -1],
-			LaunchKnockbackH: [5, 5],
+			LaunchKnockbackV: [-6, -6],
+			LaunchKnockbackH: [0, 0],
 			pushback: [3, 3],
 			
 			particlexOffset : [18, 18],
