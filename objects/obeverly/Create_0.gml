@@ -53,7 +53,7 @@ depth = 0;
 
 CharacterSprites = {
 	idle_Sprite : sBeverly_Idle,
-	crouch_Sprite : sRussel_Crouch,
+	crouch_Sprite : sBeverly_Crouch_MOCKUP,
 	standBlock_Sprite : sRussel_Block,
 	crouchBlock_Sprite : sRussel_Crouch_Block,
 	walkForward_Sprite : sRussel_Walk_Forward,
@@ -86,7 +86,8 @@ opponent = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
-with hurtbox {
+with (hurtbox) 
+{
 	primary = true;
 	owner = other.id;
 	image_xscale = 15;

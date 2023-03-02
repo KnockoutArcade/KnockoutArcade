@@ -1,9 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow {
+if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow) 
+{
 	draw_sprite(sCharSel_SelectionBox, 2 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
-} else {
+} 
+else 
+{
 	draw_sprite(sCharSel_SelectionBox, 0 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
 	draw_sprite(sCharSel_SelectionBox, 4 + (charSelBoxAlt * P2hasSelectedChar), 44 + (23 * P2charSelCol), 63 + (19 * P2charSelRow));
 }
@@ -217,12 +220,24 @@ shader_set_uniform_f(sh_handle_replace16,
 );
 #endregion
 
-if P1charSelCol == 0 && P1charSelRow == 0 draw_sprite(sRussel_Idle, 0 + P1charSelCurrentFrame, 29, 65);
-if P1charSelCol == 1 && P1charSelRow == 0 draw_sprite(sBeverly_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+if (P1charSelCol == 0 && P1charSelRow == 0)
+{
+	draw_sprite(sRussel_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+}
+if (P1charSelCol == 1 && P1charSelRow == 0)
+{
+ 	draw_sprite(sBeverly_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+}
 shader_reset();
 	
-if P1charSelCol == 0 && P1charSelRow == 0 draw_sprite(sCharSel_NameRussel, 0, 14, 69);
-if P1charSelCol == 1 && P1charSelRow == 0 draw_sprite(sCharSel_NameBeverly, 0, 14, 69);
+if (P1charSelCol == 0 && P1charSelRow == 0) 
+{
+	draw_sprite(sCharSel_NameRussel, 0, 14, 69);
+}
+if (P1charSelCol == 1 && P1charSelRow == 0)
+{
+ 	draw_sprite(sCharSel_NameBeverly, 0, 14, 69);
+}
 
 
 
@@ -433,30 +448,65 @@ shader_set_uniform_f(sh_handle_replace16,
 );
 #endregion
 	
-if P2charSelCol == 0 && P2charSelRow == 0 draw_sprite_ext(sRussel_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
-if P2charSelCol == 1 && P2charSelRow == 0 draw_sprite_ext(sBeverly_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
+if (P2charSelCol == 0 && P2charSelRow == 0) 
+{
+	draw_sprite_ext(sRussel_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
+}
+
+if (P2charSelCol == 1 && P2charSelRow == 0) 
+{
+	draw_sprite_ext(sBeverly_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
+}
 shader_reset();
 	
-if P2charSelCol == 0 && P2charSelRow == 0 draw_sprite(sCharSel_NameRussel, 0, 118, 69);
-if P2charSelCol == 1 && P2charSelRow == 0 draw_sprite(sCharSel_NameBeverly, 0, 118, 69);
-
-
-
-
-if P1hasSelectedChar {
-	if !P1hasSelectedAlt draw_sprite(sCharSel_PaletteSel, 0, 12, 47);
-	else draw_sprite(sCharSel_CharReady, 0, 15, 46);
+if (P2charSelCol == 0 && P2charSelRow == 0)
+{
+	draw_sprite(sCharSel_NameRussel, 0, 118, 69);
 }
-if P2hasSelectedChar {
-	if !P2hasSelectedAlt draw_sprite(sCharSel_PaletteSel, 0, 116, 47);
-	else draw_sprite(sCharSel_CharReady, 0, 119, 46);
+
+if (P2charSelCol == 1 && P2charSelRow == 0) 
+{
+	draw_sprite(sCharSel_NameBeverly, 0, 118, 69);
 }
 
 
-if P1hasSelectedAlt && P2hasSelectedAlt {
+
+
+if (P1hasSelectedChar) 
+{
+	if (!P1hasSelectedAlt)
+	{
+		draw_sprite(sCharSel_PaletteSel, 0, 12, 47);
+	}
+	else 
+	{
+		draw_sprite(sCharSel_CharReady, 0, 15, 46);
+	}
+}
+if P2hasSelectedChar 
+{
+	if (!P2hasSelectedAlt)
+	{
+		draw_sprite(sCharSel_PaletteSel, 0, 116, 47);
+	}
+	else 
+	{
+	 	draw_sprite(sCharSel_CharReady, 0, 119, 46);
+	}
+}
+
+
+if (P1hasSelectedAlt && P2hasSelectedAlt)
+{
 	draw_sprite(sCharSel_ReadyToFight, RTF_currentFrame, 0, 0);
 }
 
 var pressStartID = layer_background_get_id("PressStart");
-if RTF_currentFrame == 4 layer_background_visible(pressStartID, 1);
-else layer_background_visible(pressStartID, 0);
+if (RTF_currentFrame == 4)
+{
+	layer_background_visible(pressStartID, 1);
+}
+else 
+{
+	layer_background_visible(pressStartID, 0);
+}

@@ -1,7 +1,8 @@
 /// @function                  CrouchingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function CrouchingAttackScript(moveToDo, onGround) {
+function CrouchingAttackScript(moveToDo, onGround) 
+{
 	sprite_index = moveToDo.spriteID;
 	grounded = onGround;
 	image_index = 0;
@@ -9,7 +10,8 @@ function CrouchingAttackScript(moveToDo, onGround) {
 	
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) {
+	if (animTimer > moveToDo.duration) 
+	{
 		state = eState.CROUCHING;
 		frameAdvantage = true;
 		hsp = 0;

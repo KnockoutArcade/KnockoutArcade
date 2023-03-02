@@ -1,7 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetPlayerButtons() {
-	if global.player1ControllerType == "KEYBOARD" {
+function SetPlayerButtons() 
+{
+	if (global.player1ControllerType == "KEYBOARD") 
+	{
 		global.player1Controls = {
 			buttonLeft : ord("A"),
 			buttonRight : ord("D"),
@@ -15,7 +17,9 @@ function SetPlayerButtons() {
 			buttonSuper : vk_rcontrol,
 			buttonRun : vk_lcontrol,
 		};
-	} else {
+	} 
+	else 
+	{
 		global.player1Controls = {
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
@@ -31,7 +35,8 @@ function SetPlayerButtons() {
 		};
 	}
 	
-	if global.player2ControllerType == "KEYBOARD" {
+	if (global.player2ControllerType == "KEYBOARD")
+	{
 		global.player2Controls = {
 			buttonLeft : vk_left,
 			buttonRight : vk_right,
@@ -45,7 +50,9 @@ function SetPlayerButtons() {
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
 		};
-	} else {
+	} 
+	else 
+	{
 		global.player2Controls = {
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
