@@ -4,6 +4,7 @@
 // Set the camera's target
 if (p1 != noone && p2 != noone)
 {
+	// Camera's target is the midpoint between both players
 	xTo = (p1.xHome + p2.xHome) * .5;
 }
 
