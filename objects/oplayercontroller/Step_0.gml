@@ -523,7 +523,8 @@ switch state
 		}
 		
 		// Handle Jumping And Crouching
-		if verticalMoveDir == 1 {
+		if verticalMoveDir == 1 
+		{
 			state = eState.JUMPSQUAT;
 			hsp = runSpeed * image_xscale;
 			// Is the player jumping forward?
