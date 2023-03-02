@@ -7,5 +7,5 @@ startTextTimer++;
 
 if (pressButton)
 {
-	room = rCharacterSelectScreen;
+	room = rMainMenu;
 }
