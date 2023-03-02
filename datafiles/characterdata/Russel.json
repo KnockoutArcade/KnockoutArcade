@@ -270,6 +270,7 @@
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 5,
       "SpriteName": "sRussel_Standing_Light",
+      "Duration": 7,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -321,7 +322,28 @@
           "ComboScaling": 2.0
         }
       ],
-      "CounterData": [],
+      "CounterData": [
+        {
+          "CounterHitLevel": 1,
+          "Group": 1,
+          "Damage": 20,
+          "MeterGain": 12.0,
+          "AttackHitStop": 30,
+          "AttackHitStun": 14,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 4.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "Launches": true,
+          "LaunchKnockbackVertical": -1.0,
+          "LaunchKnockbackHorizontal": 5.0,
+          "ComboScaling": 1.0
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "NumberOfFrames": 0,
@@ -361,6 +383,7 @@
       "UID": "c14a5529-c9ef-4e2e-806a-7f48a2c0aa9a",
       "MoveType": 0,
       "SpriteName": "sRussel_BackwardThrow",
+      "Duration": 0,
       "NumberOfFrames": 10,
       "FrameData": [
         {
@@ -522,6 +545,7 @@
       "UID": "75601a84-ef21-4269-834d-fda92d4ce626",
       "MoveType": 1,
       "SpriteName": "sRussel_ForwardThrow",
+      "Duration": 0,
       "NumberOfFrames": 9,
       "FrameData": [
         {
@@ -652,6 +676,7 @@
       "UID": "189e5d3a-d24c-4e85-8ab1-743575916594",
       "MoveType": 2,
       "SpriteName": "sRussel_Grab",
+      "Duration": 0,
       "NumberOfFrames": 5,
       "FrameData": [
         {
@@ -747,6 +772,7 @@
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
       "MoveType": 3,
       "SpriteName": "sRussel_SideSpecial",
+      "Duration": 0,
       "NumberOfFrames": 11,
       "FrameData": [
         {
@@ -903,6 +929,7 @@
       "UID": "15155b21-0122-46a6-9170-41408971b163",
       "MoveType": 4,
       "SpriteName": "sRussel_NSpecial",
+      "Duration": 0,
       "NumberOfFrames": 25,
       "FrameData": [
         {
@@ -1116,6 +1143,7 @@
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 6,
       "SpriteName": "sRussel_Standing_Light2",
+      "Duration": 0,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -1207,6 +1235,7 @@
       "UID": "303b54ea-442b-4669-9d47-ae3eac71217d",
       "MoveType": 7,
       "SpriteName": "sRussel_Standing_Light3",
+      "Duration": 0,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -1298,6 +1327,7 @@
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 8,
       "SpriteName": "sRussel_Standing_Medium",
+      "Duration": 0,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -1397,6 +1427,7 @@
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
       "MoveType": 9,
       "SpriteName": "sRussel_Standing_Heavy",
+      "Duration": 0,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -1500,6 +1531,7 @@
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 10,
       "SpriteName": "sRussel_Crouching_Light",
+      "Duration": 0,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -1587,6 +1619,7 @@
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 11,
       "SpriteName": "sRussel_Crouching_Medium",
+      "Duration": 0,
       "NumberOfFrames": 10,
       "FrameData": [
         {
@@ -1731,6 +1764,7 @@
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
       "MoveType": 12,
       "SpriteName": "sRussel_Crouching_Heavy",
+      "Duration": 0,
       "NumberOfFrames": 10,
       "FrameData": [
         {
@@ -1854,6 +1888,7 @@
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 13,
       "SpriteName": "sRussel_Jumping_Light",
+      "Duration": 0,
       "NumberOfFrames": 2,
       "FrameData": [
         {
@@ -1937,6 +1972,7 @@
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
       "MoveType": 14,
       "SpriteName": "sRussel_Jumping_Medium",
+      "Duration": 0,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -2036,6 +2072,7 @@
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
       "MoveType": 15,
       "SpriteName": "sRussel_Jumping_Heavy",
+      "Duration": 0,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -2134,6 +2171,6 @@
   ],
   "Version": "Ver0.9.4",
   "UID": "11f05296-cc2d-4ceb-95ad-f26e1d05e5c6",
-  "LastModified": "2023-02-28T20:12:52.5896943-05:00",
+  "LastModified": "2023-03-01T22:14:53.1695073-05:00",
   "LastModifiedBy": "johnk"
 }
