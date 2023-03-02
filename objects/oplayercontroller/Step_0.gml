@@ -466,7 +466,7 @@ switch state
 			state = eState.JUMPSQUAT;
 			hsp = walkSpeed * movedir;
 			// Is the player jumping forward?
-			isJumpingForward = (moveidr == image_xscale);
+			isJumpingForward = (movedir == image_xscale);
 			
 			// handle Super Jumping
 			if (storedSuperJump)
