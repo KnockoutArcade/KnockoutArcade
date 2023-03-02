@@ -1,13 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (p1 != noone && p2 != noone && p1.state != eState.HITSTOP && p2.state != eState.HITSTOP)
+// Set the camera's target
+if (p1 != noone && p2 != noone)
 {
-	x = (p1.x + p2.x) * .5;
+	xTo = (p1.xHome + p2.xHome) * .5;
 }
+
+// Move the camera
 if (room != rStageArcade)
 {
+	x = lerp(xTo, x, .5);
+	
 	camera_set_view_pos(view_camera[0], clamp(x-(camWidth*.5), 0, camWidth), 0);
+
+	
+	// Clamp the camera to the room's bounderies
 	x = clamp(x, camWidth*.5, camWidth*1.5);
 }
 else 
