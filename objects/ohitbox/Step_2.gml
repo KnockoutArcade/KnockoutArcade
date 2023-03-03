@@ -164,7 +164,7 @@ if (collisionCheck)
 				if (collision_list[| i].owner.inAttackState)
 				{
 					// Determine if we should display the coutner hit text on the p1 or p2 side
-					var isP2 = (owner.playerID == 2) ? true : false; 
+					var isP2 = (owner.playerID == 2);
 					
 					ProcessHit(counterHitProperty, collision_list[| i]);
 					
