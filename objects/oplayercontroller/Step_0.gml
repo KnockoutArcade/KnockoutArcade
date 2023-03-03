@@ -994,6 +994,8 @@ switch state
 		{
 			state = eState.IDLE;
 			frameAdvantage = true;
+			canTurnAround = true;
+			inAttackState = false;
 			sprite_index = CharacterSprites.idle_Sprite;
 			x += selectedCharacter.BackwardThrow.opponentPositionData.throwOffset * image_xscale;
 		}

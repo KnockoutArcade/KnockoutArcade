@@ -63,7 +63,9 @@ if (global.gameTimer == 0)
 		{
 			global.p2Rounds++;
 		}
-		var particle = instance_create_layer(0, 0, "KO_Text", oParticles);
+		
+		// Display Time's up text
+		var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 		with (particle) 
 		{
 		sprite_index = sTimeUp;
