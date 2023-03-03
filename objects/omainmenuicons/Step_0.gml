@@ -1,25 +1,26 @@
-var up, down, accept;
+var P1menuUp = global.p1ButtonUp;
+var P1menuDown = global.p1ButtonDown;
+var P1menuConfirm = global.p1ButtonLight;
 
-up = keyboard_check_pressed(ord("W")) or gamepad_button_check_pressed(0, gp_padu);
-down = keyboard_check_pressed(ord("S")) or gamepad_button_check_pressed(0, gp_padd);
-accept = keyboard_check_pressed(ord("J"))or gamepad_button_check_pressed(0, gp_face1);
+menuCooldown--;
 
-if (up)
+if (P1menuUp && menuCooldown < 1)
 {
 	image_index--;
+	menuCooldown = 7;
 }
 
-if (down)
+if (P1menuDown)
 {
 	image_index++;
 }
 
-if (image_index == 0 and accept)
+if (image_index == 0 and P1menuConfirm)
 {
 	room_goto(rRusselMap);
 }
 
-if (image_index == 1 and accept)
+if (image_index == 1 and P1menuConfirm)
 {
 	room_goto(rCharacterSelectScreen);
 }
