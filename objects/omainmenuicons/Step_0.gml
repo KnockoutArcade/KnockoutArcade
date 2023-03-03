@@ -10,9 +10,10 @@ if (P1menuUp && menuCooldown < 1)
 	menuCooldown = 7;
 }
 
-if (P1menuDown)
+if (P1menuDown == -1 && menuCooldown < 1)
 {
 	image_index++;
+	menuCooldown = 7;
 }
 
 if (image_index == 0 and P1menuConfirm)
