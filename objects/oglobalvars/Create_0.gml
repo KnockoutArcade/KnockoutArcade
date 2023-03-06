@@ -2151,12 +2151,12 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingLight : {
-		duration : 999,
-		spriteID : sRussel_Jumping_Light,
-		numOfWindows : 2,
+		duration : 22,
+		spriteID : sBeverly_JumpLight_Mockup_strip3,
+		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[4 , 1], [8, 2]],
+		window : [[4 , 1], [6, 2], [8, 3]],
 		
 		numOfHitboxes : 1,
 		
