@@ -1370,99 +1370,105 @@ if (superMeter < 0)
 	superMeter = 0;
 }
 
-// Combo Counter
-if (opponent.cancelCombo) 
-{
-	startCombo = false;
-	opponent.cancelCombo = false;
-	
-	if (combo > 1 && comboCounterID != noone)
-	{
-		comboCounterID.endCombo = true;
-	}
-	
-	combo = 0;
-	comboScaling = 0;
-	comboCounterID = noone;
-}
 
-if (startCombo)
+if (opponent != noone)
 {
-	if (playerID == 1)
+	// Combo Counter
+	if (opponent.cancelCombo) 
 	{
-		comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
+		startCombo = false;
+		opponent.cancelCombo = false;
 	
-		with (comboCounterID) 
+		if (combo > 1 && comboCounterID != noone)
 		{
-			owner = other.id;
-			screenSide = 1;
-			ui_xOffset = -20;
-			ui_yOffset = 48;
+			comboCounterID.endCombo = true;
 		}
-	} 
-	else 
-	{
-		comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
-		with (comboCounterID) 
-		{
-			owner = other.id;
-			screenSide = -1;
-			ui_xOffset = 175;
-			ui_yOffset = 48;
-		}
+	
+		combo = 0;
+		comboScaling = 0;
+		comboCounterID = noone;
 	}
-	startCombo = false;
-}
 
+	if (startCombo)
+	{
+		if (playerID == 1)
+		{
+			comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
+	
+			with (comboCounterID) 
+			{
+				owner = other.id;
+				screenSide = 1;
+				ui_xOffset = -20;
+				ui_yOffset = 48;
+			}
+		} 
+		else 
+		{
+			comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
+			with (comboCounterID) 
+			{
+				owner = other.id;
+				screenSide = -1;
+				ui_xOffset = 175;
+				ui_yOffset = 48;
+			}
+		}
+		startCombo = false;
+	}
+}
 
 
 
 // Collision
-if state != eState.HITSTOP && opponent.state != eState.HITSTOP 
+if (state != eState.HITSTOP)
 {
 	// Collisions With Players
-	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+	if (opponent != noone)
 	{
+		if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+		{
 	
-	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
-	// If the opponent is next to a wall, also don't move us
-		if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
-		{
-			// If we are both moving
-			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-		} 
-		else // if one person is moving and the other isn't
-		{
-			with (opponent)
+		// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
+		// If the opponent is next to a wall, also don't move us
+			if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
 			{
-				// Wall Detection
-				if (place_meeting(x+(other.hsp), y, oWall)) 
+				// If we are both moving
+				environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
+			} 
+			else // if one person is moving and the other isn't
+			{
+				with (opponent)
 				{
-					other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
-				} 
-				else 
-				{
-					
-					if (hsp == 0)
+					// Wall Detection
+					if (place_meeting(x+(other.hsp), y, oWall)) 
 					{
-						other.environmentDisplacement = -other.hsp/2;
-					}
-					else if (sign(hsp) != -image_xscale)
+						other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
+					} 
+					else 
 					{
-						other.environmentDisplacement = hsp/2;
-					}
 					
+						if (hsp == 0)
+						{
+							other.environmentDisplacement = -other.hsp/2;
+						}
+						else if (sign(hsp) != -image_xscale)
+						{
+							other.environmentDisplacement = hsp/2;
+						}
+					
+					}
 				}
-			}
 			
-		}
+			}
 		
-		// if we are still colliding with the opponent, slide us out
-		if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
-		{
-			environmentDisplacement += sign(x - opponent.x);
-		}
+			// if we are still colliding with the opponent, slide us out
+			if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
+			{
+				environmentDisplacement += sign(x - opponent.x);
+			}
 		
+		}
 	}
 	
 	
@@ -1516,13 +1522,20 @@ floor(y);
 // Change the player's direction
 if (!inAttackState && canTurnAround)
 {
-	if (x < opponent.x)
+	if (opponent != noone)
 	{
-		image_xscale = 1;
+		if (x < opponent.x)
+		{
+			image_xscale = 1;
+		}
+		else if (x != opponent.x)
+		{
+			image_xscale = -1;
+		}
 	}
-	else if (x != opponent.x)
+	else if (hsp != 0)
 	{
-		image_xscale = -1;
+		image_xscale = sign(hsp);
 	}
 }
 }

@@ -55,6 +55,7 @@
     {"id":{"name":"sBeverly_StandLight2_MOCKUP_strip3","path":"sprites/sBeverly_StandLight2_MOCKUP_strip3/sBeverly_StandLight2_MOCKUP_strip3.yy",},"order":9,},
     {"id":{"name":"oComboCounter","path":"objects/oComboCounter/oComboCounter.yy",},"order":0,},
     {"id":{"name":"LateCancelIntoMove","path":"scripts/LateCancelIntoMove/LateCancelIntoMove.yy",},"order":8,},
+    {"id":{"name":"rPlatformingTestStage","path":"rooms/rPlatformingTestStage/rPlatformingTestStage.yy",},"order":10,},
     {"id":{"name":"sRussel_Jumping_Medium","path":"sprites/sRussel_Jumping_Medium/sRussel_Jumping_Medium.yy",},"order":16,},
     {"id":{"name":"oSuperMeterUI","path":"objects/oSuperMeterUI/oSuperMeterUI.yy",},"order":3,},
     {"id":{"name":"rBeverlyStage","path":"rooms/rBeverlyStage/rBeverlyStage.yy",},"order":0,},
@@ -179,6 +180,7 @@
     {"roomId":{"name":"rBeverlyStage","path":"rooms/rBeverlyStage/rBeverlyStage.yy",},},
     {"roomId":{"name":"rJayStage","path":"rooms/rJayStage/rJayStage.yy",},},
     {"roomId":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},},
+    {"roomId":{"name":"rPlatformingTestStage","path":"rooms/rPlatformingTestStage/rPlatformingTestStage.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},

@@ -285,6 +285,7 @@ if (RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4)
 // Advance to match
 if (P1hasSelectedAlt && P2hasSelectedAlt && P1menuConfirm && !P1menuAltSelBuffer)
 {
+	global.gameMode = GAMEMODE.VERSUS;
 	if (keyboard_check(vk_enter))
 	{
 		room = rStageArcade;

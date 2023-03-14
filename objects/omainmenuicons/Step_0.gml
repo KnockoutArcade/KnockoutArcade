@@ -25,3 +25,14 @@ if (image_index == 1 and P1menuConfirm)
 {
 	room_goto(rCharacterSelectScreen);
 }
+
+// Testing out Single-Player Mechanics. This takes you to the test level
+if (image_index == 2 and P1menuConfirm)
+{
+	room_goto(rPlatformingTestStage);
+	
+	global.gameMode = GAMEMODE.PLATFORMING;
+	
+	global.p1SelectedCharacter = oRussel;
+	global.p1PaletteID = 0;
+}
