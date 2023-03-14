@@ -1,5 +1,5 @@
-moveSpd = 1.5;
-xspd = 0; 
-yspd = 0;
+moveSpeed = 1.5;
+xSpeed = 0; 
+ySpeed = 0;
 
 

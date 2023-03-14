@@ -3,12 +3,14 @@ moveDown = global.p1ButtonDown
 moveLeft = global.p1ButtonLeft
 moveRight = global.p1ButtonRight
 
-moveDir = (moveLeft + moveRight) * moveSpd;
-verticalMoveDir = (-moveUp - moveDown) * moveSpd;
+moveDirection = (moveLeft + moveRight) * moveSpeed;
+verticalMoveDirection = (-moveUp - moveDown) * moveSpeed;
 
-xspd = moveDir;
-yspd =  verticalMoveDir;
+xSpeed = moveDirection;
+ySpeed =  verticalMoveDirection;
 
-x += xspd;
-y += yspd;
+x += xSpeed;
+y += ySpeed;
 
+x = clamp(x, 10, room_width-10);
+y = clamp(y, 10, room_height-10);

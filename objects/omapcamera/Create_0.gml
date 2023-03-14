@@ -1,10 +1,10 @@
-camWidth = 160;
-camHeight = 120;
+cameraWidth = 160;
+cameraHeight = 120;
 
-follow = oTestPlayer;
+followTarget = oTestPlayer;
 
-x = follow.x;
-y = follow.y;
+x = followTarget.x;
+y = followTarget.y;
 
 
 
