@@ -138,7 +138,11 @@ canTurnAround = true;
 // Intro
 hasPerformedIntro = true;
 
+//This variable stores who we are up against in a 1v1 fight
 opponent = noone;
+
+//This variable stores who we are currently attacking
+target = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);

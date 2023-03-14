@@ -906,7 +906,11 @@ switch state
 			{
 				state = eState.FORWARD_THROW;
 				animTimer = 0;
-				ds_list_clear(opponent.hitByGroup);
+				
+				if (target != noone)
+				{
+					ds_list_clear(target.hitByGroup);
+				}
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -921,7 +925,10 @@ switch state
 			{
 				state = eState.BACKWARD_THROW;
 				animTimer = 0;
-				ds_list_clear(opponent.hitByGroup);
+				if (target != noone)
+				{
+					ds_list_clear(target.hitByGroup);
+				}
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -1371,13 +1378,13 @@ if (superMeter < 0)
 }
 
 
-if (opponent != noone)
+if (target != noone)
 {
 	// Combo Counter
-	if (opponent.cancelCombo) 
+	if (target.cancelCombo) 
 	{
 		startCombo = false;
-		opponent.cancelCombo = false;
+		target.cancelCombo = false;
 	
 		if (combo > 1 && comboCounterID != noone)
 		{
