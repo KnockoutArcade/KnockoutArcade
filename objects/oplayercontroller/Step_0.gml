@@ -558,7 +558,6 @@ switch state
 		else if (verticalMoveDir == -1)
 		{
 			state = eState.CROUCHING;
-			hsp = 0;
 		}
 		
 		// Hitstun
