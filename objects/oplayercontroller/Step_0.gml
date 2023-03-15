@@ -150,7 +150,7 @@ if (state == eState.IDLE)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton)
+	else if (movedir == -image_xscale && runButton && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -191,7 +191,7 @@ if (state == eState.IDLE)
 	
 	PressAttackButton(attack);
 	
-	HandleWalkingOffPlatforms(hsp);
+	HandleWalkingOffPlatforms();
 }
 
 
@@ -237,7 +237,7 @@ if (state == eState.CROUCHING)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -270,7 +270,7 @@ if (state == eState.CROUCHING)
 	
 	PressAttackButton(attack);
 	
-	HandleWalkingOffPlatforms(hsp);
+	HandleWalkingOffPlatforms();
 }
 
 // Animation
@@ -451,7 +451,7 @@ switch state
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton)
+		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -498,7 +498,7 @@ switch state
 		
 		PressAttackButton(attack);
 		
-		HandleWalkingOffPlatforms(walkSpeed);
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
@@ -570,7 +570,7 @@ switch state
 		
 		PressAttackButton(attack);
 		
-		HandleWalkingOffPlatforms(runSpeed);
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
@@ -606,6 +606,9 @@ switch state
 			hsp = 0;
 			invincible = false;
 		}
+		
+
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
