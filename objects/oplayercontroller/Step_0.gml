@@ -537,9 +537,8 @@ switch state
 		if verticalMoveDir == 1 
 		{
 			state = eState.JUMPSQUAT;
-			hsp = runSpeed * image_xscale;
 			// Is the player jumping forward?
-			if (movedir == image_xscale) 
+			if (movedir != -image_xscale) 
 			{
 				isJumpingForward = true;
 			}
@@ -716,7 +715,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -728,7 +727,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_2: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -740,13 +739,13 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_3:
 	{
-		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false);
 	}
 	break;
 	
 	case eState.STANDING_MEDIUM_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false);
 		
 		// Cancelable into heavy
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -759,7 +758,7 @@ switch state
 	
 	case eState.STANDING_HEAVY_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -861,7 +860,7 @@ switch state
 	{
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);	
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale, true);	
 		} 
 		else 
 		{
@@ -876,7 +875,7 @@ switch state
 		if (grounded)
 		{
 			
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true);
 			
 		} 
 		else 
