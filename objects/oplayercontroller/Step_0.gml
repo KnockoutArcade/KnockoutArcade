@@ -190,6 +190,8 @@ if (state == eState.IDLE)
 	frameAdvantage = false;
 	
 	PressAttackButton(attack);
+	
+	HandleWalkingOffPlatforms(hsp);
 }
 
 
@@ -267,6 +269,8 @@ if (state == eState.CROUCHING)
 	}
 	
 	PressAttackButton(attack);
+	
+	HandleWalkingOffPlatforms(hsp);
 }
 
 // Animation
@@ -459,8 +463,6 @@ switch state
 		hsp = walkSpeed * movedir;
 		
 		vsp += fallSpeed;
-		
-		
 
 		if (movedir == 0) 
 		{
@@ -496,17 +498,7 @@ switch state
 		
 		PressAttackButton(attack);
 		
-		//Handle walking off of platforms
-		buffer = place_meeting(x, y+vsp, oWall); // This is just to display debug info. Will be removed later
-		if !(place_meeting(x, y+vsp, oWall))
-		{
-			state = eState.JUMPING;
-			grounded = false;
-			
-			hsp = walkSpeed * movedir;
-			jumpHsp = hsp;
-			image_index = 2;
-		}
+		HandleWalkingOffPlatforms(walkSpeed);
 	}
 	break;
 	
@@ -577,6 +569,8 @@ switch state
 		}
 		
 		PressAttackButton(attack);
+		
+		HandleWalkingOffPlatforms(runSpeed);
 	}
 	break;
 	
@@ -1523,11 +1517,7 @@ if (state != eState.HITSTOP)
 		vsp = 0;
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
 		{
-			if !(state == eState.WALKING)
-			{
-				state = eState.IDLE;
-			}
-			
+			state = eState.IDLE;
 			grounded = true;
 			frameAdvantage = true;
 			inAttackState = false;
