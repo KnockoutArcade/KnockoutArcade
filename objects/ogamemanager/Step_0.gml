@@ -119,7 +119,17 @@ switch global.gameMode
 	
 	case GAMEMODE.PLATFORMING:
 	{
-		global.hasCompletedIntros = true;
+		// handle intros
+		if (p1.hasPerformedIntro && !global.hasCompletedIntros) 
+		{
+			global.hasCompletedIntros = true;
+			var particle = instance_create_layer(0, 0, "Particles", oParticles);
+			with (particle) 
+			{
+				sprite_index = sRound1Start;
+				lifetime = 110;
+			}
+		}
 		
 		// Frame-by-frame
 		if (keyboard_check_pressed(vk_tab)) or (global.frameskip < 0)
