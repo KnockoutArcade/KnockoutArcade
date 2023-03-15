@@ -185,6 +185,8 @@ if (state == eState.IDLE)
 		state = eState.CROUCHING;
 	}
 	
+	vsp += fallSpeed;
+	
 	frameAdvantage = false;
 	
 	PressAttackButton(attack);
@@ -1490,12 +1492,17 @@ if (state != eState.HITSTOP)
 	
 	if (place_meeting(x, y+vsp+fallSpeed, oWall))
 	{
-		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) y += sign(vsp);
+		//Determine wether we are rising into a cieling or falling onto a floor.
+		var fallDirection = sign(vsp);
+		
+		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) 
+		{
+			y += sign(vsp);
+		}
 		
 		isJumpingForward = false;
-		jumpHsp = 0;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;

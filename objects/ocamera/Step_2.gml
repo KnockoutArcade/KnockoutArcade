@@ -37,16 +37,16 @@ switch global.gameMode
 		if (p1 != noone)
 		{
 			// Camera's target is the midpoint between both players
-			xCameraDestination = (p1.xHome) + p1.hsp;
+			xCameraDestination = (p1.xHome) + (p1.hsp * 2);
 		}
 		
 		x = lerp(xCameraDestination, x, cameraSpeed);
 	
-		camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width), 0);
+		camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
 
 	
 		// Clamp the camera to the room's bounderies
-		x = clamp(x, cameraWidth*.5, room_width*1.5);
+		x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
 	}
 	break;
 }
