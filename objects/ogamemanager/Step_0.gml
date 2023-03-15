@@ -121,7 +121,27 @@ switch global.gameMode
 	{
 		global.hasCompletedIntros = true;
 		
-		global.game_paused = false;
+		// Frame-by-frame
+		if (keyboard_check_pressed(vk_tab)) or (global.frameskip < 0)
+		{
+			if (global.game_paused = false)
+			{
+				global.game_paused = true;
+				global.frameskip = 0;
+			}
+			else global.game_paused = false;
+		}
+
+		if (global.game_paused) and (keyboard_check_pressed(ord("O")))
+		{
+			global.frameskip = 1;
+		}
+
+		if (global.frameskip > 0)
+		{
+			global.game_paused = false;
+			global.frameskip = -1;
+		}
 	}
 	break;
 }

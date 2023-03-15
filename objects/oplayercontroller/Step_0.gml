@@ -242,6 +242,8 @@ if (state == eState.CROUCHING)
 		image_index = 0;
 	}
 	
+	vsp += fallSpeed;
+	
 	if (verticalMoveDir == 1) 
 	{
 		state = eState.JUMPSQUAT;
@@ -455,7 +457,10 @@ switch state
 		image_speed = 1;
 		
 		hsp = walkSpeed * movedir;
-
+		
+		vsp += fallSpeed;
+		
+		
 
 		if (movedir == 0) 
 		{
@@ -490,6 +495,18 @@ switch state
 		}
 		
 		PressAttackButton(attack);
+		
+		//Handle walking off of platforms
+		buffer = place_meeting(x, y+vsp, oWall); // This is just to display debug info. Will be removed later
+		if !(place_meeting(x, y+vsp, oWall))
+		{
+			state = eState.JUMPING;
+			grounded = false;
+			
+			hsp = walkSpeed * movedir;
+			jumpHsp = hsp;
+			image_index = 2;
+		}
 	}
 	break;
 	
@@ -517,7 +534,7 @@ switch state
 		image_speed = 1;
 		
 		hsp = runSpeed * image_xscale;
-
+		vsp += fallSpeed;
 
 		if (!runButton) 
 		{
@@ -572,6 +589,8 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		
+		vsp += fallSpeed;
 		
 		sprite_index = CharacterSprites.runBackward_Sprite;
 
@@ -1504,7 +1523,11 @@ if (state != eState.HITSTOP)
 		vsp = 0;
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
 		{
-			state = eState.IDLE;
+			if !(state == eState.WALKING)
+			{
+				state = eState.IDLE;
+			}
+			
 			grounded = true;
 			frameAdvantage = true;
 			inAttackState = false;

@@ -36,7 +36,7 @@ superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 // A double jump is when the player jumps again in the air
 
-canDoubleJump = false; // Whether this character can Double Jump or not
+canDoubleJump = true; // Whether this character can Double Jump or not
 hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
 heldUpFrames = 0; // How long the player has held UP for
 
