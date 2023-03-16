@@ -21,8 +21,8 @@
     "path": "texturegroups/Default",
   },
   "swatchColours": null,
-  "gridX": 0,
-  "gridY": 0,
+  "gridX": 15,
+  "gridY": 15,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"d089e74d-2ed3-436d-ba22-af4851fe85c9","path":"sprites/sShadow/sShadow.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"d089e74d-2ed3-436d-ba22-af4851fe85c9","path":"sprites/sShadow/sShadow.yy",},"LayerId":{"name":"8cf657cb-f75a-4632-8f8c-916c37b955e0","path":"sprites/sShadow/sShadow.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Shadows",
+    "path": "folders/Sprites/Shadows.yy",
   },
   "resourceVersion": "1.0",
   "name": "sShadow",

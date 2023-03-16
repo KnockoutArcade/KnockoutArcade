@@ -3,7 +3,28 @@
 
 var tempDepth = depth;
 depth = -2;
-draw_sprite(sShadow, 0, x, 104);
+
+// Find the closest floor within 100 px of our y height
+var foundFloor = false;
+for (var i = 0; i < 100; i++;)
+{
+	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor)
+	{
+		if (i < 25)
+		{
+			draw_sprite(sShadow, 0, x, floor(y)+i);
+		}
+		else if (i < 50)
+		{
+			draw_sprite(sSmallShadow, 0, x, floor(y)+i);
+		}
+		else
+		{
+			draw_sprite(sEvenSmallerShadow, 0, x, floor(y)+i);
+		}
+		foundFloor = true;
+	}
+}
 
 depth = tempDepth;
 

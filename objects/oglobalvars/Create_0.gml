@@ -2942,3 +2942,5 @@ global.p2PaletteID = 1;
 
 global.p1SelectedCharacter = 0;
 global.p2SelectedCharacter = 0;
+
+global.gameMode = 0;

@@ -16,12 +16,23 @@ if (P1menuDown == -1 && menuCooldown < 1)
 	menuCooldown = 7;
 }
 
-if (image_index == 0 and P1menuConfirm)
+if (image_index == 0 && P1menuConfirm)
 {
 	room_goto(rRusselMap);
 }
 
-if (image_index == 1 and P1menuConfirm)
+if (image_index == 1 && P1menuConfirm)
 {
 	room_goto(rCharacterSelectScreen);
+}
+
+// Testing out Single-Player Mechanics. This takes you to the test level
+if (image_index == 2 && P1menuConfirm)
+{
+	room_goto(rPlatformingTestStage);
+	
+	global.gameMode = GAMEMODE.PLATFORMING;
+	
+	global.p1SelectedCharacter = oRussel;
+	global.p1PaletteID = 0;
 }

@@ -46,6 +46,9 @@ if (collisionCheck)
 		var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.group[hitboxID])
 		if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 		{
+			//Set who the player is currently targeting
+			owner.target = collision_list[| i].owner.id;
+			
 			// Throw Teching
 			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
 			{
@@ -159,6 +162,7 @@ if (collisionCheck)
 				collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
 				collision_list[| i].owner.state = eState.HITSTOP; // Set the victim's state to hitstop
 				collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
+				
 				
 				// Properties on Counter Hit
 				if (collision_list[| i].owner.inAttackState)

@@ -150,7 +150,7 @@ if (state == eState.IDLE)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton)
+	else if (movedir == -image_xscale && runButton && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -185,9 +185,13 @@ if (state == eState.IDLE)
 		state = eState.CROUCHING;
 	}
 	
+	vsp += fallSpeed;
+	
 	frameAdvantage = false;
 	
 	PressAttackButton(attack);
+	
+	HandleWalkingOffPlatforms();
 }
 
 
@@ -233,12 +237,14 @@ if (state == eState.CROUCHING)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
+	
+	vsp += fallSpeed;
 	
 	if (verticalMoveDir == 1) 
 	{
@@ -263,6 +269,8 @@ if (state == eState.CROUCHING)
 	}
 	
 	PressAttackButton(attack);
+	
+	HandleWalkingOffPlatforms();
 }
 
 // Animation
@@ -443,7 +451,7 @@ switch state
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton)
+		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -453,7 +461,8 @@ switch state
 		image_speed = 1;
 		
 		hsp = walkSpeed * movedir;
-
+		
+		vsp += fallSpeed;
 
 		if (movedir == 0) 
 		{
@@ -488,6 +497,8 @@ switch state
 		}
 		
 		PressAttackButton(attack);
+		
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
@@ -515,7 +526,7 @@ switch state
 		image_speed = 1;
 		
 		hsp = runSpeed * image_xscale;
-
+		vsp += fallSpeed;
 
 		if (!runButton) 
 		{
@@ -526,9 +537,8 @@ switch state
 		if verticalMoveDir == 1 
 		{
 			state = eState.JUMPSQUAT;
-			hsp = runSpeed * image_xscale;
 			// Is the player jumping forward?
-			if (movedir == image_xscale) 
+			if (movedir != -image_xscale) 
 			{
 				isJumpingForward = true;
 			}
@@ -548,7 +558,6 @@ switch state
 		else if (verticalMoveDir == -1)
 		{
 			state = eState.CROUCHING;
-			hsp = 0;
 		}
 		
 		// Hitstun
@@ -558,6 +567,8 @@ switch state
 		}
 		
 		PressAttackButton(attack);
+		
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
@@ -570,6 +581,8 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		
+		vsp += fallSpeed;
 		
 		sprite_index = CharacterSprites.runBackward_Sprite;
 
@@ -591,6 +604,9 @@ switch state
 			hsp = 0;
 			invincible = false;
 		}
+		
+
+		HandleWalkingOffPlatforms();
 	}
 	break;
 	
@@ -698,7 +714,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -710,7 +726,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_2: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false);
 		
 		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -722,13 +738,13 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_3:
 	{
-		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false);
 	}
 	break;
 	
 	case eState.STANDING_MEDIUM_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false);
 		
 		// Cancelable into heavy
 		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
@@ -741,7 +757,7 @@ switch state
 	
 	case eState.STANDING_HEAVY_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false);
 		
 		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL];
 		if (cancelable && global.hitstop < 1)
@@ -843,7 +859,7 @@ switch state
 	{
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale);	
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.airMovementData.gravityScale, selectedCharacter.NeutralSpecial.airMovementData.fallScale, true);	
 		} 
 		else 
 		{
@@ -858,7 +874,7 @@ switch state
 		if (grounded)
 		{
 			
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true);
 			
 		} 
 		else 
@@ -906,7 +922,11 @@ switch state
 			{
 				state = eState.FORWARD_THROW;
 				animTimer = 0;
-				ds_list_clear(opponent.hitByGroup);
+				
+				if (target != noone)
+				{
+					ds_list_clear(target.hitByGroup);
+				}
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -921,7 +941,10 @@ switch state
 			{
 				state = eState.BACKWARD_THROW;
 				animTimer = 0;
-				ds_list_clear(opponent.hitByGroup);
+				if (target != noone)
+				{
+					ds_list_clear(target.hitByGroup);
+				}
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -1370,106 +1393,115 @@ if (superMeter < 0)
 	superMeter = 0;
 }
 
-// Combo Counter
-if (opponent.cancelCombo) 
-{
-	startCombo = false;
-	opponent.cancelCombo = false;
-	
-	if (combo > 1 && comboCounterID != noone)
-	{
-		comboCounterID.endCombo = true;
-	}
-	
-	combo = 0;
-	comboScaling = 0;
-	comboCounterID = noone;
-}
 
-if (startCombo)
+if (target != noone)
 {
-	if (playerID == 1)
+	// Combo Counter
+	if (target.cancelCombo) 
 	{
-		comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
+		startCombo = false;
+		target.cancelCombo = false;
 	
-		with (comboCounterID) 
+		if (combo > 1 && comboCounterID != noone)
 		{
-			owner = other.id;
-			screenSide = 1;
-			ui_xOffset = -20;
-			ui_yOffset = 48;
+			comboCounterID.endCombo = true;
 		}
-	} 
-	else 
-	{
-		comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
-		with (comboCounterID) 
-		{
-			owner = other.id;
-			screenSide = -1;
-			ui_xOffset = 175;
-			ui_yOffset = 48;
-		}
+	
+		combo = 0;
+		comboScaling = 0;
+		comboCounterID = noone;
 	}
-	startCombo = false;
-}
 
+	if (startCombo)
+	{
+		if (playerID == 1)
+		{
+			comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
+	
+			with (comboCounterID) 
+			{
+				owner = other.id;
+				screenSide = 1;
+				ui_xOffset = -20;
+				ui_yOffset = 48;
+			}
+		} 
+		else 
+		{
+			comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
+			with (comboCounterID) 
+			{
+				owner = other.id;
+				screenSide = -1;
+				ui_xOffset = 175;
+				ui_yOffset = 48;
+			}
+		}
+		startCombo = false;
+	}
+}
 
 
 
 // Collision
-if state != eState.HITSTOP && opponent.state != eState.HITSTOP 
+if (state != eState.HITSTOP)
 {
 	// Collisions With Players
-	if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+	if (opponent != noone)
 	{
+		if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+		{
 	
-	// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
-	// If the opponent is next to a wall, also don't move us
-		if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
-		{
-			// If we are both moving
-			environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-		} 
-		else // if one person is moving and the other isn't
-		{
-			with (opponent)
+		// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
+		// If the opponent is next to a wall, also don't move us
+			if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
 			{
-				// Wall Detection
-				if (place_meeting(x+(other.hsp), y, oWall)) 
+				// If we are both moving
+				environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
+			} 
+			else // if one person is moving and the other isn't
+			{
+				with (opponent)
 				{
-					other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
-				} 
-				else 
-				{
-					
-					if (hsp == 0)
+					// Wall Detection
+					if (place_meeting(x+(other.hsp), y, oWall)) 
 					{
-						other.environmentDisplacement = -other.hsp/2;
-					}
-					else if (sign(hsp) != -image_xscale)
+						other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
+					} 
+					else 
 					{
-						other.environmentDisplacement = hsp/2;
-					}
 					
+						if (hsp == 0)
+						{
+							other.environmentDisplacement = -other.hsp/2;
+						}
+						else if (sign(hsp) != -image_xscale)
+						{
+							other.environmentDisplacement = hsp/2;
+						}
+					
+					}
 				}
-			}
 			
-		}
+			}
 		
-		// if we are still colliding with the opponent, slide us out
-		if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
-		{
-			environmentDisplacement += sign(x - opponent.x);
-		}
+			// if we are still colliding with the opponent, slide us out
+			if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
+			{
+				environmentDisplacement += sign(x - opponent.x);
+			}
 		
+		}
 	}
 	
 	
 	// Collisions With Walls
 	if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 	{
-		while !place_meeting(x+sign(hsp+environmentDisplacement), y, oWall) x += sign(hsp+environmentDisplacement);
+		while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
+		{
+			x += sign(hsp+environmentDisplacement);
+		}
 		//floor(x);
 		hsp = 0;
 		environmentDisplacement = 0;
@@ -1477,12 +1509,17 @@ if state != eState.HITSTOP && opponent.state != eState.HITSTOP
 	
 	if (place_meeting(x, y+vsp+fallSpeed, oWall))
 	{
-		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) y += sign(vsp);
+		//Determine wether we are rising into a cieling or falling onto a floor.
+		var fallDirection = sign(vsp);
+		
+		while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
+		{
+			y += sign(vsp);
+		}
 		
 		isJumpingForward = false;
-		jumpHsp = 0;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -1516,13 +1553,20 @@ floor(y);
 // Change the player's direction
 if (!inAttackState && canTurnAround)
 {
-	if (x < opponent.x)
+	if (opponent != noone)
 	{
-		image_xscale = 1;
+		if (x < opponent.x)
+		{
+			image_xscale = 1;
+		}
+		else if (x != opponent.x)
+		{
+			image_xscale = -1;
+		}
 	}
-	else if (x != opponent.x)
+	else if (hsp != 0)
 	{
-		image_xscale = -1;
+		image_xscale = sign(hsp);
 	}
 }
 }
