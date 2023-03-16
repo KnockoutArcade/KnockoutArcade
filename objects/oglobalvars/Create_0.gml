@@ -2151,12 +2151,12 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingLight : {
-		duration : 22,
+		duration : 10,
 		spriteID : sBeverly_JumpLight_Mockup_strip3,
 		numOfWindows : 3,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[4 , 1], [6, 2], [8, 3]],
+		window : [[4 , 0], [6, 1], [8, 2]],
 		
 		numOfHitboxes : 1,
 		
@@ -2237,16 +2237,16 @@ global.stBeverlyMoves = {
 	
 	JumpingMedium : {
 		duration : 27,
-		spriteID : sRussel_Jumping_Medium,
+		spriteID : sBeverly_JumpMedium_Mockup_strip6,
 		numOfWindows : 6,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[4 , 1], [8, 2], [12, 3], [15, 4], [18, 5], [21, 6]],
+		window : [[4 , 1], [6, 2], [9, 3], [15, 4], [18, 5], [21, 6]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [8],
+			start : [9],
 			lifetime : [6],
 			attackWidth : [32],
 			attackHeight : [12],
@@ -2321,70 +2321,70 @@ global.stBeverlyMoves = {
 	},
 	
 	JumpingHeavy : {
-		duration : 27,
-		spriteID : sRussel_Jumping_Heavy,
+		duration : 30,
+		spriteID : sBeverly_JumpHeavy_Mockup_strip6,
 		numOfWindows : 6,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[6 , 1], [10, 2], [12, 3], [14, 4], [18 , 5], [22 , 6]],
+		window : [[6 , 1], [13, 2], [15, 3], [18, 4], [21 , 5], [25 , 6]],
 		
-		numOfHitboxes : 1,
+		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [12],
-			lifetime : [3],
-			attackWidth : [15],
-			attackHeight : [10],
-			widthOffset : [0],
-			heightOfset : [-10],
-			group : [1],
+			start : [13,21],
+			lifetime : [3,3],
+			attackWidth : [15,15],
+			attackHeight : [10,15],
+			widthOffset : [0,0],
+			heightOfset : [0,0],
+			group : [1,1],
 			
-			damage: [12],
-			meterGain : [8],
-			comboScaling : [2],
-			attackHitstop : [11],
-			attackHitstun : [14],
-			attackType : [eAttackType.HIGH],
-			blockstun : [3],
-			knockback: [4],
-			airKnockbackV: [2],
-			airKnockbackH: [1],
+			damage: [7,8],
+			meterGain : [4,6],
+			comboScaling : [2,2],
+			attackHitstop : [11,11],
+			attackHitstun : [14,14],
+			attackType : [eAttackType.HIGH,eAttackType.HIGH],
+			blockstun : [3,3],
+			knockback: [1,4],
+			airKnockbackV: [0,2],
+			airKnockbackH: [0,2],
+		
+			launches: [false,true],
+			LaunchKnockbackV: [0,0],
+			LaunchKnockbackH: [0,1],
+			pushback: [2,2],
 			
-			launches: [false],
-			LaunchKnockbackV: [0],
-			LaunchKnockbackH: [0],
-			pushback: [2],
-			
-			particlexOffset : [10],
-			particleyOffset : [0],
-			particleEffect : [sHitEffect],
-			particleDuration : [5]
+			particlexOffset : [10,10],
+			particleyOffset : [0,0],
+			particleEffect : [sHitEffect,sHitEffect],
+			particleDuration : [5,5]
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [3],
+			counterHitLevel: [3,3],
 			
-			group : [1],
+			group : [1,1],
 			
-			damage: [20],
-			meterGain : [12],
-			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			damage: [10,12],
+			meterGain : [8,9],
+			comboScaling : [1,1],
+			attackHitstop : [30,30], 
+			attackHitstun : [14,14],
+			knockback: [5,5],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [0,1],
+			airKnockbackH: [0,4],
 			
-			launches: [true],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [5],
-			pushback: [3],
+			launches: [true,true],
+			LaunchKnockbackV: [0,1],
+			LaunchKnockbackH: [0,5],
+			pushback: [0,3],
 			
-			particlexOffset : [18],
-			particleyOffset : [10],
-			particleEffect : [sHitEffect],
-			particleDuration : [10]
+			particlexOffset : [18,18],
+			particleyOffset : [10,10],
+			particleEffect : [sHitEffect,sHitEffect],
+			particleDuration : [10,10]
 		},
 		
 		isThrow : false,
