@@ -5,7 +5,10 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	prevState = _prevState;
 	prevSprite = _prevSprite;
 	ds_list_clear(hitByGroup);
-	ds_list_clear(opponent.hitByGroup);
+	if (target != noone)
+	{
+		ds_list_clear(target.hitByGroup);
+	}
 	animOffset = _animOffset;
 	hitstopBuffer = true;
 

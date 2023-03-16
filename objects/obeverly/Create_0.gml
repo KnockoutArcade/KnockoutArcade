@@ -51,6 +51,12 @@ animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 depth = 0;
 
+// These variables are from the destructable object. It lets us know that this object is not destructable
+knockbackMultiplier = 1; // Multiplier for how much knockback this object takes.
+launchable = true; // Whether this object can be launched or not
+isDestructibleObject = false; // Identify this object as destructable
+isThrowable = true; // whether we can throw this object around or not
+
 CharacterSprites = {
 	idle_Sprite : sBeverly_Idle,
 	crouch_Sprite : sBeverly_Crouch_MOCKUP,
