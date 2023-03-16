@@ -225,7 +225,11 @@ if (collisionCheck)
 				owner.depth = -1;
 				collision_list[| i].owner.depth = 0;
 				
-				
+				// Apply proper knockback direction to Destructable Objects
+				if (collision_list[| i].owner.isDestructibleObject)
+				{
+					collision_list[| i].owner.knockbackDirection = sign(image_xscale);
+				}
 
 				// Reset Frame Advantage Counter
 				oGameManager.frameAdvantage = 0;

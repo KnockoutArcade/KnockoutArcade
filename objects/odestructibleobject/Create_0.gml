@@ -10,6 +10,7 @@ knockbackMultiplier = 0; // Multiplier for how much knockback this object takes.
 launchable = false; // Whether this object can be launched or not
 isDestructibleObject = true; // Identify this object as destructable
 isThrowable = false; // whether we can throw this object around or not
+knockbackDirection = 0; // Which way we should be taking knockback
 
 hasWallCollision = true;
 wallXScale = 4; // The wall object has an initial size of 16 px by 16px. These values are mulitplied by the scale values
@@ -69,6 +70,7 @@ state = eState.IDLE;
 	pushbackVel = 0;
 	
 	grounded = true;
+	fallSpeed = .25; // How fast a character falls
 
 	// Combo Related Variables
 	combo = 0;
