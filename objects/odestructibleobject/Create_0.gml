@@ -11,6 +11,16 @@ launchable = false; // Whether this object can be launched or not
 isDestructibleObject = true; // Identify this object as destructable
 isThrowable = false; // whether we can throw this object around or not
 
+hasWallCollision = true;
+wallXScale = 4; // The wall object has an initial size of 16 px by 16px. These values are mulitplied by the scale values
+wallYScale = 2;
+wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
+with (wallCollisionBox)
+{
+	image_xscale = other.wallXScale;
+	image_yscale = -other.wallYScale;
+}
+
 sprite_index = sTrashBin;
 
 hitstun = 0;

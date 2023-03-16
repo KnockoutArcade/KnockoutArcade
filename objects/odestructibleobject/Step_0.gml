@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Remove this objects collision if it is not supposed to have it
+if (!hasWallCollision)
+{
+	instance_destroy(wallCollisionBox);
+}
+
 switch (state)
 {
 	case eState.IDLE:
@@ -10,6 +16,10 @@ switch (state)
 		if (hp <= 0)
 		{
 			instance_destroy(hurtbox);
+			if (hasWallCollision)
+			{
+				instance_destroy(wallCollisionBox);
+			}
 			instance_destroy();
 			oPlayerController.target = noone;
 		}
