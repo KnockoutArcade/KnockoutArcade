@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-switch global.gameMode
+switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
 	{
@@ -23,7 +23,10 @@ switch global.gameMode
 			}
 		}
 
-		if global.game_paused exit;
+		if (global.game_paused)
+		{
+			exit;
+		}
 
 		if (calculateFrameData) 
 		{
@@ -46,7 +49,10 @@ switch global.gameMode
 				{
 					frameAdvantage--;
 				}
-				else calculateFrameData = false;
+				else 
+				{
+					calculateFrameData = false;
+				}
 			}
 		}
 	}

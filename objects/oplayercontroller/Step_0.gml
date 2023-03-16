@@ -1498,7 +1498,10 @@ if (state != eState.HITSTOP)
 	// Collisions With Walls
 	if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 	{
-		while !place_meeting(x+sign(hsp+environmentDisplacement), y, oWall) x += sign(hsp+environmentDisplacement);
+		while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
+		{
+			x += sign(hsp+environmentDisplacement);
+		}
 		//floor(x);
 		hsp = 0;
 		environmentDisplacement = 0;
@@ -1509,7 +1512,7 @@ if (state != eState.HITSTOP)
 		//Determine wether we are rising into a cieling or falling onto a floor.
 		var fallDirection = sign(vsp);
 		
-		while !place_meeting(x, y + sign(vsp+fallSpeed), oWall) 
+		while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
 		{
 			y += sign(vsp);
 		}

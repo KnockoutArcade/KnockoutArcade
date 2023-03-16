@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupGame()
 {
-	switch global.gameMode 
+	switch (global.gameMode) 
 	{
 		case GAMEMODE.VERSUS:
 		{
@@ -36,13 +36,19 @@ function SetupGame()
 			{
 				image_xscale *= -1;
 				opponent = other.p1;
-				if global.currentRound = 1 hasPerformedIntro = false;
+				if (global.currentRound = 1)
+				{
+					hasPerformedIntro = false;
+				}
 				PaletteSetup(global.p2PaletteID, global.RusselPalettes);
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
-				if global.currentRound = 1 hasPerformedIntro = false;
+				if (global.currentRound = 1)
+				{
+					hasPerformedIntro = false;
+				}
 				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
 			}
 		

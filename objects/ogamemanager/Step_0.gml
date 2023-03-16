@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-switch global.gameMode
+switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
 	{
@@ -33,9 +33,9 @@ switch global.gameMode
 				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 				with (particle) 
 				{
-				sprite_index = sKOText;
-				image_index = true;
-				lifetime = 89;
+					sprite_index = sKOText;
+					image_index = true;
+					lifetime = 89;
 				}
 			}
 		}
@@ -61,7 +61,7 @@ switch global.gameMode
 				{
 					global.p1Rounds++;
 				}
-				if (p2.hp > p1.hp)
+				else if (p2.hp > p1.hp)
 				{
 					global.p2Rounds++;
 				}
@@ -70,9 +70,9 @@ switch global.gameMode
 				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 				with (particle) 
 				{
-				sprite_index = sTimeUp;
-				image_index = true;
-				lifetime = 89;
+					sprite_index = sTimeUp;
+					image_index = true;
+					lifetime = 89;
 				}
 			}
 		}
@@ -92,17 +92,20 @@ switch global.gameMode
 
 
 		// Frame-by-frame
-		if (keyboard_check_pressed(vk_tab)) or (global.frameskip < 0)
+		if (keyboard_check_pressed(vk_tab)) || (global.frameskip < 0)
 		{
-			if (global.game_paused = false)
+			if (!global.game_paused)
 			{
 				global.game_paused = true;
 				global.frameskip = 0;
 			}
-			else global.game_paused = false;
+			else 
+			{
+				global.game_paused = false;
+			}
 		}
 
-		if (global.game_paused) and (keyboard_check_pressed(ord("O")))
+		if (global.game_paused) && (keyboard_check_pressed(ord("O")))
 		{
 			global.frameskip = 1;
 		}
@@ -132,17 +135,20 @@ switch global.gameMode
 		}
 		
 		// Frame-by-frame
-		if (keyboard_check_pressed(vk_tab)) or (global.frameskip < 0)
+		if (keyboard_check_pressed(vk_tab)) || (global.frameskip < 0)
 		{
-			if (global.game_paused = false)
+			if (!global.game_paused)
 			{
 				global.game_paused = true;
 				global.frameskip = 0;
 			}
-			else global.game_paused = false;
+			else 
+			{
+				global.game_paused = false;
+			}
 		}
 
-		if (global.game_paused) and (keyboard_check_pressed(ord("O")))
+		if (global.game_paused) && (keyboard_check_pressed(ord("O")))
 		{
 			global.frameskip = 1;
 		}
