@@ -38,6 +38,15 @@ switch (state)
 			}
 		} 
 		
+		if (hitstun > 0)
+		{
+			hitstun--;
+		}
+		else
+		{
+			ds_list_clear(hitByGroup);
+		}
+		
 		// Destroy this object if at 0 hp
 		if (hp <= 0)
 		{
@@ -46,6 +55,7 @@ switch (state)
 			{
 				instance_destroy(wallCollisionBox);
 			}
+			ds_list_destroy(hitByGroup);
 			instance_destroy();
 			oPlayerController.target = noone;
 		}
