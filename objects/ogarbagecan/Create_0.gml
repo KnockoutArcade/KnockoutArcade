@@ -5,7 +5,7 @@ event_inherited();
 
 knockbackMultiplier = 1; // Multiplier for how much knockback this object takes.
 launchable = true; // Whether this object can be launched or not
-isThrowable = false; // whether we can throw this object around or not
+isThrowable = true; // whether we can throw this object around or not
 
 hasWallCollision = false;
 
