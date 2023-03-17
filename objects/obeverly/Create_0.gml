@@ -67,7 +67,7 @@ CharacterSprites = {
 	runForward_Sprite : sRussel_Run_Forward,
 	runBackward_Sprite : sRussel_Run_Backward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,
-	jump_Sprite : sRussel_Jump,
+	jump_Sprite : sBeverly_Jump_Mockup,
 	hurt_Sprite : sRussel_Hurt,
 	grab_Sprite : sRussel_Grab,
 	hold_Sprite : sRussel_Hold,
