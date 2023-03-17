@@ -39,6 +39,12 @@ function ProcessHit( attackProperty, collision_list)
 		collision_list.owner.vsp = attackProperty.LaunchKnockbackV[hitboxID];
 		collision_list.owner.hsp = attackProperty.LaunchKnockbackH[hitboxID] * owner.image_xscale;
 		collision_list.owner.grounded = false;
+		
+		// This fixes and issue where Destructible Objects would slide once they hit the ground.
+		if (collision_list.owner.isDestructibleObject)
+		{
+			collision_list.owner.knockbackVel = 0;
+		}
 	}
 	else 
 	{
