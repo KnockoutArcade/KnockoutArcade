@@ -2121,9 +2121,9 @@ global.stBeverlyMoves = {
 			airKnockbackV: [0,-2],
 			airKnockbackH: [0,4],
 			
-			launches: [true],
-			LaunchKnockbackV: [0,-1],
-			LaunchKnockbackH: [0,5],
+			launches: [false,true],
+			LaunchKnockbackV: [0,-3],
+			LaunchKnockbackH: [0,0],
 			pushback: [1,3],
 			
 			particlexOffset : [18,18],
