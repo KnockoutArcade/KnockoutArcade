@@ -41,8 +41,8 @@ hurtboxOffset = 0;
 // State
 state = eState.IDLE;
 
-// Variables that allow the Player to interact with this object
-#region
+
+#region // Variables that allow the Player to interact with this object
 	hitstun = 0;
 	hitstopBuffer = false;
 	prevSprite = 0;

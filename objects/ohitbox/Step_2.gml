@@ -67,7 +67,13 @@ if (collisionCheck)
 				hasHit = true;
 			} else
 			// Grabbing
-			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB && collision_list[| i].owner.hitstun < 1 && collision_list[| i].owner.blockstun < 1 && collision_list[| i].owner.grounded == true && collision_list[| i].owner.state != eState.THROW_TECH && collision_list[| i].owner.state != eState.JUMPSQUAT && collision_list[| i].owner.isThrowable)
+			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB &&
+					collision_list[| i].owner.hitstun < 1 &&
+					collision_list[| i].owner.blockstun < 1 &&
+					collision_list[| i].owner.grounded &&
+					collision_list[| i].owner.state != eState.THROW_TECH &&
+					collision_list[| i].owner.state != eState.JUMPSQUAT &&
+					collision_list[| i].owner.isThrowable)
 			{
 				// Set the correct states for the attacker and victim
 				owner.state = eState.HOLD;
@@ -164,13 +170,10 @@ if (collisionCheck)
 				if (!collision_list[| i].owner.isDestructibleObject) // Check if the hurbox is attatched to a destructible object
 				{
 					collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
-					collision_list[| i].owner.state = eState.HITSTOP; // Set the victim's state to hitstop
 					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 				}
-				else
-				{
-					collision_list[| i].owner.state = eState.HITSTOP;
-				}
+				
+				collision_list[| i].owner.state = eState.HITSTOP;
 				
 				// Properties on Counter Hit
 				if (collision_list[| i].owner.inAttackState)

@@ -94,6 +94,7 @@ switch (state)
 			state = eState.IDLE;
 		}
 	}
+	break;
 }
 
 if (state != eState.HITSTOP)
@@ -134,10 +135,10 @@ if (state != eState.HITSTOP)
 		}
 	}
 
-x += hsp;
-y += vsp;
+	x += hsp;
+	y += vsp;
 
-floor(y);
+	floor(y);
 }
 
 
