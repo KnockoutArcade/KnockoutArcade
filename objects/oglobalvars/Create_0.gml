@@ -1724,7 +1724,7 @@ global.stBeverlyMoves = {
 			attackWidth : [20],
 			attackHeight : [8],
 			widthOffset : [10],
-			heightOfset : [12],
+			heightOfset : [10],
 			group : [1],
 			
 			damage: [6],
@@ -1812,7 +1812,7 @@ global.stBeverlyMoves = {
 		attackProperty : {
 			start : [12],
 			lifetime : [5],
-			attackWidth : [23],
+			attackWidth : [30],
 			attackHeight : [20],
 			widthOffset : [-1],
 			heightOfset : [0],
@@ -1888,7 +1888,7 @@ global.stBeverlyMoves = {
 			start : [12],
 			lifetime : [19],
 			attackWidth : [22],
-			attackHeight : [16],
+			attackHeight : [30],
 			widthOffset : [-1],
 			heightOfset : [0]
 		}
@@ -1995,8 +1995,8 @@ global.stBeverlyMoves = {
 			lifetime : [2],
 			attackWidth : [13],
 			attackHeight : [10],
-			widthOffset : [16],
-			heightOfset : [10],
+			widthOffset : [13],
+			heightOfset : [0],
 			group : [1],
 			
 			damage: [10],
@@ -2071,65 +2071,65 @@ global.stBeverlyMoves = {
 		numOfWindows : 9,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[1 , 1], [3, 2], [5, 3], [7 , 4], [9 , 5], [20 , 6], [24 , 7], [26 , 8], [28 , 9]],
+		window : [[1 , 1], [5, 2], [7, 3], [9 , 4], [11 , 5], [22 , 6], [26 , 7], [28 , 8], [30 , 9]],
 		
-		numOfHitboxes : 1,
+		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [9],
-			lifetime : [2],
-			attackWidth : [30],
-			attackHeight : [5],
-			widthOffset : [8],
-			heightOfset : [0],
-			group : [1],
+			start : [8,11],
+			lifetime : [1,2],
+			attackWidth : [15,30],
+			attackHeight : [5,5],
+			widthOffset : [8,8],
+			heightOfset : [0,0],
+			group : [1,2],
 			
-			damage : [10],
-			meterGain : [8],
-			comboScaling : [1],
-			attackHitstop : [14],
-			attackHitstun : [11],
-			attackType : [eAttackType.LOW],
-			blockstun : [8],
-			knockback: [2],
-			airKnockbackV: [-2],
-			airKnockbackH: [1],
+			damage : [4,5],
+			meterGain : [4,8],
+			comboScaling : [1,2],
+			attackHitstop : [14,14],
+			attackHitstun : [11,11],
+			attackType : [eAttackType.LOW,eAttackType.LOW],
+			blockstun : [8,8],
+			knockback: [0,2],
+			airKnockbackV: [-1,-2],
+			airKnockbackH: [0,1],
 			
-			launches: [true],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [1],
-			pushback: [4],
+			launches: [false,true],
+			LaunchKnockbackV: [0,-1],
+			LaunchKnockbackH: [0,1],
+			pushback: [1,4],
 			
-			particlexOffset : [20],
-			particleyOffset : [10],
-			particleEffect : [sHitEffect],
-			particleDuration : [5]
+			particlexOffset : [20,20],
+			particleyOffset : [20,10],
+			particleEffect : [sHitEffect,sHitEffect],
+			particleDuration : [5,5]
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [3],
+			counterHitLevel: [3,3],
 			
-			group : [1],
+			group : [1,2],
 			
-			damage: [20],
-			meterGain : [12],
-			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			damage: [10,20],
+			meterGain : [7,8],
+			comboScaling : [1,1],
+			attackHitstop : [30,30], 
+			attackHitstun : [14,14],
+			knockback: [1,5],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [0,-2],
+			airKnockbackH: [0,4],
 			
 			launches: [true],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [5],
-			pushback: [3],
+			LaunchKnockbackV: [0,-1],
+			LaunchKnockbackH: [0,5],
+			pushback: [1,3],
 			
-			particlexOffset : [18],
-			particleyOffset : [10],
-			particleEffect : [sHitEffect],
-			particleDuration : [10]
+			particlexOffset : [18,18],
+			particleyOffset : [18,10],
+			particleEffect : [sHitEffect,sHitEffect],
+			particleDuration : [10,10]
 		},
 		
 		isThrow : false,
@@ -2164,9 +2164,9 @@ global.stBeverlyMoves = {
 			start : [6],
 			lifetime : [20],
 			attackWidth : [12],
-			attackHeight : [10],
+			attackHeight : [12],
 			widthOffset : [6],
-			heightOfset : [3],
+			heightOfset : [8],
 			group : [1],
 			
 			damage : [5],
@@ -2251,7 +2251,7 @@ global.stBeverlyMoves = {
 			attackWidth : [32],
 			attackHeight : [12],
 			widthOffset : [-6],
-			heightOfset : [2],
+			heightOfset : [5],
 			group : [1],
 			
 			damage: [8],
@@ -2315,7 +2315,7 @@ global.stBeverlyMoves = {
 			attackWidth : [34],
 			attackHeight : [15],
 			widthOffset : [-6],
-			heightOfset : [2]
+			heightOfset : [5]
 		}
 		
 	},
@@ -2326,18 +2326,18 @@ global.stBeverlyMoves = {
 		numOfWindows : 6,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[6 , 1], [13, 2], [15, 3], [18, 4], [21 , 5], [25 , 6]],
+		window : [[6 , 1], [13, 2], [15, 3], [18, 4], [19 , 5], [21 , 6]],
 		
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [13,21],
+			start : [12,19],
 			lifetime : [3,3],
-			attackWidth : [15,15],
-			attackHeight : [10,15],
-			widthOffset : [0,0],
-			heightOfset : [0,0],
-			group : [1,1],
+			attackWidth : [25,25],
+			attackHeight : [10,10],
+			widthOffset : [0,5],
+			heightOfset : [5,5],
+			group : [1,2],
 			
 			damage: [7,8],
 			meterGain : [4,6],
@@ -2347,7 +2347,7 @@ global.stBeverlyMoves = {
 			attackType : [eAttackType.HIGH,eAttackType.HIGH],
 			blockstun : [3,3],
 			knockback: [1,4],
-			airKnockbackV: [0,2],
+			airKnockbackV: [-.5,-1],
 			airKnockbackH: [0,2],
 		
 			launches: [false,true],
@@ -2397,10 +2397,10 @@ global.stBeverlyMoves = {
 		hurtboxProperty : {
 			start : [12],
 			lifetime : [20],
-			attackWidth : [20],
-			attackHeight : [25],
-			widthOffset : [-6],
-			heightOfset : [-10]
+			attackWidth : [25],
+			attackHeight : [10],
+			widthOffset : [-3],
+			heightOfset : [4]
 		}
 		
 	},
