@@ -22,7 +22,7 @@ function ProcessHit( attackProperty, collision_list)
 					
 	// Apply Damage
 	collision_list.owner.hp -= scaledDamage;
-	collision_list.owner.knockbackVel = attackProperty.knockback[hitboxID];
+	collision_list.owner.knockbackVel = attackProperty.knockback[hitboxID] * collision_list.owner.knockbackMultiplier;
 					
 					
 	// Meter Build - P1 gets 100% meter, P2 gets 25%
@@ -31,13 +31,13 @@ function ProcessHit( attackProperty, collision_list)
 					
 	if (!collision_list.owner.grounded)
 	{
-		collision_list.owner.vsp = attackProperty.airKnockbackV[hitboxID];
-		collision_list.owner.hsp = attackProperty.airKnockbackH[hitboxID] * owner.image_xscale;
+		collision_list.owner.vsp = attackProperty.airKnockbackV[hitboxID] * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.hsp = attackProperty.airKnockbackH[hitboxID] * owner.image_xscale * collision_list.owner.knockbackMultiplier;
 	}
 	else if (attackProperty.launches[hitboxID])
 	{
-		collision_list.owner.vsp = attackProperty.LaunchKnockbackV[hitboxID];
-		collision_list.owner.hsp = attackProperty.LaunchKnockbackH[hitboxID] * owner.image_xscale;
+		collision_list.owner.vsp = attackProperty.LaunchKnockbackV[hitboxID] * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.hsp = attackProperty.LaunchKnockbackH[hitboxID] * owner.image_xscale * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.grounded = false;
 		
 		// This fixes and issue where Destructible Objects would slide once they hit the ground.

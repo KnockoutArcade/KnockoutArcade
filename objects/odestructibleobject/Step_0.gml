@@ -21,12 +21,16 @@ switch (state)
 			sprite_index = CharacterSprites.hurt_Sprite;
 			
 			// This code handles getting knocked back on the ground.
-			if (knockbackVel > 0)
+			// We use 1 instead of 0 to make sure any decimal values just get ignored.
+			// It would be possible if our knockbackVel had a value of 2.5 for example. Since
+			// we only decrease KnockbackVel by 1, the remaining .5 would cause the object
+			// to occillate.
+			if (knockbackVel > 1)
 			{
 				hsp = knockbackVel * knockbackDirection;
 				knockbackVel--;
 			} 
-			else if (knockbackVel < 0) 
+			else if (knockbackVel < 1) 
 			{
 				hsp = knockbackVel * knockbackDirection;
 				knockbackVel++;

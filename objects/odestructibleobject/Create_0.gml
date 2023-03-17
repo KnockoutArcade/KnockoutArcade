@@ -1,7 +1,7 @@
 // Destructable objects act as obsticales that the player can collide with and destroy. They rely on the same
 // system that players use for hit detection, which is why a lot of the variables here are shared.
 
-hp = 25;
+hp = 50;
 
 hsp = 0;
 vsp = 0;

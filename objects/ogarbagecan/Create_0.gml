@@ -3,7 +3,9 @@
 
 event_inherited();
 
-knockbackMultiplier = 1; // Multiplier for how much knockback this object takes.
+hp = 30;
+
+knockbackMultiplier = 1.5; // Multiplier for how much knockback this object takes.
 launchable = true; // Whether this object can be launched or not
 isThrowable = true; // whether we can throw this object around or not
 
