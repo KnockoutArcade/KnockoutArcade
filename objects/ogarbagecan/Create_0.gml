@@ -18,10 +18,10 @@ with (hurtbox)
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 20;
+	image_xscale = 21;
 	image_yscale = 32;
 }
-hurtboxOffset = 5;
+hurtboxOffset = -11;
 
 CharacterSprites = {
 	idle_Sprite : sprite_index,
