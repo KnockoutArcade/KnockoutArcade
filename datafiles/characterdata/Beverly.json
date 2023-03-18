@@ -149,8 +149,9 @@
       ],
       "IsThrow": true,
       "OpponentPositionData": {
-        "NumberOfFrames": 5,
         "DistanceFromWall": -70.0,
+        "ThrowOffset": -22,
+        "NumberOfFrames": 5,
         "Frames": [
           {
             "Frame": 0,
@@ -331,8 +332,9 @@
       ],
       "IsThrow": true,
       "OpponentPositionData": {
-        "NumberOfFrames": 2,
         "DistanceFromWall": 50.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 2,
         "Frames": [
           {
             "Frame": 0,
@@ -470,8 +472,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -721,8 +724,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -915,8 +919,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 2,
@@ -1107,8 +1112,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1219,8 +1225,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1331,8 +1338,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1451,8 +1459,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1593,8 +1602,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1731,8 +1741,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -1847,8 +1858,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -2034,8 +2046,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 2,
@@ -2154,8 +2167,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -2278,8 +2292,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -2453,8 +2468,9 @@
       ],
       "IsThrow": false,
       "OpponentPositionData": {
-        "NumberOfFrames": 0,
         "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
         "Frames": []
       },
       "NumberOfHurtboxes": 1,
@@ -2490,6 +2506,6 @@
   ],
   "Version": "Ver0.9.6",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-03-17T19:31:06.0344162-07:00",
+  "LastModified": "2023-03-17T20:02:30.6626552-07:00",
   "LastModifiedBy": "Admin"
 }
