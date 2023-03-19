@@ -1,7 +1,6 @@
 var P1menuUp = global.p1ButtonUp;
 var P1menuDown = global.p1ButtonDown;
 var P1menuConfirm = global.p1ButtonLight;
-
 menuCooldown--;
 
 if (P1menuUp && menuCooldown < 1)
@@ -16,17 +15,10 @@ if (P1menuDown == -1 && menuCooldown < 1)
 	menuCooldown = 7;
 }
 
-if (image_index == 0 and P1menuConfirm)
-{
-	room_goto(rRusselMap);
+if (P1menuConfirm && image_index == 0)
+{    
+		show_message("Press Any Key")
+		global.p1ButtonUp = keyboard_lastkey;
 }
 
-if (image_index == 1 and P1menuConfirm)
-{
-	room_goto(rCharacterSelectScreen);
-}
 
-if (image_index == 2 and P1menuConfirm)
-{
-	room_goto(rOptions);
-}
