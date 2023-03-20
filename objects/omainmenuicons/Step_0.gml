@@ -25,3 +25,8 @@ if (image_index == 1 and P1menuConfirm)
 {
 	room_goto(rCharacterSelectScreen);
 }
+
+if (image_index == 4 and P1menuConfirm)
+{
+	room_goto(rCredits);
+}
