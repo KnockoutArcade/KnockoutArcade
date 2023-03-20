@@ -16,4 +16,6 @@ function CrouchingAttackScript(moveToDo, onGround)
 		frameAdvantage = true;
 		hsp = 0;
 	}
+	
+	HandleWalkingOffPlatforms();
 }

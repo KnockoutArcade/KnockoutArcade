@@ -28,10 +28,6 @@ function PressAttackButton(attack)
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
 				}
-				
-				// Clears the hitBy data to allow attacks to connect properly
-				ds_list_clear(hitByGroup);
-				ds_list_clear(opponent.hitByGroup);
 			break;
 		
 			case 2:
@@ -48,9 +44,6 @@ function PressAttackButton(attack)
 					state = eState.STANDING_MEDIUM_ATTACK;
 					image_index = 0;
 				}
-				// Clears the hitBy data to allow attacks to connect properly
-				ds_list_clear(hitByGroup);
-				ds_list_clear(opponent.hitByGroup);
 			break;
 			
 			case 3:
@@ -67,9 +60,6 @@ function PressAttackButton(attack)
 					state = eState.STANDING_HEAVY_ATTACK;
 					image_index = 0;
 				}
-				// Clears the hitBy data to allow attacks to connect properly
-				ds_list_clear(hitByGroup);
-				ds_list_clear(opponent.hitByGroup);
 			break;
 			
 			case 4:
@@ -79,9 +69,6 @@ function PressAttackButton(attack)
 					sprite_index = sRussel_Grab;
 					image_index = 0;
 				}
-				// Clears the hitBy data to allow attacks to connect properly
-				ds_list_clear(hitByGroup);
-				ds_list_clear(opponent.hitByGroup);
 			break;
 			
 			case 5:
@@ -97,11 +84,16 @@ function PressAttackButton(attack)
 					sprite_index = sRussel_SideSpecial;
 					image_index = 0;
 				}
-				// Clears the hitBy data to allow attacks to connect properly
-				ds_list_clear(hitByGroup);
-				ds_list_clear(opponent.hitByGroup);
 			break;
 		}
+		
+	// Clears the hitBy data to allow attacks to connect properly
+	ds_list_clear(hitByGroup);
+	if (target != noone)
+	{
+		ds_list_clear(target.hitByGroup);
+	}
+	
 	cancelable = false;
 		
 }

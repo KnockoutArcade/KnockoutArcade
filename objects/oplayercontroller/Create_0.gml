@@ -58,6 +58,12 @@ animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 depth = 0;
 
+// These variables are from the destructable object. It lets us know that this object is not destructable
+knockbackMultiplier = 1; // Multiplier for how much knockback this object takes.
+launchable = true; // Whether this object can be launched or not
+isDestructibleObject = false; // Identify this object as destructable
+isThrowable = true; // whether we can throw this object around or not
+
 enum eState {
 	INTRO,
 	IDLE,
@@ -138,7 +144,11 @@ canTurnAround = true;
 // Intro
 hasPerformedIntro = true;
 
+//This variable stores who we are up against in a 1v1 fight
 opponent = noone;
+
+//This variable stores who we are currently attacking
+target = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);

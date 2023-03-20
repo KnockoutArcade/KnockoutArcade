@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Colliders",
+    "path": "folders/Sprites/Colliders.yy",
   },
   "resourceVersion": "1.0",
   "name": "sThrowEnvDetection",
