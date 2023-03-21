@@ -26,6 +26,11 @@ if (image_index == 1 && P1menuConfirm)
 	room_goto(rCharacterSelectScreen);
 }
 
+if (image_index == 4 && P1menuConfirm)
+{
+	room_goto(rCredits);
+}
+
 // Testing out Single-Player Mechanics. This takes you to the test level
 if (image_index == 2 && P1menuConfirm)
 {
