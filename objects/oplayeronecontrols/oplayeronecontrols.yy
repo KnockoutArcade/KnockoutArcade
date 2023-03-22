@@ -29,8 +29,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Managers",
-    "path": "folders/Objects/Game Managers.yy",
+    "name": "RemapControls",
+    "path": "folders/Objects/RemapControls.yy",
   },
   "resourceVersion": "1.0",
   "name": "oPlayerOneControls",
