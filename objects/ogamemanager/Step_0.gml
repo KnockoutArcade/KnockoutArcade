@@ -76,6 +76,42 @@ switch (global.gameMode)
 				}
 			}
 		}
+		
+		// When a player meets the win requirement for the match return players to the character selection screen
+		if (global.p1Rounds == 2 || global.p2Rounds == 2)
+		{
+			global.gameHalt = true;
+			gameHaltTimer++;
+			
+			if (global.p1Rounds == 2)
+			{
+				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
+				with (particle)
+				{
+					sprite_index = sPlayer1Wins;
+					image_index = true;
+					lifetime = 89;
+				}
+				if(gameHaltTimer == 700)
+				{
+					room_goto(rCharacterSelectScreen);
+				}
+			}
+			if (global.p2Rounds == 2)
+			{
+				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
+				with (particle)
+				{
+					sprite_index = sPlayer2Wins;
+					image_index = true;
+					lifetime = 89;
+				}
+				if(gameHaltTimer == 700)
+				{
+					room_goto(rCharacterSelectScreen);
+				}
+			}
+		}
 
 		// handle intros
 		if (p1.hasPerformedIntro && p2.hasPerformedIntro && !global.hasCompletedIntros) 

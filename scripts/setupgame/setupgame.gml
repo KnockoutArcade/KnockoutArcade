@@ -110,12 +110,31 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
-					sprite_index = sRound1Start;
-					lifetime = 110;
+					if(global.currentRound = 1)
+					{
+						sprite_index = sRound1Start;
+						lifetime = 110;
+					}
+					if(global.currentRound = 2)
+					{
+						sprite_index = sRound2Start;
+						lifetime = 110;
+					}
+					if(global.currentRound = 3)
+					{
+						sprite_index = sFinalRoundStart;
+						lifetime = 110;
+					}
 				}
+				
 			}
-	
-			global.game_paused = true;
+			// This will pause the game at the beginning of each new round after the inital
+			// with no visible indicator (Press Tab to unpause, and continue the match)
+			// Setting to false prevents the pausing during each new round, but the animations
+			// become offset and the player characters start the match closer for some reason.
+			// TODO: Create a visible pause menu or ready menu for new rounds
+			// (Could have players confirm that they're ready to start the next round)
+			 global.game_paused = false;
 		}
 		break;
 		
@@ -190,7 +209,7 @@ function SetupGame()
 				}
 			}
 			
-			//UnPause the game
+			// This will pause the game with no visible indicator if new rounds are implemented for this mode
 			global.game_paused = true;
 		}
 		break;
