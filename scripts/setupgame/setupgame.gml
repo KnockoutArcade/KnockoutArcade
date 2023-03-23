@@ -36,23 +36,16 @@ function SetupGame()
 			{
 				image_xscale *= -1;
 				opponent = other.p1;
-				if (global.currentRound = 1)
-				{
-					hasPerformedIntro = false;
-				}
+				hasPerformedIntro = false;
 				PaletteSetup(global.p2PaletteID, global.RusselPalettes);
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
-				if (global.currentRound = 1)
-				{
-					hasPerformedIntro = false;
-				}
+				hasPerformedIntro = false;
 				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
 			}
 		
-	
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
 			with (healthbar1) 
 			{
@@ -110,31 +103,24 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
-					if(global.currentRound = 1)
+					if(global.currentRound == 1)
 					{
 						sprite_index = sRound1Start;
 						lifetime = 110;
 					}
-					if(global.currentRound = 2)
+					if(global.currentRound == 2)
 					{
 						sprite_index = sRound2Start;
 						lifetime = 110;
 					}
-					if(global.currentRound = 3)
+					if(global.currentRound == 3)
 					{
 						sprite_index = sFinalRoundStart;
 						lifetime = 110;
 					}
 				}
-				
 			}
-			// This will pause the game at the beginning of each new round after the inital
-			// with no visible indicator (Press Tab to unpause, and continue the match)
-			// Setting to false prevents the pausing during each new round, but the animations
-			// become offset and the player characters start the match closer for some reason.
-			// TODO: Create a visible pause menu or ready menu for new rounds
-			// (Could have players confirm that they're ready to start the next round)
-			 global.game_paused = false;
+			global.game_paused = true;
 		}
 		break;
 		
@@ -208,11 +194,9 @@ function SetupGame()
 					lifetime = 110;
 				}
 			}
-			
-			// This will pause the game with no visible indicator if new rounds are implemented for this mode
+			// Unpauses game
 			global.game_paused = true;
 		}
 		break;
 	}
-	
 }
