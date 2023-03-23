@@ -1,36 +1,42 @@
-var P1menuUp = global.p1ButtonUp;
-var P1menuDown = global.p1ButtonDown;
-var P1menuConfirm = global.p1ButtonLight;
-var P1menuBack = global.p1ButtonMedium;
+
+if (playerID == 1)
+{
+	var menuUp = global.p1ButtonUp;
+	var menuDown = global.p1ButtonDown;
+	var menuConfirm = global.p1ButtonLight;
+	var menuBack = global.p1ButtonMedium;
+}
+else
+{
+	var menuUp = global.p2ButtonUp;
+	var menuDown = global.p2ButtonDown;
+	var menuConfirm = global.p2ButtonLight;
+	var menuBack = global.p2ButtonMedium;
+}
 
 menuCooldown--;
 
 
-if (menuCooldown < 1)
+if (menuCooldown < 1 && !showMessage)
 {
-	if (P1menuUp)
+	if (menuUp)
 	{
 		image_index--;
 		menuCooldown = 10;
 	}
-	else if (P1menuDown == -1)
+	else if (menuDown == -1)
 	{
 		image_index++;
 		menuCooldown = 10;
 	}
 }
 
-var p1ConfirmPressed = keyboard_check_pressed(P1menuConfirm);
+// I removed p1confirmPressed since it would be redundant. All of the attack buttons already use check_pressed.
 
-if (p1ConfirmPressed && !showMessage && menuCooldown < 1)
+if (menuConfirm && !showMessage && menuCooldown < 1)
 {
-	switch (image_index)
-	{
-		case 0: // p1 up
-			menuCooldown = 10;
-			showMessage = true;
-		break;
-	}
+	menuCooldown = 10;
+	showMessage = true;
 }
 else if(showMessage)
 {
@@ -38,11 +44,103 @@ else if(showMessage)
 	{
 		switch (image_index)
 		{
-			case 0: // p1 up
+			case 0: // up
 				if(keyboard_check_pressed(vk_anykey))
 				{
 					var newKey = keyboard_lastkey;
-					global.player1Controls.buttonUp = newKey;
+					playerControlsToChange.buttonUp = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 1: // down
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonDown = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 2: // left
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonLeft = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 3: // right
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonRight = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			
+			case 4: // light
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonLight = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 5: // medium
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonMedium = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 6: // heavy
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonHeavy = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 7: //grab
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonGrab = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 8: //special
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonSpecial = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			
+			case 9: //Super
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonSuper = newKey;
+					showMessage = false;
+				}
+			break;
+			
+			case 10: //Run
+				if(keyboard_check_pressed(vk_anykey))
+				{
+					var newKey = keyboard_lastkey;
+					playerControlsToChange.buttonRun = newKey;
 					showMessage = false;
 				}
 			break;
@@ -163,7 +261,7 @@ else if(showMessage)
 // 	}
 // }
 
-if (P1menuBack && !showMessage)
+if (menuBack && !showMessage)
 {
 	room_goto_previous()
 }
