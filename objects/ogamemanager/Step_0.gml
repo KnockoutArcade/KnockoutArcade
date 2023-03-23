@@ -35,7 +35,7 @@ switch (global.gameMode)
 					global.p2Rounds++;
 				}
 				
-				if(p1.hp == 0 && p2.hp == 0)
+				if (p1.hp == 0 && p2.hp == 0)
 				{
 					var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 					with (particle) 
