@@ -36,23 +36,16 @@ function SetupGame()
 			{
 				image_xscale *= -1;
 				opponent = other.p1;
-				if (global.currentRound = 1)
-				{
-					hasPerformedIntro = false;
-				}
+				hasPerformedIntro = false;
 				PaletteSetup(global.p2PaletteID, global.RusselPalettes);
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
-				if (global.currentRound = 1)
-				{
-					hasPerformedIntro = false;
-				}
+				hasPerformedIntro = false;
 				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
 			}
 		
-	
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
 			with (healthbar1) 
 			{
@@ -110,11 +103,23 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
-					sprite_index = sRound1Start;
-					lifetime = 110;
+					if(global.currentRound == 1)
+					{
+						sprite_index = sRound1Start;
+						lifetime = 110;
+					}
+					if(global.currentRound == 2)
+					{
+						sprite_index = sRound2Start;
+						lifetime = 110;
+					}
+					if(global.currentRound == 3)
+					{
+						sprite_index = sFinalRoundStart;
+						lifetime = 110;
+					}
 				}
 			}
-	
 			global.game_paused = true;
 		}
 		break;
@@ -189,11 +194,9 @@ function SetupGame()
 					lifetime = 110;
 				}
 			}
-			
-			//UnPause the game
+			// Unpauses game
 			global.game_paused = true;
 		}
 		break;
 	}
-	
 }

@@ -27,7 +27,7 @@ switch (global.gameMode)
 		{
 			exit;
 		}
-
+		
 		if (calculateFrameData) 
 		{
 			// Determine whether to use hitstun or blockstun
