@@ -2,8 +2,9 @@ draw_self();
 
 if (showMessage)
 {
-	draw_text( 1, 100, "Please Press New Button")
+	draw_text( 1, 100, "Please Press New Button");
 }
+
 draw_set_font(fntControls)
 draw_text( 20, 1, string(chr((global.player1Controls.buttonUp))));
 
