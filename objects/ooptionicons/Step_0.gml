@@ -3,6 +3,7 @@ var P1menuDown = global.p1ButtonDown;
 var P1menuLeft = global.p1ButtonLeft;
 var P1menuRight = global.p1ButtonRight;
 var P1menuConfirm = global.p1ButtonLight;
+var P1menuCancel = global.p1ButtonMedium;
 
 menuCooldown--;
 
@@ -66,4 +67,9 @@ if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
 if (P1menuConfirm && image_index = 2)
 {	
 	room_goto(rControlsRoom);
+}
+
+if (P1menuCancel)
+{
+	room_goto(rMainMenu);
 }

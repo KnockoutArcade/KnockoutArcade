@@ -5,6 +5,7 @@ var P1menuBack = global.p1ButtonMedium;
 
 menuCooldown--;
 
+
 if (menuCooldown < 1)
 {
 	if (P1menuUp)

@@ -1,3 +1,3 @@
 image_speed = 0
-menuCooldown = 120;
+menuCooldown = 10;
 showMessage = false;
