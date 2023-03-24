@@ -26,7 +26,7 @@ if (image_index == 1 && P1menuConfirm)
 	room_goto(rCharacterSelectScreen);
 }
 
-if (image_index == 2 and P1menuConfirm)
+if (image_index == 3 && P1menuConfirm)
 {
 	room_goto(rOptions);
 }
