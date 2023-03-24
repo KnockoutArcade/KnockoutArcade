@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sPlayerControls",
-    "path": "sprites/sPlayerControls/sPlayerControls.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -33,7 +30,7 @@
     "path": "folders/Objects/RemapControls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oPlayerOneControls",
+  "name": "oRemapControls",
   "tags": [],
   "resourceType": "GMObject",
 }
