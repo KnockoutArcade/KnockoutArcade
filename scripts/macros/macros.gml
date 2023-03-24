@@ -4,3 +4,10 @@ function macros()
 {
 	#macro ScalingMinimum .4 // The lowest amount of damage a scaled attack can do in a combo (in terms of percentage of base damage)
 }
+
+enum GAMEMODE
+{
+	MENU,
+	VERSUS,
+	PLATFORMING,
+}

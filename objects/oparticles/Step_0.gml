@@ -3,7 +3,15 @@
 
 if (lifetime < 1) 
 {
-	if (sprite_index = sRound1Start)
+	if (sprite_index == sRound1Start)
+	{
+		global.game_paused = false;
+	}
+	else if (sprite_index == sRound2Start)
+	{
+		global.game_paused = false;
+	}
+	else if (sprite_index == sFinalRoundStart)
 	{
 		global.game_paused = false;
 	}

@@ -1,7 +1,7 @@
 /// @function                   GroundedAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
+function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff) 
 {
 	sprite_index = moveToDo.spriteID;
 	grounded = onGround;
@@ -18,5 +18,10 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		state = eState.IDLE;
 		frameAdvantage = true;
 		hsp = 0;
+	}
+	
+	if (!ignoreWalkoff)
+	{
+		HandleWalkingOffPlatforms();
 	}
 }
