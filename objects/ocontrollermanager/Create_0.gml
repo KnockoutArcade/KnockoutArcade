@@ -5,6 +5,8 @@
 // SetPlayerButton script. After that, you can reference the new button elsewhere by checking if
 // global.pXbuttonY is true, where x is the player to check and Y is the button
 
+global.lastControllerButton = -1;
+
 global.player1ControllerSlot = -1;
 global.player2ControllerSlot = -1;
 

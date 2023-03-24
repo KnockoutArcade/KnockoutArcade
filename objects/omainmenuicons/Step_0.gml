@@ -26,6 +26,11 @@ if (image_index == 1 && P1menuConfirm)
 	room_goto(rCharacterSelectScreen);
 }
 
+if (image_index == 3 && P1menuConfirm)
+{
+	room_goto(rOptions);
+}
+
 if (image_index == 4 && P1menuConfirm)
 {
 	room_goto(rCredits);

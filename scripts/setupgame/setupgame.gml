@@ -21,8 +21,6 @@ function SetupGame()
 			global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
 			global.camObj.p1 = p1;
 			global.camObj.p2 = p2;
-
-			ControllerSetup();
 	
 			p1.controller = global.player1ControllerSlot;
 			p2.controller = global.player2ControllerSlot;

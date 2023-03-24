@@ -1,8 +1,5 @@
 {
-  "spriteId": {
-    "name": "sMainMenuIcons",
-    "path": "sprites/sMainMenuIcons/sMainMenuIcons.yy",
-  },
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
@@ -24,15 +21,16 @@
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Managers",
-    "path": "folders/Objects/Game Managers.yy",
+    "name": "RemapControls",
+    "path": "folders/Objects/RemapControls.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oMainMenuIcons",
+  "name": "oRemapControls",
   "tags": [],
   "resourceType": "GMObject",
 }

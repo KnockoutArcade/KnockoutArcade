@@ -1,9 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PressAttackButton(attack)
-{
-	
-	
+{	
 		switch attack 
 		{
 			case 1:
@@ -93,7 +91,6 @@ function PressAttackButton(attack)
 	{
 		ds_list_clear(target.hitByGroup);
 	}
-	
+
 	cancelable = false;
-		
 }

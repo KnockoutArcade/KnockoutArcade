@@ -20,10 +20,38 @@ function GetPlayerInputs()
 	} 
 	else
 	{
-		global.p1ButtonLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonLeft) < -.2) * -1;
-		global.p1ButtonRight = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonRight) > .2);
-		global.p1ButtonUp = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonUp) < -.4);
-		global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonDown) > .4) * -1;
+		if (GamepadCodeIsAxis(global.player1Controls.buttonLeft))
+		{
+			global.p1ButtonLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonLeft) < -.2) * -1;
+		}
+		else
+		{
+			global.p1ButtonLeft = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.buttonLeft) * -1;
+		}
+		if (GamepadCodeIsAxis(global.player1Controls.buttonRight))
+		{
+			global.p1ButtonRight = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonRight) > .2);
+		}
+		else
+		{
+			global.p1ButtonRight = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.buttonRight);
+		}
+		if(GamepadCodeIsAxis(global.player1Controls.buttonUp))
+		{
+			global.p1ButtonUp = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonUp) < -.4);
+		}
+		else
+		{
+			global.p1ButtonUp = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.buttonUp);
+		}
+		if(GamepadCodeIsAxis(global.player1Controls.buttonDown))
+		{
+			global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.buttonDown) > .4) * -1;
+		}
+		else
+		{
+			global.p1ButtonDown = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.buttonDown) * -1;
+		}
 		global.p1ButtonLight = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonLight);
 		global.p1ButtonMedium = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonMedium);
 		global.p1ButtonHeavy = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.buttonHeavy);
@@ -48,10 +76,39 @@ function GetPlayerInputs()
 	} 
 	else 
 	{
-		global.p2ButtonLeft = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonLeft) < -.2) * -1;
-		global.p2ButtonRight = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonRight) > .2);
-		global.p2ButtonUp = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonUp) < -.4);
-		global.p2ButtonDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonDown) > .4) * -1;
+		if (GamepadCodeIsAxis(global.player2Controls.buttonLeft))
+		{
+			global.p2ButtonLeft = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonLeft) < -.2) * -1;
+		}
+		else
+		{
+			global.p2ButtonLeft = gamepad_button_value(global.player2ControllerSlot, global.player2Controls.buttonLeft) * -1;
+			show_debug_message(global.p2ButtonLeft);
+		}
+		if (GamepadCodeIsAxis(global.player2Controls.buttonRight))
+		{
+			global.p2ButtonRight = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonRight) > .2);
+		}
+		else
+		{
+			global.p2ButtonRight = gamepad_button_value(global.player2ControllerSlot, global.player2Controls.buttonRight);
+		}
+		if (GamepadCodeIsAxis(global.player2Controls.buttonUp))
+		{
+			global.p2ButtonUp = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonUp) < -.4);
+		}
+		else
+		{
+			global.p2ButtonUp = gamepad_button_value(global.player2ControllerSlot, global.player2Controls.buttonUp);
+		}
+		if (GamepadCodeIsAxis(global.player2Controls.buttonDown))
+		{
+			global.p2ButtonDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.buttonDown) > .4) * -1;
+		}
+		else
+		{
+			global.p2ButtonDown = gamepad_button_value(global.player2ControllerSlot, global.player2Controls.buttonDown) * -1;
+		}
 		global.p2ButtonLight = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonLight);
 		global.p2ButtonMedium = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonMedium);
 		global.p2ButtonHeavy = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.buttonHeavy);
