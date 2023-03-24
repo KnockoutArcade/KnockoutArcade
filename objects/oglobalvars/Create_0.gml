@@ -2327,7 +2327,7 @@ global.stBeverlyMoves = {
 		numOfWindows : 6,
 		
 		//        [window# [ Length, image_index ], ... ]
-		window : [[6 , 1], [13, 2], [15, 3], [18, 4], [19 , 5], [21 , 6]],
+		window : [[6 , 1], [13, 2], [15, 3], [18, 4], [19 , 5], [28 , 6]],
 		
 		numOfHitboxes : 2,
 		
