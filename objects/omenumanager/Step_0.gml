@@ -5,6 +5,7 @@ var pressButton = keyboard_check(vk_anykey) || gamepad_button_check(global.playe
 
 startTextTimer++;
 
-if pressButton {
-	room = rCharacterSelectScreen;
+if (pressButton)
+{
+	room = rMainMenu;
 }

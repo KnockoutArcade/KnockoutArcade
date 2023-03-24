@@ -4,23 +4,34 @@
 
 visible = global.toggleHitboxVisibility;
 
-if attackProperty.attackType[hitboxID] == eAttackType.GRAB sprite_index = sGrabBox;
+if (attackProperty.attackType[hitboxID] == eAttackType.GRAB)
+{
+	sprite_index = sGrabBox;
+}
 
-if lifetime < 1 instance_destroy();
+if (lifetime < 1)
+{
+	instance_destroy();
+}
 
-if !global.game_paused lifetime--;
+if (!global.game_paused) 
+{
+	lifetime--;
+}
 
 x = owner.x + attackProperty.widthOffset[hitboxID] * sign(owner.image_xscale);
 y = owner.y - attackProperty.heightOfset[hitboxID] * sign(owner.image_yscale);
 
-if owner.inAttackState == false {
+if (!owner.inAttackState)
+{
 	instance_destroy();
 }
 
 var collisionCheck = place_meeting(x,y, oPlayerHurtbox);
 var collisionID = noone;
 
-if collisionCheck {
+if (collisionCheck)
+{
 	// Creates a list containing all of the hurtboxes we're colliding with.
 	var collision_list = ds_list_create();
 	collisionID = instance_place_list(x,y, oPlayerHurtbox, collision_list, false);
@@ -33,9 +44,14 @@ if collisionCheck {
 		// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 		// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 		var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.group[hitboxID])
-		if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) {
+		if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
+		{
+			//Set who the player is currently targeting
+			owner.target = collision_list[| i].owner.id;
+			
 			// Throw Teching
-			if attackProperty.attackType[hitboxID] == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8 {
+			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
+			{
 				owner.state = eState.THROW_TECH;
 				owner.hsp = -2 * owner.image_xscale;
 				owner.animTimer = 0;
@@ -51,7 +67,14 @@ if collisionCheck {
 				hasHit = true;
 			} else
 			// Grabbing
-			if attackProperty.attackType[hitboxID] == eAttackType.GRAB && collision_list[| i].owner.hitstun < 1 && collision_list[| i].owner.blockstun < 1 && collision_list[| i].owner.grounded == true && collision_list[| i].owner.state != eState.THROW_TECH && collision_list[| i].owner.state != eState.JUMPSQUAT{
+			if (attackProperty.attackType[hitboxID] == eAttackType.GRAB &&
+					collision_list[| i].owner.hitstun < 1 &&
+					collision_list[| i].owner.blockstun < 1 &&
+					collision_list[| i].owner.grounded &&
+					collision_list[| i].owner.state != eState.THROW_TECH &&
+					collision_list[| i].owner.state != eState.JUMPSQUAT &&
+					collision_list[| i].owner.isThrowable)
+			{
 				// Set the correct states for the attacker and victim
 				owner.state = eState.HOLD;
 				owner.animTimer = 0;
@@ -75,7 +98,8 @@ if collisionCheck {
 				oGameManager.frameAdvantage = 0;
 				
 				var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					lifetime = 10;
 					sprite_index = sHitEffect;
 					image_xscale = other.owner.image_xscale * -1;
@@ -92,11 +116,13 @@ if collisionCheck {
 				owner.state = eState.HITSTOP;
 				
 				// Handle if the opponent is Crouch blocking or not
-				if collision_list[| i].owner.verticalMoveDir == -1 {
+				if (collision_list[| i].owner.verticalMoveDir == -1)
+				{
 					collision_list[| i].owner.sprite_index = sRussel_Crouch_Block;
 					collision_list[| i].owner.isCrouchBlocking = true;
 				}
-				else {
+				else 
+				{
 					collision_list[| i].owner.sprite_index = sRussel_Block;
 					collision_list[| i].owner.isCrouchBlocking = false;
 				}
@@ -126,7 +152,8 @@ if collisionCheck {
 				oGameManager.frameAdvantage = 0;
 				
 				var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					lifetime = 10;
 					sprite_index = sBlockEffect;
 					image_xscale = collision_list[| i].owner.image_xscale;
@@ -134,48 +161,65 @@ if collisionCheck {
 			}
 			//Hitting	
 		else if attackProperty.attackType[hitboxID] != eAttackType.GRAB { 
-				if (collision_list[| i].owner.state != eState.BEING_GRABBED) collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite; // Set the correct Sprite
-				collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
-				collision_list[| i].owner.state = eState.HITSTOP; // Set the victim's state to hitstop
-				collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
+				if (collision_list[| i].owner.state != eState.BEING_GRABBED) 
+				{
+					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
+				} 
 				
-				// Combo Scaling
-				owner.combo++; // Add 1 to our combo length
-				var scaledDamage = attackProperty.damage[hitboxID]; // Set the initial amount of damage to do
-				var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
-				scaleAmount = max(scaleAmount, ScalingMinimum);
-				
-				if owner.combo > 2 scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
-				scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
-				scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
-				owner.comboScaling += attackProperty.comboScaling[hitboxID]; // increase the level of scaling for the combo
-				if owner.combo == 2 owner.startCombo = true; // Tells the game to display the combo counter when the combo is at least 2 hits long
-				
-				
-				collision_list[| i].owner.hp -= scaledDamage;
-				collision_list[| i].owner.knockbackVel = attackProperty.knockback[hitboxID];
-				
-				// Meter Build - P1 gets 100% meter, P2 gets 25%
-				collision_list[| i].owner.superMeter += floor(attackProperty.meterGain[hitboxID] * 0.25);
-				owner.superMeter += floor(attackProperty.meterGain[hitboxID]);
-				
-				if collision_list[| i].owner.grounded == false {
-					collision_list[| i].owner.vsp = attackProperty.airKnockbackV[hitboxID];
-					collision_list[| i].owner.hsp = attackProperty.airKnockbackH[hitboxID] * owner.image_xscale;
+				// Set the correct Sprite
+				if (!collision_list[| i].owner.isDestructibleObject) // Check if the hurbox is attatched to a destructible object
+				{
+					collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
+					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 				}
-				else if attackProperty.launches[hitboxID] {
-					collision_list[| i].owner.vsp = attackProperty.LaunchKnockbackV[hitboxID];
-					collision_list[| i].owner.hsp = attackProperty.LaunchKnockbackH[hitboxID] * owner.image_xscale;
-					collision_list[| i].owner.grounded = false;
-				}
-				else collision_list[| i].owner.vsp = 0;
-				owner.pushbackVel = attackProperty.pushback[hitboxID];
-				owner.heldOpponent = noone;
 				
-				hasHit = true;
-				collision_list[| i].owner.hitstun = attackProperty.attackHitstun[hitboxID];
-				ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.group[hitboxID]);
-				global.hitstop = attackProperty.attackHitstop[hitboxID];
+				collision_list[| i].owner.state = eState.HITSTOP;
+				
+				// Properties on Counter Hit
+				if (collision_list[| i].owner.inAttackState)
+				{
+					// Determine if we should display the coutner hit text on the p1 or p2 side
+					var isP2 = (owner.playerID == 2);
+					
+					ProcessHit(counterHitProperty, collision_list[| i]);
+					
+					// Display counterhit text
+					if (other.counterHitProperty.counterHitLevel[hitboxID] == 1)
+					{
+						var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
+						with (counterParticle) 
+						{
+							lifetime = global.hitstop;
+							sprite_index = sSmallCounter;
+							depth = 2;
+						}
+					}
+					else if (other.counterHitProperty.counterHitLevel[hitboxID] == 2)
+					{
+						var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
+						with (counterParticle) 
+						{
+							lifetime = global.hitstop;
+							sprite_index = sMediumCounter;
+							depth = 2;
+						}
+					} 
+					else if (other.counterHitProperty.counterHitLevel[hitboxID] == 3)
+					{
+						var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
+						with (counterParticle) 
+						{
+							lifetime = global.hitstop;
+							sprite_index = sCOUNTERtext;
+							depth = 2;
+						}
+					}
+					
+				} 
+				else 
+				{ // on Regular Hit
+					ProcessHit(attackProperty, collision_list[| i]);
+				}
 				
 				//Allow Cancelling
 				owner.cancelable = true;
@@ -184,14 +228,19 @@ if collisionCheck {
 				owner.depth = -1;
 				collision_list[| i].owner.depth = 0;
 				
-				
+				// Apply proper knockback direction to Destructable Objects
+				if (collision_list[| i].owner.isDestructibleObject)
+				{
+					collision_list[| i].owner.knockbackDirection = sign(image_xscale);
+				}
 
 				// Reset Frame Advantage Counter
 				oGameManager.frameAdvantage = 0;
 				
 					//Draw hit effect
 				var particle = instance_create_layer(x + (attackProperty.particlexOffset[hitboxID] * owner.image_xscale), y - attackProperty.particleyOffset[hitboxID], "Particles", oParticles);
-				with particle {
+				with (particle) 
+				{
 					sprite_index = other.attackProperty.particleEffect[other.hitboxID];
 					image_xscale = sign(other.owner.image_xscale);
 					lifetime = other.attackProperty.particleDuration[other.hitboxID];

@@ -9,11 +9,37 @@ hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
 walkSpeed = 1.5; // How fast the character walks in pixels/frame
+runSpeed = 3; // How fast the character runs in pixels/frame
+traction = .25; // How much this character slows down each frame in pixels/frame
 jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
 fallSpeed = .25; // How fast a character falls
+
+//Backdash Vars (The state is refered to as Run back for consistency)
+backdashDuration = 25; // The total duration of a character's backdash
+backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
+backdashSpeed = 4; // How fast their backdash moves them back
+backdashStartup = 3; // The delay before the character starts moving back
+
+
+// A short hop is when the player breifly taps up so they don't jump as high.
+
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
 canShortHop = true; // Whether the player can shorthop or not
+
+// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+
+canSuperJump = false; // Whether this character can Super Jump or not
+isSuperJumping = false; // Is the player currently super jumping?
+storedSuperJump = false; // Whether the player has their super jump stored or not
+superJumpTimer = 0; // The amount of time the player has stored their jump for
+
+// A double jump is when the player jumps again in the air
+
+canDoubleJump = false; // Whether this character can Double Jump or not
+hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
+heldUpFrames = 0; // How long the player has held UP for
+
 jumpHsp = 0; // How much momentum the player is carrying with their jump
 isJumpingForward = false; // Whether the player approaching the opponent with their jump or not.
 movedir = 0;
@@ -32,10 +58,18 @@ animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 depth = 0;
 
+// These variables are from the destructable object. It lets us know that this object is not destructable
+knockbackMultiplier = 1; // Multiplier for how much knockback this object takes.
+launchable = true; // Whether this object can be launched or not
+isDestructibleObject = false; // Identify this object as destructable
+isThrowable = true; // whether we can throw this object around or not
+
 enum eState {
 	INTRO,
 	IDLE,
 	WALKING,
+	RUN_FORWARD,
+	RUN_BACKWARD,
 	JUMPING,
 	JUMPSQUAT,
 	CROUCHING,
@@ -86,6 +120,8 @@ CharacterSprites = {
 	crouchBlock_Sprite : sRussel_Crouch_Block,
 	walkForward_Sprite : sRussel_Walk_Forward,
 	walkBackward_Sprite : sRussel_Walk_Backward,
+	runForward_Sprite : sRussel_Run_Forward,
+	runBackward_Sprite : sRussel_Run_Backward,
 	jumpsquat_Sprite : sRussel_Jumpsquat,
 	jump_Sprite : sRussel_Jump,
 	hurt_Sprite : sRussel_Hurt,
@@ -108,11 +144,16 @@ canTurnAround = true;
 // Intro
 hasPerformedIntro = true;
 
+//This variable stores who we are up against in a 1v1 fight
 opponent = noone;
+
+//This variable stores who we are currently attacking
+target = noone;
 
 // Hurtbox Variables
 hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
-with hurtbox {
+with (hurtbox) 
+{
 	primary = true;
 	owner = other.id;
 	image_xscale = 15;

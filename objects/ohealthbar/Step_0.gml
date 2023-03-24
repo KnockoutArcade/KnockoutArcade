@@ -3,5 +3,8 @@
 
 image_xscale = (attatchedTo.hp / 100) * MaxLength;
 
-if ui_xOffset < 80 image_xscale *= -1;
+if (ui_xOffset < 80)
+{
+    image_xscale *= -1;
+}
 
