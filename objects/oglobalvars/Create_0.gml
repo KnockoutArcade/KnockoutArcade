@@ -52,12 +52,12 @@ global.stRusselMoves = {
 			damage: [5],
 			meterGain : [6],
 			comboScaling : [2],
-			attackHitstop : [10], 
-			attackHitstun : [11],
+			attackHitstop : [20], 
+			attackHitstun : [17],
 			knockback: [1],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [-1],
+			airKnockbackH: [1],
 			
 			launches: [false],
 			LaunchKnockbackV: [-1],
@@ -307,17 +307,17 @@ global.stRusselMoves = {
 			damage: [20],
 			meterGain : [12],
 			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			attackHitstop : [15],
+			attackHitstun : [27],
+			knockback: [4],
 			
 			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackH: [2],
 			
-			launches: [true],
+			launches: [false],
 			LaunchKnockbackV: [-1],
 			LaunchKnockbackH: [5],
-			pushback: [3],
+			pushback: [2],
 			
 			particlexOffset : [18],
 			particleyOffset : [10],
@@ -406,7 +406,7 @@ global.stRusselMoves = {
 			airKnockbackH: [4],
 			
 			launches: [true],
-			LaunchKnockbackV: [-1],
+			LaunchKnockbackV: [-2],
 			LaunchKnockbackH: [5],
 			pushback: [3],
 			
@@ -494,17 +494,17 @@ global.stRusselMoves = {
 			damage: [20],
 			meterGain : [12],
 			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			attackHitstop : [20], 
+			attackHitstun : [17],
+			knockback: [2],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [-1],
+			airKnockbackH: [1],
 			
-			launches: [true],
+			launches: [false],
 			LaunchKnockbackV: [-1],
 			LaunchKnockbackH: [5],
-			pushback: [3],
+			pushback: [1],
 			
 			particlexOffset : [18],
 			particleyOffset : [10],
@@ -583,8 +583,8 @@ global.stRusselMoves = {
 			attackHitstun : [14, 14],
 			knockback: [5, 5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [-2, -3],
+			airKnockbackH: [1, 1],
 			
 			launches: [true, true],
 			LaunchKnockbackV: [-6, -6],
@@ -668,13 +668,13 @@ global.stRusselMoves = {
 			attackHitstun : [14],
 			knockback: [5],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [-3],
+			airKnockbackH: [1],
 			
 			launches: [true],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [5],
-			pushback: [3],
+			LaunchKnockbackV: [-2],
+			LaunchKnockbackH: [0],
+			pushback: [4],
 			
 			particlexOffset : [18],
 			particleyOffset : [10],
@@ -749,17 +749,17 @@ global.stRusselMoves = {
 			damage: [20],
 			meterGain : [12],
 			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			attackHitstop : [20], 
+			attackHitstun : [17],
+			knockback: [2],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [-1],
+			airKnockbackH: [0],
 			
-			launches: [true],
+			launches: [false],
 			LaunchKnockbackV: [-1],
 			LaunchKnockbackH: [5],
-			pushback: [3],
+			pushback: [1],
 			
 			particlexOffset : [18],
 			particleyOffset : [10],
@@ -834,17 +834,17 @@ global.stRusselMoves = {
 			damage: [20],
 			meterGain : [12],
 			comboScaling : [1],
-			attackHitstop : [30], 
-			attackHitstun : [14],
-			knockback: [5],
+			attackHitstop : [25], 
+			attackHitstun : [25],
+			knockback: [4],
 			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackV: [-3],
+			airKnockbackH: [2],
 			
-			launches: [true],
+			launches: [false],
 			LaunchKnockbackV: [-1],
 			LaunchKnockbackH: [5],
-			pushback: [3],
+			pushback: [2],
 			
 			particlexOffset : [18],
 			particleyOffset : [10],
@@ -924,11 +924,11 @@ global.stRusselMoves = {
 			knockback: [5],
 			
 			airKnockbackV: [-2],
-			airKnockbackH: [4],
+			airKnockbackH: [1],
 			
 			launches: [true],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [5],
+			LaunchKnockbackV: [-4],
+			LaunchKnockbackH: [1],
 			pushback: [3],
 			
 			particlexOffset : [18],
@@ -1305,8 +1305,8 @@ global.stRusselMoves = {
 			attackHitstun : [14, 14],
 			knockback: [5, 5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [0, -2],
+			airKnockbackH: [0, 4],
 			
 			launches: [false, true], //was [true,true]
 			LaunchKnockbackV: [0, -1], //was [-1,-1]
@@ -1397,15 +1397,15 @@ global.stRusselMoves = {
 			meterGain : [12, 12],
 			comboScaling : [1, 1],
 			attackHitstop : [30, 30], 
-			attackHitstun : [14, 14],
+			attackHitstun : [25, 25],
 			knockback: [5, 5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [-2, -3],
+			airKnockbackH: [-1, -1],
 			
 			launches: [true, true],
-			LaunchKnockbackV: [-1, -1],
-			LaunchKnockbackH: [5, 5],
+			LaunchKnockbackV: [-1, -3],
+			LaunchKnockbackH: [1, 1],
 			pushback: [3, 3],
 			
 			particlexOffset : [18, 18],
