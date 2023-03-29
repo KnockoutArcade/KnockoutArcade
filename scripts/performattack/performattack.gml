@@ -190,9 +190,28 @@ function PerformAttack(Action)
 			}
 		}
 	}
+	hitbox = 0;
+	
+	
+	// Projectiles
+	if (variable_struct_exists(Action, "projectileData")) 
+	{
+		for (var i = 0; i < Action.projectileData.numberOfProjectiles; i++;)
+		{
+			if (animTimer == Action.projectileData.spawnFrame[i])
+			{
+				var projectile = instance_create_layer(x + (Action.projectileData.spawnOffsetX[i] * other.image_xscale), y + Action.projectileData.spawnOffsetY[i], "Instances", Action.projectileData.projectileToSpawn[i]);
+			
+				with projectile
+				{
+					image_xscale = other.image_xscale;
+				}
+			}
+		}
+	}
+	
 	
 	// Hurtboxes
-	hitbox = 0;
 	for (var i = 0; i < Action.numOfHurtboxes; i++;) {
 		if (animTimer == Action.hurtboxProperty.start[i]) 
 		{

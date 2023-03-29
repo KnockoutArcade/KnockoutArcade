@@ -2784,6 +2784,17 @@ global.stBeverlyMoves = {
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},
 		
+		//Projectile Data
+		projectileData: {
+			numberOfProjectiles: 1,
+			
+			spawnFrame : [15],
+			spawnOffsetX: [10],
+			spawnOffsetY: [-10],
+			projectileToSpawn: [oProjectileBase]
+		},
+		
+		
 		// Hurtbox Data
 		numOfHurtboxes : 1,
 		

@@ -5,6 +5,7 @@ hsp = 5; // Keeping naming consistent for velocity-based variables
 vsp = 0;
 
 fallSpeed = 0; // How fast this projectile accelerates downward
+grounded = false; // Whether this projectile is on the ground or not
 airTraction = 0; // How much this projectile slows down in the air
 groundTraction = 0; // How much this projectile slows down on the ground
 
