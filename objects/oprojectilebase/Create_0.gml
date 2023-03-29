@@ -19,3 +19,5 @@ playerOwner = noone; // Who fired this projectile
 
 hitboxProperties = global.ProjectileBase_HitboxData; // Which hitbox properties should this projectile use?
 hitboxID = noone; // The ID of this projectile's hitbox
+
+collidedWithProjectile = false; // Whether this projectile has collided with another

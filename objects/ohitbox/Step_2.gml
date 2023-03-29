@@ -314,6 +314,9 @@ else
 					// Depth Sorting
 					owner.depth = -1;
 					collision_list[| i].owner.depth = 0;
+					
+					// Remove 1 health from the projectile
+					owner.projectileHealth--;
 				
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
@@ -401,6 +404,9 @@ else
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
+					
+					// Remove 1 health from the projectile
+					owner.projectileHealth--;
 				
 						//Draw hit effect
 					var particle = instance_create_layer(x + (attackProperty.particlexOffset[hitboxID] * owner.image_xscale), y - attackProperty.particleyOffset[hitboxID], "Particles", oParticles);
