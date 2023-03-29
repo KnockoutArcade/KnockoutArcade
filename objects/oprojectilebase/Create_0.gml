@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-hsp = 5; // Keeping naming consistent for velocity-based variables
+hsp = 2.5; // Keeping naming consistent for velocity-based variables
 vsp = 0;
 
 fallSpeed = 0; // How fast this projectile accelerates downward
@@ -14,3 +14,8 @@ destoryOnWall = true;  // Whether this projectile should despawn when colliding 
 
 transcendent = false; // Whether this projectile will phase through other projectiles
 projectileHealth = 1; // How many hits from another projectile it takes to destroy this projectile
+
+playerOwner = noone; // Who fired this projectile
+
+hitboxProperties = global.ProjectileBase_HitboxData; // Which hitbox properties should this projectile use?
+hitboxID = noone; // The ID of this projectile's hitbox

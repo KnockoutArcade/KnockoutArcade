@@ -2915,6 +2915,70 @@ global.stBeverlyMoves = {
 	},
 };
 
+// Projectile Vars
+global.ProjectileBase_HitboxData = { // Seperating the name of the projectile from HitboxData to make it easier to read
+	// Projectiles have slightly different data than normal attacks. They don't need animation or movement data.
+	// They also don't need a startup or lifetime, as they are active indefinetly until the projectile despawns
+	// Projectiles also can't be grabs or throws.
+	
+	numOfHitboxes : 1,
+		
+	attackProperty : {
+		attackWidth : [15],
+		attackHeight : [5],
+		widthOffset : [12],
+		heightOfset : [15],
+		group : [1],
+		
+		damage : [10],
+		meterGain : [4],
+		comboScaling : [2],
+		attackHitstop : [6],
+		attackHitstun : [9],
+		attackType : [eAttackType.MID],
+		blockstun : [3],
+		knockback: [1],
+		airKnockbackV: [0],
+		airKnockbackH: [1],
+		
+		launches: [false],
+		LaunchKnockbackV: [0],
+		LaunchKnockbackH: [0],
+		pushback: [1],
+		
+		particlexOffset : [0],
+		particleyOffset : [0],
+		particleEffect : [sSmallHitspark],
+		particleDuration : [5]
+	},
+	
+	counterHitProperty: { // everything that changes for this move on counter hit
+		counterHitLevel: [1],
+		
+		group : [1],
+		
+		damage: [12],
+		meterGain : [6],
+		comboScaling : [2],
+		attackHitstop : [10], 
+		attackHitstun : [11],
+		knockback: [1],
+		
+		airKnockbackV: [-2],
+		airKnockbackH: [4],
+		
+		launches: [false],
+		LaunchKnockbackV: [-1],
+		LaunchKnockbackH: [5],
+		pushback: [1],
+		
+		particlexOffset : [18],
+		particleyOffset : [10],
+		particleEffect : [sHitEffect],
+		particleDuration : [10]
+	},
+}
+
 global.RusselPalettes = {
 	numOfPalettes : 10,
 	// Key - Each entry in the following array is a color that needs to get replaced for alts. Each entry

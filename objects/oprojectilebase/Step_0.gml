@@ -8,8 +8,12 @@ if (global.game_paused)
 
 if (!global.gameHalt)
 {
-	if (place_meeting(x+hsp, y, oWall))
+	if (place_meeting(x+(hsp * image_xscale), y, oWall))
 	{
+		if (hitboxID != noone)
+		{
+			instance_destroy(hitboxID);
+		}
 		instance_destroy();
 	}
 	

@@ -9,7 +9,7 @@ hasHit = false;
 attackProperty = {};
 counterHitProperty = {};
 
-tempI = 0;
+isProjectile = false;
 
 hitboxID = 0;
 

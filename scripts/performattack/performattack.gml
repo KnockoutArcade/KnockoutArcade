@@ -205,6 +205,22 @@ function PerformAttack(Action)
 				with projectile
 				{
 					image_xscale = other.image_xscale;
+					playerOwner = other.id;
+					
+					hitboxID = instance_create_layer(x + (hitboxProperties.attackProperty.attackWidth[i] * other.image_xscale) + 0.5, y - hitboxProperties.attackProperty.heightOfset[i], "hitboxes", oHitbox);
+					with (hitboxID) 
+					{
+						hitboxID = i;
+						image_xscale = other.hitboxProperties.attackProperty.attackWidth[i] * other.image_xscale;
+						image_yscale = other.hitboxProperties.attackProperty.attackHeight[i];
+						owner = other.id;
+						
+						isProjectile = true;
+			
+						// Pass through attack data
+						attackProperty = other.hitboxProperties.attackProperty;
+						counterHitProperty = other.hitboxProperties.counterHitProperty;
+					}
 				}
 			}
 		}
