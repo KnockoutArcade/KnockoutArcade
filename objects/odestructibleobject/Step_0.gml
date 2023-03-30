@@ -30,7 +30,7 @@ switch (state)
 				hsp = knockbackVel * knockbackDirection;
 				knockbackVel--;
 			} 
-			else if (knockbackVel < 1) 
+			else if (knockbackVel < -1) 
 			{
 				hsp = knockbackVel * knockbackDirection;
 				knockbackVel++;
