@@ -2698,7 +2698,7 @@ global.stBeverlyMoves = {
 	},
 	
 	NeutralSpecial : {
-		duration : 50,
+		duration : 40,
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
