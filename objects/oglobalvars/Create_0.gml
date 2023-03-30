@@ -2918,10 +2918,10 @@ global.ProjectileBase_HitboxData = { // Seperating the name of the projectile fr
 	numOfHitboxes : 1,
 		
 	attackProperty : {
-		attackWidth : [20],
-		attackHeight : [20],
-		widthOffset : [-10],
-		heightOfset : [-10],
+		attackWidth : [10],
+		attackHeight : [5],
+		widthOffset : [-5],
+		heightOfset : [-2],
 		group : [1],
 		
 		damage : [10],
