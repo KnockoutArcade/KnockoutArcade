@@ -2705,7 +2705,7 @@ global.stBeverlyMoves = {
 		//        [window# [ Starting Frame, image_index ], ... ]
 		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
 		
-		numOfHitboxes : 2,
+		numOfHitboxes : 0,
 		
 		attackProperty : {
 			start : [10, 31],
@@ -2736,12 +2736,6 @@ global.stBeverlyMoves = {
 			particleyOffset : [10, 10],
 			particleEffect : [sHitEffect,sHitEffect],
 			particleDuration : [5,5]
-		},
-		
-		rehitData : {
-			hitbox : 1, // The hitbox to be repeated
-			numOfHits : 8, // How many times should that hitbox activate
-			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
@@ -2791,7 +2785,7 @@ global.stBeverlyMoves = {
 			spawnFrame : [15],
 			spawnOffsetX: [10],
 			spawnOffsetY: [-10],
-			projectileToSpawn: [oProjectileBase]
+			projectileToSpawn: [oTestLobbingProjectile]
 		},
 		
 		
