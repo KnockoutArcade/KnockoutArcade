@@ -1552,6 +1552,101 @@ global.stRusselMoves = {
 		}
 		
 	},
+	
+	DownSpecial : {
+		duration : 50,
+		spriteID : sRussel_NSpecial,
+		numOfWindows : 25,
+		
+		//        [window# [ Starting Frame, image_index ], ... ]
+		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
+		
+		numOfHitboxes : 1,
+		
+		attackProperty : {
+			start : [20],
+			lifetime : [4],
+			comboScaling : [1],
+			attackWidth : [35],
+			attackHeight : [20],
+			widthOffset : [5],
+			heightOfset : [2],
+			group : [1],
+			
+			damage: [15],
+			meterGain : [18],
+			attackHitstop : [20],
+			attackHitstun : [19],
+			attackType : [eAttackType.HIGH],
+			blockstun : [10],
+			knockback: [1],
+			airKnockbackV: [-.5],
+			airKnockbackH: [.5],
+			
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [3],
+			
+			particlexOffset : [20],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [5]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1],
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [25],
+			knockback: [1],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [false], 
+			LaunchKnockbackV: [0], 
+			LaunchKnockbackH: [0], 
+			pushback: [1],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
+		isThrow : false,
+		
+		// Movement Data
+		hasGroundMovementData : false,
+		hasAirMovementData : true,
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 3,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [0, 0, 0, false, true],  [1, 0, -2, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : 1, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		// Hurtbox Data
+		numOfHurtboxes : 1,
+		
+		hurtboxProperty : {
+			start : [10],
+			lifetime : [16],
+			attackWidth : [30],
+			attackHeight : [30],
+			widthOffset : [6],
+			heightOfset : [2]
+		}
+		
+	},
 };
 
 // BeverlyVars

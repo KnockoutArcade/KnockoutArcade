@@ -88,6 +88,12 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					image_index = 0;
 				}
+				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
+				{
+					state = eState.DOWN_SPECIAL
+					animTimer = 0;
+					image_index = 0;
+				}
 			break;
 		}
 		

@@ -176,6 +176,21 @@ function CancelData(_array, _attack, _late)
 				}
 			}
 			break;
+			
+			case eState.DOWN_SPECIAL : {
+				if (_attack == 5 && verticalMoveDir == -1 && movedir == 0)
+				{
+					if (_late)
+					{
+						LateCancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial, _attack);
+					}
+					else
+					{
+					 	CancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial.spriteID, 1);
+					}
+				}
+			}
+			break;
 		}
 	}
 }

@@ -322,32 +322,32 @@ if (state == eState.HITSTOP)
 		{
 			if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
 			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			} 
 			else if prevState == eState.CROUCHING_LIGHT_ATTACK && attack != 0
 			{
-				var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			}
 			else if (prevState == eState.STANDING_LIGHT_ATTACK_2 && attack != 0) 
 			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			}
 			else if ((prevState == eState.STANDING_MEDIUM_ATTACK || prevState == eState.CROUCHING_MEDIUM_ATTACK) && attack != 0)
 			{
-				var cancels = [ eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [ eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			}
 			else if ((prevState == eState.STANDING_HEAVY_ATTACK || prevState == eState.CROUCHING_HEAVY_ATTACK) && attack != 0) 
 			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			} 
 			else if ((prevState == eState.JUMPING_LIGHT_ATTACK || prevState == eState.JUMPING_MEDIUM_ATTACK || prevState == eState.JUMPING_HEAVY_ATTACK) && attack != 0) 
 			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			}
 		}
@@ -718,7 +718,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -730,7 +730,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -749,7 +749,7 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -761,7 +761,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
 		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -774,7 +774,7 @@ switch state
 	{	
 		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 		
-		var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1) 
 		{
 			CancelData(cancels, attack, true);
@@ -786,7 +786,7 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
 		
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -808,7 +808,7 @@ switch state
 			hurtbox.image_yscale = 20;
 		}
 		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
@@ -821,7 +821,7 @@ switch state
 	case eState.JUMPING_LIGHT_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
 			CancelData(cancels, attack, true);
@@ -834,7 +834,7 @@ switch state
 	case eState.JUMPING_MEDIUM_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
@@ -847,7 +847,7 @@ switch state
 	case eState.JUMPING_HEAVY_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL];
+		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		
 		if (cancelable && global.hitstop < 1)
 		{
@@ -903,11 +903,11 @@ switch state
 	{
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true, true);
+			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale, true, true);
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale);
 		}
 	}
 	break;
@@ -1554,7 +1554,7 @@ if (state != eState.HITSTOP)
 			inAttackState = false;
 			canTurnAround = true;
 		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL) 
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL) 
 		{
 			grounded = true;
 			hsp = 0;
