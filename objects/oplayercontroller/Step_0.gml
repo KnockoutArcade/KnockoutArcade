@@ -618,6 +618,8 @@ switch state
 		grounded = true;
 		isShortHopping = false;
 		
+		PressAttackButton(attack);
+		
 		if (animTimer > 4)
 		 {
 			state = eState.JUMPING;
@@ -873,13 +875,38 @@ switch state
 	{
 		if (grounded)
 		{
-			
 			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true);
-			
-		} 
+		}
 		else 
 		{
-			
+			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+		}
+	}
+	break;
+	
+	
+	case eState.UP_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+		}
+	}
+	break;
+	
+	
+	case eState.DOWN_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, true);
+		}
+		else 
+		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
 		}
 	}

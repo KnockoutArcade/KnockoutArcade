@@ -21,7 +21,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.CROUCHING_LIGHT_ATTACK;
 				}
-				else
+				else if (state != eState.JUMPSQUAT)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
@@ -37,7 +37,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.CROUCHING_MEDIUM_ATTACK;
 				}
-				else
+				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_MEDIUM_ATTACK;
 					image_index = 0;
@@ -53,7 +53,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.CROUCHING_HEAVY_ATTACK;
 				}
-				else 
+				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_HEAVY_ATTACK;
 					image_index = 0;
@@ -70,16 +70,21 @@ function PressAttackButton(attack)
 			break;
 			
 			case 5:
-				if (state != eState.JUMPSQUAT && movedir == 0)
+				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0)
 				{
 					state = eState.NEUTRAL_SPECIAL;
-					sprite_index = sRussel_NSpecial;
+					//sprite_index = sRussel_NSpecial;
 					image_index = 0;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0)
 				{
 					state = eState.SIDE_SPECIAL;
-					sprite_index = sRussel_SideSpecial;
+					//sprite_index = sRussel_SideSpecial;
+					image_index = 0;
+				}
+				else if (verticalMoveDir == 1)
+				{
+					state = eState.UP_SPECIAL
 					image_index = 0;
 				}
 			break;
