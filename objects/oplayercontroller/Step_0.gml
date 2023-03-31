@@ -889,11 +889,11 @@ switch state
 	{
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale, false, true);
+			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.airMovementData.gravityScale, selectedCharacter.UpSpecial.airMovementData.fallScale, false, true);
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.airMovementData.gravityScale, selectedCharacter.SideSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.airMovementData.gravityScale, selectedCharacter.UpSpecial.airMovementData.fallScale);
 		}
 	}
 	break;
