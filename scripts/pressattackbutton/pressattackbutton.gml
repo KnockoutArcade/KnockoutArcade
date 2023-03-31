@@ -85,6 +85,7 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == 1)
 				{
 					state = eState.UP_SPECIAL
+					animTimer = 0;
 					image_index = 0;
 				}
 			break;
