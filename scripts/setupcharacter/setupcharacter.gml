@@ -5,12 +5,14 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	var formedCharacter = {};
 	
 	formedCharacter.BasePalette = selectedCharacter.BaseColor.ColorPalette;
+	formedCharacter.AlternatePalettes = selectedCharacter.Palettes;
+	formedCharacter.SelectedPalette = formedCharacter.BasePalette;
 	formedCharacter.Name = selectedCharacter.Name;
 	
 	// add stats to the character
 	formedCharacter.HorizontalSpeed = selectedCharacter.HorizontalSpeed;
 	formedCharacter.VerticalSpeed = selectedCharacter.VerticalSpeed;
-	formedCharacter.EnvironmentDisplacement = selectedCharacter.EnvironmentDisplacement;
+	formedCharacter.EnvironmentalDisplacement = selectedCharacter.EnvironmentalDisplacement;
 	formedCharacter.WalkSpeed = selectedCharacter.WalkSpeed;
 	formedCharacter.RunSpeed = selectedCharacter.RunSpeed;
 	formedCharacter.Traction = selectedCharacter.Traction;
@@ -52,16 +54,6 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		Launched : asset_get_index(selectedCharacter.CharacterSprites.Launched),
 		Knockdown : asset_get_index(selectedCharacter.CharacterSprites.Knockdown),
 		GetUp : asset_get_index(selectedCharacter.CharacterSprites.GetUp)
-	}
-	
-	// if default palette is selected, the value should be -1
-	if(selectedPaletteId >= 0)
-	{
-		formedCharacter.SelectedPalette = selectedCharacter.Palettes[selectedPaletteId];
-	}
-	else
-	{
-		formedCharacter.SelectedPalette = formedCharacter.basePalette;
 	}
 	
 	//setup the moves
