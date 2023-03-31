@@ -89,7 +89,7 @@ if (!global.gameHalt)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		with collisionID
+		with (collisionID)
 		{
 			collidedWithProjectile = true;
 		}

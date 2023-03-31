@@ -41,7 +41,8 @@ if (!isProjectile)
 	
 		// If the hurtbox we're touching isn't our own AND that hitbox hasn't hit anything
 		// Iterates over every hurtbox being collided with to check if it can be hit.
-		for (var i = 0; i < collisionID; i++;) {
+		for (var i = 0; i < collisionID; i++;) 
+		{
 		
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
@@ -68,9 +69,8 @@ if (!isProjectile)
 					owner.superMeter += 5;
 				
 					hasHit = true;
-				} else
-				// Grabbing
-				if (attackProperty.attackType[hitboxID] == eAttackType.GRAB &&
+				} 
+				else if (attackProperty.attackType[hitboxID] == eAttackType.GRAB && // Grabbing
 						collision_list[| i].owner.hitstun < 1 &&
 						collision_list[| i].owner.blockstun < 1 &&
 						collision_list[| i].owner.grounded &&
@@ -108,10 +108,13 @@ if (!isProjectile)
 						image_xscale = other.owner.image_xscale * -1;
 					}
 				
-				} else 
-				// BLOCKING                                  Check to see if we are blocking correctly
-				if (collision_list[| i].owner.canBlock) && ((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || attackProperty.attackType[hitboxID] == eAttackType.MID || (attackProperty.attackType[hitboxID] == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1)){
-					
+				} // BLOCKING 
+				else if (collision_list[| i].owner.canBlock && // Blocking
+					((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || 
+					attackProperty.attackType[hitboxID] == eAttackType.MID || 
+					(attackProperty.attackType[hitboxID] == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1)))
+				{
+					// Check to see if we are blocking correctly
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
 				
@@ -163,7 +166,8 @@ if (!isProjectile)
 					}
 				}
 				//Hitting	
-			else if attackProperty.attackType[hitboxID] != eAttackType.GRAB { 
+				else if (attackProperty.attackType[hitboxID] != eAttackType.GRAB) 
+				{ 
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED) 
 					{
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
@@ -266,7 +270,8 @@ else
 	
 		// If the hurtbox we're touching isn't our own AND that hitbox hasn't hit anything
 		// Iterates over every hurtbox being collided with to check if it can be hit.
-		for (var i = 0; i < collisionID; i++;) {
+		for (var i = 0; i < collisionID; i++;) 
+		{
 		
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
@@ -279,8 +284,12 @@ else
 			
 				// Projectiles cannot be grabs or throws, so the code for them is ommitted here
 
-				// BLOCKING                                  Check to see if we are blocking correctly
-				if (collision_list[| i].owner.canBlock) && ((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || attackProperty.attackType[hitboxID] == eAttackType.MID || (attackProperty.attackType[hitboxID] == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1)){
+				// BLOCKING Check to see if we are blocking correctly
+				if (collision_list[| i].owner.canBlock) && 
+					((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) 
+					|| attackProperty.attackType[hitboxID] == eAttackType.MID || 
+					(attackProperty.attackType[hitboxID] == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))
+				{
 					
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
@@ -330,7 +339,8 @@ else
 					}
 				}
 				//Hitting	
-			else if attackProperty.attackType[hitboxID] != eAttackType.GRAB { 
+				else if (attackProperty.attackType[hitboxID] != eAttackType.GRAB)
+				{ 
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED) 
 					{
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;

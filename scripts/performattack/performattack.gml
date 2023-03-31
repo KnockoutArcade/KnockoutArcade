@@ -202,7 +202,7 @@ function PerformAttack(Action)
 			{
 				var projectile = instance_create_layer(x + (Action.projectileData.spawnOffsetX[i] * other.image_xscale), y + Action.projectileData.spawnOffsetY[i], "Instances", Action.projectileData.projectileToSpawn[i]);
 			
-				with projectile
+				with (projectile)
 				{
 					image_xscale = other.image_xscale;
 					playerOwner = other.id;

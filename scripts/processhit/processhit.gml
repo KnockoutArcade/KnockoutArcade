@@ -17,7 +17,7 @@ function ProcessHit( attackProperty, collision_list)
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
 			owner.comboScaling += attackProperty.comboScaling[hitboxID];
 		} // increase the level of scaling for the combo
-		if (owner.combo == 2)
+		else if (owner.combo == 2)
 		{
 			owner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
@@ -76,7 +76,7 @@ function ProcessHit( attackProperty, collision_list)
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
 			owner.playerOwner.comboScaling += attackProperty.comboScaling[hitboxID];
 		} // increase the level of scaling for the combo
-		if (owner.playerOwner.combo == 2)
+		else if (owner.playerOwner.combo == 2)
 		{
 			owner.playerOwner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
