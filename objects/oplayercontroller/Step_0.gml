@@ -1287,6 +1287,7 @@ switch state
 				}
 			}
 			break;
+			
 			case 2 : 
 			{
 				if (verticalMoveDir == -1)
@@ -1299,6 +1300,7 @@ switch state
 				}
 			}
 			break;
+			
 			case 3 : 
 			{
 				if (verticalMoveDir == -1)
@@ -1308,6 +1310,27 @@ switch state
 				else
 				{
 					prevState = eState.STANDING_HEAVY_ATTACK;
+				}
+			}
+			break;
+			
+			case 5 : 
+			{
+				if (verticalMoveDir == 0 && movedir == 0)
+				{
+					prevState = eState.NEUTRAL_SPECIAL;
+				}
+				else if (movedir != 0 )
+				{
+					prevState = eState.SIDE_SPECIAL;
+				}
+				else if (verticalMoveDir == 1)
+				{
+					prevState = eState.UP_SPECIAL;
+				}
+				else if (verticalMoveDir == -1)
+				{
+					prevState = eState.DOWN_SPECIAL;
 				}
 			}
 			break;
