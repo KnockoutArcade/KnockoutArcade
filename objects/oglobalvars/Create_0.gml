@@ -2698,14 +2698,14 @@ global.stBeverlyMoves = {
 	},
 	
 	NeutralSpecial : {
-		duration : 50,
+		duration : 40,
 		spriteID : sRussel_NSpecial,
 		numOfWindows : 25,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
 		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
 		
-		numOfHitboxes : 2,
+		numOfHitboxes : 0,
 		
 		attackProperty : {
 			start : [10, 31],
@@ -2736,12 +2736,6 @@ global.stBeverlyMoves = {
 			particleyOffset : [10, 10],
 			particleEffect : [sHitEffect,sHitEffect],
 			particleDuration : [5,5]
-		},
-		
-		rehitData : {
-			hitbox : 1, // The hitbox to be repeated
-			numOfHits : 8, // How many times should that hitbox activate
-			frames : [12, 14, 16, 18, 20, 22, 24, 26],
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
@@ -2783,6 +2777,17 @@ global.stBeverlyMoves = {
 			gravityScale : 1, // How much this move multiplies overall fall speed
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},
+		
+		//Projectile Data
+		projectileData: {
+			numberOfProjectiles: 1,
+			
+			spawnFrame : [15],
+			spawnOffsetX: [10],
+			spawnOffsetY: [-10],
+			projectileToSpawn: [oTestLobbingProjectile]
+		},
+		
 		
 		// Hurtbox Data
 		numOfHurtboxes : 1,
@@ -2903,6 +2908,70 @@ global.stBeverlyMoves = {
 		
 	},
 };
+
+// Projectile Vars
+global.ProjectileBase_HitboxData = { // Seperating the name of the projectile from HitboxData to make it easier to read
+	// Projectiles have slightly different data than normal attacks. They don't need animation or movement data.
+	// They also don't need a startup or lifetime, as they are active indefinetly until the projectile despawns
+	// Projectiles also can't be grabs or throws.
+	
+	numOfHitboxes : 1,
+		
+	attackProperty : {
+		attackWidth : [10],
+		attackHeight : [5],
+		widthOffset : [-5],
+		heightOfset : [-2],
+		group : [1],
+		
+		damage : [10],
+		meterGain : [4],
+		comboScaling : [2],
+		attackHitstop : [6],
+		attackHitstun : [9],
+		attackType : [eAttackType.MID],
+		blockstun : [3],
+		knockback: [1],
+		airKnockbackV: [0],
+		airKnockbackH: [1],
+		
+		launches: [false],
+		LaunchKnockbackV: [0],
+		LaunchKnockbackH: [0],
+		pushback: [1],
+		
+		particlexOffset : [0],
+		particleyOffset : [0],
+		particleEffect : [sSmallHitspark],
+		particleDuration : [5]
+	},
+	
+	counterHitProperty: { // everything that changes for this move on counter hit
+		counterHitLevel: [1],
+		
+		group : [1],
+		
+		damage: [12],
+		meterGain : [6],
+		comboScaling : [2],
+		attackHitstop : [10], 
+		attackHitstun : [11],
+		knockback: [1],
+		
+		airKnockbackV: [-2],
+		airKnockbackH: [4],
+		
+		launches: [false],
+		LaunchKnockbackV: [-1],
+		LaunchKnockbackH: [5],
+		pushback: [1],
+		
+		particlexOffset : [18],
+		particleyOffset : [10],
+		particleEffect : [sHitEffect],
+		particleDuration : [10]
+	},
+}
 
 global.RusselPalettes = {
 	numOfPalettes : 10,
