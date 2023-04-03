@@ -9,10 +9,10 @@ function HandleWalkingOffPlatforms(maintainState)
 		if (!maintainState)
 		{
 			state = eState.JUMPING;
+			image_index = 2;
 		}
 		grounded = false;
 		
 		jumpHsp = hsp;
-		image_index = 2;
 	}
 }

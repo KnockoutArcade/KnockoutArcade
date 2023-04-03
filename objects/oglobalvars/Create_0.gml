@@ -1461,7 +1461,7 @@ global.stRusselMoves = {
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [15, 26],
+			start : [12, 26],
 			lifetime : [4, 4],
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
@@ -1526,7 +1526,7 @@ global.stRusselMoves = {
 		groundMovementData : { // Movement data for performing the move on the ground
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
-			window : [ [0, 0, 0, false, true],  [12, 0, -6, true, true],  [13, 1, 0, true, false] ],
+			window : [ [0, 0, 0, false, true],  [14, 0, -6, true, true],  [15, 1, 0, true, false] ],
 			gravityScale : 2.5, // How much this move multiplies overall fall speed
 			fallScale : 2.5, // How much faster or slower we fall, specifically
 		},
@@ -1534,7 +1534,7 @@ global.stRusselMoves = {
 		airMovementData : { // movement data for performing the move in the air
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
-			window : [ [0, 0, 0, false, true],  [12, 0, -6, true, true],  [13, 1, 0, true, false] ],
+			window : [ [0, 0, 0, false, true],  [14, 0, -6, true, true],  [15, 1, 0, true, false] ],
 			gravityScale : 1.5, // How much this move multiplies overall fall speed
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},
