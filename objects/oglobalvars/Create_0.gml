@@ -1451,17 +1451,17 @@ global.stRusselMoves = {
 	},
 	
 	UpSpecial : {
-		duration : 50,
-		spriteID : sRussel_SideSpecial,
-		numOfWindows : 16,
+		duration : 99,
+		spriteID : sRussel_UpSpecial,
+		numOfWindows : 10,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [17, 6], [21, 7], [22, 8], [26, 9], [28, 10], [29, 11], [32, 12], [40, 13], [46, 14], [48, 15], [49, 16]],
+		window : [[3, 1], [6, 2], [9, 3], [12, 4], [15, 5], [18, 6], [27, 7], [30, 8], [36, 9], [40, 10]],
 		
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [8, 26],
+			start : [15, 26],
 			lifetime : [4, 4],
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
@@ -1526,7 +1526,7 @@ global.stRusselMoves = {
 		groundMovementData : { // Movement data for performing the move on the ground
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
-			window : [ [0, 0, 0, false, true],  [10, 0, -6, true, true],  [11, 1, 0, true, false] ],
+			window : [ [0, 0, 0, false, true],  [12, 0, -6, true, true],  [13, 1, 0, true, false] ],
 			gravityScale : 2.5, // How much this move multiplies overall fall speed
 			fallScale : 2.5, // How much faster or slower we fall, specifically
 		},
@@ -1534,7 +1534,7 @@ global.stRusselMoves = {
 		airMovementData : { // movement data for performing the move in the air
 			numOfWindows : 3,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
-			window : [ [0, 0, 0, false, true],  [10, 0, -6, true, true],  [11, 1, 0, true, false] ],
+			window : [ [0, 0, 0, false, true],  [12, 0, -6, true, true],  [13, 1, 0, true, false] ],
 			gravityScale : 1.5, // How much this move multiplies overall fall speed
 			fallScale : .5, // How much faster or slower we fall, specifically
 		},

@@ -80,6 +80,7 @@
     {"id":{"name":"rBeverlyStage","path":"rooms/rBeverlyStage/rBeverlyStage.yy",},"order":0,},
     {"id":{"name":"sHUDPortraits","path":"sprites/sHUDPortraits/sHUDPortraits.yy",},"order":2,},
     {"id":{"name":"sRussel_Walk_Forward","path":"sprites/sRussel_Walk_Forward/sRussel_Walk_Forward.yy",},"order":4,},
+    {"id":{"name":"sRussel_UpSpecial","path":"sprites/sRussel_UpSpecial/sRussel_UpSpecial.yy",},"order":32,},
     {"id":{"name":"sRussel_Grab","path":"sprites/sRussel_Grab/sRussel_Grab.yy",},"order":19,},
     {"id":{"name":"sRussel_Jumping_Heavy","path":"sprites/sRussel_Jumping_Heavy/sRussel_Jumping_Heavy.yy",},"order":18,},
     {"id":{"name":"sndTestSfx","path":"sounds/sndTestSfx/sndTestSfx.yy",},"order":1,},
