@@ -1458,63 +1458,66 @@ global.stRusselMoves = {
 		//        [window# [ Starting Frame, image_index ], ... ]
 		window : [[3, 1], [6, 2], [9, 3], [12, 4], [15, 5], [18, 6], [21, 7], [24, 8], [27, 9], [30, 10], [33, 11], [36, 12], [39, 13], [42, 14]],
 		
-		numOfHitboxes : 2,
+		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [12, 26],
-			lifetime : [4, 4],
-			attackWidth : [40, 40],
-			attackHeight : [20, 20],
-			widthOffset : [0, 0],
-			heightOfset : [2, 2],
-			group : [1, 2],
+			start : [12],
+			lifetime : [14],
+			attackWidth : [26],
+			attackHeight : [30],
+			widthOffset : [0],
+			heightOfset : [20],
+			group : [1],
 			
-			damage: [7, 7],
-			meterGain : [4, 4],
-			comboScaling : [1, 1],
-			attackHitstop : [9, 16],
-			attackHitstun : [24, 15],
-			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [16, 12],
-			knockback: [6, 6],
-			airKnockbackV: [-.5, 0],
-			airKnockbackH: [2, 4],
+			damage: [7],
+			meterGain : [4],
+			comboScaling : [1],
+			attackHitstop : [9],
+			attackHitstun : [24],
+			attackType : [eAttackType.COMMAND_GRAB],
+			blockstun : [16],
+			knockback: [6],
+			airKnockbackV: [-.5],
+			airKnockbackH: [2],
 			
-			launches: [true, false],
-			LaunchKnockbackV: [-1.5, 0],
-			LaunchKnockbackH: [2, 0],
-			pushback: [0, 3],
+			launches: [true],
+			LaunchKnockbackV: [-1.5],
+			LaunchKnockbackH: [2],
+			pushback: [0],
 			
-			particlexOffset : [20, 20],
-			particleyOffset : [10, 10],
-			particleEffect : [sHitEffect,sHitEffect],
-			particleDuration : [5,5]
+			particlexOffset : [20],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [5],
+			
+			holdXOffset : [20],
+			holdYOffset : [0]
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [3, 2],
+			counterHitLevel: [3],
 			
-			group : [1, 2], //was [1.1]
+			group : [1], //was [1.1]
 			
-			damage: [20, 20],
-			meterGain : [12, 12],
-			comboScaling : [1, 1],
-			attackHitstop : [30, 30], 
-			attackHitstun : [14, 14],
-			knockback: [5, 5],
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
 			
-			launches: [true, true],
-			LaunchKnockbackV: [-1, -1],
-			LaunchKnockbackH: [5, 5],
-			pushback: [3, 3],
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
 			
-			particlexOffset : [18, 18],
-			particleyOffset : [10, 10],
-			particleEffect : [sHitEffect, sHitEffect],
-			particleDuration : [10, 10]
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -1540,15 +1543,15 @@ global.stRusselMoves = {
 		},
 		
 		
-		numOfHurtboxes : 2,
+		numOfHurtboxes : 3,
 		
 		hurtboxProperty : {
-			start : [8, 26],
-			lifetime : [5, 6],
-			attackWidth : [30, 30],
-			attackHeight : [20, 20],
-			widthOffset : [0, 0],
-			heightOfset : [2, 2]
+			start : [9, 25, 39],
+			lifetime : [20, 15, 99],
+			attackWidth : [10, 30, 25],
+			attackHeight : [20, 30, 25],
+			widthOffset : [0, -10, -10],
+			heightOfset : [2, 20, 20]
 		}
 		
 	},

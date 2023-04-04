@@ -986,6 +986,25 @@ switch state
 	}
 	break;
 	
+	case eState.COMMAND_GRAB : 
+	{
+		inAttackState = true;
+		
+		sprite_index = CharacterSprites.grab_Sprite;
+		
+		hurtbox.image_xscale = 15;
+		hurtbox.image_yscale = 25;
+		hurtboxOffset = -7;
+		
+		PerformAttack(selectedCharacter.Grab);
+		
+		if (animTimer > 24)
+		{
+			state = eState.IDLE;
+		}
+	}
+	break;
+	
 	case eState.BEING_GRABBED : 
 	{
 		animTimer = 0;
