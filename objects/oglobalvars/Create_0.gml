@@ -1453,10 +1453,10 @@ global.stRusselMoves = {
 	UpSpecial : {
 		duration : 99,
 		spriteID : sRussel_UpSpecial,
-		numOfWindows : 10,
+		numOfWindows : 14,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[3, 1], [6, 2], [9, 3], [12, 4], [15, 5], [18, 6], [27, 7], [30, 8], [36, 9], [40, 10]],
+		window : [[3, 1], [6, 2], [9, 3], [12, 4], [15, 5], [18, 6], [21, 7], [24, 8], [27, 9], [30, 10], [33, 11], [36, 12], [39, 13], [42, 14]],
 		
 		numOfHitboxes : 2,
 		
