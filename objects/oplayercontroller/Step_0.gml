@@ -394,6 +394,7 @@ if (state == eState.HITSTOP)
 			hitstopBuffer = false;
 		}
 		
+		
 		prevSprite = 0;
 		shuffle = 0;
 		
@@ -996,12 +997,15 @@ switch state
 		hurtbox.image_yscale = 25;
 		hurtboxOffset = -7;
 		
-		PerformAttack(selectedCharacter.Grab);
-		
-		if (animTimer > 24)
+		if (grounded)
 		{
-			state = eState.IDLE;
+			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale, true, true);
 		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale);
+		}
+		
 	}
 	break;
 	

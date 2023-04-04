@@ -1469,7 +1469,7 @@ global.stRusselMoves = {
 			heightOfset : [20],
 			group : [1],
 			
-			damage: [7],
+			damage: [0],
 			meterGain : [4],
 			comboScaling : [1],
 			attackHitstop : [9],
@@ -1647,6 +1647,125 @@ global.stRusselMoves = {
 			attackHeight : [30],
 			widthOffset : [6],
 			heightOfset : [2]
+		}
+		
+	},
+	
+	CommandGrab : {
+		duration : 40,
+		spriteID : sRussel_Grab,
+		numOfWindows : 1,
+		
+		//        [window# [ Starting Frame, image_index ], ... ]
+		window : [[0, 0]],
+		
+		numOfHitboxes : 1,
+		
+		attackProperty : {
+			start : [12],
+			lifetime : [14],
+			attackWidth : [40],
+			attackHeight : [30],
+			widthOffset : [0],
+			heightOfset : [20],
+			group : [1],
+			
+			damage: [7],
+			meterGain : [4],
+			comboScaling : [1],
+			attackHitstop : [9],
+			attackHitstun : [24],
+			attackType : [eAttackType.MID],
+			blockstun : [16],
+			knockback: [6],
+			airKnockbackV: [-.5],
+			airKnockbackH: [2],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1.5],
+			LaunchKnockbackH: [2],
+			pushback: [0],
+			
+			particlexOffset : [20],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [5],
+			
+			holdXOffset : [20],
+			holdYOffset : [0]
+		},
+		
+		counterHitProperty: { // everything that changes for this move on counter hit
+			counterHitLevel: [3],
+			
+			group : [1], //was [1.1]
+			
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
+			
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
+			
+			launches: [true],
+			LaunchKnockbackV: [-1],
+			LaunchKnockbackH: [5],
+			pushback: [3],
+			
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
+		},
+		
+		isThrow : true,
+		
+		opponentPositionData : {
+			numOfWindows : 2,
+			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
+			window : [[0, 20, 0, eSpritesToUse.HURT_SPRITE, 0, 0, -1], [13, 30, 0, eSpritesToUse.HURT_SPRITE, 0, 0, -1]],
+			
+			// This variable determines how far away the player should be from a wall if they are too close.
+			distanceFromWall : 50,
+			
+			// After the throw is performed, how far does this character move?
+			// Some throw animations might end up moving the player
+			throwOffset : 0,
+		},
+		
+		// Movement Data
+		hasGroundMovementData : true,
+		hasAirMovementData : true,
+		
+		groundMovementData : { // Movement data for performing the move on the ground
+			numOfWindows : 2,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
+			window : [ [1, 1, -4, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : 2.5, // How much this move multiplies overall fall speed
+			fallScale : 2.5, // How much faster or slower we fall, specifically
+		},
+		
+		airMovementData : { // movement data for performing the move in the air
+			numOfWindows : 2,
+			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
+			window : [ [1, 1, -4, false, true],  [2, 0, 0, false, false] ],
+			gravityScale : 1.5, // How much this move multiplies overall fall speed
+			fallScale : .5, // How much faster or slower we fall, specifically
+		},
+		
+		
+		numOfHurtboxes : 3,
+		
+		hurtboxProperty : {
+			start : [9, 25, 39],
+			lifetime : [20, 15, 99],
+			attackWidth : [10, 30, 25],
+			attackHeight : [20, 30, 25],
+			widthOffset : [0, -10, -10],
+			heightOfset : [2, 20, 20]
 		}
 		
 	},

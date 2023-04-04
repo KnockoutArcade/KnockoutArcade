@@ -115,15 +115,18 @@ if (!isProjectile)
 						collision_list[| i].owner.isThrowable)
 				{
 					// Set the correct states for the attacker and victim
-					owner.state = eState.HOLD;
+					owner.prevState = eState.COMMAND_GRAB;
 					owner.animTimer = 0;
 				
-					collision_list[| i].owner.state = eState.BEING_GRABBED;
+					collision_list[| i].owner.prevState = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 					collision_list[| i].owner.animTimer = 0;
 					collision_list[| i].owner.x = owner.x + (attackProperty.holdXOffset[hitboxID] * owner.image_xscale);
 					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 					owner.heldOpponent = collision_list[| i].owner;
+					owner.target = collision_list[| i].owner;
+				
+					global.hitstop = attackProperty.attackHitstop[hitboxID];
 				
 					// Multiple hitboxes
 					hasHit = true;
@@ -143,6 +146,28 @@ if (!isProjectile)
 						sprite_index = sHitEffect;
 						image_xscale = other.owner.image_xscale * -1;
 					}
+					
+					// Cancel into the command grab move
+					ds_list_clear(owner.hitByGroup);
+					if (owner.target != noone)
+					{
+						ds_list_clear(owner.target.hitByGroup);
+					}
+					owner.animOffset = 0;
+
+					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
+					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+					{
+						var hurtbox = instance_find(oPlayerHurtbox, i);
+		
+						if (!hurtbox.primary && hurtbox.owner == id)
+						{ 
+							instance_destroy(hurtbox);
+						}
+					}
+					
+					instance_destroy(oHitbox);
+					
 				}
 				else if (collision_list[| i].owner.canBlock && // Blocking
 					((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || 
