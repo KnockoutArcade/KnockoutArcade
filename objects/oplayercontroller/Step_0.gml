@@ -901,6 +901,10 @@ switch state
 		{
 			isThrowable = false;
 		}
+		else
+		{
+			isThrowable = true;
+		}
 	}
 	break;
 	

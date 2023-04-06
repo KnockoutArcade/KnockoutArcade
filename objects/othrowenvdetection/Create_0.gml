@@ -8,4 +8,6 @@ distanceFromWall = 0;
 
 image_yscale = 10;
 
-frameToCheck = -1; // The frame that the player needs to be moved away before. (-1 means first active frame)
+startedTouchingWall = false;
+
+mode = 0; // What method should this use to move the player (0 - only check once, 1 - Keep checking and keep moving the player out)
