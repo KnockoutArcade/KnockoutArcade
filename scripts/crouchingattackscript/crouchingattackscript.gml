@@ -16,6 +16,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		state = eState.CROUCHING;
 		frameAdvantage = true;
 		hsp = 0;
+		isThrowable = true;
 	}
 	
 	HandleWalkingOffPlatforms(maintainState);

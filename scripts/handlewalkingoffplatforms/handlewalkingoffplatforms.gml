@@ -12,6 +12,7 @@ function HandleWalkingOffPlatforms(maintainState)
 			image_index = 2;
 		}
 		grounded = false;
+		isThrowable = true;
 		
 		jumpHsp = hsp;
 	}

@@ -896,6 +896,11 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.airMovementData.gravityScale, selectedCharacter.UpSpecial.airMovementData.fallScale);
 		}
+		
+		if (animTimer < 28)
+		{
+			isThrowable = false;
+		}
 	}
 	break;
 	
@@ -1600,11 +1605,13 @@ if (state != eState.HITSTOP)
 			frameAdvantage = true;
 			inAttackState = false;
 			canTurnAround = true;
+			isThrowable = true;
 		}
 		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB) 
 		{
 			grounded = true;
 			hsp = 0;
+			isThrowable = true;
 		}
 		if (state == eState.LAUNCHED)
 		{

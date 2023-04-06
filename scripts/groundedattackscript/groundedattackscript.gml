@@ -19,6 +19,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		state = eState.IDLE;
 		frameAdvantage = true;
 		hsp = 0;
+		isThrowable = true;
 	}
 	
 	if (!ignoreWalkoff)
