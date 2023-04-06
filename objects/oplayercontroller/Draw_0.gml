@@ -1,9 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var tempDepth = depth;
-depth = -2;
-
 // Find the closest floor within 100 px of our y height
 var foundFloor = false;
 for (var i = 0; i < 100; i++;)
@@ -26,7 +23,6 @@ for (var i = 0; i < 100; i++;)
 	}
 }
 
-depth = tempDepth;
 
 
 shader_set(sh_CharPalettes);

@@ -65,14 +65,14 @@ function SetupGame()
 	
 			// Create Super Meter UI
 				// Player 1
-			p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
+			p1SuperMeter = instance_create_layer(2, 106, "SuperMeter", oSuperMeterUI);
 			with (p1SuperMeter)
 			{
 				owner = other.p1;
 				ui_xOffset = x;
 			}
 				// Player 2
-			p2SuperMeter = instance_create_layer(97, 106, "UI", oSuperMeterUI);
+			p2SuperMeter = instance_create_layer(97, 106, "SuperMeter", oSuperMeterUI);
 			with (p2SuperMeter) 
 			{
 				owner = other.p2;
