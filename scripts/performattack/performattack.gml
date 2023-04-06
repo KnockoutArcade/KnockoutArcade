@@ -124,7 +124,7 @@ function PerformAttack(Action)
 				{
 				 	heldOpponent.sprite_index = heldOpponent.CharacterSprites.hurt_Sprite;
 				}
-				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
+				else if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
 				{
 					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
 				}

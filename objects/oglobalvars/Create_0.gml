@@ -1729,7 +1729,7 @@ global.stRusselMoves = {
 			window : [[0, 20, 0, eSpritesToUse.HURT_SPRITE, 0, 0, -1], [13, 30, 0, eSpritesToUse.HURT_SPRITE, 0, 0, -1]],
 			
 			// This variable determines how far away the player should be from a wall if they are too close.
-			distanceFromWall : 50,
+			distanceFromWall : 60,
 			
 			// After the throw is performed, how far does this character move?
 			// Some throw animations might end up moving the player

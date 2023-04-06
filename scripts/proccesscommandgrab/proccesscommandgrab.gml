@@ -12,5 +12,18 @@ function ProccessCommandGrab(){
 		{
 			animTimer = 99;
 		}
+		
+		if (animTimer == 1)
+		{
+			// Handle moving the player away from the wall
+			var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
+			with (ThrowDistance)
+			{
+				owner = other.id;
+				image_xscale = other.selectedCharacter.CommandGrab.opponentPositionData.distanceFromWall * other.image_xscale;
+				throwToCheck = other.selectedCharacter.CommandGrab;
+				frameToCheck = 11;
+			}
+		}
 	}
 }

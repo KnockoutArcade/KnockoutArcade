@@ -7,3 +7,5 @@ throwToCheck = 0;
 distanceFromWall = 0;
 
 image_yscale = 10;
+
+frameToCheck = -1; // The frame that the player needs to be moved away before. (-1 means first active frame)
