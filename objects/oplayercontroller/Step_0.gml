@@ -904,7 +904,7 @@ switch state
 	{
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale, true, true);
+			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale, false, true);
 		}
 		else 
 		{
@@ -1006,6 +1006,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale);
 		}
 		
+		ProccessCommandGrab();
 	}
 	break;
 	
@@ -1592,7 +1593,7 @@ if (state != eState.HITSTOP)
 		
 		isJumpingForward = false;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -1600,7 +1601,7 @@ if (state != eState.HITSTOP)
 			inAttackState = false;
 			canTurnAround = true;
 		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL) 
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB) 
 		{
 			grounded = true;
 			hsp = 0;

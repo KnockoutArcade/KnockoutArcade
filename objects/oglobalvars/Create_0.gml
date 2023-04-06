@@ -1451,7 +1451,7 @@ global.stRusselMoves = {
 	},
 	
 	UpSpecial : {
-		duration : 99,
+		duration : 110,
 		spriteID : sRussel_UpSpecial,
 		numOfWindows : 14,
 		
@@ -1652,7 +1652,7 @@ global.stRusselMoves = {
 	},
 	
 	CommandGrab : {
-		duration : 99,
+		duration : 110,
 		spriteID : sRussel_Grab,
 		numOfWindows : 1,
 		
@@ -1662,15 +1662,15 @@ global.stRusselMoves = {
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [40],
-			lifetime : [14],
+			start : [100],
+			lifetime :[14],
 			attackWidth : [40],
 			attackHeight : [30],
 			widthOffset : [0],
-			heightOfset : [20],
+			heightOfset : [0],
 			group : [1],
 			
-			damage: [7],
+			damage: [9],
 			meterGain : [4],
 			comboScaling : [1],
 			attackHitstop : [9],
