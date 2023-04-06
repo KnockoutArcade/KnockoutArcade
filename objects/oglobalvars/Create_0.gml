@@ -1673,7 +1673,7 @@ global.stRusselMoves = {
 			damage: [9],
 			meterGain : [4],
 			comboScaling : [1],
-			attackHitstop : [9],
+			attackHitstop : [20],
 			attackHitstun : [24],
 			attackType : [eAttackType.MID],
 			blockstun : [16],
@@ -1744,8 +1744,8 @@ global.stRusselMoves = {
 			numOfWindows : 2,
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite hsp(0 - add to existing velocity, 1 - overwrite existing velocity), add/overwrite vsp
 			window : [ [1, 1, -5, true, true],  [2, 0, 0, false, false] ],
-			gravityScale : 2.5, // How much this move multiplies overall fall speed
-			fallScale : 2.5, // How much faster or slower we fall, specifically
+			gravityScale : 1.5, // How much this move multiplies overall fall speed
+			fallScale : 7, // How much faster or slower we fall, specifically
 		},
 		
 		airMovementData : { // movement data for performing the move in the air
@@ -1753,7 +1753,7 @@ global.stRusselMoves = {
 			// starting_Frame (the frame this window begins working), hsp (Horizontal Speed), vsp (Vertical Speed), add/overwrite (0 - add to existing velocity, 1 - overwrite existing velocity)
 			window : [ [1, 1, -5, false, true],  [2, 0, 0, false, false] ],
 			gravityScale : 1.5, // How much this move multiplies overall fall speed
-			fallScale : 4, // How much faster or slower we fall, specifically
+			fallScale : 10, // How much faster or slower we fall, specifically
 		},
 		
 		
