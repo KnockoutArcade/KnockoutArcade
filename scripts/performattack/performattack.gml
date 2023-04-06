@@ -32,33 +32,6 @@ function PerformAttack(Action)
 			}
 	}
 	
-	// Throws
-	if (Action.isThrow) 
-	{
-		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) 
-		{
-			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
-			if (animTimer >= Action.opponentPositionData.window[i][0] && heldOpponent != noone)
-			{
-				heldOpponent.x = x + Action.opponentPositionData.window[i][1] * image_xscale;
-				heldOpponent.y = y + Action.opponentPositionData.window[i][2];
-				// Assigns the correct sprite to use. It will be different for every character, but we just want to use that character's hurt sprite
-				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.HURT_SPRITE)
-				{
-				 	heldOpponent.sprite_index = heldOpponent.CharacterSprites.hurt_Sprite;
-				}
-				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
-				{
-					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
-				}
-				
-				heldOpponent.image_index = Action.opponentPositionData.window[i][4];
-				heldOpponent.image_angle = Action.opponentPositionData.window[i][5] * image_xscale;
-				heldOpponent.image_xscale = Action.opponentPositionData.window[i][6] * image_xscale;
-			}
-		}
-	}
-	
 	
 	// Momentum Data
 	// Grounded
@@ -135,6 +108,33 @@ function PerformAttack(Action)
 		}
 	}
 	
+	
+	// Throws
+	if (Action.isThrow) 
+	{
+		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) 
+		{
+			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
+			if (animTimer >= Action.opponentPositionData.window[i][0] && heldOpponent != noone)
+			{
+				heldOpponent.x = x + Action.opponentPositionData.window[i][1] * image_xscale;
+				heldOpponent.y = y + Action.opponentPositionData.window[i][2];
+				// Assigns the correct sprite to use. It will be different for every character, but we just want to use that character's hurt sprite
+				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.HURT_SPRITE)
+				{
+				 	heldOpponent.sprite_index = heldOpponent.CharacterSprites.hurt_Sprite;
+				}
+				if (Action.opponentPositionData.window[i][3] == eSpritesToUse.KNOCKDOWN_SPRITE)
+				{
+					heldOpponent.sprite_index = heldOpponent.CharacterSprites.knockdown_Sprite;
+				}
+				
+				heldOpponent.image_index = Action.opponentPositionData.window[i][4];
+				heldOpponent.image_angle = Action.opponentPositionData.window[i][5] * image_xscale;
+				heldOpponent.image_xscale = Action.opponentPositionData.window[i][6] * image_xscale;
+			}
+		}
+	}
 	
 	
 	// Hitboxes

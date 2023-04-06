@@ -999,7 +999,7 @@ switch state
 		
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale, true, true);
+			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale, false, true);
 		}
 		else 
 		{
