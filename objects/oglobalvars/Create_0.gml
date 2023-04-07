@@ -3230,22 +3230,22 @@ global.stBeverlyMoves = {
 	
 	UpSpecial : {
 		duration : 50,
-		spriteID : sRussel_SideSpecial,
-		numOfWindows : 16,
+		spriteID : sBeverly_UpSpecial_MOCKUP_strip5,
+		numOfWindows : 6,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[4, 1], [8, 2], [10, 3], [12, 4], [14, 5], [17, 6], [21, 7], [22, 8], [26, 9], [28, 10], [29, 11], [32, 12], [40, 13], [46, 14], [48, 15], [49, 16]],
+		window : [[4, 0], [8, 1], [26, 2], [35, 3], [40, 4], [49, 5]],
 		
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [8, 26],
-			lifetime : [4, 4],
+			start : [8, 12],
+			lifetime : [4, 18],
 			attackWidth : [40, 40],
 			attackHeight : [20, 20],
 			widthOffset : [0, 0],
 			heightOfset : [2, 2],
-			group : [1, 2],
+			group : [1, 1],
 			
 			damage: [7, 7],
 			meterGain : [4, 4],
@@ -3255,12 +3255,12 @@ global.stBeverlyMoves = {
 			attackType : [eAttackType.MID, eAttackType.MID],
 			blockstun : [16, 12],
 			knockback: [6, 6],
-			airKnockbackV: [-.5, 0],
-			airKnockbackH: [2, 4],
+			airKnockbackV: [-2, 2],
+			airKnockbackH: [2, 2],
 			
-			launches: [true, false],
-			LaunchKnockbackV: [-1.5, 0],
-			LaunchKnockbackH: [2, 0],
+			launches: [true, true],
+			LaunchKnockbackV: [-3, -2],
+			LaunchKnockbackH: [2, 1],
 			pushback: [0, 3],
 			
 			particlexOffset : [20, 20],
@@ -3332,38 +3332,38 @@ global.stBeverlyMoves = {
 	},
 	
 	DownSpecial : {
-		duration : 50,
-		spriteID : sRussel_NSpecial,
-		numOfWindows : 25,
+		duration : 30,
+		spriteID : sBeverly_downSpecial_MOCKUP_strip5,
+		numOfWindows : 6,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
+		window : [[2 , 0], [4, 1], [8, 2], [12, 3], [23, 4], [29, 5]],
 		
 		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [20],
+			start : [8],
 			lifetime : [4],
 			comboScaling : [1],
-			attackWidth : [35],
+			attackWidth : [45],
 			attackHeight : [20],
-			widthOffset : [5],
+			widthOffset : [-22],
 			heightOfset : [2],
 			group : [1],
 			
 			damage: [15],
 			meterGain : [18],
-			attackHitstop : [20],
+			attackHitstop : [10],
 			attackHitstun : [19],
 			attackType : [eAttackType.HIGH],
 			blockstun : [10],
 			knockback: [1],
-			airKnockbackV: [-.5],
-			airKnockbackH: [.5],
+			airKnockbackV: [-3],
+			airKnockbackH: [1],
 			
-			launches: [false],
-			LaunchKnockbackV: [0],
-			LaunchKnockbackH: [0],
+			launches: [true],
+			LaunchKnockbackV: [-3],
+			LaunchKnockbackH: [2],
 			pushback: [3],
 			
 			particlexOffset : [20],
@@ -3419,8 +3419,8 @@ global.stBeverlyMoves = {
 			start : [10],
 			lifetime : [16],
 			attackWidth : [30],
-			attackHeight : [30],
-			widthOffset : [6],
+			attackHeight : [15],
+			widthOffset : [-15],
 			heightOfset : [2]
 		}
 		
