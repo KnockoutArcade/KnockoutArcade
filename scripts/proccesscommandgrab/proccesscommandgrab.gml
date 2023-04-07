@@ -22,7 +22,7 @@ function ProccessCommandGrab()
 				owner = other.id;
 				image_xscale = other.selectedCharacter.CommandGrab.opponentPositionData.distanceFromWall * other.image_xscale;
 				throwToCheck = other.selectedCharacter.CommandGrab;
-				mode = eThrowEnvironmentWallDetectionMode.CONSTANT_CHECK;
+				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
 			}
 		}
 	}

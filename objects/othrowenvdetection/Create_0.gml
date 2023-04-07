@@ -10,10 +10,10 @@ image_yscale = 10;
 
 startedTouchingWall = false;
 
-mode = eThrowEnvironmentWallDetectionMode.CHECK_ONCE; // What method should this use to move the player (0 - only check once, 1 - Keep checking and keep moving the player out)
+mode = ThrowEnvironmentWallDetectionMode.CHECKONCE; // What method should this use to move the player (0 - only check once, 1 - Keep checking and keep moving the player out)
 
-enum eThrowEnvironmentWallDetectionMode
+enum ThrowEnvironmentWallDetectionMode
 {
-	CHECK_ONCE,
-	CONSTANT_CHECK
+	CHECKONCE = 0,
+	CONSTANTCHECK = 1
 }
