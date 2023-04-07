@@ -194,6 +194,7 @@
     {"id":{"name":"sPlayerControls","path":"sprites/sPlayerControls/sPlayerControls.yy",},"order":1,},
     {"id":{"name":"sRussel_Jumping_Light","path":"sprites/sRussel_Jumping_Light/sRussel_Jumping_Light.yy",},"order":17,},
     {"id":{"name":"oHealthbar","path":"objects/oHealthbar/oHealthbar.yy",},"order":1,},
+    {"id":{"name":"sOptionsInstructions","path":"sprites/sOptionsInstructions/sOptionsInstructions.yy",},"order":2,},
     {"id":{"name":"sBeverly_JumpMedium_Mockup_strip6","path":"sprites/sBeverly_JumpMedium_Mockup_strip6/sBeverly_JumpMedium_Mockup_strip6.yy",},"order":20,},
     {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},"order":0,},
     {"id":{"name":"sRussel_Block","path":"sprites/sRussel_Block/sRussel_Block.yy",},"order":6,},

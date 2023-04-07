@@ -96,6 +96,10 @@ if (P1menuCancel)
 		P1hasSelectedChar = false;
 		global.p1SelectedCharacter = noone;
 	}
+	else if (!P1hasSelectedChar && !P2hasSelectedChar)
+	{
+		room_goto(rMainMenu);
+	}
 	
 	RTF_animTimer = 0;
 	RTF_currentFrame = 0;
