@@ -73,13 +73,11 @@ function PressAttackButton(attack)
 				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0)
 				{
 					state = eState.NEUTRAL_SPECIAL;
-					//sprite_index = sRussel_NSpecial;
 					image_index = 0;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0)
 				{
 					state = eState.SIDE_SPECIAL;
-					//sprite_index = sRussel_SideSpecial;
 					image_index = 0;
 				}
 				else if (verticalMoveDir == 1)

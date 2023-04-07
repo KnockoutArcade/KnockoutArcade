@@ -5,7 +5,7 @@ visible = global.toggleHitboxVisibility;
 switch (mode)
 {
 	// If the player is close to a wall, move them away from the wall
-	case 0:
+	case eThrowEnvironmentWallDetectionMode.CHECK_ONCE:
 	{
 		if (place_meeting(x, y, oWall))
 		{
@@ -30,7 +30,7 @@ switch (mode)
 	break;
 
 	// If the player moves too close to the wall, adjust their hsp so they move away
-	case 1:
+	case eThrowEnvironmentWallDetectionMode.CONSTANT_CHECK:
 	{
 		x = owner.x;
 		y = owner.y;

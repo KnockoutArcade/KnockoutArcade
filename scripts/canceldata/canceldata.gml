@@ -162,7 +162,8 @@ function CancelData(_array, _attack, _late)
 			}
 			break;
 			
-			case eState.UP_SPECIAL : {
+			case eState.UP_SPECIAL : 
+			{
 				if (_attack == 5 && verticalMoveDir == 1 && movedir == 0)
 				{
 					if (_late)
@@ -177,7 +178,8 @@ function CancelData(_array, _attack, _late)
 			}
 			break;
 			
-			case eState.DOWN_SPECIAL : {
+			case eState.DOWN_SPECIAL : 
+			{
 				if (_attack == 5 && verticalMoveDir == -1 && movedir == 0)
 				{
 					if (_late)

@@ -2,7 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 // Each character may have a command grab that requires unique code to execute.
-function ProccessCommandGrab(){
+function ProccessCommandGrab()
+{
 	
 	// Russel's Up Special Command Grab
 	if (selectedCharacter == global.stRusselMoves)
@@ -12,8 +13,7 @@ function ProccessCommandGrab(){
 		{
 			animTimer = 99;
 		}
-		
-		if (animTimer == 1)
+		else if (animTimer == 1)
 		{
 			// Handle moving the player away from the wall
 			var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -22,7 +22,7 @@ function ProccessCommandGrab(){
 				owner = other.id;
 				image_xscale = other.selectedCharacter.CommandGrab.opponentPositionData.distanceFromWall * other.image_xscale;
 				throwToCheck = other.selectedCharacter.CommandGrab;
-				mode = 1;
+				mode = eThrowEnvironmentWallDetectionMode.CONSTANT_CHECK;
 			}
 		}
 	}
