@@ -2041,7 +2041,7 @@ global.stBeverlyMoves = {
 		attackProperty : {
 			start : [7],
 			lifetime : [4],
-			attackWidth : [20],
+			attackWidth : [25],
 			attackHeight : [8],
 			widthOffset : [10],
 			heightOfset : [10],
@@ -2313,7 +2313,7 @@ global.stBeverlyMoves = {
 		attackProperty : {
 			start : [7],
 			lifetime : [2],
-			attackWidth : [13],
+			attackWidth : [18],
 			attackHeight : [10],
 			widthOffset : [13],
 			heightOfset : [0],
@@ -3018,70 +3018,70 @@ global.stBeverlyMoves = {
 	},
 	
 	NeutralSpecial : {
-		duration : 40,
-		spriteID : sRussel_NSpecial,
-		numOfWindows : 25,
+		duration : 30,
+		spriteID : sBeverly_NSpecial_MOCKUP,
+		numOfWindows : 3,
 		
 		//        [window# [ Starting Frame, image_index ], ... ]
-		window : [[2 , 1], [4, 2], [6, 3], [10, 4], [11, 5], [12, 6], [13, 7], [14, 8], [15, 9], [16, 10], [17, 11], [18, 12], [19, 13], [20, 14], [21, 15], [22, 16], [23, 17], [24, 18], [25, 19], [26, 20], [27, 21], [28, 22], [31, 23], [36, 24], [40, 25]],
+		window : [[2 , 0], [15, 1], [25, 2]],
 		
-		numOfHitboxes : 0,
+		numOfHitboxes : 1,
 		
 		attackProperty : {
-			start : [10, 31],
-			lifetime : [1, 4],
-			comboScaling : [0, 2],
-			attackWidth : [30, 30],
-			attackHeight : [20, 20],
-			widthOffset : [10, 10],
-			heightOfset : [2, 2],
-			group : [1, 2],
+			start : [15],
+			lifetime : [1],
+			comboScaling : [2],
+			attackWidth : [30],
+			attackHeight : [20],
+			widthOffset : [10],
+			heightOfset : [2],
+			group : [1],
 			
-			damage: [1, 3],
-			meterGain : [1, 4],
-			attackHitstop : [2, 12],
-			attackHitstun : [8, 19],
-			attackType : [eAttackType.MID, eAttackType.MID],
-			blockstun : [4, 10],
-			knockback: [1, 4],
-			airKnockbackV: [-.5, -1],
-			airKnockbackH: [.5, 2],
+			damage: [1],
+			meterGain : [1],
+			attackHitstop : [2],
+			attackHitstun : [8],
+			attackType : [eAttackType.MID],
+			blockstun : [4],
+			knockback: [1],
+			airKnockbackV: [-.5],
+			airKnockbackH: [.5],
 			
-			launches: [false, false],
+			launches: [false],
 			LaunchKnockbackV: [0, 0],
 			LaunchKnockbackH: [0, 0],
-			pushback: [0, 3],
+			pushback: [1],
 			
-			particlexOffset : [20, 20],
-			particleyOffset : [10, 10],
-			particleEffect : [sHitEffect,sHitEffect],
-			particleDuration : [5,5]
+			particlexOffset : [20],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [5]
 		},
 		
 		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [3, 3],
+			counterHitLevel: [2],
 			
-			group : [1, 1],
+			group : [1],
 			
-			damage: [20, 20],
-			meterGain : [12, 12],
-			comboScaling : [1, 1],
-			attackHitstop : [30, 30], 
-			attackHitstun : [14, 14],
-			knockback: [5, 5],
+			damage: [20],
+			meterGain : [12],
+			comboScaling : [1],
+			attackHitstop : [30], 
+			attackHitstun : [14],
+			knockback: [5],
 			
-			airKnockbackV: [-2, -2],
-			airKnockbackH: [4, 4],
+			airKnockbackV: [-2],
+			airKnockbackH: [4],
 			
-			launches: [true, true],
-			LaunchKnockbackV: [-1, -1],
-			LaunchKnockbackH: [5, 5],
-			pushback: [3, 3],
+			launches: [false],
+			LaunchKnockbackV: [0],
+			LaunchKnockbackH: [0],
+			pushback: [3],
 			
-			particlexOffset : [18, 18],
-			particleyOffset : [10, 10],
-			particleEffect : [sHitEffect, sHitEffect],
-			particleDuration : [10, 10]
+			particlexOffset : [18],
+			particleyOffset : [10],
+			particleEffect : [sHitEffect],
+			particleDuration : [10]
 		},
 		
 		isThrow : false,
@@ -3239,12 +3239,12 @@ global.stBeverlyMoves = {
 		numOfHitboxes : 2,
 		
 		attackProperty : {
-			start : [8, 12],
+			start : [8, 16],
 			lifetime : [4, 18],
-			attackWidth : [40, 40],
-			attackHeight : [20, 20],
+			attackWidth : [30, 35],
+			attackHeight : [20, 15],
 			widthOffset : [0, 0],
-			heightOfset : [2, 2],
+			heightOfset : [2, 9],
 			group : [1, 1],
 			
 			damage: [7, 7],
@@ -3255,7 +3255,7 @@ global.stBeverlyMoves = {
 			attackType : [eAttackType.MID, eAttackType.MID],
 			blockstun : [16, 12],
 			knockback: [6, 6],
-			airKnockbackV: [-2, 2],
+			airKnockbackV: [-2, -2],
 			airKnockbackH: [2, 2],
 			
 			launches: [true, true],
