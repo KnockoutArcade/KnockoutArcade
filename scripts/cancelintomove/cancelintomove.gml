@@ -11,6 +11,7 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	}
 	animOffset = _animOffset;
 	hitstopBuffer = true;
+	isThrowable = true;
 
 	// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
 	for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)

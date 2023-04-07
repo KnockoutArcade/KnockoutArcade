@@ -108,7 +108,67 @@ if (!isProjectile)
 						image_xscale = other.owner.image_xscale * -1;
 					}
 				
-				} // BLOCKING 
+				} 
+				else if (attackProperty.attackType[hitboxID] == eAttackType.COMMAND_GRAB && // Command Grabs
+						collision_list[| i].owner.state != eState.THROW_TECH &&
+						collision_list[| i].owner.blockstun < 1 &&
+						collision_list[| i].owner.isThrowable)
+				{
+					// Set the correct states for the attacker and victim
+					owner.prevState = eState.COMMAND_GRAB;
+					owner.animTimer = 0;
+				
+					collision_list[| i].owner.prevState = eState.BEING_GRABBED;
+					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
+					collision_list[| i].owner.animTimer = 0;
+					collision_list[| i].owner.x = owner.x + (attackProperty.holdXOffset[hitboxID] * owner.image_xscale);
+					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
+					owner.heldOpponent = collision_list[| i].owner;
+					owner.target = collision_list[| i].owner;
+				
+					global.hitstop = attackProperty.attackHitstop[hitboxID];
+				
+					// Multiple hitboxes
+					hasHit = true;
+					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.group[hitboxID]);
+				
+					// Depth Sorting
+					owner.depth = -1;
+					collision_list[| i].owner.depth = 0;
+				
+					// Reset Frame Advantage Counter
+					oGameManager.frameAdvantage = 0;
+				
+					var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
+					with (particle) 
+					{
+						lifetime = 10;
+						sprite_index = sHitEffect;
+						image_xscale = other.owner.image_xscale * -1;
+					}
+					
+					// Cancel into the command grab move
+					ds_list_clear(owner.hitByGroup);
+					if (owner.target != noone)
+					{
+						ds_list_clear(owner.target.hitByGroup);
+					}
+					owner.animOffset = 0;
+
+					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
+					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+					{
+						var hurtbox = instance_find(oPlayerHurtbox, i);
+		
+						if (!hurtbox.primary && hurtbox.owner == id)
+						{ 
+							instance_destroy(hurtbox);
+						}
+					}
+					
+					instance_destroy(oHitbox);
+					
+				}
 				else if (collision_list[| i].owner.canBlock && // Blocking
 					((attackProperty.attackType[hitboxID] == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || 
 					attackProperty.attackType[hitboxID] == eAttackType.MID || 
@@ -166,7 +226,7 @@ if (!isProjectile)
 					}
 				}
 				//Hitting	
-				else if (attackProperty.attackType[hitboxID] != eAttackType.GRAB) 
+				else if (attackProperty.attackType[hitboxID] != eAttackType.GRAB && attackProperty.attackType[hitboxID] != eAttackType.COMMAND_GRAB) 
 				{ 
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED) 
 					{

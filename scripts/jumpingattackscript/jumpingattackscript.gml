@@ -17,5 +17,6 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	{
 		state = eState.JUMPING;
 		frameAdvantage = true;
+		isThrowable = true;
 	}
 }

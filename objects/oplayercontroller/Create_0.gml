@@ -86,7 +86,10 @@ enum eState {
 	JUMPING_HEAVY_ATTACK,
 	NEUTRAL_SPECIAL,
 	SIDE_SPECIAL,
+	UP_SPECIAL,
+	DOWN_SPECIAL,
 	GRAB,
+	COMMAND_GRAB,
 	HOLD,
 	FORWARD_THROW,
 	BACKWARD_THROW,
@@ -104,7 +107,8 @@ enum eAttackType {
 	HIGH, // Must be stand blocking
 	MID, // Block high or low
 	LOW, // Must Block Crouching
-	GRAB
+	GRAB, // Basic grab
+	COMMAND_GRAB // Advanced type of grab with special properties
 }
 
 enum eSpritesToUse {

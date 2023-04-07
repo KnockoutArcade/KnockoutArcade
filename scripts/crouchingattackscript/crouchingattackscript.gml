@@ -1,7 +1,8 @@
 /// @function                  CrouchingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function CrouchingAttackScript(moveToDo, onGround) 
+// maintainState is a boolean. If false, go into a jumping state after leaving the ground
+function CrouchingAttackScript(moveToDo, onGround, maintainState) 
 {
 	sprite_index = moveToDo.spriteID;
 	grounded = onGround;
@@ -15,7 +16,8 @@ function CrouchingAttackScript(moveToDo, onGround)
 		state = eState.CROUCHING;
 		frameAdvantage = true;
 		hsp = 0;
+		isThrowable = true;
 	}
 	
-	HandleWalkingOffPlatforms();
+	HandleWalkingOffPlatforms(maintainState);
 }

@@ -7,6 +7,7 @@ function ResetGame()
 	instance_destroy(oBeverly);
 	
 	instance_destroy(oHitbox);
+	instance_destroy(oThrowEnvDetection);
 	instance_destroy(oPlayerHurtbox);
 	instance_destroy(oHealthbar);
 	instance_destroy(oUIHUD);
