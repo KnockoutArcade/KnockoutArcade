@@ -96,6 +96,11 @@ if (P1menuCancel)
 		P1hasSelectedChar = false;
 		global.p1SelectedCharacter = noone;
 	}
+	else if (!P2hasSelectedChar)
+	{
+		 // If neither player has chosen a character, return to main menu
+		room_goto(rMainMenu);
+	}
 	
 	RTF_animTimer = 0;
 	RTF_currentFrame = 0;
