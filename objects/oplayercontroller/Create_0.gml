@@ -22,22 +22,22 @@ playerID = 1;
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
-walkSpeed = 1.5; // How fast the character walks in pixels/frame
-runSpeed = 3; // How fast the character runs in pixels/frame
-traction = .25; // How much this character slows down each frame in pixels/frame
-jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
-fallSpeed = .25; // How fast a character falls
+walkSpeed = global.characterData[characterID].WalkSpeed; // How fast the character walks in pixels/frame
+runSpeed = global.characterData[characterID].RunSpeed; // How fast the character runs in pixels/frame
+traction = global.characterData[characterID].Traction; // How much this character slows down each frame in pixels/frame
+jumpSpeed = global.characterData[characterID].JumpSpeed; // How high a character jumps - Initial Jump velocity
+fallSpeed = global.characterData[characterID].FallSpeed; // How fast a character falls
 
 //Backdash Vars (The state is refered to as Run back for consistency)
-backdashDuration = 25; // The total duration of a character's backdash
-backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
-backdashSpeed = 4; // How fast their backdash moves them back
-backdashStartup = 3; // The delay before the character starts moving back
+backdashDuration = global.characterData[characterID].BackDashDuration; // The total duration of a character's backdash
+backdashInvincibility = global.characterData[characterID].BackDashInvincibility; // How long the character is invincible for at the start of their backdash
+backdashSpeed = global.characterData[characterID].BackDashSpeed; // How fast their backdash moves them back
+backdashStartup = global.characterData[characterID].BackDashStartup; // The delay before the character starts moving back
 
 
 // A short hop is when the player breifly taps up so they don't jump as high.
 
-fastFallSpeed = .35; // How fast a character's short hop is if they have one
+fastFallSpeed = global.characterData[characterID].FastFallSpeed; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
 if (global.characterData[characterID].JumpType & 4 == 4)
 {
@@ -153,22 +153,22 @@ enum eSpritesToUse {
 }
 
 CharacterSprites = {
-	idle_Sprite : sRussel_Idle,
-	crouch_Sprite : sRussel_Crouch,
-	standBlock_Sprite : sRussel_Block,
-	crouchBlock_Sprite : sRussel_Crouch_Block,
-	walkForward_Sprite : sRussel_Walk_Forward,
-	walkBackward_Sprite : sRussel_Walk_Backward,
-	runForward_Sprite : sRussel_Run_Forward,
-	runBackward_Sprite : sRussel_Run_Backward,
-	jumpsquat_Sprite : sRussel_Jumpsquat,
-	jump_Sprite : sRussel_Jump,
-	hurt_Sprite : sRussel_Hurt,
-	grab_Sprite : sRussel_Grab,
-	hold_Sprite : sRussel_Hold,
-	launched_Sprite : sRussel_Launched,
-	knockdown_Sprite : sRussel_KnockedDown,
-	getup_Sprite : sRussel_Getup,
+	idle_Sprite : global.characterData[characterID].Sprites.Idle,
+	crouch_Sprite : global.characterData[characterID].Sprites.Crouch,
+	standBlock_Sprite : global.characterData[characterID].Sprites.StandBlock,
+	crouchBlock_Sprite : global.characterData[characterID].Sprites.CrouchBlock,
+	walkForward_Sprite : global.characterData[characterID].Sprites.WalkForward,
+	walkBackward_Sprite : global.characterData[characterID].Sprites.WalkBackward,
+	runForward_Sprite : global.characterData[characterID].Sprites.RunForward,
+	runBackward_Sprite : global.characterData[characterID].Sprites.RunBackward,
+	jumpsquat_Sprite : global.characterData[characterID].Sprites.JumpSquat,
+	jump_Sprite : global.characterData[characterID].Sprites.Jump,
+	hurt_Sprite : global.characterData[characterID].Sprites.Hurt,
+	grab_Sprite : global.characterData[characterID].Sprites.Grab,
+	hold_Sprite : global.characterData[characterID].Sprites.Hold,
+	launched_Sprite : global.characterData[characterID].Sprites.Launched,
+	knockdown_Sprite : global.characterData[characterID].Sprites.Knockdown,
+	getup_Sprite : global.characterData[characterID].Sprites.GetUp,
 }
 
 // Which Character we are currently playing as
