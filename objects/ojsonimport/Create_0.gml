@@ -32,3 +32,12 @@ while(fileName != "")
 }
 
 file_find_close();
+
+if (global.characterData[1].JumpType & 1 == 1)
+{
+	show_debug_message("yup");
+}
+else
+{
+	show_debug_message("nope");
+}

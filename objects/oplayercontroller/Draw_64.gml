@@ -14,8 +14,8 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, grounded);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, target);
-	draw_text(20, 90, hsp);
+	draw_text(20, 70, canShortHop);
+	draw_text(20, 90, characterID);
 } 
 else 
 {

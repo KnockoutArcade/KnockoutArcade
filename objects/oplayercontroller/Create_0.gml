@@ -1,6 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// We can get the data of a character by getting the data from an index of characterData. Since the index
+// of each character may be different from build to build, I've set up this code that will iterate
+// through each index to find the name of each index, with which we can use to access the correct
+// character data
+characterID = -1;
+for (var i = 0; i < global.numberOfCharacters; i++;)
+{
+	if (global.characterData[i].Name == "Russel")
+	{
+		characterID = i;
+	}
+}
+
+
 // Determines which player port this object is using (Player 1, Player 2, etc)
 playerID = 1;
 
@@ -25,18 +39,39 @@ backdashStartup = 3; // The delay before the character starts moving back
 
 fastFallSpeed = .35; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
-canShortHop = true; // Whether the player can shorthop or not
+if (global.characterData[characterID].JumpType & 4 == 4)
+{
+	canShortHop = true; // Whether the player can shorthop or not
+}
+else
+{
+	canShortHop = false;
+}
 
 // A super jump is when the player presses Down just before jumping, allowing them to go higher.
 
-canSuperJump = false; // Whether this character can Super Jump or not
+if (global.characterData[characterID].JumpType & 2 == 2)
+{
+	canSuperJump = true; // Whether this character can Super Jump or not
+}
+else
+{
+	canSuperJump = false;
+}
 isSuperJumping = false; // Is the player currently super jumping?
 storedSuperJump = false; // Whether the player has their super jump stored or not
 superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 // A double jump is when the player jumps again in the air
 
-canDoubleJump = false; // Whether this character can Double Jump or not
+if ((global.characterData[characterID].JumpType & 1) == 1)
+{
+	canDoubleJump = true; // Whether this character can Super Jump or not
+}
+else
+{
+	canDoubleJump = false;
+}
 hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
 heldUpFrames = 0; // How long the player has held UP for
 
