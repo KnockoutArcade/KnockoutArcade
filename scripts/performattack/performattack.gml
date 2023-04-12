@@ -157,26 +157,26 @@ function PerformAttack(Action)
 		}
 	}
 	
-	/*
+	
 	// Re-hitting Hitboxes
-	if (variable_struct_exists(Action, "rehitData")) 
+	if (Action.RehitData.NumberOfHits > 0) 
 	{
-		for (var i = 0; i < Action.rehitData.hitbox; i++;) {
-			for (var j = 0; j < Action.rehitData.numOfHits; j++;) {
-				if (animTimer == Action.rehitData.frames[j]) 
+		for (var i = 0; i < Action.RehitData.HitBox; i++;) {
+			for (var j = 0; j < Action.RehitData.NumberOfHits; j++;) {
+				if (animTimer == Action.RehitData.HitOnFrames[j]) 
 				{
-					hitbox = instance_create_layer(x + (Action.attackProperty.widthOffset[i] * other.image_xscale) + 0.5, y - Action.attackProperty.heightOfset[i], "hitboxes", oHitbox);
+					hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitbox) 
 					{
-						lifetime = Action.attackProperty.lifetime[i];
+						lifetime = Action.AttackProperty[i].Lifetime;
 						hitboxID = i;
-						image_xscale = Action.attackProperty.attackWidth[i] * other.image_xscale;
-						image_yscale = Action.attackProperty.attackHeight[i];
+						image_xscale = Action.AttackProperty[i].AttackWidth * other.image_xscale;
+						image_yscale = Action.AttackProperty[i].AttackHeight;
 						owner = other.id;
 			
 						// Pass through attack data
-						attackProperty = Action.attackProperty;
-						counterHitProperty = Action.counterHitProperty;
+						attackProperty = Action.AttackProperty[i];
+						counterHitProperty = Action.CounterHitProperty[i];
 						
 					}
 					
@@ -192,7 +192,7 @@ function PerformAttack(Action)
 	}
 	hitbox = 0;
 	
-	
+	/*
 	// Projectiles
 	if (variable_struct_exists(Action, "projectileData")) 
 	{
@@ -225,24 +225,24 @@ function PerformAttack(Action)
 			}
 		}
 	}
-	
+	*/
 	
 	// Hurtboxes
-	for (var i = 0; i < Action.numOfHurtboxes; i++;) {
-		if (animTimer == Action.hurtboxProperty.start[i]) 
+	for (var i = 0; i < Action.NumberOfHurtboxes; i++;) {
+		if (animTimer == Action.HurtboxProperty[i].Start) 
 		{
-			hitbox = instance_create_layer(x + (Action.hurtboxProperty.widthOffset[i] * other.image_xscale), y - Action.hurtboxProperty.heightOfset[i], "hitboxes", oPlayerHurtbox);
+			hitbox = instance_create_layer(x + (Action.HurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.HurtboxProperty[i].HeightOffset, "hitboxes", oPlayerHurtbox);
 			with (hitbox) 
 			{
-				lifetime = Action.hurtboxProperty.lifetime[i];
+				lifetime = Action.HurtboxProperty[i].Lifetime;
 				hurtboxID = i;
-				image_xscale = Action.hurtboxProperty.attackWidth[i] * other.image_xscale;
-				image_yscale = Action.hurtboxProperty.attackHeight[i];
+				image_xscale = Action.HurtboxProperty[i].AttackWidth * other.image_xscale;
+				image_yscale = Action.HurtboxProperty[i].AttackHeight;
 				owner = other.id;
 				
-				hurtboxProperty = Action.hurtboxProperty;
+				hurtboxProperty = Action.HurtboxProperty[i];
 			}
 		}
 	}
-	*/
+	
 }
