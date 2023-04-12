@@ -36,4 +36,4 @@ file_find_close();
 // This is to ensure that the code for the Json object runs before the code for the global var
 instance_create_layer(0, 0, "StartText", oGlobalVars);
 
-show_debug_message(global.characterData[1].StandHeavy.GroundMovementData);
+show_debug_message(global.characterData[1].StandHeavy.AttackProperty);

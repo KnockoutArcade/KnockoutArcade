@@ -44,7 +44,7 @@ function PerformAttack(Action)
 			// If animTimer is >= the current window's starting_frame, then it will become the active window.
 			// If more than one window works, this code will allow the largest of the valid windows to be
 			// the active window.
-			if (animTimer >= Action.GroundMovementData.Window[i].Length)
+			if (animTimer >= Action.GroundMovementData.Windows[i].StartingFrame)
 			{
 				currentMovementWindow = i;
 			}
@@ -53,64 +53,64 @@ function PerformAttack(Action)
 		// check hsp overwrite flag
 		// If the overwrite flag hsp is set to 1, then we overwrite the player's current momentum for the desired value
 		// If not, the velocity gets added to our current velocity.
-		if (Action.groundMovementData.window[currentMovementWindow][3])
+		if (Action.GroundMovementData.Windows[currentMovementWindow].OverwriteHorizontalSpeed)
 		{ // hsp velocity
-			hsp = Action.groundMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+			hsp = Action.GroundMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale; // hsp value 
 		} 
-		else if (!Action.groundMovementData.window[currentMovementWindow][3]) 
+		else
 		{
-			hsp += Action.groundMovementData.window[currentMovementWindow][1] * image_xscale;
+			hsp += Action.GroundMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale;
 		}
 		
 		// check vsp overwrite flag
-		if (Action.groundMovementData.window[currentMovementWindow][4])
+		if (Action.GroundMovementData.Windows[currentMovementWindow].OverwriteVerticalSpeed)
 		{
-			vsp = Action.groundMovementData.window[currentMovementWindow][2];
+			vsp = Action.GroundMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
-		else if (!Action.groundMovementData.window[currentMovementWindow][4]) 
+		else
 		{
-			vsp += Action.groundMovementData.window[currentMovementWindow][2];
+			vsp += Action.GroundMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
 		
 	} 
 	
 	// Air
-	if (Action.hasAirMovementData && !grounded)
+	if (Action.AirMovementData.NumberOfWindows > 0 && !grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data
-		for (var i = 0; i < Action.airMovementData.numOfWindows; i++)
+		for (var i = 0; i < Action.AirMovementData.NumberOfWindows; i++)
 		{
 			// Same as grounded
-			if (animTimer >= Action.airMovementData.window[i][0]) 
+			if (animTimer >= Action.AirMovementData.Windows[i].StartingFrame) 
 			{
 				currentMovementWindow = i;
 			}
 		}
 		
 		// check hsp overwrite flag
-		if (Action.airMovementData.window[currentMovementWindow][3])
+		if (Action.AirMovementData.Windows[currentMovementWindow].OverwriteHorizontalSpeed)
 		{ // hsp velocity
-			hsp = Action.airMovementData.window[currentMovementWindow][1] * image_xscale; // hsp value 
+			hsp = Action.AirMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale; // hsp value 
 		} 
-		else if (!Action.airMovementData.window[currentMovementWindow][3]) 
+		else 
 		{
-			hsp += Action.airMovementData.window[currentMovementWindow][1] * image_xscale;
+			hsp += Action.AirMovementData.Windows[currentMovementWindow].HorizontalSpeed * image_xscale;
 		}
 		
 		// check vsp overwrite flag
-		if (Action.airMovementData.window[currentMovementWindow][4])
+		if (Action.AirMovementData.Windows[currentMovementWindow].OverwriteVerticalSpeed)
 		{
-			vsp = Action.airMovementData.window[currentMovementWindow][2];
+			vsp = Action.AirMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
-		else if (!Action.airMovementData.window[currentMovementWindow][4]) 
+		else
 		{
-			vsp += Action.airMovementData.window[currentMovementWindow][2];
+			vsp += Action.AirMovementData.Windows[currentMovementWindow].VerticalSpeed;
 		}
 	}
 	
 	
 	// Throws
-	if (Action.isThrow) 
+	if (Action.IsThrow) 
 	{
 		for (var i = 0; i < Action.opponentPositionData.numOfWindows; i++) 
 		{
@@ -138,7 +138,7 @@ function PerformAttack(Action)
 	
 	
 	// Hitboxes
-	for (var i = 0; i < Action.numOfHitboxes; i++;) {
+	for (var i = 0; i < Action.NumberOfHitboxes; i++;) {
 		if (animTimer == Action.attackProperty.start[i]) 
 		{
 			hitbox = instance_create_layer(x + (Action.attackProperty.widthOffset[i] * other.image_xscale) + 0.5, y - Action.attackProperty.heightOfset[i], "hitboxes", oHitbox);
