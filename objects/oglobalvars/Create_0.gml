@@ -1,92 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+RusselIndex = -1;
+BeverlyIndex = -1;
+
+for (var i = 0; i < global.numberOfCharacters; i++;)
+{
+	if (global.characterData[i].Name == "Russel")
+	{
+		RusselIndex = i;
+	}
+	else if (global.characterData[i].Name == "Beverly")
+	{
+		BeverlyIndex = i;
+	}
+}
+
 // Russel Vars
 global.stRusselMoves = {
-	StandLight : {
-		duration : 7, // Total length of this attack in frames
-		spriteID : sRussel_Standing_Light,
-		numOfWindows : 4,
-		
-		//        [window# [ Length, image_index ], ... ]
-		window : [[1 , 0], [3, 1], [5, 2], [7, 3]],
-		
-		numOfHitboxes : 1,
-		
-		attackProperty : {
-			start : [3],
-			lifetime : [4],
-			attackWidth : [15],
-			attackHeight : [5],
-			widthOffset : [12],
-			heightOfset : [15],
-			group : [1],
-			
-			damage : [3],
-			meterGain : [4],
-			comboScaling : [2],
-			attackHitstop : [6],
-			attackHitstun : [9],
-			attackType : [eAttackType.MID],
-			blockstun : [3],
-			knockback: [1],
-			airKnockbackV: [0],
-			airKnockbackH: [1],
-			
-			launches: [false],
-			LaunchKnockbackV: [0],
-			LaunchKnockbackH: [0],
-			pushback: [1],
-			
-			particlexOffset : [0],
-			particleyOffset : [0],
-			particleEffect : [sSmallHitspark],
-			particleDuration : [5]
-		},
-		
-		counterHitProperty: { // everything that changes for this move on counter hit
-			counterHitLevel: [1],
-			
-			group : [1],
-			
-			damage: [5],
-			meterGain : [6],
-			comboScaling : [2],
-			attackHitstop : [10], 
-			attackHitstun : [11],
-			knockback: [1],
-			
-			airKnockbackV: [-2],
-			airKnockbackH: [4],
-			
-			launches: [false],
-			LaunchKnockbackV: [-1],
-			LaunchKnockbackH: [5],
-			pushback: [1],
-			
-			particlexOffset : [18],
-			particleyOffset : [10],
-			particleEffect : [sHitEffect],
-			particleDuration : [10]
-		},
-		
-		isThrow : false,
-		
-		hasGroundMovementData : false,
-		hasAirMovementData : false,
-		
-		numOfHurtboxes : 1,
-		
-		hurtboxProperty : {
-			start : [3],
-			lifetime : [6],
-			attackWidth : [20],
-			attackHeight : [6],
-			widthOffset : [4],
-			heightOfset : [12]
-		}
-		
-	},
+	StandLight : global.characterData[RusselIndex].StandLight,
 	
 	StandLight2 : {
 		duration : 14,

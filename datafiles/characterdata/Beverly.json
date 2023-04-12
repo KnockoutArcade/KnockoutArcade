@@ -5,7 +5,7 @@
   "EnvironmentalDisplacement": 0,
   "WalkSpeed": 1.25,
   "RunSpeed": 2.5,
-  "Traction": 0.5,
+  "Traction": 0.35,
   "JumpSpeed": 4.5,
   "FallSpeed": 0.25,
   "BackDashDuration": 25,
@@ -2506,6 +2506,6 @@
   ],
   "Version": "Ver0.9.6",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-11T15:02:23.3607327-07:00",
+  "LastModified": "2023-04-12T14:11:53.4417433-07:00",
   "LastModifiedBy": "creep"
 }

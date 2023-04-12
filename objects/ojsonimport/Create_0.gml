@@ -33,11 +33,7 @@ while(fileName != "")
 
 file_find_close();
 
-if (global.characterData[1].JumpType & 1 == 1)
-{
-	show_debug_message("yup");
-}
-else
-{
-	show_debug_message("nope");
-}
+// This is to ensure that the code for the Json object runs before the code for the global var
+instance_create_layer(0, 0, "StartText", oGlobalVars);
+
+show_debug_message(global.characterData[1].StandHeavy.GroundMovementData);

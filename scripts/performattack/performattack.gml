@@ -24,27 +24,27 @@ function PerformAttack(Action)
 {
 	var hitbox = 0;
 	// Animations
-	for (var i = 0; i < Action.numOfWindows; i++) 
+	for (var i = 0; i < Action.NumberOfWindows; i++) 
 	{
-			if (animTimer >= Action.window[i][0])
+			if (animTimer >= Action.Window[i].Length)
 			{
-				image_index = Action.window[i][1];
+				image_index = Action.Window[i].ImageIndex;
 			}
 	}
 	
 	
 	// Momentum Data
 	// Grounded
-	if (Action.hasGroundMovementData && grounded)
+	if (Action.GroundMovementData.NumberOfWindows > 0 && grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data
-		for (var i = 0; i < Action.groundMovementData.numOfWindows; i++) 
+		for (var i = 0; i < Action.GroundMovementData.NumberOfWindows; i++) 
 		{
 			// We iterate through each window from left to right to determine which window should be active.
 			// If animTimer is >= the current window's starting_frame, then it will become the active window.
 			// If more than one window works, this code will allow the largest of the valid windows to be
 			// the active window.
-			if (animTimer >= Action.groundMovementData.window[i][0])
+			if (animTimer >= Action.GroundMovementData.Window[i].Length)
 			{
 				currentMovementWindow = i;
 			}
@@ -244,5 +244,4 @@ function PerformAttack(Action)
 			}
 		}
 	}
-	
 }
