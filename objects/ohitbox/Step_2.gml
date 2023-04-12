@@ -4,7 +4,7 @@
 
 visible = global.toggleHitboxVisibility;
 
-if (attackProperty.attackType[hitboxID] == eAttackType.GRAB)
+if (attackProperty.AttackType == eAttackType.GRAB)
 {
 	sprite_index = sGrabBox;
 }

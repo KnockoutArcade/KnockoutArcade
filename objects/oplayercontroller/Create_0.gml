@@ -126,11 +126,11 @@ enum eState {
 }
 
 enum eAttackType {
-	HIGH, // Must be stand blocking
-	MID, // Block high or low
-	LOW, // Must Block Crouching
-	GRAB, // Basic grab
-	COMMAND_GRAB // Advanced type of grab with special properties
+	HIGH = 0, // Must be stand blocking
+	MID = 1, // Block high or low
+	LOW = 2, // Must Block Crouching
+	GRAB = 3, // Basic grab
+	COMMAND_GRAB = 4 // Advanced type of grab with special properties
 }
 
 enum eSpritesToUse {
