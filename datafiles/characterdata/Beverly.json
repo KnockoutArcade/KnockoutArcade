@@ -211,6 +211,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -367,6 +369,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -488,6 +492,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -740,6 +746,8 @@
           "HeightOffset": 2
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 1,
         "NumberOfHits": 8,
@@ -943,6 +951,8 @@
           "HeightOffset": 2
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1128,6 +1138,8 @@
           "HeightOffset": 12
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1241,6 +1253,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1354,6 +1368,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1475,6 +1491,8 @@
           "HeightOffset": 10
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1618,6 +1636,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1757,6 +1777,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -1874,6 +1896,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -2070,6 +2094,8 @@
           "HeightOffset": 0
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -2183,6 +2209,8 @@
           "HeightOffset": 6
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -2308,6 +2336,8 @@
           "HeightOffset": 5
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -2484,6 +2514,8 @@
           "HeightOffset": 4
         }
       ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -2504,8 +2536,8 @@
       "SupplimentaryScript": ""
     }
   ],
-  "Version": "Ver0.9.6",
+  "Version": "Ver1.0.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-07T11:47:20.6011606-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-04-13T09:22:18.1033426-04:00",
+  "LastModifiedBy": "johnk"
 }

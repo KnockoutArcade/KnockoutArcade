@@ -134,6 +134,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 17: // down special
 			formedCharacter.DownSpecial = nextMove;
 			break;
+			case 18: // command grab
+			formedCharacter.CommandGrab = nextMove;
+			break;
 			case 0: // backward throw
 			default:
 			formedCharacter.BackwardThrow = nextMove;
