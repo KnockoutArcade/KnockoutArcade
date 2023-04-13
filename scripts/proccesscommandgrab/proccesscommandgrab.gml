@@ -20,7 +20,7 @@ function ProccessCommandGrab()
 			with (ThrowDistance)
 			{
 				owner = other.id;
-				image_xscale = other.selectedCharacter.CommandGrab.opponentPositionData.distanceFromWall * other.image_xscale;
+				image_xscale = other.selectedCharacter.CommandGrab.OpponentPositionData.DistanceFromWall * other.image_xscale;
 				throwToCheck = other.selectedCharacter.CommandGrab;
 				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
 			}

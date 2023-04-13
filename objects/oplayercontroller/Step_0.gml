@@ -890,11 +890,11 @@ switch state
 	{
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.airMovementData.gravityScale, selectedCharacter.UpSpecial.airMovementData.fallScale, false, true);
+			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.airMovementData.gravityScale, selectedCharacter.UpSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
 		
 		if (animTimer < 28)
@@ -913,11 +913,11 @@ switch state
 	{
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale, false, true);
+			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.airMovementData.gravityScale, selectedCharacter.DownSpecial.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
 	}
 	break;
@@ -1008,11 +1008,11 @@ switch state
 		
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale, false, true);
+			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true);
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.airMovementData.gravityScale, selectedCharacter.CommandGrab.airMovementData.fallScale);
+			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale);
 		}
 		
 		ProccessCommandGrab();
