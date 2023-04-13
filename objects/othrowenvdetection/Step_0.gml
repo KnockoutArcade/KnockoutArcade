@@ -19,10 +19,10 @@ switch (mode)
 	
 			// Figure out how much time we have to move by subtracting the first active frame of the move by our
 			// owner's animTimer value.
-			var timeToMove = throwToCheck.attackProperty.start[0] - owner.animTimer;
+			var timeToMove = throwToCheck.AttackProperty[0].Start - owner.animTimer;
 	
 			// Velocity is distance/time. We also need to move backwards
-			owner.hsp = distanceFromWall/timeToMove * (owner.image_xscale * -sign(throwToCheck.opponentPositionData.distanceFromWall));
+			owner.hsp = distanceFromWall/timeToMove * (owner.image_xscale * -sign(throwToCheck.OpponentPositionData.DistanceFromWall));
 		}
 		
 		instance_destroy();

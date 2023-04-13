@@ -970,7 +970,7 @@ switch state
 				with (ThrowDistance)
 				{
 					owner = other.id;
-					image_xscale = other.selectedCharacter.ForwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					image_xscale = other.selectedCharacter.ForwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
 					throwToCheck = other.selectedCharacter.ForwardThrow;
 				}
 			} 
@@ -988,7 +988,7 @@ switch state
 				with (ThrowDistance) 
 				{
 					owner = other.id;
-					image_xscale = other.selectedCharacter.BackwardThrow.opponentPositionData.distanceFromWall * other.image_xscale;
+					image_xscale = other.selectedCharacter.BackwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
 					throwToCheck = other.selectedCharacter.BackwardThrow;
 				}
 			}
@@ -1036,13 +1036,13 @@ switch state
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = selectedCharacter.ForwardThrow.spriteID;
+		sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 		image_index = 0;
 		
 		PerformAttack(selectedCharacter.ForwardThrow);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if (animTimer > selectedCharacter.ForwardThrow.attackProperty.start[0])
+		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
 		}
@@ -1052,7 +1052,7 @@ switch state
 			state = eState.IDLE;
 			frameAdvantage = true;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.ForwardThrow.opponentPositionData.throwOffset * image_xscale;
+			x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
 		}
 	}
 	break;
@@ -1062,13 +1062,13 @@ switch state
 		grounded = true;
 		inAttackState = true;
 		
-		sprite_index = selectedCharacter.BackwardThrow.spriteID;
+		sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 		image_index = 0;
 		
 		PerformAttack(selectedCharacter.BackwardThrow);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if (animTimer > selectedCharacter.BackwardThrow.attackProperty.start[0])
+		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
 		}
@@ -1080,7 +1080,7 @@ switch state
 			canTurnAround = true;
 			inAttackState = false;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.BackwardThrow.opponentPositionData.throwOffset * image_xscale;
+			x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
 		}
 	}
 	break;
