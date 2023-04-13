@@ -66,6 +66,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.NumberOfHitboxes  = selectedCharacter.MoveData[i].NumberOfHitboxes;
 		nextMove.NumberOfHurtboxes = selectedCharacter.MoveData[i].NumberOfHurtboxes;
 		nextMove.NumberOfWindows = selectedCharacter.MoveData[i].NumberOfFrames;
+		nextMove.NumberOfProjectiles = selectedCharacter.MoveData[i].NumberOfProjectiles;
 		nextMove.IsThrow = selectedCharacter.MoveData[i].IsThrow;
 		nextMove.Window = selectedCharacter.MoveData[i].FrameData;
 		nextMove.HurtboxProperty = selectedCharacter.MoveData[i].HurtboxData;
@@ -73,6 +74,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.AirMovementData = selectedCharacter.MoveData[i].AirMovementData;
 		nextMove.CounterHitProperty = selectedCharacter.MoveData[i].CounterData;
 		nextMove.RehitData = selectedCharacter.MoveData[i].RehitData;
+		nextMove.ProjectileData = selectedCharacter.MoveData[i].ProjectileData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{
@@ -125,6 +127,12 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			break;
 			case 15: // jumping heavy
 			formedCharacter.JumpingHeavy = nextMove;
+			break;
+			case 16: // up special
+			formedCharacter.UpSpecial = nextMove;
+			break;
+			case 17: // down special
+			formedCharacter.DownSpecial = nextMove;
 			break;
 			case 0: // backward throw
 			default:
