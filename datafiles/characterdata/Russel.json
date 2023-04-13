@@ -2815,10 +2815,50 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": ""
+    },
+    {
+      "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
+      "MoveType": 18,
+      "SpriteName": "sRussel_Grab",
+      "Duration": 110,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "IsThrow": true,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
     }
   ],
   "Version": "Ver1.0.1",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-04-12T19:46:40.4479177-07:00",
+  "LastModified": "2023-04-13T10:04:13.7138094-07:00",
   "LastModifiedBy": "creep"
 }
