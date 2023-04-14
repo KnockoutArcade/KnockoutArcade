@@ -1664,62 +1664,67 @@ global.ProjectileBase_HitboxData = { // Seperating the name of the projectile fr
 	// They also don't need a startup or lifetime, as they are active indefinetly until the projectile despawns
 	// Projectiles also can't be grabs or throws.
 	
-	numOfHitboxes : 1,
+	NumberOfHitboxes : 1,
 		
-	attackProperty : {
-		attackWidth : [10],
-		attackHeight : [5],
-		widthOffset : [-5],
-		heightOfset : [-2],
-		group : [1],
+	AttackData : [
+		{
+			AttackWidth : 10,
+			AttackHeight : 5,
+			WidthOffset : -5,
+			HeightOffset : -2,
+			Group : 1,
 		
-		damage : [10],
-		meterGain : [4],
-		comboScaling : [2],
-		attackHitstop : [6],
-		attackHitstun : [9],
-		attackType : [eAttackType.MID],
-		blockstun : [3],
-		knockback: [1],
-		airKnockbackV: [0],
-		airKnockbackH: [1],
+			Damage : 10,
+			MeterGain : 4,
+			ComboScaling : 2,
+			AttackHitStop : 6,
+			AttackHitStun : 9,
+			AttackType : eAttackType.MID,
+			BlockStun : 3,
+			KnockBack: 1,
+			AirKnockbackVertical: 0,
+			AirKnockbackHorizontal: 1,
 		
-		launches: [false],
-		LaunchKnockbackV: [0],
-		LaunchKnockbackH: [0],
-		pushback: [1],
+			Launches: false,
+			LaunchKnockbackVertical: 0,
+			LaunchKnockbackHorizontal: 0,
+			Pushback: 1,
 		
-		particlexOffset : [0],
-		particleyOffset : [0],
-		particleEffect : [sSmallHitspark],
-		particleDuration : [5]
-	},
+			ParticleXOffset : 0,
+			ParticleYOffset : 0,
+			ParticleEffect : "sSmallHitspark",
+			ParticleDuration : 5
+		}
+	],
 	
-	counterHitProperty: { // everything that changes for this move on counter hit
-		counterHitLevel: [1],
+	CounterData: [
+		{ // everything that changes for this move on counter hit
+			CounterHitLevel: 1,
 		
-		group : [1],
+			Group : 1,
 		
-		damage: [12],
-		meterGain : [6],
-		comboScaling : [2],
-		attackHitstop : [10], 
-		attackHitstun : [11],
-		knockback: [1],
+			Damage : 12,
+			MeterGain : 4,
+			ComboScaling : 2,
+			AttackHitStop : 6,
+			AttackHitStun : 9,
+			AttackType : eAttackType.MID,
+			BlockStun : 3,
+			KnockBack: 1,
+			AirKnockbackVertical: 0,
+			AirKnockbackHorizontal: 1,
 		
-		airKnockbackV: [-2],
-		airKnockbackH: [4],
+			Launches: false,
+			LaunchKnockbackVertical: 0,
+			LaunchKnockbackHorizontal: 0,
+			Pushback: 1,
 		
-		launches: [false],
-		LaunchKnockbackV: [-1],
-		LaunchKnockbackH: [5],
-		pushback: [1],
-		
-		particlexOffset : [18],
-		particleyOffset : [10],
-		particleEffect : [sHitEffect],
-		particleDuration : [10]
-	},
+			ParticleXOffset : 0,
+			ParticleYOffset : 0,
+			ParticleEffect : "sSmallHitspark",
+			ParticleDuration : 5
+		}
+	],
 }
 
 global.RusselPalettes = {

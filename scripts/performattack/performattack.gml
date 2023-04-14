@@ -192,40 +192,40 @@ function PerformAttack(Action)
 	}
 	hitbox = 0;
 	
-	/*
+	
 	// Projectiles
-	if (variable_struct_exists(Action, "projectileData")) 
+	if (Action.NumberOfProjectiles > 0) 
 	{
-		for (var i = 0; i < Action.projectileData.numberOfProjectiles; i++;)
+		for (var i = 0; i < Action.NumberOfProjectiles; i++;)
 		{
-			if (animTimer == Action.projectileData.spawnFrame[i])
+			if (animTimer == Action.ProjectileData[i].SpawnFrame)
 			{
-				var projectile = instance_create_layer(x + (Action.projectileData.spawnOffsetX[i] * other.image_xscale), y + Action.projectileData.spawnOffsetY[i], "Instances", Action.projectileData.projectileToSpawn[i]);
+				var Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", asset_get_index(Action.ProjectileData[i].ProjectileObject));
 			
-				with (projectile)
+				with (Projectile)
 				{
 					image_xscale = other.image_xscale;
 					playerOwner = other.id;
 					
-					hitboxID = instance_create_layer(x + (hitboxProperties.attackProperty.attackWidth[i] * other.image_xscale) + 0.5, y - hitboxProperties.attackProperty.heightOfset[i], "hitboxes", oHitbox);
+					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitboxID) 
 					{
 						hitboxID = i;
-						image_xscale = other.hitboxProperties.attackProperty.attackWidth[i] * other.image_xscale;
-						image_yscale = other.hitboxProperties.attackProperty.attackHeight[i];
+						image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
+						image_yscale = other.hitboxProperties.AttackData[i].AttackHeight;
 						owner = other.id;
 						
 						isProjectile = true;
 			
 						// Pass through attack data
-						attackProperty = other.hitboxProperties.attackProperty;
-						counterHitProperty = other.hitboxProperties.counterHitProperty;
+						attackProperty = other.hitboxProperties.AttackData[i];
+						counterHitProperty = other.hitboxProperties.CounterData[i];
 					}
 				}
 			}
 		}
 	}
-	*/
+	
 	
 	// Hurtboxes
 	for (var i = 0; i < Action.NumberOfHurtboxes; i++;) {

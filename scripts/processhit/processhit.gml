@@ -66,7 +66,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Combo Scaling
 		owner.playerOwner.combo++; // Add 1 to our combo length
 		var scaledDamage = attackProperty.Damage; // Set the initial amount of damage to do
-		var scaleAmount = 1 - (.1 * owner.playerOwner.ComboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
+		var scaleAmount = 1 - (.1 * owner.playerOwner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
 					
 		if (owner.playerOwner.combo > 2) 
@@ -95,7 +95,7 @@ function ProcessHit( attackProperty, collision_list)
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
 		}
-		else if (attackProperty.launches)
+		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;

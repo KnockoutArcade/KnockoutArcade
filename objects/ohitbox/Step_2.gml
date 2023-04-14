@@ -482,7 +482,7 @@ else
 					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
 					with (particle) 
 					{
-						sprite_index = asset_get_index(other.attackProperty.particleEffect);
+						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = sign(other.owner.image_xscale);
 						lifetime = other.attackProperty.ParticleDuration;
 					}
