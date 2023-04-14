@@ -9,24 +9,24 @@ playerID = 1;
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
-walkSpeed = global.characterData[characterID].WalkSpeed; // How fast the character walks in pixels/frame
-runSpeed = global.characterData[characterID].RunSpeed; // How fast the character runs in pixels/frame
-traction = global.characterData[characterID].Traction; // How much this character slows down each frame in pixels/frame
-jumpSpeed = global.characterData[characterID].JumpSpeed; // How high a character jumps - Initial Jump velocity
-fallSpeed = global.characterData[characterID].FallSpeed; // How fast a character falls
+walkSpeed = selectedCharacter.WalkSpeed; // How fast the character walks in pixels/frame
+runSpeed = selectedCharacter.RunSpeed; // How fast the character runs in pixels/frame
+traction = selectedCharacter.Traction; // How much this character slows down each frame in pixels/frame
+jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
+fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
 //Backdash Vars (The state is refered to as Run back for consistency)
-backdashDuration = global.characterData[characterID].BackDashDuration; // The total duration of a character's backdash
-backdashInvincibility = global.characterData[characterID].BackDashInvincibility; // How long the character is invincible for at the start of their backdash
-backdashSpeed = global.characterData[characterID].BackDashSpeed; // How fast their backdash moves them back
-backdashStartup = global.characterData[characterID].BackDashStartup; // The delay before the character starts moving back
+backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
+backdashInvincibility = selectedCharacter.BackDashInvincibility; // How long the character is invincible for at the start of their backdash
+backdashSpeed = selectedCharacter.BackDashSpeed; // How fast their backdash moves them back
+backdashStartup = selectedCharacter.BackDashStartup; // The delay before the character starts moving back
 
 
 // A short hop is when the player breifly taps up so they don't jump as high.
 
-fastFallSpeed = global.characterData[characterID].FastFallSpeed; // How fast a character's short hop is if they have one
+fastFallSpeed = selectedCharacter.FastFallSpeed; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
-if (global.characterData[characterID].JumpType & 4 == 4)
+if (selectedCharacter.JumpType & 4 == 4)
 {
 	canShortHop = true; // Whether the player can shorthop or not
 }
@@ -37,7 +37,7 @@ else
 
 // A super jump is when the player presses Down just before jumping, allowing them to go higher.
 
-if (global.characterData[characterID].JumpType & 2 == 2)
+if (selectedCharacter.JumpType & 2 == 2)
 {
 	canSuperJump = true; // Whether this character can Super Jump or not
 }
@@ -51,7 +51,7 @@ superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 // A double jump is when the player jumps again in the air
 
-if ((global.characterData[characterID].JumpType & 1) == 1)
+if ((selectedCharacter.JumpType & 1) == 1)
 {
 	canDoubleJump = true; // Whether this character can Super Jump or not
 }
@@ -140,26 +140,23 @@ enum eSpritesToUse {
 }
 
 CharacterSprites = {
-	idle_Sprite : global.characterData[characterID].Sprites.Idle,
-	crouch_Sprite : global.characterData[characterID].Sprites.Crouch,
-	standBlock_Sprite : global.characterData[characterID].Sprites.StandBlock,
-	crouchBlock_Sprite : global.characterData[characterID].Sprites.CrouchBlock,
-	walkForward_Sprite : global.characterData[characterID].Sprites.WalkForward,
-	walkBackward_Sprite : global.characterData[characterID].Sprites.WalkBackward,
-	runForward_Sprite : global.characterData[characterID].Sprites.RunForward,
-	runBackward_Sprite : global.characterData[characterID].Sprites.RunBackward,
-	jumpsquat_Sprite : global.characterData[characterID].Sprites.JumpSquat,
-	jump_Sprite : global.characterData[characterID].Sprites.Jump,
-	hurt_Sprite : global.characterData[characterID].Sprites.Hurt,
-	grab_Sprite : global.characterData[characterID].Sprites.Grab,
-	hold_Sprite : global.characterData[characterID].Sprites.Hold,
-	launched_Sprite : global.characterData[characterID].Sprites.Launched,
-	knockdown_Sprite : global.characterData[characterID].Sprites.Knockdown,
-	getup_Sprite : global.characterData[characterID].Sprites.GetUp,
+	idle_Sprite : selectedCharacter.Sprites.Idle,
+	crouch_Sprite : selectedCharacter.Sprites.Crouch,
+	standBlock_Sprite : selectedCharacter.Sprites.StandBlock,
+	crouchBlock_Sprite : selectedCharacter.Sprites.CrouchBlock,
+	walkForward_Sprite : selectedCharacter.Sprites.WalkForward,
+	walkBackward_Sprite : selectedCharacter.Sprites.WalkBackward,
+	runForward_Sprite : selectedCharacter.Sprites.RunForward,
+	runBackward_Sprite : selectedCharacter.Sprites.RunBackward,
+	jumpsquat_Sprite : selectedCharacter.Sprites.JumpSquat,
+	jump_Sprite : selectedCharacter.Sprites.Jump,
+	hurt_Sprite : selectedCharacter.Sprites.Hurt,
+	grab_Sprite : selectedCharacter.Sprites.Grab,
+	hold_Sprite : selectedCharacter.Sprites.Hold,
+	launched_Sprite : selectedCharacter.Sprites.Launched,
+	knockdown_Sprite : selectedCharacter.Sprites.Knockdown,
+	getup_Sprite : selectedCharacter.Sprites.GetUp,
 }
-
-// Which Character we are currently playing as
-selectedCharacter = global.stRusselMoves;
 
 // State-related Variables
 state = eState.IDLE;

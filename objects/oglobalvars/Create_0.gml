@@ -1,61 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-RusselIndex = -1;
-BeverlyIndex = -1;
-
-for (var i = 0; i < global.numberOfCharacters; i++;)
-{
-	if (global.characterData[i].Name == "Russel")
-	{
-		RusselIndex = i;
-	}
-	else if (global.characterData[i].Name == "Beverly")
-	{
-		BeverlyIndex = i;
-	}
-}
-
-// Russel Vars
-global.stRusselMoves = {
-	StandLight : global.characterData[RusselIndex].StandLight,
-	
-	StandLight2 : global.characterData[RusselIndex].StandLight2,
-	
-	StandLight3 : global.characterData[RusselIndex].StandLight3,
-	
-	StandMedium : global.characterData[RusselIndex].StandMedium,
-	
-	StandHeavy : global.characterData[RusselIndex].StandHeavy,
-		
-	CrouchingLight : global.characterData[RusselIndex].CrouchingLight,
-	
-	CrouchingMedium : global.characterData[RusselIndex].CrouchingMedium,
-		
-	CrouchingHeavy : global.characterData[RusselIndex].CrouchingHeavy,
-	
-	JumpingLight : global.characterData[RusselIndex].JumpingLight,
-	
-	JumpingMedium : global.characterData[RusselIndex].JumpingMedium,
-	
-	JumpingHeavy : global.characterData[RusselIndex].JumpingHeavy,
-	
-	Grab : global.characterData[RusselIndex].Grab,
-	
-	ForwardThrow : global.characterData[RusselIndex].ForwardThrow,
-	
-	BackwardThrow : global.characterData[RusselIndex].BackwardThrow,
-	
-	NeutralSpecial : global.characterData[RusselIndex].NeutralSpecial,
-	
-	SideSpecial : global.characterData[RusselIndex].SideSpecial,
-	
-	UpSpecial : global.characterData[RusselIndex].UpSpecial,
-	
-	DownSpecial : global.characterData[RusselIndex].DownSpecial,
-	
-	CommandGrab : global.characterData[RusselIndex].CommandGrab,
-};
 
 // BeverlyVars
 global.stBeverlyMoves = {
