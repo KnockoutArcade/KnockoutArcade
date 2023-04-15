@@ -11,6 +11,7 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 	if (global.characterData[i].Name == "Russel")
 	{
 		selectedCharacter = global.characterData[i];
+		break;
 	}
 }
 
