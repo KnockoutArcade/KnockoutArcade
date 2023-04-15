@@ -67,7 +67,7 @@
           "ImageIndex": 4
         },
         {
-          "Length": 22,
+          "Length": 25,
           "ImageIndex": 5
         },
         {
@@ -87,8 +87,8 @@
           "ImageIndex": 9
         },
         {
-          "Length": 10,
-          "ImageIndex": 55
+          "Length": 55,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -300,7 +300,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
-          "ParticleEffect": "sHitbox",
+          "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
@@ -2827,6 +2827,6 @@
   ],
   "Version": "Ver1.0.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-14T16:15:46.7960372-07:00",
+  "LastModified": "2023-04-14T17:58:49.4773385-07:00",
   "LastModifiedBy": "creep"
 }
