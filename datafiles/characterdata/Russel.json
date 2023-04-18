@@ -121,7 +121,7 @@
       }
     ]
   },
-  "NumberOfPalettes": 3,
+  "NumberOfPalettes": 10,
   "Palettes": [
     {
       "UID": "3cee27aa-540e-4e82-b59b-9e63668d47ef",
@@ -380,6 +380,615 @@
         {
           "Red": 255,
           "Blue": 255,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "80cf977b-afc3-4c42-bd98-e7e1f3294cbf",
+      "Name": "Green",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 88,
+          "Blue": 100,
+          "Green": 214
+        },
+        {
+          "Red": 61,
+          "Blue": 73,
+          "Green": 161
+        },
+        {
+          "Red": 24,
+          "Blue": 31,
+          "Green": 84
+        },
+        {
+          "Red": 2,
+          "Blue": 14,
+          "Green": 26
+        },
+        {
+          "Red": 37,
+          "Blue": 184,
+          "Green": 128
+        },
+        {
+          "Red": 32,
+          "Blue": 117,
+          "Green": 35
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "2e43ed1e-e123-4b56-ba0a-fa174e0c694e",
+      "Name": "Black - Kyo",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 71,
+          "Blue": 61,
+          "Green": 61
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 15,
+          "Blue": 15,
+          "Green": 15
+        },
+        {
+          "Red": 15,
+          "Blue": 3,
+          "Green": 3
+        },
+        {
+          "Red": 0,
+          "Blue": 81,
+          "Green": 35
+        },
+        {
+          "Red": 14,
+          "Blue": 34,
+          "Green": 0
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 69,
+          "Blue": 28,
+          "Green": 18
+        },
+        {
+          "Red": 31,
+          "Blue": 20,
+          "Green": 6
+        },
+        {
+          "Red": 3,
+          "Blue": 10,
+          "Green": 9
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "8bf7d2a2-9c03-4abb-a538-ba0c557c3697",
+      "Name": "White - Ryu",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 91,
+          "Blue": 135,
+          "Green": 105
+        },
+        {
+          "Red": 26,
+          "Blue": 69,
+          "Green": 22
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 15,
+          "Blue": 3,
+          "Green": 3
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 167,
+          "Blue": 0,
+          "Green": 34
+        },
+        {
+          "Red": 126,
+          "Blue": 18,
+          "Green": 2
+        },
+        {
+          "Red": 41,
+          "Blue": 34,
+          "Green": 6
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "e30d8fb7-5419-43dd-a4ab-66c077e471df",
+      "Name": "Purple - T. Turner",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 235,
+          "Blue": 198,
+          "Green": 154
+        },
+        {
+          "Red": 227,
+          "Blue": 184,
+          "Green": 109
+        },
+        {
+          "Red": 186,
+          "Blue": 199,
+          "Green": 74
+        },
+        {
+          "Red": 124,
+          "Blue": 171,
+          "Green": 43
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 15,
+          "Blue": 3,
+          "Green": 3
+        },
+        {
+          "Red": 92,
+          "Blue": 255,
+          "Green": 209
+        },
+        {
+          "Red": 71,
+          "Blue": 193,
+          "Green": 138
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "f12bb9e4-5c34-4666-8670-1290d33fa376",
+      "Name": "Orange",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 245,
+          "Blue": 49,
+          "Green": 160
+        },
+        {
+          "Red": 230,
+          "Blue": 30,
+          "Green": 116
+        },
+        {
+          "Red": 204,
+          "Blue": 12,
+          "Green": 70
+        },
+        {
+          "Red": 171,
+          "Blue": 7,
+          "Green": 34
+        },
+        {
+          "Red": 135,
+          "Blue": 204,
+          "Green": 41
+        },
+        {
+          "Red": 58,
+          "Blue": 125,
+          "Green": 4
+        },
+        {
+          "Red": 71,
+          "Blue": 61,
+          "Green": 61
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 69,
+          "Blue": 28,
+          "Green": 18
+        },
+        {
+          "Red": 31,
+          "Blue": 20,
+          "Green": 6
+        },
+        {
+          "Red": 3,
+          "Blue": 10,
+          "Green": 9
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "b6ad645e-0e9a-4f70-b292-92a3f90ccbf2",
+      "Name": "DIO",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 227,
+          "Blue": 96,
+          "Green": 224
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 185,
+          "Blue": 60,
+          "Green": 93
+        },
+        {
+          "Red": 86,
+          "Blue": 41,
+          "Green": 62
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 86,
+          "Blue": 41,
+          "Green": 62
+        },
+        {
+          "Red": 71,
+          "Blue": 61,
+          "Green": 61
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 185,
+          "Blue": 60,
+          "Green": 93
+        },
+        {
+          "Red": 86,
+          "Blue": 41,
+          "Green": 62
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "3dcf46da-eb7c-467f-a62a-8e262ca8b9a9",
+      "Name": "Rock Howard",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 255,
+          "Blue": 62,
+          "Green": 56
+        },
+        {
+          "Red": 199,
+          "Blue": 117,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 71,
+          "Blue": 61,
+          "Green": 61
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 71,
+          "Blue": 61,
+          "Green": 61
+        },
+        {
+          "Red": 26,
+          "Blue": 22,
+          "Green": 22
+        },
+        {
+          "Red": 227,
+          "Blue": 123,
+          "Green": 213
+        },
+        {
+          "Red": 196,
+          "Blue": 63,
+          "Green": 163
+        },
+        {
+          "Red": 122,
+          "Blue": 20,
+          "Green": 74
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
           "Green": 0
         }
       ]
@@ -3434,6 +4043,6 @@
   ],
   "Version": "Ver1.0.1",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-04-18T13:25:06.6767811-07:00",
+  "LastModified": "2023-04-18T14:35:24.2116683-07:00",
   "LastModifiedBy": "creep"
 }
