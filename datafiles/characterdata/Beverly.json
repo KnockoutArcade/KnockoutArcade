@@ -121,7 +121,7 @@
       }
     ]
   },
-  "NumberOfPalettes": 2,
+  "NumberOfPalettes": 10,
   "Palettes": [
     {
       "UID": "b0da4ab6-a494-40ef-a8ea-29284ecc4337",
@@ -294,6 +294,702 @@
           "Red": 92,
           "Blue": 52,
           "Green": 43
+        }
+      ]
+    },
+    {
+      "UID": "d23df0f0-928d-4502-9dd2-0722ba4e009e",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "1a7c0eb7-7274-4a66-acdb-4534bad1251c",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "9f44f8ff-bf6e-4f46-b7d2-949b75db876c",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "c305d9b0-da5c-4b0b-b9fc-c8e3e16aba30",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "2028905c-fa05-4bc0-b895-053c690a975f",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "fee5f05d-580e-452f-811f-1bd076f50d68",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "1bf52e8f-c150-462d-b840-d0baa772cd8d",
+      "Name": "",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        }
+      ]
+    },
+    {
+      "UID": "181532e7-f25d-4ad6-88f9-98b1b81b12d1",
+      "Name": "Limit",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
+        },
+        {
+          "Red": 0,
+          "Blue": 0,
+          "Green": 0
         }
       ]
     }
@@ -3083,6 +3779,6 @@
   ],
   "Version": "Ver1.0.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-18T14:15:28.5233923-07:00",
+  "LastModified": "2023-04-18T14:42:00.8390535-07:00",
   "LastModifiedBy": "creep"
 }
