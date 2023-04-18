@@ -121,8 +121,95 @@
       }
     ]
   },
-  "NumberOfPalettes": 2,
+  "NumberOfPalettes": 3,
   "Palettes": [
+    {
+      "UID": "3cee27aa-540e-4e82-b59b-9e63668d47ef",
+      "Name": "Default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 255,
+          "Blue": 62,
+          "Green": 56
+        },
+        {
+          "Red": 199,
+          "Blue": 117,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 19,
+          "Blue": 159,
+          "Green": 86
+        },
+        {
+          "Red": 28,
+          "Blue": 66,
+          "Green": 6
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 178,
+          "Blue": 213,
+          "Green": 197
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 255,
+          "Blue": 255,
+          "Green": 0
+        }
+      ]
+    },
     {
       "UID": "8a186ab3-015e-46a2-9951-bc194eb819ae",
       "Name": "Blue",
@@ -199,7 +286,7 @@
           "Green": 124
         },
         {
-          "Red": 248,
+          "Red": 247,
           "Blue": 255,
           "Green": 255
         },
@@ -3347,6 +3434,6 @@
   ],
   "Version": "Ver1.0.1",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-04-13T12:16:26.7861696-07:00",
+  "LastModified": "2023-04-18T12:47:39.77197-07:00",
   "LastModifiedBy": "creep"
 }

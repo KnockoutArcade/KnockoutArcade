@@ -2,18 +2,19 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PaletteSetup(_paletteID, _paletteData)
 {
-	paletteID = _paletteID;
+	paletteID = _paletteID.Palettes;
 	numOfColors = 16;
 
 	var arrayEntryStart = paletteID * numOfColors;
 
-
+	// Setup a color array
 	Color = function(r, g, b) constructor 
 	{
 		red = r;
 		green = g;
 		blue = b;
 		
+		// Convert each value from 0-255 to 0-1
 		static toShaderValue = function(value) 
 		{
 			return value / 255;
