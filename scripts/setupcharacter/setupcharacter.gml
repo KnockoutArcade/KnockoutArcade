@@ -5,6 +5,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	var formedCharacter = {};
 	
 	formedCharacter.BasePalette = selectedCharacter.BaseColor.ColorPalette;
+	formedCharacter.NumberOfPalettes = selectedCharacter.NumberOfPalettes;
 	formedCharacter.AlternatePalettes = selectedCharacter.Palettes;
 	formedCharacter.SelectedPalette = formedCharacter.BasePalette;
 	formedCharacter.Name = selectedCharacter.Name;

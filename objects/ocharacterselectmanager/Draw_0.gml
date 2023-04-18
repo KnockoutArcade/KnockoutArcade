@@ -242,7 +242,7 @@ if (P1charSelCol == 1 && P1charSelRow == 0)
 
 
 //Draw Player 2 character
-PaletteSetup(global.p2PaletteID, global.RusselPalettes);
+PaletteSetup(global.p2PaletteID, p2LocalPalette);
 	
 shader_set(sh_CharPalettes);
 

@@ -20,8 +20,26 @@ P1charSelCurrentFrame = 0;
 P2charSelCurrentFrame = 0;
 
 // Palettes to use for the selected character
-p1LocalPalette = global.RusselPalettes;
-p2LocalPalette = global.RusselPalettes;
+p1LocalPalette = global.characterData[0];
+p2LocalPalette = global.characterData[0];
+
+RusselPaletteData = {};
+BeverlyPaletteData = {};
+
+// Run through palette data to make it easier to reference later
+for (var i = 0; i < global.numberOfCharacters; i++;)
+{
+	if (global.characterData[i].Name == "Russel")
+	{
+		RusselPaletteData = global.characterData[i];
+	}
+	if (global.characterData[i].Name == "Beverly")
+	{
+		BeverlyPaletteData = global.characterData[i];
+	}
+}
+
+
 
 charSelBoxTimer = 0;
 charSelBoxAlt = false;
