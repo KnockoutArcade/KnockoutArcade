@@ -35,13 +35,13 @@ function SetupGame()
 				image_xscale *= -1;
 				opponent = other.p1;
 				hasPerformedIntro = global.currentRound != 1;
-				PaletteSetup(global.p2PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p2PaletteID, selectedCharacter);
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
 				hasPerformedIntro = global.currentRound != 1;
-				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p1PaletteID, selectedCharacter);
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
@@ -143,7 +143,7 @@ function SetupGame()
 			{
 				opponent = noone;
 				hasPerformedIntro = true;
-				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p1PaletteID, selectedCharacter);
 			}
 			
 			//Setup Health Bar
