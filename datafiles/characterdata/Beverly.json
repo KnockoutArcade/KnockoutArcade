@@ -37,11 +37,267 @@
   "BaseColor": {
     "UID": "74ab7666-7e20-4d84-8b4e-b2d9221735f8",
     "Name": "",
-    "NumberOfReplacableColors": 0,
-    "ColorPalette": []
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 237,
+        "Blue": 96,
+        "Green": 224
+      },
+      {
+        "Red": 237,
+        "Blue": 56,
+        "Green": 171
+      },
+      {
+        "Red": 185,
+        "Blue": 60,
+        "Green": 93
+      },
+      {
+        "Red": 86,
+        "Blue": 41,
+        "Green": 62
+      },
+      {
+        "Red": 237,
+        "Blue": 156,
+        "Green": 203
+      },
+      {
+        "Red": 247,
+        "Blue": 116,
+        "Green": 169
+      },
+      {
+        "Red": 171,
+        "Blue": 80,
+        "Green": 124
+      },
+      {
+        "Red": 30,
+        "Blue": 28,
+        "Green": 16
+      },
+      {
+        "Red": 245,
+        "Blue": 198,
+        "Green": 154
+      },
+      {
+        "Red": 227,
+        "Blue": 184,
+        "Green": 109
+      },
+      {
+        "Red": 88,
+        "Blue": 100,
+        "Green": 214
+      },
+      {
+        "Red": 24,
+        "Blue": 31,
+        "Green": 84
+      },
+      {
+        "Red": 247,
+        "Blue": 255,
+        "Green": 255
+      },
+      {
+        "Red": 222,
+        "Blue": 222,
+        "Green": 218
+      },
+      {
+        "Red": 255,
+        "Blue": 0,
+        "Green": 0
+      },
+      {
+        "Red": 0,
+        "Blue": 255,
+        "Green": 255
+      }
+    ]
   },
-  "NumberOfPalettes": 0,
-  "Palettes": [],
+  "NumberOfPalettes": 2,
+  "Palettes": [
+    {
+      "UID": "b0da4ab6-a494-40ef-a8ea-29284ecc4337",
+      "Name": "Default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 237,
+          "Blue": 96,
+          "Green": 224
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 185,
+          "Blue": 60,
+          "Green": 93
+        },
+        {
+          "Red": 86,
+          "Blue": 41,
+          "Green": 62
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 247,
+          "Blue": 116,
+          "Green": 169
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 245,
+          "Blue": 198,
+          "Green": 154
+        },
+        {
+          "Red": 227,
+          "Blue": 184,
+          "Green": 109
+        },
+        {
+          "Red": 88,
+          "Blue": 100,
+          "Green": 214
+        },
+        {
+          "Red": 24,
+          "Blue": 31,
+          "Green": 84
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 222,
+          "Blue": 222,
+          "Green": 218
+        },
+        {
+          "Red": 237,
+          "Blue": 56,
+          "Green": 171
+        },
+        {
+          "Red": 185,
+          "Blue": 60,
+          "Green": 93
+        }
+      ]
+    },
+    {
+      "UID": "c3c8f7b8-1522-4fd2-ad41-c10bcface464",
+      "Name": "Blue",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 37,
+          "Blue": 184,
+          "Green": 128
+        },
+        {
+          "Red": 19,
+          "Blue": 159,
+          "Green": 86
+        },
+        {
+          "Red": 51,
+          "Blue": 107,
+          "Green": 24
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 237,
+          "Blue": 156,
+          "Green": 203
+        },
+        {
+          "Red": 247,
+          "Blue": 116,
+          "Green": 169
+        },
+        {
+          "Red": 171,
+          "Blue": 80,
+          "Green": 124
+        },
+        {
+          "Red": 30,
+          "Blue": 28,
+          "Green": 16
+        },
+        {
+          "Red": 255,
+          "Blue": 100,
+          "Green": 137
+        },
+        {
+          "Red": 255,
+          "Blue": 62,
+          "Green": 56
+        },
+        {
+          "Red": 37,
+          "Blue": 184,
+          "Green": 128
+        },
+        {
+          "Red": 51,
+          "Blue": 107,
+          "Green": 24
+        },
+        {
+          "Red": 247,
+          "Blue": 255,
+          "Green": 255
+        },
+        {
+          "Red": 211,
+          "Blue": 222,
+          "Green": 218
+        },
+        {
+          "Red": 122,
+          "Blue": 51,
+          "Green": 62
+        },
+        {
+          "Red": 92,
+          "Blue": 52,
+          "Green": 43
+        }
+      ]
+    }
+  ],
   "MoveData": [
     {
       "UID": "84bb4293-87eb-466b-be35-34ae6b92c905",
@@ -2827,6 +3083,6 @@
   ],
   "Version": "Ver1.0.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-14T17:58:49.4773385-07:00",
+  "LastModified": "2023-04-18T13:53:32.4011116-07:00",
   "LastModifiedBy": "creep"
 }
