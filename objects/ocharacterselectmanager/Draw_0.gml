@@ -242,6 +242,10 @@ else if (P1charSelCol == 1 && P1charSelRow == 0)
 {
  	draw_sprite(sCharSel_NameBeverly, 0, 14, 69);
 }
+else if (P1charSelCol == 2 && P1charSelRow == 0)
+{
+ 	draw_sprite(sCharSel_NameJay, 0, 14, 69);
+}
 
 
 
@@ -456,12 +460,11 @@ if (P2charSelCol == 0 && P2charSelRow == 0)
 {
 	draw_sprite_ext(sRussel_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 }
-
-if (P2charSelCol == 1 && P2charSelRow == 0) 
+else if (P2charSelCol == 1 && P2charSelRow == 0) 
 {
 	draw_sprite_ext(sBeverly_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 }
-if (P2charSelCol == 2 && P2charSelRow == 0) 
+else if (P2charSelCol == 2 && P2charSelRow == 0) 
 {
 	draw_sprite_ext(sJay_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
 }
@@ -471,10 +474,13 @@ if (P2charSelCol == 0 && P2charSelRow == 0)
 {
 	draw_sprite(sCharSel_NameRussel, 0, 118, 69);
 }
-
-if (P2charSelCol == 1 && P2charSelRow == 0) 
+else if (P2charSelCol == 1 && P2charSelRow == 0) 
 {
 	draw_sprite(sCharSel_NameBeverly, 0, 118, 69);
+}
+else if (P2charSelCol == 2 && P2charSelRow == 0) 
+{
+	draw_sprite(sCharSel_NameJay, 0, 118, 69);
 }
 
 
