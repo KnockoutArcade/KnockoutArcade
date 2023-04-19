@@ -35,7 +35,7 @@
   },
   "SuperMeterBuildRate": 0.5,
   "BaseColor": {
-    "UID": "df902bfb-734b-400d-b4dc-713cfdba5706",
+    "UID": "c7e5b149-ceba-4389-8bdf-000fe758671a",
     "Name": "",
     "NumberOfReplacableColors": 16,
     "ColorPalette": [
@@ -124,7 +124,7 @@
   "NumberOfPalettes": 10,
   "Palettes": [
     {
-      "UID": "f28c97a9-4123-4b87-aaa5-73cd8732d14b",
+      "UID": "48769fd7-d894-44e5-87df-03b42821fd18",
       "Name": "Default",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -211,7 +211,7 @@
       ]
     },
     {
-      "UID": "33d929a6-039c-488a-bbce-3887c59a0e09",
+      "UID": "571f0426-6f3d-476c-823b-a3a23f3dc2b7",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -298,7 +298,7 @@
       ]
     },
     {
-      "UID": "8a6784a6-1246-459b-b8ca-ebf2b45e6791",
+      "UID": "004ae6ce-d905-426f-895d-8adba5ba3962",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -385,7 +385,7 @@
       ]
     },
     {
-      "UID": "feae5b84-8d54-487e-87e5-a98862521381",
+      "UID": "c33705e9-f8b5-4966-9752-0daa2ab25c1e",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -472,7 +472,7 @@
       ]
     },
     {
-      "UID": "d20f5883-d7e1-4b68-aedc-8f681d79e438",
+      "UID": "d26be885-8629-472b-b9ba-b11db55ac946",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -559,7 +559,7 @@
       ]
     },
     {
-      "UID": "5430b1ad-d561-4639-bcc4-27b79bdc5a5c",
+      "UID": "a1990174-105c-4f6b-92a0-fb3a18d044cc",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -646,7 +646,7 @@
       ]
     },
     {
-      "UID": "c56d234b-a6fb-4e1a-b6ee-b13667426ce2",
+      "UID": "b959aaaa-a746-40da-835d-558e2db8609a",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -733,7 +733,7 @@
       ]
     },
     {
-      "UID": "519a8849-460c-4a5d-8689-3c142fd343cd",
+      "UID": "1bf0a500-29d6-4fdd-84b4-fa31772df12b",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -820,7 +820,7 @@
       ]
     },
     {
-      "UID": "9ff3bfea-7ad1-4e61-b0c8-598a5131d196",
+      "UID": "c4cb0d0b-c6cb-4069-8fcb-17da3fd451ff",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -907,8 +907,8 @@
       ]
     },
     {
-      "UID": "ea7dae48-ab37-4551-b175-1bd71a6607bb",
-      "Name": "Limit",
+      "UID": "4e817046-5986-4dd5-829f-10b863b26d1d",
+      "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -996,85 +996,15 @@
   ],
   "MoveData": [
     {
-      "UID": "7b5d7fb4-e6c9-494d-b24b-4f3ea93e9a31",
+      "UID": "c35c5256-3772-4f78-ba42-6b5c3d73932d",
       "MoveType": 5,
-      "SpriteName": "sRussel_Standing_Light",
-      "Duration": 7,
-      "NumberOfFrames": 4,
-      "FrameData": [
-        {
-          "Length": 1,
-          "ImageIndex": 0
-        },
-        {
-          "Length": 3,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 5,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 7,
-          "ImageIndex": 3
-        }
-      ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 3,
-          "Lifetime": 4,
-          "AttackWidth": 15,
-          "AttackHeight": 5,
-          "WidthOffset": 12,
-          "HeightOffset": 15,
-          "Group": 1,
-          "Damage": 3,
-          "AttackHitStop": 6,
-          "AttackHitStun": 9,
-          "AttackType": 1,
-          "BlockStun": 3.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "Pushback": 1.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "MeterGain": 4.0,
-          "ComboScaling": 2.0,
-          "CausesWallbounce": false
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 1,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "ComboScaling": 0.0,
-          "CausesWallbounce": false
-        }
-      ],
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1082,17 +1012,8 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
-      "HurtboxData": [
-        {
-          "Start": 3,
-          "Lifetime": 6,
-          "AttackWidth": 30,
-          "AttackHeight": 6,
-          "WidthOffset": 4,
-          "HeightOffset": 12
-        }
-      ],
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1116,7 +1037,7 @@
     }
   ],
   "Version": "",
-  "UID": "be15d52b-61c7-4c98-b50a-4c6410e46329",
-  "LastModified": "2023-04-19T11:05:08.8872418-07:00",
+  "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
+  "LastModified": "2023-04-19T12:05:39.3908757-07:00",
   "LastModifiedBy": "creep"
 }
