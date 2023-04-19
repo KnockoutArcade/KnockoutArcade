@@ -138,7 +138,8 @@ function PerformAttack(Action)
 	
 	
 	// Hitboxes
-	for (var i = 0; i < Action.NumberOfHitboxes; i++;) {
+	for (var i = 0; i < Action.NumberOfHitboxes; i++;) 
+	{
 		if (animTimer == Action.AttackProperty[i].Start) 
 		{
 			hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
@@ -161,8 +162,10 @@ function PerformAttack(Action)
 	// Re-hitting Hitboxes
 	if (Action.RehitData.NumberOfHits > 0) 
 	{
-		for (var i = 0; i < Action.RehitData.HitBox; i++;) {
-			for (var j = 0; j < Action.RehitData.NumberOfHits; j++;) {
+		for (var i = 0; i < Action.RehitData.HitBox; i++;) 
+		{
+			for (var j = 0; j < Action.RehitData.NumberOfHits; j++;) 
+			{
 				if (animTimer == Action.RehitData.HitOnFrames[j]) 
 				{
 					hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
@@ -228,7 +231,8 @@ function PerformAttack(Action)
 	
 	
 	// Hurtboxes
-	for (var i = 0; i < Action.NumberOfHurtboxes; i++;) {
+	for (var i = 0; i < Action.NumberOfHurtboxes; i++;) 
+	{
 		if (animTimer == Action.HurtboxProperty[i].Start) 
 		{
 			hitbox = instance_create_layer(x + (Action.HurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.HurtboxProperty[i].HeightOffset, "hitboxes", oPlayerHurtbox);

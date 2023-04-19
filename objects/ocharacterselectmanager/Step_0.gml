@@ -39,7 +39,7 @@ if (P1charSelCol == 0 && P1charSelRow == 0)
 	p1charSelFrameRate = 10;
 	p1LocalPalette = RusselPaletteData;
 }
-if (P1charSelCol == 1 && P1charSelRow == 0)
+else if (P1charSelCol == 1 && P1charSelRow == 0)
 {
 	p1charSelFrameRate = 6;
 	p1LocalPalette = BeverlyPaletteData;
@@ -50,7 +50,7 @@ if (P2charSelCol == 0 && P2charSelRow == 0)
 	p2charSelFrameRate = 10;
 	p2LocalPalette = RusselPaletteData;
 }
-if (P2charSelCol == 1 && P2charSelRow == 0)
+else if (P2charSelCol == 1 && P2charSelRow == 0)
 {
 	p2charSelFrameRate = 6;
 	p2LocalPalette = BeverlyPaletteData;
@@ -137,11 +137,12 @@ if (P1hasSelectedChar)
 		global.p1PaletteID += P1menuColMove;
 		P1cursorCooldown = 10;
 	}
+	
 	if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
 	{
 	 	global.p1PaletteID = 0;
 	}
-	if (global.p1PaletteID < 0) 
+	else if (global.p1PaletteID < 0) 
 	{
 		global.p1PaletteID = p1LocalPalette.NumberOfPalettes - 1;
 	}
@@ -238,7 +239,7 @@ if (P2hasSelectedChar)
 	{
 		global.p2PaletteID = 0;
 	}
-	if (global.p2PaletteID < 0)
+	else if (global.p2PaletteID < 0)
 	{
 		global.p2PaletteID = p2LocalPalette.NumberOfPalettes - 1;
 	}

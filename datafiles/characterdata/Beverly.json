@@ -40,84 +40,84 @@
     "NumberOfReplacableColors": 16,
     "ColorPalette": [
       {
-        "Red": 237,
-        "Blue": 96,
-        "Green": 224
+        "Red": 0.92941177,
+        "Blue": 0.3764706,
+        "Green": 0.8784314
       },
       {
-        "Red": 237,
-        "Blue": 56,
-        "Green": 171
+        "Red": 0.92941177,
+        "Blue": 0.21960784,
+        "Green": 0.67058825
       },
       {
-        "Red": 185,
-        "Blue": 60,
-        "Green": 93
+        "Red": 0.7254902,
+        "Blue": 0.23529412,
+        "Green": 0.3647059
       },
       {
-        "Red": 86,
-        "Blue": 41,
-        "Green": 62
+        "Red": 0.3372549,
+        "Blue": 0.16078432,
+        "Green": 0.24313726
       },
       {
-        "Red": 237,
-        "Blue": 156,
-        "Green": 203
+        "Red": 0.92941177,
+        "Blue": 0.6117647,
+        "Green": 0.79607844
       },
       {
-        "Red": 247,
-        "Blue": 116,
-        "Green": 169
+        "Red": 0.96862745,
+        "Blue": 0.45490196,
+        "Green": 0.6627451
       },
       {
-        "Red": 171,
-        "Blue": 80,
-        "Green": 124
+        "Red": 0.67058825,
+        "Blue": 0.3137255,
+        "Green": 0.4862745
       },
       {
-        "Red": 30,
-        "Blue": 28,
-        "Green": 16
+        "Red": 0.11764706,
+        "Blue": 0.10980392,
+        "Green": 0.0627451
       },
       {
-        "Red": 245,
-        "Blue": 198,
-        "Green": 154
+        "Red": 0.9607843,
+        "Blue": 0.7764706,
+        "Green": 0.6039216
       },
       {
-        "Red": 227,
-        "Blue": 184,
-        "Green": 109
+        "Red": 0.8901961,
+        "Blue": 0.72156864,
+        "Green": 0.42745098
       },
       {
-        "Red": 88,
-        "Blue": 100,
-        "Green": 214
+        "Red": 0.34509805,
+        "Blue": 0.39215687,
+        "Green": 0.8392157
       },
       {
-        "Red": 24,
-        "Blue": 31,
-        "Green": 84
+        "Red": 0.09411765,
+        "Blue": 0.12156863,
+        "Green": 0.32941177
       },
       {
-        "Red": 247,
-        "Blue": 255,
-        "Green": 255
+        "Red": 0.96862745,
+        "Blue": 1.0,
+        "Green": 1.0
       },
       {
-        "Red": 222,
-        "Blue": 222,
-        "Green": 218
+        "Red": 0.87058824,
+        "Blue": 0.87058824,
+        "Green": 0.85490197
       },
       {
-        "Red": 255,
-        "Blue": 0,
-        "Green": 0
+        "Red": 1.0,
+        "Blue": 0.0,
+        "Green": 0.0
       },
       {
-        "Red": 0,
-        "Blue": 255,
-        "Green": 255
+        "Red": 0.0,
+        "Blue": 1.0,
+        "Green": 1.0
       }
     ]
   },
@@ -129,84 +129,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 237,
-          "Blue": 96,
-          "Green": 224
+          "Red": 0.92941177,
+          "Blue": 0.3764706,
+          "Green": 0.8784314
         },
         {
-          "Red": 237,
-          "Blue": 56,
-          "Green": 171
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
         },
         {
-          "Red": 185,
-          "Blue": 60,
-          "Green": 93
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
         },
         {
-          "Red": 86,
-          "Blue": 41,
-          "Green": 62
+          "Red": 0.3372549,
+          "Blue": 0.16078432,
+          "Green": 0.24313726
         },
         {
-          "Red": 237,
-          "Blue": 156,
-          "Green": 203
+          "Red": 0.92941177,
+          "Blue": 0.6117647,
+          "Green": 0.79607844
         },
         {
-          "Red": 247,
-          "Blue": 116,
-          "Green": 169
+          "Red": 0.96862745,
+          "Blue": 0.45490196,
+          "Green": 0.6627451
         },
         {
-          "Red": 171,
-          "Blue": 80,
-          "Green": 124
+          "Red": 0.67058825,
+          "Blue": 0.3137255,
+          "Green": 0.4862745
         },
         {
-          "Red": 30,
-          "Blue": 28,
-          "Green": 16
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
         },
         {
-          "Red": 245,
-          "Blue": 198,
-          "Green": 154
+          "Red": 0.9607843,
+          "Blue": 0.7764706,
+          "Green": 0.6039216
         },
         {
-          "Red": 227,
-          "Blue": 184,
-          "Green": 109
+          "Red": 0.8901961,
+          "Blue": 0.72156864,
+          "Green": 0.42745098
         },
         {
-          "Red": 88,
-          "Blue": 100,
-          "Green": 214
+          "Red": 0.34509805,
+          "Blue": 0.39215687,
+          "Green": 0.8392157
         },
         {
-          "Red": 24,
-          "Blue": 31,
-          "Green": 84
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
         },
         {
-          "Red": 247,
-          "Blue": 255,
-          "Green": 255
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
         },
         {
-          "Red": 222,
-          "Blue": 222,
-          "Green": 218
+          "Red": 0.87058824,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
         },
         {
-          "Red": 237,
-          "Blue": 56,
-          "Green": 171
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
         },
         {
-          "Red": 185,
-          "Blue": 60,
-          "Green": 93
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
         }
       ]
     },
@@ -216,84 +216,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 37,
-          "Blue": 184,
-          "Green": 128
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
         },
         {
-          "Red": 19,
-          "Blue": 159,
-          "Green": 86
+          "Red": 0.07450981,
+          "Blue": 0.62352943,
+          "Green": 0.3372549
         },
         {
-          "Red": 51,
-          "Blue": 107,
-          "Green": 24
+          "Red": 0.2,
+          "Blue": 0.41960785,
+          "Green": 0.09411765
         },
         {
-          "Red": 30,
-          "Blue": 28,
-          "Green": 16
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
         },
         {
-          "Red": 237,
-          "Blue": 156,
-          "Green": 203
+          "Red": 0.92941177,
+          "Blue": 0.6117647,
+          "Green": 0.79607844
         },
         {
-          "Red": 247,
-          "Blue": 116,
-          "Green": 169
+          "Red": 0.96862745,
+          "Blue": 0.45490196,
+          "Green": 0.6627451
         },
         {
-          "Red": 171,
-          "Blue": 80,
-          "Green": 124
+          "Red": 0.67058825,
+          "Blue": 0.3137255,
+          "Green": 0.4862745
         },
         {
-          "Red": 30,
-          "Blue": 28,
-          "Green": 16
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
         },
         {
-          "Red": 255,
-          "Blue": 100,
-          "Green": 137
+          "Red": 1.0,
+          "Blue": 0.39215687,
+          "Green": 0.5372549
         },
         {
-          "Red": 255,
-          "Blue": 62,
-          "Green": 56
+          "Red": 1.0,
+          "Blue": 0.24313726,
+          "Green": 0.21960784
         },
         {
-          "Red": 37,
-          "Blue": 184,
-          "Green": 128
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
         },
         {
-          "Red": 51,
-          "Blue": 107,
-          "Green": 24
+          "Red": 0.2,
+          "Blue": 0.41960785,
+          "Green": 0.09411765
         },
         {
-          "Red": 247,
-          "Blue": 255,
-          "Green": 255
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
         },
         {
-          "Red": 211,
-          "Blue": 222,
-          "Green": 218
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
         },
         {
-          "Red": 122,
-          "Blue": 51,
-          "Green": 62
+          "Red": 0.47843137,
+          "Blue": 0.2,
+          "Green": 0.24313726
         },
         {
-          "Red": 92,
-          "Blue": 52,
-          "Green": 43
+          "Red": 0.36078432,
+          "Blue": 0.20392157,
+          "Green": 0.16862746
         }
       ]
     },
@@ -303,84 +303,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -390,84 +390,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -477,84 +477,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -564,84 +564,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -651,84 +651,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -738,84 +738,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -825,84 +825,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
@@ -912,84 +912,84 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
-          "Red": 0,
-          "Blue": 0,
-          "Green": 0
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     }
@@ -3777,8 +3777,8 @@
       "SupplimentaryScript": ""
     }
   ],
-  "Version": "Ver1.0.1",
+  "Version": "Ver1.0.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-18T14:42:00.8390535-07:00",
+  "LastModified": "2023-04-19T10:08:03.0512667-07:00",
   "LastModifiedBy": "creep"
 }

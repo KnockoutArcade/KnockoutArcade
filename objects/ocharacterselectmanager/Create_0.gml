@@ -33,7 +33,7 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 	{
 		RusselPaletteData = global.characterData[i];
 	}
-	if (global.characterData[i].Name == "Beverly")
+	else if (global.characterData[i].Name == "Beverly")
 	{
 		BeverlyPaletteData = global.characterData[i];
 	}

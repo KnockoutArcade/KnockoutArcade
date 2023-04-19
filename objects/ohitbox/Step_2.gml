@@ -47,7 +47,7 @@ if (!isProjectile)
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
-			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group)
+			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 			if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
@@ -336,7 +336,7 @@ else
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
-			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group)
+			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 			if (collision_list[| i].owner != owner.playerOwner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
