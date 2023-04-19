@@ -8,6 +8,7 @@
     {"id":{"name":"oGlobalVars","path":"objects/oGlobalVars/oGlobalVars.yy",},"order":4,},
     {"id":{"name":"sSmallHitspark","path":"sprites/sSmallHitspark/sSmallHitspark.yy",},"order":21,},
     {"id":{"name":"sBeverly_CrouchMedium_MOCKUP_strip4","path":"sprites/sBeverly_CrouchMedium_MOCKUP_strip4/sBeverly_CrouchMedium_MOCKUP_strip4.yy",},"order":14,},
+    {"id":{"name":"sJay_Idle","path":"sprites/sJay_Idle/sJay_Idle.yy",},"order":1,},
     {"id":{"name":"sTestSprite","path":"sprites/sTestSprite/sTestSprite.yy",},"order":30,},
     {"id":{"name":"sFinishFlag","path":"sprites/sFinishFlag/sFinishFlag.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial2_MOCKUP","path":"sprites/sBeverly_SideSpecial2_MOCKUP/sBeverly_SideSpecial2_MOCKUP.yy",},"order":3,},
@@ -30,6 +31,7 @@
     {"id":{"name":"PaletteSetup","path":"scripts/PaletteSetup/PaletteSetup.yy",},"order":9,},
     {"id":{"name":"sOptionIcons","path":"sprites/sOptionIcons/sOptionIcons.yy",},"order":0,},
     {"id":{"name":"sCharSel_Portraits","path":"sprites/sCharSel_Portraits/sCharSel_Portraits.yy",},"order":5,},
+    {"id":{"name":"oJay","path":"objects/oJay/oJay.yy",},"order":3,},
     {"id":{"name":"oLevelGoal","path":"objects/oLevelGoal/oLevelGoal.yy",},"order":3,},
     {"id":{"name":"ProccessCommandGrab","path":"scripts/ProccessCommandGrab/ProccessCommandGrab.yy",},"order":18,},
     {"id":{"name":"sCharSel_CharReady","path":"sprites/sCharSel_CharReady/sCharSel_CharReady.yy",},"order":11,},
@@ -89,6 +91,7 @@
     {"id":{"name":"sndTestSfx","path":"sounds/sndTestSfx/sndTestSfx.yy",},"order":1,},
     {"id":{"name":"sTitleScreenBackground","path":"sprites/sTitleScreenBackground/sTitleScreenBackground.yy",},"order":3,},
     {"id":{"name":"sArcadeBackground","path":"sprites/sArcadeBackground/sArcadeBackground.yy",},"order":1,},
+    {"id":{"name":"sJay_Walk_Forward","path":"sprites/sJay_Walk_Forward/sJay_Walk_Forward.yy",},"order":0,},
     {"id":{"name":"sBeverly_CrouchHeavy_MOCKUP_strip9","path":"sprites/sBeverly_CrouchHeavy_MOCKUP_strip9/sBeverly_CrouchHeavy_MOCKUP_strip9.yy",},"order":15,},
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":1,},
     {"id":{"name":"sBlockEffect","path":"sprites/sBlockEffect/sBlockEffect.yy",},"order":12,},
@@ -278,6 +281,7 @@
     {"folderPath":"folders/Objects/RemapControls.yy","order":7,"resourceVersion":"1.0","name":"RemapControls","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Projectiles.yy","order":8,"resourceVersion":"1.0","name":"Projectiles","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Projectiles.yy","order":36,"resourceVersion":"1.0","name":"Projectiles","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Characters/Jay.yy","order":2,"resourceVersion":"1.0","name":"Jay","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -290,6 +294,7 @@
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Beverly.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Jay.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",

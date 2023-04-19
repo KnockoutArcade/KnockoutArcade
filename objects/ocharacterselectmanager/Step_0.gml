@@ -44,6 +44,11 @@ else if (P1charSelCol == 1 && P1charSelRow == 0)
 	p1charSelFrameRate = 6;
 	p1LocalPalette = BeverlyPaletteData;
 }
+else if (P1charSelCol == 2 && P1charSelRow == 0)
+{
+	p1charSelFrameRate = 6;
+	p1LocalPalette = JayPaletteData;
+}
 
 if (P2charSelCol == 0 && P2charSelRow == 0)
 {
@@ -54,6 +59,11 @@ else if (P2charSelCol == 1 && P2charSelRow == 0)
 {
 	p2charSelFrameRate = 6;
 	p2LocalPalette = BeverlyPaletteData;
+}
+else if (P2charSelCol == 2 && P2charSelRow == 0)
+{
+	p2charSelFrameRate = 6;
+	p2LocalPalette = JayPaletteData;
 }
 
 // Handle P1 cursor movement
@@ -100,6 +110,10 @@ if (P1menuConfirm && !P1hasSelectedChar)
 	else if (P1charSelCol == 1 && P1charSelRow == 0)
 	{
 		global.p1SelectedCharacter = oBeverly;
+	}
+	else if (P1charSelCol == 2 && P1charSelRow == 0)
+	{
+		global.p1SelectedCharacter = oJay;
 	}
 	else 
 	{
@@ -200,6 +214,11 @@ if (P2menuConfirm && !P2hasSelectedChar)
 	else if (P2charSelCol == 1 && P2charSelRow == 0)
 	{
 		global.p2SelectedCharacter = oBeverly;
+		p2charSelFrameRate = 6;
+	}
+	else if (P2charSelCol == 2 && P2charSelRow == 0)
+	{
+		global.p2SelectedCharacter = oJay;
 		p2charSelFrameRate = 6;
 	}
 	else 

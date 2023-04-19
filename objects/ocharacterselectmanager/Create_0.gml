@@ -25,6 +25,7 @@ p2LocalPalette = global.characterData[0];
 
 RusselPaletteData = {};
 BeverlyPaletteData = {};
+JayPaletteData = {};
 
 // Run through palette data to make it easier to reference later
 for (var i = 0; i < global.numberOfCharacters; i++;)
@@ -36,6 +37,10 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 	else if (global.characterData[i].Name == "Beverly")
 	{
 		BeverlyPaletteData = global.characterData[i];
+	}
+	else if (global.characterData[i].Name == "Jay")
+	{
+		JayPaletteData = global.characterData[i];
 	}
 }
 
