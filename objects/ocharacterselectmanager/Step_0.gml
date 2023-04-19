@@ -33,6 +33,29 @@ P2cursorCooldown--;
 
 charSelBoxTimer++;
 
+// Handle frame rates of different character idle anims
+if (P1charSelCol == 0 && P1charSelRow == 0)
+{
+	p1charSelFrameRate = 10;
+	p1LocalPalette = RusselPaletteData;
+}
+else if (P1charSelCol == 1 && P1charSelRow == 0)
+{
+	p1charSelFrameRate = 6;
+	p1LocalPalette = BeverlyPaletteData;
+}
+
+if (P2charSelCol == 0 && P2charSelRow == 0)
+{
+	p2charSelFrameRate = 10;
+	p2LocalPalette = RusselPaletteData;
+}
+else if (P2charSelCol == 1 && P2charSelRow == 0)
+{
+	p2charSelFrameRate = 6;
+	p2LocalPalette = BeverlyPaletteData;
+}
+
 // Handle P1 cursor movement
 if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
 {
@@ -114,13 +137,14 @@ if (P1hasSelectedChar)
 		global.p1PaletteID += P1menuColMove;
 		P1cursorCooldown = 10;
 	}
-	if (global.p1PaletteID >= global.RusselPalettes.numOfPalettes)
+	
+	if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
 	{
 	 	global.p1PaletteID = 0;
 	}
-	if (global.p1PaletteID < 0) 
+	else if (global.p1PaletteID < 0) 
 	{
-		global.p1PaletteID = global.RusselPalettes.numOfPalettes - 1;
+		global.p1PaletteID = p1LocalPalette.NumberOfPalettes - 1;
 	}
 	
 	if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedAlt)
@@ -211,13 +235,13 @@ if (P2hasSelectedChar)
 	}
 	
 	// Handle Palette Data
-	if (global.p2PaletteID >= global.RusselPalettes.numOfPalettes)
+	if (global.p2PaletteID >= p2LocalPalette.NumberOfPalettes)
 	{
 		global.p2PaletteID = 0;
 	}
-	if (global.p2PaletteID < 0)
+	else if (global.p2PaletteID < 0)
 	{
-		global.p2PaletteID = global.RusselPalettes.numOfPalettes - 1;
+		global.p2PaletteID = p2LocalPalette.NumberOfPalettes - 1;
 	}
 	
 	if (P2menuConfirm && !P2menuConfirmBuffer) 
@@ -234,28 +258,7 @@ if (charSelBoxTimer > 4)
 	charSelBoxTimer = 0;
 }
 
-// Handle frame rates of different character idle anims
-if (P1charSelCol == 0 && P1charSelRow == 0)
-{
-	p1charSelFrameRate = 10;
-	p1LocalPalette = global.RusselPalettes;
-}
-if (P1charSelCol == 1 && P1charSelRow == 0)
-{
-	p1charSelFrameRate = 6;
-	p1LocalPalette = global.RusselPalettes;
-}
 
-if (P2charSelCol == 0 && P2charSelRow == 0)
-{
-	p2charSelFrameRate = 10;
-	p2LocalPalette = global.RusselPalettes;
-}
-if (P2charSelCol == 1 && P2charSelRow == 0)
-{
-	p2charSelFrameRate = 6;
-	p2LocalPalette = global.RusselPalettes;
-}
 
 // Character Select Animations
 p1charSelAnimTimer++;

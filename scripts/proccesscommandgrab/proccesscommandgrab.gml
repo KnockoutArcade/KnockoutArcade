@@ -6,7 +6,7 @@ function ProccessCommandGrab()
 {
 	
 	// Russel's Up Special Command Grab
-	if (selectedCharacter == global.stRusselMoves)
+	if (selectedCharacter.Name == "Russel")
 	{
 		// Detect if we have hit the ground. We're using the late part of the move as the activation hitbox.
 		if (grounded && animTimer < 99)
@@ -20,7 +20,7 @@ function ProccessCommandGrab()
 			with (ThrowDistance)
 			{
 				owner = other.id;
-				image_xscale = other.selectedCharacter.CommandGrab.opponentPositionData.distanceFromWall * other.image_xscale;
+				image_xscale = other.selectedCharacter.CommandGrab.OpponentPositionData.DistanceFromWall * other.image_xscale;
 				throwToCheck = other.selectedCharacter.CommandGrab;
 				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
 			}
