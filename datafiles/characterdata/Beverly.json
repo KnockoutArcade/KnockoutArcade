@@ -298,93 +298,6 @@
       ]
     },
     {
-      "UID": "d23df0f0-928d-4502-9dd2-0722ba4e009e",
-      "Name": "",
-      "NumberOfReplacableColors": 16,
-      "ColorPalette": [
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        }
-      ]
-    },
-    {
       "UID": "1a7c0eb7-7274-4a66-acdb-4534bad1251c",
       "Name": "",
       "NumberOfReplacableColors": 16,
@@ -647,88 +560,88 @@
     },
     {
       "UID": "2028905c-fa05-4bc0-b895-053c690a975f",
-      "Name": "",
+      "Name": "White - Wii Fit",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.37254903,
+          "Blue": 0.89411765,
+          "Green": 0.8039216
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.3882353,
+          "Blue": 1.0,
+          "Green": 0.60784316
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.4117647,
+          "Blue": 0.41568628,
+          "Green": 0.41568628
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.60784316,
+          "Blue": 0.7176471,
+          "Green": 0.6784314
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.05882353,
+          "Blue": 0.011764706,
+          "Green": 0.011764706
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.60784316,
+          "Blue": 0.7176471,
+          "Green": 0.6784314
         },
         {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
+          "Red": 0.4117647,
+          "Blue": 0.41568628,
+          "Green": 0.41568628
         }
       ]
     },
@@ -820,7 +733,94 @@
       ]
     },
     {
-      "UID": "1bf52e8f-c150-462d-b840-d0baa772cd8d",
+      "UID": "181532e7-f25d-4ad6-88f9-98b1b81b12d1",
+      "Name": "Limit",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "310d7203-f27c-473b-9cf4-7b5c3edcb130",
       "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
@@ -907,8 +907,8 @@
       ]
     },
     {
-      "UID": "181532e7-f25d-4ad6-88f9-98b1b81b12d1",
-      "Name": "Limit",
+      "UID": "34c82f76-0455-4d25-aa0d-9db0e5cd6a06",
+      "Name": "",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -3779,6 +3779,6 @@
   ],
   "Version": "Ver1.0.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-19T10:08:03.0512667-07:00",
+  "LastModified": "2023-04-19T10:42:50.1943831-07:00",
   "LastModifiedBy": "creep"
 }
