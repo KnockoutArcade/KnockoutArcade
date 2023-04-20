@@ -80,3 +80,11 @@ global.p1SelectedCharacter = 0;
 global.p2SelectedCharacter = 0;
 
 global.gameMode = 0;
+
+// Where to start in a single player level
+global.p1StartingPositionX = 32;
+global.p1StartingPositionY = 104;
+
+// Where to put the player on the campaign map
+global.campaignMapLocationX = 0;
+global.campaignMapLocationY = 0;
