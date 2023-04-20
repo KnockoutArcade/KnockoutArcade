@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sJay_Idle",
+    "path": "sprites/sJay_Idle/sJay_Idle.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
