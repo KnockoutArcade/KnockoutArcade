@@ -1,8 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
-
 // Projectile Vars
 global.ProjectileBase_HitboxData = { // Seperating the name of the projectile from HitboxData to make it easier to read
 	// Projectiles have slightly different data than normal attacks. They don't need animation or movement data.
@@ -88,3 +86,5 @@ global.p1StartingPositionY = 104;
 // Where to put the player on the campaign map
 global.campaignMapLocationX = 0;
 global.campaignMapLocationY = 0;
+
+global.completedLevels = ds_list_create();

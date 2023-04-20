@@ -8,3 +8,10 @@ levelDestination = rCampaignLevelTemplate;
 levelStartX = 32;
 levelStartY = 104;
 
+levelName = "CampaignTest";
+
+// If the level for this object has been completed, change its color
+if (ds_list_find_index(global.completedLevels, levelName) != -1)
+{
+	image_index = 1;
+}

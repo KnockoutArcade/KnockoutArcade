@@ -19,6 +19,9 @@ if (P1menuDown == -1 && menuCooldown < 1)
 if (image_index == 0 && P1menuConfirm)
 {
 	room_goto(rRusselMap);
+	
+	global.campaignMapLocationX = 499;
+	global.campaignMapLocationY = 105
 }
 
 if (image_index == 1 && P1menuConfirm)

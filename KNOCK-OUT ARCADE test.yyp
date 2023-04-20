@@ -55,7 +55,7 @@
     {"id":{"name":"oMapCamera","path":"objects/oMapCamera/oMapCamera.yy",},"order":8,},
     {"id":{"name":"LICENSES","path":"notes/LICENSES/LICENSES.yy",},"order":0,},
     {"id":{"name":"PerformAttack","path":"scripts/PerformAttack/PerformAttack.yy",},"order":1,},
-    {"id":{"name":"sRusselMap","path":"sprites/sRusselMap/sRusselMap.yy",},"order":29,},
+    {"id":{"name":"sRusselMap","path":"sprites/sRusselMap/sRusselMap.yy",},"order":1,},
     {"id":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"order":0,},
     {"id":{"name":"PressAttackButton","path":"scripts/PressAttackButton/PressAttackButton.yy",},"order":0,},
     {"id":{"name":"GamepadCheck","path":"scripts/GamepadCheck/GamepadCheck.yy",},"order":17,},

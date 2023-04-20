@@ -3,5 +3,7 @@
 
 room_goto(levelDestination);
 
-global.p1StartingPositionX = mapReturnX;
-global.p1StartingPositionY = mapReturnY;
+global.campaignMapLocationX = mapReturnX;
+global.campaignMapLocationY = mapReturnY;
+
+ds_list_add(global.completedLevels, levelName)
