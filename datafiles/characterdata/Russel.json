@@ -999,7 +999,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 32,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 199128,
       "SpriteName": "sRussel_Standing_Light",
       "Duration": 7,
       "NumberOfFrames": 4,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-04-22T00:49:31.5216933-04:00",
-  "LastModifiedBy": "johnk"
+  "LastModified": "2023-04-21T22:26:48.5867201-07:00",
+  "LastModifiedBy": "creep"
 }
