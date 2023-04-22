@@ -1,6 +1,6 @@
 {
   "Name": "Jay",
-  "MaxHitPoints": 100,
+  "MaxHitPoints": 90,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-04-22T01:05:47.2559753-04:00",
-  "LastModifiedBy": "johnk"
+  "LastModified": "2023-04-21T22:35:40.3158858-07:00",
+  "LastModifiedBy": "creep"
 }
