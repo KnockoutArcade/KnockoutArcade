@@ -1,6 +1,7 @@
 {
   "resources": [
     {"id":{"name":"sBeverly_StandLight1_MOCKUP_strip3","path":"sprites/sBeverly_StandLight1_MOCKUP_strip3/sBeverly_StandLight1_MOCKUP_strip3.yy",},"order":8,},
+    {"id":{"name":"sJay_SC_JumpingMeduim_MOCKUP_strip5","path":"sprites/sJay_SC_JumpingMeduim_MOCKUP_strip5/sJay_SC_JumpingMeduim_MOCKUP_strip5.yy",},"order":17,},
     {"id":{"name":"oJayStageProjector","path":"objects/oJayStageProjector/oJayStageProjector.yy",},"order":7,},
     {"id":{"name":"sTimer9","path":"sprites/sTimer9/sTimer9.yy",},"order":0,},
     {"id":{"name":"sCam","path":"sprites/sCam/sCam.yy",},"order":22,},
@@ -29,6 +30,7 @@
     {"id":{"name":"sBeverly_StandHeavy_MOCKUP_strip5","path":"sprites/sBeverly_StandHeavy_MOCKUP_strip5/sBeverly_StandHeavy_MOCKUP_strip5.yy",},"order":11,},
     {"id":{"name":"sJayScene3","path":"sprites/sJayScene3/sJayScene3.yy",},"order":2,},
     {"id":{"name":"PaletteSetup","path":"scripts/PaletteSetup/PaletteSetup.yy",},"order":9,},
+    {"id":{"name":"sJay_SC_JumpingLight_MOCKUP_strip3","path":"sprites/sJay_SC_JumpingLight_MOCKUP_strip3/sJay_SC_JumpingLight_MOCKUP_strip3.yy",},"order":16,},
     {"id":{"name":"sOptionIcons","path":"sprites/sOptionIcons/sOptionIcons.yy",},"order":0,},
     {"id":{"name":"sCharSel_Portraits","path":"sprites/sCharSel_Portraits/sCharSel_Portraits.yy",},"order":5,},
     {"id":{"name":"oJay","path":"objects/oJay/oJay.yy",},"order":3,},
@@ -147,6 +149,7 @@
     {"id":{"name":"sBeverly_Crouch_MOCKUP","path":"sprites/sBeverly_Crouch_MOCKUP/sBeverly_Crouch_MOCKUP.yy",},"order":12,},
     {"id":{"name":"oProjectileBase","path":"objects/oProjectileBase/oProjectileBase.yy",},"order":0,},
     {"id":{"name":"sRound2Start","path":"sprites/sRound2Start/sRound2Start.yy",},"order":8,},
+    {"id":{"name":"sJay_SC_JUMP_MOCKUP_strip2","path":"sprites/sJay_SC_JUMP_MOCKUP_strip2/sJay_SC_JUMP_MOCKUP_strip2.yy",},"order":14,},
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":0,},
     {"id":{"name":"sGrabBox","path":"sprites/sGrabBox/sGrabBox.yy",},"order":1,},
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
@@ -196,6 +199,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":5,},
     {"id":{"name":"sSuperMeterBar","path":"sprites/sSuperMeterBar/sSuperMeterBar.yy",},"order":2,},
     {"id":{"name":"ResetGame","path":"scripts/ResetGame/ResetGame.yy",},"order":11,},
+    {"id":{"name":"sJay_SC_JumpingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_JumpingHeavy_MOCKUP_strip5/sJay_SC_JumpingHeavy_MOCKUP_strip5.yy",},"order":15,},
     {"id":{"name":"sRussel_SideSpecial","path":"sprites/sRussel_SideSpecial/sRussel_SideSpecial.yy",},"order":29,},
     {"id":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},"order":10,},
     {"id":{"name":"oControllerManager","path":"objects/oControllerManager/oControllerManager.yy",},"order":2,},
