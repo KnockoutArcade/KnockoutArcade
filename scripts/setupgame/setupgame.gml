@@ -125,10 +125,10 @@ function SetupGame()
 		case GAMEMODE.PLATFORMING:
 		{
 			//Setup Player
-			p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+			p1 = instance_create_layer(global.p1StartingPositionX, global.p1StartingPositionY, "Instances", global.p1SelectedCharacter);
 			
 			//Setup Camera
-			global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
+			global.camObj = instance_create_layer(global.p1StartingPositionX - 80, 0, "Instances", oCamera);
 			global.camObj.p1 = p1;
 			
 			//Setup Controller

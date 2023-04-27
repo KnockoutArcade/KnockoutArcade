@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sFinishFlag",
-    "path": "sprites/sFinishFlag/sFinishFlag.yy",
+    "name": "sMapLevel",
+    "path": "sprites/sMapLevel/sMapLevel.yy",
   },
   "solid": false,
   "visible": true,
@@ -22,17 +22,17 @@
   "physicsKinematic": false,
   "physicsShapePoints": [],
   "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oPlayerController","path":"objects/oPlayerController/oPlayerController.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"oTestPlayer","path":"objects/oTestPlayer/oTestPlayer.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Single Player Objects",
-    "path": "folders/Objects/Single Player Objects.yy",
+    "name": "CampaignLevels",
+    "path": "folders/Objects/CampaignLevels.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oLevelGoal",
+  "name": "oCampaignLevel",
   "tags": [],
   "resourceType": "GMObject",
 }
