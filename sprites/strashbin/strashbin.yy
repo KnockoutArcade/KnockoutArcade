@@ -70,7 +70,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Single Player Object Sprites",
-    "path": "folders/Sprites/Single Player Object Sprites.yy",
+    "path": "folders/Sprites/Shadows/Single Player Object Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTrashBin",

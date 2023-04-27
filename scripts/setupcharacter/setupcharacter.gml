@@ -4,6 +4,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 {
 	var formedCharacter = {};
 	
+	formedCharacter.MaxHP = selectedCharacter.MaxHitPoints;
 	formedCharacter.BasePalette = selectedCharacter.BaseColor.ColorPalette;
 	formedCharacter.NumberOfPalettes = selectedCharacter.NumberOfPalettes;
 	formedCharacter.AlternatePalettes = selectedCharacter.Palettes;
@@ -76,6 +77,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.CounterHitProperty = selectedCharacter.MoveData[i].CounterData;
 		nextMove.RehitData = selectedCharacter.MoveData[i].RehitData;
 		nextMove.ProjectileData = selectedCharacter.MoveData[i].ProjectileData;
+		nextMove.MoveCanCancelInto = selectedCharacter.MoveData[i].MoveCanCancelInto;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{
@@ -84,61 +86,61 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		
 		switch(selectedCharacter.MoveData[i].MoveType)
 		{
-			case 1: // forward throw
+			case 2: // forward throw
 			formedCharacter.ForwardThrow = nextMove;
 			break;
-			case 2: // grab
+			case 4: // grab
 			formedCharacter.Grab = nextMove;
 			break;
-			case 3: // side special
+			case 8: // side special
 			formedCharacter.SideSpecial = nextMove;
 			break;
-			case 4: // neutral special
+			case 16: // neutral special
 			formedCharacter.NeutralSpecial = nextMove;
 			break;
-			case 5: // standing light 1
+			case 32: // standing light 1
 			formedCharacter.StandLight = nextMove;
 			break;
-			case 6: // standing light 2
+			case 64: // standing light 2
 			formedCharacter.StandLight2 = nextMove;
 			break;
-			case 7: // standing light 3
+			case 128: // standing light 3
 			formedCharacter.StandLight3 = nextMove;
 			break;
-			case 8: // standing medium
+			case 256: // standing medium
 			formedCharacter.StandMedium = nextMove;
 			break;
-			case 9: // standing heavy
+			case 512: // standing heavy
 			formedCharacter.StandHeavy = nextMove;
 			break;
-			case 10: // crouching light
+			case 1024: // crouching light
 			formedCharacter.CrouchingLight = nextMove;
 			break;
-			case 11: // crouching medium
+			case 2048: // crouching medium
 			formedCharacter.CrouchingMedium = nextMove;
 			break;
-			case 12: // crouching heavy
+			case 4096: // crouching heavy
 			formedCharacter.CrouchingHeavy = nextMove;
 			break;
-			case 13: // jumping light
+			case 8192: // jumping light
 			formedCharacter.JumpingLight = nextMove;
 			break;
-			case 14: // jumping medium
+			case 16384: // jumping medium
 			formedCharacter.JumpingMedium = nextMove;
 			break;
-			case 15: // jumping heavy
+			case 32768: // jumping heavy
 			formedCharacter.JumpingHeavy = nextMove;
 			break;
-			case 16: // up special
+			case 65536: // up special
 			formedCharacter.UpSpecial = nextMove;
 			break;
-			case 17: // down special
+			case 131072: // down special
 			formedCharacter.DownSpecial = nextMove;
 			break;
-			case 18: // command grab
+			case 262144: // command grab
 			formedCharacter.CommandGrab = nextMove;
 			break;
-			case 0: // backward throw
+			case 1: // backward throw
 			default:
 			formedCharacter.BackwardThrow = nextMove;
 			break;
