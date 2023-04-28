@@ -8,8 +8,8 @@ if (primary && owner.state != eState.HITSTOP)
 } 
 if (!primary)
 {
-	x = owner.x + hurtboxProperty.widthOffset[hurtboxID] * sign(owner.image_xscale);
-	y = owner.y - hurtboxProperty.heightOfset[hurtboxID] * sign(owner.image_yscale);
+	x = owner.x + hurtboxProperty.WidthOffset * sign(owner.image_xscale);
+	y = owner.y - hurtboxProperty.HeightOffset * sign(owner.image_yscale);
 	if (!owner.inAttackState)
 	{
 		instance_destroy();

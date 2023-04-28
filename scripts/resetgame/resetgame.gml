@@ -7,11 +7,13 @@ function ResetGame()
 	instance_destroy(oBeverly);
 	
 	instance_destroy(oHitbox);
+	instance_destroy(oThrowEnvDetection);
 	instance_destroy(oPlayerHurtbox);
 	instance_destroy(oHealthbar);
 	instance_destroy(oUIHUD);
 	instance_destroy(oTimer);
 	instance_destroy(oSuperMeterUI);
+	instance_destroy(oProjectileBase);
 	
 	instance_destroy(global.camObj);
 }

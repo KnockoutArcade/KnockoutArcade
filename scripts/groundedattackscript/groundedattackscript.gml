@@ -1,9 +1,10 @@
 /// @function                   GroundedAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
-function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff) 
+// maintainState is a boolean. If false, go into a jumping state after leaving the ground
+function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff, maintainState) 
 {
-	sprite_index = moveToDo.spriteID;
+	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
@@ -13,15 +14,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) 
+	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.IDLE;
 		frameAdvantage = true;
 		hsp = 0;
+		isThrowable = true;
 	}
 	
 	if (!ignoreWalkoff)
 	{
-		HandleWalkingOffPlatforms();
+		HandleWalkingOffPlatforms(maintainState);
 	}
 }

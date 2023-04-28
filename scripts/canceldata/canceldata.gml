@@ -19,7 +19,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{ 
-						CancelIntoMove(eState.STANDING_LIGHT_ATTACK, selectedCharacter.StandLight.spriteID, 1);
+						CancelIntoMove(eState.STANDING_LIGHT_ATTACK, selectedCharacter.StandLight.SpriteId, 1);
 					}
 				}
 			}
@@ -34,7 +34,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.STANDING_LIGHT_ATTACK_2, selectedCharacter.StandLight2.spriteID, 1);
+						CancelIntoMove(eState.STANDING_LIGHT_ATTACK_2, selectedCharacter.StandLight2.SpriteId, 1);
 					}
 				}
 			}
@@ -49,7 +49,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-					 	CancelIntoMove(eState.STANDING_LIGHT_ATTACK_3, selectedCharacter.StandLight3.spriteID, 1);
+					 	CancelIntoMove(eState.STANDING_LIGHT_ATTACK_3, selectedCharacter.StandLight3.SpriteId, 1);
 					}
 				}
 			}
@@ -64,7 +64,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.STANDING_MEDIUM_ATTACK, selectedCharacter.StandMedium.spriteID, 1);
+						CancelIntoMove(eState.STANDING_MEDIUM_ATTACK, selectedCharacter.StandMedium.SpriteId, 1);
 					}
 				}
 			}
@@ -79,7 +79,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-					 	CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.spriteID, 1);
+					 	CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.SpriteId, 1);
 					}
 				}
 			}
@@ -95,7 +95,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.CROUCHING_LIGHT_ATTACK, selectedCharacter.CrouchingLight.spriteID, 1);
+						CancelIntoMove(eState.CROUCHING_LIGHT_ATTACK, selectedCharacter.CrouchingLight.SpriteId, 1);
 					}
 				}
 			}
@@ -110,7 +110,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.spriteID, 1);
+						CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.SpriteId, 1);
 					}
 				}
 			}
@@ -125,7 +125,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.CROUCHING_HEAVY_ATTACK, selectedCharacter.CrouchingHeavy.spriteID, 1);
+						CancelIntoMove(eState.CROUCHING_HEAVY_ATTACK, selectedCharacter.CrouchingHeavy.SpriteId, 1);
 					}
 				}
 			}
@@ -141,7 +141,7 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-						CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.spriteID, 1);
+						CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 					}
 				}
 			}
@@ -156,7 +156,39 @@ function CancelData(_array, _attack, _late)
 					}
 					else
 					{
-					 	CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.spriteID, 1);
+					 	CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
+					}
+				}
+			}
+			break;
+			
+			case eState.UP_SPECIAL : 
+			{
+				if (_attack == 5 && verticalMoveDir == 1 && movedir == 0)
+				{
+					if (_late)
+					{
+						LateCancelIntoMove(eState.UP_SPECIAL, selectedCharacter.UpSpecial, _attack);
+					}
+					else
+					{
+					 	CancelIntoMove(eState.UP_SPECIAL, selectedCharacter.UpSpecial.SpriteId, 1);
+					}
+				}
+			}
+			break;
+			
+			case eState.DOWN_SPECIAL : 
+			{
+				if (_attack == 5 && verticalMoveDir == -1 && movedir == 0)
+				{
+					if (_late)
+					{
+						LateCancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial, _attack);
+					}
+					else
+					{
+					 	CancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial.SpriteId, 1);
 					}
 				}
 			}

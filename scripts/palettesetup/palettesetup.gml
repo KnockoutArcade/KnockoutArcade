@@ -1,57 +1,47 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PaletteSetup(_paletteID, _paletteData)
+function PaletteSetup(paletteID, paletteData)
 {
-	paletteID = _paletteID;
-	numOfColors = 16;
-
-	var arrayEntryStart = paletteID * numOfColors;
-
-
+	// Setup a color array
 	Color = function(r, g, b) constructor 
 	{
 		red = r;
 		green = g;
 		blue = b;
-		
-		static toShaderValue = function(value) 
-		{
-			return value / 255;
-		}
 	};
 
-	colorMatch1 = new Color(_paletteData.baseColorMatch[0][0], _paletteData.baseColorMatch[0][1], _paletteData.baseColorMatch[0][2]);
-	colorMatch2 = new Color(_paletteData.baseColorMatch[1][0], _paletteData.baseColorMatch[1][1], _paletteData.baseColorMatch[1][2]);
-	colorMatch3 = new Color(_paletteData.baseColorMatch[2][0], _paletteData.baseColorMatch[2][1], _paletteData.baseColorMatch[2][2]);
-	colorMatch4 = new Color(_paletteData.baseColorMatch[3][0], _paletteData.baseColorMatch[3][1], _paletteData.baseColorMatch[3][2]);
-	colorMatch5 = new Color(_paletteData.baseColorMatch[4][0], _paletteData.baseColorMatch[4][1], _paletteData.baseColorMatch[4][2]);
-	colorMatch6 = new Color(_paletteData.baseColorMatch[5][0], _paletteData.baseColorMatch[5][1], _paletteData.baseColorMatch[5][2]);
-	colorMatch7 = new Color(_paletteData.baseColorMatch[6][0], _paletteData.baseColorMatch[6][1], _paletteData.baseColorMatch[6][2]);
-	colorMatch8 = new Color(_paletteData.baseColorMatch[7][0], _paletteData.baseColorMatch[7][1], _paletteData.baseColorMatch[7][2]);
-	colorMatch9 = new Color(_paletteData.baseColorMatch[8][0], _paletteData.baseColorMatch[8][1], _paletteData.baseColorMatch[8][2]);
-	colorMatch10 = new Color(_paletteData.baseColorMatch[9][0], _paletteData.baseColorMatch[9][1], _paletteData.baseColorMatch[9][2]);
-	colorMatch11 = new Color(_paletteData.baseColorMatch[10][0], _paletteData.baseColorMatch[10][1], _paletteData.baseColorMatch[10][2]);
-	colorMatch12 = new Color(_paletteData.baseColorMatch[11][0], _paletteData.baseColorMatch[11][1], _paletteData.baseColorMatch[11][2]);
-	colorMatch13 = new Color(_paletteData.baseColorMatch[12][0], _paletteData.baseColorMatch[12][1], _paletteData.baseColorMatch[12][2]);
-	colorMatch14 = new Color(_paletteData.baseColorMatch[13][0], _paletteData.baseColorMatch[13][1], _paletteData.baseColorMatch[13][2]);
-	colorMatch15 = new Color(_paletteData.baseColorMatch[14][0], _paletteData.baseColorMatch[14][1], _paletteData.baseColorMatch[14][2]);
-	colorMatch16 = new Color(_paletteData.baseColorMatch[15][0], _paletteData.baseColorMatch[15][1], _paletteData.baseColorMatch[15][2]);
-	colorReplace1 = new Color(_paletteData.colorReplaces[arrayEntryStart][0], _paletteData.colorReplaces[arrayEntryStart][1], _paletteData.colorReplaces[arrayEntryStart][2]);
-	colorReplace2 = new Color(_paletteData.colorReplaces[arrayEntryStart+1][0], _paletteData.colorReplaces[arrayEntryStart+1][1], _paletteData.colorReplaces[arrayEntryStart+1][2]);
-	colorReplace3 = new Color(_paletteData.colorReplaces[arrayEntryStart+2][0], _paletteData.colorReplaces[arrayEntryStart+2][1], _paletteData.colorReplaces[arrayEntryStart+2][2]);
-	colorReplace4 = new Color(_paletteData.colorReplaces[arrayEntryStart+3][0], _paletteData.colorReplaces[arrayEntryStart+3][1], _paletteData.colorReplaces[arrayEntryStart+3][2]);
-	colorReplace5 = new Color(_paletteData.colorReplaces[arrayEntryStart+4][0], _paletteData.colorReplaces[arrayEntryStart+4][1], _paletteData.colorReplaces[arrayEntryStart+4][2]);
-	colorReplace6 = new Color(_paletteData.colorReplaces[arrayEntryStart+5][0], _paletteData.colorReplaces[arrayEntryStart+5][1], _paletteData.colorReplaces[arrayEntryStart+5][2]);
-	colorReplace7 = new Color(_paletteData.colorReplaces[arrayEntryStart+6][0], _paletteData.colorReplaces[arrayEntryStart+6][1], _paletteData.colorReplaces[arrayEntryStart+6][2]);
-	colorReplace8 = new Color(_paletteData.colorReplaces[arrayEntryStart+7][0], _paletteData.colorReplaces[arrayEntryStart+7][1], _paletteData.colorReplaces[arrayEntryStart+7][2]);
-	colorReplace9 = new Color(_paletteData.colorReplaces[arrayEntryStart+8][0], _paletteData.colorReplaces[arrayEntryStart+8][1], _paletteData.colorReplaces[arrayEntryStart+8][2]);
-	colorReplace10 = new Color(_paletteData.colorReplaces[arrayEntryStart+9][0], _paletteData.colorReplaces[arrayEntryStart+9][1], _paletteData.colorReplaces[arrayEntryStart+9][2]);
-	colorReplace11 = new Color(_paletteData.colorReplaces[arrayEntryStart+10][0], _paletteData.colorReplaces[arrayEntryStart+10][1], _paletteData.colorReplaces[arrayEntryStart+10][2]);
-	colorReplace12 = new Color(_paletteData.colorReplaces[arrayEntryStart+11][0], _paletteData.colorReplaces[arrayEntryStart+11][1], _paletteData.colorReplaces[arrayEntryStart+11][2]);
-	colorReplace13 = new Color(_paletteData.colorReplaces[arrayEntryStart+12][0], _paletteData.colorReplaces[arrayEntryStart+12][1], _paletteData.colorReplaces[arrayEntryStart+12][2]);
-	colorReplace14 = new Color(_paletteData.colorReplaces[arrayEntryStart+13][0], _paletteData.colorReplaces[arrayEntryStart+13][1], _paletteData.colorReplaces[arrayEntryStart+13][2]);
-	colorReplace15 = new Color(_paletteData.colorReplaces[arrayEntryStart+14][0], _paletteData.colorReplaces[arrayEntryStart+14][1], _paletteData.colorReplaces[arrayEntryStart+14][2]);
-	colorReplace16 = new Color(_paletteData.colorReplaces[arrayEntryStart+15][0], _paletteData.colorReplaces[arrayEntryStart+15][1], _paletteData.colorReplaces[arrayEntryStart+15][2]);
+	colorMatch1 = new Color(paletteData.BasePalette[0].Red, paletteData.BasePalette[0].Green, paletteData.BasePalette[0].Blue);
+	colorMatch2 = new Color(paletteData.BasePalette[1].Red, paletteData.BasePalette[1].Green, paletteData.BasePalette[1].Blue);
+	colorMatch3 = new Color(paletteData.BasePalette[2].Red, paletteData.BasePalette[2].Green, paletteData.BasePalette[2].Blue);
+	colorMatch4 = new Color(paletteData.BasePalette[3].Red, paletteData.BasePalette[3].Green, paletteData.BasePalette[3].Blue);
+	colorMatch5 = new Color(paletteData.BasePalette[4].Red, paletteData.BasePalette[4].Green, paletteData.BasePalette[4].Blue);
+	colorMatch6 = new Color(paletteData.BasePalette[5].Red, paletteData.BasePalette[5].Green, paletteData.BasePalette[5].Blue);
+	colorMatch7 = new Color(paletteData.BasePalette[6].Red, paletteData.BasePalette[6].Green, paletteData.BasePalette[6].Blue);
+	colorMatch8 = new Color(paletteData.BasePalette[7].Red, paletteData.BasePalette[7].Green, paletteData.BasePalette[7].Blue);
+	colorMatch9 = new Color(paletteData.BasePalette[8].Red, paletteData.BasePalette[8].Green, paletteData.BasePalette[8].Blue);
+	colorMatch10 = new Color(paletteData.BasePalette[9].Red, paletteData.BasePalette[9].Green, paletteData.BasePalette[9].Blue);
+	colorMatch11 = new Color(paletteData.BasePalette[10].Red, paletteData.BasePalette[10].Green, paletteData.BasePalette[10].Blue);
+	colorMatch12 = new Color(paletteData.BasePalette[11].Red, paletteData.BasePalette[11].Green, paletteData.BasePalette[11].Blue);
+	colorMatch13 = new Color(paletteData.BasePalette[12].Red, paletteData.BasePalette[12].Green, paletteData.BasePalette[12].Blue);
+	colorMatch14 = new Color(paletteData.BasePalette[13].Red, paletteData.BasePalette[13].Green, paletteData.BasePalette[13].Blue);
+	colorMatch15 = new Color(paletteData.BasePalette[14].Red, paletteData.BasePalette[14].Green, paletteData.BasePalette[14].Blue);
+	colorMatch16 = new Color(paletteData.BasePalette[15].Red, paletteData.BasePalette[15].Green, paletteData.BasePalette[15].Blue);
+	colorReplace1 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[0].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[0].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[0].Blue);
+	colorReplace2 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[1].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[1].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[1].Blue);
+	colorReplace3 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[2].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[2].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[2].Blue);
+	colorReplace4 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[3].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[3].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[3].Blue);
+	colorReplace5 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[4].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[4].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[4].Blue);
+	colorReplace6 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[5].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[5].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[5].Blue);
+	colorReplace7 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[6].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[6].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[6].Blue);
+	colorReplace8 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[7].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[7].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[7].Blue);
+	colorReplace9 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[8].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[8].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[8].Blue);
+	colorReplace10 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[9].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[9].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[9].Blue);
+	colorReplace11 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[10].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[10].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[10].Blue);
+	colorReplace12 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[11].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[11].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[11].Blue);
+	colorReplace13 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[12].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[12].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[12].Blue);
+	colorReplace14 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[13].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[13].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[13].Blue);
+	colorReplace15 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[14].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[14].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[14].Blue);
+	colorReplace16 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[15].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[15].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[15].Blue);
 
 	sh_handle_range = shader_get_uniform(sh_CharPalettes, "range");
 	sh_handle_match1 = shader_get_uniform(sh_CharPalettes, "colorMatch1");

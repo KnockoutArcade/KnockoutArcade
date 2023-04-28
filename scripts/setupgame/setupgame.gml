@@ -35,13 +35,13 @@ function SetupGame()
 				image_xscale *= -1;
 				opponent = other.p1;
 				hasPerformedIntro = global.currentRound != 1;
-				PaletteSetup(global.p2PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p2PaletteID, selectedCharacter);
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
 				hasPerformedIntro = global.currentRound != 1;
-				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p1PaletteID, selectedCharacter);
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
@@ -65,14 +65,14 @@ function SetupGame()
 	
 			// Create Super Meter UI
 				// Player 1
-			p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
+			p1SuperMeter = instance_create_layer(2, 106, "SuperMeter", oSuperMeterUI);
 			with (p1SuperMeter)
 			{
 				owner = other.p1;
 				ui_xOffset = x;
 			}
 				// Player 2
-			p2SuperMeter = instance_create_layer(97, 106, "UI", oSuperMeterUI);
+			p2SuperMeter = instance_create_layer(97, 106, "SuperMeter", oSuperMeterUI);
 			with (p2SuperMeter) 
 			{
 				owner = other.p2;
@@ -125,10 +125,10 @@ function SetupGame()
 		case GAMEMODE.PLATFORMING:
 		{
 			//Setup Player
-			p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+			p1 = instance_create_layer(global.p1StartingPositionX, global.p1StartingPositionY, "Instances", global.p1SelectedCharacter);
 			
 			//Setup Camera
-			global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
+			global.camObj = instance_create_layer(global.p1StartingPositionX - 80, 0, "Instances", oCamera);
 			global.camObj.p1 = p1;
 			
 			//Setup Controller
@@ -143,7 +143,7 @@ function SetupGame()
 			{
 				opponent = noone;
 				hasPerformedIntro = true;
-				PaletteSetup(global.p1PaletteID, global.RusselPalettes);
+				PaletteSetup(global.p1PaletteID, selectedCharacter);
 			}
 			
 			//Setup Health Bar

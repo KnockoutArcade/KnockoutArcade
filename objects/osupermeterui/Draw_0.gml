@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+depth = -100;
 
 x = (global.camObj.x-80) + ui_xOffset;
 
@@ -20,7 +21,8 @@ if (owner.superMeter > 99)
 	meterIndex = 1;
 }
 
-draw_self();
+draw_sprite(sSuperMeterBackground, 0, x, y);
+
 
 // Fill up depending on how full the player's meter is
 if (meterDir = -1)
@@ -32,7 +34,7 @@ else if (meterDir == 1)
 	draw_sprite_ext(sSuperMeterBar, meterIndex, x+4, y+7, ((meterDir * owner.superMeter) / 100) * 53, 1, 0, c_white, 1);
 }
 
-
+draw_self();
 
 
 

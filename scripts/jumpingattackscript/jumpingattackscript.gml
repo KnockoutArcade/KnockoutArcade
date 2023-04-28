@@ -3,7 +3,7 @@
 
 function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
 {
-	sprite_index = moveToDo.spriteID;
+	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
@@ -13,9 +13,10 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		
 	PerformAttack(moveToDo);
 	
-	if (animTimer > moveToDo.duration) 
+	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.JUMPING;
 		frameAdvantage = true;
+		isThrowable = true;
 	}
 }

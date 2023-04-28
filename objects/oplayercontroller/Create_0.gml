@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 // Determines which player port this object is using (Player 1, Player 2, etc)
 playerID = 1;
 
@@ -8,35 +9,56 @@ playerID = 1;
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
 vsp = 0; // Verticle speed
-walkSpeed = 1.5; // How fast the character walks in pixels/frame
-runSpeed = 3; // How fast the character runs in pixels/frame
-traction = .25; // How much this character slows down each frame in pixels/frame
-jumpSpeed = 4 // How high a character jumps - Initial Jump velocity
-fallSpeed = .25; // How fast a character falls
+walkSpeed = selectedCharacter.WalkSpeed; // How fast the character walks in pixels/frame
+runSpeed = selectedCharacter.RunSpeed; // How fast the character runs in pixels/frame
+traction = selectedCharacter.Traction; // How much this character slows down each frame in pixels/frame
+jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
+fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
 //Backdash Vars (The state is refered to as Run back for consistency)
-backdashDuration = 25; // The total duration of a character's backdash
-backdashInvincibility = 8; // How long the character is invincible for at the start of their backdash
-backdashSpeed = 4; // How fast their backdash moves them back
-backdashStartup = 3; // The delay before the character starts moving back
+backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
+backdashInvincibility = selectedCharacter.BackDashInvincibility; // How long the character is invincible for at the start of their backdash
+backdashSpeed = selectedCharacter.BackDashSpeed; // How fast their backdash moves them back
+backdashStartup = selectedCharacter.BackDashStartup; // The delay before the character starts moving back
 
 
 // A short hop is when the player breifly taps up so they don't jump as high.
 
-fastFallSpeed = .35; // How fast a character's short hop is if they have one
+fastFallSpeed = selectedCharacter.FastFallSpeed; // How fast a character's short hop is if they have one
 isShortHopping = false; // Whether or not a character is currently shorthopping
-canShortHop = true; // Whether the player can shorthop or not
+if (selectedCharacter.JumpType & 4 == 4)
+{
+	canShortHop = true; // Whether the player can shorthop or not
+}
+else
+{
+	canShortHop = false;
+}
 
 // A super jump is when the player presses Down just before jumping, allowing them to go higher.
 
-canSuperJump = false; // Whether this character can Super Jump or not
+if (selectedCharacter.JumpType & 2 == 2)
+{
+	canSuperJump = true; // Whether this character can Super Jump or not
+}
+else
+{
+	canSuperJump = false;
+}
 isSuperJumping = false; // Is the player currently super jumping?
 storedSuperJump = false; // Whether the player has their super jump stored or not
 superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 // A double jump is when the player jumps again in the air
 
-canDoubleJump = false; // Whether this character can Double Jump or not
+if ((selectedCharacter.JumpType & 1) == 1)
+{
+	canDoubleJump = true; // Whether this character can Super Jump or not
+}
+else
+{
+	canDoubleJump = false;
+}
 hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
 heldUpFrames = 0; // How long the player has held UP for
 
@@ -86,7 +108,10 @@ enum eState {
 	JUMPING_HEAVY_ATTACK,
 	NEUTRAL_SPECIAL,
 	SIDE_SPECIAL,
+	UP_SPECIAL,
+	DOWN_SPECIAL,
 	GRAB,
+	COMMAND_GRAB,
 	HOLD,
 	FORWARD_THROW,
 	BACKWARD_THROW,
@@ -101,10 +126,11 @@ enum eState {
 }
 
 enum eAttackType {
-	HIGH, // Must be stand blocking
-	MID, // Block high or low
-	LOW, // Must Block Crouching
-	GRAB
+	HIGH = 0, // Must be stand blocking
+	MID = 1, // Block high or low
+	LOW = 2, // Must Block Crouching
+	GRAB = 3, // Basic grab
+	COMMAND_GRAB = 4 // Advanced type of grab with special properties
 }
 
 enum eSpritesToUse {
@@ -114,26 +140,23 @@ enum eSpritesToUse {
 }
 
 CharacterSprites = {
-	idle_Sprite : sRussel_Idle,
-	crouch_Sprite : sRussel_Crouch,
-	standBlock_Sprite : sRussel_Block,
-	crouchBlock_Sprite : sRussel_Crouch_Block,
-	walkForward_Sprite : sRussel_Walk_Forward,
-	walkBackward_Sprite : sRussel_Walk_Backward,
-	runForward_Sprite : sRussel_Run_Forward,
-	runBackward_Sprite : sRussel_Run_Backward,
-	jumpsquat_Sprite : sRussel_Jumpsquat,
-	jump_Sprite : sRussel_Jump,
-	hurt_Sprite : sRussel_Hurt,
-	grab_Sprite : sRussel_Grab,
-	hold_Sprite : sRussel_Hold,
-	launched_Sprite : sRussel_Launched,
-	knockdown_Sprite : sRussel_KnockedDown,
-	getup_Sprite : sRussel_Getup,
+	idle_Sprite : selectedCharacter.Sprites.Idle,
+	crouch_Sprite : selectedCharacter.Sprites.Crouch,
+	standBlock_Sprite : selectedCharacter.Sprites.StandBlock,
+	crouchBlock_Sprite : selectedCharacter.Sprites.CrouchBlock,
+	walkForward_Sprite : selectedCharacter.Sprites.WalkForward,
+	walkBackward_Sprite : selectedCharacter.Sprites.WalkBackward,
+	runForward_Sprite : selectedCharacter.Sprites.RunForward,
+	runBackward_Sprite : selectedCharacter.Sprites.RunBackward,
+	jumpsquat_Sprite : selectedCharacter.Sprites.JumpSquat,
+	jump_Sprite : selectedCharacter.Sprites.Jump,
+	hurt_Sprite : selectedCharacter.Sprites.Hurt,
+	grab_Sprite : selectedCharacter.Sprites.Grab,
+	hold_Sprite : selectedCharacter.Sprites.Hold,
+	launched_Sprite : selectedCharacter.Sprites.Launched,
+	knockdown_Sprite : selectedCharacter.Sprites.Knockdown,
+	getup_Sprite : selectedCharacter.Sprites.GetUp,
 }
-
-// Which Character we are currently playing as
-selectedCharacter = global.stRusselMoves;
 
 // State-related Variables
 state = eState.IDLE;
@@ -187,7 +210,8 @@ canBlock = false;
 knockbackVel = 0;
 pushbackVel = 0;
 
-hp = 100;
+maxHitPoints = selectedCharacter.MaxHP;
+hp = maxHitPoints;
 
 frameAdvantage = false;
 FAvictim = false;
@@ -206,4 +230,4 @@ superMeter = 0; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 
 // Palette Init
-PaletteSetup(0, global.RusselPalettes);
+PaletteSetup(0, selectedCharacter);
