@@ -309,7 +309,7 @@ if (state == eState.HITSTOP)
 		else 
 		{
 			x = xHome - min(global.hitstop, 3);
-		}		
+		}
 	}
 	else 
 	{
@@ -318,14 +318,18 @@ if (state == eState.HITSTOP)
 			inAttackState = true;
 		}
 
-		if (!hitstopBuffer && blockstun <= 0) 
+		if (!hitstopBuffer && blockstun <= 0 && attack != 0) 
 		{
+			var attackState = FindAttackState(prevState);
+			
+			CancelData(attackState, attack, false);
+			
 			/*if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
 			{
 				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
 			} 
-			else if prevState == eState.CROUCHING_LIGHT_ATTACK && attack != 0
+			else if (prevState == eState.CROUCHING_LIGHT_ATTACK && attack != 0)
 			{
 				var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);

@@ -53,7 +53,7 @@ superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 if ((selectedCharacter.JumpType & 1) == 1)
 {
-	canDoubleJump = true; // Whether this character can Super Jump or not
+	canDoubleJump = true; // Whether this character can Double Jump or not
 }
 else
 {
