@@ -320,7 +320,7 @@ if (state == eState.HITSTOP)
 
 		if (!hitstopBuffer && blockstun <= 0) 
 		{
-			if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
+			/*if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
 			{
 				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
@@ -349,7 +349,7 @@ if (state == eState.HITSTOP)
 			{
 				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 				CancelData(cancels, attack, false);
-			}
+			} */
 		}
 	}
 	if (blockstun > 0)
