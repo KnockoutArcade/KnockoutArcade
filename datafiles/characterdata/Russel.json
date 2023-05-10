@@ -2567,7 +2567,7 @@
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
       "MoveType": 512,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Standing_Heavy",
       "Duration": 39,
       "NumberOfFrames": 7,
@@ -2721,7 +2721,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 198936,
       "SpriteName": "sRussel_Crouching_Light",
       "Duration": 9,
       "NumberOfFrames": 3,
@@ -2837,7 +2837,7 @@
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 2048,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 201240,
       "SpriteName": "sRussel_Crouching_Medium",
       "Duration": 27,
       "NumberOfFrames": 10,
@@ -3032,7 +3032,7 @@
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
       "MoveType": 4096,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Crouching_Heavy",
       "Duration": 34,
       "NumberOfFrames": 10,
@@ -3184,7 +3184,7 @@
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 8192,
-      "MoveCanCancelInto": 213016,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Jumping_Light",
       "Duration": 999,
       "NumberOfFrames": 2,
@@ -3296,7 +3296,7 @@
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
       "MoveType": 16384,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Jumping_Medium",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3424,7 +3424,7 @@
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
       "MoveType": 32768,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Jumping_Heavy",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-10T14:55:29.2881701-07:00",
+  "LastModified": "2023-05-10T15:04:02.7936703-07:00",
   "LastModifiedBy": "creep"
 }
