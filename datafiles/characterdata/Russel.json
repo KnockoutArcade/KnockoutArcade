@@ -2417,7 +2417,7 @@
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 256,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 8,
       "SpriteName": "sRussel_Standing_Medium",
       "Duration": 21,
       "NumberOfFrames": 6,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-04-25T21:13:19.6974609-07:00",
+  "LastModified": "2023-05-10T14:07:31.614689-07:00",
   "LastModifiedBy": "creep"
 }

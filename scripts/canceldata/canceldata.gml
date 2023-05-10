@@ -5,7 +5,7 @@ function CancelData(_array, _attack, _late)
 	// Check to see if the player has inputted an attack AND if the inputted attack is a valid cancel
 	
 	// Side Special
-	if (_array.MoveCanCancelInto & 8 == 8) && (_attack == 4 && movedir != 0 && verticalMoveDir == 0)
+	if (_array.MoveCanCancelInto & 8 == 8) && (_attack == 5 && movedir != 0 && verticalMoveDir == 0)
 	{
 		if (_late)
 		{

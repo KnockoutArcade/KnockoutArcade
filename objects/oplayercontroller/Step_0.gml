@@ -323,37 +323,6 @@ if (state == eState.HITSTOP)
 			var attackState = FindAttackState(prevState);
 			
 			CancelData(attackState, attack, false);
-			
-			/*if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
-			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			} 
-			else if (prevState == eState.CROUCHING_LIGHT_ATTACK && attack != 0)
-			{
-				var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if (prevState == eState.STANDING_LIGHT_ATTACK_2 && attack != 0) 
-			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if ((prevState == eState.STANDING_MEDIUM_ATTACK || prevState == eState.CROUCHING_MEDIUM_ATTACK) && attack != 0)
-			{
-				var cancels = [ eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if ((prevState == eState.STANDING_HEAVY_ATTACK || prevState == eState.CROUCHING_HEAVY_ATTACK) && attack != 0) 
-			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			} 
-			else if ((prevState == eState.JUMPING_LIGHT_ATTACK || prevState == eState.JUMPING_MEDIUM_ATTACK || prevState == eState.JUMPING_HEAVY_ATTACK) && attack != 0) 
-			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			} */
 		}
 	}
 	if (blockstun > 0)
@@ -754,10 +723,9 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandMedium, attack, true);
 		}
 	}
 	break;
