@@ -999,7 +999,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 32,
-      "MoveCanCancelInto": 199128,
+      "MoveCanCancelInto": 199000,
       "SpriteName": "sRussel_Standing_Light",
       "Duration": 7,
       "NumberOfFrames": 4,
@@ -2177,7 +2177,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 199064,
       "SpriteName": "sRussel_Standing_Light2",
       "Duration": 14,
       "NumberOfFrames": 4,
@@ -2417,7 +2417,7 @@
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 256,
-      "MoveCanCancelInto": 8,
+      "MoveCanCancelInto": 201240,
       "SpriteName": "sRussel_Standing_Medium",
       "Duration": 21,
       "NumberOfFrames": 6,
@@ -3184,7 +3184,7 @@
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 8192,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sRussel_Jumping_Light",
       "Duration": 999,
       "NumberOfFrames": 2,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-10T14:07:31.614689-07:00",
+  "LastModified": "2023-05-10T14:49:09.2479763-07:00",
   "LastModifiedBy": "creep"
 }

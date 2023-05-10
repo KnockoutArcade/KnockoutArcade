@@ -317,9 +317,16 @@ if (state == eState.HITSTOP)
 		{
 			inAttackState = true;
 		}
-
+		
+		// Canceling Moves from Hitstop
 		if (!hitstopBuffer && blockstun <= 0 && attack != 0) 
 		{
+			// We need to know what attack state the player is in so we know which move's cancel data
+			// we should to use.
+			
+			// We use the player's Previous State since the player's current state at this moment
+			// in the code is HITSTOP. Previous State stores what state we were in before entering
+			// hitstop.
 			var attackState = FindAttackState(prevState);
 			
 			CancelData(attackState, attack, false);
@@ -692,10 +699,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandLight, attack, true);
 		}
 	}
 	break;
@@ -704,10 +710,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandLight2, attack, true);
 		}
 	}
 	break;
@@ -715,6 +720,11 @@ switch state
 	case eState.STANDING_LIGHT_ATTACK_3:
 	{
 		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
+		
+		if (cancelable && global.hitstop < 1)
+		{
+			CancelData(selectedCharacter.StandLight3, attack, true);
+		}
 	}
 	break;
 	
@@ -794,10 +804,10 @@ switch state
 	case eState.JUMPING_LIGHT_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
+		
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingLight, attack, true);
 		} 
 		
 	}
