@@ -744,10 +744,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
 		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandHeavy, attack, true);
 		}
 	}
 	break;
@@ -757,10 +756,9 @@ switch state
 	{	
 		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 		
-		var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1) 
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingLight, attack, true);
 		}
 	}
 	break;
@@ -769,10 +767,9 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
 		
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingMedium, attack, true);
 		}
 	}
 	break;
@@ -790,12 +787,10 @@ switch state
 		{
 			hurtbox.image_yscale = 20;
 		}
-		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingHeavy, attack, true);
 		}
 	}
 	break;
@@ -817,11 +812,10 @@ switch state
 	case eState.JUMPING_MEDIUM_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingMedium, attack, true);
 		}
 	}
 	break;
@@ -830,11 +824,10 @@ switch state
 	case eState.JUMPING_HEAVY_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingHeavy, attack, true);
 		}
 	}
 	break;

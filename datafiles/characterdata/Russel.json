@@ -3184,7 +3184,7 @@
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 8192,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 213016,
       "SpriteName": "sRussel_Jumping_Light",
       "Duration": 999,
       "NumberOfFrames": 2,
@@ -4063,6 +4063,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-10T14:49:09.2479763-07:00",
+  "LastModified": "2023-05-10T14:55:29.2881701-07:00",
   "LastModifiedBy": "creep"
 }
