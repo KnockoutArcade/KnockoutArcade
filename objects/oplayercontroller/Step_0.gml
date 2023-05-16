@@ -327,9 +327,14 @@ if (state == eState.HITSTOP)
 			// We use the player's Previous State since the player's current state at this moment
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
-			var attackState = FindAttackState(prevState);
 			
-			CancelData(attackState, attack, false);
+			// Exception for command grabs.
+			if (prevState != eState.COMMAND_GRAB)
+			{
+				var attackState = FindAttackState(prevState);
+			
+				CancelData(attackState, attack, false);
+			}
 		}
 	}
 	if (blockstun > 0)
