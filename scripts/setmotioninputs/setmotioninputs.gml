@@ -2,11 +2,11 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function SetMotionInputs(motionInputs, numberOfInputs)
+function SetMotionInputs(motionInputs, numberOfMotions)
 {
 	if (!inputSet) 
 	{
-		for (var i = 0; i < numberOfInputs; i++) 
+		for (var i = 0; i < numberOfMotions; i++) 
 		{
 			// Turns the motion input into separate numbers in an array
 			motionInputs[i] = string(motionInputs[i]);
@@ -32,7 +32,7 @@ function SetMotionInputs(motionInputs, numberOfInputs)
 				for (var k = 0; k < array_length(directions); k++)
 				{
 					// Remove down and up directions that are in the middle of the input
-					if (k != 0 && k != array_length(directions) - 1)
+					if (k != 0 && k != 1 && k != array_length(directions) - 1)
 					{
 						if (directions[k] == 2 || directions[k] == 8)
 						{
@@ -53,6 +53,7 @@ function SetMotionInputs(motionInputs, numberOfInputs)
 				}
 			}
 			
+			progressInInputs[i] = -1;
 			ds_list_add(listOfInputs, directions);
 		}
 		

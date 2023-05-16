@@ -118,12 +118,13 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 }
 
 
-// Set inputSet to false if the player isn't performing a special move
+// Reset motion input values if the player isn't performing a special move
 if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
 {
 	inputSet = false;
 	motionInput = [];
 	ds_list_clear(listOfInputs);
+	progressInInputs = [];
 }
 else
 {

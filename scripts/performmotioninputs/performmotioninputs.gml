@@ -6,53 +6,68 @@ function PerformMotionInputs()
 {
 	if (inputSet)
 	{
-		var inputDirection = 5; // Neutral
+		var inputDirection = 5; // Neutral; Default
 		// Set input directions
 		if (movedir == -image_xscale && verticalMoveDir == -1)
 		{
 			inputDirection = 1; // Down-back
-			show_debug_message("Down-back");
 		}
 		else if (movedir == 0 && verticalMoveDir == -1)
 		{
 			inputDirection = 2; // Down
-			show_debug_message("Down");
 		}
 		else if (movedir == image_xscale && verticalMoveDir == -1)
 		{
 			inputDirection = 3; // Down-forward
-			show_debug_message("Down-forward");
 		}
 		else if (movedir == -image_xscale && verticalMoveDir == 0)
 		{
 			inputDirection = 4; // Back
-			show_debug_message("Back");
 		}
 		else if (movedir == 0 && verticalMoveDir == 0)
 		{
 			inputDirection = 5; // Neutral
-			show_debug_message("Neutral");
 		}
 		else if (movedir == image_xscale && verticalMoveDir == 0)
 		{
-			inputDirection = 5; // Forward
-			show_debug_message("Forward");
+			inputDirection = 6; // Forward
 		}
 		else if (movedir == -image_xscale && verticalMoveDir == 1)
 		{
 			inputDirection = 7; // Up-back
-			show_debug_message("Up-back");
 		}
 		else if (movedir == 0 && verticalMoveDir == 1)
 		{
 			inputDirection = 8; // Up
-			show_debug_message("Up");
 		}
 		else if (movedir == image_xscale && verticalMoveDir == 1)
 		{
 			inputDirection = 9; // Up-forward
-			show_debug_message("Up-forward");
 		}
+		
+		// Iterates through each motion input for the special move
+		for (var i = 0; i < ds_list_size(listOfInputs); i++)
+		{
+			var currentMotionInput = ds_list_find_value(listOfInputs, i);
+			// Iterates through each direction in motion input
+			for (var j = 0; j < array_length(currentMotionInput); j++)
+			{
+				if (inputDirection == currentMotionInput[j] && progressInInputs[i] == j - 1)
+				{
+					progressInInputs[i] = j;
+				}
+			}
+		}
+		
+		for (var i = 0; i < array_length(progressInInputs); i++)
+		{
+			var currentMotionInput = ds_list_find_value(listOfInputs, i);
+			if (progressInInputs[i] == array_length(currentMotionInput) - 1)
+			{
+				show_debug_message("Input Performed");
+			}
+		}
+		
 	}
 	
 }

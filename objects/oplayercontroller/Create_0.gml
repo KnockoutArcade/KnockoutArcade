@@ -70,9 +70,9 @@ grounded = true;
 
 // Variables for motion inputs
 inputSet = false;
-motionInput = []; // Determines the input to perform during each special move
+motionInput = []; // Determines the inputs to perform during each special move
 listOfInputs = ds_list_create();
-
+progressInInputs = []; // Holds the indexes of each motion input to determine progress through each input
 
 // Controller Controls
 controller = -1;
