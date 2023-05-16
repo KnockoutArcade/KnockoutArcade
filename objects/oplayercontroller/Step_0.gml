@@ -125,6 +125,10 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	motionInput = [];
 	ds_list_clear(listOfInputs);
 }
+else
+{
+	PerformMotionInputs();
+}
 
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.

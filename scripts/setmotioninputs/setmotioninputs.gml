@@ -28,10 +28,10 @@ function SetMotionInputs(motionInputs, numberOfInputs)
 			{
 				tempIndex = 0;
 				
-				// Uses for loop to check all input directions. Removes them afterward to not crash the game
+				// Uses for loop to check all input directions. Removes them afterward to prevent errors
 				for (var k = 0; k < array_length(directions); k++)
 				{
-					// Remove cardinal directions that are in the middle of the input
+					// Remove down and up directions that are in the middle of the input
 					if (k != 0 && k != array_length(directions) - 1)
 					{
 						if (directions[k] == 2 || directions[k] == 8)
