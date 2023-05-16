@@ -18,10 +18,41 @@ function SetMotionInputs(motionInputs, numberOfInputs)
 				try
 				{
 					directions[j] = real(string_char_at(motionInputs[i], j+1));
-					show_debug_message(directions[j]);
 				}
 				catch(e) {}
 			}
+			
+			// Shorten inputs for input leniency
+			lenient = false;
+			while (!lenient) 
+			{
+				tempIndex = 0;
+				
+				// Uses for loop to check all input directions. Removes them afterward to not crash the game
+				for (var k = 0; k < array_length(directions); k++)
+				{
+					// Remove cardinal directions that are in the middle of the input
+					if (k != 0 && k != array_length(directions) - 1)
+					{
+						if (directions[k] == 2 || directions[k] == 8)
+						{
+							tempIndex = k;
+							break;
+						}
+					}
+				}
+				
+				// Check if an input needs to be deleted or not. If not, the input is lenient
+				if (tempIndex != 0) 
+				{
+					array_delete(directions, tempIndex, 1);
+				}
+				else 
+				{
+					lenient = true;
+				}
+			}
+			
 			ds_list_add(listOfInputs, directions);
 		}
 		
