@@ -47,6 +47,7 @@
     {"id":{"name":"sJay_SC_StandingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_StandingHeavy_MOCKUP_strip5/sJay_SC_StandingHeavy_MOCKUP_strip5.yy",},"order":11,},
     {"id":{"name":"sTimeUp","path":"sprites/sTimeUp/sTimeUp.yy",},"order":6,},
     {"id":{"name":"sJay_SC_NspecialEN_MOCKUP_strip4","path":"sprites/sJay_SC_NspecialEN_MOCKUP_strip4/sJay_SC_NspecialEN_MOCKUP_strip4.yy",},"order":1,},
+    {"id":{"name":"MotionInputs","path":"scripts/MotionInputs/MotionInputs.yy",},"order":20,},
     {"id":{"name":"sRussel_Run_Backward","path":"sprites/sRussel_Run_Backward/sRussel_Run_Backward.yy",},"order":31,},
     {"id":{"name":"sPlayer1Wins","path":"sprites/sPlayer1Wins/sPlayer1Wins.yy",},"order":10,},
     {"id":{"name":"sCharacterNames","path":"sprites/sCharacterNames/sCharacterNames.yy",},"order":1,},
