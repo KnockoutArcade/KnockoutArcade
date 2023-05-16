@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
 // Player 1 cursor vars
 var P1menuLeft = global.p1ButtonLeft;
 var P1menuRight = global.p1ButtonRight;
@@ -307,7 +308,15 @@ if (RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4)
 	RTF_currentFrame++;
 }
 
-
+// Fix for when charcters don't have the exact same number of costumes.
+if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
+{
+ 	global.p1PaletteID = 0;
+}
+if (global.p2PaletteID >= p2LocalPalette.NumberOfPalettes)
+{
+ 	global.p2PaletteID = 0;
+}
 
 // Advance to match
 if (P1hasSelectedAlt && P2hasSelectedAlt && P1menuConfirm && !P1menuAltSelBuffer)

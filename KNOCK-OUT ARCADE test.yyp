@@ -158,6 +158,7 @@
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
     {"id":{"name":"sBeverlyStage","path":"sprites/sBeverlyStage/sBeverlyStage.yy",},"order":3,},
     {"id":{"name":"rRusselStage","path":"rooms/rRusselStage/rRusselStage.yy",},"order":1,},
+    {"id":{"name":"FindAttackState","path":"scripts/FindAttackState/FindAttackState.yy",},"order":19,},
     {"id":{"name":"sHurtbox","path":"sprites/sHurtbox/sHurtbox.yy",},"order":3,},
     {"id":{"name":"oJsonImport","path":"objects/oJsonImport/oJsonImport.yy",},"order":6,},
     {"id":{"name":"sComboCounter_Numbers","path":"sprites/sComboCounter_Numbers/sComboCounter_Numbers.yy",},"order":1,},
