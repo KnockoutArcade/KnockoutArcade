@@ -26,7 +26,8 @@ function SetMotionInputs(motionInputs, numberOfMotions)
 			lenient = false;
 			while (!lenient) 
 			{
-				tempIndex = 0;
+				var tempIndex = 0;
+				var tempSameIndex = 0;
 				
 				// Uses for loop to check all input directions. Removes them afterward to prevent errors
 				for (var k = 0; k < array_length(directions); k++)
@@ -40,6 +41,12 @@ function SetMotionInputs(motionInputs, numberOfMotions)
 							break;
 						}
 					}
+					
+					// Add neutral input between two directions that are the same
+					if (k != 0 && directions[k] == directions[k-1])
+					{
+						tempSameIndex = k;
+					}
 				}
 				
 				// Check if an input needs to be deleted or not. If not, the input is lenient
@@ -47,10 +54,26 @@ function SetMotionInputs(motionInputs, numberOfMotions)
 				{
 					array_delete(directions, tempIndex, 1);
 				}
-				else 
+				
+				if (tempSameIndex != 0)
+				{
+					for (var i = array_length(directions) - 1; i >= tempSameIndex; i--)
+					{
+						directions[i+1] = directions[i];
+					}
+					directions[tempSameIndex] = 5;
+				}
+				
+				if (tempIndex == 0 && tempSameIndex == 0)
 				{
 					lenient = true;
 				}
+			}
+			
+			
+			for (var k = 0; k < array_length(directions); k++)
+			{
+				show_debug_message(directions[k]);
 			}
 			
 			progressInInputs[i] = -1;
