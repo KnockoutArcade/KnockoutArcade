@@ -118,6 +118,13 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 }
 
 
+// Set inputSet to false if the player isn't performing a special move
+if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
+{
+	inputSet = false;
+}
+
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
@@ -837,12 +844,13 @@ switch state
 		if (grounded)
 		{	
 			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
-			MotionInputs(movedir, verticalMoveDir);
 		} 
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
+		motionInput = 236;
+		SetMotionInputs(movedir, verticalMoveDir, motionInput);
 	}
 	break;
 	
@@ -857,6 +865,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
+		motionInput = 214;
+		SetMotionInputs(movedir, verticalMoveDir, motionInput);
 	}
 	break;
 	
@@ -871,6 +881,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
+		motionInput = 623;
+		SetMotionInputs(movedir, verticalMoveDir, motionInput);
 		
 		if (animTimer < 28)
 		{
@@ -894,6 +906,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
+		motionInput = 22;
+		SetMotionInputs(movedir, verticalMoveDir, motionInput);
 	}
 	break;
 

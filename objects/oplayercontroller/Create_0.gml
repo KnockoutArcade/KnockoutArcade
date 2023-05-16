@@ -68,6 +68,10 @@ movedir = 0;
 verticalMoveDir = 0;
 grounded = true;
 
+// Variables for motion inputs
+inputSet = false;
+motionInput = 0; // Determines which input to perform during each special move
+
 // Controller Controls
 controller = -1;
 
