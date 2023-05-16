@@ -122,13 +122,8 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
 {
 	inputSet = false;
-	for (i = 0; i < array_length_2d(inputDirections, 0); i++) 
-	{
-		for (j = 0; j < array_length_2d(inputDirections, 1); j++) 
-		{
-			inputDirections[i][j] = 0;
-		}
-	}
+	motionInput = [];
+	ds_list_clear(listOfInputs);
 }
 
 
@@ -340,9 +335,13 @@ if (state == eState.HITSTOP)
 			// We use the player's Previous State since the player's current state at this moment
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
-			var attackState = FindAttackState(prevState);
-			
-			CancelData(attackState, attack, false);
+			// Exception for command grabs.
+			if (prevState != eState.COMMAND_GRAB)
+			{
+				var attackState = FindAttackState(prevState);
+
+				CancelData(attackState, attack, false);
+			}
 		}
 	}
 	if (blockstun > 0)
@@ -856,8 +855,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
-		motionInput = 236;
-		SetMotionInputs(motionInput, 0);
+		motionInput[0] = 236;
+		SetMotionInputs(motionInput, 1);
 	}
 	break;
 	
@@ -872,8 +871,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
-		motionInput = 214;
-		SetMotionInputs(motionInput, 0);
+		motionInput[0] = 214;
+		SetMotionInputs(motionInput, 1);
 	}
 	break;
 	
@@ -888,8 +887,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
-		motionInput = 623;
-		SetMotionInputs(motionInput, 0);
+		motionInput[0] = 623;
+		SetMotionInputs(motionInput, 1);
 		
 		if (animTimer < 28)
 		{
@@ -913,8 +912,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
-		motionInput = 22;
-		SetMotionInputs(motionInput, 0);
+		motionInput[0] = 22;
+		SetMotionInputs(motionInput, 1);
 	}
 	break;
 

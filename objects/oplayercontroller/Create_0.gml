@@ -70,8 +70,8 @@ grounded = true;
 
 // Variables for motion inputs
 inputSet = false;
-motionInput = 0; // Determines the input to perform during each special move
-inputDirections[0][0] = 0; // 2D array; first is which motion input in case we're doing multiple enhancements, second is the input itself
+motionInput = []; // Determines the input to perform during each special move
+listOfInputs = ds_list_create();
 
 
 // Controller Controls
