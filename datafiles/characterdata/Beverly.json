@@ -1864,7 +1864,7 @@
     {
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
       "MoveType": 32,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 199000,
       "SpriteName": "sBeverly_StandLight1_MOCKUP_strip3",
       "Duration": 7,
       "NumberOfFrames": 3,
@@ -1980,7 +1980,7 @@
     {
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
       "MoveType": 64,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 199064,
       "SpriteName": "sBeverly_StandLight2_MOCKUP_strip3",
       "Duration": 14,
       "NumberOfFrames": 3,
@@ -2212,7 +2212,7 @@
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
       "MoveType": 256,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 201240,
       "SpriteName": "sBeverly_StandMedium_MOCKUP_strip5",
       "Duration": 21,
       "NumberOfFrames": 5,
@@ -2358,7 +2358,7 @@
     {
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
       "MoveType": 512,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sBeverly_StandHeavy_MOCKUP_strip5",
       "Duration": 39,
       "NumberOfFrames": 5,
@@ -2504,7 +2504,7 @@
     {
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
       "MoveType": 1024,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 198936,
       "SpriteName": "sBeverly_CrouchLight_MOCKUP_strip4",
       "Duration": 9,
       "NumberOfFrames": 4,
@@ -2624,7 +2624,7 @@
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
       "MoveType": 2048,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 201240,
       "SpriteName": "sBeverly_CrouchMedium_MOCKUP_strip4",
       "Duration": 24,
       "NumberOfFrames": 4,
@@ -2744,7 +2744,7 @@
     {
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
       "MoveType": 4096,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sBeverly_CrouchHeavy_MOCKUP_strip9",
       "Duration": 34,
       "NumberOfFrames": 9,
@@ -2943,7 +2943,7 @@
     {
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
       "MoveType": 8192,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sBeverly_JumpLight_Mockup_strip3",
       "Duration": 10,
       "NumberOfFrames": 3,
@@ -3059,7 +3059,7 @@
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
       "MoveType": 16384,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sBeverly_JumpMedium_Mockup_strip6",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3187,7 +3187,7 @@
     {
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
       "MoveType": 32768,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 196632,
       "SpriteName": "sBeverly_JumpHeavy_Mockup_strip6",
       "Duration": 30,
       "NumberOfFrames": 6,
@@ -3798,6 +3798,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-04-22T00:49:31.5132851-04:00",
-  "LastModifiedBy": "johnk"
+  "LastModified": "2023-05-15T17:53:05.9646989-07:00",
+  "LastModifiedBy": "creep"
 }
