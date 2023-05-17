@@ -3729,19 +3729,23 @@
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_UpSpecialFinisher",
       "Duration": 110,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
           "Length": 12,
           "ImageIndex": 3
+        },
+        {
+          "Length": 99,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
@@ -3804,12 +3808,39 @@
       "OpponentPositionData": {
         "DistanceFromWall": 60.0,
         "ThrowOffset": 0,
-        "NumberOfFrames": 2,
+        "NumberOfFrames": 5,
         "Frames": [
           {
             "Frame": 0,
-            "RelativeX": -10,
-            "RelativeY": -55,
+            "RelativeX": 25,
+            "RelativeY": -34,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 0,
+            "XScale": -1
+          },
+          {
+            "Frame": 4,
+            "RelativeX": 16,
+            "RelativeY": -37,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 0,
+            "XScale": -1
+          },
+          {
+            "Frame": 8,
+            "RelativeX": 13,
+            "RelativeY": -50,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 90,
+            "XScale": -1
+          },
+          {
+            "Frame": 12,
+            "RelativeX": -13,
+            "RelativeY": -67,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 180,
@@ -3822,7 +3853,7 @@
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": -1
+            "XScale": 1
           }
         ]
       },
@@ -4245,6 +4276,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-16T19:46:16.8739863-07:00",
+  "LastModified": "2023-05-16T21:15:53.5644591-07:00",
   "LastModifiedBy": "creep"
 }
