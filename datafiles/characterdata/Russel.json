@@ -3881,7 +3881,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 1.0,
-            "VerticalSpeed": -5.0,
+            "VerticalSpeed": -4.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -3893,7 +3893,7 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.5,
+        "GravityScale": 1.0,
         "FallScale": 10.0
       },
       "AirMovementData": {
@@ -3902,7 +3902,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 1.0,
-            "VerticalSpeed": -5.0,
+            "VerticalSpeed": -4.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -3914,7 +3914,7 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.5,
+        "GravityScale": 1.0,
         "FallScale": 10.0
       },
       "SupplimentaryScript": ""
@@ -4276,6 +4276,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-16T21:20:57.8173268-07:00",
+  "LastModified": "2023-05-17T09:26:01.7687075-07:00",
   "LastModifiedBy": "creep"
 }
