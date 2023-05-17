@@ -1986,7 +1986,7 @@
       "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 0,
+          "Length": 2,
           "ImageIndex": 0
         },
         {
@@ -2001,7 +2001,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 2,
+          "Start": 4,
           "Lifetime": 4,
           "AttackWidth": 17,
           "AttackHeight": 13,
@@ -2080,8 +2080,16 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.6999999,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -2110,7 +2118,7 @@
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 12,
           "ImageIndex": 3
         }
       ],
@@ -2120,8 +2128,8 @@
           "Start": 6,
           "Lifetime": 3,
           "AttackWidth": 20,
-          "AttackHeight": 8,
-          "WidthOffset": 3,
+          "AttackHeight": 10,
+          "WidthOffset": 8,
           "HeightOffset": 15,
           "Group": 1,
           "Damage": 3,
@@ -2243,7 +2251,7 @@
         {
           "Start": 7,
           "Lifetime": 4,
-          "AttackWidth": 20,
+          "AttackWidth": 23,
           "AttackHeight": 8,
           "WidthOffset": 10,
           "HeightOffset": 10,
@@ -2531,7 +2539,7 @@
         {
           "Start": 4,
           "Lifetime": 2,
-          "AttackWidth": 20,
+          "AttackWidth": 16,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -2651,7 +2659,7 @@
         {
           "Start": 7,
           "Lifetime": 2,
-          "AttackWidth": 13,
+          "AttackWidth": 18,
           "AttackHeight": 10,
           "WidthOffset": 13,
           "HeightOffset": 0,
@@ -2791,7 +2799,7 @@
         {
           "Start": 8,
           "Lifetime": 1,
-          "AttackWidth": 15,
+          "AttackWidth": 30,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -3096,7 +3104,7 @@
           "Lifetime": 6,
           "AttackWidth": 32,
           "AttackHeight": 12,
-          "WidthOffset": -6,
+          "WidthOffset": -4,
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 8,
@@ -3223,8 +3231,8 @@
           "Start": 12,
           "Lifetime": 3,
           "AttackWidth": 25,
-          "AttackHeight": 10,
-          "WidthOffset": 0,
+          "AttackHeight": 13,
+          "WidthOffset": 3,
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 7,
@@ -3430,7 +3438,7 @@
         },
         {
           "Start": 16,
-          "Lifetime": 18,
+          "Lifetime": 15,
           "AttackWidth": 35,
           "AttackHeight": 15,
           "WidthOffset": 0,
@@ -3632,7 +3640,7 @@
         {
           "Start": 8,
           "Lifetime": 4,
-          "AttackWidth": 23,
+          "AttackWidth": 28,
           "AttackHeight": 20,
           "WidthOffset": 0,
           "HeightOffset": 2,
@@ -3664,7 +3672,7 @@
           "Lifetime": 4,
           "AttackWidth": 23,
           "AttackHeight": 20,
-          "WidthOffset": -23,
+          "WidthOffset": -28,
           "HeightOffset": 2,
           "Group": 1,
           "Damage": 15,
@@ -3798,6 +3806,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-05-15T17:53:05.9646989-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-05-16T22:13:27.290439-07:00",
+  "LastModifiedBy": "iansb"
 }
