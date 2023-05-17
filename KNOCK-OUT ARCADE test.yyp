@@ -100,6 +100,7 @@
     {"id":{"name":"sArcadeBackground","path":"sprites/sArcadeBackground/sArcadeBackground.yy",},"order":1,},
     {"id":{"name":"sJay_Walk_Forward","path":"sprites/sJay_Walk_Forward/sJay_Walk_Forward.yy",},"order":0,},
     {"id":{"name":"sBeverly_CrouchHeavy_MOCKUP_strip9","path":"sprites/sBeverly_CrouchHeavy_MOCKUP_strip9/sBeverly_CrouchHeavy_MOCKUP_strip9.yy",},"order":15,},
+    {"id":{"name":"sRussel_UpSpecialFinisher","path":"sprites/sRussel_UpSpecialFinisher/sRussel_UpSpecialFinisher.yy",},"order":33,},
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":1,},
     {"id":{"name":"sBlockEffect","path":"sprites/sBlockEffect/sBlockEffect.yy",},"order":12,},
     {"id":{"name":"sRussel_Standing_Heavy","path":"sprites/sRussel_Standing_Heavy/sRussel_Standing_Heavy.yy",},"order":7,},
