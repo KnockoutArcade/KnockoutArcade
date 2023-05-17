@@ -65,6 +65,7 @@ function PerformMotionInputs()
 			if (progressInInputs[i] == array_length(currentMotionInput) - 1)
 			{
 				show_debug_message("Input Performed");
+				enhanced[i] = true;
 			}
 		}
 		

@@ -125,6 +125,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	motionInput = [];
 	ds_list_clear(listOfInputs);
 	progressInInputs = [];
+	enhanced = [];
 }
 else
 {
