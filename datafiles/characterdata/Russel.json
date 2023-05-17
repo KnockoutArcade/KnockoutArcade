@@ -3727,13 +3727,21 @@
       "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
       "MoveType": 262144,
       "MoveCanCancelInto": 0,
-      "SpriteName": "sRussel_Grab",
+      "SpriteName": "sRussel_UpSpecialFinisher",
       "Duration": 110,
-      "NumberOfFrames": 1,
+      "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 0,
-          "ImageIndex": 0
+          "Length": 5,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 9,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 1,
@@ -3800,16 +3808,16 @@
         "Frames": [
           {
             "Frame": 0,
-            "RelativeX": 20,
-            "RelativeY": 0,
+            "RelativeX": -10,
+            "RelativeY": -55,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
+            "Rotation": 180,
             "XScale": -1
           },
           {
-            "Frame": 13,
-            "RelativeX": 30,
+            "Frame": 99,
+            "RelativeX": 10,
             "RelativeY": 0,
             "Sprite": 0,
             "Index": 0,
@@ -4237,6 +4245,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-10T22:08:49.5754408-07:00",
+  "LastModified": "2023-05-16T19:46:16.8739863-07:00",
   "LastModifiedBy": "creep"
 }
