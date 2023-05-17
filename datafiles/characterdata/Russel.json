@@ -3848,12 +3848,12 @@
           },
           {
             "Frame": 99,
-            "RelativeX": 10,
+            "RelativeX": 20,
             "RelativeY": 0,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 1
+            "XScale": -1
           }
         ]
       },
@@ -4276,6 +4276,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-16T21:15:53.5644591-07:00",
+  "LastModified": "2023-05-16T21:20:57.8173268-07:00",
   "LastModifiedBy": "creep"
 }
