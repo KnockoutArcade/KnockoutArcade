@@ -3728,8 +3728,8 @@
       "MoveType": 262144,
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_UpSpecialFinisher",
-      "Duration": 110,
-      "NumberOfFrames": 4,
+      "Duration": 130,
+      "NumberOfFrames": 7,
       "FrameData": [
         {
           "Length": 4,
@@ -3746,6 +3746,18 @@
         {
           "Length": 99,
           "ImageIndex": 4
+        },
+        {
+          "Length": 104,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 108,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 126,
+          "ImageIndex": 7
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4276,6 +4288,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-17T09:26:01.7687075-07:00",
+  "LastModified": "2023-05-17T19:26:10.758599-07:00",
   "LastModifiedBy": "creep"
 }

@@ -426,7 +426,7 @@ switch state
 			sprite_index = CharacterSprites.walkForward_Sprite;
 			superMeter += meterBuildRate; // Walking forwards builds meter
 		}
-		else 
+		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
