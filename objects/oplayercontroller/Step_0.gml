@@ -862,7 +862,8 @@ switch state
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 236;
-		SetMotionInputs(motionInput, 1);
+		motionInput[1] = 214;
+		SetMotionInputs(motionInput, array_length(motionInput));
 	}
 	break;
 	
@@ -878,7 +879,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 214;
-		SetMotionInputs(motionInput, 1);
+		SetMotionInputs(motionInput, array_length(motionInput));
 	}
 	break;
 	
@@ -894,7 +895,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 623;
-		SetMotionInputs(motionInput, 1);
+		SetMotionInputs(motionInput, array_length(motionInput));
 		
 		if (animTimer < 28)
 		{
@@ -919,7 +920,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 22;
-		SetMotionInputs(motionInput, 1);
+		SetMotionInputs(motionInput, array_length(motionInput));
 	}
 	break;
 

@@ -6,6 +6,8 @@ function PerformMotionInputs()
 {
 	if (inputSet)
 	{
+		var inputPerformed = false;
+		
 		var inputDirection = 5; // Neutral; Default
 		// Set input directions
 		if (movedir == -image_xscale && verticalMoveDir == -1)
@@ -59,16 +61,28 @@ function PerformMotionInputs()
 			}
 		}
 		
-		for (var i = 0; i < array_length(progressInInputs); i++)
+		// Check if any move is already being enhanced
+		for (var i = 0; i < array_length(enhanced); i++)
 		{
-			var currentMotionInput = ds_list_find_value(listOfInputs, i);
-			if (progressInInputs[i] == array_length(currentMotionInput) - 1)
+			if (enhanced[i])
 			{
-				show_debug_message("Input Performed");
-				enhanced[i] = true;
+				inputPerformed = true;
 			}
 		}
 		
+		// If not, check if any enhancements have been inputted
+		if (!inputPerformed)
+		{
+			for (var i = 0; i < array_length(progressInInputs); i++)
+			{
+				var currentMotionInput = ds_list_find_value(listOfInputs, i);
+				if (progressInInputs[i] == array_length(currentMotionInput) - 1 && !inputPerformed)
+				{
+					show_debug_message("Input " + string(i) + " Performed");
+					enhanced[i] = true;
+				}
+			}
+		}
 	}
 	
 }

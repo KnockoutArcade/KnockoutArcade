@@ -70,12 +70,6 @@ function SetMotionInputs(motionInputs, numberOfMotions)
 				}
 			}
 			
-			
-			for (var k = 0; k < array_length(directions); k++)
-			{
-				show_debug_message(directions[k]);
-			}
-			
 			enhanced[i] = false;
 			progressInInputs[i] = -1;
 			ds_list_add(listOfInputs, directions);
