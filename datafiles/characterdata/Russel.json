@@ -3728,15 +3728,15 @@
       "MoveType": 262144,
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_UpSpecialFinisher",
-      "Duration": 130,
-      "NumberOfFrames": 7,
+      "Duration": 138,
+      "NumberOfFrames": 12,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
@@ -3748,22 +3748,42 @@
           "ImageIndex": 4
         },
         {
-          "Length": 104,
+          "Length": 102,
           "ImageIndex": 5
         },
         {
-          "Length": 108,
+          "Length": 106,
           "ImageIndex": 6
         },
         {
-          "Length": 126,
+          "Length": 110,
           "ImageIndex": 7
+        },
+        {
+          "Length": 114,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 118,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 124,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 130,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 134,
+          "ImageIndex": 12
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 100,
+          "Start": 101,
           "Lifetime": 14,
           "AttackWidth": 40,
           "AttackHeight": 30,
@@ -3832,18 +3852,18 @@
             "XScale": -1
           },
           {
-            "Frame": 4,
-            "RelativeX": 16,
-            "RelativeY": -37,
+            "Frame": 3,
+            "RelativeX": 34,
+            "RelativeY": -58,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
+            "Rotation": 90,
             "XScale": -1
           },
           {
-            "Frame": 8,
-            "RelativeX": 13,
-            "RelativeY": -50,
+            "Frame": 6,
+            "RelativeX": 20,
+            "RelativeY": -58,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 90,
@@ -4288,6 +4308,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-17T19:26:10.758599-07:00",
+  "LastModified": "2023-05-19T15:33:38.7353675-07:00",
   "LastModifiedBy": "creep"
 }

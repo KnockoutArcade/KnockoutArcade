@@ -15,14 +15,13 @@ for (var i = 0; i < 100; i++;)
 		{
 			draw_sprite(sSmallShadow, 0, x, floor(y)+i);
 		}
-		else
+		else (i < 100)
 		{
 			draw_sprite(sEvenSmallerShadow, 0, x, floor(y)+i);
 		}
 		foundFloor = true;
 	}
 }
-
 
 
 shader_set(sh_CharPalettes);
