@@ -5,7 +5,7 @@
 var foundFloor = false;
 for (var i = 0; i < 100; i++;)
 {
-	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor)
+	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor && !isGrabbed)
 	{
 		if (i < 25)
 		{
@@ -15,7 +15,7 @@ for (var i = 0; i < 100; i++;)
 		{
 			draw_sprite(sSmallShadow, 0, x, floor(y)+i);
 		}
-		else (i < 100)
+		else
 		{
 			draw_sprite(sEvenSmallerShadow, 0, x, floor(y)+i);
 		}

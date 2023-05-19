@@ -3783,7 +3783,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 101,
+          "Start": 102,
           "Lifetime": 14,
           "AttackWidth": 40,
           "AttackHeight": 30,
@@ -4308,6 +4308,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-19T15:33:38.7353675-07:00",
+  "LastModified": "2023-05-19T15:57:30.5224839-07:00",
   "LastModifiedBy": "creep"
 }
