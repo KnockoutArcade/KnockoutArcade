@@ -41,7 +41,7 @@
     "spriteId": {"name":"sBeverly_SideSpecial3Overhead_MOCKUP","path":"sprites/sBeverly_SideSpecial3Overhead_MOCKUP/sBeverly_SideSpecial3Overhead_MOCKUP.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -1903,7 +1903,7 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "Pushback": 2.0,
+          "Pushback": 1.4999999,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
@@ -1986,7 +1986,7 @@
       "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 0,
+          "Length": 2,
           "ImageIndex": 0
         },
         {
@@ -2001,9 +2001,9 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 2,
+          "Start": 4,
           "Lifetime": 4,
-          "AttackWidth": 17,
+          "AttackWidth": 18,
           "AttackHeight": 13,
           "WidthOffset": 6,
           "HeightOffset": 0,
@@ -2080,8 +2080,16 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -2110,7 +2118,7 @@
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 12,
           "ImageIndex": 3
         }
       ],
@@ -2119,9 +2127,9 @@
         {
           "Start": 6,
           "Lifetime": 3,
-          "AttackWidth": 20,
-          "AttackHeight": 8,
-          "WidthOffset": 3,
+          "AttackWidth": 22,
+          "AttackHeight": 10,
+          "WidthOffset": 8,
           "HeightOffset": 15,
           "Group": 1,
           "Damage": 3,
@@ -2182,10 +2190,10 @@
         {
           "Start": 6,
           "Lifetime": 8,
-          "AttackWidth": 10,
-          "AttackHeight": 35,
-          "WidthOffset": 4,
-          "HeightOffset": 0
+          "AttackWidth": 22,
+          "AttackHeight": 9,
+          "WidthOffset": 2,
+          "HeightOffset": 16
         }
       ],
       "NumberOfProjectiles": 0,
@@ -2243,7 +2251,7 @@
         {
           "Start": 7,
           "Lifetime": 4,
-          "AttackWidth": 20,
+          "AttackWidth": 23,
           "AttackHeight": 8,
           "WidthOffset": 10,
           "HeightOffset": 10,
@@ -2453,7 +2461,7 @@
           "Start": 12,
           "Lifetime": 19,
           "AttackWidth": 22,
-          "AttackHeight": 30,
+          "AttackHeight": 24,
           "WidthOffset": -1,
           "HeightOffset": 0
         }
@@ -2531,7 +2539,7 @@
         {
           "Start": 4,
           "Lifetime": 2,
-          "AttackWidth": 20,
+          "AttackWidth": 16,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -2594,8 +2602,8 @@
         {
           "Start": 4,
           "Lifetime": 4,
-          "AttackWidth": 25,
-          "AttackHeight": 10,
+          "AttackWidth": 21,
+          "AttackHeight": 8,
           "WidthOffset": 4,
           "HeightOffset": 0
         }
@@ -2651,7 +2659,7 @@
         {
           "Start": 7,
           "Lifetime": 2,
-          "AttackWidth": 13,
+          "AttackWidth": 18,
           "AttackHeight": 10,
           "WidthOffset": 13,
           "HeightOffset": 0,
@@ -2791,7 +2799,7 @@
         {
           "Start": 8,
           "Lifetime": 1,
-          "AttackWidth": 15,
+          "AttackWidth": 30,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -2905,8 +2913,8 @@
         {
           "Start": 9,
           "Lifetime": 3,
-          "AttackWidth": 40,
-          "AttackHeight": 15,
+          "AttackWidth": 33,
+          "AttackHeight": 14,
           "WidthOffset": -1,
           "HeightOffset": 0
         },
@@ -3029,9 +3037,9 @@
         {
           "Start": 3,
           "Lifetime": 20,
-          "AttackWidth": 36,
-          "AttackHeight": 20,
-          "WidthOffset": -18,
+          "AttackWidth": 21,
+          "AttackHeight": 11,
+          "WidthOffset": -5,
           "HeightOffset": 6
         }
       ],
@@ -3096,7 +3104,7 @@
           "Lifetime": 6,
           "AttackWidth": 32,
           "AttackHeight": 12,
-          "WidthOffset": -6,
+          "WidthOffset": -4,
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 8,
@@ -3157,8 +3165,8 @@
         {
           "Start": 8,
           "Lifetime": 13,
-          "AttackWidth": 34,
-          "AttackHeight": 15,
+          "AttackWidth": 32,
+          "AttackHeight": 12,
           "WidthOffset": -6,
           "HeightOffset": 5
         }
@@ -3223,8 +3231,8 @@
           "Start": 12,
           "Lifetime": 3,
           "AttackWidth": 25,
-          "AttackHeight": 10,
-          "WidthOffset": 0,
+          "AttackHeight": 13,
+          "WidthOffset": 3,
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 7,
@@ -3336,7 +3344,7 @@
         {
           "Start": 12,
           "Lifetime": 20,
-          "AttackWidth": 25,
+          "AttackWidth": 30,
           "AttackHeight": 10,
           "WidthOffset": -3,
           "HeightOffset": 4
@@ -3430,7 +3438,7 @@
         },
         {
           "Start": 16,
-          "Lifetime": 18,
+          "Lifetime": 15,
           "AttackWidth": 35,
           "AttackHeight": 15,
           "WidthOffset": 0,
@@ -3514,19 +3522,19 @@
       "HurtboxData": [
         {
           "Start": 8,
-          "Lifetime": 6,
-          "AttackWidth": 30,
-          "AttackHeight": 20,
+          "Lifetime": 7,
+          "AttackWidth": 11,
+          "AttackHeight": 17,
           "WidthOffset": 0,
-          "HeightOffset": 2
+          "HeightOffset": 7
         },
         {
           "Start": 26,
           "Lifetime": 6,
-          "AttackWidth": 30,
-          "AttackHeight": 20,
+          "AttackWidth": 11,
+          "AttackHeight": 17,
           "WidthOffset": 0,
-          "HeightOffset": 2
+          "HeightOffset": 7
         }
       ],
       "NumberOfProjectiles": 0,
@@ -3632,7 +3640,7 @@
         {
           "Start": 8,
           "Lifetime": 4,
-          "AttackWidth": 23,
+          "AttackWidth": 28,
           "AttackHeight": 20,
           "WidthOffset": 0,
           "HeightOffset": 2,
@@ -3664,7 +3672,7 @@
           "Lifetime": 4,
           "AttackWidth": 23,
           "AttackHeight": 20,
-          "WidthOffset": -23,
+          "WidthOffset": -28,
           "HeightOffset": 2,
           "Group": 1,
           "Damage": 15,
@@ -3798,6 +3806,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-05-17T18:25:43.5655432-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-05-18T16:51:33.6435838-07:00",
+  "LastModifiedBy": "iansb"
 }
