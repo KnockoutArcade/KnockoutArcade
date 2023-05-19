@@ -3752,23 +3752,23 @@
           "ImageIndex": 5
         },
         {
-          "Length": 106,
+          "Length": 108,
           "ImageIndex": 6
         },
         {
-          "Length": 110,
+          "Length": 114,
           "ImageIndex": 7
         },
         {
-          "Length": 114,
+          "Length": 118,
           "ImageIndex": 8
         },
         {
-          "Length": 118,
+          "Length": 122,
           "ImageIndex": 9
         },
         {
-          "Length": 124,
+          "Length": 126,
           "ImageIndex": 10
         },
         {
@@ -3783,7 +3783,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 102,
+          "Start": 101,
           "Lifetime": 14,
           "AttackWidth": 40,
           "AttackHeight": 30,
@@ -3792,14 +3792,14 @@
           "Group": 1,
           "Damage": 13,
           "AttackHitStop": 20,
-          "AttackHitStun": 24,
+          "AttackHitStun": 18,
           "AttackType": 1,
           "BlockStun": 16.0,
           "KnockBack": 6.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.5,
+          "LaunchKnockbackVertical": -2.4,
           "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
@@ -3880,12 +3880,12 @@
           },
           {
             "Frame": 99,
-            "RelativeX": 20,
+            "RelativeX": 28,
             "RelativeY": 0,
-            "Sprite": 0,
-            "Index": 0,
+            "Sprite": 2,
+            "Index": 5,
             "Rotation": 0,
-            "XScale": -1
+            "XScale": 1
           }
         ]
       },
@@ -4308,6 +4308,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-19T15:57:30.5224839-07:00",
+  "LastModified": "2023-05-19T16:18:41.3013387-07:00",
   "LastModifiedBy": "creep"
 }
