@@ -82,8 +82,13 @@ function PerformMotionInputs()
 				var currentMotionInput = ds_list_find_value(listOfInputs, i);
 				if (progressInInputs[i] == array_length(currentMotionInput) - 1 && !inputPerformed)
 				{
+					// Reset the input if it is performed outside of the input window
+					if (windowTimer < inputWindowStart || windowTimer > inputWindowEnd)
+					{
+						progressInInputs[i] = -1;
+					}
 					// Checks for the longer input
-					if (longerInput < array_length(currentMotionInput) - 1)
+					else if (longerInput < array_length(currentMotionInput) - 1)
 					{
 						longerInput = array_length(currentMotionInput) - 1;
 						longerIndex = i;

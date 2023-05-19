@@ -117,6 +117,16 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 	}
 }
 
+// Handle input window timer
+if (windowTimer <= inputWindowEnd && inputSet)
+{
+	windowTimer++;
+	if (windowTimer > inputWindowEnd)
+	{
+		show_debug_message("Outside of input window");
+	}
+}
+
 
 // Reset motion input values if the player isn't performing a special move
 if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
@@ -126,6 +136,16 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	ds_list_clear(listOfInputs);
 	progressInInputs = [];
 	enhanced = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
+}
+else if (windowTimer > inputWindowEnd)
+{
+	motionInput = [];
+	ds_list_clear(listOfInputs);
+	progressInInputs = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
 }
 else
 {
@@ -863,7 +883,7 @@ switch state
 		}
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput));
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 15);
 	}
 	break;
 	
@@ -879,7 +899,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput));
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 12);
 	}
 	break;
 	
@@ -895,7 +915,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 623;
-		SetMotionInputs(motionInput, array_length(motionInput));
+		SetMotionInputs(motionInput, array_length(motionInput), 20, 30);
 		
 		if (animTimer < 28)
 		{
@@ -920,7 +940,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 22;
-		SetMotionInputs(motionInput, array_length(motionInput));
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 15);
 	}
 	break;
 

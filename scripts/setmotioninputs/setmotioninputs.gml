@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function SetMotionInputs(motionInputs, numberOfMotions)
+function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd)
 {
 	if (!inputSet) 
 	{
@@ -73,6 +73,9 @@ function SetMotionInputs(motionInputs, numberOfMotions)
 			enhanced[i] = false;
 			progressInInputs[i] = -1;
 			ds_list_add(listOfInputs, directions);
+			inputWindowStart = setWindowStart;
+			inputWindowEnd = setWindowEnd;
+			windowTimer = 0;
 		}
 		
 		inputSet = true;
