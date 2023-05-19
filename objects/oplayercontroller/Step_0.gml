@@ -862,7 +862,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 236;
-		motionInput[1] = 214;
+		motionInput[1] = 41236;
 		SetMotionInputs(motionInput, array_length(motionInput));
 	}
 	break;

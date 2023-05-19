@@ -73,15 +73,31 @@ function PerformMotionInputs()
 		// If not, check if any enhancements have been inputted
 		if (!inputPerformed)
 		{
+			// Variables used for input priority
+			var longerInput = -1;
+			var longerIndex = -1;
+			
 			for (var i = 0; i < array_length(progressInInputs); i++)
 			{
 				var currentMotionInput = ds_list_find_value(listOfInputs, i);
 				if (progressInInputs[i] == array_length(currentMotionInput) - 1 && !inputPerformed)
 				{
-					show_debug_message("Input " + string(i) + " Performed");
-					enhanced[i] = true;
+					// Checks for the longer input
+					if (longerInput < array_length(currentMotionInput) - 1)
+					{
+						longerInput = array_length(currentMotionInput) - 1;
+						longerIndex = i;
+					}
 				}
 			}
+			
+			// Enhances input
+			if (longerIndex != -1)
+			{
+				show_debug_message("Input " + string(longerIndex) + " Performed");
+				enhanced[longerIndex] = true;
+			}
+			
 		}
 	}
 	
