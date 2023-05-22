@@ -1841,9 +1841,9 @@
         {
           "Start": 8,
           "Lifetime": 4,
-          "AttackWidth": 40,
+          "AttackWidth": 36,
           "AttackHeight": 20,
-          "WidthOffset": 0,
+          "WidthOffset": 4,
           "HeightOffset": 2,
           "Group": 1,
           "Damage": 7,
@@ -1871,9 +1871,9 @@
         {
           "Start": 26,
           "Lifetime": 4,
-          "AttackWidth": 40,
+          "AttackWidth": 36,
           "AttackHeight": 20,
-          "WidthOffset": 0,
+          "WidthOffset": 4,
           "HeightOffset": 2,
           "Group": 2,
           "Damage": 7,
@@ -2789,7 +2789,7 @@
           "AttackHitStop": 18,
           "AttackHitStun": 14,
           "AttackType": 1,
-          "BlockStun": 20.0,
+          "BlockStun": 19.0,
           "KnockBack": 5.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 3.0,
@@ -4177,38 +4177,46 @@
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_NSpecial",
       "Duration": 50,
-      "NumberOfFrames": 2,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 2,
           "ImageIndex": 1
         },
         {
-          "Length": 20,
+          "Length": 23,
           "ImageIndex": 4
+        },
+        {
+          "Length": 44,
+          "ImageIndex": 24
+        },
+        {
+          "Length": 47,
+          "ImageIndex": 25
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 20,
+          "Start": 24,
           "Lifetime": 4,
           "AttackWidth": 35,
           "AttackHeight": 30,
           "WidthOffset": 5,
           "HeightOffset": 2,
           "Group": 1,
-          "Damage": 15,
+          "Damage": 12,
           "AttackHitStop": 20,
           "AttackHitStun": 19,
           "AttackType": 0,
-          "BlockStun": 10.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": -0.5,
-          "AirKnockbackHorizontal": 0.5,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "BlockStun": 13.0,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": 5.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": 5.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
@@ -4308,6 +4316,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-19T16:18:41.3013387-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-05-21T19:11:26.0226533-07:00",
+  "LastModifiedBy": "alarb"
 }
