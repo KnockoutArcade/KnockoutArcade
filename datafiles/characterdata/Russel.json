@@ -3752,11 +3752,11 @@
           "ImageIndex": 5
         },
         {
-          "Length": 108,
+          "Length": 106,
           "ImageIndex": 6
         },
         {
-          "Length": 114,
+          "Length": 112,
           "ImageIndex": 7
         },
         {
@@ -3783,7 +3783,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 101,
+          "Start": 102,
           "Lifetime": 14,
           "AttackWidth": 40,
           "AttackHeight": 30,
@@ -3803,9 +3803,9 @@
           "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
+          "ParticleYOffset": 2,
+          "ParticleEffect": "sGeyser",
+          "ParticleDuration": 20,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
           "MeterGain": 8.0,
@@ -4316,6 +4316,11 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
+<<<<<<< Updated upstream
   "LastModified": "2023-05-21T19:11:26.0226533-07:00",
   "LastModifiedBy": "alarb"
+=======
+  "LastModified": "2023-05-19T19:46:50.8369678-07:00",
+  "LastModifiedBy": "creep"
+>>>>>>> Stashed changes
 }
