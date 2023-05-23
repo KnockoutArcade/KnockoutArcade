@@ -26,6 +26,7 @@
     {"id":{"name":"oGarbageCan","path":"objects/oGarbageCan/oGarbageCan.yy",},"order":2,},
     {"id":{"name":"sJayStage","path":"sprites/sJayStage/sJayStage.yy",},"order":4,},
     {"id":{"name":"oCampaignLevel","path":"objects/oCampaignLevel/oCampaignLevel.yy",},"order":0,},
+    {"id":{"name":"sRussel_DownSpecial","path":"sprites/sRussel_DownSpecial/sRussel_DownSpecial.yy",},"order":34,},
     {"id":{"name":"sBeverly_Walk_Forward","path":"sprites/sBeverly_Walk_Forward/sBeverly_Walk_Forward.yy",},"order":21,},
     {"id":{"name":"sTestProjectile","path":"sprites/sTestProjectile/sTestProjectile.yy",},"order":0,},
     {"id":{"name":"sRussel_KnockedDown","path":"sprites/sRussel_KnockedDown/sRussel_KnockedDown.yy",},"order":14,},

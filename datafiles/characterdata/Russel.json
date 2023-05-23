@@ -4175,25 +4175,41 @@
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
       "MoveType": 131072,
       "MoveCanCancelInto": 0,
-      "SpriteName": "sRussel_NSpecial",
+      "SpriteName": "sRussel_DownSpecial",
       "Duration": 50,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 8,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 6,
           "ImageIndex": 1
         },
         {
+          "Length": 12,
+          "ImageIndex": 2
+        },
+        {
           "Length": 23,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 30,
           "ImageIndex": 4
         },
         {
-          "Length": 44,
-          "ImageIndex": 24
+          "Length": 40,
+          "ImageIndex": 5
         },
         {
-          "Length": 47,
-          "ImageIndex": 25
+          "Length": 43,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 46,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 49,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4316,6 +4332,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-19T19:46:50.8369678-07:00",
+  "LastModified": "2023-05-23T16:24:20.307284-07:00",
   "LastModifiedBy": "creep"
 }
