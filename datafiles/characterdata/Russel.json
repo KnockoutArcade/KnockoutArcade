@@ -1855,7 +1855,7 @@
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.5,
+          "LaunchKnockbackVertical": -2.5,
           "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
@@ -2031,7 +2031,7 @@
           {
             "StartingFrame": 6,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -1.5,
+            "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -2194,7 +2194,7 @@
           "Group": 1,
           "Damage": 1,
           "AttackHitStop": 2,
-          "AttackHitStun": 8,
+          "AttackHitStun": 15,
           "AttackType": 1,
           "BlockStun": 4.0,
           "KnockBack": 1.0,

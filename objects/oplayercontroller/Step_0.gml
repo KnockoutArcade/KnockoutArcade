@@ -903,19 +903,21 @@ switch state
 			{
 				if (grounded)
 				{
+					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
+					animTimer = 3;
 					state = eState.CROUCHING_MEDIUM_ATTACK;
-					CancelData(selectedCharacter.NeutralSpecial, attack, false);
+					image_index = 0;
 				}
-				
 			}
 			else if (enhanced[1])
 			{
 				if (grounded)
 				{
+					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
+					animTimer = 8;
 					state = eState.STANDING_HEAVY_ATTACK;
-					CancelData(selectedCharacter.NeutralSpecial, attack, false);
+					image_index = 0;
 				}
-				
 			}
 		}
 	}
@@ -933,7 +935,20 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 12, 30);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17);
+		if (windowTimer > changeFrame)
+		{
+			if (enhanced[0])
+			{
+				if (!grounded)
+				{
+					CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
+					animTimer = 5;
+					state = eState.JUMPING_MEDIUM_ATTACK;
+					image_index = 0;
+				}
+			}
+		}
 	}
 	break;
 	
