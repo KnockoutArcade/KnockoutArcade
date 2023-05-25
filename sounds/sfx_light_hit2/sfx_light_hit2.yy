@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.52,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_light_hit2.ogg",
-  "duration": 3.424943,
+  "duration": 1.712472,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
