@@ -120,10 +120,9 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 // Handle input window timer
 if (inputSet)
 {
-	windowTimer++;
-	if (windowTimer > inputWindowEnd)
+	if (state != eState.HITSTOP)
 	{
-		show_debug_message("Outside of input window");
+		windowTimer++;
 	}
 }
 
@@ -897,16 +896,26 @@ switch state
 		}
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 20, 30);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 25, 28);
 		if (windowTimer > changeFrame)
 		{
 			if (enhanced[0])
 			{
-				state = eState.CROUCHING_MEDIUM_ATTACK;
+				if (grounded)
+				{
+					state = eState.CROUCHING_MEDIUM_ATTACK;
+					CancelData(selectedCharacter.NeutralSpecial, attack, false);
+				}
+				
 			}
 			else if (enhanced[1])
 			{
-				state = eState.STANDING_HEAVY_ATTACK;
+				if (grounded)
+				{
+					state = eState.STANDING_HEAVY_ATTACK;
+					CancelData(selectedCharacter.NeutralSpecial, attack, false);
+				}
+				
 			}
 		}
 	}

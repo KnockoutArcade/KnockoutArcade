@@ -2060,6 +2060,17 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 214
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 12,
+        "ChangeFrame": 18
+      },
       "SupplimentaryScript": ""
     },
     {
@@ -2345,6 +2356,20 @@
         ],
         "GravityScale": 1.0,
         "FallScale": 0.5
+      },
+      "MotionInputData": {
+        "NumberOfInputs": 2,
+        "Inputs": [
+          {
+            "Input": 236
+          },
+          {
+            "Input": 41236
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 20,
+        "ChangeFrame": 32
       },
       "SupplimentaryScript": ""
     },
@@ -4098,6 +4123,17 @@
         "GravityScale": 1.5,
         "FallScale": 0.5
       },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 623
+          }
+        ],
+        "InputWindowStart": 10,
+        "InputWindowEnd": 30,
+        "ChangeFrame": 30
+      },
       "SupplimentaryScript": ""
     },
     {
@@ -4231,6 +4267,17 @@
         ],
         "GravityScale": 1.0000001,
         "FallScale": 0.5
+      },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 22
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 15,
+        "ChangeFrame": 20
       },
       "SupplimentaryScript": ""
     }
