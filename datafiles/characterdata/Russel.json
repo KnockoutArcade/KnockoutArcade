@@ -4177,43 +4177,51 @@
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_DownSpecial",
       "Duration": 54,
-      "NumberOfFrames": 9,
+      "NumberOfFrames": 11,
       "FrameData": [
         {
-          "Length": 6,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 12,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 23,
+          "Length": 13,
           "ImageIndex": 3
         },
         {
-          "Length": 26,
+          "Length": 18,
           "ImageIndex": 4
         },
         {
-          "Length": 29,
+          "Length": 23,
           "ImageIndex": 5
         },
         {
-          "Length": 35,
+          "Length": 26,
           "ImageIndex": 6
         },
         {
-          "Length": 46,
+          "Length": 28,
           "ImageIndex": 7
         },
         {
-          "Length": 49,
+          "Length": 31,
           "ImageIndex": 8
         },
         {
-          "Length": 52,
+          "Length": 46,
           "ImageIndex": 9
+        },
+        {
+          "Length": 49,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 51,
+          "ImageIndex": 0
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4344,6 +4352,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-24T23:38:40.2828317-07:00",
+  "LastModified": "2023-05-25T12:49:30.4588186-07:00",
   "LastModifiedBy": "creep"
 }
