@@ -78,6 +78,7 @@ changeFrame = 999; // Frame when the move changes if you perform the motion inpu
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
+changedSpecialMove = false; // Prevents moves cancelled into from special moves from being cancellable
 
 // Controller Controls
 controller = -1;

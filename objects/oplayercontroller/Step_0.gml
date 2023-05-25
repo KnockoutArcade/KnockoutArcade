@@ -156,7 +156,6 @@ else
 	PerformMotionInputs();
 }
 
-
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
@@ -165,6 +164,7 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	if (toggleIdleBlock)
 	{ 
@@ -242,6 +242,7 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -457,6 +458,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		if (movedir == image_xscale) 
 		{
@@ -535,6 +537,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -604,6 +607,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		vsp += fallSpeed;
 		
@@ -640,6 +644,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		changedSpecialMove = false;
 		
 		PressAttackButton(attack);
 		
@@ -698,6 +703,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		if (isJumpingForward)
 		{
@@ -897,7 +903,7 @@ switch state
 					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 					animTimer = 3;
 					state = eState.CROUCHING_MEDIUM_ATTACK;
-					image_index = 0;
+					changedSpecialMove = true;
 				}
 			}
 			else if (enhanced[1])
@@ -907,7 +913,7 @@ switch state
 					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 					animTimer = 8;
 					state = eState.STANDING_HEAVY_ATTACK;
-					image_index = 0;
+					changedSpecialMove = true;
 				}
 			}
 		}
@@ -936,7 +942,7 @@ switch state
 					CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
 					animTimer = 5;
 					state = eState.JUMPING_MEDIUM_ATTACK;
-					image_index = 0;
+					changedSpecialMove = true;
 				}
 			}
 		}
@@ -954,8 +960,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
-		motionInput[0] = 623;
-		SetMotionInputs(motionInput, array_length(motionInput), 20, 30, 30);
 		
 		if (animTimer < 28)
 		{
@@ -979,8 +983,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
-		motionInput[0] = 22;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 15, 20);
 	}
 	break;
 
@@ -1088,6 +1090,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		isGrabbed = true;
 	}
@@ -1151,6 +1154,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -1168,6 +1172,7 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		
 		if (!global.game_paused)
@@ -1260,6 +1265,7 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
+		changedSpecialMove = false;
 		
 		FAvictim = false;
 		
@@ -1279,6 +1285,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		cancelCombo = true;
 		
@@ -1313,6 +1320,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -1352,6 +1360,7 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
+		changedSpecialMove = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
