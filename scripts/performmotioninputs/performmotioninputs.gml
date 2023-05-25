@@ -99,7 +99,14 @@ function PerformMotionInputs()
 			// Enhances input
 			if (longerIndex != -1)
 			{
-				show_debug_message("Input " + string(longerIndex) + " Performed");
+				var currentMotionInput = ds_list_find_value(listOfInputs, longerIndex);
+				var inputString = "";
+				for (i = 0; i < array_length(currentMotionInput); i++)
+				{
+					inputString = inputString + string(currentMotionInput[i]);
+				}
+				
+				show_debug_message("Input " + inputString + " Performed");
 				enhanced[longerIndex] = true;
 			}
 			
