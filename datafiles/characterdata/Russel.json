@@ -4176,8 +4176,8 @@
       "MoveType": 131072,
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_DownSpecial",
-      "Duration": 50,
-      "NumberOfFrames": 8,
+      "Duration": 54,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
           "Length": 6,
@@ -4196,11 +4196,11 @@
           "ImageIndex": 4
         },
         {
-          "Length": 31,
+          "Length": 29,
           "ImageIndex": 5
         },
         {
-          "Length": 43,
+          "Length": 35,
           "ImageIndex": 6
         },
         {
@@ -4210,6 +4210,10 @@
         {
           "Length": 49,
           "ImageIndex": 8
+        },
+        {
+          "Length": 52,
+          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4222,7 +4226,7 @@
           "WidthOffset": 7,
           "HeightOffset": -1,
           "Group": 1,
-          "Damage": 16,
+          "Damage": 12,
           "AttackHitStop": 20,
           "AttackHitStun": 19,
           "AttackType": 0,
@@ -4294,8 +4298,16 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -4304,34 +4316,34 @@
         "Windows": [
           {
             "StartingFrame": 0,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 1,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 2,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 1.0000001,
-        "FallScale": 0.5
+        "GravityScale": 0.5,
+        "FallScale": 10.0
       },
       "SupplimentaryScript": ""
     }
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-24T20:34:23.0260085-07:00",
+  "LastModified": "2023-05-24T23:38:40.2828317-07:00",
   "LastModifiedBy": "creep"
 }

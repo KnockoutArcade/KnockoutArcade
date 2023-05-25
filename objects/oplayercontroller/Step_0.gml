@@ -1582,7 +1582,7 @@ if (state != eState.HITSTOP)
 		
 		isJumpingForward = false;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
