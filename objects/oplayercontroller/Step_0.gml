@@ -118,7 +118,7 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 }
 
 // Handle input window timer
-if (windowTimer <= inputWindowEnd && inputSet)
+if (inputSet)
 {
 	windowTimer++;
 	if (windowTimer > inputWindowEnd)
@@ -138,6 +138,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	enhanced = [];
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
+	changeFrame = 999;
 }
 else if (windowTimer > inputWindowEnd)
 {
@@ -146,6 +147,19 @@ else if (windowTimer > inputWindowEnd)
 	progressInInputs = [];
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
+	
+	var changeSet = false;
+	for (i = 0; i < array_length(enhanced); i++)
+	{
+		if (enhanced[i])
+		{
+			changeSet = true;
+		}
+	}
+	if (!changeSet)
+	{
+		changeFrame = 999;
+	}
 }
 else
 {
@@ -883,7 +897,18 @@ switch state
 		}
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 15);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 20, 30);
+		if (windowTimer > changeFrame)
+		{
+			if (enhanced[0])
+			{
+				state = eState.CROUCHING_MEDIUM_ATTACK;
+			}
+			else if (enhanced[1])
+			{
+				state = eState.STANDING_HEAVY_ATTACK;
+			}
+		}
 	}
 	break;
 	
@@ -899,7 +924,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 12);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 12, 30);
 	}
 	break;
 	
@@ -915,7 +940,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 623;
-		SetMotionInputs(motionInput, array_length(motionInput), 20, 30);
+		SetMotionInputs(motionInput, array_length(motionInput), 20, 30, 30);
 		
 		if (animTimer < 28)
 		{
@@ -940,7 +965,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 22;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 15);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 15, 20);
 	}
 	break;
 

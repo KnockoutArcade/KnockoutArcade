@@ -74,6 +74,7 @@ motionInput = []; // Determines the inputs to perform during each special move
 listOfInputs = ds_list_create();
 progressInInputs = []; // Holds the indexes of each motion input to determine progress through each input
 enhanced = []; // Enhances the special move if the motion input is performed
+changeFrame = 999; // Frame when the move changes if you perform the motion input
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
