@@ -120,7 +120,14 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 // Handle input window timer
 if (inputSet)
 {
-	if (state != eState.HITSTOP)
+	if (opponent.state == eState.BLOCKING)
+	{
+		if (state != eState.HITSTOP)
+		{
+			windowTimer++;
+		}
+	}
+	else
 	{
 		windowTimer++;
 	}
