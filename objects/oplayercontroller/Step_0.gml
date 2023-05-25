@@ -1594,7 +1594,6 @@ if (state != eState.HITSTOP)
 		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB) 
 		{
 			grounded = true;
-			hsp = 0;
 			isThrowable = true;
 		}
 		if (state == eState.LAUNCHED)
