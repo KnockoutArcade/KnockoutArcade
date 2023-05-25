@@ -76,7 +76,6 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 			inputWindowStart = setWindowStart;
 			inputWindowEnd = setWindowEnd;
 			changeFrame = setChangeFrame;
-			windowTimer = 0;
 		}
 		
 		inputSet = true;

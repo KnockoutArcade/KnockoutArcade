@@ -117,22 +117,6 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 	}
 }
 
-// Handle input window timer
-if (inputSet)
-{
-	if (opponent.state == eState.BLOCKING)
-	{
-		if (state != eState.HITSTOP)
-		{
-			windowTimer++;
-		}
-	}
-	else
-	{
-		windowTimer++;
-	}
-}
-
 
 // Reset motion input values if the player isn't performing a special move
 if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
@@ -146,7 +130,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	inputWindowEnd = 0;
 	changeFrame = 999;
 }
-else if (windowTimer > inputWindowEnd)
+else if (animTimer > inputWindowEnd)
 {
 	motionInput = [];
 	ds_list_clear(listOfInputs);
@@ -904,7 +888,7 @@ switch state
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 25, 28);
-		if (windowTimer > changeFrame)
+		if (animTimer > changeFrame)
 		{
 			if (enhanced[0])
 			{
@@ -943,7 +927,7 @@ switch state
 		}
 		motionInput[0] = 214;
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17);
-		if (windowTimer > changeFrame)
+		if (animTimer > changeFrame)
 		{
 			if (enhanced[0])
 			{

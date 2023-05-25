@@ -78,7 +78,6 @@ changeFrame = 999; // Frame when the move changes if you perform the motion inpu
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
-windowTimer = 0; // Timer counts up to the end of the input window
 
 // Controller Controls
 controller = -1;
