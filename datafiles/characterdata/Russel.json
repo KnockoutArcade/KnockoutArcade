@@ -2194,7 +2194,7 @@
           "Group": 1,
           "Damage": 1,
           "AttackHitStop": 2,
-          "AttackHitStun": 15,
+          "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 4.0,
           "KnockBack": 1.0,

@@ -108,6 +108,10 @@ function PerformMotionInputs()
 				
 				show_debug_message("Input " + inputString + " Performed");
 				enhanced[longerIndex] = true;
+				if (changeImmediately)
+				{
+					changeFrame = animTimer;
+				}
 			}
 			
 		}

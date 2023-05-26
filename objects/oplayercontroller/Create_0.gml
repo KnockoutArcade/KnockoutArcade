@@ -74,11 +74,12 @@ motionInput = []; // Determines the inputs to perform during each special move
 listOfInputs = ds_list_create();
 progressInInputs = []; // Holds the indexes of each motion input to determine progress through each input
 enhanced = []; // Enhances the special move if the motion input is performed
-changeFrame = 999; // Frame when the move changes if you perform the motion input
+changeFrame = 999; // Frame when the move changes if you perform the motion input if changeImmediately is false
+changeImmediately = false; // If true, changes special move as soon as the input is performed
+changedSpecialMove = false; // Prevents moves cancelled into from special moves from being cancellable, keep false for rekkas
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
-changedSpecialMove = false; // Prevents moves cancelled into from special moves from being cancellable, keep false for rekkas
 
 // Controller Controls
 controller = -1;

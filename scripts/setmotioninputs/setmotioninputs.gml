@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd, setChangeFrame)
+function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd, setChangeFrame, setChangeImmediately)
 {
 	if (!inputSet) 
 	{
@@ -76,6 +76,7 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 			inputWindowStart = setWindowStart;
 			inputWindowEnd = setWindowEnd;
 			changeFrame = setChangeFrame;
+			changeImmediately = setChangeImmediately;
 		}
 		
 		inputSet = true;

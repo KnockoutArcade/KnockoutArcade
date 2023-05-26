@@ -893,7 +893,7 @@ switch state
 		}
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 25, 28);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 28, 999, true);
 		if (animTimer > changeFrame)
 		{
 			if (enhanced[0])
@@ -901,7 +901,7 @@ switch state
 				if (grounded)
 				{
 					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
-					animTimer = 3;
+					animTimer = 2;
 					state = eState.CROUCHING_MEDIUM_ATTACK;
 					changedSpecialMove = true;
 				}
@@ -911,7 +911,7 @@ switch state
 				if (grounded)
 				{
 					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
-					animTimer = 8;
+					animTimer = 6;
 					state = eState.STANDING_HEAVY_ATTACK;
 					changedSpecialMove = true;
 				}
@@ -932,7 +932,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
 		if (animTimer > changeFrame)
 		{
 			if (enhanced[0])
