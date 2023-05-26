@@ -133,6 +133,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
 	changeFrame = 999;
+	changeImmediately = false;
 }
 else if (animTimer > inputWindowEnd)
 {
@@ -153,6 +154,7 @@ else if (animTimer > inputWindowEnd)
 	if (!changeSet)
 	{
 		changeFrame = 999;
+		changeImmediately = false;
 	}
 }
 else
@@ -914,23 +916,7 @@ switch state
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
 		
 		// Checks to see if the special move can be changed
-		var canChange = false;
-		if (animTimer > changeFrame)
-		{
-			if (target != noone)
-			{
-				if (framesSinceHitstun == 0)
-				{
-					canChange = true;
-				}
-			}
-			else
-			{
-				canChange = true;
-			}
-		}
-		
-		if (canChange)
+		if (CheckChange())
 		{
 			if (enhanced[0])
 			{
@@ -965,23 +951,7 @@ switch state
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
 		
 		// Checks to see if the special move can be changed
-		var canChange = false;
-		if (animTimer > changeFrame)
-		{
-			if (target != noone)
-			{
-				if (framesSinceHitstun == 0)
-				{
-					canChange = true;
-				}
-			}
-			else
-			{
-				canChange = true;
-			}
-		}
-		
-		if (canChange)
+		if (CheckChange())
 		{
 			if (enhanced[0])
 			{
