@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.4,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -11,14 +11,14 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_light_hit2.ogg",
-  "duration": 1.501247,
+  "soundFile": "testbgm.ogg",
+  "duration": 57.330067,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_light_hit2",
+  "name": "testBGM",
   "tags": [],
   "resourceType": "GMSound",
 }
