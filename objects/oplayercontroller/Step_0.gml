@@ -372,6 +372,7 @@ if (state == eState.HITSTOP)
 			// We use the player's Previous State since the player's current state at this moment
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
+      
 			// Exception for command grabs.
 			if (prevState != eState.COMMAND_GRAB)
 			{
@@ -472,7 +473,7 @@ switch state
 			sprite_index = CharacterSprites.walkForward_Sprite;
 			superMeter += meterBuildRate; // Walking forwards builds meter
 		}
-		else 
+		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;

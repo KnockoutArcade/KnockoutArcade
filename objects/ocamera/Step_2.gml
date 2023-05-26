@@ -14,6 +14,19 @@ switch (global.gameMode)
 				// Camera's target is the midpoint between both players
 				xCameraDestination = (p1.xHome + p2.xHome) * .5;
 			}
+			
+			// Handle cam during command grabs
+			if (p1.state == eState.COMMAND_GRAB && p2.state == eState.BEING_GRABBED)
+			{
+				// Camera's target is the attacking player
+				xCameraDestination = p1.xHome;
+			}
+			else if (p2.state == eState.COMMAND_GRAB && p1.state == eState.BEING_GRABBED)
+			{
+				// Camera's target is the attacking player
+				xCameraDestination = p2.xHome;
+			}
+			
 	
 			x = lerp(xCameraDestination, x, cameraSpeed);
 	
