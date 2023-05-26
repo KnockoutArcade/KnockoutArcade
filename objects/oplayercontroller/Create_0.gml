@@ -206,6 +206,7 @@ blockbuffer = false;
 xHome = x;
 hitstunShuffleTimer = 0;
 shuffle = 0;
+framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
 
 isGrabbed = false;
 

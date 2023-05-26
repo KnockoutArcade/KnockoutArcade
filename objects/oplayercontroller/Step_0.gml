@@ -92,6 +92,10 @@ if (verticalMoveDir == -1)
 	storedSuperJump = true;
 	superJumpTimer = 6;
 }
+if (target != noone)
+{
+	framesSinceHitstun++;
+}
 
 
 // Handle detecting press vs hold up for double jump
@@ -420,6 +424,7 @@ if (state == eState.HITSTOP)
 		
 		prevSprite = 0;
 		shuffle = 0;
+		framesSinceHitstun = 0;
 		
 		isGrabbed = false;
 		image_angle = 0;
@@ -893,28 +898,40 @@ switch state
 		}
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 28, 999, true);
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
+		
+		// Checks to see if the special move can be changed
+		var canChange = false;
 		if (animTimer > changeFrame)
+		{
+			if (target != noone)
+			{
+				if (framesSinceHitstun == 0)
+				{
+					canChange = true;
+				}
+			}
+			else
+			{
+				canChange = true;
+			}
+		}
+		
+		if (canChange)
 		{
 			if (enhanced[0])
 			{
-				if (grounded)
-				{
-					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
-					animTimer = 2;
-					state = eState.CROUCHING_MEDIUM_ATTACK;
-					changedSpecialMove = true;
-				}
+				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
+				animTimer = 1;
+				state = eState.CROUCHING_MEDIUM_ATTACK;
+				changedSpecialMove = true;
 			}
 			else if (enhanced[1])
 			{
-				if (grounded)
-				{
-					CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
-					animTimer = 6;
-					state = eState.STANDING_HEAVY_ATTACK;
-					changedSpecialMove = true;
-				}
+				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
+				animTimer = 5;
+				state = eState.STANDING_HEAVY_ATTACK;
+				changedSpecialMove = true;
 			}
 		}
 	}
@@ -933,17 +950,32 @@ switch state
 		}
 		motionInput[0] = 214;
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
+		
+		// Checks to see if the special move can be changed
+		var canChange = false;
 		if (animTimer > changeFrame)
+		{
+			if (target != noone)
+			{
+				if (framesSinceHitstun == 0)
+				{
+					canChange = true;
+				}
+			}
+			else
+			{
+				canChange = true;
+			}
+		}
+		
+		if (canChange)
 		{
 			if (enhanced[0])
 			{
-				if (!grounded)
-				{
-					CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
-					animTimer = 5;
-					state = eState.JUMPING_MEDIUM_ATTACK;
-					changedSpecialMove = true;
-				}
+				CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
+				animTimer = 5;
+				state = eState.JUMPING_MEDIUM_ATTACK;
+				changedSpecialMove = true;
 			}
 		}
 	}
