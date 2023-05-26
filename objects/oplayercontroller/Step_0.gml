@@ -896,6 +896,19 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
+		
+		// NOTE FOR DESIGNERS:
+		// In the editor, the following additions will be made to each special move to allow motion input editing:
+		// - The number of inputs (int)
+		//   - Each input in numpad notation (int)
+		//   - Input Window Start (int)
+		//   - Input Window End (int)
+		//   - Does the move change as soon as the player performs the input? (bool)
+		//     - If not, set the frame when the move changes (int)
+		//   - Which move will be performed (data type unknown for now)
+		//     - Starting animation frame (int)
+		//     - Is the move cancellable? (for things like rekkas) (bool)
+		
 		motionInput[0] = 236;
 		motionInput[1] = 41236;
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
