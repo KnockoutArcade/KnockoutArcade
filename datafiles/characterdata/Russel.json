@@ -4177,7 +4177,7 @@
       "MoveCanCancelInto": 0,
       "SpriteName": "sRussel_DownSpecial",
       "Duration": 54,
-      "NumberOfFrames": 11,
+      "NumberOfFrames": 13,
       "FrameData": [
         {
           "Length": 5,
@@ -4212,16 +4212,24 @@
           "ImageIndex": 8
         },
         {
-          "Length": 46,
+          "Length": 34,
           "ImageIndex": 9
         },
         {
+          "Length": 37,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 46,
+          "ImageIndex": 11
+        },
+        {
           "Length": 49,
-          "ImageIndex": 0
+          "ImageIndex": 12
         },
         {
           "Length": 51,
-          "ImageIndex": 0
+          "ImageIndex": 13
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4352,6 +4360,6 @@
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-25T12:49:30.4588186-07:00",
+  "LastModified": "2023-05-26T19:42:19.4292468-07:00",
   "LastModifiedBy": "creep"
 }
