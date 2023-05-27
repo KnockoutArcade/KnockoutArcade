@@ -1,18 +1,18 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.4,
+  "volume": 0.66,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_music",
-    "path": "audiogroups/audiogroup_music",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "testbgm.ogg",
-  "duration": 57.330067,
+  "soundFile": "testbgm.wav",
+  "duration": 98.66159,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
