@@ -921,16 +921,16 @@ switch state
 		{
 			if (enhanced[0])
 			{
-				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 				animTimer = 1;
 				state = eState.CROUCHING_MEDIUM_ATTACK;
+				CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.SpriteId, 1);
 				changedSpecialMove = true;
 			}
 			else if (enhanced[1])
 			{
-				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 				animTimer = 5;
 				state = eState.STANDING_HEAVY_ATTACK;
+				CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.SpriteId, 1);
 				changedSpecialMove = true;
 			}
 		}
@@ -956,9 +956,9 @@ switch state
 		{
 			if (enhanced[0])
 			{
-				CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
 				animTimer = 5;
 				state = eState.JUMPING_MEDIUM_ATTACK;
+				CancelIntoMove(eState.JUMPING_MEDIUM_ATTACK, selectedCharacter.JumpingMedium.SpriteId, 1);
 				changedSpecialMove = true;
 			}
 		}

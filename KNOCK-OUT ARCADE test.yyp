@@ -220,7 +220,7 @@
     {"id":{"name":"sRound1Start","path":"sprites/sRound1Start/sRound1Start.yy",},"order":4,},
     {"id":{"name":"sJay_SC_StandMedium_MOCKUP_strip6","path":"sprites/sJay_SC_StandMedium_MOCKUP_strip6/sJay_SC_StandMedium_MOCKUP_strip6.yy",},"order":12,},
     {"id":{"name":"sRussel_Crouching_Medium","path":"sprites/sRussel_Crouching_Medium/sRussel_Crouching_Medium.yy",},"order":12,},
-    {"id":{"name":"PerformMotionInputs","path":"scripts/PerformMotionInputs/PerformMotionInputs.yy",},"order":21,},
+    {"id":{"name":"performmotioninputs","path":"scripts/performmotioninputs/performmotioninputs.yy",},"order":21,},
     {"id":{"name":"oTrashBin","path":"objects/oTrashBin/oTrashBin.yy",},"order":1,},
     {"id":{"name":"sBeverly_Jump_Mockup","path":"sprites/sBeverly_Jump_Mockup/sBeverly_Jump_Mockup.yy",},"order":17,},
     {"id":{"name":"sRussel_Hold","path":"sprites/sRussel_Hold/sRussel_Hold.yy",},"order":20,},
