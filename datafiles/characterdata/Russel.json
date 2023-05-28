@@ -4175,25 +4175,61 @@
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
       "MoveType": 131072,
       "MoveCanCancelInto": 0,
-      "SpriteName": "sRussel_NSpecial",
-      "Duration": 50,
-      "NumberOfFrames": 4,
+      "SpriteName": "sRussel_DownSpecial",
+      "Duration": 54,
+      "NumberOfFrames": 13,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 23,
+          "Length": 9,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 13,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 18,
           "ImageIndex": 4
         },
         {
-          "Length": 44,
-          "ImageIndex": 24
+          "Length": 23,
+          "ImageIndex": 5
         },
         {
-          "Length": 47,
-          "ImageIndex": 25
+          "Length": 26,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 31,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 34,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 37,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 46,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 49,
+          "ImageIndex": 12
+        },
+        {
+          "Length": 51,
+          "ImageIndex": 13
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4201,10 +4237,10 @@
         {
           "Start": 24,
           "Lifetime": 4,
-          "AttackWidth": 35,
+          "AttackWidth": 22,
           "AttackHeight": 30,
-          "WidthOffset": 5,
-          "HeightOffset": 2,
+          "WidthOffset": 7,
+          "HeightOffset": -1,
           "Group": 1,
           "Damage": 12,
           "AttackHitStop": 20,
@@ -4262,12 +4298,12 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 10,
+          "Start": 23,
           "Lifetime": 16,
-          "AttackWidth": 30,
+          "AttackWidth": 19,
           "AttackHeight": 30,
           "WidthOffset": 6,
-          "HeightOffset": 2
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -4278,8 +4314,16 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -4288,34 +4332,34 @@
         "Windows": [
           {
             "StartingFrame": 0,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 1,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 2,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 1.0000001,
-        "FallScale": 0.5
+        "GravityScale": 0.5,
+        "FallScale": 10.0
       },
       "SupplimentaryScript": ""
     }
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-05-19T19:46:50.8369678-07:00",
+  "LastModified": "2023-05-26T19:42:19.4292468-07:00",
   "LastModifiedBy": "creep"
 }
