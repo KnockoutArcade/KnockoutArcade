@@ -1855,7 +1855,7 @@
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.5,
+          "LaunchKnockbackVertical": -2.5,
           "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
@@ -2031,7 +2031,7 @@
           {
             "StartingFrame": 6,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -1.5,
+            "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -2059,6 +2059,17 @@
         ],
         "GravityScale": 0.5,
         "FallScale": 0.5
+      },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 214
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 12,
+        "ChangeFrame": 18
       },
       "SupplimentaryScript": ""
     },
@@ -2183,7 +2194,7 @@
           "Group": 1,
           "Damage": 1,
           "AttackHitStop": 2,
-          "AttackHitStun": 8,
+          "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 4.0,
           "KnockBack": 1.0,
@@ -2345,6 +2356,20 @@
         ],
         "GravityScale": 1.0,
         "FallScale": 0.5
+      },
+      "MotionInputData": {
+        "NumberOfInputs": 2,
+        "Inputs": [
+          {
+            "Input": 236
+          },
+          {
+            "Input": 41236
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 20,
+        "ChangeFrame": 32
       },
       "SupplimentaryScript": ""
     },
@@ -4169,6 +4194,17 @@
         "GravityScale": 1.5,
         "FallScale": 0.5
       },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 623
+          }
+        ],
+        "InputWindowStart": 10,
+        "InputWindowEnd": 30,
+        "ChangeFrame": 30
+      },
       "SupplimentaryScript": ""
     },
     {
@@ -4354,6 +4390,17 @@
         ],
         "GravityScale": 0.5,
         "FallScale": 10.0
+      },
+      "MotionInputData": {
+        "NumberOfInputs": 1,
+        "Inputs": [
+          {
+            "Input": 22
+          }
+        ],
+        "InputWindowStart": 1,
+        "InputWindowEnd": 15,
+        "ChangeFrame": 20
       },
       "SupplimentaryScript": ""
     }

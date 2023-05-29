@@ -92,6 +92,10 @@ if (verticalMoveDir == -1)
 	storedSuperJump = true;
 	superJumpTimer = 6;
 }
+if (target != noone)
+{
+	framesSinceHitstun++;
+}
 
 
 // Handle detecting press vs hold up for double jump
@@ -103,7 +107,6 @@ else
 {
 	heldUpFrames = 0;
 }
-
 
 // Calculate Traction
 if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT && state != eState.HOLD && state != eState.FORWARD_THROW && state != eState.BEING_GRABBED && state != eState.BACKWARD_THROW)
@@ -119,6 +122,46 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 }
 
 
+// Reset motion input values if the player isn't performing a special move
+if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
+{
+	inputSet = false;
+	motionInput = [];
+	ds_list_clear(listOfInputs);
+	progressInInputs = [];
+	enhanced = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
+	changeFrame = 999;
+	changeImmediately = false;
+}
+else if (animTimer > inputWindowEnd)
+{
+	motionInput = [];
+	ds_list_clear(listOfInputs);
+	progressInInputs = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
+	
+	var changeSet = false;
+	for (i = 0; i < array_length(enhanced); i++)
+	{
+		if (enhanced[i])
+		{
+			changeSet = true;
+		}
+	}
+	if (!changeSet)
+	{
+		changeFrame = 999;
+		changeImmediately = false;
+	}
+}
+else
+{
+	PerformMotionInputs();
+}
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
@@ -127,6 +170,7 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	if (toggleIdleBlock)
 	{ 
@@ -204,6 +248,7 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -327,12 +372,12 @@ if (state == eState.HITSTOP)
 			// We use the player's Previous State since the player's current state at this moment
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
-			
+      
 			// Exception for command grabs.
 			if (prevState != eState.COMMAND_GRAB)
 			{
 				var attackState = FindAttackState(prevState);
-			
+
 				CancelData(attackState, attack, false);
 			}
 		}
@@ -382,6 +427,7 @@ if (state == eState.HITSTOP)
 		
 		prevSprite = 0;
 		shuffle = 0;
+		framesSinceHitstun = 0;
 		
 		isGrabbed = false;
 		image_angle = 0;
@@ -420,6 +466,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		if (movedir == image_xscale) 
 		{
@@ -498,6 +545,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -567,6 +615,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		vsp += fallSpeed;
 		
@@ -603,6 +652,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		changedSpecialMove = false;
 		
 		PressAttackButton(attack);
 		
@@ -661,6 +711,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		if (isJumpingForward)
 		{
@@ -842,11 +893,46 @@ switch state
 	{
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);	
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
 		} 
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
+		}
+		
+		// NOTE FOR DESIGNERS:
+		// In the editor, the following additions will be made to each special move to allow motion input editing:
+		// - The number of inputs (int)
+		//   - Each input in numpad notation (int)
+		//   - Input Window Start (int)
+		//   - Input Window End (int)
+		//   - Does the move change as soon as the player performs the input? (bool)
+		//     - If not, set the frame when the move changes (int)
+		//   - Which move will be performed (data type unknown for now)
+		//     - Starting animation frame (int)
+		//     - Is the move cancellable? (for things like rekkas) (bool)
+		
+		motionInput[0] = 236;
+		motionInput[1] = 41236;
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
+		
+		// Checks to see if the special move can be changed
+		if (CheckChange())
+		{
+			if (enhanced[0])
+			{
+				animTimer = 1;
+				state = eState.CROUCHING_MEDIUM_ATTACK;
+				CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.SpriteId, 1);
+				changedSpecialMove = true;
+			}
+			else if (enhanced[1])
+			{
+				animTimer = 5;
+				state = eState.STANDING_HEAVY_ATTACK;
+				CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.SpriteId, 1);
+				changedSpecialMove = true;
+			}
 		}
 	}
 	break;
@@ -861,6 +947,20 @@ switch state
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
+		}
+		motionInput[0] = 214;
+		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
+		
+		// Checks to see if the special move can be changed
+		if (CheckChange())
+		{
+			if (enhanced[0])
+			{
+				animTimer = 5;
+				state = eState.JUMPING_MEDIUM_ATTACK;
+				CancelIntoMove(eState.JUMPING_MEDIUM_ATTACK, selectedCharacter.JumpingMedium.SpriteId, 1);
+				changedSpecialMove = true;
+			}
 		}
 	}
 	break;
@@ -1006,6 +1106,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		isGrabbed = true;
 	}
@@ -1069,6 +1170,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -1086,6 +1188,7 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		
 		if (!global.game_paused)
@@ -1178,6 +1281,7 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
+		changedSpecialMove = false;
 		
 		FAvictim = false;
 		
@@ -1197,6 +1301,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		cancelCombo = true;
 		
@@ -1231,6 +1336,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -1270,6 +1376,7 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
+		changedSpecialMove = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
