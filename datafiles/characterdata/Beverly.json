@@ -18,11 +18,11 @@
   "JumpHorizontalSpeed": 0.0,
   "CharacterSprites": {
     "Idle": "sBeverly_Idle",
-    "Crouch": "sBeverly_Crouch_MOCKUP",
+    "Crouch": "sBeverly_Crouch",
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sBeverly_Walk_Forward",
-    "WalkBackward": "sRussel_Walk_Backward",
+    "WalkBackward": "sBeverly_Walk_Backward",
     "RunForward": "sRussel_Run_Forward",
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sRussel_Jumpsquat",
