@@ -1105,7 +1105,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -1301,7 +1301,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -1454,7 +1454,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -1580,7 +1580,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -1786,7 +1786,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -1992,7 +1992,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2118,7 +2118,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2259,7 +2259,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2408,7 +2408,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2564,7 +2564,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2744,7 +2744,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -2874,7 +2874,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3083,7 +3083,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3217,7 +3217,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3355,7 +3355,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3544,7 +3544,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3733,7 +3733,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -3974,7 +3974,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4056,7 +4056,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4107,7 +4107,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4158,7 +4158,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4209,7 +4209,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4260,7 +4260,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4311,7 +4311,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4362,7 +4362,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4413,7 +4413,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4464,7 +4464,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4515,7 +4515,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4566,7 +4566,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4617,7 +4617,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4668,7 +4668,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4719,7 +4719,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4770,7 +4770,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4821,7 +4821,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -4872,7 +4872,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
-        "Button": "Light",
+        "Button": 1,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
