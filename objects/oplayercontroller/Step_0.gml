@@ -888,6 +888,19 @@ switch state
 	}
 	break;
 
+	
+	case eState.COMMAND_NORMAL_1:
+	{
+		GroundedAttackScript(selectedCharacter.CommandNormal1, true, 1, 1, false, false);
+		
+		if (cancelable && global.hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal1, attack, true);
+		}
+	}
+	break;
+
+
 
 	case eState.NEUTRAL_SPECIAL: 
 	{

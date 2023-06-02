@@ -89,6 +89,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		
 		switch(selectedCharacter.MoveData[i].MoveType)
 		{
+			case 1: // backward throw
+			formedCharacter.BackwardThrow = nextMove;
+			break;
 			case 2: // forward throw
 			formedCharacter.ForwardThrow = nextMove;
 			break;
@@ -143,9 +146,16 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 262144: // command grab
 			formedCharacter.CommandGrab = nextMove;
 			break;
-			case 1: // backward throw
-			formedCharacter.BackwardThrow = nextMove;
+			case 524288: // command normal 1
+			formedCharacter.CommandNormal1 = nextMove;
 			break;
+			case 1048576: // command normal 2
+			formedCharacter.CommandNormal2 = nextMove;
+			break;
+			case 2097152: // command normal 3
+			formedCharacter.CommandNormal3 = nextMove;
+			break;
+			
 		}
 		
 		switch (selectedCharacter.MoveData[i].EnhanceMoveType)
