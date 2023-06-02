@@ -128,6 +128,7 @@
     {"id":{"name":"sBeverly_StandLight3_MOCKUP_strip3","path":"sprites/sBeverly_StandLight3_MOCKUP_strip3/sBeverly_StandLight3_MOCKUP_strip3.yy",},"order":7,},
     {"id":{"name":"sSuperMeterP2","path":"sprites/sSuperMeterP2/sSuperMeterP2.yy",},"order":3,},
     {"id":{"name":"sJay_SC_StandLight_MOCKUP_strip3","path":"sprites/sJay_SC_StandLight_MOCKUP_strip3/sJay_SC_StandLight_MOCKUP_strip3.yy",},"order":13,},
+    {"id":{"name":"ProcessEnhancers","path":"scripts/ProcessEnhancers/ProcessEnhancers.yy",},"order":23,},
     {"id":{"name":"sKOText","path":"sprites/sKOText/sKOText.yy",},"order":18,},
     {"id":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"order":0,},
     {"id":{"name":"oMainMenuIcons","path":"objects/oMainMenuIcons/oMainMenuIcons.yy",},"order":7,},

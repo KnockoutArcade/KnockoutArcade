@@ -1997,8 +1997,8 @@
           "NumpadInput": 214,
           "ButtonPressRequired": false,
           "StartingFrame": 1,
-          "EndingFrame": 10,
-          "EnhancementMove": 1,
+          "EndingFrame": 25,
+          "EnhancementMove": 2,
           "TransitionImmediately": false,
           "TransitionFrame": 12
         }

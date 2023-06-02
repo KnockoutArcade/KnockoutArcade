@@ -900,36 +900,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
 		
-		// NOTE FOR DESIGNERS:
-		// In the editor, the following additions will be made to each special move to allow motion input editing:
-		// - The number of inputs (int)
-		//   - Each input in numpad notation (int)
-		//   - Input Window Start (int)
-		//   - Input Window End (int)
-		//   - Does the move change as soon as the player performs the input? (bool)
-		//     - If not, set the frame when the move changes (int)
-		//   - Which move will be performed (data type unknown for now)
-		//     - Starting animation frame (int)
-		//     - Is the move cancellable? (for things like rekkas) (bool)
-		
-		for (var i = 0; i < selectedCharacter.NeutralSpecial.NumberOfEnhancements; i++)
-		{
-			motionInput[i] = selectedCharacter.NeutralSpecial.SpecialData[i].NumpadInput;
-		}
-		
-		SetMotionInputs(motionInput, array_length(motionInput), selectedCharacter.NeutralSpecial.SpecialData[0].StartingFrame, selectedCharacter.NeutralSpecial.SpecialData[0].EndingFrame, selectedCharacter.NeutralSpecial.SpecialData[0].TransitionFrame, selectedCharacter.NeutralSpecial.SpecialData[0].TransitionImmediately);
-		
-		// Checks to see if the special move can be changed
-		if (CheckChange())
-		{
-			if (enhanced[0])
-			{
-				animTimer = 1;
-				state = eState.ENHANCED_NEUTRAL_SPECIAL;
-				CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-		}
+		ProcessEnhancers(selectedCharacter.NeutralSpecial);
 	}
 	break;
 	
@@ -945,20 +916,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
 		
-		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
-		
-		// Checks to see if the special move can be changed
-		if (CheckChange())
-		{
-			if (enhanced[0])
-			{
-				animTimer = 5;
-				state = eState.JUMPING_MEDIUM_ATTACK;
-				CancelIntoMove(eState.JUMPING_MEDIUM_ATTACK, selectedCharacter.JumpingMedium.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-		}
+		ProcessEnhancers(selectedCharacter.SideSpecial);
 	}
 	break;
 	
@@ -1009,6 +967,19 @@ switch state
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
+		}
+	}
+	break;
+	
+	case eState.ENHANCED_SIDE_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
 		}
 	}
 	break;
