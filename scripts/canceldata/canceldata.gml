@@ -2,6 +2,47 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function CancelData(_array, _attack, _late)
 {
+	// Convert the player's input direction into numpad notation
+	#region
+		var inputDirection = 5; // Neutral; Default
+		// Set input directions
+		if (movedir == -image_xscale && verticalMoveDir == -1)
+		{
+			inputDirection = 1; // Down-back
+		}
+		else if (movedir == 0 && verticalMoveDir == -1)
+		{
+			inputDirection = 2; // Down
+		}
+		else if (movedir == image_xscale && verticalMoveDir == -1)
+		{
+			inputDirection = 3; // Down-forward
+		}
+		else if (movedir == -image_xscale && verticalMoveDir == 0)
+		{
+			inputDirection = 4; // Back
+		}
+		else if (movedir == 0 && verticalMoveDir == 0)
+		{
+			inputDirection = 5; // Neutral
+		}
+		else if (movedir == image_xscale && verticalMoveDir == 0)
+		{
+			inputDirection = 6; // Forward
+		}
+		else if (movedir == -image_xscale && verticalMoveDir == 1)
+		{
+			inputDirection = 7; // Up-back
+		}
+		else if (movedir == 0 && verticalMoveDir == 1)
+		{
+			inputDirection = 8; // Up
+		}
+		else if (movedir == image_xscale && verticalMoveDir == 1)
+		{
+			inputDirection = 9; // Up-forward
+		}
+	#endregion
 	// Check to see if the player has inputted an attack AND if the inputted attack is a valid cancel
 	
 	// Side Special
@@ -28,6 +69,7 @@ function CancelData(_array, _attack, _late)
 				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 			}
 	}
+	
 	// Standing Light 1
 	else if ((_array.MoveCanCancelInto & 32 == 32) && (_attack == 1 && verticalMoveDir == 0) && grounded)
 	{
@@ -182,6 +224,53 @@ function CancelData(_array, _attack, _late)
 		else
 		{
 			CancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial.SpriteId, 1);
+		}
+	}
+	
+	
+	// Command Normal 1
+	if (variable_struct_exists(selectedCharacter, "CommandNormal1"))
+	{
+		if ((_array.MoveCanCancelInto & 524288 == 524288) && (_attack == selectedCharacter.CommandNormal1.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal1.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal1.CommandNormalData.GroundOrAir))
+		{
+			if (_late)
+			{
+				LateCancelIntoMove(eState.COMMAND_NORMAL_1, selectedCharacter.CommandNormal1, _attack);
+			}
+			else
+			{
+				CancelIntoMove(eState.COMMAND_NORMAL_1, selectedCharacter.CommandNormal1.SpriteId, 1);
+			}
+		}
+	}
+	// Command Normal 2
+	if (variable_struct_exists(selectedCharacter, "CommandNormal2"))
+	{
+		if ((_array.MoveCanCancelInto & 1048576 == 1048576) && (_attack == selectedCharacter.CommandNormal2.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal2.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal2.CommandNormalData.GroundOrAir))
+		{
+			if (_late)
+			{
+				LateCancelIntoMove(eState.COMMAND_NORMAL_2, selectedCharacter.CommandNormal2, _attack);
+			}
+			else
+			{
+				CancelIntoMove(eState.COMMAND_NORMAL_2, selectedCharacter.CommandNormal2.SpriteId, 1);
+			}
+		}
+	}
+	// Command Normal 3
+	if (variable_struct_exists(selectedCharacter, "CommandNormal3"))
+	{
+		if ((_array.MoveCanCancelInto & 2097152 == 2097152) && (_attack == selectedCharacter.CommandNormal3.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal3.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal3.CommandNormalData.GroundOrAir))
+		{
+			if (_late)
+			{
+				LateCancelIntoMove(eState.COMMAND_NORMAL_3, selectedCharacter.CommandNormal3, _attack);
+			}
+			else
+			{
+				CancelIntoMove(eState.COMMAND_NORMAL_3, selectedCharacter.CommandNormal3.SpriteId, 1);
+			}
 		}
 	}
 }

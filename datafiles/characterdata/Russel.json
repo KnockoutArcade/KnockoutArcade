@@ -3141,7 +3141,7 @@
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 2048,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 725528,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sRussel_Crouching_Medium",

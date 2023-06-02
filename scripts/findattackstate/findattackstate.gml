@@ -76,6 +76,23 @@ function FindAttackState(stateToSearch){
 		}
 		break;
 		
+		// Command Normals
+		case eState.COMMAND_NORMAL_1 : 
+		{
+			return selectedCharacter.CommandNormal1;
+		}
+		break;
+		case eState.COMMAND_NORMAL_2 : 
+		{
+			return selectedCharacter.CommandNormal2;
+		}
+		break;
+		case eState.COMMAND_NORMAL_3 : 
+		{
+			return selectedCharacter.CommandNormal3;
+		}
+		break;
+		
 		// Specials
 		case eState.NEUTRAL_SPECIAL : 
 		{
