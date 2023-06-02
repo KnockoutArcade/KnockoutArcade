@@ -932,6 +932,8 @@ switch state
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
 		
+		ProcessEnhancers(selectedCharacter.UpSpecial);
+		
 		if (animTimer < 28)
 		{
 			isThrowable = false;
@@ -954,6 +956,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.DownSpecial);
 	}
 	break;
 	
@@ -980,6 +984,32 @@ switch state
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+		}
+	}
+	break;
+	
+	case eState.ENHANCED_UP_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
+		}
+	}
+	break;
+	
+	case eState.ENHANCED_DOWN_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
 		}
 	}
 	break;
