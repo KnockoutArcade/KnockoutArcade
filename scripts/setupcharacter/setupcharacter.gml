@@ -78,6 +78,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.RehitData = selectedCharacter.MoveData[i].RehitData;
 		nextMove.ProjectileData = selectedCharacter.MoveData[i].ProjectileData;
 		nextMove.MoveCanCancelInto = selectedCharacter.MoveData[i].MoveCanCancelInto;
+		nextMove.CommandNormalData = selectedCharacter.MoveData[i].CommandNormalData;
+		nextMove.NumberOfEnhancements = selectedCharacter.MoveData[i].NumberOfEnhancements;
+		nextMove.SpecialData = selectedCharacter.MoveData[i].SpecialData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{

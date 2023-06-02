@@ -5,7 +5,7 @@ P1charSelRow = 0;
 P1charSelCol = 0;
 P1cursorCooldown = 5;
 P2charSelRow = 0;
-P2charSelCol = 2;
+P2charSelCol = 0;
 P2cursorCooldown = 5;
 
 charSelRowMax = 1;
