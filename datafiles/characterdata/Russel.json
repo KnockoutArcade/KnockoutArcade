@@ -3896,18 +3896,10 @@
         "FallScale": 0.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 1,
-        "Windows": [
-          {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 1.5000002,
-            "VerticalSpeed": -1.5000001,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
-          }
-        ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "SupplimentaryScript": ""
     },
