@@ -912,8 +912,11 @@ switch state
 		//     - Starting animation frame (int)
 		//     - Is the move cancellable? (for things like rekkas) (bool)
 		
-		motionInput[0] = 236;
-		motionInput[1] = 41236;
+		for (var i = 0; i < selectedCharacter.NeutralSpecial.NumberOfEnhancements; i++)
+		{
+			motionInput[i] = selectedCharacter.NeutralSpecial.SpecialData[i].NumpadInput;
+		}
+		
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
 		
 		// Checks to see if the special move can be changed
@@ -948,6 +951,7 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
+		
 		motionInput[0] = 214;
 		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
 		
