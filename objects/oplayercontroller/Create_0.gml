@@ -80,6 +80,7 @@ changedSpecialMove = false; // Prevents moves cancelled into from special moves 
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
+requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 
 // Controller Controls
 controller = -1;

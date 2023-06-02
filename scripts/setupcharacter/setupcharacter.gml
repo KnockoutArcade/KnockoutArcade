@@ -184,6 +184,21 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 128:
 			formedCharacter.EnhancedDownSpecial2 = nextMove;
 			break;
+			case 256:
+			formedCharacter.RekkaLauncher = nextMove;
+			break;
+			case 512:
+			formedCharacter.RekkaFinisher = nextMove;
+			break;
+			case 1024:
+			formedCharacter.RekkaConnecter = nextMove;
+			break;
+			case 2048:
+			formedCharacter.RekkaLow = nextMove;
+			break;
+			case 4096:
+			formedCharacter.RekkaHigh = nextMove;
+			break;
 		}
 	}
 	

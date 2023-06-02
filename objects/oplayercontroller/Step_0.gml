@@ -134,6 +134,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	inputWindowEnd = 0;
 	changeFrame = 999;
 	changeImmediately = false;
+	requireSpecialButton = false;
 }
 else if (animTimer > inputWindowEnd)
 {
@@ -142,6 +143,7 @@ else if (animTimer > inputWindowEnd)
 	progressInInputs = [];
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
+	requireSpecialButton = false;
 	
 	var changeSet = false;
 	for (i = 0; i < array_length(enhanced); i++)
@@ -159,7 +161,7 @@ else if (animTimer > inputWindowEnd)
 }
 else
 {
-	PerformMotionInputs();
+	PerformMotionInputs(attack);
 }
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
@@ -1031,6 +1033,82 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
 		}
+	}
+	break;
+
+
+	case eState.REKKA_LAUNCHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLauncher);
+	}
+	break;
+	
+	case eState.REKKA_FINISHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaFinisher);
+	}
+	break;
+	
+	case eState.REKKA_CONNECTER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaConnecter);
+	}
+	break;
+	
+	case eState.REKKA_LOW: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLow);
+	}
+	break;
+	
+	case eState.REKKA_HIGH: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
 

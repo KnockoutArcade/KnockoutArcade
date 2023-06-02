@@ -8,7 +8,7 @@ function ProcessEnhancers(Special) {
 			motionInput[i] = Special.SpecialData[i].NumpadInput;
 		}
 	
-		SetMotionInputs(motionInput, array_length(motionInput), Special.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately);
+		SetMotionInputs(motionInput, array_length(motionInput), Special.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately, Special.SpecialData[0].ButtonPressRequired);
 	
 		// Checks to see if the special move can be changed
 		if (CheckChange(Special))
