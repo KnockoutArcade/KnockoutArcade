@@ -917,7 +917,7 @@ switch state
 			motionInput[i] = selectedCharacter.NeutralSpecial.SpecialData[i].NumpadInput;
 		}
 		
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
+		SetMotionInputs(motionInput, array_length(motionInput), selectedCharacter.NeutralSpecial.SpecialData[0].StartingFrame, selectedCharacter.NeutralSpecial.SpecialData[0].EndingFrame, selectedCharacter.NeutralSpecial.SpecialData[0].TransitionFrame, selectedCharacter.NeutralSpecial.SpecialData[0].TransitionImmediately);
 		
 		// Checks to see if the special move can be changed
 		if (CheckChange())
@@ -925,15 +925,8 @@ switch state
 			if (enhanced[0])
 			{
 				animTimer = 1;
-				state = eState.CROUCHING_MEDIUM_ATTACK;
-				CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-			else if (enhanced[1])
-			{
-				animTimer = 5;
-				state = eState.STANDING_HEAVY_ATTACK;
-				CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.SpriteId, 1);
+				state = eState.ENHANCED_NEUTRAL_SPECIAL;
+				CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
 				changedSpecialMove = true;
 			}
 		}
@@ -1002,6 +995,20 @@ switch state
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
+		}
+	}
+	break;
+	
+	
+	case eState.ENHANCED_NEUTRAL_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
 		}
 	}
 	break;

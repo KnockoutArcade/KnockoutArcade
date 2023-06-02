@@ -144,8 +144,35 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			formedCharacter.CommandGrab = nextMove;
 			break;
 			case 1: // backward throw
-			default:
 			formedCharacter.BackwardThrow = nextMove;
+			break;
+		}
+		
+		switch (selectedCharacter.MoveData[i].EnhanceMoveType)
+		{
+			case 1:
+			formedCharacter.EnhancedNeutralSpecial = nextMove;
+			break;
+			case 2:
+			formedCharacter.EnhancedSideSpecial = nextMove;
+			break;
+			case 4:
+			formedCharacter.EnhancedUpSpecial = nextMove;
+			break;
+			case 8:
+			formedCharacter.EnhancedDownSpecial = nextMove;
+			break;
+			case 16:
+			formedCharacter.EnhancedNeutralSpecial2 = nextMove;
+			break;
+			case 32:
+			formedCharacter.EnhancedSideSpecial2 = nextMove;
+			break;
+			case 64:
+			formedCharacter.EnhancedUpSpecial2 = nextMove;
+			break;
+			case 128:
+			formedCharacter.EnhancedDownSpecial2 = nextMove;
 			break;
 		}
 	}
