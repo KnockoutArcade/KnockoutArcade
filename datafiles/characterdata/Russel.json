@@ -5081,10 +5081,673 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": ""
+    },
+    {
+      "UID": "ae5a0bfe-3db3-4c4f-a0a3-dca5efaed080",
+      "MoveType": 1048576,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "2502b52c-d1d1-4b11-8010-31475920045d",
+      "MoveType": 2097152,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "50760cb4-7206-4d56-bc1c-4e302e241f70",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 4,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "687f8742-8020-440c-9312-894fe679f4bf",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 8,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "9cc77472-ac4b-4444-93cf-ecdf536ce0c2",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 16,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "9107bbf3-4f9c-4fca-a4fe-cca386b0e8c2",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 32,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "e017692f-fabe-4c74-bbc5-a500bce8074b",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 64,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "738a1cc6-cb17-4168-b1f3-2e9f25ca6706",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 128,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "f57ba5ac-be31-490a-8dd3-503c463077d4",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 256,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "8bafcdad-d182-4438-8239-91fed3375137",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 512,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "a45083ec-8fb4-4970-83ae-c991336a5056",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 1024,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "0093b7dd-6b1c-4134-a3e6-84d545bbb88f",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 2048,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
+    },
+    {
+      "UID": "f7d8a90d-9c8a-407e-ae05-607d5c9aa026",
+      "MoveType": 0,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 4096,
+      "EnhanceMoveCanCancelInto": 0,
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": "Light",
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": ""
     }
   ],
   "Version": "Ver1.1.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-01T14:36:23.2841338-07:00",
+  "LastModified": "2023-06-01T23:05:58.7323248-07:00",
   "LastModifiedBy": "colstrau"
 }
