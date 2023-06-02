@@ -4672,7 +4672,7 @@
       ],
       "CommandNormalData": {
         "NumpadDirection": 6,
-        "Button": "Medium",
+        "Button": 2,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },

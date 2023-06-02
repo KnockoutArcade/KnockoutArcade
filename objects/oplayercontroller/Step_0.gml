@@ -891,7 +891,14 @@ switch state
 	
 	case eState.COMMAND_NORMAL_1:
 	{
-		GroundedAttackScript(selectedCharacter.CommandNormal1, true, 1, 1, false, false);
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, true, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
+		}
 		
 		if (cancelable && global.hitstop < 1)
 		{
