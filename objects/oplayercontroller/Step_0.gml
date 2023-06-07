@@ -70,12 +70,44 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+if (runButton)
+{
+	running = true;
+}
+else if (!runButton && movedir == 0)
+{
+	running = false;
+}
+
+else if (movedir == image_xscale || movedir == -image_xscale)
+{
+	if (holdTimer == 0)
+	{
+		startedMoving = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runTimer < 15)
+		{
+			running = true;
+		}
+	}
+	holdTimer++;
+}
+
+if (startedMoving)
+{
+	runTimer = 0;
+	startedMoving = false;
+}
+else
+{
+	runTimer++;
+}
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
@@ -96,7 +128,6 @@ if (target != noone)
 {
 	framesSinceHitstun++;
 }
-
 
 // Handle detecting press vs hold up for double jump
 if (verticalMoveDir == 1)
@@ -180,7 +211,7 @@ if (state == eState.IDLE)
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton) 
+	if (movedir == image_xscale && !running) 
 	{
 		state = eState.WALKING;
 	} 
@@ -190,15 +221,19 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton)
+	if ((movedir == image_xscale || movedir == 0) && running)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && opponent != noone)
+	else if (movedir == -image_xscale && running && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
+	}
+	else
+	{
+		running = false;
 	}
 	
 	
