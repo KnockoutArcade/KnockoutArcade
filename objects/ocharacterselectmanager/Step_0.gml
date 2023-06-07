@@ -15,6 +15,7 @@ var P1menuConfirm = global.p1ButtonLight;
 var P1menuCancel = global.p1ButtonMedium;
 var P1menuConfirmBuffer = false;
 var P1menuAltSelBuffer = false;
+var P1menuMapSelBuffer = false;
 
 // Player 2 cursor vars
 var P2menuLeft = global.p2ButtonLeft;
@@ -32,310 +33,397 @@ var P2menuConfirmBuffer = false;
 P1cursorCooldown--;
 P2cursorCooldown--;
 
-charSelBoxTimer++;
+if (state == 0)
+{
+    charSelBoxTimer++;
 
-// Handle frame rates of different character idle anims
-if (P1charSelCol == 0 && P1charSelRow == 0)
-{
-	p1charSelFrameRate = 10;
-	p1LocalPalette = RusselPaletteData;
-}
-else if (P1charSelCol == 1 && P1charSelRow == 0)
-{
-	p1charSelFrameRate = 6;
-	p1LocalPalette = BeverlyPaletteData;
-}
-else if (P1charSelCol == 2 && P1charSelRow == 0)
-{
-	p1charSelFrameRate = 6;
-	p1LocalPalette = JayPaletteData;
-}
+    // Handle frame rates of different character idle anims
+    if (P1charSelCol == 0 && P1charSelRow == 0)
+    {
+        p1charSelFrameRate = 10;
+        p1LocalPalette = RusselPaletteData;
+    }
+    else if (P1charSelCol == 1 && P1charSelRow == 0)
+    {
+        p1charSelFrameRate = 6;
+        p1LocalPalette = BeverlyPaletteData;
+    }
+    else if (P1charSelCol == 2 && P1charSelRow == 0)
+    {
+        p1charSelFrameRate = 6;
+        p1LocalPalette = JayPaletteData;
+    }
 
-if (P2charSelCol == 0 && P2charSelRow == 0)
-{
-	p2charSelFrameRate = 10;
-	p2LocalPalette = RusselPaletteData;
-}
-else if (P2charSelCol == 1 && P2charSelRow == 0)
-{
-	p2charSelFrameRate = 6;
-	p2LocalPalette = BeverlyPaletteData;
-}
-else if (P2charSelCol == 2 && P2charSelRow == 0)
-{
-	p2charSelFrameRate = 6;
-	p2LocalPalette = JayPaletteData;
-}
+    if (P2charSelCol == 0 && P2charSelRow == 0)
+    {
+        p2charSelFrameRate = 10;
+        p2LocalPalette = RusselPaletteData;
+    }
+    else if (P2charSelCol == 1 && P2charSelRow == 0)
+    {
+        p2charSelFrameRate = 6;
+        p2LocalPalette = BeverlyPaletteData;
+    }
+    else if (P2charSelCol == 2 && P2charSelRow == 0)
+    {
+        p2charSelFrameRate = 6;
+        p2LocalPalette = JayPaletteData;
+    }
 
-// Handle P1 cursor movement
-if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
-{
-	P1charSelCol += P1menuColMove;
-	P1cursorCooldown = 10;
-}
-if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
-{
-	P1charSelRow += P1menuRowMove;
-	P1cursorCooldown = 10;
-}
-if (P1menuRowMove == 0 && P1menuColMove == 0) 
-{
-	P1cursorCooldown = 0;
-}
-if (P1charSelCol > charSelColMax)
-{
- 	P1charSelCol = 0;
-}
-if (P1charSelCol < 0) 
-{
-	P1charSelCol = charSelColMax;
-}
-if (P1charSelRow > charSelRowMax)
-{
-	P1charSelRow = 0;
-}
-if (P1charSelRow < 0)
-{
- 	P1charSelRow = charSelRowMax;
-}
+    // Handle P1 cursor movement
+    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
+    {
+        P1charSelCol += P1menuColMove;
+        P1cursorCooldown = 10;
+        show_debug_message(P1charSelCol);
+    }
+    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
+    {
+        P1charSelRow += P1menuRowMove;
+        P1cursorCooldown = 10;
+        show_debug_message(P1charSelRow);
+    }
+    if (P1menuRowMove == 0 && P1menuColMove == 0)
+    {
+        P1cursorCooldown = 0;
+    }
+    if (P1charSelCol > charSelColMax)
+    {
+        P1charSelCol = 0;
+    }
+    if (P1charSelCol < 0)
+    {
+        P1charSelCol = charSelColMax;
+    }
+    if (P1charSelRow > charSelRowMax)
+    {
+        P1charSelRow = 0;
+    }
+    if (P1charSelRow < 0)
+    {
+        P1charSelRow = charSelRowMax;
+    }
 
-if (P1menuConfirm && !P1hasSelectedChar)
- {
-	P1hasSelectedChar = true;
-	P1menuConfirmBuffer = true;
-	
-	if (P1charSelCol == 0 && P1charSelRow == 0) 
-	{
-		global.p1SelectedCharacter = oRussel; // When Setting selected characters, always use the object name
-	}
-	else if (P1charSelCol == 1 && P1charSelRow == 0)
-	{
-		global.p1SelectedCharacter = oBeverly;
-	}
-	else if (P1charSelCol == 2 && P1charSelRow == 0)
-	{
-		global.p1SelectedCharacter = oJay;
-	}
-	else 
-	{
-		P1hasSelectedChar = false;
-		P1menuConfirmBuffer = false;
-	}
-}
+    if (P1menuConfirm && !P1hasSelectedChar)
+    {
+        P1hasSelectedChar = true;
+        P1menuConfirmBuffer = true;
 
-if (P1menuCancel)
-{
-	if (P1hasSelectedAlt)
-	{
-		P1hasSelectedAlt = false;
-	}
-	else if (P1hasSelectedChar) 
-	{
-		P1hasSelectedChar = false;
-		global.p1SelectedCharacter = noone;
-	}
-	else if (!P2hasSelectedChar)
-	{
-		 // If neither player has chosen a character, return to main menu
-		room_goto(rMainMenu);
-	}
-	
-	RTF_animTimer = 0;
-	RTF_currentFrame = 0;
-}
+        if (P1charSelCol == 0 && P1charSelRow == 0)
+        {
+            global.p1SelectedCharacter = oRussel; // When Setting selected characters, always use the object name
+        }
+        else if (P1charSelCol == 1 && P1charSelRow == 0)
+        {
+            global.p1SelectedCharacter = oBeverly;
+        }
+        else if (P1charSelCol == 2 && P1charSelRow == 0)
+        {
+            global.p1SelectedCharacter = oJay;
+        }
+        else
+        {
+            P1hasSelectedChar = false;
+            P1menuConfirmBuffer = false;
+        }
+    }
 
-// Handle Palette Selection
-if (P1hasSelectedChar) 
-{
-	if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedAlt)
-	{
-		global.p1PaletteID += P1menuColMove;
-		P1cursorCooldown = 10;
-	}
-	
-	if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
-	{
-	 	global.p1PaletteID = 0;
-	}
-	else if (global.p1PaletteID < 0) 
-	{
-		global.p1PaletteID = p1LocalPalette.NumberOfPalettes - 1;
-	}
-	
-	if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedAlt)
-	{
-		P1hasSelectedAlt = true;
-		P1menuAltSelBuffer = true;
-	}
-}
+    if (P1menuCancel)
+    {
+        if (P1hasSelectedAlt)
+        {
+            P1hasSelectedAlt = false;
+        }
+        else if (P1hasSelectedChar)
+        {
+            P1hasSelectedChar = false;
+            global.p1SelectedCharacter = noone;
+        }
+        else if (!P2hasSelectedChar)
+        {
+            // If neither player has chosen a character, return to main menu
+            room_goto(rMainMenu);
+        }
 
+        RTF_animTimer = 0;
+        RTF_currentFrame = 0;
+    }
 
-// Handle P2 cursor movement
-if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
-{
-	P2charSelCol += P2menuColMove;
-	P2cursorCooldown = 10;
-}
-if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
-{
-	P2charSelRow += P2menuRowMove;
-	P2cursorCooldown = 10;
-}
-if (P2menuRowMove == 0 && P2menuColMove == 0)
-{
-	P2cursorCooldown = 0;
-}
-if (P2charSelCol > charSelColMax)
-{
-	P2charSelCol = 0;
-}
-if (P2charSelCol < 0)
-{
-	P2charSelCol = charSelColMax;
-}
-if (P2charSelRow > charSelRowMax)
-{
-	P2charSelRow = 0;
-}
-if (P2charSelRow < 0)
-{
-	P2charSelRow = charSelRowMax;
-}
+    // Handle Palette Selection
+    if (P1hasSelectedChar)
+    {
+        if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedAlt)
+        {
+            global.p1PaletteID += P1menuColMove;
+            P1cursorCooldown = 10;
+        }
+
+        if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
+        {
+            global.p1PaletteID = 0;
+        }
+        else if (global.p1PaletteID < 0)
+        {
+            global.p1PaletteID = p1LocalPalette.NumberOfPalettes - 1;
+        }
+
+        if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedAlt)
+        {
+            P1hasSelectedAlt = true;
+            P1menuAltSelBuffer = true;
+        }
+    }
 
 
-if (P2menuConfirm && !P2hasSelectedChar)
-{
-	P2hasSelectedChar = true;
-	P2menuConfirmBuffer = true;
-	if (P2charSelCol == 0 && P2charSelRow == 0)
-	{
-		global.p2SelectedCharacter = oRussel;
-		p2charSelFrameRate = 10;
-	}
-	else if (P2charSelCol == 1 && P2charSelRow == 0)
-	{
-		global.p2SelectedCharacter = oBeverly;
-		p2charSelFrameRate = 6;
-	}
-	else if (P2charSelCol == 2 && P2charSelRow == 0)
-	{
-		global.p2SelectedCharacter = oJay;
-		p2charSelFrameRate = 6;
-	}
-	else 
-	{
-		P2hasSelectedChar = false;
-		P2menuConfirmBuffer = false;
-	}
+    // Handle P2 cursor movement
+    if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
+    {
+        P2charSelCol += P2menuColMove;
+        P2cursorCooldown = 10;
+    }
+    if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
+    {
+        P2charSelRow += P2menuRowMove;
+        P2cursorCooldown = 10;
+    }
+    if (P2menuRowMove == 0 && P2menuColMove == 0)
+    {
+        P2cursorCooldown = 0;
+    }
+    if (P2charSelCol > charSelColMax)
+    {
+        P2charSelCol = 0;
+    }
+    if (P2charSelCol < 0)
+    {
+        P2charSelCol = charSelColMax;
+    }
+    if (P2charSelRow > charSelRowMax)
+    {
+        P2charSelRow = 0;
+    }
+    if (P2charSelRow < 0)
+    {
+        P2charSelRow = charSelRowMax;
+    }
+
+
+    if (P2menuConfirm && !P2hasSelectedChar)
+    {
+        P2hasSelectedChar = true;
+        P2menuConfirmBuffer = true;
+        if (P2charSelCol == 0 && P2charSelRow == 0)
+        {
+            global.p2SelectedCharacter = oRussel;
+            p2charSelFrameRate = 10;
+        }
+        else if (P2charSelCol == 1 && P2charSelRow == 0)
+        {
+            global.p2SelectedCharacter = oBeverly;
+            p2charSelFrameRate = 6;
+        }
+        else if (P2charSelCol == 2 && P2charSelRow == 0)
+        {
+            global.p2SelectedCharacter = oJay;
+            p2charSelFrameRate = 6;
+        }
+        else
+        {
+            P2hasSelectedChar = false;
+            P2menuConfirmBuffer = false;
+        }
+    }
+
+    if (P2menuCancel)
+    {
+        if (P2hasSelectedAlt)
+        {
+            P2hasSelectedAlt = false;
+        }
+        else if (P2hasSelectedChar)
+        {
+            P2hasSelectedChar = false;
+            global.p2SelectedCharacter = noone;
+        }
+
+        RTF_animTimer = 0;
+        RTF_currentFrame = 0;
+    }
+
+    // Handle Palette Selection
+    if (P2hasSelectedChar)
+    {
+        if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedAlt)
+        {
+            global.p2PaletteID += P2menuColMove;
+            P2cursorCooldown = 10;
+        }
+
+        // Handle Palette Data
+        if (global.p2PaletteID >= p2LocalPalette.NumberOfPalettes)
+        {
+            global.p2PaletteID = 0;
+        }
+        else if (global.p2PaletteID < 0)
+        {
+            global.p2PaletteID = p2LocalPalette.NumberOfPalettes - 1;
+        }
+
+        if (P2menuConfirm && !P2menuConfirmBuffer)
+        {
+            P2hasSelectedAlt = true;
+            P2menuConfirmBuffer = true;
+        }
+    }
+
+
+    if (charSelBoxTimer > 4)
+    {
+        charSelBoxAlt = !charSelBoxAlt;
+        charSelBoxTimer = 0;
+    }
+
+
+
+    // Character Select Animations
+    p1charSelAnimTimer++;
+    if (p1charSelAnimTimer > (60 / p1charSelFrameRate))
+    {
+        p1charSelAnimTimer = 0;
+        P1charSelCurrentFrame++;
+    }
+
+    p2charSelAnimTimer++;
+    if (p2charSelAnimTimer > (60 / p2charSelFrameRate))
+    {
+        p2charSelAnimTimer = 0;
+        P2charSelCurrentFrame++;
+    }
 }
-
-if (P2menuCancel) 
-{
-	if (P2hasSelectedAlt)
-	{
-		P2hasSelectedAlt = false;
-	}
-	else if (P2hasSelectedChar) 
-	{
-		P2hasSelectedChar = false;
-		global.p2SelectedCharacter = noone;
-	}
-	
-	RTF_animTimer = 0;
-	RTF_currentFrame = 0;
-}
-
-// Handle Palette Selection
-if (P2hasSelectedChar)
-{
-	if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedAlt)
-	{
-		global.p2PaletteID += P2menuColMove;
-		P2cursorCooldown = 10;
-	}
-	
-	// Handle Palette Data
-	if (global.p2PaletteID >= p2LocalPalette.NumberOfPalettes)
-	{
-		global.p2PaletteID = 0;
-	}
-	else if (global.p2PaletteID < 0)
-	{
-		global.p2PaletteID = p2LocalPalette.NumberOfPalettes - 1;
-	}
-	
-	if (P2menuConfirm && !P2menuConfirmBuffer) 
-	{
-		P2hasSelectedAlt = true;
-		P2menuConfirmBuffer = true;
-	}
-}
-
-
-if (charSelBoxTimer > 4)
-{
-	charSelBoxAlt = !charSelBoxAlt;
-	charSelBoxTimer = 0;
-}
-
-
-
-// Character Select Animations
-p1charSelAnimTimer++;
-if (p1charSelAnimTimer > (60 / p1charSelFrameRate)) 
-{
-	p1charSelAnimTimer = 0;
-	P1charSelCurrentFrame++;
-}
-
-p2charSelAnimTimer++;
-if (p2charSelAnimTimer > (60 / p2charSelFrameRate))
-{
-	p2charSelAnimTimer = 0;
-	P2charSelCurrentFrame++;
-}
-
 
 
 // Ready To Fight Animations
 if (P1hasSelectedAlt && P2hasSelectedAlt)
 {
-	RTF_animTimer++;
+    RTF_animTimer++;
 }
 if (RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4)
 {
-	RTF_animTimer = 0;
-	RTF_currentFrame++;
+    RTF_animTimer = 0;
+    RTF_currentFrame++;
 }
 
 // Fix for when charcters don't have the exact same number of costumes.
 if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
 {
- 	global.p1PaletteID = 0;
+    global.p1PaletteID = 0;
 }
 if (global.p2PaletteID >= p2LocalPalette.NumberOfPalettes)
 {
- 	global.p2PaletteID = 0;
+    global.p2PaletteID = 0;
 }
 
-// Advance to match
-if (P1hasSelectedAlt && P2hasSelectedAlt && P1menuConfirm && !P1menuAltSelBuffer)
+// Handle Map selection
+if (P1hasSelectedAlt && P2hasSelectedAlt)
 {
-	global.gameMode = GAMEMODE.VERSUS;
-	if (keyboard_check(vk_enter))
-	{
-		room = rStageArcade;
-	}
-	else if (keyboard_check(vk_shift))
-	{
-		room = rBeverlyStage;
-	}
-	else if (keyboard_check(vk_control))
-	{
-		room = rJayStage;
-	}
-	else
-	{
-		room = rRusselStage;
-	}
+    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+    {
+        P1mapSelCol += P1menuColMove;
+        P1cursorCooldown = 10;
+    }
+
+    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+    {
+        P1mapSelRow += P1menuRowMove;
+        P1cursorCooldown = 10;
+    }
+
+    if (P1menuRowMove == 0 && P1menuColMove == 0)
+    {
+        P1cursorCooldown = 0;
+    }
+
+    if (P1mapSelCol > mapSelColMax)
+    {
+        P1mapSelCol = 0;
+    }
+
+    if (P1mapSelCol < 0)
+    {
+        P1mapSelCol = mapSelColMax;
+    }
+
+    if (P1mapSelRow > mapSelRowMax)
+    {
+        P1mapSelRow = 0;
+    }
+
+    if (P1mapSelRow < 0)
+    {
+        P1mapSelRow = mapSelRowMax;
+    }
+
+    if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
+    {
+        P1hasSelectedMap = true;
+        P1menuMapSelBuffer = true;
+
+        if (P1mapSelCol == 0 && P1mapSelRow == 0)
+        {
+            room = rStageArcade;
+            show_debug_message("arcade");
+        }
+        else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+        {
+            room = rBeverlyStage;
+            show_debug_message("Beverly");
+        }
+        else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+        {
+            room = rJayStage;
+            show_debug_message("Jay");
+        }
+        else if (P1mapSelCol == 3 && P1mapSelRow == 0)
+        {
+            P1mapSelRow = irandom_range(0, mapSelRowMax);
+            P1mapSelCol = irandom_range(0, mapSelColMax);
+            show_debug_message("Random");
+            if (P1mapSelCol == 0 && P1mapSelRow == 0)
+            {
+                room = rStageArcade;
+                show_debug_message("arcade");
+            }
+            else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+            {
+                room = rBeverlyStage;
+                show_debug_message("Beverly");
+            }
+            else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+            {
+                room = rJayStage;
+                show_debug_message("Jay");
+            }
+        }
+        else
+        {
+            P1mapSelRow = 0; //irandom_range(0, mapSelRowMax);
+            P1mapSelCol = irandom_range(0, mapSelColMax);
+            show_debug_message("Random");
+            if (P1mapSelCol == 0 && P1mapSelRow == 0)
+            {
+                room = rStageArcade;
+                show_debug_message("arcade");
+            }
+            else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+            {
+                room = rBeverlyStage;
+                show_debug_message("Beverly");
+            }
+            else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+            {
+                room = rJayStage;
+                show_debug_message("Jay");
+            }
+        }
+    }
 }
