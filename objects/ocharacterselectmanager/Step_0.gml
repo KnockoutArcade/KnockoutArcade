@@ -370,8 +370,8 @@ else if (state == 1)
 
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
-            room = rStageArcade;
-            show_debug_message("arcade");
+			room = rRusselStage;
+            show_debug_message("Russel");
         }
         else if (P1mapSelCol == 1 && P1mapSelRow == 0)
         {
@@ -383,6 +383,11 @@ else if (state == 1)
             room = rJayStage;
             show_debug_message("Jay");
         }
+		else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+        {
+            room = rStageArcade;
+            show_debug_message("arcade");
+        }
         else if (P1mapSelCol == 3 && P1mapSelRow == 0)
         {
             P1mapSelRow = irandom_range(0, mapSelRowMax);
@@ -390,8 +395,8 @@ else if (state == 1)
             show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                room = rStageArcade;
-                show_debug_message("arcade");
+                room = rRusselStage;
+                show_debug_message("Russel");
             }
             else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
@@ -403,16 +408,21 @@ else if (state == 1)
                 room = rJayStage;
                 show_debug_message("Jay");
             }
+			else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+			{
+		        room = rStageArcade;
+		        show_debug_message("arcade");
+		    }
         }
         else
         {
-            P1mapSelRow = 0; //irandom_range(0, mapSelRowMax);
+            P1mapSelRow = irandom_range(0, mapSelRowMax);
             P1mapSelCol = irandom_range(0, mapSelColMax);
             show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                room = rStageArcade;
-                show_debug_message("arcade");
+                room = rRusselStage;
+                show_debug_message("Russel");
             }
             else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
@@ -424,7 +434,13 @@ else if (state == 1)
                 room = rJayStage;
                 show_debug_message("Jay");
             }
+			else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+			{
+		        room = rStageArcade;
+		        show_debug_message("arcade");
+		    }
         }
+		global.gameMode = GAMEMODE.VERSUS;
     }
 
     if (P1menuCancel)
