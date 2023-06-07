@@ -79,11 +79,6 @@ if (runButton)
 {
 	running = true;
 }
-else if (!runButton && movedir == 0)
-{
-	running = false;
-}
-
 else if (movedir == image_xscale || movedir == -image_xscale)
 {
 	if (holdTimer == 0)
@@ -98,6 +93,12 @@ else if (movedir == image_xscale || movedir == -image_xscale)
 	}
 	holdTimer++;
 }
+else if (!runButton && movedir == 0)
+{
+	running = false;
+	holdTimer = 0;
+}
+
 
 if (startedMoving)
 {
