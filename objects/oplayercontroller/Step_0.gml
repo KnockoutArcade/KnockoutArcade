@@ -77,37 +77,86 @@ hurtboxOffset = -8;
 
 if (runButton)
 {
-	running = true;
-}
-else if (movedir == image_xscale || movedir == -image_xscale)
-{
-	if (holdTimer == 0)
+	if (holdButtonTimer == 0)
 	{
-		startedMoving = true;
-		
-		// Player must press the button again wihin 15 frames to dash
-		if (runTimer < 15)
+		if (grounded)
 		{
 			running = true;
 		}
 	}
-	holdTimer++;
+	
+	// Apply a special rule for back dashing to prevent it from repeating
+	if (movedir == -image_xscale)
+	{
+		if (holdButtonTimer > 0 || !grounded)
+		{
+			running = false;
+		}
+	}
+	holdButtonTimer++;
 }
-else if (!runButton && movedir == 0)
+else if (movedir == image_xscale)
+{
+	if (holdForwardTimer == 0)
+	{
+		startedMovingForward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runForwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	holdForwardTimer++;
+	holdBackwardTimer = 0;
+}
+else if (movedir == -image_xscale)
+{
+	if (holdBackwardTimer == 0)
+	{
+		startedMovingBackward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runBackwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	else
+	{
+		running = false;
+	}
+	holdBackwardTimer++;
+	holdForwardTimer = 0;
+}
+else if ((!runButton && movedir == 0) || !grounded)
 {
 	running = false;
-	holdTimer = 0;
+	holdForwardTimer = 0;
+	holdBackwardTimer = 0;
+	holdButtonTimer = 0;
 }
 
-
-if (startedMoving)
+// Handles timer for running forward
+if (startedMovingForward)
 {
-	runTimer = 0;
-	startedMoving = false;
+	runForwardTimer = 0;
+	startedMovingForward = false;
 }
 else
 {
-	runTimer++;
+	runForwardTimer++;
+}
+
+// Handles timer for running backward
+if (startedMovingBackward)
+{
+	runBackwardTimer = 0;
+	startedMovingBackward = false;
+}
+else
+{
+	runBackwardTimer++;
 }
 
 // Handle storing input for Super Jump
