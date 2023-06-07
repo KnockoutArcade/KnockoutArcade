@@ -75,27 +75,31 @@ hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+// Handles running
 if (runButton)
 {
-	if (holdButtonTimer == 0)
-	{
-		if (grounded)
-		{
-			running = true;
-		}
-	}
+	running = true;
 	
-	// Apply a special rule for back dashing to prevent it from repeating
-	if (movedir == -image_xscale)
-	{
-		if (holdButtonTimer > 0 || !grounded)
-		{
-			running = false;
-		}
-	}
-	holdButtonTimer++;
+	// All of the commented code is to limit the dash button if necessaary.
+	//if (holdButtonTimer == 0)
+	//{
+	//	if (grounded)
+	//	{
+	//		running = true;
+	//	}
+	//}
+	
+	//// Apply a special rule for back dashing to prevent it from repeating
+	//if (movedir == -image_xscale)
+	//{
+	//	if (holdButtonTimer > 0 || !grounded)
+	//	{
+	//		running = false;
+	//	}
+	//}
+	//holdButtonTimer++;
 }
-else if (movedir == image_xscale)
+else if (movedir == image_xscale) // If moving forward
 {
 	if (holdForwardTimer == 0)
 	{
@@ -110,7 +114,7 @@ else if (movedir == image_xscale)
 	holdForwardTimer++;
 	holdBackwardTimer = 0;
 }
-else if (movedir == -image_xscale)
+else if (movedir == -image_xscale) // If moving backward
 {
 	if (holdBackwardTimer == 0)
 	{
@@ -122,10 +126,10 @@ else if (movedir == -image_xscale)
 			running = true;
 		}
 	}
-	else
-	{
-		running = false;
-	}
+	//else // In case we decide to prevent back dashing from repeating
+	//{
+	//	running = false;
+	//}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
 }
