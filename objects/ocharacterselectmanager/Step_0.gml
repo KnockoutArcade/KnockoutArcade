@@ -458,10 +458,19 @@ else if (state == 1)
 }
 else if (state == 2)
 {
+	// Ready To Fight Animations
+    RTF_animTimer++;
+
+    if (RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4)
+    {
+        RTF_animTimer = 0;
+        RTF_currentFrame++;
+    }
+	
 	// Handle Music selection
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMusic)
     {
-        P1musicSelRow += P1menuRowMove;
+        P1musicSelRow -= P1menuRowMove;
         P1cursorCooldown = 10;
     }
 
@@ -470,15 +479,17 @@ else if (state == 2)
         P1cursorCooldown = 0;
     }
 
-    if (P1musicSelRow > musicSelRowMax)
+    if (P1musicSelRow >= musicSelRowMax)
     {
         P1musicSelRow = 0;
     }
 
     if (P1musicSelRow < 0)
     {
-        P1musicSelRow = musicSelRowMax;
+        P1musicSelRow = musicSelRowMax - 1;
     }
+	
+	show_debug_message(P1musicSelRow);
 
     if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMusic)
     {
