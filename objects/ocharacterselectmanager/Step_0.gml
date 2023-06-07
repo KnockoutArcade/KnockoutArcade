@@ -297,10 +297,10 @@ if (state == 0)
         p2charSelAnimTimer = 0;
         P2charSelCurrentFrame++;
     }
-	
-	if (P1hasSelectedAlt && P2hasSelectedAlt)
+
+    if (P1hasSelectedAlt && P2hasSelectedAlt)
     {
-		// Go to stage select
+        // Go to stage select
         state = 1;
     }
 }
@@ -308,7 +308,7 @@ else if (state == 1)
 {
     // Ready To Fight Animations
     RTF_animTimer++;
-	
+
     if (RTF_animTimer >= (60 / RTF_frameRate) && RTF_currentFrame != 4)
     {
         RTF_animTimer = 0;
@@ -326,50 +326,68 @@ else if (state == 1)
     }
 
     // Handle Map selection
-    if (P1hasSelectedAlt && P2hasSelectedAlt)
+    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
     {
-        if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+        P1mapSelCol += P1menuColMove;
+        P1cursorCooldown = 10;
+    }
+
+    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+    {
+        P1mapSelRow += P1menuRowMove;
+        P1cursorCooldown = 10;
+    }
+
+    if (P1menuRowMove == 0 && P1menuColMove == 0)
+    {
+        P1cursorCooldown = 0;
+    }
+
+    if (P1mapSelCol > mapSelColMax)
+    {
+        P1mapSelCol = 0;
+    }
+
+    if (P1mapSelCol < 0)
+    {
+        P1mapSelCol = mapSelColMax;
+    }
+
+    if (P1mapSelRow > mapSelRowMax)
+    {
+        P1mapSelRow = 0;
+    }
+
+    if (P1mapSelRow < 0)
+    {
+        P1mapSelRow = mapSelRowMax;
+    }
+
+    if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
+    {
+        P1hasSelectedMap = true;
+        P1menuMapSelBuffer = true;
+
+        if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
-            P1mapSelCol += P1menuColMove;
-            P1cursorCooldown = 10;
+            room = rStageArcade;
+            show_debug_message("arcade");
         }
-
-        if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+        else if (P1mapSelCol == 1 && P1mapSelRow == 0)
         {
-            P1mapSelRow += P1menuRowMove;
-            P1cursorCooldown = 10;
+            room = rBeverlyStage;
+            show_debug_message("Beverly");
         }
-
-        if (P1menuRowMove == 0 && P1menuColMove == 0)
+        else if (P1mapSelCol == 2 && P1mapSelRow == 0)
         {
-            P1cursorCooldown = 0;
+            room = rJayStage;
+            show_debug_message("Jay");
         }
-
-        if (P1mapSelCol > mapSelColMax)
+        else if (P1mapSelCol == 3 && P1mapSelRow == 0)
         {
-            P1mapSelCol = 0;
-        }
-
-        if (P1mapSelCol < 0)
-        {
-            P1mapSelCol = mapSelColMax;
-        }
-
-        if (P1mapSelRow > mapSelRowMax)
-        {
-            P1mapSelRow = 0;
-        }
-
-        if (P1mapSelRow < 0)
-        {
-            P1mapSelRow = mapSelRowMax;
-        }
-
-        if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
-        {
-            P1hasSelectedMap = true;
-            P1menuMapSelBuffer = true;
-
+            P1mapSelRow = irandom_range(0, mapSelRowMax);
+            P1mapSelCol = irandom_range(0, mapSelColMax);
+            show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
                 room = rStageArcade;
@@ -385,55 +403,34 @@ else if (state == 1)
                 room = rJayStage;
                 show_debug_message("Jay");
             }
-            else if (P1mapSelCol == 3 && P1mapSelRow == 0)
+        }
+        else
+        {
+            P1mapSelRow = 0; //irandom_range(0, mapSelRowMax);
+            P1mapSelCol = irandom_range(0, mapSelColMax);
+            show_debug_message("Random");
+            if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                P1mapSelRow = irandom_range(0, mapSelRowMax);
-                P1mapSelCol = irandom_range(0, mapSelColMax);
-                show_debug_message("Random");
-                if (P1mapSelCol == 0 && P1mapSelRow == 0)
-                {
-                    room = rStageArcade;
-                    show_debug_message("arcade");
-                }
-                else if (P1mapSelCol == 1 && P1mapSelRow == 0)
-                {
-                    room = rBeverlyStage;
-                    show_debug_message("Beverly");
-                }
-                else if (P1mapSelCol == 2 && P1mapSelRow == 0)
-                {
-                    room = rJayStage;
-                    show_debug_message("Jay");
-                }
+                room = rStageArcade;
+                show_debug_message("arcade");
             }
-            else
+            else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
-                P1mapSelRow = 0; //irandom_range(0, mapSelRowMax);
-                P1mapSelCol = irandom_range(0, mapSelColMax);
-                show_debug_message("Random");
-                if (P1mapSelCol == 0 && P1mapSelRow == 0)
-                {
-                    room = rStageArcade;
-                    show_debug_message("arcade");
-                }
-                else if (P1mapSelCol == 1 && P1mapSelRow == 0)
-                {
-                    room = rBeverlyStage;
-                    show_debug_message("Beverly");
-                }
-                else if (P1mapSelCol == 2 && P1mapSelRow == 0)
-                {
-                    room = rJayStage;
-                    show_debug_message("Jay");
-                }
+                room = rBeverlyStage;
+                show_debug_message("Beverly");
+            }
+            else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+            {
+                room = rJayStage;
+                show_debug_message("Jay");
             }
         }
     }
-	
-	if (P1menuCancel)
+
+    if (P1menuCancel)
     {
         state = 0;
-		P1hasSelectedAlt = false;
+        P1hasSelectedAlt = false;
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
