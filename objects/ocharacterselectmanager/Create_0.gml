@@ -19,6 +19,9 @@ P1mapSelCol = 0;
 mapSelRowMax = 1;
 mapSelColMax = 3;
 
+P1musicSelRow = 0;
+musicSelRowMax = 5;
+
 
 p1charSelFrameRate = 10;
 p1charSelAnimTimer = 0;
@@ -61,11 +64,17 @@ charSelBoxAlt = false;
 mapSelBoxTimer = 0;
 mapSelBoxAlt = false;
 
+musicSelBoxTimer = 0;
+musicSelBoxAlt = false;
+
 P1hasSelectedChar = false;
 P2hasSelectedChar = false;
 P1hasSelectedAlt = false;
 P2hasSelectedAlt = false;
 P1hasSelectedMap = false;
+P1hasSelectedMusic = false;
+
+selectedStage = rStageArcade;
 
 RTF_animTimer = 0;
 RTF_frameRate = 30;
