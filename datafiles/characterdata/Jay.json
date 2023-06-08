@@ -3623,7 +3623,7 @@
         {
           "Start": 9,
           "Lifetime": 2,
-          "AttackWidth": 32,
+          "AttackWidth": 34,
           "AttackHeight": 26,
           "WidthOffset": -13,
           "HeightOffset": 6,
@@ -3646,14 +3646,14 @@
           "ParticleDuration": 5,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
-          "MeterGain": 4.0,
+          "MeterGain": 1.0000001,
           "ComboScaling": 0.5,
           "CausesWallbounce": false
         },
         {
           "Start": 45,
           "Lifetime": 5,
-          "AttackWidth": 15,
+          "AttackWidth": 18,
           "AttackHeight": 24,
           "WidthOffset": 3,
           "HeightOffset": 18,
@@ -3676,7 +3676,7 @@
           "ParticleDuration": 5,
           "HoldXOffset": 30,
           "HoldYOffset": 15,
-          "MeterGain": 3.9999986,
+          "MeterGain": 2.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false
         }
@@ -3686,7 +3686,7 @@
           "CounterHitLevel": 2,
           "Group": 1,
           "Damage": 10,
-          "MeterGain": 0.8000001,
+          "MeterGain": 1.2000002,
           "AttackHitStop": 8,
           "AttackHitStun": 13,
           "KnockBack": 0.0,
@@ -4013,6 +4013,6 @@
   ],
   "Version": "Ver1.1.1",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-06-06T20:06:06.4369725-07:00",
+  "LastModified": "2023-06-08T15:48:10.6822554-07:00",
   "LastModifiedBy": "iansb"
 }
