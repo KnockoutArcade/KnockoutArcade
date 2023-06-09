@@ -1683,7 +1683,7 @@
           "WidthOffset": 0,
           "HeightOffset": 4,
           "Group": 1,
-          "Damage": 6,
+          "Damage": 5,
           "AttackHitStop": 13,
           "AttackHitStun": 25,
           "AttackType": 1,
@@ -2490,9 +2490,9 @@
           "AttackHitStun": 15,
           "AttackType": 1,
           "BlockStun": 21.0,
-          "KnockBack": 5.0,
+          "KnockBack": 4.5,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 3.0,
+          "AirKnockbackHorizontal": 2.0,
           "Launches": true,
           "LaunchKnockbackVertical": -1.3000001,
           "LaunchKnockbackHorizontal": 1.8,
@@ -3269,7 +3269,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 9,
+          "Start": 8,
           "Lifetime": 6,
           "AttackWidth": 32,
           "AttackHeight": 12,
@@ -3380,7 +3380,7 @@
       "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 6,
+          "Length": 9,
           "ImageIndex": 1
         },
         {
@@ -3392,7 +3392,7 @@
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 16,
           "ImageIndex": 4
         },
         {
@@ -3407,14 +3407,14 @@
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 12,
-          "Lifetime": 3,
+          "Start": 10,
+          "Lifetime": 4,
           "AttackWidth": 25,
           "AttackHeight": 13,
           "WidthOffset": 3,
           "HeightOffset": 5,
           "Group": 1,
-          "Damage": 7,
+          "Damage": 6,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -3437,14 +3437,14 @@
           "CausesWallbounce": false
         },
         {
-          "Start": 19,
-          "Lifetime": 3,
+          "Start": 17,
+          "Lifetime": 4,
           "AttackWidth": 25,
           "AttackHeight": 10,
           "WidthOffset": 5,
           "HeightOffset": 5,
           "Group": 2,
-          "Damage": 8,
+          "Damage": 7,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -4336,7 +4336,7 @@
           "WidthOffset": 1,
           "HeightOffset": 0,
           "Group": 0,
-          "Damage": 5,
+          "Damage": 4,
           "AttackHitStop": 9,
           "AttackHitStun": 23,
           "AttackType": 1,
@@ -4712,8 +4712,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 5,
+          "Lifetime": 4,
+          "AttackWidth": 22,
+          "AttackHeight": 5,
+          "WidthOffset": 0,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -4755,7 +4764,7 @@
         {
           "Start": 8,
           "Lifetime": 3,
-          "AttackWidth": 20,
+          "AttackWidth": 22,
           "AttackHeight": 36,
           "WidthOffset": -1,
           "HeightOffset": 0,
@@ -4771,7 +4780,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": 0.1,
-          "Pushback": 2.0,
+          "Pushback": 1.0,
           "ParticleXOffset": 15,
           "ParticleYOffset": 25,
           "ParticleEffect": "sHitEffect",
@@ -4821,8 +4830,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 7,
+          "Lifetime": 4,
+          "AttackWidth": 16,
+          "AttackHeight": 28,
+          "WidthOffset": 2,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5321,6 +5339,6 @@
   ],
   "Version": "Ver1.1.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-06-08T21:06:15.2098105-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-06-08T20:52:29.759462-07:00",
+  "LastModifiedBy": "alarb"
 }
