@@ -1651,7 +1651,8 @@ else
 	{
 		hitstunShuffleTimer = 0;
 	}
-	if (pushbackVel >= 0)
+	
+	if (pushbackVel > 0)
 	{
 		hsp = pushbackVel * -image_xscale;
 		pushbackVel--;
