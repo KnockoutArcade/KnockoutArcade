@@ -9,7 +9,6 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 		for (var i = 0; i < numberOfMotions; i++) 
 		{
 			// Turns the motion input into separate numbers in an array
-			motionInputs[i] = string(motionInputs[i]);
 			var n = string_length(motionInputs[i]);
 			directions = [];
 			for(var j = 0, directions; j < n; j++)

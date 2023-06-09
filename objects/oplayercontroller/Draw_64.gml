@@ -13,9 +13,9 @@ if (playerID == 1)
 	
 	draw_text(20, 10, animTimer);
 	draw_text(20, 30, grounded);
-	draw_text(20, 50, pushbackVel);
-	draw_text(20, 70, vsp);
-	draw_text(20, 90, hsp);
+	draw_text(20, 50, enhanced);
+	draw_text(20, 70, inputSet);
+	draw_text(20, 90, changeFrame);
 } 
 else 
 {

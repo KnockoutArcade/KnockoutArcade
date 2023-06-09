@@ -28,6 +28,11 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_NEUTRAL_SPECIAL;
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 					
@@ -36,6 +41,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_SIDE_SPECIAL;
 							sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL, selectedCharacter.EnhancedSideSpecial.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -44,6 +50,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_UP_SPECIAL;
 							sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL, selectedCharacter.EnhancedUpSpecial.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -52,6 +59,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_DOWN_SPECIAL;
 							sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL, selectedCharacter.EnhancedDownSpecial.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -60,6 +68,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_NEUTRAL_SPECIAL_2;
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -68,6 +77,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_SIDE_SPECIAL_2;
 							sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL_2, selectedCharacter.EnhancedSideSpecial2.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -76,6 +86,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_UP_SPECIAL_2;
 							sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL_2, selectedCharacter.EnhancedUpSpecial2.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -84,6 +95,7 @@ function ProcessEnhancers(Special) {
 							state = eState.ENHANCED_DOWN_SPECIAL_2;
 							sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL_2, selectedCharacter.EnhancedDownSpecial2.SpriteId, 1);
+							inputSet = false;
 						}
 						break;
 						
@@ -92,6 +104,11 @@ function ProcessEnhancers(Special) {
 							state = eState.REKKA_LAUNCHER;
 							sprite_index = selectedCharacter.RekkaLauncher.SpriteId
 							CancelIntoMove(eState.REKKA_LAUNCHER, selectedCharacter.RekkaLauncher.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 						
@@ -100,6 +117,11 @@ function ProcessEnhancers(Special) {
 							state = eState.REKKA_FINISHER;
 							sprite_index = selectedCharacter.RekkaFinisher.SpriteId
 							CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 						
@@ -108,6 +130,11 @@ function ProcessEnhancers(Special) {
 							state = eState.REKKA_CONNECTER;
 							sprite_index = selectedCharacter.RekkaConnecter.SpriteId
 							CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 						
@@ -116,6 +143,11 @@ function ProcessEnhancers(Special) {
 							state = eState.REKKA_LOW;
 							sprite_index = selectedCharacter.RekkaLow.SpriteId
 							CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 						
@@ -124,6 +156,11 @@ function ProcessEnhancers(Special) {
 							state = eState.REKKA_HIGH;
 							sprite_index = selectedCharacter.RekkaHigh.SpriteId
 							CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
+							inputSet = false;
+							for (var j = 0; j < array_length(enhanced); j++;)
+							{
+								enhanced[j] = false;
+							}
 						}
 						break;
 						

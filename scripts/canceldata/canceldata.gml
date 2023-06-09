@@ -53,9 +53,9 @@ function CancelData(_array, _attack, _late)
 			LateCancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial, _attack);
 		}
 		else
-			{
-			 	CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
-			}
+		{
+		 	CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
+		}
 	}
 	// Neutral Special
 	else if ((_array.MoveCanCancelInto & 16 == 16) && (_attack == 5 && movedir == 0 && verticalMoveDir == 0))
@@ -69,7 +69,6 @@ function CancelData(_array, _attack, _late)
 				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
 			}
 	}
-	
 	// Standing Light 1
 	else if ((_array.MoveCanCancelInto & 32 == 32) && (_attack == 1 && verticalMoveDir == 0) && grounded)
 	{

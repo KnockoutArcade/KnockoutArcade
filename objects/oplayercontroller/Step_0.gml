@@ -123,7 +123,21 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 
 
 // Reset motion input values if the player isn't performing a special move
-if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
+if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL 
+	&& state != eState.HITSTOP
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL
+	&& state != eState.ENHANCED_SIDE_SPECIAL
+	&& state != eState.ENHANCED_UP_SPECIAL
+	&& state != eState.ENHANCED_DOWN_SPECIAL
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL_2
+	&& state != eState.ENHANCED_SIDE_SPECIAL_2
+	&& state != eState.ENHANCED_UP_SPECIAL_2
+	&& state != eState.ENHANCED_DOWN_SPECIAL_2
+	&& state != eState.REKKA_LAUNCHER
+	&& state != eState.REKKA_FINISHER
+	&& state != eState.REKKA_CONNECTER
+	&& state != eState.REKKA_LOW
+	&& state != eState.REKKA_HIGH) 
 {
 	inputSet = false;
 	motionInput = [];
