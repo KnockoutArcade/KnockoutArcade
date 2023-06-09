@@ -70,12 +70,100 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+// Handles running
+if (runButton)
+{
+	running = true;
+	
+	// All of the commented code is to limit the dash button if necessaary.
+	//if (holdButtonTimer == 0)
+	//{
+	//	if (grounded)
+	//	{
+	//		running = true;
+	//	}
+	//}
+	
+	//// Apply a special rule for back dashing to prevent it from repeating
+	//if (movedir == -image_xscale)
+	//{
+	//	if (holdButtonTimer > 0 || !grounded)
+	//	{
+	//		running = false;
+	//	}
+	//}
+	//holdButtonTimer++;
+}
+else if (movedir == image_xscale) // If moving forward
+{
+	if (holdForwardTimer == 0)
+	{
+		startedMovingForward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runForwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	holdForwardTimer++;
+	holdBackwardTimer = 0;
+}
+else if (movedir == -image_xscale) // If moving backward
+{
+	if (holdBackwardTimer == 0)
+	{
+		startedMovingBackward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runBackwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	//else // In case we decide to prevent back dashing from repeating
+	//{
+	//	running = false;
+	//}
+	holdBackwardTimer++;
+	holdForwardTimer = 0;
+}
+else if ((!runButton && movedir == 0) || !grounded)
+{
+	running = false;
+	holdForwardTimer = 0;
+	holdBackwardTimer = 0;
+	holdButtonTimer = 0;
+}
+
+// Handles timer for running forward
+if (startedMovingForward)
+{
+	runForwardTimer = 0;
+	startedMovingForward = false;
+}
+else
+{
+	runForwardTimer++;
+}
+
+// Handles timer for running backward
+if (startedMovingBackward)
+{
+	runBackwardTimer = 0;
+	startedMovingBackward = false;
+}
+else
+{
+	runBackwardTimer++;
+}
+
+show_debug_message(state);
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
@@ -96,7 +184,6 @@ if (target != noone)
 {
 	framesSinceHitstun++;
 }
-
 
 // Handle detecting press vs hold up for double jump
 if (verticalMoveDir == 1)
@@ -196,7 +283,7 @@ if (state == eState.IDLE)
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton) 
+	if (movedir == image_xscale && !running) 
 	{
 		state = eState.WALKING;
 	} 
@@ -206,17 +293,16 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton)
+	if ((movedir == image_xscale || movedir == 0) && running)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && opponent != noone)
+	else if (movedir == -image_xscale && running && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
-	
 	
 	// Handle Jumping
 	if (verticalMoveDir == 1)
@@ -284,21 +370,21 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton && verticalMoveDir != -1) 
+	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
 	} 
-	else if (movedir == -image_xscale && !runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
 	{
 		state = eState.WALKING;
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -496,11 +582,11 @@ switch state
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && runButton)
+		if ((movedir == image_xscale || movedir == 0) && running)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -578,7 +664,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!runButton) 
+		if (!running) 
 		{
 			state = eState.IDLE;
 		}
