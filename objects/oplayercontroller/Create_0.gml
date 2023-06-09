@@ -22,8 +22,8 @@ holdBackwardTimer = 0; // Determines the amount of time backward is held
 holdButtonTimer = 0; // Determines the amount of time the run button is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
-runForwardTimer = 0; // Used for running by double tapping forward
-runBackwardTimer = 0; // Used for backdashing by double tapping backward
+runForwardTimer = 16; // Used for running by double tapping forward
+runBackwardTimer = 16; // Used for backdashing by double tapping backward
 
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
