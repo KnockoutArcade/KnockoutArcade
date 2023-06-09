@@ -249,6 +249,7 @@
     {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},"order":0,},
     {"id":{"name":"sRussel_Block","path":"sprites/sRussel_Block/sRussel_Block.yy",},"order":6,},
     {"id":{"name":"SetupGame","path":"scripts/SetupGame/SetupGame.yy",},"order":2,},
+    {"id":{"name":"sBeverly_Hurt","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"order":23,},
     {"id":{"name":"sJay_UpSpecial2_Mockup_strip6","path":"sprites/sJay_UpSpecial2_Mockup_strip6/sJay_UpSpecial2_Mockup_strip6.yy",},"order":9,},
     {"id":{"name":"CancelIntoMove","path":"scripts/CancelIntoMove/CancelIntoMove.yy",},"order":7,},
     {"id":{"name":"sRussel_ForwardThrow","path":"sprites/sRussel_ForwardThrow/sRussel_ForwardThrow.yy",},"order":21,},
