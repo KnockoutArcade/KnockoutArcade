@@ -70,12 +70,100 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+// Handles running
+if (runButton)
+{
+	running = true;
+	
+	// All of the commented code is to limit the dash button if necessaary.
+	//if (holdButtonTimer == 0)
+	//{
+	//	if (grounded)
+	//	{
+	//		running = true;
+	//	}
+	//}
+	
+	//// Apply a special rule for back dashing to prevent it from repeating
+	//if (movedir == -image_xscale)
+	//{
+	//	if (holdButtonTimer > 0 || !grounded)
+	//	{
+	//		running = false;
+	//	}
+	//}
+	//holdButtonTimer++;
+}
+else if (movedir == image_xscale) // If moving forward
+{
+	if (holdForwardTimer == 0)
+	{
+		startedMovingForward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runForwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	holdForwardTimer++;
+	holdBackwardTimer = 0;
+}
+else if (movedir == -image_xscale) // If moving backward
+{
+	if (holdBackwardTimer == 0)
+	{
+		startedMovingBackward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runBackwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	//else // In case we decide to prevent back dashing from repeating
+	//{
+	//	running = false;
+	//}
+	holdBackwardTimer++;
+	holdForwardTimer = 0;
+}
+else if ((!runButton && movedir == 0) || !grounded)
+{
+	running = false;
+	holdForwardTimer = 0;
+	holdBackwardTimer = 0;
+	holdButtonTimer = 0;
+}
+
+// Handles timer for running forward
+if (startedMovingForward)
+{
+	runForwardTimer = 0;
+	startedMovingForward = false;
+}
+else
+{
+	runForwardTimer++;
+}
+
+// Handles timer for running backward
+if (startedMovingBackward)
+{
+	runBackwardTimer = 0;
+	startedMovingBackward = false;
+}
+else
+{
+	runBackwardTimer++;
+}
+
+show_debug_message(state);
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
@@ -96,7 +184,6 @@ if (target != noone)
 {
 	framesSinceHitstun++;
 }
-
 
 // Handle detecting press vs hold up for double jump
 if (verticalMoveDir == 1)
@@ -123,7 +210,21 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 
 
 // Reset motion input values if the player isn't performing a special move
-if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.HITSTOP) 
+if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL 
+	&& state != eState.HITSTOP
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL
+	&& state != eState.ENHANCED_SIDE_SPECIAL
+	&& state != eState.ENHANCED_UP_SPECIAL
+	&& state != eState.ENHANCED_DOWN_SPECIAL
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL_2
+	&& state != eState.ENHANCED_SIDE_SPECIAL_2
+	&& state != eState.ENHANCED_UP_SPECIAL_2
+	&& state != eState.ENHANCED_DOWN_SPECIAL_2
+	&& state != eState.REKKA_LAUNCHER
+	&& state != eState.REKKA_FINISHER
+	&& state != eState.REKKA_CONNECTER
+	&& state != eState.REKKA_LOW
+	&& state != eState.REKKA_HIGH) 
 {
 	inputSet = false;
 	motionInput = [];
@@ -134,6 +235,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	inputWindowEnd = 0;
 	changeFrame = 999;
 	changeImmediately = false;
+	requireSpecialButton = false;
 }
 else if (animTimer > inputWindowEnd)
 {
@@ -142,6 +244,7 @@ else if (animTimer > inputWindowEnd)
 	progressInInputs = [];
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
+	requireSpecialButton = false;
 	
 	var changeSet = false;
 	for (i = 0; i < array_length(enhanced); i++)
@@ -159,7 +262,7 @@ else if (animTimer > inputWindowEnd)
 }
 else
 {
-	PerformMotionInputs();
+	PerformMotionInputs(attack);
 }
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
@@ -180,7 +283,7 @@ if (state == eState.IDLE)
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton) 
+	if (movedir == image_xscale && !running) 
 	{
 		state = eState.WALKING;
 	} 
@@ -190,17 +293,16 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton)
+	if ((movedir == image_xscale || movedir == 0) && running)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && opponent != noone)
+	else if (movedir == -image_xscale && running && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
-	
 	
 	// Handle Jumping
 	if (verticalMoveDir == 1)
@@ -268,21 +370,21 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton && verticalMoveDir != -1) 
+	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
 	} 
-	else if (movedir == -image_xscale && !runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
 	{
 		state = eState.WALKING;
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -480,11 +582,11 @@ switch state
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && runButton)
+		if ((movedir == image_xscale || movedir == 0) && running)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -562,7 +664,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!runButton) 
+		if (!running) 
 		{
 			state = eState.IDLE;
 		}
@@ -888,6 +990,26 @@ switch state
 	}
 	break;
 
+	
+	case eState.COMMAND_NORMAL_1:
+	{
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, true, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && global.hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal1, attack, true);
+		}
+	}
+	break;
+
+
 
 	case eState.NEUTRAL_SPECIAL: 
 	{
@@ -900,40 +1022,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
 		
-		// NOTE FOR DESIGNERS:
-		// In the editor, the following additions will be made to each special move to allow motion input editing:
-		// - The number of inputs (int)
-		//   - Each input in numpad notation (int)
-		//   - Input Window Start (int)
-		//   - Input Window End (int)
-		//   - Does the move change as soon as the player performs the input? (bool)
-		//     - If not, set the frame when the move changes (int)
-		//   - Which move will be performed (data type unknown for now)
-		//     - Starting animation frame (int)
-		//     - Is the move cancellable? (for things like rekkas) (bool)
-		
-		motionInput[0] = 236;
-		motionInput[1] = 41236;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 27, 999, true);
-		
-		// Checks to see if the special move can be changed
-		if (CheckChange())
-		{
-			if (enhanced[0])
-			{
-				animTimer = 1;
-				state = eState.CROUCHING_MEDIUM_ATTACK;
-				CancelIntoMove(eState.CROUCHING_MEDIUM_ATTACK, selectedCharacter.CrouchingMedium.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-			else if (enhanced[1])
-			{
-				animTimer = 5;
-				state = eState.STANDING_HEAVY_ATTACK;
-				CancelIntoMove(eState.STANDING_HEAVY_ATTACK, selectedCharacter.StandHeavy.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-		}
+		ProcessEnhancers(selectedCharacter.NeutralSpecial);
 	}
 	break;
 	
@@ -948,20 +1037,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
-		motionInput[0] = 214;
-		SetMotionInputs(motionInput, array_length(motionInput), 1, 17, 17, false);
 		
-		// Checks to see if the special move can be changed
-		if (CheckChange())
-		{
-			if (enhanced[0])
-			{
-				animTimer = 5;
-				state = eState.JUMPING_MEDIUM_ATTACK;
-				CancelIntoMove(eState.JUMPING_MEDIUM_ATTACK, selectedCharacter.JumpingMedium.SpriteId, 1);
-				changedSpecialMove = true;
-			}
-		}
+		ProcessEnhancers(selectedCharacter.SideSpecial);
 	}
 	break;
 	
@@ -976,6 +1053,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.UpSpecial);
 		
 		if (animTimer < 28)
 		{
@@ -999,6 +1078,145 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.DownSpecial);
+	}
+	break;
+	
+	
+	case eState.ENHANCED_NEUTRAL_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_SIDE_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_UP_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_DOWN_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+	}
+	break;
+
+
+	case eState.REKKA_LAUNCHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLauncher);
+	}
+	break;
+	
+	case eState.REKKA_FINISHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaFinisher);
+	}
+	break;
+	
+	case eState.REKKA_CONNECTER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaConnecter);
+	}
+	break;
+	
+	case eState.REKKA_LOW: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLow);
+	}
+	break;
+	
+	case eState.REKKA_HIGH: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
 
@@ -1541,7 +1759,8 @@ else
 	{
 		hitstunShuffleTimer = 0;
 	}
-	if (pushbackVel >= 0)
+	
+	if (pushbackVel > 0)
 	{
 		hsp = pushbackVel * -image_xscale;
 		pushbackVel--;
@@ -1689,7 +1908,7 @@ if (state != eState.HITSTOP)
 		
 		isJumpingForward = false;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -1698,7 +1917,7 @@ if (state != eState.HITSTOP)
 			canTurnAround = true;
 			isThrowable = true;
 		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB) 
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
 		{
 			grounded = true;
 			isThrowable = true;

@@ -2,6 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PressAttackButton(attack)
 {	
+		// Input Normal attacks first
 		switch attack 
 		{
 			case 1:
@@ -94,6 +95,74 @@ function PressAttackButton(attack)
 				}
 			break;
 		}
+		
+		
+		// Handle Command Normals last so they take priority
+		
+		// Convert the player's input direction into numpad notation
+			
+		var inputDirection = 5; // Neutral; Default
+		// Set input directions
+		if (movedir == -image_xscale && verticalMoveDir == -1)
+		{
+			inputDirection = 1; // Down-back
+		}
+		else if (movedir == 0 && verticalMoveDir == -1)
+		{
+			inputDirection = 2; // Down
+		}
+		else if (movedir == image_xscale && verticalMoveDir == -1)
+		{
+			inputDirection = 3; // Down-forward
+		}
+		else if (movedir == -image_xscale && verticalMoveDir == 0)
+		{
+			inputDirection = 4; // Back
+		}
+		else if (movedir == 0 && verticalMoveDir == 0)
+		{
+			inputDirection = 5; // Neutral
+		}
+		else if (movedir == image_xscale && verticalMoveDir == 0)
+		{
+			inputDirection = 6; // Forward
+		}
+		else if (movedir == -image_xscale && verticalMoveDir == 1)
+		{
+			inputDirection = 7; // Up-back
+		}
+		else if (movedir == 0 && verticalMoveDir == 1)
+		{
+			inputDirection = 8; // Up
+		}
+		else if (movedir == image_xscale && verticalMoveDir == 1)
+		{
+			inputDirection = 9; // Up-forward
+		}
+		
+		// Check to see if each command normal is defined before processing it.
+		if (variable_struct_exists(selectedCharacter, "CommandNormal1"))
+		{
+			if (attack == selectedCharacter.CommandNormal1.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal1.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal1.CommandNormalData.GroundOrAir)
+			{
+				state = eState.COMMAND_NORMAL_1;
+			}
+		}
+		if (variable_struct_exists(selectedCharacter, "CommandNormal2"))
+		{
+			if (attack == selectedCharacter.CommandNormal2.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal2.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal2.CommandNormalData.GroundOrAir)
+			{
+				state = eState.COMMAND_NORMAL_2;
+			}
+		}
+		if (variable_struct_exists(selectedCharacter, "CommandNormal3"))
+		{
+			if (attack == selectedCharacter.CommandNormal3.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal3.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal3.CommandNormalData.GroundOrAir)
+			{
+				state = eState.COMMAND_NORMAL_3;
+			}
+		}
+		
 		
 	// Clears the hitBy data to allow attacks to connect properly
 	ds_list_clear(hitByGroup);

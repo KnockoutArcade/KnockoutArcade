@@ -53,7 +53,10 @@ function ProcessHit( attackProperty, collision_list)
 			collision_list.owner.vsp = 0;
 		}
 	
-		owner.pushbackVel = attackProperty.Pushback;
+		if (owner.grounded)
+		{
+			owner.pushbackVel = attackProperty.Pushback;
+		}
 		owner.heldOpponent = noone;
 
 		hasHit = true;

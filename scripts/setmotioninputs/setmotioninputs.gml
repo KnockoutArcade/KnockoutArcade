@@ -2,14 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd, setChangeFrame, setChangeImmediately)
+function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd, setChangeFrame, setChangeImmediately, specialButtonRequired)
 {
 	if (!inputSet) 
 	{
 		for (var i = 0; i < numberOfMotions; i++) 
 		{
 			// Turns the motion input into separate numbers in an array
-			motionInputs[i] = string(motionInputs[i]);
 			var n = string_length(motionInputs[i]);
 			directions = [];
 			for(var j = 0, directions; j < n; j++)
@@ -78,6 +77,7 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 			changeFrame = setChangeFrame;
 			changeImmediately = setChangeImmediately;
 			target = noone;
+			requireSpecialButton = specialButtonRequired;
 		}
 		
 		inputSet = true;
