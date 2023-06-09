@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"740eb22a-7395-46c4-b115-3ff975d94a1f","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"740eb22a-7395-46c4-b115-3ff975d94a1f","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"LayerId":{"name":"8ace90dd-d364-4ff4-a923-7b9f5548ef29","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"740eb22a-7395-46c4-b115-3ff975d94a1f","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"LayerId":{"name":"0d9c7dd3-a596-4bf2-87dd-6207e8611c51","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Hurt","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"resourceVersion":"1.0","name":"740eb22a-7395-46c4-b115-3ff975d94a1f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,6 +66,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"0d9c7dd3-a596-4bf2-87dd-6207e8611c51","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8ace90dd-d364-4ff4-a923-7b9f5548ef29","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
