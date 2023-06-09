@@ -76,6 +76,23 @@ function FindAttackState(stateToSearch){
 		}
 		break;
 		
+		// Command Normals
+		case eState.COMMAND_NORMAL_1 : 
+		{
+			return selectedCharacter.CommandNormal1;
+		}
+		break;
+		case eState.COMMAND_NORMAL_2 : 
+		{
+			return selectedCharacter.CommandNormal2;
+		}
+		break;
+		case eState.COMMAND_NORMAL_3 : 
+		{
+			return selectedCharacter.CommandNormal3;
+		}
+		break;
+		
 		// Specials
 		case eState.NEUTRAL_SPECIAL : 
 		{
@@ -98,6 +115,85 @@ function FindAttackState(stateToSearch){
 		case eState.DOWN_SPECIAL : 
 		{
 			return selectedCharacter.DownSpecial;
+		}
+		break;
+		
+		// Enhanced Specials
+		case eState.ENHANCED_NEUTRAL_SPECIAL : 
+		{
+			return selectedCharacter.EnhancedNeutralSpecial;
+		}
+		break;
+		 
+		case eState.ENHANCED_SIDE_SPECIAL : 
+		{
+			return selectedCharacter.EnhancedSideSpecial;
+		}
+		break;
+		
+		case eState.ENHANCED_UP_SPECIAL : 
+		{
+			return selectedCharacter.EnhancedUpSpecial;
+		}
+		break;
+		
+		case eState.ENHANCED_DOWN_SPECIAL : 
+		{
+			return selectedCharacter.EnhancedDownSpecial;
+		}
+		break;
+		case eState.ENHANCED_NEUTRAL_SPECIAL_2 : 
+		{
+			return selectedCharacter.EnhancedNeutralSpecial2;
+		}
+		break;
+		 
+		case eState.ENHANCED_SIDE_SPECIAL_2 : 
+		{
+			return selectedCharacter.EnhancedSideSpecial2;
+		}
+		break;
+		
+		case eState.ENHANCED_UP_SPECIAL_2 : 
+		{
+			return selectedCharacter.EnhancedUpSpecial2;
+		}
+		break;
+		
+		case eState.ENHANCED_DOWN_SPECIAL_2 : 
+		{
+			return selectedCharacter.EnhancedDownSpecial2;
+		}
+		break;
+		
+		// Rekka States
+		case eState.REKKA_LAUNCHER : 
+		{
+			return selectedCharacter.RekkaLauncher;
+		}
+		break;
+		 
+		case eState.REKKA_FINISHER : 
+		{
+			return selectedCharacter.RekkaFinisher;
+		}
+		break;
+		
+		case eState.REKKA_CONNECTER : 
+		{
+			return selectedCharacter.RekkaConnecter;
+		}
+		break;
+		
+		case eState.REKKA_LOW : 
+		{
+			return selectedCharacter.RekkaLow;
+		}
+		break;
+		
+		case eState.REKKA_HIGH : 
+		{
+			return selectedCharacter.RekkaHigh;
 		}
 		break;
 	}

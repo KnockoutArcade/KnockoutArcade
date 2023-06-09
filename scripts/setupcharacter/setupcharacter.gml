@@ -78,6 +78,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.RehitData = selectedCharacter.MoveData[i].RehitData;
 		nextMove.ProjectileData = selectedCharacter.MoveData[i].ProjectileData;
 		nextMove.MoveCanCancelInto = selectedCharacter.MoveData[i].MoveCanCancelInto;
+		nextMove.CommandNormalData = selectedCharacter.MoveData[i].CommandNormalData;
+		nextMove.NumberOfEnhancements = selectedCharacter.MoveData[i].NumberOfEnhancements;
+		nextMove.SpecialData = selectedCharacter.MoveData[i].SpecialData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{
@@ -86,6 +89,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		
 		switch(selectedCharacter.MoveData[i].MoveType)
 		{
+			case 1: // backward throw
+			formedCharacter.BackwardThrow = nextMove;
+			break;
 			case 2: // forward throw
 			formedCharacter.ForwardThrow = nextMove;
 			break;
@@ -140,9 +146,58 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 262144: // command grab
 			formedCharacter.CommandGrab = nextMove;
 			break;
-			case 1: // backward throw
-			default:
-			formedCharacter.BackwardThrow = nextMove;
+			case 524288: // command normal 1
+			formedCharacter.CommandNormal1 = nextMove;
+			break;
+			case 1048576: // command normal 2
+			formedCharacter.CommandNormal2 = nextMove;
+			break;
+			case 2097152: // command normal 3
+			formedCharacter.CommandNormal3 = nextMove;
+			break;
+			
+		}
+		
+		switch (selectedCharacter.MoveData[i].EnhanceMoveType)
+		{
+			case 1:
+			formedCharacter.EnhancedNeutralSpecial = nextMove;
+			break;
+			case 2:
+			formedCharacter.EnhancedSideSpecial = nextMove;
+			break;
+			case 4:
+			formedCharacter.EnhancedUpSpecial = nextMove;
+			break;
+			case 8:
+			formedCharacter.EnhancedDownSpecial = nextMove;
+			break;
+			case 16:
+			formedCharacter.EnhancedNeutralSpecial2 = nextMove;
+			break;
+			case 32:
+			formedCharacter.EnhancedSideSpecial2 = nextMove;
+			break;
+			case 64:
+			formedCharacter.EnhancedUpSpecial2 = nextMove;
+			break;
+			case 128:
+			formedCharacter.EnhancedDownSpecial2 = nextMove;
+			break;
+			case 256:
+			formedCharacter.RekkaLauncher = nextMove;
+			break;
+			case 512:
+			formedCharacter.RekkaFinisher = nextMove;
+			break;
+			case 1024:
+			formedCharacter.RekkaConnecter = nextMove;
+			break;
+			case 2048:
+			formedCharacter.RekkaLow = nextMove;
+			break;
+			case 4096:
+			formedCharacter.RekkaHigh = nextMove;
 			break;
 		}
 	}

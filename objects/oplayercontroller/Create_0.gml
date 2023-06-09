@@ -90,6 +90,7 @@ changedSpecialMove = false; // Prevents moves cancelled into from special moves 
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
+requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 
 // Controller Controls
 controller = -1;
@@ -133,6 +134,22 @@ enum eState {
 	SIDE_SPECIAL,
 	UP_SPECIAL,
 	DOWN_SPECIAL,
+	ENHANCED_NEUTRAL_SPECIAL,
+	ENHANCED_SIDE_SPECIAL,
+	ENHANCED_UP_SPECIAL,
+	ENHANCED_DOWN_SPECIAL,
+	ENHANCED_NEUTRAL_SPECIAL_2,
+	ENHANCED_SIDE_SPECIAL_2,
+	ENHANCED_UP_SPECIAL_2,
+	ENHANCED_DOWN_SPECIAL_2,
+	COMMAND_NORMAL_1,
+	COMMAND_NORMAL_2,
+	COMMAND_NORMAL_3,
+	REKKA_LAUNCHER,
+	REKKA_FINISHER,
+	REKKA_CONNECTER,
+	REKKA_LOW,
+	REKKA_HIGH,
 	GRAB,
 	COMMAND_GRAB,
 	HOLD,
