@@ -1000,6 +1000,8 @@
       "UID": "84bb4293-87eb-466b-be35-34ae6b92c905",
       "MoveType": 1,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sRussel_BackwardThrow",
       "Duration": 58,
       "NumberOfFrames": 10,
@@ -1101,6 +1103,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": true,
       "OpponentPositionData": {
         "DistanceFromWall": -70.0,
@@ -1190,6 +1200,8 @@
       "UID": "3040e46f-52a4-4da8-a6e6-579ca058c124",
       "MoveType": 2,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sRussel_ForwardThrow",
       "Duration": 42,
       "NumberOfFrames": 9,
@@ -1287,6 +1299,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": true,
       "OpponentPositionData": {
         "DistanceFromWall": 50.0,
@@ -1349,6 +1369,8 @@
       "UID": "b37e1485-d5f2-406e-8117-ac743c7ddccc",
       "MoveType": 4,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sRussel_Grab",
       "Duration": 24,
       "NumberOfFrames": 5,
@@ -1430,6 +1452,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1473,6 +1503,8 @@
       "UID": "02964764-f1b3-4099-9866-309811d6e312",
       "MoveType": 16,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_NSpecial_MOCKUP",
       "Duration": 30,
       "NumberOfFrames": 3,
@@ -1546,6 +1578,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1618,6 +1658,8 @@
       "UID": "032032e6-71fc-4f2c-bf79-7b5e75d8fe99",
       "MoveType": 8,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_SideSpecial1_MOCKUP",
       "Duration": 44,
       "NumberOfFrames": 3,
@@ -1742,6 +1784,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1865,6 +1915,8 @@
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
       "MoveType": 32,
       "MoveCanCancelInto": 199000,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_StandLight1_MOCKUP_strip3",
       "Duration": 7,
       "NumberOfFrames": 3,
@@ -1938,6 +1990,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1981,6 +2041,8 @@
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
       "MoveType": 64,
       "MoveCanCancelInto": 199576,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_StandLight2_MOCKUP_strip3",
       "Duration": 15,
       "NumberOfFrames": 3,
@@ -2054,6 +2116,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2112,6 +2182,8 @@
       "UID": "68718318-582f-484f-85b8-a8b46471ea81",
       "MoveType": 128,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_StandLight3_MOCKUP_strip3",
       "Duration": 22,
       "NumberOfFrames": 3,
@@ -2185,6 +2257,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2243,6 +2323,8 @@
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
       "MoveType": 256,
       "MoveCanCancelInto": 201240,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_StandMedium_MOCKUP_strip5",
       "Duration": 21,
       "NumberOfFrames": 5,
@@ -2324,6 +2406,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2389,6 +2479,8 @@
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
       "MoveType": 512,
       "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_StandHeavy_MOCKUP_strip5",
       "Duration": 40,
       "NumberOfFrames": 5,
@@ -2470,6 +2562,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2563,6 +2663,8 @@
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
       "MoveType": 1024,
       "MoveCanCancelInto": 198936,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_CrouchLight_MOCKUP_strip4",
       "Duration": 10,
       "NumberOfFrames": 4,
@@ -2640,6 +2742,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2683,6 +2793,8 @@
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
       "MoveType": 2048,
       "MoveCanCancelInto": 201240,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_CrouchMedium_MOCKUP_strip4",
       "Duration": 26,
       "NumberOfFrames": 4,
@@ -2760,6 +2872,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -2811,6 +2931,8 @@
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
       "MoveType": 4096,
       "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_CrouchHeavy_MOCKUP_strip9",
       "Duration": 34,
       "NumberOfFrames": 9,
@@ -2959,6 +3081,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3010,6 +3140,8 @@
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
       "MoveType": 8192,
       "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_JumpLight_Mockup_strip3",
       "Duration": 10,
       "NumberOfFrames": 3,
@@ -3083,6 +3215,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3126,6 +3266,8 @@
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
       "MoveType": 16384,
       "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_JumpMedium_Mockup_strip6",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3211,6 +3353,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3254,6 +3404,8 @@
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
       "MoveType": 32768,
       "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_JumpHeavy_Mockup_strip6",
       "Duration": 30,
       "NumberOfFrames": 6,
@@ -3390,6 +3542,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3433,6 +3593,8 @@
       "UID": "7316822a-00ef-464c-94a0-875d7db960c9",
       "MoveType": 65536,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_UpSpecial_MOCKUP_strip5",
       "Duration": 50,
       "NumberOfFrames": 6,
@@ -3569,6 +3731,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3664,6 +3834,8 @@
       "UID": "4014c4eb-f2e9-4750-9633-50f3736dc021",
       "MoveType": 131072,
       "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
       "SpriteName": "sBeverly_downSpecial_MOCKUP_strip5",
       "Duration": 30,
       "NumberOfFrames": 6,
@@ -3800,6 +3972,14 @@
           "CausesWallbounce": false
         }
       ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -3862,8 +4042,8 @@
       "SupplimentaryScript": ""
     }
   ],
-  "Version": "Ver1.1.0",
+  "Version": "Ver1.1.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-05-25T19:22:28.6902159-07:00",
-  "LastModifiedBy": "alarb"
+  "LastModified": "2023-06-05T21:27:50.3946746-07:00",
+  "LastModifiedBy": "iansb"
 }
