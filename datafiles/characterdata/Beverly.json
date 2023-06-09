@@ -27,7 +27,7 @@
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sRussel_Jumpsquat",
     "Jump": "sBeverly_Jump_Mockup",
-    "Hurt": "sRussel_Hurt",
+    "Hurt": "sBeverly_Hurt",
     "Grab": "sRussel_Grab",
     "Hold": "sRussel_Hold",
     "Launched": "sRussel_Launched",
@@ -1783,14 +1783,6 @@
           "TransitionFrame": 18
         }
       ],
-      "CommandNormalData": {
-        "NumpadDirection": 0,
-        "Button": 1,
-        "GroundOrAir": false,
-        "CancelWhenLanding": false
-      },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -5329,6 +5321,6 @@
   ],
   "Version": "Ver1.1.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-06-08T19:44:51.4517112-07:00",
-  "LastModifiedBy": "alarb"
+  "LastModified": "2023-06-08T21:06:15.2098105-07:00",
+  "LastModifiedBy": "creep"
 }
