@@ -79,25 +79,6 @@ hurtboxOffset = -8;
 if (runButton)
 {
 	running = true;
-	
-	// All of the commented code is to limit the dash button if necessaary.
-	//if (holdButtonTimer == 0)
-	//{
-	//	if (grounded)
-	//	{
-	//		running = true;
-	//	}
-	//}
-	
-	//// Apply a special rule for back dashing to prevent it from repeating
-	//if (movedir == -image_xscale)
-	//{
-	//	if (holdButtonTimer > 0 || !grounded)
-	//	{
-	//		running = false;
-	//	}
-	//}
-	//holdButtonTimer++;
 }
 else if (movedir == image_xscale) // If moving forward
 {
@@ -126,10 +107,6 @@ else if (movedir == -image_xscale) // If moving backward
 			running = true;
 		}
 	}
-	//else // In case we decide to prevent back dashing from repeating
-	//{
-	//	running = false;
-	//}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
 }
@@ -162,8 +139,6 @@ else
 {
 	runBackwardTimer++;
 }
-
-show_debug_message(state);
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
