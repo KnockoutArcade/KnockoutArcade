@@ -106,7 +106,7 @@ else if (movedir == image_xscale) // If moving forward
 		startedMovingForward = true;
 		
 		// Player must press the button again wihin 15 frames to dash
-		if (runForwardTimer < 15 && grounded)
+		if (runForwardTimer < 15)
 		{
 			running = true;
 		}
@@ -121,7 +121,7 @@ else if (movedir == -image_xscale) // If moving backward
 		startedMovingBackward = true;
 		
 		// Player must press the button again wihin 15 frames to dash
-		if (runBackwardTimer < 15 && grounded)
+		if (runBackwardTimer < 15)
 		{
 			running = true;
 		}
