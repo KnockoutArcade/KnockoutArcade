@@ -994,6 +994,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 	}
 	break;
 	
@@ -1007,6 +1009,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
 	}
 	break;
 	
@@ -1020,6 +1024,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
 	}
 	break;
 	
@@ -1033,6 +1039,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
 	}
 	break;
 
