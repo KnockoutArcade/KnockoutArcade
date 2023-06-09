@@ -163,6 +163,8 @@ else
 	runBackwardTimer++;
 }
 
+show_debug_message(state);
+
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
 {
@@ -285,11 +287,6 @@ if (state == eState.IDLE)
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
-	else
-	{
-		running = false;
-	}
-	
 	
 	// Handle Jumping
 	if (verticalMoveDir == 1)
@@ -357,21 +354,21 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton && verticalMoveDir != -1) 
+	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
 	} 
-	else if (movedir == -image_xscale && !runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
 	{
 		state = eState.WALKING;
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -569,11 +566,11 @@ switch state
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && runButton)
+		if ((movedir == image_xscale || movedir == 0) && running)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -651,7 +648,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!runButton) 
+		if (!running) 
 		{
 			state = eState.IDLE;
 		}
