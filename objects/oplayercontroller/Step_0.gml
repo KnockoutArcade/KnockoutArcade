@@ -21,7 +21,7 @@ if (global.game_paused)
 } 
 
 if (!global.gameHalt)
-{
+{ 
 
 // Handle Inputs
 if (playerID == 1)
@@ -475,11 +475,10 @@ if (state == eState.HITSTOP)
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
       
-			// Exception for command grabs.
-			if (prevState != eState.COMMAND_GRAB)
+			var attackState = FindAttackState(prevState);
+			// Exception for invalid states
+			if (attackState != -1)
 			{
-				var attackState = FindAttackState(prevState);
-
 				CancelData(attackState, attack, false);
 			}
 		}
