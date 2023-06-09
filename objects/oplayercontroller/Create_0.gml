@@ -15,6 +15,16 @@ traction = selectedCharacter.Traction; // How much this character slows down eac
 jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
+// Running variables
+running = false; // Used to tell if the player is running or not
+holdForwardTimer = 0; // Determines the amount of time forward is held
+holdBackwardTimer = 0; // Determines the amount of time backward is held
+holdButtonTimer = 0; // Determines the amount of time the run button is held
+startedMovingForward = false; // Used to reset the runForwardTimer
+startedMovingBackward = false; // Used to reset the runBackwardTimer
+runForwardTimer = 0; // Used for running by double tapping forward
+runBackwardTimer = 0; // Used for backdashing by double tapping backward
+
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
 backdashInvincibility = selectedCharacter.BackDashInvincibility; // How long the character is invincible for at the start of their backdash
