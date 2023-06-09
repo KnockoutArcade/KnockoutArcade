@@ -47,7 +47,7 @@
     "spriteId": {"name":"sBeverly_JumpHeavy_Mockup_strip6","path":"sprites/sBeverly_JumpHeavy_Mockup_strip6/sBeverly_JumpHeavy_Mockup_strip6.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -70,12 +70,100 @@ canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 
-
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+// Handles running
+if (runButton)
+{
+	running = true;
+	
+	// All of the commented code is to limit the dash button if necessaary.
+	//if (holdButtonTimer == 0)
+	//{
+	//	if (grounded)
+	//	{
+	//		running = true;
+	//	}
+	//}
+	
+	//// Apply a special rule for back dashing to prevent it from repeating
+	//if (movedir == -image_xscale)
+	//{
+	//	if (holdButtonTimer > 0 || !grounded)
+	//	{
+	//		running = false;
+	//	}
+	//}
+	//holdButtonTimer++;
+}
+else if (movedir == image_xscale) // If moving forward
+{
+	if (holdForwardTimer == 0)
+	{
+		startedMovingForward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runForwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	holdForwardTimer++;
+	holdBackwardTimer = 0;
+}
+else if (movedir == -image_xscale) // If moving backward
+{
+	if (holdBackwardTimer == 0)
+	{
+		startedMovingBackward = true;
+		
+		// Player must press the button again wihin 15 frames to dash
+		if (runBackwardTimer < 15 && grounded)
+		{
+			running = true;
+		}
+	}
+	//else // In case we decide to prevent back dashing from repeating
+	//{
+	//	running = false;
+	//}
+	holdBackwardTimer++;
+	holdForwardTimer = 0;
+}
+else if ((!runButton && movedir == 0) || !grounded)
+{
+	running = false;
+	holdForwardTimer = 0;
+	holdBackwardTimer = 0;
+	holdButtonTimer = 0;
+}
+
+// Handles timer for running forward
+if (startedMovingForward)
+{
+	runForwardTimer = 0;
+	startedMovingForward = false;
+}
+else
+{
+	runForwardTimer++;
+}
+
+// Handles timer for running backward
+if (startedMovingBackward)
+{
+	runBackwardTimer = 0;
+	startedMovingBackward = false;
+}
+else
+{
+	runBackwardTimer++;
+}
+
+show_debug_message(state);
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
@@ -92,7 +180,10 @@ if (verticalMoveDir == -1)
 	storedSuperJump = true;
 	superJumpTimer = 6;
 }
-
+if (target != noone)
+{
+	framesSinceHitstun++;
+}
 
 // Handle detecting press vs hold up for double jump
 if (verticalMoveDir == 1)
@@ -103,7 +194,6 @@ else
 {
 	heldUpFrames = 0;
 }
-
 
 // Calculate Traction
 if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT && state != eState.HOLD && state != eState.FORWARD_THROW && state != eState.BEING_GRABBED && state != eState.BACKWARD_THROW)
@@ -119,6 +209,62 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 }
 
 
+// Reset motion input values if the player isn't performing a special move
+if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL 
+	&& state != eState.HITSTOP
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL
+	&& state != eState.ENHANCED_SIDE_SPECIAL
+	&& state != eState.ENHANCED_UP_SPECIAL
+	&& state != eState.ENHANCED_DOWN_SPECIAL
+	&& state != eState.ENHANCED_NEUTRAL_SPECIAL_2
+	&& state != eState.ENHANCED_SIDE_SPECIAL_2
+	&& state != eState.ENHANCED_UP_SPECIAL_2
+	&& state != eState.ENHANCED_DOWN_SPECIAL_2
+	&& state != eState.REKKA_LAUNCHER
+	&& state != eState.REKKA_FINISHER
+	&& state != eState.REKKA_CONNECTER
+	&& state != eState.REKKA_LOW
+	&& state != eState.REKKA_HIGH) 
+{
+	inputSet = false;
+	motionInput = [];
+	ds_list_clear(listOfInputs);
+	progressInInputs = [];
+	enhanced = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
+	changeFrame = 999;
+	changeImmediately = false;
+	requireSpecialButton = false;
+}
+else if (animTimer > inputWindowEnd)
+{
+	motionInput = [];
+	ds_list_clear(listOfInputs);
+	progressInInputs = [];
+	inputWindowStart = 0;
+	inputWindowEnd = 0;
+	requireSpecialButton = false;
+	
+	var changeSet = false;
+	for (i = 0; i < array_length(enhanced); i++)
+	{
+		if (enhanced[i])
+		{
+			changeSet = true;
+		}
+	}
+	if (!changeSet)
+	{
+		changeFrame = 999;
+		changeImmediately = false;
+	}
+}
+else
+{
+	PerformMotionInputs(attack);
+}
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
@@ -127,6 +273,7 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	if (toggleIdleBlock)
 	{ 
@@ -136,7 +283,7 @@ if (state == eState.IDLE)
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton) 
+	if (movedir == image_xscale && !running) 
 	{
 		state = eState.WALKING;
 	} 
@@ -146,17 +293,16 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton)
+	if ((movedir == image_xscale || movedir == 0) && running)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && opponent != noone)
+	else if (movedir == -image_xscale && running && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
-	
 	
 	// Handle Jumping
 	if (verticalMoveDir == 1)
@@ -204,6 +350,7 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
+	changedSpecialMove = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -223,21 +370,21 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runButton && verticalMoveDir != -1) 
+	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
 	} 
-	else if (movedir == -image_xscale && !runButton && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
 	{
 		state = eState.WALKING;
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && runButton && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && runButton && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -309,7 +456,7 @@ if (state == eState.HITSTOP)
 		else 
 		{
 			x = xHome - min(global.hitstop, 3);
-		}		
+		}
 	}
 	else 
 	{
@@ -317,38 +464,23 @@ if (state == eState.HITSTOP)
 		{
 			inAttackState = true;
 		}
-
-		if (!hitstopBuffer && blockstun <= 0) 
+		
+		// Canceling Moves from Hitstop
+		if (!hitstopBuffer && blockstun <= 0 && attack != 0) 
 		{
-			if ((prevState == eState.STANDING_LIGHT_ATTACK) && attack != 0)
+			// We need to know what attack state the player is in so we know which move's cancel data
+			// we should to use.
+			
+			// We use the player's Previous State since the player's current state at this moment
+			// in the code is HITSTOP. Previous State stores what state we were in before entering
+			// hitstop.
+      
+			// Exception for command grabs.
+			if (prevState != eState.COMMAND_GRAB)
 			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			} 
-			else if prevState == eState.CROUCHING_LIGHT_ATTACK && attack != 0
-			{
-				var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if (prevState == eState.STANDING_LIGHT_ATTACK_2 && attack != 0) 
-			{
-				var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if ((prevState == eState.STANDING_MEDIUM_ATTACK || prevState == eState.CROUCHING_MEDIUM_ATTACK) && attack != 0)
-			{
-				var cancels = [ eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			}
-			else if ((prevState == eState.STANDING_HEAVY_ATTACK || prevState == eState.CROUCHING_HEAVY_ATTACK) && attack != 0) 
-			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
-			} 
-			else if ((prevState == eState.JUMPING_LIGHT_ATTACK || prevState == eState.JUMPING_MEDIUM_ATTACK || prevState == eState.JUMPING_HEAVY_ATTACK) && attack != 0) 
-			{
-				var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
-				CancelData(cancels, attack, false);
+				var attackState = FindAttackState(prevState);
+
+				CancelData(attackState, attack, false);
 			}
 		}
 	}
@@ -397,6 +529,7 @@ if (state == eState.HITSTOP)
 		
 		prevSprite = 0;
 		shuffle = 0;
+		framesSinceHitstun = 0;
 		
 		isGrabbed = false;
 		image_angle = 0;
@@ -435,24 +568,25 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		if (movedir == image_xscale) 
 		{
 			sprite_index = CharacterSprites.walkForward_Sprite;
 			superMeter += meterBuildRate; // Walking forwards builds meter
 		}
-		else 
+		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
 			canBlock = true;
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && runButton)
+		if ((movedir == image_xscale || movedir == 0) && running)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && runButton && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -513,6 +647,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -529,7 +664,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!runButton) 
+		if (!running) 
 		{
 			state = eState.IDLE;
 		}
@@ -582,6 +717,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		changedSpecialMove = false;
 		
 		vsp += fallSpeed;
 		
@@ -618,6 +754,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		changedSpecialMove = false;
 		
 		PressAttackButton(attack);
 		
@@ -676,6 +813,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		if (isJumpingForward)
 		{
@@ -719,10 +857,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_2, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandLight, attack, true);
 		}
 	}
 	break;
@@ -731,10 +868,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		var cancels = [eState.STANDING_LIGHT_ATTACK_3, eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandLight2, attack, true);
 		}
 	}
 	break;
@@ -742,6 +878,11 @@ switch state
 	case eState.STANDING_LIGHT_ATTACK_3:
 	{
 		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
+		
+		if (cancelable && global.hitstop < 1)
+		{
+			CancelData(selectedCharacter.StandLight3, attack, true);
+		}
 	}
 	break;
 	
@@ -750,10 +891,9 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandMedium, attack, true);
 		}
 	}
 	break;
@@ -762,10 +902,9 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
 		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.StandHeavy, attack, true);
 		}
 	}
 	break;
@@ -775,10 +914,9 @@ switch state
 	{	
 		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 		
-		var cancels = [eState.STANDING_MEDIUM_ATTACK, eState.CROUCHING_MEDIUM_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1) 
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingLight, attack, true);
 		}
 	}
 	break;
@@ -787,10 +925,9 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
 		
-		var cancels = [eState.STANDING_HEAVY_ATTACK, eState.CROUCHING_HEAVY_ATTACK, eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingMedium, attack, true);
 		}
 	}
 	break;
@@ -808,12 +945,10 @@ switch state
 		{
 			hurtbox.image_yscale = 20;
 		}
-		
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.CrouchingHeavy, attack, true);
 		}
 	}
 	break;
@@ -822,10 +957,10 @@ switch state
 	case eState.JUMPING_LIGHT_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
+		
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingLight, attack, true);
 		} 
 		
 	}
@@ -835,11 +970,10 @@ switch state
 	case eState.JUMPING_MEDIUM_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 	
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingMedium, attack, true);
 		}
 	}
 	break;
@@ -848,26 +982,47 @@ switch state
 	case eState.JUMPING_HEAVY_ATTACK: 
 	{
 		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
-		var cancels = [eState.NEUTRAL_SPECIAL, eState.SIDE_SPECIAL, eState.UP_SPECIAL, eState.DOWN_SPECIAL];
 		
 		if (cancelable && global.hitstop < 1)
 		{
-			CancelData(cancels, attack, true);
+			CancelData(selectedCharacter.JumpingHeavy, attack, true);
 		}
 	}
 	break;
+
+	
+	case eState.COMMAND_NORMAL_1:
+	{
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, true, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && global.hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal1, attack, true);
+		}
+	}
+	break;
+
 
 
 	case eState.NEUTRAL_SPECIAL: 
 	{
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);	
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
 		} 
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.NeutralSpecial);
 	}
 	break;
 	
@@ -882,6 +1037,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.SideSpecial);
 	}
 	break;
 	
@@ -896,6 +1053,8 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.UpSpecial);
 		
 		if (animTimer < 28)
 		{
@@ -919,6 +1078,145 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 		}
+		
+		ProcessEnhancers(selectedCharacter.DownSpecial);
+	}
+	break;
+	
+	
+	case eState.ENHANCED_NEUTRAL_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_SIDE_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_UP_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
+	}
+	break;
+	
+	case eState.ENHANCED_DOWN_SPECIAL: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+	}
+	break;
+
+
+	case eState.REKKA_LAUNCHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLauncher);
+	}
+	break;
+	
+	case eState.REKKA_FINISHER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaFinisher);
+	}
+	break;
+	
+	case eState.REKKA_CONNECTER: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaConnecter);
+	}
+	break;
+	
+	case eState.REKKA_LOW: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaLow);
+	}
+	break;
+	
+	case eState.REKKA_HIGH: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
 
@@ -1026,6 +1324,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		isGrabbed = true;
 	}
@@ -1089,6 +1388,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = false;
+		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -1106,6 +1406,7 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		
 		if (!global.game_paused)
@@ -1198,6 +1499,7 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
+		changedSpecialMove = false;
 		
 		FAvictim = false;
 		
@@ -1217,6 +1519,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 		
 		cancelCombo = true;
 		
@@ -1251,6 +1554,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		changedSpecialMove = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -1290,6 +1594,7 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
+		changedSpecialMove = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -1454,7 +1759,8 @@ else
 	{
 		hitstunShuffleTimer = 0;
 	}
-	if (pushbackVel >= 0)
+	
+	if (pushbackVel > 0)
 	{
 		hsp = pushbackVel * -image_xscale;
 		pushbackVel--;
@@ -1602,7 +1908,7 @@ if (state != eState.HITSTOP)
 		
 		isJumpingForward = false;
 		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -1611,10 +1917,9 @@ if (state != eState.HITSTOP)
 			canTurnAround = true;
 			isThrowable = true;
 		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB) 
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
 		{
 			grounded = true;
-			hsp = 0;
 			isThrowable = true;
 		}
 		if (state == eState.LAUNCHED)

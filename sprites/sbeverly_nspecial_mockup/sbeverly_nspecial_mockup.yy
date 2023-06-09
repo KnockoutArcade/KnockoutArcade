@@ -35,7 +35,7 @@
     "spriteId": {"name":"sBeverly_NSpecial_MOCKUP","path":"sprites/sBeverly_NSpecial_MOCKUP/sBeverly_NSpecial_MOCKUP.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

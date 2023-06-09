@@ -5,7 +5,7 @@
 var foundFloor = false;
 for (var i = 0; i < 100; i++;)
 {
-	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor)
+	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor && !isGrabbed)
 	{
 		if (i < 25)
 		{
@@ -22,7 +22,6 @@ for (var i = 0; i < 100; i++;)
 		foundFloor = true;
 	}
 }
-
 
 
 shader_set(sh_CharPalettes);

@@ -312,6 +312,9 @@ if (!isProjectile)
 						image_xscale = sign(other.owner.image_xscale);
 						lifetime = other.attackProperty.ParticleDuration;
 					}
+					
+					// Play sound effect
+					audio_play_sound(sfx_light_hit2, 0, false);
 				}
 			}
 		}

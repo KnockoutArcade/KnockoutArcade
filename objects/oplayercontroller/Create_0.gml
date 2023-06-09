@@ -15,6 +15,16 @@ traction = selectedCharacter.Traction; // How much this character slows down eac
 jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
+// Running variables
+running = false; // Used to tell if the player is running or not
+holdForwardTimer = 0; // Determines the amount of time forward is held
+holdBackwardTimer = 0; // Determines the amount of time backward is held
+holdButtonTimer = 0; // Determines the amount of time the run button is held
+startedMovingForward = false; // Used to reset the runForwardTimer
+startedMovingBackward = false; // Used to reset the runBackwardTimer
+runForwardTimer = 0; // Used for running by double tapping forward
+runBackwardTimer = 0; // Used for backdashing by double tapping backward
+
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
 backdashInvincibility = selectedCharacter.BackDashInvincibility; // How long the character is invincible for at the start of their backdash
@@ -53,7 +63,7 @@ superJumpTimer = 0; // The amount of time the player has stored their jump for
 
 if ((selectedCharacter.JumpType & 1) == 1)
 {
-	canDoubleJump = true; // Whether this character can Super Jump or not
+	canDoubleJump = true; // Whether this character can Double Jump or not
 }
 else
 {
@@ -67,6 +77,20 @@ isJumpingForward = false; // Whether the player approaching the opponent with th
 movedir = 0;
 verticalMoveDir = 0;
 grounded = true;
+
+// Variables for motion inputs
+inputSet = false;
+motionInput = []; // Determines the inputs to perform during each special move
+listOfInputs = ds_list_create();
+progressInInputs = []; // Holds the indexes of each motion input to determine progress through each input
+enhanced = []; // Enhances the special move if the motion input is performed
+changeFrame = 999; // Frame when the move changes if you perform the motion input if changeImmediately is false
+changeImmediately = false; // If true, changes special move as soon as the input is performed
+changedSpecialMove = false; // Prevents moves cancelled into from special moves from being cancellable, keep false for rekkas
+// How long the player has to perform the special move
+inputWindowStart = 0;
+inputWindowEnd = 0;
+requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 
 // Controller Controls
 controller = -1;
@@ -110,6 +134,22 @@ enum eState {
 	SIDE_SPECIAL,
 	UP_SPECIAL,
 	DOWN_SPECIAL,
+	ENHANCED_NEUTRAL_SPECIAL,
+	ENHANCED_SIDE_SPECIAL,
+	ENHANCED_UP_SPECIAL,
+	ENHANCED_DOWN_SPECIAL,
+	ENHANCED_NEUTRAL_SPECIAL_2,
+	ENHANCED_SIDE_SPECIAL_2,
+	ENHANCED_UP_SPECIAL_2,
+	ENHANCED_DOWN_SPECIAL_2,
+	COMMAND_NORMAL_1,
+	COMMAND_NORMAL_2,
+	COMMAND_NORMAL_3,
+	REKKA_LAUNCHER,
+	REKKA_FINISHER,
+	REKKA_CONNECTER,
+	REKKA_LOW,
+	REKKA_HIGH,
 	GRAB,
 	COMMAND_GRAB,
 	HOLD,
@@ -193,6 +233,7 @@ blockbuffer = false;
 xHome = x;
 hitstunShuffleTimer = 0;
 shuffle = 0;
+framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
 
 isGrabbed = false;
 
