@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
-  "compression": 0,
-  "volume": 0.43,
+  "compression": 2,
+  "volume": 1.0,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_sfx",
   },
   "soundFile": "sfx_heavycounter.wav",
-  "duration": 0.371519,
+  "duration": 1.712472,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
