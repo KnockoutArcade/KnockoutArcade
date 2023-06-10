@@ -44,5 +44,3 @@ with (p2RoundCounter)
 	owner = 2;
 	ui_xOffset = 90;
 }
-
-audio_play_sound(testBGM, 0, true);

@@ -1,7 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-
 visible = global.toggleHitboxVisibility;
 
 if (attackProperty.AttackType == eAttackType.GRAB)
@@ -253,6 +252,7 @@ if (!isProjectile)
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
 						{
+							audio_play_sound(sfx_SmallCounter,0,false);
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
@@ -263,6 +263,7 @@ if (!isProjectile)
 						}
 						else if (other.counterHitProperty.CounterHitLevel == 2)
 						{
+							audio_play_sound(sfx_MediumCounter,0,false);
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 							with (counterParticle) 
 							{
@@ -273,6 +274,7 @@ if (!isProjectile)
 						} 
 						else if (other.counterHitProperty.CounterHitLevel == 3)
 						{
+							audio_play_sound(sfx_HeavyCounter,0,false);
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with (counterParticle) 
 							{
@@ -425,16 +427,18 @@ else
 						var isP2 = (owner.playerOwner.playerID == 2);
 					
 						ProcessHit(counterHitProperty, collision_list[| i]);
-					
+						
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
 						{
+							audio_play_sound(sfx_SmallCounter, 0, false);
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
 								lifetime = global.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
+								
 							}
 						}
 						else if (other.counterHitProperty.CounterHitLevel == 2)
@@ -445,6 +449,7 @@ else
 								lifetime = global.hitstop;
 								sprite_index = sMediumCounter;
 								depth = 2;
+								audio_play_sound(sfx_MediumCounter, 0, false);
 							}
 						} 
 						else if (other.counterHitProperty.CounterHitLevel == 3)
@@ -455,6 +460,7 @@ else
 								lifetime = global.hitstop;
 								sprite_index = sCOUNTERtext;
 								depth = 2;
+								audio_play_sound(sfx_HeavyCounter, 0, false);
 							}
 						}
 					
