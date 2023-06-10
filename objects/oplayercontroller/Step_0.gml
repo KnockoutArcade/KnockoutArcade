@@ -145,12 +145,29 @@ else if ((!runButton && movedir == 0))
 
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
-if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) || 
-	(pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
+if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
+	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
 {
 	show_debug_message("Activate rush cancel");
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
+	rcActivated = true;
+	if (state == eState.HITSTOP)
+	{
+		rcBuffer = true;
+	}
+	else
+	{
+		rcBuffer = false;
+		prevState = state; // Temporary
+		state = eState.SCREEN_FREEZE;
+	}
+}
+if (rcActivated && rcBuffer && state != eState.HITSTOP)
+{
+	rcBuffer = false;
+	prevState = state; // Temporary
+	state = eState.SCREEN_FREEZE;
 }
 
 // Handles timer for running forward
@@ -566,6 +583,14 @@ if (!isGrabbed)
 
 // Handle Enviornmental Displacement
 environmentDisplacement = 0;
+
+// Handle freezing screen
+if (state == eState.SCREEN_FREEZE)
+{
+	show_debug_message("Freezing screen");
+	rcActivated = false;
+	state = prevState;
+}
 
 // State Machine
 switch state 

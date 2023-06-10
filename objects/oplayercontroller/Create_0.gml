@@ -93,6 +93,9 @@ inputWindowEnd = 0;
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 
 // Variables for Rush Cancel
+rcActivated = false;
+rcBuffer = false; // Used to buffer rush cancel if the player is in hitstop
+rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
 runButtonPressed = false; // Triggers when the run button is pressed
 holdRunButtonTimer = 0; // Determines the amount of frames the run button is held
 pressSpecialButtonTimer = 0; // Determines the amount of frames since the special button was pressed
