@@ -674,7 +674,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!runningForward && !runningBackward) 
+		if (!runningForward) 
 		{
 			state = eState.IDLE;
 		}
