@@ -75,10 +75,26 @@ hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+if (special)
+{
+	pressSpecialButtonTimer = 0;
+}
+else
+{
+	pressSpecialButtonTimer++;
+}
+
+
 // Handles running
 if (runButton)
 {
+	if (!runButtonPressed)
+	{
+		holdRunButtonTimer = 0;
+		runButtonPressed = true;
+	}
 	running = true;
+	holdRunButtonTimer++;
 }
 else if (movedir == image_xscale) // If moving forward
 {
@@ -110,12 +126,21 @@ else if (movedir == -image_xscale) // If moving backward
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
 }
-else if ((!runButton && movedir == 0) || !grounded)
+else if ((!runButton && movedir == 0))
 {
 	running = false;
 	holdForwardTimer = 0;
 	holdBackwardTimer = 0;
-	holdButtonTimer = 0;
+	holdRunButtonTimer = 5; // Keep this variable outside of the Rush Cancel leniency window
+	runButtonPressed = false;
+}
+
+// If the run button and special button are pressed within 4 frames of each other, activate rush cancel
+if ((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4)
+{
+	show_debug_message("Activate rush cancel");
+	pressSpecialButtonTimer = 5;
+	holdRunButtonTimer = 5;
 }
 
 // Handles timer for running forward

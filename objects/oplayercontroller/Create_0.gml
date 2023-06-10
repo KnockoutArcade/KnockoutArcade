@@ -91,6 +91,11 @@ inputWindowStart = 0;
 inputWindowEnd = 0;
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 
+// Variables for Rush Cancel
+runButtonPressed = false; // Triggers when the run button is pressed
+holdRunButtonTimer = 0; // Determines the amount of frames the run button is held
+pressSpecialButtonTimer = 0; // Determines the amount of frames since the special button was pressed
+
 // Controller Controls
 controller = -1;
 
