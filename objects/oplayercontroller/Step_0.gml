@@ -93,7 +93,14 @@ if (runButton)
 		holdRunButtonTimer = 0;
 		runButtonPressed = true;
 	}
-	running = true;
+	if (movedir == image_xscale || movedir == 0)
+	{
+		runningForward = true;
+	}
+	else if (movedir == -image_xscale)
+	{
+		runningBackward = true;
+	}
 	holdRunButtonTimer++;
 }
 else if (movedir == image_xscale) // If moving forward
@@ -105,7 +112,7 @@ else if (movedir == image_xscale) // If moving forward
 		// Player must press the button again wihin 15 frames to dash
 		if (runForwardTimer < 15)
 		{
-			running = true;
+			runningForward = true;
 		}
 	}
 	holdForwardTimer++;
@@ -120,7 +127,7 @@ else if (movedir == -image_xscale) // If moving backward
 		// Player must press the button again wihin 15 frames to dash
 		if (runBackwardTimer < 15)
 		{
-			running = true;
+			runningBackward = true;
 		}
 	}
 	holdBackwardTimer++;
@@ -128,19 +135,22 @@ else if (movedir == -image_xscale) // If moving backward
 }
 else if ((!runButton && movedir == 0))
 {
-	running = false;
+	runningForward = false;
+	runningBackward = false;
 	holdForwardTimer = 0;
 	holdBackwardTimer = 0;
-	holdRunButtonTimer = 5; // Keep this variable outside of the Rush Cancel leniency window
+	holdRunButtonTimer = 16; // Keep this variable outside of the Rush Cancel leniency window
 	runButtonPressed = false;
 }
 
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
-if ((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4)
+// Also works with double tap forward, in which case the leniency is 15 frames
+if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) || 
+	(pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
 {
 	show_debug_message("Activate rush cancel");
-	pressSpecialButtonTimer = 5;
-	holdRunButtonTimer = 5;
+	pressSpecialButtonTimer = 16;
+	holdRunButtonTimer = 16;
 }
 
 // Handles timer for running forward
@@ -283,7 +293,7 @@ if (state == eState.IDLE)
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !running) 
+	if (movedir == image_xscale && !runningForward) 
 	{
 		state = eState.WALKING;
 	} 
@@ -293,11 +303,11 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && running)
+	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && running && opponent != noone)
+	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -370,21 +380,21 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
+	if (movedir == image_xscale && !runningForward && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
 	} 
-	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
+	else if (movedir == -image_xscale && !runningBackward && verticalMoveDir != -1)
 	{
 		state = eState.WALKING;
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -582,11 +592,11 @@ switch state
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && running)
+		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -664,7 +674,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!running) 
+		if (!runningForward && !runningBackward) 
 		{
 			state = eState.IDLE;
 		}

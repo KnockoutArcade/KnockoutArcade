@@ -16,7 +16,8 @@ jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
 // Running variables
-running = false; // Used to tell if the player is running or not
+runningForward = false; // Used to tell if the player is running forward or not
+runningBackward = false; // Used to tell if the player is running backward or not
 holdForwardTimer = 0; // Determines the amount of time forward is held
 holdBackwardTimer = 0; // Determines the amount of time backward is held
 startedMovingForward = false; // Used to reset the runForwardTimer
