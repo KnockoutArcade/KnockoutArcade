@@ -146,7 +146,14 @@ else if ((!runButton && movedir == 0))
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
 if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
-	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
+	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward)
+	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
+	&& state != eState.THROW_TECH
+	&& state != eState.HURT
+	&& state != eState.LAUNCHED
+	&& state != eState.KNOCKED_DOWN
+	&& state != eState.GETUP
+	&& state != eState.BLOCKING)
 {
 	show_debug_message("Activate rush cancel");
 	pressSpecialButtonTimer = 16;
