@@ -19,7 +19,6 @@ fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 running = false; // Used to tell if the player is running or not
 holdForwardTimer = 0; // Determines the amount of time forward is held
 holdBackwardTimer = 0; // Determines the amount of time backward is held
-holdButtonTimer = 0; // Determines the amount of time the run button is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
 runForwardTimer = 16; // Used for running by double tapping forward
