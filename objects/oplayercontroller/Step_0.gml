@@ -193,6 +193,7 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
+	instance_create_layer(x, y, "Instances", oRushCancel);
 }
 
 // Handle storing input for Super Jump
@@ -597,7 +598,7 @@ if (state == eState.SCREEN_FREEZE)
 	if (rcActivated)
 	{
 		// Screen freeze for Rush Cancel lasts for one second
-		if (rcFreezeTimer >= 60)
+		if (rcFreezeTimer >= 30)
 		{
 			rcActivated = false;
 			rcFreezeTimer = 0;
