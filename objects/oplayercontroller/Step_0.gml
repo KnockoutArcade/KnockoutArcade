@@ -191,7 +191,6 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	{
 		rcBuffer = false;
 		superMeter -= 50;
-		stateBeforeFreeze = state;
 		activateFreeze = true;
 		global.freezeTimer = true;
 		state = eState.SCREEN_FREEZE;
@@ -201,7 +200,6 @@ if (rcActivated && rcBuffer && state != eState.HITSTOP)
 {
 	rcBuffer = false;
 	superMeter -= 50;
-	stateBeforeFreeze = state;
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
@@ -615,16 +613,16 @@ if (state == eState.SCREEN_FREEZE)
 			rcFreezeTimer = 0;
 			activateFreeze = false;
 			global.freezeTimer = false;
-			state = stateBeforeFreeze;
+			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
+			state = eState.RUSH_CANCEL_FORWARD;
 		}
 		else
 		{
 			rcFreezeTimer++;
 		}
 	}
-	
 	// If opponent froze the screen
-	if (opponent != noone && !opponent.activateFreeze && !activateFreeze)
+	else if (opponent != noone && !opponent.activateFreeze && !activateFreeze)
 	{
 		hsp = freezeHSP;
 		environmentDisplacement = freezeEnvironmentDisplacement;
@@ -1808,7 +1806,6 @@ switch state
 	break;
 	case eState.RUSH_CANCEL_FORWARD:
 	{
-		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
@@ -1816,26 +1813,35 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		
+		sprite_index = CharacterSprites.runForward_Sprite;
+		image_speed = 2;
+		
+		hsp = global.rcForwardSpeed * image_xscale;
 		vsp += fallSpeed;
 		
-		sprite_index = CharacterSprites.runForward_Sprite;
-
-		image_speed = 1;
-		// Handle I-Frames
-		invincible = (animTimer <= backdashInvincibility);
-		
-		hsp = runSpeed * image_xscale;
-		
 		// Handle Ending
-		if (animTimer >= backdashDuration)
+		if (animTimer >= global.rcForwardDuration)
 		{
 			state = eState.IDLE;
-			hsp = 0;
-			invincible = false;
 		}
 		
+		// Hitstun
+		if (hitstun > 0)
+		{
+			state = eState.HURT;
+		}
+		
+		PressAttackButton(attack);
 
 		HandleWalkingOffPlatforms(false);
+	}
+	case eState.RUSH_CANCEL_UP:
+	{
+		
+	}
+	case eState.RUSH_CANCEL_AIR:
+	{
+		
 	}
 }
 
