@@ -8,7 +8,7 @@ playerID = 1;
 // Movment Variables
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
-vsp = 0; // Verticle speed
+vsp = 0; // Vertical speed
 walkSpeed = selectedCharacter.WalkSpeed; // How fast the character walks in pixels/frame
 runSpeed = selectedCharacter.RunSpeed; // How fast the character runs in pixels/frame
 traction = selectedCharacter.Traction; // How much this character slows down each frame in pixels/frame
@@ -99,6 +99,14 @@ rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
 runButtonPressed = false; // Triggers when the run button is pressed
 holdRunButtonTimer = 0; // Determines the amount of frames the run button is held
 pressSpecialButtonTimer = 0; // Determines the amount of frames since the special button was pressed
+
+// Screen Freeze variables
+activateFreeze = false; // Determines if opponent activated screen freeze
+stateBeforeFreeze = 0; // Different from prevState
+// Stores movement before SCREEN_FREEZE
+freezeHSP = 0; // Horizontal speed
+freezeEnvironmentDisplacement = 0;
+freezeVSP = 0; // Vertical speed
 
 // Controller Controls
 controller = -1;

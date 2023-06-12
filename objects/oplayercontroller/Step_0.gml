@@ -145,20 +145,23 @@ else if ((!runButton && movedir == 0))
 
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
-if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
-	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward)
+if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
+	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
 	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
 	&& state != eState.THROW_TECH
 	&& state != eState.HURT
 	&& state != eState.LAUNCHED
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
-	&& state != eState.BLOCKING)
+	&& state != eState.BLOCKING
+	&& superMeter >= 50
+	&& !rcActivated)
 {
 	show_debug_message("Activate rush cancel");
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
 	rcActivated = true;
+	rcFreezeTimer = 0;
 	if (state == eState.HITSTOP)
 	{
 		rcBuffer = true;
@@ -166,14 +169,18 @@ if (((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer
 	else
 	{
 		rcBuffer = false;
-		prevState = state; // Temporary
+		superMeter -= 50;
+		stateBeforeFreeze = state;
+		activateFreeze = true;
 		state = eState.SCREEN_FREEZE;
 	}
 }
 if (rcActivated && rcBuffer && state != eState.HITSTOP)
 {
 	rcBuffer = false;
-	prevState = state; // Temporary
+	superMeter -= 50;
+	stateBeforeFreeze = state;
+	activateFreeze = true;
 	state = eState.SCREEN_FREEZE;
 }
 
@@ -594,9 +601,44 @@ environmentDisplacement = 0;
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
 {
-	show_debug_message("Freezing screen");
-	rcActivated = false;
-	state = prevState;
+	image_speed = 0;
+	hsp = 0;
+	environmentDisplacement = 0;
+	vsp = 0;
+	
+	if (rcActivated)
+	{
+		if (rcFreezeTimer >= 30)
+		{
+			show_debug_message("End Freezing screen");
+			rcActivated = false;
+			rcFreezeTimer = 0;
+			activateFreeze = false;
+			state = stateBeforeFreeze;
+		}
+		else
+		{
+			rcFreezeTimer++;
+		}
+	}
+	
+	if (opponent != noone && !opponent.activateFreeze)
+	{
+		hsp = freezeHSP;
+		environmentDisplacement = freezeEnvironmentDisplacement;
+		vsp = freezeVSP;
+		state = stateBeforeFreeze;
+	}
+}
+
+if (opponent != noone && opponent.activateFreeze)
+{
+	// Store all important variables before freezing
+	stateBeforeFreeze = state;
+	freezeHSP = hsp;
+	freezeEnvironmentDisplacement = environmentDisplacement;
+	freezeVSP = vsp;
+	state = eState.SCREEN_FREEZE;
 }
 
 // State Machine
