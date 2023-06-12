@@ -614,7 +614,24 @@ if (state == eState.SCREEN_FREEZE)
 			activateFreeze = false;
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
-			state = eState.RUSH_CANCEL_FORWARD;
+			if (!grounded)
+			{
+				show_debug_message("Rush Cancel Aerial");
+				state = eState.RUSH_CANCEL_AIR;
+			}
+			else if (verticalMoveDir == -1)
+			{
+				show_debug_message("Rush Cancel Up");
+				vsp = -global.rcUpSpeed;
+				jumpHsp = global.rcForwardSpeed * image_xscale;
+				state = eState.RUSH_CANCEL_UP;
+				grounded = false;
+			}
+			else
+			{
+				show_debug_message("Rush Cancel Forward");
+				state = eState.RUSH_CANCEL_FORWARD;
+			}
 		}
 		else
 		{
@@ -1804,6 +1821,7 @@ switch state
 		
 	}
 	break;
+	
 	case eState.RUSH_CANCEL_FORWARD:
 	{
 		cancelable = false;
@@ -1835,14 +1853,39 @@ switch state
 
 		HandleWalkingOffPlatforms(false);
 	}
+	break;
+	
 	case eState.RUSH_CANCEL_UP:
 	{
+		animTimer = 0;
+		cancelable = false;
+		sprite_index = CharacterSprites.jump_Sprite;
+		image_speed = 1;
+		grounded = false;
+		canTurnAround = false;
 		
+		vsp += global.rcUpFallSpeed;
+		hsp = global.rcForwardSpeed * image_xscale;
+		
+		PressAttackButton(attack);
 	}
+	break;
+	
 	case eState.RUSH_CANCEL_AIR:
 	{
+		animTimer = 0;
+		cancelable = false;
+		sprite_index = CharacterSprites.jump_Sprite;
+		image_speed = 2;
+		grounded = false;
+		canTurnAround = false;
 		
+		vsp = global.rcAirSpeed;
+		hsp = 0;
+		
+		PressAttackButton(attack);
 	}
+	break;
 }
 
 // Code Outside State Machine
