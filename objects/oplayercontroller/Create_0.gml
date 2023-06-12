@@ -18,8 +18,8 @@ fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 // Running variables
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not
-holdForwardTimer = 0; // Determines the amount of time forward is held
-holdBackwardTimer = 0; // Determines the amount of time backward is held
+holdForwardTimer = 16; // Determines the amount of time forward is held
+holdBackwardTimer = 16; // Determines the amount of time backward is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
 runForwardTimer = 16; // Used for running by double tapping forward
@@ -257,6 +257,7 @@ framesSinceHitstun = 0; // Used to help make attacks connect when cancelling spe
 isGrabbed = false;
 
 invincible = false;
+projectileInvincible = false;
 
 hitByGroup = ds_list_create();
 ds_list_clear(hitByGroup);

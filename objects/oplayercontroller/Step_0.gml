@@ -188,23 +188,8 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	holdRunButtonTimer = 16;
 	rcActivated = true;
 	rcFreezeTimer = 0;
-	if (state == eState.HITSTOP)
-	{
-		rcBuffer = true;
-	}
-	else
-	{
-		rcBuffer = false;
-		superMeter -= 50;
-		activateFreeze = true;
-		global.freezeTimer = true;
-		state = eState.SCREEN_FREEZE;
-	}
-}
-if (rcActivated && rcBuffer && state != eState.HITSTOP)
-{
-	rcBuffer = false;
 	superMeter -= 50;
+	global.hitstop = 0;
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
@@ -519,7 +504,10 @@ if (state == eState.HITSTOP)
 			// hitstop.
       
 			// Exception for command grabs.
-			if (prevState != eState.COMMAND_GRAB)
+			if (prevState != eState.COMMAND_GRAB 
+				&& prevState != eState.FORWARD_THROW 
+				&& prevState != eState.BACKWARD_THROW
+				&& prevState != eState.HITSTOP)
 			{
 				var attackState = FindAttackState(prevState);
 
@@ -656,6 +644,12 @@ if (state == eState.SCREEN_FREEZE)
 // Freezes the player if the opponent freezes the screen
 if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZE)
 {
+	// Change some states when opponent activates screen freeze
+	if (state == eState.BEING_GRABBED)
+	{
+		state = eState.LAUNCHED;
+		vsp = -3; // Pops the player up a little
+	}
 	// Store all important variables before freezing
 	stateBeforeFreeze = state;
 	freezeHSP = hsp;

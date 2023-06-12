@@ -92,6 +92,6 @@ global.completedLevels = ds_list_create();
 // Rush Cancel global variables (both players use them)
 global.rcForwardSpeed = 4;
 global.rcForwardDuration = 12;
-global.rcUpSpeed = 6;
+global.rcUpSpeed = 5;
 global.rcUpFallSpeed = 0.4;
 global.rcAirSpeed = 10;
