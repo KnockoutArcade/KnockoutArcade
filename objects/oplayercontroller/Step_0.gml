@@ -179,7 +179,6 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	&& superMeter >= 50
 	&& !rcActivated)
 {
-	show_debug_message("Activate rush cancel");
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
 	rcActivated = true;
@@ -316,7 +315,6 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
-	changedSpecialMove = false;
 	
 	if (toggleIdleBlock)
 	{ 
@@ -393,7 +391,6 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
-	changedSpecialMove = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -463,7 +460,7 @@ if (state == eState.CROUCHING)
 	HandleWalkingOffPlatforms(false);
 }
 
-// Animation
+// Animation pauses during hitstop and when the screen freezes
 if (global.hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
@@ -614,7 +611,6 @@ if (state == eState.SCREEN_FREEZE)
 		// Screen freeze for Rush Cancel lasts for one second
 		if (rcFreezeTimer >= 60)
 		{
-			show_debug_message("End Freezing screen");
 			rcActivated = false;
 			rcFreezeTimer = 0;
 			activateFreeze = false;
@@ -659,7 +655,6 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
 		
 		if (movedir == image_xscale) 
 		{
@@ -738,7 +733,6 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -808,7 +802,6 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
 		
 		vsp += fallSpeed;
 		
@@ -845,7 +838,6 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
-		changedSpecialMove = false;
 		
 		PressAttackButton(attack);
 		
@@ -904,7 +896,6 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		if (isJumpingForward)
 		{
@@ -1415,7 +1406,6 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		isGrabbed = true;
 	}
@@ -1479,7 +1469,6 @@ switch state
 	{
 		grounded = true;
 		inAttackState = false;
-		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -1497,7 +1486,6 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		
 		if (!global.game_paused)
@@ -1590,7 +1578,6 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
-		changedSpecialMove = false;
 		
 		FAvictim = false;
 		
@@ -1610,7 +1597,6 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		cancelCombo = true;
 		
@@ -1645,7 +1631,6 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
-		changedSpecialMove = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -1685,7 +1670,6 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
-		changedSpecialMove = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -1822,8 +1806,37 @@ switch state
 		
 	}
 	break;
-	
-	
+	case eState.RUSH_CANCEL_FORWARD:
+	{
+		animTimer = 0;
+		cancelable = false;
+		grounded = true;
+		canTurnAround = false;
+		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
+		
+		vsp += fallSpeed;
+		
+		sprite_index = CharacterSprites.runForward_Sprite;
+
+		image_speed = 1;
+		// Handle I-Frames
+		invincible = (animTimer <= backdashInvincibility);
+		
+		hsp = runSpeed * image_xscale;
+		
+		// Handle Ending
+		if (animTimer >= backdashDuration)
+		{
+			state = eState.IDLE;
+			hsp = 0;
+			invincible = false;
+		}
+		
+
+		HandleWalkingOffPlatforms(false);
+	}
 }
 
 // Code Outside State Machine
