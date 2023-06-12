@@ -291,3 +291,7 @@ meterBuildRate = 0.05; // The rate at which the player builds meter by approachi
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
+
+// Character speed trail variables
+speedTrailTimer = 0;
+speedTrailInterval = 999;

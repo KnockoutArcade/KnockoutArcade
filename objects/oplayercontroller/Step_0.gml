@@ -503,11 +503,8 @@ if (state == eState.HITSTOP)
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
       
-			// Exception for command grabs.
-			if (prevState != eState.COMMAND_GRAB 
-				&& prevState != eState.FORWARD_THROW 
-				&& prevState != eState.BACKWARD_THROW
-				&& prevState != eState.HITSTOP)
+			// Exception for command grabs and when entering screen freeze.
+			if (prevState != eState.COMMAND_GRAB && !activateFreeze)
 			{
 				var attackState = FindAttackState(prevState);
 
@@ -607,6 +604,8 @@ if (state == eState.SCREEN_FREEZE)
 			activateFreeze = false;
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
+			speedTrailInterval = 4;
+			speedTrailTimer = speedTrailInterval;
 			if (!grounded)
 			{
 				show_debug_message("Rush Cancel Aerial");
@@ -1851,6 +1850,21 @@ switch state
 		PressAttackButton(attack);
 
 		HandleWalkingOffPlatforms(false);
+		
+		// Create speed trail
+		if (speedTrailTimer >= speedTrailInterval)
+		{
+			speedTrailTimer = 0;
+			object_set_sprite(oSpeedTrail, sprite_index);
+			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			with (instance)
+			{
+				startingOpacity = 0.3;
+				fadeSpeed = 0.02;
+				initialized = true;
+			}
+		}
+		speedTrailTimer++;
 	}
 	break;
 	
@@ -1867,6 +1881,21 @@ switch state
 		hsp = global.rcForwardSpeed * image_xscale;
 		
 		PressAttackButton(attack);
+		
+		// Create speed trail
+		if (speedTrailTimer >= speedTrailInterval)
+		{
+			speedTrailTimer = 0;
+			object_set_sprite(oSpeedTrail, sprite_index);
+			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			with (instance)
+			{
+				startingOpacity = 0.3;
+				fadeSpeed = 0.02;
+				initialized = true;
+			}
+		}
+		speedTrailTimer++;
 	}
 	break;
 	
@@ -1883,6 +1912,21 @@ switch state
 		hsp = 0;
 		
 		PressAttackButton(attack);
+		
+		// Create speed trail
+		if (speedTrailTimer >= speedTrailInterval)
+		{
+			speedTrailTimer = 0;
+			object_set_sprite(oSpeedTrail, sprite_index);
+			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			with (instance)
+			{
+				startingOpacity = 0.3;
+				fadeSpeed = 0.02;
+				initialized = true;
+			}
+		}
+		speedTrailTimer++;
 	}
 	break;
 }
