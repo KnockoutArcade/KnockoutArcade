@@ -176,6 +176,11 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
 	&& state != eState.BLOCKING
+	&& state != eState.COMMAND_GRAB
+	&& state != eState.GRAB
+	&& state != eState.HOLD
+	&& state != eState.FORWARD_THROW
+	&& state != eState.BACKWARD_THROW
 	&& superMeter >= 50
 	&& !rcActivated)
 {
