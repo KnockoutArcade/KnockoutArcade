@@ -1857,8 +1857,10 @@ switch state
 			speedTrailTimer = 0;
 			object_set_sprite(oSpeedTrail, sprite_index);
 			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			var this = object_index;
 			with (instance)
 			{
+				PaletteSetup(0, this.selectedCharacter);
 				startingOpacity = 0.3;
 				fadeSpeed = 0.02;
 				initialized = true;
@@ -1888,8 +1890,10 @@ switch state
 			speedTrailTimer = 0;
 			object_set_sprite(oSpeedTrail, sprite_index);
 			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			var this = object_index;
 			with (instance)
 			{
+				PaletteSetup(0, this.selectedCharacter);
 				startingOpacity = 0.3;
 				fadeSpeed = 0.02;
 				initialized = true;
@@ -1919,8 +1923,10 @@ switch state
 			speedTrailTimer = 0;
 			object_set_sprite(oSpeedTrail, sprite_index);
 			var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+			var this = object_index;
 			with (instance)
 			{
+				PaletteSetup(0, this.selectedCharacter);
 				startingOpacity = 0.3;
 				fadeSpeed = 0.02;
 				initialized = true;

@@ -4,6 +4,7 @@
 // Create variables to initialize
 startingOpacity = 1;
 fadeSpeed = 0.01;
+character = 0;
 
 initialized = false;
 image_speed = 0;
