@@ -3,6 +3,7 @@
 
 global.frameskip = 0;
 global.game_paused = 0;
+global.freezeTimer = false; // For SCREEN_FREEZE
 
 global.hitstop = 0;
 

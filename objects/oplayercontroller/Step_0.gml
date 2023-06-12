@@ -143,6 +143,28 @@ else if ((!runButton && movedir == 0))
 	runButtonPressed = false;
 }
 
+// Handles timer for running forward
+if (startedMovingForward)
+{
+	runForwardTimer = 0;
+	startedMovingForward = false;
+}
+else
+{
+	runForwardTimer++;
+}
+
+// Handles timer for running backward
+if (startedMovingBackward)
+{
+	runBackwardTimer = 0;
+	startedMovingBackward = false;
+}
+else
+{
+	runBackwardTimer++;
+}
+
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
 if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
@@ -172,6 +194,7 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 		superMeter -= 50;
 		stateBeforeFreeze = state;
 		activateFreeze = true;
+		global.freezeTimer = true;
 		state = eState.SCREEN_FREEZE;
 	}
 }
@@ -181,29 +204,8 @@ if (rcActivated && rcBuffer && state != eState.HITSTOP)
 	superMeter -= 50;
 	stateBeforeFreeze = state;
 	activateFreeze = true;
+	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
-}
-
-// Handles timer for running forward
-if (startedMovingForward)
-{
-	runForwardTimer = 0;
-	startedMovingForward = false;
-}
-else
-{
-	runForwardTimer++;
-}
-
-// Handles timer for running backward
-if (startedMovingBackward)
-{
-	runBackwardTimer = 0;
-	startedMovingBackward = false;
-}
-else
-{
-	runBackwardTimer++;
 }
 
 // Handle storing input for Super Jump
@@ -462,11 +464,11 @@ if (state == eState.CROUCHING)
 }
 
 // Animation
-if (global.hitstop == 0) 
+if (global.hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
 }
-else 
+else if (global.hitstop != 0)
 {
 	state = eState.HITSTOP;
 }
@@ -606,14 +608,17 @@ if (state == eState.SCREEN_FREEZE)
 	environmentDisplacement = 0;
 	vsp = 0;
 	
+	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
-		if (rcFreezeTimer >= 30)
+		// Screen freeze for Rush Cancel lasts for one second
+		if (rcFreezeTimer >= 60)
 		{
 			show_debug_message("End Freezing screen");
 			rcActivated = false;
 			rcFreezeTimer = 0;
 			activateFreeze = false;
+			global.freezeTimer = false;
 			state = stateBeforeFreeze;
 		}
 		else
@@ -622,7 +627,8 @@ if (state == eState.SCREEN_FREEZE)
 		}
 	}
 	
-	if (opponent != noone && !opponent.activateFreeze)
+	// If opponent froze the screen
+	if (opponent != noone && !opponent.activateFreeze && !activateFreeze)
 	{
 		hsp = freezeHSP;
 		environmentDisplacement = freezeEnvironmentDisplacement;
@@ -631,7 +637,8 @@ if (state == eState.SCREEN_FREEZE)
 	}
 }
 
-if (opponent != noone && opponent.activateFreeze)
+// Freezes the player if the opponent freezes the screen
+if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZE)
 {
 	// Store all important variables before freezing
 	stateBeforeFreeze = state;
