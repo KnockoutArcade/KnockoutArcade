@@ -5,7 +5,7 @@ depth = -100;
 x = (global.camObj.x-80) + ui_xOffset;
 
 // Display proper frame when the meter is empty, half-full, and full
-if (owner.superMeter > 49)
+if (owner.superMeter >= 50)
 {
 	image_index = 1;
 	meterIndex = 0;
@@ -15,7 +15,7 @@ else
 	image_index = 0;
 	meterIndex = 0;
 }
-if (owner.superMeter > 99)
+if (owner.superMeter >= 100)
 {
 	image_index = 2;
 	meterIndex = 1;

@@ -167,8 +167,8 @@ else
 
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
-if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
-	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward && !runButton))
+if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTimer <= 4) 
+	|| (pressSpecialButtonTimer <= 15 && holdForwardTimer <= 15 && runningForward && !runButton))
 	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
 	&& state != eState.THROW_TECH
 	&& state != eState.HURT
@@ -182,10 +182,37 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	&& state != eState.FORWARD_THROW
 	&& state != eState.BACKWARD_THROW
 	&& superMeter >= 50
-	&& !rcActivated)
+	&& !rcActivated
+	&& !rcBuffer)
 {
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
+	if (opponent != noone && opponent.activateFreeze && opponent.rcFreezeTimer > 1)
+	{
+		rcBuffer = true;
+		rcBufferTimer = 0;
+	}
+	else
+	{
+		rcActivated = true;
+		rcFreezeTimer = 0;
+		superMeter -= 50;
+		global.hitstop = 0;
+		activateFreeze = true;
+		global.freezeTimer = true;
+		state = eState.SCREEN_FREEZE;
+		instance_create_layer(x, y, "Instances", oRushCancel);
+	}
+}
+if (rcBufferTimer > 30)
+{
+	rcBuffer = false;
+	rcBufferTimer = 0;
+}
+if (rcBuffer && rcBufferTimer <= 30 && opponent != noone && !opponent.activateFreeze)
+{
+	rcBuffer = false;
+	rcBufferTimer = 0;
 	rcActivated = true;
 	rcFreezeTimer = 0;
 	superMeter -= 50;
@@ -195,15 +222,10 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	state = eState.SCREEN_FREEZE;
 	instance_create_layer(x, y, "Instances", oRushCancel);
 }
-
-if (playerID == 1)
+if (rcBuffer)
 {
-	show_debug_message(holdRunButtonTimer);
-	show_debug_message(pressSpecialButtonTimer);
-	show_debug_message(holdForwardTimer);
-	show_debug_message(runningForward);
+	rcBufferTimer++;
 }
-
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
