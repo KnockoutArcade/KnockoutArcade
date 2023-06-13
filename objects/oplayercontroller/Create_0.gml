@@ -96,6 +96,7 @@ rcActivated = false;
 rcBuffer = false; // Used to activate Rush Cancel after exiting screen freeze
 rcBufferTimer = 0; // Doesn't activate Rush Cancel if in buffer for more than 15 frames
 rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
+rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
 runButtonPressed = false; // Triggers when the run button is pressed
 holdRunButtonTimer = 16; // Determines the amount of frames the run button is held
 pressSpecialButtonTimer = 16; // Determines the amount of frames since the special button was pressed
@@ -284,13 +285,13 @@ heldOpponent = noone;
 combo = 0;
 comboCounterID = noone;
 comboScaling = 0; // How much the next hit will be scaled
-meterScaling = 0; // How much meter gain will be scaled
 startCombo = false;
 cancelCombo = false;
 
 //Meter Related Variables
 superMeter = 100; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+meterScaling = 0; // How much meter gain will be scaled
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);

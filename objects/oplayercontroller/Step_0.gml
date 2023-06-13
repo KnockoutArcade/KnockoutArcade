@@ -69,6 +69,7 @@ else
 canBlock = false;
 inAttackState = false;
 canTurnAround = true;
+projectileInvincible = false;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -195,6 +196,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 			rcActivated = true;
 			rcFreezeTimer = 0;
 			superMeter -= 50;
+			projectileInvincible = true;
 			global.hitstop = 0;
 			activateFreeze = true;
 			global.freezeTimer = true;
@@ -212,6 +214,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 		rcActivated = true;
 		rcFreezeTimer = 0;
 		superMeter -= 50;
+		projectileInvincible = true;
 		global.hitstop = 0;
 		activateFreeze = true;
 		global.freezeTimer = true;
@@ -231,6 +234,7 @@ if (rcBuffer && rcBufferTimer <= 30 && opponent != noone && !opponent.activateFr
 	rcActivated = true;
 	rcFreezeTimer = 0;
 	superMeter -= 50;
+	projectileInvincible = true;
 	global.hitstop = 0;
 	activateFreeze = true;
 	global.freezeTimer = true;
@@ -653,6 +657,7 @@ if (state == eState.SCREEN_FREEZE)
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
+			comboScaling += 3.0;
 			if (!grounded)
 			{
 				show_debug_message("Rush Cancel Aerial");
@@ -669,6 +674,7 @@ if (state == eState.SCREEN_FREEZE)
 			else
 			{
 				show_debug_message("Rush Cancel Forward");
+				rcForwardTimer = 0;
 				state = eState.RUSH_CANCEL_FORWARD;
 			}
 		}
@@ -1873,12 +1879,14 @@ switch state
 	
 	case eState.RUSH_CANCEL_FORWARD:
 	{
+		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		projectileInvincible = true;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -1887,10 +1895,11 @@ switch state
 		vsp += fallSpeed;
 		
 		// Handle Ending
-		if (animTimer >= global.rcForwardDuration)
+		if (rcForwardTimer >= global.rcForwardDuration)
 		{
 			state = eState.IDLE;
 		}
+		rcForwardTimer++;
 		
 		// Hitstun
 		if (hitstun > 0)
@@ -1915,6 +1924,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		projectileInvincible = true;
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
@@ -1934,6 +1944,7 @@ switch state
 		image_speed = 2;
 		grounded = false;
 		canTurnAround = false;
+		projectileInvincible = true;
 		
 		vsp = global.rcAirSpeed;
 		hsp = 1 * image_xscale;
@@ -2009,6 +2020,7 @@ if (target != noone)
 	
 		combo = 0;
 		comboScaling = 0;
+		meterScaling = 0;
 		comboCounterID = noone;
 	}
 
