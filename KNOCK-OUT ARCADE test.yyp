@@ -83,6 +83,7 @@
     {"id":{"name":"sJay_DownSpecial2A_Mockup_strip4","path":"sprites/sJay_DownSpecial2A_Mockup_strip4/sJay_DownSpecial2A_Mockup_strip4.yy",},"order":4,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},
     {"id":{"name":"JumpingAttackScript","path":"scripts/JumpingAttackScript/JumpingAttackScript.yy",},"order":2,},
+    {"id":{"name":"SpeedTrail","path":"scripts/SpeedTrail/SpeedTrail.yy",},"order":24,},
     {"id":{"name":"sRussel_Hurt","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"order":5,},
     {"id":{"name":"rControlsRoom","path":"rooms/rControlsRoom/rControlsRoom.yy",},"order":11,},
     {"id":{"name":"sCOUNTERtext","path":"sprites/sCOUNTERtext/sCOUNTERtext.yy",},"order":0,},
