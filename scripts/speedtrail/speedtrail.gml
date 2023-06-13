@@ -10,10 +10,21 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval, getPlayerID)
 		object_set_sprite(oSpeedTrail, sprite_index);
 		var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
 		var this = object_index;
+		var thisCharacter = selectedCharacter;
+		var opponentCharacter = opponent.selectedCharacter;
 		with (instance)
 		{
 			image_index = this.image_index;
-			image_xscale = this.image_xscale;
+			// For some reason, the player 2 sprite is flipped during mirror matches
+			if (thisCharacter == opponentCharacter && getPlayerID == 2)
+			{
+				image_xscale = -this.image_xscale;
+			}
+			else
+			{
+				image_xscale = this.image_xscale;
+			}
+			
 			if (getPlayerID == 1)
 			{
 				PaletteSetup(global.p1PaletteID, this.selectedCharacter);
