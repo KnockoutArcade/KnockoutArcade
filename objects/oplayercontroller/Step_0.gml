@@ -187,7 +187,8 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 {
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
-	if (opponent != noone && opponent.activateFreeze && opponent.rcFreezeTimer > 1)
+	if ((opponent != noone && opponent.activateFreeze) 
+		|| (opponent != noone && opponent.rcActivated && opponent.rcFreezeTimer > 1))
 	{
 		rcBuffer = true;
 		rcBufferTimer = 0;
