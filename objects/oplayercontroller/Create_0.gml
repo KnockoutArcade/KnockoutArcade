@@ -94,7 +94,8 @@ requireSpecialButton = false; // Check to see if the enhancer requires the speci
 // Variables for Rush Cancel
 rcActivated = false;
 rcBuffer = false; // Used to activate Rush Cancel after exiting screen freeze
-rcBufferTimer = 0; // Doesn't activate Rush Cancel if in buffer for more than 15 frames
+rcBufferTimer = 0; // Doesn't activate Rush Cancel if in buffer for more than the designated interval
+rcBufferInterval = 0;
 rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
 rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
 runButtonPressed = false; // Triggers when the run button is pressed

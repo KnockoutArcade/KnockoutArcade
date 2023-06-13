@@ -177,11 +177,6 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
 	&& state != eState.BLOCKING
-	&& state != eState.COMMAND_GRAB
-	&& state != eState.GRAB
-	&& state != eState.HOLD
-	&& state != eState.FORWARD_THROW
-	&& state != eState.BACKWARD_THROW
 	&& superMeter >= 50
 	&& !rcActivated
 	&& !rcBuffer)
@@ -207,7 +202,14 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 		{
 			rcBuffer = true;
 			rcBufferTimer = 0;
+			rcBufferInterval = 30;
 		}
+	}
+	else if (opponent != noone && opponent.isGrabbed) // Activates buffer when grabbing
+	{
+		rcBuffer = true;
+		rcBufferTimer = 0;
+		rcBufferInterval = 999;
 	}
 	else
 	{
@@ -222,12 +224,14 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 		instance_create_layer(x, y, "Instances", oRushCancel);
 	}
 }
-if (rcBufferTimer > 30)
+if (rcBufferTimer > rcBufferInterval)
 {
 	rcBuffer = false;
 	rcBufferTimer = 0;
 }
-if (rcBuffer && rcBufferTimer <= 30 && opponent != noone && !opponent.activateFreeze)
+// Checks for either if the opponent activated screen freeze or if they are being grabbed
+if (rcBuffer && rcBufferTimer <= rcBufferInterval && opponent != noone && !opponent.activateFreeze
+	&& !opponent.isGrabbed && state != eState.HITSTOP)
 {
 	rcBuffer = false;
 	rcBufferTimer = 0;
@@ -235,7 +239,6 @@ if (rcBuffer && rcBufferTimer <= 30 && opponent != noone && !opponent.activateFr
 	rcFreezeTimer = 0;
 	superMeter -= 50;
 	projectileInvincible = true;
-	global.hitstop = 0;
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
