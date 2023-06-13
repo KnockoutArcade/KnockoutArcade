@@ -21,7 +21,7 @@ if (global.game_paused)
 } 
 
 if (!global.gameHalt)
-{
+{ 
 
 // Handle Inputs
 if (playerID == 1)
@@ -339,6 +339,7 @@ if (state == eState.IDLE)
 	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
+		jumpHsp = hsp;
 		// Is the player jumping forward?
 		if (movedir == image_xscale)
 		{
@@ -426,6 +427,7 @@ if (state == eState.CROUCHING)
 	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
+		jumpHsp = hsp;
 		// Is the player jumping forward?
 		if (movedir == image_xscale)
 		{
@@ -504,11 +506,10 @@ if (state == eState.HITSTOP)
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
       
-			// Exception for command grabs and when entering screen freeze.
-			if (prevState != eState.COMMAND_GRAB && !activateFreeze)
+			var attackState = FindAttackState(prevState);
+			// Exception for invalid states
+			if (attackState != -1)
 			{
-				var attackState = FindAttackState(prevState);
-
 				CancelData(attackState, attack, false);
 			}
 		}
@@ -708,6 +709,7 @@ switch state
 		{
 			state = eState.JUMPSQUAT;
 			hsp = walkSpeed * movedir;
+			jumpHsp = hsp;
 			// Is the player jumping forward?
 			isJumpingForward = (movedir == image_xscale);
 			
@@ -771,6 +773,7 @@ switch state
 		if verticalMoveDir == 1 
 		{
 			state = eState.JUMPSQUAT;
+			jumpHsp = hsp;
 			// Is the player jumping forward?
 			if (movedir != -image_xscale) 
 			{
@@ -780,6 +783,7 @@ switch state
 			{
 				isJumpingForward = false;
 				hsp = walkSpeed * movedir;
+				jumpHsp = hsp;
 			}
 			
 			// handle Super Jumping
@@ -851,6 +855,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		hsp = jumpHsp;
 		
 		PressAttackButton(attack);
 		
