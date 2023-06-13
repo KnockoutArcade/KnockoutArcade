@@ -177,6 +177,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
 	&& state != eState.BLOCKING
+	&& hitstun <= 0 && blockstun <= 0 && !FAvictim 
 	&& superMeter >= 50
 	&& !rcActivated
 	&& !rcBuffer)
@@ -1950,7 +1951,7 @@ switch state
 		projectileInvincible = true;
 		
 		vsp = global.rcAirSpeed;
-		hsp = 1 * image_xscale;
+		hsp = global.rcAirHorizontalSpeed * image_xscale;
 		
 		PressAttackButton(attack);
 		

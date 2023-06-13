@@ -96,3 +96,4 @@ global.rcUpSpeed = 5;
 global.rcUpForwardSpeed = 2;
 global.rcUpFallSpeed = 0.4;
 global.rcAirSpeed = 10;
+global.rcAirHorizontalSpeed = 2;
