@@ -612,11 +612,11 @@ if (state == eState.SCREEN_FREEZE)
 				show_debug_message("Rush Cancel Aerial");
 				state = eState.RUSH_CANCEL_AIR;
 			}
-			else if (verticalMoveDir == -1)
+			else if (verticalMoveDir == 1)
 			{
 				show_debug_message("Rush Cancel Up");
 				vsp = -global.rcUpSpeed;
-				jumpHsp = global.rcForwardSpeed * image_xscale;
+				jumpHsp = walkSpeed * 1.5 * image_xscale;
 				state = eState.RUSH_CANCEL_UP;
 				grounded = false;
 			}
@@ -1871,7 +1871,7 @@ switch state
 		canTurnAround = false;
 		
 		vsp += global.rcUpFallSpeed;
-		hsp = global.rcForwardSpeed * image_xscale;
+		hsp = walkSpeed * 1.5 * image_xscale;
 		
 		PressAttackButton(attack);
 		
@@ -1890,7 +1890,7 @@ switch state
 		canTurnAround = false;
 		
 		vsp = global.rcAirSpeed;
-		hsp = 0;
+		hsp = 1 * image_xscale;
 		
 		PressAttackButton(attack);
 		
