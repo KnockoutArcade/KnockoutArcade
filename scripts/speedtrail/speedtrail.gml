@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval)
+function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval, getPlayerID)
 {
 	speedTrailInterval = setInterval;
 	
@@ -13,7 +13,15 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval)
 		with (instance)
 		{
 			image_index = this.image_index;
-			PaletteSetup(0, this.selectedCharacter);
+			image_xscale = this.image_xscale;
+			if (getPlayerID == 1)
+			{
+				PaletteSetup(global.p1PaletteID, this.selectedCharacter);
+			}
+			else
+			{
+				PaletteSetup(global.p2PaletteID, this.selectedCharacter);
+			}
 			startingOpacity = setStartingOpacity;
 			fadeSpeed = setFadeSpeed;
 			initialized = true;

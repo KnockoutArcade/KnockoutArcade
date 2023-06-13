@@ -1857,7 +1857,7 @@ switch state
 		HandleWalkingOffPlatforms(false);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 3);
+		SpeedTrail(0.3, 0.02, 3, playerID);
 	}
 	break;
 	
@@ -1876,7 +1876,7 @@ switch state
 		PressAttackButton(attack);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 3);
+		SpeedTrail(0.3, 0.02, 3, playerID);
 	}
 	break;
 	
@@ -1895,7 +1895,7 @@ switch state
 		PressAttackButton(attack);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 1);
+		SpeedTrail(0.3, 0.02, 1, playerID);
 	}
 	break;
 }
