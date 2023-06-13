@@ -18,12 +18,12 @@ fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 // Running variables
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not
-holdForwardTimer = 16; // Determines the amount of time forward is held
-holdBackwardTimer = 16; // Determines the amount of time backward is held
+holdForwardTimer = 8; // Determines the amount of time forward is held
+holdBackwardTimer = 8; // Determines the amount of time backward is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
-runForwardTimer = 16; // Used for running by double tapping forward
-runBackwardTimer = 16; // Used for backdashing by double tapping backward
+runForwardTimer = 8; // Used for running by double tapping forward
+runBackwardTimer = 8; // Used for backdashing by double tapping backward
 
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash

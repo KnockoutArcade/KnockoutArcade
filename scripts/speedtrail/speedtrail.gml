@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval, getPlayerID)
+function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval)
 {
 	speedTrailInterval = setInterval;
 	
@@ -16,7 +16,7 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval, getPlayerID)
 		{
 			image_index = this.image_index;
 			// For some reason, the player 2 sprite is flipped during mirror matches
-			if (thisCharacter == opponentCharacter && getPlayerID == 2)
+			if (thisCharacter == opponentCharacter && this.playerID == 2)
 			{
 				image_xscale = -this.image_xscale;
 			}
@@ -25,7 +25,7 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval, getPlayerID)
 				image_xscale = this.image_xscale;
 			}
 			
-			if (getPlayerID == 1)
+			if (this.playerID == 1)
 			{
 				PaletteSetup(global.p1PaletteID, this.selectedCharacter);
 			}

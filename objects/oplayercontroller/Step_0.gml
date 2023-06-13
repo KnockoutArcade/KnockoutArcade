@@ -140,7 +140,7 @@ else if ((!runButton && movedir == 0))
 	runningBackward = false;
 	holdForwardTimer = 0;
 	holdBackwardTimer = 0;
-	holdRunButtonTimer = 16; // Keep this variable outside of the Rush Cancel leniency window
+	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
 	runButtonPressed = false;
 }
 
@@ -167,9 +167,9 @@ else
 }
 
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
-// Also works with double tap forward, in which case the leniency is 15 frames
+// Also works with double tap forward, in which case the leniency is 7 frames
 if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTimer <= 4) 
-	|| (pressSpecialButtonTimer <= 15 && holdForwardTimer <= 15 && runningForward && !runButton))
+	|| (pressSpecialButtonTimer <= 7 && holdForwardTimer <= 7 && runningForward && !runButton))
 	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
 	&& state != eState.THROW_TECH
 	&& state != eState.HURT
@@ -182,8 +182,8 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	&& !rcActivated
 	&& !rcBuffer)
 {
-	pressSpecialButtonTimer = 16;
-	holdRunButtonTimer = 16;
+	pressSpecialButtonTimer = 8;
+	holdRunButtonTimer = 8;
 	if (opponent != noone && opponent.activateFreeze)
 	{
 		// 1 frame buffer to determine if both players activated RC at the same time
@@ -240,6 +240,7 @@ if (rcBuffer && rcBufferTimer <= rcBufferInterval && opponent != noone && !oppon
 	rcFreezeTimer = 0;
 	superMeter -= 50;
 	projectileInvincible = true;
+	global.hitstop = 0;
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
@@ -1916,7 +1917,7 @@ switch state
 		HandleWalkingOffPlatforms(false);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 3, playerID);
+		SpeedTrail(0.3, 0.02, 3);
 	}
 	break;
 	
@@ -1936,7 +1937,7 @@ switch state
 		PressAttackButton(attack);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 3, playerID);
+		SpeedTrail(0.3, 0.02, 3);
 	}
 	break;
 	
@@ -1956,7 +1957,7 @@ switch state
 		PressAttackButton(attack);
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.02, 1, playerID);
+		SpeedTrail(0.3, 0.02, 1);
 	}
 	break;
 }
