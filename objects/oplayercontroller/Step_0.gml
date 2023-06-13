@@ -170,16 +170,16 @@ else
 // Also works with double tap forward, in which case the leniency is 7 frames
 if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTimer <= 4) 
 	|| (pressSpecialButtonTimer <= 7 && holdForwardTimer <= 7 && runningForward && !runButton))
-	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
+	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states...
 	&& state != eState.THROW_TECH
 	&& state != eState.HURT
 	&& state != eState.LAUNCHED
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
 	&& state != eState.BLOCKING
-	&& hitstun <= 0 && blockstun <= 0 && !FAvictim 
-	&& superMeter >= 50
-	&& !rcActivated
+	&& hitstun <= 0 && blockstun <= 0 && !FAvictim // and when the player gets hit...
+	&& superMeter >= 50 // and if the player doesn't have enough meter...
+	&& !rcActivated // and if the player already activated Rush Cancel and it hasn't completed yet.
 	&& !rcBuffer)
 {
 	pressSpecialButtonTimer = 8;
@@ -653,7 +653,7 @@ if (state == eState.SCREEN_FREEZE)
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
-		// Screen freeze for Rush Cancel lasts for one second
+		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)
 		{
 			rcActivated = false;
@@ -665,12 +665,10 @@ if (state == eState.SCREEN_FREEZE)
 			comboScaling += 3.0;
 			if (!grounded)
 			{
-				show_debug_message("Rush Cancel Aerial");
 				state = eState.RUSH_CANCEL_AIR;
 			}
 			else if (verticalMoveDir == 1)
 			{
-				show_debug_message("Rush Cancel Up");
 				vsp = -global.rcUpSpeed;
 				jumpHsp = walkSpeed * 1.5 * image_xscale;
 				state = eState.RUSH_CANCEL_UP;
@@ -678,7 +676,6 @@ if (state == eState.SCREEN_FREEZE)
 			}
 			else
 			{
-				show_debug_message("Rush Cancel Forward");
 				rcForwardTimer = 0;
 				state = eState.RUSH_CANCEL_FORWARD;
 			}

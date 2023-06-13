@@ -1,10 +1,8 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SpeedTrail(setStartingOpacity, setFadeSpeed, setInterval)
+function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 {
-	speedTrailInterval = setInterval;
-	
-	if (speedTrailTimer >= speedTrailInterval)
+	if (speedTrailTimer >= interval)
 	{
 		speedTrailTimer = 0;
 		object_set_sprite(oSpeedTrail, sprite_index);

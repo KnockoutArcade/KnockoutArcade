@@ -299,4 +299,3 @@ PaletteSetup(0, selectedCharacter);
 
 // Character speed trail variables
 speedTrailTimer = 0;
-speedTrailInterval = 999;
