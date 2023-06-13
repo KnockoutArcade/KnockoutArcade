@@ -187,10 +187,25 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 {
 	pressSpecialButtonTimer = 16;
 	holdRunButtonTimer = 16;
-	if (opponent != noone && opponent.activateFreeze && opponent.rcFreezeTimer > 1)
+	if (opponent != noone && opponent.activateFreeze)
 	{
-		rcBuffer = true;
-		rcBufferTimer = 0;
+		// 1 frame buffer to determine if both players activated RC at the same time
+		if (opponent.rcActivated && opponent.rcFreezeTimer > 1)
+		{
+			rcActivated = true;
+			rcFreezeTimer = 0;
+			superMeter -= 50;
+			global.hitstop = 0;
+			activateFreeze = true;
+			global.freezeTimer = true;
+			state = eState.SCREEN_FREEZE;
+			instance_create_layer(x, y, "Instances", oRushCancel);
+		}
+		else
+		{
+			rcBuffer = true;
+			rcBufferTimer = 0;
+		}
 	}
 	else
 	{
