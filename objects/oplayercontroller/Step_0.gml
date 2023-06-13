@@ -168,7 +168,7 @@ else
 // If the run button and special button are pressed within 4 frames of each other, activate rush cancel
 // Also works with double tap forward, in which case the leniency is 15 frames
 if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTimer < 4) 
-	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward))
+	|| (pressSpecialButtonTimer < 15 && holdForwardTimer < 15 && runningForward && !runButton))
 	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states
 	&& state != eState.THROW_TECH
 	&& state != eState.HURT
@@ -195,6 +195,15 @@ if ((((runButton || special) && pressSpecialButtonTimer < 4 && holdRunButtonTime
 	state = eState.SCREEN_FREEZE;
 	instance_create_layer(x, y, "Instances", oRushCancel);
 }
+
+if (playerID == 1)
+{
+	show_debug_message(holdRunButtonTimer);
+	show_debug_message(pressSpecialButtonTimer);
+	show_debug_message(holdForwardTimer);
+	show_debug_message(runningForward);
+}
+
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
