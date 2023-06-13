@@ -909,6 +909,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+
 		hsp = jumpHsp;
 		
 		PressAttackButton(attack);
