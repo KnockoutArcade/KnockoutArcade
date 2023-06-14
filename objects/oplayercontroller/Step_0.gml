@@ -2143,7 +2143,7 @@ floor(y);
 
 
 // Change the player's direction
-if (!inAttackState && canTurnAround)
+if (!inAttackState && canTurnAround && !rcActivated)
 {
 	if (opponent != noone)
 	{
