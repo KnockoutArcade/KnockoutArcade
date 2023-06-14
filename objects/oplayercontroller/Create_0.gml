@@ -22,8 +22,8 @@ holdForwardTimer = 8; // Determines the amount of time forward is held
 holdBackwardTimer = 8; // Determines the amount of time backward is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
-runForwardTimer = 8; // Used for running by double tapping forward
-runBackwardTimer = 8; // Used for backdashing by double tapping backward
+runForwardTimer = 16; // Used for running by double tapping forward
+runBackwardTimer = 16; // Used for backdashing by double tapping backward
 
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
@@ -99,8 +99,8 @@ rcBufferInterval = 0;
 rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
 rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
 runButtonPressed = false; // Triggers when the run button is pressed
-holdRunButtonTimer = 16; // Determines the amount of frames the run button is held
-pressSpecialButtonTimer = 16; // Determines the amount of frames since the special button was pressed
+holdRunButtonTimer = 8; // Determines the amount of frames the run button is held
+pressSpecialButtonTimer = 8; // Determines the amount of frames since the special button was pressed
 
 // Screen Freeze variables
 activateFreeze = false; // Determines if opponent activated screen freeze
