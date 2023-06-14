@@ -128,6 +128,7 @@
     {"id":{"name":"oCharacterSelectManager","path":"objects/oCharacterSelectManager/oCharacterSelectManager.yy",},"order":3,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":8,},
     {"id":{"name":"sBeverly_Idle","path":"sprites/sBeverly_Idle/sBeverly_Idle.yy",},"order":0,},
+    {"id":{"name":"sJay_StandMedium_Mockup_strip7","path":"sprites/sJay_StandMedium_Mockup_strip7/sJay_StandMedium_Mockup_strip7.yy",},"order":14,},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"order":0,},
     {"id":{"name":"SetupCharacter","path":"scripts/SetupCharacter/SetupCharacter.yy",},"order":13,},
     {"id":{"name":"sBeverly_StandLight3_MOCKUP_strip3","path":"sprites/sBeverly_StandLight3_MOCKUP_strip3/sBeverly_StandLight3_MOCKUP_strip3.yy",},"order":7,},
