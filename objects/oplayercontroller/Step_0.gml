@@ -635,6 +635,7 @@ if (state == eState.SCREEN_FREEZE)
 			rcActivated = false;
 			rcFreezeTimer = 0;
 			activateFreeze = false;
+			stateBeforeFreeze = 0;
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
@@ -668,6 +669,7 @@ if (state == eState.SCREEN_FREEZE)
 		environmentDisplacement = freezeEnvironmentDisplacement;
 		vsp = freezeVSP;
 		state = stateBeforeFreeze;
+		stateBeforeFreeze = 0;
 	}
 }
 
