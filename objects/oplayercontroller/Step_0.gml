@@ -189,15 +189,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 		// 1 frame buffer to determine if both players activated RC at the same time
 		if (opponent.rcActivated && opponent.rcFreezeTimer > 1)
 		{
-			rcActivated = true;
-			rcFreezeTimer = 0;
-			superMeter -= 50;
-			projectileInvincible = true;
-			global.hitstop = 0;
-			activateFreeze = true;
-			global.freezeTimer = true;
-			state = eState.SCREEN_FREEZE;
-			instance_create_layer(x, y, "Instances", oRushCancel);
+			ActivateRushCancel();
 		}
 		else
 		{
@@ -206,7 +198,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 			rcBufferInterval = 30;
 		}
 	}
-	else if (opponent != noone && opponent.isGrabbed) // Activates buffer when grabbing
+	else if (heldOpponent != noone) // Activates buffer when grabbing
 	{
 		rcBuffer = true;
 		rcBufferTimer = 0;
@@ -214,15 +206,7 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	}
 	else
 	{
-		rcActivated = true;
-		rcFreezeTimer = 0;
-		superMeter -= 50;
-		projectileInvincible = true;
-		global.hitstop = 0;
-		activateFreeze = true;
-		global.freezeTimer = true;
-		state = eState.SCREEN_FREEZE;
-		instance_create_layer(x, y, "Instances", oRushCancel);
+		ActivateRushCancel();
 	}
 }
 if (rcBufferTimer > rcBufferInterval)
@@ -232,19 +216,11 @@ if (rcBufferTimer > rcBufferInterval)
 }
 // Checks for either if the opponent activated screen freeze or if they are being grabbed
 if (rcBuffer && rcBufferTimer <= rcBufferInterval && opponent != noone && !opponent.activateFreeze
-	&& !opponent.isGrabbed && state != eState.HITSTOP)
+	&& heldOpponent == noone)
 {
 	rcBuffer = false;
 	rcBufferTimer = 0;
-	rcActivated = true;
-	rcFreezeTimer = 0;
-	superMeter -= 50;
-	projectileInvincible = true;
-	global.hitstop = 0;
-	activateFreeze = true;
-	global.freezeTimer = true;
-	state = eState.SCREEN_FREEZE;
-	instance_create_layer(x, y, "Instances", oRushCancel);
+	ActivateRushCancel();
 }
 if (rcBuffer)
 {

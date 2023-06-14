@@ -9,14 +9,21 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 		var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
 		var this = object_index;
 		var thisCharacter = selectedCharacter;
-		var opponentCharacter = opponent.selectedCharacter;
+		var opponentCharacter = noone;
+		if (opponent != noone)
+		{
+			opponentCharacter = opponent.selectedCharacter;
+		}
 		with (instance)
 		{
 			image_index = this.image_index;
-			// For some reason, the player 2 sprite is flipped during mirror matches
-			if (thisCharacter == opponentCharacter && this.playerID == 2)
+			if (opponentCharacter != noone)
 			{
-				image_xscale = -this.image_xscale;
+				// For some reason, the player 2 sprite is flipped during mirror matches
+				if (thisCharacter == opponentCharacter && this.playerID == 2)
+				{
+					image_xscale = -this.image_xscale;
+				}
 			}
 			else
 			{

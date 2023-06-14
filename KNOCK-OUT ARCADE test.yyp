@@ -226,6 +226,7 @@
     {"id":{"name":"ResetGame","path":"scripts/ResetGame/ResetGame.yy",},"order":11,},
     {"id":{"name":"sJay_SC_JumpingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_JumpingHeavy_MOCKUP_strip5/sJay_SC_JumpingHeavy_MOCKUP_strip5.yy",},"order":15,},
     {"id":{"name":"sRussel_SideSpecial","path":"sprites/sRussel_SideSpecial/sRussel_SideSpecial.yy",},"order":29,},
+    {"id":{"name":"ActivateRushCancel","path":"scripts/ActivateRushCancel/ActivateRushCancel.yy",},"order":25,},
     {"id":{"name":"rOptions","path":"rooms/rOptions/rOptions.yy",},"order":10,},
     {"id":{"name":"oControllerManager","path":"objects/oControllerManager/oControllerManager.yy",},"order":2,},
     {"id":{"name":"sRussel_Getup","path":"sprites/sRussel_Getup/sRussel_Getup.yy",},"order":25,},
