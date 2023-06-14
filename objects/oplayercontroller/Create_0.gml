@@ -8,7 +8,7 @@ playerID = 1;
 // Movment Variables
 hsp = 0; // Horizontal speed
 environmentDisplacement = 0;
-vsp = 0; // Verticle speed
+vsp = 0; // Vertical speed
 walkSpeed = selectedCharacter.WalkSpeed; // How fast the character walks in pixels/frame
 runSpeed = selectedCharacter.RunSpeed; // How fast the character runs in pixels/frame
 traction = selectedCharacter.Traction; // How much this character slows down each frame in pixels/frame
@@ -16,14 +16,14 @@ jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
 // Running variables
-running = false; // Used to tell if the player is running or not
-holdForwardTimer = 0; // Determines the amount of time forward is held
-holdBackwardTimer = 0; // Determines the amount of time backward is held
-holdButtonTimer = 0; // Determines the amount of time the run button is held
+runningForward = false; // Used to tell if the player is running forward or not
+runningBackward = false; // Used to tell if the player is running backward or not
+holdForwardTimer = 8; // Determines the amount of time forward is held
+holdBackwardTimer = 8; // Determines the amount of time backward is held
 startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
-runForwardTimer = 0; // Used for running by double tapping forward
-runBackwardTimer = 0; // Used for backdashing by double tapping backward
+runForwardTimer = 16; // Used for running by double tapping forward
+runBackwardTimer = 16; // Used for backdashing by double tapping backward
 
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash
@@ -86,11 +86,29 @@ progressInInputs = []; // Holds the indexes of each motion input to determine pr
 enhanced = []; // Enhances the special move if the motion input is performed
 changeFrame = 999; // Frame when the move changes if you perform the motion input if changeImmediately is false
 changeImmediately = false; // If true, changes special move as soon as the input is performed
-changedSpecialMove = false; // Prevents moves cancelled into from special moves from being cancellable, keep false for rekkas
 // How long the player has to perform the special move
 inputWindowStart = 0;
 inputWindowEnd = 0;
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
+
+// Variables for Rush Cancel
+rcActivated = false;
+rcBuffer = false; // Used to activate Rush Cancel after exiting screen freeze
+rcBufferTimer = 0; // Doesn't activate Rush Cancel if in buffer for more than the designated interval
+rcBufferInterval = 0;
+rcFreezeTimer = 0; // Counts up to 30 frames, then deactivates the freeze frame
+rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
+runButtonPressed = false; // Triggers when the run button is pressed
+holdRunButtonTimer = 8; // Determines the amount of frames the run button is held
+pressSpecialButtonTimer = 8; // Determines the amount of frames since the special button was pressed
+
+// Screen Freeze variables
+activateFreeze = false; // Determines if opponent activated screen freeze
+stateBeforeFreeze = 0; // Different from prevState
+// Stores movement before SCREEN_FREEZE
+freezeHSP = 0; // Horizontal speed
+freezeEnvironmentDisplacement = 0;
+freezeVSP = 0; // Vertical speed
 
 // Controller Controls
 controller = -1;
@@ -162,7 +180,11 @@ enum eState {
 	KNOCKED_DOWN,
 	GETUP,
 	HITSTOP,
-	BLOCKING
+	BLOCKING,
+	RUSH_CANCEL_FORWARD,
+	RUSH_CANCEL_UP,
+	RUSH_CANCEL_AIR,
+	SCREEN_FREEZE
 }
 
 enum eAttackType {
@@ -238,6 +260,7 @@ framesSinceHitstun = 0; // Used to help make attacks connect when cancelling spe
 isGrabbed = false;
 
 invincible = false;
+projectileInvincible = false;
 
 hitByGroup = ds_list_create();
 ds_list_clear(hitByGroup);
@@ -269,6 +292,10 @@ cancelCombo = false;
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+meterScaling = 0; // How much meter gain will be scaled
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
+
+// Character speed trail variables
+speedTrailTimer = 0;

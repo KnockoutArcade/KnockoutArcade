@@ -14,7 +14,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
 				}
-				else if (state == eState.JUMPING)
+				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 					state = eState.JUMPING_LIGHT_ATTACK;
 				}
@@ -30,7 +30,7 @@ function PressAttackButton(attack)
 			break;
 		
 			case 2:
-				if (state == eState.JUMPING) 
+				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
 				}
@@ -46,7 +46,7 @@ function PressAttackButton(attack)
 			break;
 			
 			case 3:
-				if (state == eState.JUMPING)
+				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
 				}
@@ -62,7 +62,7 @@ function PressAttackButton(attack)
 			break;
 			
 			case 4:
-				if (state != eState.JUMPING && state != eState.JUMPSQUAT) 
+				if (state != eState.JUMPING && state != eState.JUMPSQUAT && state != eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.GRAB;
 					sprite_index = sRussel_Grab;
