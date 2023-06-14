@@ -290,7 +290,7 @@ startCombo = false;
 cancelCombo = false;
 
 //Meter Related Variables
-superMeter = 0; // the amount of meter the player has
+superMeter = 100; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 meterScaling = 0; // How much meter gain will be scaled
 
