@@ -1687,6 +1687,19 @@ switch state
 		
 		if (animTimer > 30)
 		{
+			// Turn the player arround immediately
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}	
+			
 			state = eState.IDLE;
 			invincible = false;
 			
