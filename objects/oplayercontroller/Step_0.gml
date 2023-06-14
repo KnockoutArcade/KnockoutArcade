@@ -200,7 +200,6 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	}
 	else if (heldOpponent != noone) // Activates buffer when grabbing
 	{
-		show_debug_message(heldOpponent);
 		rcBuffer = true;
 		rcBufferTimer = 0;
 		rcBufferInterval = 999;
@@ -216,8 +215,8 @@ if (rcBufferTimer > rcBufferInterval)
 	rcBufferTimer = 0;
 }
 // Checks for either if the opponent activated screen freeze or if they are being grabbed
-if (rcBuffer && rcBufferTimer <= rcBufferInterval && ((opponent != noone && !opponent.activateFreeze)
-	|| heldOpponent == noone))
+if (rcBuffer && rcBufferTimer <= rcBufferInterval && ((opponent != noone && !opponent.activateFreeze && rcBufferInterval == 30)
+	|| (heldOpponent == noone && rcBufferInterval == 999)))
 {
 	rcBuffer = false;
 	rcBufferTimer = 0;
