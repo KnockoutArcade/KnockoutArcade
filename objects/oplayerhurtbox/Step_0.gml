@@ -14,7 +14,7 @@ if (lifetime < 1 && !primary)
 	instance_destroy();
 }
 
-if (!primary && !global.game_paused && global.hitstop < 1)
+if (!primary && !global.game_paused && global.hitstop < 1 && owner.state != eState.HITSTOP)
 {
 	lifetime--;
 }

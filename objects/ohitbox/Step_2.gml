@@ -14,7 +14,7 @@ if (lifetime < 1 && !isProjectile)
 	instance_destroy();
 }
 
-if (!global.game_paused) 
+if (!global.game_paused && owner.state != eState.HITSTOP) 
 {
 	lifetime--;
 }
