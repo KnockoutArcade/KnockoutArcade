@@ -335,11 +335,8 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
+	canBlock = true;
 	
-	if (toggleIdleBlock)
-	{ 
-		canBlock = true;
-	}
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
 	
@@ -412,18 +409,10 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
+	canBlock = true;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
-
-	if (movedir == -image_xscale)
-	{
-		canBlock = true;
-	}
-	else
-	{
-		canBlock = false;
-	}
 	
 	if (movedir == 0 && verticalMoveDir != -1) 
 	{
@@ -431,14 +420,9 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !runningForward && verticalMoveDir != -1) 
+	if (movedir != 0 && !runningForward && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
-	} 
-	else if (movedir == -image_xscale && !runningBackward && verticalMoveDir != -1)
-	{
-		state = eState.WALKING;
-		canBlock = true;
 	}
 	
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
@@ -701,6 +685,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		canBlock = true;
 		
 		if (movedir == image_xscale) 
 		{
@@ -710,7 +695,6 @@ switch state
 		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
-			canBlock = true;
 		}
 		
 		// Handle Transition to Run
