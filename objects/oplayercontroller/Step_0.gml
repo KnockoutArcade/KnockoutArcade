@@ -2000,6 +2000,7 @@ if (target != noone)
 		comboScaling = 0;
 		meterScaling = 0;
 		comboCounterID = noone;
+		comboDamage = 0;
 	}
 
 	if (startCombo)

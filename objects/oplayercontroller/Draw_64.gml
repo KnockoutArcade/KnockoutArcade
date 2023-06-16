@@ -14,8 +14,8 @@ if (playerID == 1)
 	draw_text(20, 10, animTimer);
 	draw_text(20, 30, grounded);
 	draw_text(20, 50, enhanced);
-	draw_text(20, 70, inputSet);
-	draw_text(20, 90, changeFrame);
+	draw_text(20, 70, storedComboDamage);
+	draw_text(20, 90, comboScaling);
 } 
 else 
 {
@@ -28,8 +28,8 @@ else
 	draw_text(750, 10, state);
 	draw_text(750, 30, buffer);
 	draw_text(750, 50, animTimer);
-	draw_text(750, 70, vsp);
-	draw_text(750, 90, hsp);
+	draw_text(750, 70, storedComboDamage);
+	draw_text(750, 90, comboScaling);
 }
 
 	if (hitstun > 0)

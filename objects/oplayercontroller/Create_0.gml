@@ -288,6 +288,8 @@ comboCounterID = noone;
 comboScaling = 0; // How much the next hit will be scaled
 startCombo = false;
 cancelCombo = false;
+comboDamage = 0; // Records how much damage a combo did
+storedComboDamage = 0; // Used as a debug variable to display combo damage
 
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has

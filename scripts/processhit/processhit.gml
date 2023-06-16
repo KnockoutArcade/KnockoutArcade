@@ -15,17 +15,21 @@ function ProcessHit( attackProperty, collision_list)
 			scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
 			scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
-			owner.comboScaling += attackProperty.ComboScaling;
 		} // increase the level of scaling for the combo
 		else if (owner.combo == 2)
 		{
 			owner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
-					
+			
+		owner.comboScaling += attackProperty.ComboScaling;
+		
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-					
+		
+		// Record Combo Damage
+		owner.comboDamage += scaledDamage;
+		owner.storedComboDamage = owner.comboDamage;
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
@@ -77,17 +81,20 @@ function ProcessHit( attackProperty, collision_list)
 			scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
 			scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
-			owner.playerOwner.comboScaling += attackProperty.ComboScaling;
 		} // increase the level of scaling for the combo
 		else if (owner.playerOwner.combo == 2)
 		{
 			owner.playerOwner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
-					
+				
+		owner.playerOwner.comboScaling += attackProperty.ComboScaling;
+				
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 					
+		owner.playerOwner.comboDamage += scaledDamage;
+		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);

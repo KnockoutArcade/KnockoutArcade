@@ -14,10 +14,6 @@ if (lifetime < 1 && !isProjectile)
 	instance_destroy();
 }
 
-if (!global.game_paused && owner.state != eState.HITSTOP) 
-{
-	lifetime--;
-}
 
 x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
 y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
@@ -25,6 +21,11 @@ y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
 // Handle non-projectiles
 if (!isProjectile)
 {
+	if (!global.game_paused && owner.state != eState.HITSTOP) 
+	{
+		lifetime--;
+	}
+	
 	if (!owner.inAttackState)
 	{
 		instance_destroy();
@@ -335,6 +336,11 @@ if (!isProjectile)
 }
 else
 {
+	if (!global.game_paused && owner.playerOwner.state != eState.HITSTOP) 
+	{
+		lifetime--;
+	}
+	
 	var collisionCheck = place_meeting(x,y, oPlayerHurtbox);
 	var collisionID = noone;
 
