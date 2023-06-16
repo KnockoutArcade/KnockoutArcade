@@ -1980,7 +1980,6 @@ if (superMeter < 0)
 {
 	superMeter = 0;
 }
-superMeter = 100;
 
 
 if (target != noone)
