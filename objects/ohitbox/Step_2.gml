@@ -30,6 +30,12 @@ if (!isProjectile)
 	{
 		instance_destroy();
 	}
+	
+	// Prevent air moves from being lows
+	if (!owner.grounded && attackProperty.AttackType == eAttackType.LOW)
+	{
+		attackProperty.AttackType = eAttackType.MID;
+	}
 
 	var collisionCheck = place_meeting(x,y, oPlayerHurtbox);
 	var collisionID = noone;
