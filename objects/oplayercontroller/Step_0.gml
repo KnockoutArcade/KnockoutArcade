@@ -599,8 +599,6 @@ if (!isGrabbed)
 	image_angle = 0;
 }
 
-// Handle Enviornmental Displacement
-environmentDisplacement = 0;
 
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
@@ -1982,6 +1980,7 @@ if (superMeter < 0)
 {
 	superMeter = 0;
 }
+superMeter = 100;
 
 
 if (target != noone)
@@ -2041,48 +2040,29 @@ if (state != eState.HITSTOP)
 	// Collisions With Players
 	if (opponent != noone)
 	{
-		if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+		// Check to see if players are about to be touching
+		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || (((opponent.state = eState.HURT && !opponent.grounded) || opponent.state = eState.LAUNCHED) || ((state = eState.HURT && !grounded) || state = eState.LAUNCHED))))
 		{
-	
-		// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
-		// If the opponent is next to a wall, also don't move us
-			if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
+			hsp *= .75; // Reduce player speed
+			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+			// Simulate the opponent moving forwards
+			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+			// While the players are still touching
+			while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
 			{
-				// If we are both moving
-				environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-			} 
-			else // if one person is moving and the other isn't
-			{
-				with (opponent)
-				{
-					// Wall Detection
-					if (place_meeting(x+(other.hsp), y, oWall)) 
-					{
-						other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
-					} 
-					else 
-					{
-					
-						if (hsp == 0)
-						{
-							other.environmentDisplacement = -other.hsp/2;
-						}
-						else if (sign(hsp) != -image_xscale)
-						{
-							other.environmentDisplacement = hsp/2;
-						}
-					
-					}
+				// Move the players away from each other
+				if x > opponent.x {
+					environmentDisplacement += .5;
+					opponent.x -= .5;
 				}
-			
+				else 
+				{
+					environmentDisplacement -= .5;
+					opponent.x += .5;
+				}
 			}
-		
-			// if we are still colliding with the opponent, slide us out
-			if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
-			{
-				environmentDisplacement += sign(x - opponent.x);
-			}
-		
+			opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+			opponent.x = origanalX; // Return oponent to original position
 		}
 	}
 	
@@ -2094,7 +2074,6 @@ if (state != eState.HITSTOP)
 		{
 			x += sign(hsp+environmentDisplacement);
 		}
-		//floor(x);
 		hsp = 0;
 		environmentDisplacement = 0;
 	}
@@ -2138,6 +2117,9 @@ if (state != eState.HITSTOP)
 x += hsp + environmentDisplacement;
 x = clamp(x, global.camObj.x-80, global.camObj.x+80);
 y += vsp;
+
+// Handle Enviornmental Displacement
+environmentDisplacement = 0;
 
 floor(y);
 
