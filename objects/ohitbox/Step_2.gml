@@ -190,10 +190,10 @@ if (!isProjectile)
 					
 				}
 				else if (collision_list[| i].owner.canBlock) && // Blocking
-					(((attackProperty.AttackType == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || 
+					(((attackProperty.AttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) || 
 					attackProperty.AttackType == eAttackType.MID || 
 					(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
-					(collision_list[| i].owner.movedir == blockingDirection)// Check if the opponent is holding back
+					(collision_list[| i].owner.movedir == blockingDirection || collision_list[| i].owner.toggleIdleBlock)// Check if the opponent is holding back
 				{
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
@@ -202,7 +202,7 @@ if (!isProjectile)
 					owner.state = eState.HITSTOP;
 				
 					// Handle if the opponent is Crouch blocking or not
-					if (collision_list[| i].owner.verticalMoveDir == -1)
+					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
 					{
 						collision_list[| i].owner.sprite_index = sRussel_Crouch_Block;
 						collision_list[| i].owner.isCrouchBlocking = true;
