@@ -34,7 +34,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		owner.superMeter += floor(attackProperty.MeterGain);
-					
+		
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
