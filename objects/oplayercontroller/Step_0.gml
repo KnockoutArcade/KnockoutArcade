@@ -1572,7 +1572,8 @@ switch state
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel++;
 			}
-			else
+			// Prevent player from ocillating if knockbackVel is a decimal.
+			if (knockbackVel > -1 && knockbackVel < 1)
 			{
 				hsp = 0;
 				knockbackVel = 0;
