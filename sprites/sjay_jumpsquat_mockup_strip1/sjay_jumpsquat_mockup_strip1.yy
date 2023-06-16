@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},"LayerId":{"name":"071727dd-5226-45a4-ac30-3e6599a5a006","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"Jay_jumpsquat_mockup_strip1","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"LayerId":{"name":"071727dd-5226-45a4-ac30-3e6599a5a006","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_jumpsquat_mockup_strip1","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"Jay_jumpsquat_mockup_strip1","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},
+    "spriteId": {"name":"sJay_jumpsquat_mockup_strip1","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b861b010-e2e7-4eab-a63e-c7269fa55c24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"b861b010-e2e7-4eab-a63e-c7269fa55c24","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8eab1a5e-51fa-42ed-9ca9-c1c7425422a5","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 40,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"Jay_jumpsquat_mockup_strip1","path":"sprites/Jay_jumpsquat_mockup_strip1/Jay_jumpsquat_mockup_strip1.yy",},
+    "parent": {"name":"sJay_jumpsquat_mockup_strip1","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},
     "resourceVersion": "1.4",
-    "name": "Jay_jumpsquat_mockup_strip1",
+    "name": "sJay_jumpsquat_mockup_strip1",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Characters/Jay.yy",
   },
   "resourceVersion": "1.0",
-  "name": "Jay_jumpsquat_mockup_strip1",
+  "name": "sJay_jumpsquat_mockup_strip1",
   "tags": [],
   "resourceType": "GMSprite",
 }
