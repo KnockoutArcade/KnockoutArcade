@@ -58,6 +58,7 @@ else
 isSuperJumping = false; // Is the player currently super jumping?
 storedSuperJump = false; // Whether the player has their super jump stored or not
 superJumpTimer = 0; // The amount of time the player has stored their jump for
+jumpAttackBuffer = 0; // Which attack to buffer out of jumpsquat
 
 // A double jump is when the player jumps again in the air
 

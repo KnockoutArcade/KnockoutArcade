@@ -876,8 +876,17 @@ switch state
 		
 		if (animTimer > 4)
 		 {
-			state = eState.JUMPING;
+			if (jumpAttackBuffer != 0)
+			{
+				state = jumpAttackBuffer;
+			}
+			else
+			{
+				state = eState.JUMPING;
+			}
 			grounded = false;
+			jumpAttackBuffer = 0;
+			animTimer = 0;
 			
 			if (canShortHop)
 			{
