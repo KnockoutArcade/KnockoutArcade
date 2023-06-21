@@ -4880,45 +4880,57 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Crouching_Medium",
-      "Duration": 21,
-      "NumberOfFrames": 7,
+      "SpriteName": "sRussel_NSpecial_Enhanced",
+      "Duration": 27,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
-          "Length": 0,
+          "Length": 3,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 5,
           "ImageIndex": 2
         },
         {
-          "Length": 1,
+          "Length": 7,
           "ImageIndex": 3
         },
         {
-          "Length": 3,
+          "Length": 9,
           "ImageIndex": 4
         },
         {
-          "Length": 4,
+          "Length": 10,
           "ImageIndex": 5
         },
         {
-          "Length": 7,
+          "Length": 11,
           "ImageIndex": 6
         },
         {
-          "Length": 9,
+          "Length": 14,
           "ImageIndex": 7
         },
         {
-          "Length": 11,
+          "Length": 17,
           "ImageIndex": 8
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 9,
           "Lifetime": 3,
-          "AttackWidth": 24,
+          "AttackWidth": 35,
           "AttackHeight": 35,
           "WidthOffset": 3,
           "HeightOffset": 8,
@@ -4942,7 +4954,7 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 4.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "CausesWallbounce": false
         }
       ],
@@ -4984,8 +4996,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 5,
+          "Lifetime": 30,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": 5,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5005,7 +5026,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 16.0,
+            "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -5025,8 +5046,8 @@
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
         "NumberOfWindows": 3,
@@ -5040,7 +5061,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 16.0,
+            "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -5053,8 +5074,8 @@
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "SupplimentaryScript": ""
     },
@@ -5733,6 +5754,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-21T13:04:29.941358-07:00",
+  "LastModified": "2023-06-21T15:13:38.9499842-07:00",
   "LastModifiedBy": "creep"
 }

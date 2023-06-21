@@ -302,3 +302,6 @@ PaletteSetup(0, selectedCharacter);
 
 // Character speed trail variables
 speedTrailTimer = 0;
+
+// Moveset-switching related variables
+currentMovesetID = 1; // Which sub-set of a character's moves are we using (starts at 1)
