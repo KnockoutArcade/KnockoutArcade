@@ -75,11 +75,11 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1)
 			{
-				if (p1.hp > p2.hp)
+				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
 					global.p1Rounds++;
 				}
-				else if (p2.hp > p1.hp)
+				else if (p2.hp/p2.maxHitPoints > p1.hp/p1.maxHitPoints)
 				{
 					global.p2Rounds++;
 				}

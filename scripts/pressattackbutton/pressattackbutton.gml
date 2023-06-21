@@ -27,6 +27,10 @@ function PressAttackButton(attack)
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
 				}
+				else
+				{
+					jumpAttackBuffer = eState.JUMPING_LIGHT_ATTACK;
+				}
 			break;
 		
 			case 2:
@@ -43,6 +47,10 @@ function PressAttackButton(attack)
 					state = eState.STANDING_MEDIUM_ATTACK;
 					image_index = 0;
 				}
+				else
+				{
+					jumpAttackBuffer = eState.JUMPING_MEDIUM_ATTACK;
+				}
 			break;
 			
 			case 3:
@@ -58,6 +66,10 @@ function PressAttackButton(attack)
 				{
 					state = eState.STANDING_HEAVY_ATTACK;
 					image_index = 0;
+				}
+				else
+				{
+					jumpAttackBuffer = eState.JUMPING_HEAVY_ATTACK;
 				}
 			break;
 			

@@ -23,4 +23,15 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 			instance_destroy(hurtbox);
 		}
 	}
+	
+	// Destroy all hitboxes that belong to this player
+	for (var i = 0; i < instance_number(oHitbox); i++;)
+	{
+		var playerHitbox = instance_find(oHitbox, i);
+		
+		if (playerHitbox.owner == id)
+		{ 
+			instance_destroy(playerHitbox);
+		}
+	}
 }

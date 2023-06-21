@@ -58,6 +58,7 @@ else
 isSuperJumping = false; // Is the player currently super jumping?
 storedSuperJump = false; // Whether the player has their super jump stored or not
 superJumpTimer = 0; // The amount of time the player has stored their jump for
+jumpAttackBuffer = 0; // Which attack to buffer out of jumpsquat
 
 // A double jump is when the player jumps again in the air
 
@@ -288,6 +289,8 @@ comboCounterID = noone;
 comboScaling = 0; // How much the next hit will be scaled
 startCombo = false;
 cancelCombo = false;
+comboDamage = 0; // Records how much damage a combo did
+storedComboDamage = 0; // Used as a debug variable to display combo damage
 
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has

@@ -14,10 +14,6 @@ if (lifetime < 1 && !isProjectile)
 	instance_destroy();
 }
 
-if (!global.game_paused) 
-{
-	lifetime--;
-}
 
 x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
 y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
@@ -25,9 +21,20 @@ y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
 // Handle non-projectiles
 if (!isProjectile)
 {
+	if (!global.game_paused && owner.state != eState.HITSTOP) 
+	{
+		lifetime--;
+	}
+	
 	if (!owner.inAttackState)
 	{
 		instance_destroy();
+	}
+	
+	// Prevent air moves from being lows
+	if (!owner.grounded && attackProperty.AttackType == eAttackType.LOW)
+	{
+		attackProperty.AttackType = eAttackType.MID;
 	}
 
 	var collisionCheck = place_meeting(x,y, oPlayerHurtbox);
@@ -44,6 +51,19 @@ if (!isProjectile)
 		for (var i = 0; i < collisionID; i++;) 
 		{
 		
+			// Calculate blocking direction
+			if (collision_list[| i].owner.x >= owner.x)
+			{
+				// Owner is on the left side
+				var ownerOnSide = -1;
+			} else
+			{
+				// Owner is on right side
+				var ownerOnSide = 1;
+			}
+			
+			var blockingDirection = -ownerOnSide;
+			
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
@@ -169,12 +189,12 @@ if (!isProjectile)
 					instance_destroy(oHitbox);
 					
 				}
-				else if (collision_list[| i].owner.canBlock && // Blocking
-					((attackProperty.AttackType == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) || 
+				else if (collision_list[| i].owner.canBlock) && // Blocking
+					(((attackProperty.AttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) || 
 					attackProperty.AttackType == eAttackType.MID || 
-					(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1)))
+					(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
+					(collision_list[| i].owner.movedir == blockingDirection || collision_list[| i].owner.toggleIdleBlock)// Check if the opponent is holding back
 				{
-					// Check to see if we are blocking correctly
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
 				
@@ -182,7 +202,7 @@ if (!isProjectile)
 					owner.state = eState.HITSTOP;
 				
 					// Handle if the opponent is Crouch blocking or not
-					if (collision_list[| i].owner.verticalMoveDir == -1)
+					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
 					{
 						collision_list[| i].owner.sprite_index = sRussel_Crouch_Block;
 						collision_list[| i].owner.isCrouchBlocking = true;
@@ -322,6 +342,11 @@ if (!isProjectile)
 }
 else
 {
+	if (!global.game_paused && owner.playerOwner.state != eState.HITSTOP) 
+	{
+		lifetime--;
+	}
+	
 	var collisionCheck = place_meeting(x,y, oPlayerHurtbox);
 	var collisionID = noone;
 
@@ -342,6 +367,21 @@ else
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 			if (collision_list[| i].owner != owner.playerOwner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
 			{
+				
+				// Calculate blocking direction
+				if (collision_list[| i].owner.x >= owner.playerOwner.x)
+				{
+					// Owner is on the left side
+					var ownerOnSide = -1;
+				} else
+				{
+					// Owner is on right side
+					var ownerOnSide = 1;
+				}
+			
+				var blockingDirection = -ownerOnSide;
+				
+				
 				//Set who the player is currently targeting
 				owner.playerOwner.target = collision_list[| i].owner.id;
 			
@@ -351,7 +391,8 @@ else
 				if (collision_list[| i].owner.canBlock) && 
 					((attackProperty.AttackType == eAttackType.LOW && collision_list[| i].owner.verticalMoveDir == -1) 
 					|| attackProperty.AttackType == eAttackType.MID || 
-					(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))
+					(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1)) &&
+					(collision_list[| i].owner.movedir == blockingDirection)
 				{
 					
 					collision_list[| i].owner.prevState = eState.BLOCKING;
