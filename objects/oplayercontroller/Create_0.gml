@@ -305,3 +305,11 @@ speedTrailTimer = 0;
 
 // Moveset-switching related variables
 currentMovesetID = 1; // Which sub-set of a character's moves are we using (starts at 1)
+if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
+{
+	// Iterate through each entry in MoveData (this contains every attack, used or not)
+	// Within each entry, iterate through InMovesets to determine if each move belongs in the player's
+	// current moveset. If InMovesets[j] = currentMovesetID, then we know that that move should be in
+	// the active moveset. To add the move, simply overwrite what was already there.
+	OverwriteMoveset();
+}

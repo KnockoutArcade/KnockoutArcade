@@ -20,6 +20,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		frameAdvantage = true;
 		hsp = 0;
 		isThrowable = true;
+		
+		// If this move updates the moveset, switch the moveset
+		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
+		{
+			if (moveToDo.SwitchMoveset)
+			{
+				currentMovesetID = moveToDo.SwitchToMoveset;
+				OverwriteMoveset();
+			}
+		}
 	}
 	
 	if (!ignoreWalkoff)
