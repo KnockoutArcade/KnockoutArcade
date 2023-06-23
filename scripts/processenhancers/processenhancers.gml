@@ -18,8 +18,6 @@ function ProcessEnhancers(Special) {
 			{
 				if (enhanced[i])
 				{
-					animTimer = 1;
-				
 					// Which move should we switch to?
 					switch (Special.SpecialData[i].EnhancementMove)
 					{
@@ -165,6 +163,8 @@ function ProcessEnhancers(Special) {
 						break;
 						
 					}
+					animTimer = 1;
+					image_index = 0;
 				}
 			}
 		}
