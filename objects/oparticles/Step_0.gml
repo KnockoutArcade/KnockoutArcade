@@ -15,7 +15,13 @@ if (lifetime < 1)
 	{
 		global.game_paused = false;
 	}
+	
 	instance_destroy();
+}
+
+if (sprite_index == sKOText)
+{
+	depth = 100;
 }
 
 lifetime--;
