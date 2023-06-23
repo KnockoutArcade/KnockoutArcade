@@ -323,15 +323,6 @@ if (!isProjectile)
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
-				
-						//Draw hit effect
-					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
-					with (particle) 
-					{
-						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
-						image_xscale = sign(other.owner.image_xscale);
-						lifetime = other.attackProperty.ParticleDuration;
-					}
 					
 					// Play sound effect
 					audio_play_sound(sfx_light_hit2, 0, false);

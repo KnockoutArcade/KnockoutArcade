@@ -1741,6 +1741,12 @@ switch state
 			blockbuffer = true;
 		}
 		
+		if (playerID == 2)
+		{
+			prevState = eState.STANDING_LIGHT_ATTACK;
+			blockbuffer = true;
+		}
+		
 		// Buffer attack out of block
 		switch attack 
 		{
