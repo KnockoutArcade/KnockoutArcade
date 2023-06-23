@@ -19,7 +19,7 @@ if (lifetime < 1)
 	instance_destroy();
 }
 
-if (sprite_index == sKOText)
+if (sprite_index == sKOText || sprite_index == sDoubleKOText)
 {
 	depth = 100;
 }
