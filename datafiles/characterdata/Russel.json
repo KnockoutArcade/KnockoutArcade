@@ -4504,7 +4504,7 @@
           "HeightOffset": -1,
           "Group": 1,
           "Damage": 12,
-          "AttackHitStop": 20,
+          "AttackHitStop": 14,
           "AttackHitStun": 19,
           "AttackType": 0,
           "BlockStun": 16.0,
@@ -5348,7 +5348,7 @@
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 1.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 0,
+          "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sGeyser",
           "ParticleDuration": 14,
@@ -5878,6 +5878,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-23T13:28:40.3274876-07:00",
+  "LastModified": "2023-06-23T14:41:23.4364261-07:00",
   "LastModifiedBy": "creep"
 }

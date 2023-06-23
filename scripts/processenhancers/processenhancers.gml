@@ -165,6 +165,7 @@ function ProcessEnhancers(Special) {
 					}
 					animTimer = 1;
 					image_index = 0;
+					isEXFlash = true;
 				}
 			}
 		}

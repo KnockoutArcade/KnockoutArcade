@@ -67,6 +67,7 @@ function PerformMotionInputs(attack)
 			if (enhanced[i])
 			{
 				inputPerformed = true;
+				isEXFlash = true;
 			}
 		}
 		

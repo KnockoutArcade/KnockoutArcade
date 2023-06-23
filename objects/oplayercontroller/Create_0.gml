@@ -293,12 +293,15 @@ comboDamage = 0; // Records how much damage a combo did
 storedComboDamage = 0; // Used as a debug variable to display combo damage
 
 //Meter Related Variables
-superMeter = 0; // the amount of meter the player has
+superMeter = 50; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 meterScaling = 0; // How much meter gain will be scaled
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
+isEXFlash = false; // Whether or not the player should be flashing
+EXFlashTimer = 0; // Timer for EXFlash
+displayEXFlash = false; // Toggle for the flashing
 
 // Character speed trail variables
 speedTrailTimer = 0;

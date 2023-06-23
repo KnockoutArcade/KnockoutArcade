@@ -394,6 +394,8 @@ if (state == eState.IDLE)
 	
 	frameAdvantage = false;
 	
+	isEXFlash = false;
+	
 	PressAttackButton(attack);
 	
 	HandleWalkingOffPlatforms(false);
@@ -461,6 +463,8 @@ if (state == eState.CROUCHING)
 		}
 	}
 	
+	isEXFlash = false;
+	
 	PressAttackButton(attack);
 	
 	HandleWalkingOffPlatforms(false);
@@ -476,6 +480,7 @@ else if (global.hitstop != 0)
 	state = eState.HITSTOP;
 }
 
+
 if (state == eState.HITSTOP)
 {
 	hitstunShuffleTimer++;
@@ -489,6 +494,7 @@ if (state == eState.HITSTOP)
 		
 		FAvictim = true;
 		blockstun = 0;
+		isEXFlash = false;
 		
 		if (hitstunShuffleTimer % 2 == 1)
 		{
@@ -611,6 +617,7 @@ if (state == eState.SCREEN_FREEZE)
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
+		isEXFlash = true;
 		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)
 		{
@@ -1528,7 +1535,7 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
-		
+		isEXFlash = false;
 		
 		if (!global.game_paused)
 		{

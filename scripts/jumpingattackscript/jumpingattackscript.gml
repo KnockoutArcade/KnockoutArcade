@@ -18,6 +18,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		state = eState.JUMPING;
 		frameAdvantage = true;
 		isThrowable = true;
+		isEXFlash = false;
 		
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
