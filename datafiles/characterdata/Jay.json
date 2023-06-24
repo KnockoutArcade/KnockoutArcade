@@ -1947,8 +1947,8 @@
       },
       "SupplimentaryScript": "",
       "SpiritData": {
-        "ToggleState": false,
-        "SpiritAttack": 0,
+        "ToggleState": true,
+        "SpiritAttack": 16,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5155,6 +5155,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-06-24T01:15:19.9073604-07:00",
+  "LastModified": "2023-06-24T01:30:04.853025-07:00",
   "LastModifiedBy": "colstrau"
 }
