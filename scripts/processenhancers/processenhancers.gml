@@ -24,7 +24,7 @@ function ProcessEnhancers(Special) {
 						case 1: // Enhanced Neutral
 						{
 							state = eState.ENHANCED_NEUTRAL_SPECIAL;
-							sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId
+							sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -37,7 +37,7 @@ function ProcessEnhancers(Special) {
 						case 2: // Enhanced Side
 						{
 							state = eState.ENHANCED_SIDE_SPECIAL;
-							sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId
+							sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL, selectedCharacter.EnhancedSideSpecial.SpriteId, 1);
 							inputSet = false;
 						}
@@ -46,7 +46,7 @@ function ProcessEnhancers(Special) {
 						case 4: // Enhanced Up
 						{
 							state = eState.ENHANCED_UP_SPECIAL;
-							sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId
+							sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL, selectedCharacter.EnhancedUpSpecial.SpriteId, 1);
 							inputSet = false;
 						}
@@ -55,7 +55,7 @@ function ProcessEnhancers(Special) {
 						case 8: // Enhanced Down
 						{
 							state = eState.ENHANCED_DOWN_SPECIAL;
-							sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId
+							sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL, selectedCharacter.EnhancedDownSpecial.SpriteId, 1);
 							inputSet = false;
 						}
@@ -64,7 +64,7 @@ function ProcessEnhancers(Special) {
 						case 16: // Enhanced Neutral 2
 						{
 							state = eState.ENHANCED_NEUTRAL_SPECIAL_2;
-							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId
+							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);
 							inputSet = false;
 						}
@@ -73,7 +73,7 @@ function ProcessEnhancers(Special) {
 						case 32: // Enhanced Side 2
 						{
 							state = eState.ENHANCED_SIDE_SPECIAL_2;
-							sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId
+							sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL_2, selectedCharacter.EnhancedSideSpecial2.SpriteId, 1);
 							inputSet = false;
 						}
@@ -82,7 +82,7 @@ function ProcessEnhancers(Special) {
 						case 64: // Enhanced Up 2
 						{
 							state = eState.ENHANCED_UP_SPECIAL_2;
-							sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId
+							sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL_2, selectedCharacter.EnhancedUpSpecial2.SpriteId, 1);
 							inputSet = false;
 						}
@@ -91,7 +91,7 @@ function ProcessEnhancers(Special) {
 						case 128: // Enhanced Down 2
 						{
 							state = eState.ENHANCED_DOWN_SPECIAL_2;
-							sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId
+							sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL_2, selectedCharacter.EnhancedDownSpecial2.SpriteId, 1);
 							inputSet = false;
 						}
@@ -100,7 +100,7 @@ function ProcessEnhancers(Special) {
 						case 256: // Rekka Launcher
 						{
 							state = eState.REKKA_LAUNCHER;
-							sprite_index = selectedCharacter.RekkaLauncher.SpriteId
+							sprite_index = selectedCharacter.RekkaLauncher.SpriteId;
 							CancelIntoMove(eState.REKKA_LAUNCHER, selectedCharacter.RekkaLauncher.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -113,7 +113,7 @@ function ProcessEnhancers(Special) {
 						case 512: // Rekka Finisher
 						{
 							state = eState.REKKA_FINISHER;
-							sprite_index = selectedCharacter.RekkaFinisher.SpriteId
+							sprite_index = selectedCharacter.RekkaFinisher.SpriteId;
 							CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -126,7 +126,7 @@ function ProcessEnhancers(Special) {
 						case 1024: // Rekka Connecter
 						{
 							state = eState.REKKA_CONNECTER;
-							sprite_index = selectedCharacter.RekkaConnecter.SpriteId
+							sprite_index = selectedCharacter.RekkaConnecter.SpriteId;
 							CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -139,7 +139,7 @@ function ProcessEnhancers(Special) {
 						case 2048: // Rekka Low
 						{
 							state = eState.REKKA_LOW;
-							sprite_index = selectedCharacter.RekkaLow.SpriteId
+							sprite_index = selectedCharacter.RekkaLow.SpriteId;
 							CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -152,7 +152,7 @@ function ProcessEnhancers(Special) {
 						case 4096: // Rekka High
 						{
 							state = eState.REKKA_HIGH;
-							sprite_index = selectedCharacter.RekkaHigh.SpriteId
+							sprite_index = selectedCharacter.RekkaHigh.SpriteId;
 							CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
 							inputSet = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
@@ -163,7 +163,7 @@ function ProcessEnhancers(Special) {
 						break;
 						
 					}
-					animTimer = 1;
+					animTimer = 0;
 					image_index = 0;
 					isEXFlash = true;
 				}

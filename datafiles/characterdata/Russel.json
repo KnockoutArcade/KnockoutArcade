@@ -4578,8 +4578,8 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 23,
-          "Lifetime": 16,
+          "Start": 19,
+          "Lifetime": 32,
           "AttackWidth": 19,
           "AttackHeight": 30,
           "WidthOffset": 6,
@@ -5345,8 +5345,8 @@
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 0.5,
           "Launches": false,
-          "LaunchKnockbackVertical": -2.0,
-          "LaunchKnockbackHorizontal": 1.0,
+          "LaunchKnockbackVertical": -4.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
@@ -5376,8 +5376,8 @@
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "Launches": true,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "LaunchKnockbackVertical": -5.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false
         }
@@ -5397,8 +5397,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 50,
+          "AttackWidth": 19,
+          "AttackHeight": 30,
+          "WidthOffset": 6,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5410,14 +5419,14 @@
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 2,
+            "StartingFrame": 1,
             "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 3,
+            "StartingFrame": 2,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -5878,6 +5887,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-23T14:41:23.4364261-07:00",
+  "LastModified": "2023-06-23T18:33:17.4582291-07:00",
   "LastModifiedBy": "creep"
 }

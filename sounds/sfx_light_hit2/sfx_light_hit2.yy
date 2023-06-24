@@ -11,8 +11,8 @@
     "name": "audiogroup_default",
     "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_light_hit2.ogg",
-  "duration": 1.712472,
+  "soundFile": "sfx_light_hit2.wav",
+  "duration": 1.195828,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
