@@ -1,8 +1,8 @@
 {
   "Name": "Russel",
   "MaxHitPoints": 100,
-  "RegenSpeed": 0,
-  "KORegenSpeed": 0,
+  "RegenSpeed": 0.0,
+  "KORegenSpeed": 0.0,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
@@ -1307,6 +1307,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -1516,6 +1517,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -1694,6 +1696,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -1837,6 +1840,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -2166,6 +2170,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -2482,6 +2487,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -2621,6 +2627,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -2760,6 +2767,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -2929,6 +2937,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3102,6 +3111,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3237,6 +3247,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3451,6 +3462,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3622,6 +3634,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3753,6 +3766,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -3900,6 +3914,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4047,6 +4062,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4294,6 +4310,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4533,6 +4550,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4738,6 +4756,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4881,6 +4900,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -4941,6 +4961,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5001,6 +5022,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5194,6 +5216,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5378,6 +5401,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5438,6 +5462,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5498,6 +5523,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5558,6 +5584,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5618,6 +5645,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5678,6 +5706,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5738,6 +5767,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5798,6 +5828,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5858,6 +5889,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5918,6 +5950,7 @@
       "SpiritData": {
         "ToggleState": false,
         "SpiritAttack": 0,
+        "StartAtCurrent": false,
         "StartXOffset": 0,
         "StartYOffset": 0
       }
@@ -5934,6 +5967,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-24T00:49:26.1384148-07:00",
+  "LastModified": "2023-06-24T10:19:34.7439012-07:00",
   "LastModifiedBy": "colstrau"
 }

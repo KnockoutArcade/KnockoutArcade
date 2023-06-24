@@ -1,5 +1,5 @@
 {
-  "Name": "Smooth Criminal",
+  "Name": "SmoothCriminal",
   "MaxHitPoints": 50,
   "RegenSpeed": 0.5,
   "KORegenSpeed": 0.25,
@@ -364,6 +364,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-06-24T10:17:52.419408-07:00",
+  "LastModified": "2023-06-24T10:20:18.9057893-07:00",
   "LastModifiedBy": "colstrau"
 }
