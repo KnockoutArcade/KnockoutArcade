@@ -1747,13 +1747,13 @@ switch state
 		{
 			blockbuffer = true;
 		}
-		
+		/*
 		if (playerID == 2)
 		{
 			prevState = eState.STANDING_LIGHT_ATTACK;
 			blockbuffer = true;
 		}
-		
+		*/
 		// Buffer attack out of block
 		switch attack 
 		{
@@ -2062,7 +2062,7 @@ if (state != eState.HITSTOP)
 	if (opponent != noone)
 	{
 		// Check to see if players are about to be touching
-		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || (((opponent.state = eState.HURT && !opponent.grounded) || opponent.state = eState.LAUNCHED) || ((state = eState.HURT && !grounded) || state = eState.LAUNCHED))))
+		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 		{
 			hsp *= .75; // Reduce player speed
 			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations

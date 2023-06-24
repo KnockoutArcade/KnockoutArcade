@@ -39,6 +39,7 @@
     {"id":{"name":"sOptionIcons","path":"sprites/sOptionIcons/sOptionIcons.yy",},"order":0,},
     {"id":{"name":"sCharSel_Portraits","path":"sprites/sCharSel_Portraits/sCharSel_Portraits.yy",},"order":5,},
     {"id":{"name":"oJay","path":"objects/oJay/oJay.yy",},"order":3,},
+    {"id":{"name":"sfx_blocking","path":"sounds/sfx_blocking/sfx_blocking.yy",},"order":4,},
     {"id":{"name":"sJay_Nspecial_mockup_strip5","path":"sprites/sJay_Nspecial_mockup_strip5/sJay_Nspecial_mockup_strip5.yy",},"order":6,},
     {"id":{"name":"oLevelGoal","path":"objects/oLevelGoal/oLevelGoal.yy",},"order":3,},
     {"id":{"name":"ProccessCommandGrab","path":"scripts/ProccessCommandGrab/ProccessCommandGrab.yy",},"order":18,},

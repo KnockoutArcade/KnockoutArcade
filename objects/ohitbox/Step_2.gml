@@ -244,6 +244,9 @@ if (!isProjectile)
 						sprite_index = sBlockEffect;
 						image_xscale = collision_list[| i].owner.image_xscale;
 					}
+					
+					//Play sound effect
+					audio_play_sound(sfx_blocking, 1, false);
 				}
 				//Hitting	
 				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB) 
