@@ -48,15 +48,15 @@
   "MoveData": [
     {
       "UID": "d703f036-f638-4323-ba91-760132f80a87",
-      "MoveType": 16,
+      "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 1,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Standing_Heavy",
-      "Duration": 39,
+      "Duration": 28,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -64,35 +64,35 @@
           "ImageIndex": 1
         },
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 7,
           "ImageIndex": 3
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 21,
+          "Length": 18,
           "ImageIndex": 5
         },
         {
-          "Length": 27,
+          "Length": 22,
           "ImageIndex": 6
         },
         {
-          "Length": 33,
+          "Length": 25,
           "ImageIndex": 7
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 10,
-          "Lifetime": 6,
+          "Start": 7,
+          "Lifetime": 5,
           "AttackWidth": 22,
           "AttackHeight": 13,
           "WidthOffset": 0,
@@ -135,7 +135,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -150,19 +150,8 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 1,
-      "SpecialData": [
-        {
-          "NumpadInput": "236",
-          "ButtonPressRequired": false,
-          "StartingFrame": 0,
-          "EndingFrame": 17,
-          "EnhancementMove": 1,
-          "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
-        }
-      ],
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -173,7 +162,7 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 12,
+          "Start": 5,
           "Lifetime": 19,
           "AttackWidth": 22,
           "AttackHeight": 16,
@@ -225,23 +214,25 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": true
       }
     },
     {
       "UID": "14c35ee8-cfbd-4bdc-bc63-ad0d0a676095",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 1,
+      "EnhanceMoveType": 16,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Standing_Heavy",
-      "Duration": 39,
+      "Duration": 28,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -249,33 +240,86 @@
           "ImageIndex": 1
         },
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 7,
           "ImageIndex": 3
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 21,
+          "Length": 18,
           "ImageIndex": 5
         },
         {
-          "Length": 27,
+          "Length": 22,
           "ImageIndex": 6
         },
         {
-          "Length": 33,
+          "Length": 25,
           "ImageIndex": 7
         }
       ],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 7,
+          "Lifetime": 5,
+          "AttackWidth": 22,
+          "AttackHeight": 13,
+          "WidthOffset": 0,
+          "HeightOffset": 10,
+          "Group": 1,
+          "Damage": 15,
+          "AttackHitStop": 5,
+          "AttackHitStun": 20,
+          "AttackType": 1,
+          "BlockStun": 4.0,
+          "KnockBack": 4.0,
+          "AirKnockbackVertical": 1.0,
+          "AirKnockbackHorizontal": 3.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "MeterGain": 2.0,
+          "ComboScaling": 1.0,
+          "CausesWallbounce": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 0,
+          "Group": 0,
+          "Damage": 0,
+          "MeterGain": 0.0,
+          "AttackHitStop": 0,
+          "AttackHitStun": 0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": 0.0,
+          "AirKnockbackHorizontal": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "",
+          "ParticleDuration": 0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "ComboScaling": 0.0,
+          "CausesWallbounce": false
+        }
+      ],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -346,10 +390,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": true
       }
     }
   ],
@@ -364,6 +410,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-06-24T10:20:18.9057893-07:00",
+  "LastModified": "2023-06-24T13:00:10.076722-07:00",
   "LastModifiedBy": "colstrau"
 }

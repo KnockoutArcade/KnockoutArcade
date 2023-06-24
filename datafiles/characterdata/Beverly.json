@@ -1202,10 +1202,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -1381,10 +1383,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -1525,10 +1529,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -1690,10 +1696,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -1931,10 +1939,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2067,10 +2077,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2218,10 +2230,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2369,10 +2383,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2535,10 +2551,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2729,10 +2747,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -2869,10 +2889,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3017,10 +3039,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3236,10 +3260,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3372,10 +3398,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3520,10 +3548,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3719,10 +3749,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -3970,10 +4002,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4191,10 +4225,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4252,10 +4288,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4402,10 +4440,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4463,10 +4503,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4524,10 +4566,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4721,10 +4765,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4870,10 +4916,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -4998,10 +5046,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5141,10 +5191,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5202,10 +5254,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5263,10 +5317,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5324,10 +5380,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5385,10 +5443,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5446,10 +5506,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5507,10 +5569,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5568,10 +5632,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5629,10 +5695,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     },
     {
@@ -5690,10 +5758,12 @@
       "SupplimentaryScript": "",
       "SpiritData": {
         "ToggleState": false,
-        "SpiritAttack": 0,
+        "PerformAttack": false,
         "StartAtCurrent": false,
         "StartXOffset": 0,
-        "StartYOffset": 0
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
       }
     }
   ],
@@ -5708,6 +5778,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-06-24T10:19:50.3555208-07:00",
+  "LastModified": "2023-06-24T13:03:59.2180688-07:00",
   "LastModifiedBy": "colstrau"
 }
