@@ -5,6 +5,8 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	var formedCharacter = {};
 	
 	formedCharacter.MaxHP = selectedCharacter.MaxHitPoints;
+	formedCharacter.RegenSpeed = selectedCharacter.RegenSpeed;
+	formedCharacter.KORegenSpeed = selectedCharacter.KORegenSpeed;
 	formedCharacter.BasePalette = selectedCharacter.BaseColor.ColorPalette;
 	formedCharacter.NumberOfPalettes = selectedCharacter.NumberOfPalettes;
 	formedCharacter.AlternatePalettes = selectedCharacter.Palettes;
@@ -87,6 +89,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.InMovesets = selectedCharacter.MoveData[i].InMovesets;
 		nextMove.SwitchMoveset = selectedCharacter.MoveData[i].SwitchMoveset;
 		nextMove.SwitchToMoveset = selectedCharacter.MoveData[i].SwitchToMoveset;
+		nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{

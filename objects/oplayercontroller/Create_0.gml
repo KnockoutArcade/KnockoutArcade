@@ -316,3 +316,18 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 	// the active moveset. To add the move, simply overwrite what was already there.
 	OverwriteMoveset();
 }
+
+// Spirit Data
+spiritState = 0; // 0 = Spirit OFF, 1 = Spirit ON
+spirit = noone;
+if (selectedCharacter.UniqueData.SpiritData == 1)
+{
+	for (var i = 0; i < array_length(global.characterData); i++)
+	{
+		if (selectedCharacter.UniqueData.Spirit == global.characterData[i].Name)
+		{
+			spirit = global.characterData[i];
+			break;
+		}
+	}
+}
