@@ -1,6 +1,8 @@
 {
   "Name": "Russel",
   "MaxHitPoints": 100,
+  "RegenSpeed": 0.0,
+  "KORegenSpeed": 0.0,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
@@ -1301,7 +1303,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "c14a5529-c9ef-4e2e-806a-7f48a2c0aa9a",
@@ -1504,7 +1515,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "75601a84-ef21-4269-834d-fda92d4ce626",
@@ -1676,7 +1696,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "189e5d3a-d24c-4e85-8ab1-743575916594",
@@ -1813,7 +1842,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
@@ -2136,7 +2174,16 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "15155b21-0122-46a6-9170-41408971b163",
@@ -2446,7 +2493,16 @@
         "GravityScale": 1.0,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
@@ -2579,7 +2635,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "303b54ea-442b-4669-9d47-ae3eac71217d",
@@ -2712,7 +2777,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
@@ -2875,7 +2949,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
@@ -3042,7 +3125,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
@@ -3171,7 +3263,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
@@ -3379,7 +3480,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
@@ -3544,7 +3654,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
@@ -3669,7 +3788,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
@@ -3810,7 +3938,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
@@ -3951,7 +4088,16 @@
         "GravityScale": 1.0,
         "FallScale": 1.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
@@ -4192,7 +4338,16 @@
         "GravityScale": 1.0,
         "FallScale": 10.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "df89eb6c-5314-4802-beb4-b2d0e0cd946d",
@@ -4425,7 +4580,16 @@
         "GravityScale": 1.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -4503,17 +4667,17 @@
           "WidthOffset": 7,
           "HeightOffset": -1,
           "Group": 1,
-          "Damage": 12,
-          "AttackHitStop": 14,
+          "Damage": 14,
+          "AttackHitStop": 20,
           "AttackHitStun": 19,
           "AttackType": 0,
-          "BlockStun": 16.0,
+          "BlockStun": 13.0,
           "KnockBack": 3.0,
           "AirKnockbackVertical": 5.0,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -2.5,
-          "LaunchKnockbackHorizontal": 0.5,
+          "LaunchKnockbackVertical": 5.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
@@ -4555,19 +4719,8 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 1,
-      "SpecialData": [
-        {
-          "NumpadInput": "623",
-          "ButtonPressRequired": false,
-          "StartingFrame": 1,
-          "EndingFrame": 27,
-          "EnhancementMove": 8,
-          "TransitionImmediately": false,
-          "TransitionFrame": 24,
-          "RequiredPosition": 0
-        }
-      ],
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -4578,8 +4731,8 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 19,
-          "Lifetime": 32,
+          "Start": 23,
+          "Lifetime": 16,
           "AttackWidth": 19,
           "AttackHeight": 30,
           "WidthOffset": 6,
@@ -4594,10 +4747,18 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 1.0,
-        "FallScale": 10.0
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
       },
       "AirMovementData": {
         "NumberOfWindows": 3,
@@ -4612,7 +4773,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 0.5,
-            "VerticalSpeed": -1.5,
+            "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -4627,7 +4788,16 @@
         "GravityScale": 0.5,
         "FallScale": 10.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "9b2daffb-58bf-4a67-914d-abf9a3561af9",
@@ -4764,7 +4934,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "ae5a0bfe-3db3-4c4f-a0a3-dca5efaed080",
@@ -4818,7 +4997,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "2502b52c-d1d1-4b11-8010-31475920045d",
@@ -4872,7 +5060,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "50760cb4-7206-4d56-bc1c-4e302e241f70",
@@ -4883,57 +5080,45 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_NSpecial_Enhanced",
-      "Duration": 27,
-      "NumberOfFrames": 10,
+      "SpriteName": "sRussel_Crouching_Medium",
+      "Duration": 21,
+      "NumberOfFrames": 7,
       "FrameData": [
         {
-          "Length": 3,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 5,
+          "Length": 0,
           "ImageIndex": 2
         },
         {
-          "Length": 7,
+          "Length": 1,
           "ImageIndex": 3
         },
         {
-          "Length": 9,
+          "Length": 3,
           "ImageIndex": 4
         },
         {
-          "Length": 10,
+          "Length": 4,
           "ImageIndex": 5
         },
         {
-          "Length": 11,
+          "Length": 7,
           "ImageIndex": 6
         },
         {
-          "Length": 14,
+          "Length": 9,
           "ImageIndex": 7
         },
         {
-          "Length": 17,
+          "Length": 11,
           "ImageIndex": 8
-        },
-        {
-          "Length": 21,
-          "ImageIndex": 9
-        },
-        {
-          "Length": 24,
-          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 9,
+          "Start": 5,
           "Lifetime": 3,
-          "AttackWidth": 35,
+          "AttackWidth": 24,
           "AttackHeight": 35,
           "WidthOffset": 3,
           "HeightOffset": 8,
@@ -4951,13 +5136,13 @@
           "LaunchKnockbackHorizontal": 0.1,
           "Pushback": 1.5,
           "ParticleXOffset": 20,
-          "ParticleYOffset": 30,
+          "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "CausesWallbounce": false
         }
       ],
@@ -4975,7 +5160,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
+          "ParticleEffect": "",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -4999,21 +5184,12 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
-      "HurtboxData": [
-        {
-          "Start": 5,
-          "Lifetime": 30,
-          "AttackWidth": 20,
-          "AttackHeight": 20,
-          "WidthOffset": 5,
-          "HeightOffset": 0
-        }
-      ],
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 1,
+        "HitBox": 0,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -5029,7 +5205,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 2.0,
+            "HorizontalSpeed": 16.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -5049,8 +5225,8 @@
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 1.0,
-        "FallScale": 1.0
+        "GravityScale": 0.0,
+        "FallScale": 0.0
       },
       "AirMovementData": {
         "NumberOfWindows": 3,
@@ -5064,7 +5240,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 2.0,
+            "HorizontalSpeed": 16.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -5077,10 +5253,19 @@
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 1.0,
-        "FallScale": 1.0
+        "GravityScale": 0.0,
+        "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "687f8742-8020-440c-9312-894fe679f4bf",
@@ -5258,130 +5443,33 @@
         "GravityScale": 0.70000005,
         "FallScale": 0.70000005
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "9cc77472-ac4b-4444-93cf-ecdf536ce0c2",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 8,
+      "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_DownSpecial",
-      "Duration": 57,
-      "NumberOfFrames": 13,
-      "FrameData": [
-        {
-          "Length": 2,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 4,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 8,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 11,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 14,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 17,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 20,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 22,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 29,
-          "ImageIndex": 9
-        },
-        {
-          "Length": 34,
-          "ImageIndex": 10
-        },
-        {
-          "Length": 42,
-          "ImageIndex": 11
-        },
-        {
-          "Length": 49,
-          "ImageIndex": 12
-        },
-        {
-          "Length": 51,
-          "ImageIndex": 13
-        }
-      ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 14,
-          "Lifetime": 4,
-          "AttackWidth": 20,
-          "AttackHeight": 30,
-          "WidthOffset": 10,
-          "HeightOffset": -1,
-          "Group": 1,
-          "Damage": 6,
-          "AttackHitStop": 20,
-          "AttackHitStun": 20,
-          "AttackType": 0,
-          "BlockStun": 23.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": -1.0,
-          "AirKnockbackHorizontal": 0.5,
-          "Launches": false,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 2.0,
-          "Pushback": 1.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sGeyser",
-          "ParticleDuration": 14,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "MeterGain": 8.0,
-          "ComboScaling": 1.0,
-          "CausesWallbounce": false
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 1,
-          "Damage": 8,
-          "MeterGain": 12.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 20,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": -1.0,
-          "AirKnockbackHorizontal": 0.5,
-          "Pushback": 0.0,
-          "ParticleXOffset": 5,
-          "ParticleYOffset": 40,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "Launches": true,
-          "LaunchKnockbackVertical": -5.0,
-          "LaunchKnockbackHorizontal": 2.0,
-          "ComboScaling": 2.0,
-          "CausesWallbounce": false
-        }
-      ],
+      "SpriteName": "",
+      "Duration": 0,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -5397,17 +5485,8 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
-      "HurtboxData": [
-        {
-          "Start": 1,
-          "Lifetime": 50,
-          "AttackWidth": 19,
-          "AttackHeight": 30,
-          "WidthOffset": 6,
-          "HeightOffset": 0
-        }
-      ],
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5416,25 +5495,10 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
-        "Windows": [
-          {
-            "StartingFrame": 1,
-            "HorizontalSpeed": 2.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
-          },
-          {
-            "StartingFrame": 2,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
-          }
-        ],
-        "GravityScale": 1.0,
-        "FallScale": 10.0
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
@@ -5442,7 +5506,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "9107bbf3-4f9c-4fca-a4fe-cca386b0e8c2",
@@ -5496,7 +5569,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "e017692f-fabe-4c74-bbc5-a500bce8074b",
@@ -5550,7 +5632,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "738a1cc6-cb17-4168-b1f3-2e9f25ca6706",
@@ -5604,7 +5695,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "f57ba5ac-be31-490a-8dd3-503c463077d4",
@@ -5658,7 +5758,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "8bafcdad-d182-4438-8239-91fed3375137",
@@ -5712,7 +5821,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "a45083ec-8fb4-4970-83ae-c991336a5056",
@@ -5766,7 +5884,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "0093b7dd-6b1c-4134-a3e6-84d545bbb88f",
@@ -5820,7 +5947,16 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     },
     {
       "UID": "f7d8a90d-9c8a-407e-ae05-607d5c9aa026",
@@ -5874,19 +6010,29 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "StartAtCurrent": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false
+      }
     }
   ],
   "UniqueData": {
     "AdditionalMovesets": 0,
     "SpiritData": 0,
+    "Spirit": "None",
     "Version": "Ver1.1.2",
-    "UID": "0aaf1be9-3036-4742-820e-c410a14dc6ec",
-    "LastModified": "2023-06-21T13:01:18.4737833-07:00",
-    "LastModifiedBy": "creep"
+    "UID": "8d7643fd-786e-4f4a-88f0-181010035452",
+    "LastModified": "2023-06-24T00:49:26.093911-07:00",
+    "LastModifiedBy": "colstrau"
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-23T18:33:17.4582291-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-06-24T13:03:55.3384745-07:00",
+  "LastModifiedBy": "colstrau"
 }
