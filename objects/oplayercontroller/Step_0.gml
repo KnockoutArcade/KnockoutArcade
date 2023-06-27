@@ -21,7 +21,7 @@ if (global.game_paused)
 } 
 
 if (!global.gameHalt)
-{
+{ 
 
 // Handle Inputs
 if (playerID == 1)
@@ -69,35 +69,40 @@ else
 canBlock = false;
 inAttackState = false;
 canTurnAround = true;
+projectileInvincible = false;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
 hurtboxOffset = -8;
 
+if (special)
+{
+	pressSpecialButtonTimer = 0;
+}
+else
+{
+	pressSpecialButtonTimer++;
+}
+
+
 // Handles running
 if (runButton)
 {
-	running = true;
-	
-	// All of the commented code is to limit the dash button if necessaary.
-	//if (holdButtonTimer == 0)
-	//{
-	//	if (grounded)
-	//	{
-	//		running = true;
-	//	}
-	//}
-	
-	//// Apply a special rule for back dashing to prevent it from repeating
-	//if (movedir == -image_xscale)
-	//{
-	//	if (holdButtonTimer > 0 || !grounded)
-	//	{
-	//		running = false;
-	//	}
-	//}
-	//holdButtonTimer++;
+	if (!runButtonPressed)
+	{
+		holdRunButtonTimer = 0;
+		runButtonPressed = true;
+	}
+	if (movedir == image_xscale || movedir == 0)
+	{
+		runningForward = true;
+	}
+	else if (movedir == -image_xscale)
+	{
+		runningBackward = true;
+	}
+	holdRunButtonTimer++;
 }
 else if (movedir == image_xscale) // If moving forward
 {
@@ -106,9 +111,9 @@ else if (movedir == image_xscale) // If moving forward
 		startedMovingForward = true;
 		
 		// Player must press the button again wihin 15 frames to dash
-		if (runForwardTimer < 15 && grounded)
+		if (runForwardTimer < 15)
 		{
-			running = true;
+			runningForward = true;
 		}
 	}
 	holdForwardTimer++;
@@ -121,24 +126,22 @@ else if (movedir == -image_xscale) // If moving backward
 		startedMovingBackward = true;
 		
 		// Player must press the button again wihin 15 frames to dash
-		if (runBackwardTimer < 15 && grounded)
+		if (runBackwardTimer < 15)
 		{
-			running = true;
+			runningBackward = true;
 		}
 	}
-	//else // In case we decide to prevent back dashing from repeating
-	//{
-	//	running = false;
-	//}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
 }
-else if ((!runButton && movedir == 0) || !grounded)
+else if ((!runButton && movedir == 0))
 {
-	running = false;
+	runningForward = false;
+	runningBackward = false;
 	holdForwardTimer = 0;
 	holdBackwardTimer = 0;
-	holdButtonTimer = 0;
+	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
+	runButtonPressed = false;
 }
 
 // Handles timer for running forward
@@ -163,7 +166,66 @@ else
 	runBackwardTimer++;
 }
 
-show_debug_message(state);
+// If the run button and special button are pressed within 4 frames of each other, activate rush cancel
+// Also works with double tap forward, in which case the leniency is 7 frames
+if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTimer <= 4) 
+	|| (pressSpecialButtonTimer <= 7 && holdForwardTimer <= 7 && runningForward && !runButton))
+	&& state != eState.BEING_GRABBED // Prevent Rush Cancels during any of these states...
+	&& state != eState.THROW_TECH
+	&& state != eState.HURT
+	&& state != eState.LAUNCHED
+	&& state != eState.KNOCKED_DOWN
+	&& state != eState.GETUP
+	&& state != eState.BLOCKING
+	&& hitstun <= 0 && blockstun <= 0 && !FAvictim // and when the player gets hit...
+	&& superMeter >= 50 // and if the player doesn't have enough meter...
+	&& !rcActivated // and if the player already activated Rush Cancel and it hasn't completed yet.
+	&& !rcBuffer)
+{
+	pressSpecialButtonTimer = 8;
+	holdRunButtonTimer = 8;
+	if (opponent != noone && opponent.activateFreeze)
+	{
+		// 1 frame buffer to determine if both players activated RC at the same time
+		if (opponent.rcActivated && opponent.rcFreezeTimer > 1)
+		{
+			ActivateRushCancel();
+		}
+		else
+		{
+			rcBuffer = true;
+			rcBufferTimer = 0;
+			rcBufferInterval = 30;
+		}
+	}
+	else if (heldOpponent != noone) // Activates buffer when grabbing
+	{
+		rcBuffer = true;
+		rcBufferTimer = 0;
+		rcBufferInterval = 999;
+	}
+	else
+	{
+		ActivateRushCancel();
+	}
+}
+if (rcBufferTimer > rcBufferInterval)
+{
+	rcBuffer = false;
+	rcBufferTimer = 0;
+}
+// Checks for either if the opponent activated screen freeze or if they are being grabbed
+if (rcBuffer && rcBufferTimer <= rcBufferInterval && ((opponent != noone && !opponent.activateFreeze && rcBufferInterval == 30)
+	|| (heldOpponent == noone && rcBufferInterval == 999)))
+{
+	rcBuffer = false;
+	rcBufferTimer = 0;
+	ActivateRushCancel();
+}
+if (rcBuffer)
+{
+	rcBufferTimer++;
+}
 
 // Handle storing input for Super Jump
 if (superJumpTimer > 0) 
@@ -273,17 +335,13 @@ if (state == eState.IDLE)
 	isShortHopping = false;
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
-	changedSpecialMove = false;
+	canBlock = true;
 	
-	if (toggleIdleBlock)
-	{ 
-		canBlock = true;
-	}
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !running) 
+	if (movedir == image_xscale && !runningForward) 
 	{
 		state = eState.WALKING;
 	} 
@@ -293,11 +351,11 @@ if (state == eState.IDLE)
 		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && running)
+	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && running && opponent != noone)
+	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -309,6 +367,7 @@ if (state == eState.IDLE)
 	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
+		jumpHsp = hsp;
 		// Is the player jumping forward?
 		if (movedir == image_xscale)
 		{
@@ -350,19 +409,10 @@ if (state == eState.CROUCHING)
 	frameAdvantage = false;
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
-	changedSpecialMove = false;
+	canBlock = true;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
-
-	if (movedir == -image_xscale)
-	{
-		canBlock = true;
-	}
-	else
-	{
-		canBlock = false;
-	}
 	
 	if (movedir == 0 && verticalMoveDir != -1) 
 	{
@@ -370,21 +420,16 @@ if (state == eState.CROUCHING)
 	}
 	
 	// Handle running and walking
-	if (movedir == image_xscale && !running && verticalMoveDir != -1) 
+	if (movedir != 0 && !runningForward && verticalMoveDir != -1) 
 	{
 		state = eState.WALKING;
-	} 
-	else if (movedir == -image_xscale && !running && verticalMoveDir != -1)
-	{
-		state = eState.WALKING;
-		canBlock = true;
 	}
 	
-	if ((movedir == image_xscale || movedir == 0) && running && verticalMoveDir != -1)
+	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
 	}
-	else if (movedir == -image_xscale && running && verticalMoveDir != -1 && opponent != noone)
+	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
 		sprite_index = CharacterSprites.runBackward_Sprite;
@@ -397,6 +442,7 @@ if (state == eState.CROUCHING)
 	{
 		state = eState.JUMPSQUAT;
 		hsp = walkSpeed * movedir;
+		jumpHsp = hsp;
 		// Is the player jumping forward?
 		if (movedir == image_xscale)
 		{
@@ -420,12 +466,12 @@ if (state == eState.CROUCHING)
 	HandleWalkingOffPlatforms(false);
 }
 
-// Animation
-if (global.hitstop == 0) 
+// Animation pauses during hitstop and when the screen freezes
+if (global.hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
 }
-else 
+else if (global.hitstop != 0)
 {
 	state = eState.HITSTOP;
 }
@@ -475,11 +521,10 @@ if (state == eState.HITSTOP)
 			// in the code is HITSTOP. Previous State stores what state we were in before entering
 			// hitstop.
       
-			// Exception for command grabs.
-			if (prevState != eState.COMMAND_GRAB)
+			var attackState = FindAttackState(prevState);
+			// Exception for invalid states
+			if (attackState != -1)
 			{
-				var attackState = FindAttackState(prevState);
-
 				CancelData(attackState, attack, false);
 			}
 		}
@@ -554,8 +599,78 @@ if (!isGrabbed)
 	image_angle = 0;
 }
 
-// Handle Enviornmental Displacement
-environmentDisplacement = 0;
+
+// Handle freezing screen
+if (state == eState.SCREEN_FREEZE)
+{
+	image_speed = 0;
+	hsp = 0;
+	environmentDisplacement = 0;
+	vsp = 0;
+	
+	// If player is performing Rush Cancel
+	if (rcActivated)
+	{
+		// Screen freeze for Rush Cancel lasts for 30 frames
+		if (rcFreezeTimer >= 30)
+		{
+			rcActivated = false;
+			rcFreezeTimer = 0;
+			activateFreeze = false;
+			stateBeforeFreeze = 0;
+			global.freezeTimer = false;
+			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
+			speedTrailTimer = 0;
+			comboScaling += 3.0;
+			if (!grounded)
+			{
+				state = eState.RUSH_CANCEL_AIR;
+			}
+			else if (verticalMoveDir == 1)
+			{
+				vsp = -global.rcUpSpeed;
+				jumpHsp = walkSpeed * 1.5 * image_xscale;
+				state = eState.RUSH_CANCEL_UP;
+				grounded = false;
+			}
+			else
+			{
+				rcForwardTimer = 0;
+				state = eState.RUSH_CANCEL_FORWARD;
+			}
+		}
+		else
+		{
+			rcFreezeTimer++;
+		}
+	}
+	// If opponent froze the screen
+	else if (opponent != noone && !opponent.activateFreeze && !activateFreeze)
+	{
+		hsp = freezeHSP;
+		environmentDisplacement = freezeEnvironmentDisplacement;
+		vsp = freezeVSP;
+		state = stateBeforeFreeze;
+		stateBeforeFreeze = 0;
+	}
+}
+
+// Freezes the player if the opponent freezes the screen
+if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZE)
+{
+	// Change some states when opponent activates screen freeze
+	if (state == eState.BEING_GRABBED)
+	{
+		state = eState.LAUNCHED;
+		vsp = -3; // Pops the player up a little
+	}
+	// Store all important variables before freezing
+	stateBeforeFreeze = state;
+	freezeHSP = hsp;
+	freezeEnvironmentDisplacement = environmentDisplacement;
+	freezeVSP = vsp;
+	state = eState.SCREEN_FREEZE;
+}
 
 // State Machine
 switch state 
@@ -568,7 +683,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
+		canBlock = true;
 		
 		if (movedir == image_xscale) 
 		{
@@ -578,15 +693,14 @@ switch state
 		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
-			canBlock = true;
 		}
 		
 		// Handle Transition to Run
-		if ((movedir == image_xscale || movedir == 0) && running)
+		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
 		}
-		else if (movedir == -image_xscale && running && opponent != noone) // Disable dashback if we aren't in a 1v1
+		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
 			sprite_index = CharacterSprites.runBackward_Sprite;
@@ -609,6 +723,7 @@ switch state
 		{
 			state = eState.JUMPSQUAT;
 			hsp = walkSpeed * movedir;
+			jumpHsp = hsp;
 			// Is the player jumping forward?
 			isJumpingForward = (movedir == image_xscale);
 			
@@ -647,7 +762,6 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -664,7 +778,7 @@ switch state
 		hsp = runSpeed * image_xscale;
 		vsp += fallSpeed;
 
-		if (!running) 
+		if (!runningForward) 
 		{
 			state = eState.IDLE;
 		}
@@ -673,6 +787,7 @@ switch state
 		if verticalMoveDir == 1 
 		{
 			state = eState.JUMPSQUAT;
+			jumpHsp = hsp;
 			// Is the player jumping forward?
 			if (movedir != -image_xscale) 
 			{
@@ -682,6 +797,7 @@ switch state
 			{
 				isJumpingForward = false;
 				hsp = walkSpeed * movedir;
+				jumpHsp = hsp;
 			}
 			
 			// handle Super Jumping
@@ -717,7 +833,6 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
-		changedSpecialMove = false;
 		
 		vsp += fallSpeed;
 		
@@ -754,14 +869,24 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
-		changedSpecialMove = false;
+
+		hsp = jumpHsp;
 		
 		PressAttackButton(attack);
 		
 		if (animTimer > 4)
 		 {
-			state = eState.JUMPING;
+			if (jumpAttackBuffer != 0)
+			{
+				state = jumpAttackBuffer;
+			}
+			else
+			{
+				state = eState.JUMPING;
+			}
 			grounded = false;
+			jumpAttackBuffer = 0;
+			animTimer = 0;
 			
 			if (canShortHop)
 			{
@@ -813,7 +938,6 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		if (isJumpingForward)
 		{
@@ -1324,7 +1448,6 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		isGrabbed = true;
 	}
@@ -1388,7 +1511,6 @@ switch state
 	{
 		grounded = true;
 		inAttackState = false;
-		changedSpecialMove = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -1406,7 +1528,6 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		
 		if (!global.game_paused)
@@ -1458,7 +1579,8 @@ switch state
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel++;
 			}
-			else
+			// Prevent player from ocillating if knockbackVel is a decimal.
+			if (knockbackVel > -1 && knockbackVel < 1)
 			{
 				hsp = 0;
 				knockbackVel = 0;
@@ -1499,7 +1621,6 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
-		changedSpecialMove = false;
 		
 		FAvictim = false;
 		
@@ -1519,7 +1640,6 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
-		changedSpecialMove = false;
 		
 		cancelCombo = true;
 		
@@ -1554,12 +1674,24 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
-		changedSpecialMove = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
 		if (animTimer > 30)
 		{
+			// Turn the player arround immediately
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}	
+			
 			state = eState.IDLE;
 			invincible = false;
 			
@@ -1594,7 +1726,6 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
-		changedSpecialMove = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -1732,7 +1863,84 @@ switch state
 	}
 	break;
 	
+	case eState.RUSH_CANCEL_FORWARD:
+	{
+		animTimer = 0;
+		cancelable = false;
+		grounded = true;
+		canTurnAround = false;
+		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
+		projectileInvincible = true;
+		
+		sprite_index = CharacterSprites.runForward_Sprite;
+		image_speed = 2;
+		
+		hsp = global.rcForwardSpeed * image_xscale;
+		vsp += fallSpeed;
+		
+		// Handle Ending
+		if (rcForwardTimer >= global.rcForwardDuration)
+		{
+			state = eState.IDLE;
+		}
+		rcForwardTimer++;
+		
+		// Hitstun
+		if (hitstun > 0)
+		{
+			state = eState.HURT;
+		}
+		
+		PressAttackButton(attack);
+
+		HandleWalkingOffPlatforms(false);
+		
+		// Create speed trail
+		SpeedTrail(0.3, 0.02, 3);
+	}
+	break;
 	
+	case eState.RUSH_CANCEL_UP:
+	{
+		animTimer = 0;
+		cancelable = false;
+		sprite_index = CharacterSprites.jump_Sprite;
+		image_speed = 1;
+		grounded = false;
+		canTurnAround = false;
+		projectileInvincible = true;
+		
+		vsp += global.rcUpFallSpeed;
+		hsp = walkSpeed * 1.5 * image_xscale;
+		
+		PressAttackButton(attack);
+		
+		// Create speed trail
+		SpeedTrail(0.3, 0.02, 3);
+	}
+	break;
+	
+	case eState.RUSH_CANCEL_AIR:
+	{
+		animTimer = 0;
+		cancelable = false;
+		sprite_index = CharacterSprites.jump_Sprite;
+		image_speed = 2;
+		grounded = false;
+		canTurnAround = false;
+		projectileInvincible = true;
+		
+		vsp = global.rcAirSpeed;
+		hsp = global.rcAirHorizontalSpeed * image_xscale;
+		
+		PressAttackButton(attack);
+		
+		// Create speed trail
+		SpeedTrail(0.3, 0.02, 1);
+	}
+	break;
 }
 
 // Code Outside State Machine
@@ -1798,7 +2006,9 @@ if (target != noone)
 	
 		combo = 0;
 		comboScaling = 0;
+		meterScaling = 0;
 		comboCounterID = noone;
+		comboDamage = 0;
 	}
 
 	if (startCombo)
@@ -1838,48 +2048,29 @@ if (state != eState.HITSTOP)
 	// Collisions With Players
 	if (opponent != noone)
 	{
-		if (place_meeting(x, y, opponent) && state != eState.BEING_GRABBED && grounded && opponent.grounded)
+		// Check to see if players are about to be touching
+		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || (((opponent.state = eState.HURT && !opponent.grounded) || opponent.state = eState.LAUNCHED) || ((state = eState.HURT && !grounded) || state = eState.LAUNCHED))))
 		{
-	
-		// If the opponent is not moving, reduce our speed by half. If the opponent is, stop us from moving
-		// If the opponent is next to a wall, also don't move us
-			if (sign(hsp) != 0 && sign(opponent.hsp) != 0)
+			hsp *= .75; // Reduce player speed
+			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+			// Simulate the opponent moving forwards
+			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+			// While the players are still touching
+			while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
 			{
-				// If we are both moving
-				environmentDisplacement = -( abs(hsp) - ( abs(hsp) - abs(opponent.hsp) ) ) * image_xscale;
-			} 
-			else // if one person is moving and the other isn't
-			{
-				with (opponent)
-				{
-					// Wall Detection
-					if (place_meeting(x+(other.hsp), y, oWall)) 
-					{
-						other.environmentDisplacement = (abs(other.hsp)) * -other.image_xscale;
-					} 
-					else 
-					{
-					
-						if (hsp == 0)
-						{
-							other.environmentDisplacement = -other.hsp/2;
-						}
-						else if (sign(hsp) != -image_xscale)
-						{
-							other.environmentDisplacement = hsp/2;
-						}
-					
-					}
+				// Move the players away from each other
+				if x > opponent.x {
+					environmentDisplacement += .5;
+					opponent.x -= .5;
 				}
-			
+				else 
+				{
+					environmentDisplacement -= .5;
+					opponent.x += .5;
+				}
 			}
-		
-			// if we are still colliding with the opponent, slide us out
-			if (place_meeting(x-environmentDisplacement,y, opponent) && hsp == 0 && opponent.hsp == 0)
-			{
-				environmentDisplacement += sign(x - opponent.x);
-			}
-		
+			opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+			opponent.x = origanalX; // Return oponent to original position
 		}
 	}
 	
@@ -1891,7 +2082,6 @@ if (state != eState.HITSTOP)
 		{
 			x += sign(hsp+environmentDisplacement);
 		}
-		//floor(x);
 		hsp = 0;
 		environmentDisplacement = 0;
 	}
@@ -1936,12 +2126,15 @@ x += hsp + environmentDisplacement;
 x = clamp(x, global.camObj.x-80, global.camObj.x+80);
 y += vsp;
 
+// Handle Enviornmental Displacement
+environmentDisplacement = 0;
+
 floor(y);
 
 
 
 // Change the player's direction
-if (!inAttackState && canTurnAround)
+if (!inAttackState && canTurnAround && !rcActivated)
 {
 	if (opponent != noone)
 	{
