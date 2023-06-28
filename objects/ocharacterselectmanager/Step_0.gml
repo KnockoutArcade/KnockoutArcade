@@ -765,6 +765,9 @@ else if (state == 1)
 	{
 		state = 2;
 		show_debug_message("Now entering Music selection");
+		
+		RTF_animTimer = 0;
+        RTF_currentFrame = 0;
 	}
 
     if (P1menuCancel)
