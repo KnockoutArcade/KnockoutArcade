@@ -1909,7 +1909,7 @@
           "AttackType": 1,
           "BlockStun": 16.0,
           "KnockBack": 5.0,
-          "AirKnockbackVertical": -0.5,
+          "AirKnockbackVertical": -1.5,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
           "LaunchKnockbackVertical": -2.5,
@@ -1935,15 +1935,15 @@
           "Group": 2,
           "Damage": 7,
           "AttackHitStop": 16,
-          "AttackHitStun": 15,
+          "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 9.0,
           "KnockBack": 3.0,
-          "AirKnockbackVertical": -2.5,
+          "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": 2.8,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
@@ -5093,7 +5093,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_SideSpecial_Enhanced",
       "Duration": 32,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 8,
       "FrameData": [
         {
           "Length": 3,
@@ -5116,25 +5116,33 @@
           "ImageIndex": 5
         },
         {
-          "Length": 18,
+          "Length": 14,
           "ImageIndex": 6
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 10,
+          "Start": 12,
           "Lifetime": 4,
-          "AttackWidth": 38,
-          "AttackHeight": 24,
+          "AttackWidth": 24,
+          "AttackHeight": 26,
           "WidthOffset": 2,
-          "HeightOffset": 2,
+          "HeightOffset": 12,
           "Group": 0,
           "Damage": 6,
-          "AttackHitStop": 24,
+          "AttackHitStop": 17,
           "AttackHitStun": 14,
           "AttackType": 1,
-          "BlockStun": 15.0,
+          "BlockStun": 5.0,
           "KnockBack": 6.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 4.0,
@@ -5894,6 +5902,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-27T13:12:39.1644463-07:00",
+  "LastModified": "2023-06-27T19:38:28.5475156-07:00",
   "LastModifiedBy": "creep"
 }
