@@ -74,7 +74,7 @@ P2hasSelectedAlt = false;
 P1hasSelectedMap = false;
 P1hasSelectedMusic = false;
 
-selectedStage = rStageArcade;
+selectedMusic = 0; // Values correspond with sprite frame in sStageSelect_MusicNames_strip4
 
 RTF_animTimer = 0;
 RTF_frameRate = 30;

@@ -13,6 +13,7 @@ var P1menuRowMove = P1menuUp + P1menuDown;
 
 var P1menuConfirm = global.p1ButtonLight;
 var P1menuCancel = global.p1ButtonMedium;
+var P1switch = global.p1ButtonHeavy;
 var P1menuConfirmBuffer = false;
 var P1menuAltSelBuffer = false;
 var P1menuMapSelBuffer = false;
@@ -29,6 +30,7 @@ var P2menuRowMove = P2menuUp + P2menuDown;
 
 var P2menuConfirm = global.p2ButtonLight;
 var P2menuCancel = global.p2ButtonMedium;
+
 var P2menuConfirmBuffer = false;
 
 P1cursorCooldown--;
@@ -364,6 +366,8 @@ else if (state == 1)
     {
         P1mapSelRow = mapSelRowMax;
     }
+	
+	show_debug_message(string(P1mapSelRow) + ", " + string(P1mapSelCol));
 
     if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
     {
@@ -372,48 +376,256 @@ else if (state == 1)
 
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
-			selectedRoom = rRusselStage;
             show_debug_message("Russel");
+			if (selectedMusic == 0) // Auto
+			{
+				show_debug_message("Music: Russel");
+				selectedMusic = 2;
+			}
+			else if (selectedMusic == 1) // Random
+			{
+				P1musicSelRow = irandom_range(0, musicSelRowMax);
+				if (P1musicSelRow == 0)
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (P1musicSelRow == 1)
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (P1musicSelRow == 2)
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+			}
+			
+			room = rRusselStage;
+			global.gameMode = GAMEMODE.VERSUS;
         }
         else if (P1mapSelCol == 1 && P1mapSelRow == 0)
         {
-            selectedRoom = rBeverlyStage;
             show_debug_message("Beverly");
+			if (selectedMusic == 0) // Auto
+			{
+				show_debug_message("Music: Beverly");
+				selectedMusic = 3;
+			}
+			else if (selectedMusic == 1) // Random
+			{
+				P1musicSelRow = irandom_range(0, musicSelRowMax);
+				if (P1musicSelRow == 0)
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (P1musicSelRow == 1)
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (P1musicSelRow == 2)
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+			}
+			
+			room = rBeverlyStage;
+			global.gameMode = GAMEMODE.VERSUS;
         }
         else if (P1mapSelCol == 2 && P1mapSelRow == 0)
         {
-            selectedRoom = rJayStage;
             show_debug_message("Jay");
+			if (selectedMusic == 0) // Auto
+			{
+				show_debug_message("Music: Jay");
+				selectedMusic = 4;
+			}
+			else if (selectedMusic == 1) // Random
+			{
+				P1musicSelRow = irandom_range(0, musicSelRowMax);
+				if (P1musicSelRow == 0)
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (P1musicSelRow == 1)
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (P1musicSelRow == 2)
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+			}
+			
+			room = rJayStage;
+			global.gameMode = GAMEMODE.VERSUS;
         }
-		else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+		else if (P1mapSelCol == 3 && P1mapSelRow == 0)
         {
-            selectedRoom = rStageArcade;
             show_debug_message("arcade");
+			if (selectedMusic == 0) // Auto
+			{
+				show_debug_message("Music: Russel");
+				selectedMusic = 2;
+			}
+			else if (selectedMusic == 1) // Random
+			{
+				P1musicSelRow = irandom_range(0, musicSelRowMax);
+				if (P1musicSelRow == 0)
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (P1musicSelRow == 1)
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (P1musicSelRow == 2)
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+			}
+			
+			room = rStageArcade;
+			global.gameMode = GAMEMODE.VERSUS;
         }
-        else if (P1mapSelCol == 3 && P1mapSelRow == 0)
+        else if (P1mapSelCol == 3 && P1mapSelRow == 1)
         {
             P1mapSelRow = irandom_range(0, mapSelRowMax);
             P1mapSelCol = irandom_range(0, mapSelColMax);
             show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                selectedRoom = rRusselStage;
                 show_debug_message("Russel");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rRusselStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
             else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
-                selectedRoom = rBeverlyStage;
                 show_debug_message("Beverly");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rBeverlyStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
             else if (P1mapSelCol == 2 && P1mapSelRow == 0)
             {
-                selectedRoom = rJayStage;
                 show_debug_message("Jay");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rJayStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
-			else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
 			{
-		        selectedRoom = rStageArcade;
 		        show_debug_message("arcade");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rStageArcade;
+				global.gameMode = GAMEMODE.VERSUS;
 		    }
         }
         else
@@ -423,28 +635,137 @@ else if (state == 1)
             show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                selectedRoom = rRusselStage;
                 show_debug_message("Russel");
+				
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rRusselStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
             else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
-                selectedRoom = rBeverlyStage;
                 show_debug_message("Beverly");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Beverly");
+					selectedMusic = 3;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rBeverlyStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
             else if (P1mapSelCol == 2 && P1mapSelRow == 0)
             {
-                selectedRoom = rJayStage;
                 show_debug_message("Jay");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Jay");
+					selectedMusic = 4;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rJayStage;
+				global.gameMode = GAMEMODE.VERSUS;
             }
-			else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
 			{
-		        selectedRoom = rStageArcade;
 		        show_debug_message("arcade");
+				if (selectedMusic == 0) // Auto
+				{
+					show_debug_message("Music: Russel");
+					selectedMusic = 2;
+				}
+				else if (selectedMusic == 1) // Random
+				{
+					P1musicSelRow = irandom_range(0, musicSelRowMax);
+					if (P1musicSelRow == 0)
+					{
+						show_debug_message("Music: Russel");
+						selectedMusic = 2;
+					}
+					else if (P1musicSelRow == 1)
+					{
+						show_debug_message("Music: Beverly");
+						selectedMusic = 3;
+					}
+					else if (P1musicSelRow == 2)
+					{
+						show_debug_message("Music: Jay");
+						selectedMusic = 4;
+					}
+				}
+				
+				room = rStageArcade;
+				global.gameMode = GAMEMODE.VERSUS;
 		    }
         }
+    }
+	
+	if (P1switch)
+	{
 		state = 2;
 		show_debug_message("Now entering Music selection");
-    }
+	}
 
     if (P1menuCancel)
     {
@@ -488,77 +809,39 @@ else if (state == 2)
     {
         P1musicSelRow = musicSelRowMax - 1;
     }
-	
-	show_debug_message(P1musicSelRow);
 
-    if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMusic)
+    if (P1musicSelRow == 0)
     {
-        P1hasSelectedMusic = true;
-        P1menuMusicSelBuffer = true;
-
-        if (P1musicSelRow == 0)
-        {
-            show_debug_message("Music: Russel");
-        }
-        else if (P1musicSelRow == 1)
-        {
-            show_debug_message("Music: Beverly");
-        }
-        else if (P1musicSelRow == 2)
-        {
-            show_debug_message("Music: Jay");
-        }
-		else if (P1musicSelRow == 3)
-        {
-            show_debug_message("Music: Arcade");
-        }
-        else if (P1musicSelRow == 4)
-        {
-            P1musicSelRow = irandom_range(0, musicSelRowMax);
-            show_debug_message("Random");
-			if (P1musicSelRow == 0)
-	        {
-	            show_debug_message("Music: Russel");
-	        }
-	        else if (P1musicSelRow == 1)
-	        {
-	            show_debug_message("Music: Beverly");
-	        }
-	        else if (P1musicSelRow == 2)
-	        {
-	            show_debug_message("Music: Jay");
-	        }
-			else if (P1musicSelRow == 3)
-	        {
-	            show_debug_message("Music: Arcade");
-	        }
-        }
-        else
-        {
-            P1musicSelRow = irandom_range(0, musicSelRowMax);
-            show_debug_message("Random");
-            if (P1musicSelRow == 0)
-	        {
-	            show_debug_message("Music: Russel");
-	        }
-	        else if (P1musicSelRow == 1)
-	        {
-	            show_debug_message("Music: Beverly");
-	        }
-	        else if (P1musicSelRow == 2)
-	        {
-	            show_debug_message("Music: Jay");
-	        }
-			else if (P1musicSelRow == 3)
-	        {
-	            show_debug_message("Music: Arcade");
-	        }
-        }
-		room = selectedRoom;
-		global.gameMode = GAMEMODE.VERSUS;
+        show_debug_message("Auto");
+		selectedMusic = 0;
+    }
+	else if (P1musicSelRow == 1)
+	{
+        show_debug_message("Random");
+		selectedMusic = 1;
+	}
+    else if (P1musicSelRow == 2)
+    {
+		show_debug_message("Music: Russel");
+		selectedMusic = 2;
+    }
+    else if (P1musicSelRow == 3)
+    {
+        show_debug_message("Music: Beverly");
+		selectedMusic = 3;
+    }
+	else if (P1musicSelRow == 4)
+    {
+        show_debug_message("Music: Jay");
+		selectedMusic = 4;
+    }
+    else
+    {
+        show_debug_message("Random");
+        selectedMusic = 1;
     }
 
-    if (P1menuCancel)
+    if (P1switch)
     {
         state = 1;
         P1hasSelectedMap = false;

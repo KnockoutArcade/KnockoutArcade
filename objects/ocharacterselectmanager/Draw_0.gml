@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(state == 0)
+{
+	
+}
+
 if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow) 
 {
 	draw_sprite(sCharSel_SelectionBox, 2 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
