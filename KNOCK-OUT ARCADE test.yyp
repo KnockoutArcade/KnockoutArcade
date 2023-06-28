@@ -102,6 +102,7 @@
     {"id":{"name":"sJay_StandHeavy_Mockup_strip8","path":"sprites/sJay_StandHeavy_Mockup_strip8/sJay_StandHeavy_Mockup_strip8.yy",},"order":13,},
     {"id":{"name":"rBeverlyStage","path":"rooms/rBeverlyStage/rBeverlyStage.yy",},"order":0,},
     {"id":{"name":"sHUDPortraits","path":"sprites/sHUDPortraits/sHUDPortraits.yy",},"order":2,},
+    {"id":{"name":"sJay_ALL_StandingLight2_Mockup_strip6","path":"sprites/sJay_ALL_StandingLight2_Mockup_strip6/sJay_ALL_StandingLight2_Mockup_strip6.yy",},"order":18,},
     {"id":{"name":"sRussel_Walk_Forward","path":"sprites/sRussel_Walk_Forward/sRussel_Walk_Forward.yy",},"order":4,},
     {"id":{"name":"sRussel_UpSpecial","path":"sprites/sRussel_UpSpecial/sRussel_UpSpecial.yy",},"order":32,},
     {"id":{"name":"sRussel_Grab","path":"sprites/sRussel_Grab/sRussel_Grab.yy",},"order":19,},
