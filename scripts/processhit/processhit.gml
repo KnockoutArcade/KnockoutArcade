@@ -67,6 +67,14 @@ function ProcessHit( attackProperty, collision_list)
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		global.hitstop = attackProperty.AttackHitStop;
+		
+		
+		//Draw hit effect
+		var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+		
+		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
+		particle.image_xscale = sign(owner.image_xscale);
+		particle.lifetime = attackProperty.ParticleDuration;
 	}
 	else
 	{

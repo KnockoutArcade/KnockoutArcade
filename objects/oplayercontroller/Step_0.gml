@@ -394,6 +394,8 @@ if (state == eState.IDLE)
 	
 	frameAdvantage = false;
 	
+	isEXFlash = false;
+	
 	PressAttackButton(attack);
 	
 	HandleWalkingOffPlatforms(false);
@@ -461,6 +463,8 @@ if (state == eState.CROUCHING)
 		}
 	}
 	
+	isEXFlash = false;
+	
 	PressAttackButton(attack);
 	
 	HandleWalkingOffPlatforms(false);
@@ -476,6 +480,7 @@ else if (global.hitstop != 0)
 	state = eState.HITSTOP;
 }
 
+
 if (state == eState.HITSTOP)
 {
 	hitstunShuffleTimer++;
@@ -489,6 +494,7 @@ if (state == eState.HITSTOP)
 		
 		FAvictim = true;
 		blockstun = 0;
+		isEXFlash = false;
 		
 		if (hitstunShuffleTimer % 2 == 1)
 		{
@@ -611,6 +617,7 @@ if (state == eState.SCREEN_FREEZE)
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
+		isEXFlash = true;
 		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)
 		{
@@ -938,6 +945,9 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		
+		if image_index > (image_number - 1) image_speed = 0;
+		else image_speed = 1;
 		
 		if (isJumpingForward)
 		{
@@ -1528,7 +1538,7 @@ switch state
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
-		
+		isEXFlash = false;
 		
 		if (!global.game_paused)
 		{
@@ -1740,7 +1750,13 @@ switch state
 		{
 			blockbuffer = true;
 		}
-		
+		/*
+		if (playerID == 2)
+		{
+			prevState = eState.STANDING_LIGHT_ATTACK;
+			blockbuffer = true;
+		}
+		*/
 		// Buffer attack out of block
 		switch attack 
 		{
@@ -2049,7 +2065,7 @@ if (state != eState.HITSTOP)
 	if (opponent != noone)
 	{
 		// Check to see if players are about to be touching
-		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || (((opponent.state = eState.HURT && !opponent.grounded) || opponent.state = eState.LAUNCHED) || ((state = eState.HURT && !grounded) || state = eState.LAUNCHED))))
+		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 		{
 			hsp *= .75; // Reduce player speed
 			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations

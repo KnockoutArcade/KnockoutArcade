@@ -12,10 +12,10 @@ if (playerID == 1)
 	draw_set_color(c_white);
 	
 	draw_text(20, 10, animTimer);
-	draw_text(20, 30, grounded);
-	draw_text(20, 50, hsp + environmentDisplacement);
+	draw_text(20, 30, isEXFlash);
+	draw_text(20, 50, EXFlashTimer);
 	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, comboScaling);
+	draw_text(20, 90, displayEXFlash);
 } 
 else 
 {
@@ -26,7 +26,7 @@ else
 	draw_set_color(c_white);
 	
 	draw_text(750, 10, state);
-	draw_text(750, 30, knockbackVel);
+	draw_text(750, 30, vsp);
 	draw_text(750, 50, animTimer);
 	draw_text(750, 70, storedComboDamage);
 	draw_text(750, 90, comboScaling);

@@ -17,6 +17,17 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		frameAdvantage = true;
 		hsp = 0;
 		isThrowable = true;
+		isEXFlash = false;
+		
+		// If this move updates the moveset, switch the moveset
+		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
+		{
+			if (moveToDo.SwitchMoveset)
+			{
+				currentMovesetID = moveToDo.SwitchToMoveset;
+				OverwriteMoveset();
+			}
+		}
 	}
 	
 	HandleWalkingOffPlatforms(maintainState);
