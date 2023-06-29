@@ -5163,23 +5163,23 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 2,
+          "CounterHitLevel": 3,
           "Group": 0,
           "Damage": 6,
-          "MeterGain": 0.0,
-          "AttackHitStop": 14,
-          "AttackHitStun": 16,
+          "MeterGain": 6.0,
+          "AttackHitStop": 30,
+          "AttackHitStun": 24,
           "KnockBack": 6.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 4.0,
           "Pushback": 2.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 4.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false
         }
@@ -5223,7 +5223,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 3.0,
-            "VerticalSpeed": -2.0,
+            "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -5902,6 +5902,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-06-27T21:32:51.4944413-07:00",
+  "LastModified": "2023-06-29T00:32:09.1974693-07:00",
   "LastModifiedBy": "creep"
 }
