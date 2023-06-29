@@ -283,7 +283,6 @@ if (state == 0)
     }
 
 
-
     //Draw Player 2 character
     PaletteSetup(global.p2PaletteID, p2LocalPalette);
 
@@ -578,10 +577,77 @@ if (state == 0)
 }
 else if (state == 1)
 {
-	draw_sprite(sCharSel_ReadyToFight, RTF_currentFrame, 0, 0);
+	
+	draw_sprite(sReadyToFight_strip5, RTF_currentFrame, 0, 0);
+	
+	draw_sprite(sStageSelect_Portraits1, 1, 0, 0);
 	
     if (RTF_currentFrame == 4)
     {
         layer_background_visible(pressStartID, 1);
     }
+	draw_sprite(sStageSelect_Cursor, 0 + (mapSelBoxAlt * P1hasSelectedMap), 23 + (28 * P1mapSelCol), 68 + (17 * P1mapSelRow));
+	
+	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 85);
+	
+	draw_sprite(sStageSelect_Text_strip2, 0, 12, 56);
+	
+	if (P1mapSelCol == 0 && P1mapSelRow == 0)
+	{
+		draw_sprite(sStageSelect_StageNames_strip5, 0, 53, 58);
+	}
+	else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+	{
+		draw_sprite(sStageSelect_StageNames_strip5, 1, 53, 58);
+	}
+	else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+	{
+		draw_sprite(sStageSelect_StageNames_strip5, 2, 53, 58);
+	}
+	else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+	{
+		draw_sprite(sStageSelect_StageNames_strip5, 4, 53, 58);
+	}
+	else
+	{
+		draw_sprite(sStageSelect_StageNames_strip5, 3, 53, 58);
+	}
+}
+else if (state == 2)
+{
+	draw_sprite(sStageSelect_Portraits1, 1, 0, 0);
+	
+	draw_sprite(sReadyToFight_strip5, RTF_currentFrame, 0, 0);
+	
+	draw_sprite(sStageSelect_ShadeBox, 1, 0, 0);
+	
+    if (RTF_currentFrame == 4)
+    {
+        layer_background_visible(pressStartID, 1);
+    }
+	
+	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 90);
+	
+	draw_sprite(sStageSelect_Text_strip2, 1, 12, 56);
+	
+	if (P1musicSelRow == 0)
+	{
+		draw_sprite(sStageSelect_MusicNames_strip5, 0, 53, 58);
+	}
+	else if (P1musicSelRow == 1)
+	{
+		draw_sprite(sStageSelect_MusicNames_strip5, 1, 53, 58);
+	}
+	else if (P1musicSelRow == 2)
+	{
+		draw_sprite(sStageSelect_MusicNames_strip5, 2, 53, 58);
+	}
+	else if (P1musicSelRow == 3)
+	{
+		draw_sprite(sStageSelect_MusicNames_strip5, 3, 53, 58);
+	}
+	else
+	{
+		draw_sprite(sStageSelect_MusicNames_strip5, 4, 53, 58);
+	}
 }
