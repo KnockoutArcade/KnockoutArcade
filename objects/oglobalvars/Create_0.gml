@@ -88,3 +88,12 @@ global.campaignMapLocationX = 0;
 global.campaignMapLocationY = 0;
 
 global.completedLevels = ds_list_create();
+
+// Rush Cancel global variables (both players use them)
+global.rcForwardSpeed = 4;
+global.rcForwardDuration = 12;
+global.rcUpSpeed = 5;
+global.rcUpForwardSpeed = 2;
+global.rcUpFallSpeed = 0.4;
+global.rcAirSpeed = 10;
+global.rcAirHorizontalSpeed = 2;

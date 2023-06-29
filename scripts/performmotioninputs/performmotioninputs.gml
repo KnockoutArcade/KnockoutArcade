@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 // Allows player to perform motion inputs during special moves
-function PerformMotionInputs()
+function PerformMotionInputs(attack)
 {
 	if (inputSet)
 	{
@@ -97,7 +97,7 @@ function PerformMotionInputs()
 			}
 			
 			// Enhances input
-			if (longerIndex != -1)
+			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) )
 			{
 				var currentMotionInput = ds_list_find_value(listOfInputs, longerIndex);
 				var inputString = "";
@@ -106,7 +106,6 @@ function PerformMotionInputs()
 					inputString = inputString + string(currentMotionInput[i]);
 				}
 				
-				show_debug_message("Input " + inputString + " Performed");
 				enhanced[longerIndex] = true;
 				if (changeImmediately)
 				{
