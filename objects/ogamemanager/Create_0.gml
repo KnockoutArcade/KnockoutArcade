@@ -3,6 +3,7 @@
 
 global.frameskip = 0;
 global.game_paused = 0;
+global.freezeTimer = false; // For SCREEN_FREEZE
 
 global.hitstop = 0;
 
@@ -45,3 +46,4 @@ with (p2RoundCounter)
 	ui_xOffset = 90;
 }
 
+audio_play_sound(testBGM, 0, true);

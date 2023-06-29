@@ -38,7 +38,7 @@
     "spriteId": {"name":"sBeverly_JumpLight_Mockup_strip3","path":"sprites/sBeverly_JumpLight_Mockup_strip3/sBeverly_JumpLight_Mockup_strip3.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
