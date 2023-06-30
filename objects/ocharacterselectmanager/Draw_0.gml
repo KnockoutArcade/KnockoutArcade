@@ -626,7 +626,7 @@ else if (state == 2)
         layer_background_visible(pressStartID, 1);
     }
 	
-	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 90);
+	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 85);
 	
 	draw_sprite(sStageSelect_Text_strip2, 1, 12, 56);
 	

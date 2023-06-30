@@ -567,7 +567,7 @@ else if (state == 1)
             }
 			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
 			{
-		        show_debug_message("arcade");
+		        show_debug_message("Locked");
 				if (selectedMusic == 0) // Auto
 				{
 					show_debug_message("Music: Russel");
