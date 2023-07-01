@@ -76,6 +76,19 @@ function FindAttackState(stateToSearch){
 		}
 		break;
 		
+		//Throws
+		case eState.FORWARD_THROW : 
+		{
+			return selectedCharacter.ForwardThrow;
+		}
+		break;
+
+		case eState.BACKWARD_THROW : 
+		{
+			return selectedCharacter.BackwardThrow;
+		}
+		break;
+		
 		// Command Normals
 		case eState.COMMAND_NORMAL_1 : 
 		{
@@ -194,6 +207,13 @@ function FindAttackState(stateToSearch){
 		case eState.REKKA_HIGH : 
 		{
 			return selectedCharacter.RekkaHigh;
+		}
+		break;
+		
+		// Default Case
+		default:
+		{
+			return -1;
 		}
 		break;
 	}

@@ -106,7 +106,6 @@ function PerformMotionInputs(attack)
 					inputString = inputString + string(currentMotionInput[i]);
 				}
 				
-				show_debug_message("Input " + inputString + " Performed");
 				enhanced[longerIndex] = true;
 				if (changeImmediately)
 				{
