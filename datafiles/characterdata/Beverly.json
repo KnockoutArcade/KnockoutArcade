@@ -1002,9 +1002,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_BackwardThrow",
       "Duration": 58,
       "NumberOfFrames": 10,
@@ -1080,8 +1077,7 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -1104,8 +1100,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -1199,9 +1194,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "3040e46f-52a4-4da8-a6e6-579ca058c124",
@@ -1209,9 +1202,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_ForwardThrow",
       "Duration": 42,
       "NumberOfFrames": 9,
@@ -1283,8 +1273,7 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -1307,8 +1296,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -1375,9 +1363,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "b37e1485-d5f2-406e-8117-ac743c7ddccc",
@@ -1385,9 +1371,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Grab",
       "Duration": 24,
       "NumberOfFrames": 5,
@@ -1443,8 +1426,7 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -1467,8 +1449,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -1516,9 +1497,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "02964764-f1b3-4099-9866-309811d6e312",
@@ -1526,9 +1505,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_NSpecial_MOCKUP",
       "Duration": 30,
       "NumberOfFrames": 3,
@@ -1576,8 +1552,7 @@
           "HoldYOffset": 0,
           "MeterGain": 1.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -1600,8 +1575,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -1678,9 +1652,7 @@
         "GravityScale": 1.0,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "032032e6-71fc-4f2c-bf79-7b5e75d8fe99",
@@ -1688,9 +1660,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial1_MOCKUP",
       "Duration": 33,
       "NumberOfFrames": 2,
@@ -1734,8 +1703,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -1758,8 +1726,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -1777,8 +1744,7 @@
           "EndingFrame": 17,
           "EnhancementMove": 4096,
           "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
+          "TransitionFrame": 18
         },
         {
           "NumpadInput": "2",
@@ -1787,8 +1753,7 @@
           "EndingFrame": 17,
           "EnhancementMove": 2048,
           "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
+          "TransitionFrame": 18
         },
         {
           "NumpadInput": "4",
@@ -1797,8 +1762,7 @@
           "EndingFrame": 17,
           "EnhancementMove": 256,
           "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
+          "TransitionFrame": 18
         },
         {
           "NumpadInput": "6",
@@ -1807,8 +1771,7 @@
           "EndingFrame": 17,
           "EnhancementMove": 1024,
           "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
+          "TransitionFrame": 18
         },
         {
           "NumpadInput": "5",
@@ -1817,8 +1780,7 @@
           "EndingFrame": 17,
           "EnhancementMove": 1024,
           "TransitionImmediately": false,
-          "TransitionFrame": 18,
-          "RequiredPosition": 0
+          "TransitionFrame": 18
         }
       ],
       "IsThrow": false,
@@ -1916,9 +1878,7 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
@@ -1926,9 +1886,6 @@
       "MoveCanCancelInto": 199000,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandLight1_MOCKUP_strip3",
       "Duration": 7,
       "NumberOfFrames": 3,
@@ -1976,8 +1933,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2000,8 +1956,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2049,9 +2004,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
@@ -2059,9 +2012,6 @@
       "MoveCanCancelInto": 199576,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandLight2_MOCKUP_strip3",
       "Duration": 15,
       "NumberOfFrames": 3,
@@ -2109,8 +2059,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2133,8 +2082,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2197,9 +2145,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "68718318-582f-484f-85b8-a8b46471ea81",
@@ -2207,9 +2153,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandLight3_MOCKUP_strip3",
       "Duration": 22,
       "NumberOfFrames": 3,
@@ -2257,8 +2200,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2281,8 +2223,7 @@
           "LaunchKnockbackVertical": 1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2345,9 +2286,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
@@ -2355,9 +2294,6 @@
       "MoveCanCancelInto": 201240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandMedium_MOCKUP_strip5",
       "Duration": 21,
       "NumberOfFrames": 5,
@@ -2413,8 +2349,7 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2437,8 +2372,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2508,9 +2442,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
@@ -2518,9 +2450,6 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandHeavy_MOCKUP_strip5",
       "Duration": 40,
       "NumberOfFrames": 5,
@@ -2576,8 +2505,7 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2600,8 +2528,7 @@
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 4.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2699,9 +2626,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
@@ -2709,9 +2634,6 @@
       "MoveCanCancelInto": 198936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CrouchLight_MOCKUP_strip4",
       "Duration": 10,
       "NumberOfFrames": 4,
@@ -2763,8 +2685,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2787,8 +2708,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2836,9 +2756,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
@@ -2846,9 +2764,6 @@
       "MoveCanCancelInto": 201240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CrouchMedium_MOCKUP_strip4",
       "Duration": 26,
       "NumberOfFrames": 4,
@@ -2900,8 +2815,7 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -2924,8 +2838,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -2981,9 +2894,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
@@ -2991,9 +2902,6 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CrouchHeavy_MOCKUP_strip9",
       "Duration": 31,
       "NumberOfFrames": 9,
@@ -3065,8 +2973,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 0.5,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "Start": 11,
@@ -3096,8 +3003,7 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -3120,8 +3026,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -3142,8 +3047,7 @@
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 0.5,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -3199,9 +3103,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
@@ -3209,9 +3111,6 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_JumpLight_Mockup_strip3",
       "Duration": 16,
       "NumberOfFrames": 3,
@@ -3259,8 +3158,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -3283,8 +3181,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -3332,9 +3229,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
@@ -3342,9 +3237,6 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_JumpMedium_Mockup_strip6",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3404,8 +3296,7 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -3428,8 +3319,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -3477,9 +3367,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
@@ -3487,9 +3375,6 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_JumpHeavy_Mockup_strip6",
       "Duration": 30,
       "NumberOfFrames": 6,
@@ -3549,8 +3434,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "Start": 17,
@@ -3580,8 +3464,7 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -3604,8 +3487,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -3626,8 +3508,7 @@
           "LaunchKnockbackVertical": 1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -3675,9 +3556,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "7316822a-00ef-464c-94a0-875d7db960c9",
@@ -3685,9 +3564,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_UpSpecial_MOCKUP_strip5",
       "Duration": 50,
       "NumberOfFrames": 6,
@@ -3747,8 +3623,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "Start": 16,
@@ -3778,8 +3653,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -3802,8 +3676,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "CounterHitLevel": 2,
@@ -3824,8 +3697,7 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -3925,9 +3797,7 @@
         "GravityScale": 1.5,
         "FallScale": 0.5000001
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "4014c4eb-f2e9-4750-9633-50f3736dc021",
@@ -3935,9 +3805,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_downSpecial_MOCKUP_strip5",
       "Duration": 30,
       "NumberOfFrames": 6,
@@ -3997,8 +3864,7 @@
           "HoldYOffset": 0,
           "MeterGain": 18.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "Start": 8,
@@ -4028,8 +3894,7 @@
           "HoldYOffset": 0,
           "MeterGain": 18.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -4052,8 +3917,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -4074,8 +3938,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -4145,9 +4008,7 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "039f3f23-c7c3-491b-9d18-d633cdc6d841",
@@ -4155,9 +4016,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4201,9 +4059,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "3536ae38-502d-4c61-95a2-5bfbac9df27d",
@@ -4211,9 +4067,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_JumpDownHeavy_Mockup_strip2",
       "Duration": 72,
       "NumberOfFrames": 1,
@@ -4253,8 +4106,7 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -4277,8 +4129,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -4348,9 +4199,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "002b23a6-d787-4a25-a6ad-1682ace2b41d",
@@ -4358,9 +4207,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4404,9 +4250,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "fb5341fd-20f9-47f4-829d-6e88de427deb",
@@ -4414,9 +4258,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4460,9 +4301,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "a600705a-70a0-4404-bc0c-4db86dd20cdd",
@@ -4470,9 +4309,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 1024,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial2_MOCKUP",
       "Duration": 26,
       "NumberOfFrames": 3,
@@ -4520,8 +4356,7 @@
           "HoldYOffset": 0,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -4544,8 +4379,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -4563,8 +4397,7 @@
           "EndingFrame": 15,
           "EnhancementMove": 4096,
           "TransitionImmediately": false,
-          "TransitionFrame": 15,
-          "RequiredPosition": 0
+          "TransitionFrame": 15
         },
         {
           "NumpadInput": "2",
@@ -4573,8 +4406,7 @@
           "EndingFrame": 15,
           "EnhancementMove": 2048,
           "TransitionImmediately": false,
-          "TransitionFrame": 15,
-          "RequiredPosition": 0
+          "TransitionFrame": 15
         },
         {
           "NumpadInput": "4",
@@ -4583,8 +4415,7 @@
           "EndingFrame": 15,
           "EnhancementMove": 256,
           "TransitionImmediately": false,
-          "TransitionFrame": 15,
-          "RequiredPosition": 0
+          "TransitionFrame": 15
         }
       ],
       "IsThrow": false,
@@ -4654,9 +4485,7 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "de503c3d-e23e-42a6-a337-6fdf5abb7e13",
@@ -4664,9 +4493,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 4096,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial3Overhead_MOCKUP",
       "Duration": 52,
       "NumberOfFrames": 3,
@@ -4714,8 +4540,7 @@
           "HoldYOffset": 0,
           "MeterGain": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -4738,8 +4563,7 @@
           "LaunchKnockbackVertical": -2.5,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -4800,9 +4624,7 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "ac497af1-e298-4eba-9dcb-0211fe95d68d",
@@ -4810,9 +4632,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 2048,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial3Low_MOCKUP",
       "Duration": 14,
       "NumberOfFrames": 1,
@@ -4852,8 +4671,7 @@
           "HoldYOffset": 0,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -4876,8 +4694,7 @@
           "LaunchKnockbackVertical": 1.0,
           "LaunchKnockbackHorizontal": 1.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -4925,9 +4742,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "fc3808e8-587d-46b8-98ad-96ab51b2166c",
@@ -4935,9 +4750,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 256,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial3Launch_MOCKUP",
       "Duration": 22,
       "NumberOfFrames": 1,
@@ -4977,8 +4789,7 @@
           "HoldYOffset": 0,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CounterData": [
@@ -5001,8 +4812,7 @@
           "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false,
-          "HitSound": ""
+          "CausesWallbounce": false
         }
       ],
       "CommandNormalData": {
@@ -5065,9 +4875,7 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "a3e7e9af-e00d-4166-a9b3-3d47feaa370c",
@@ -5075,9 +4883,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5121,9 +4926,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "86651c9d-185f-433a-9613-a9bc2c126ad9",
@@ -5131,9 +4934,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5177,9 +4977,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "210d5096-39f7-49a5-b57d-f5079fe5db45",
@@ -5187,9 +4985,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5233,9 +5028,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "abb40bd0-4f3d-463f-aafc-e28ba7b5573c",
@@ -5243,9 +5036,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5289,9 +5079,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "76a09866-bb08-4470-8175-9b79ff4c4aa8",
@@ -5299,9 +5087,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5345,9 +5130,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "909150ce-8b93-4712-ae48-4214dd925904",
@@ -5355,9 +5138,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5401,9 +5181,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "c2386cb8-fa0f-4236-8f55-ef2cba60cca2",
@@ -5411,9 +5189,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5457,9 +5232,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "9f22ad39-4974-4cf4-8b3b-63e792ad661c",
@@ -5467,9 +5240,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5513,9 +5283,7 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     },
     {
       "UID": "65c518e5-b001-4d77-826b-00ddf568ba18",
@@ -5523,9 +5291,6 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
-      "SwitchMoveset": false,
-      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -5569,33 +5334,11 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": []
+      "SupplimentaryScript": ""
     }
   ],
-  "UniqueData": {
-    "AdditionalMovesets": 0,
-    "SpiritData": 0,
-    "Version": "Ver1.1.3",
-    "UID": "89b060fc-b220-4012-b9d8-e047b6ad22da",
-    "LastModified": "2023-06-30T16:53:26.3397447-07:00",
-    "LastModifiedBy": "Zak"
-  },
-  "NonmoveSoundData": {
-    "WalkingSoundEffect": "",
-    "WalkForwardFootsteps": [],
-    "WalkBackwardFootsteps": [],
-    "RunningSoundEffect": "",
-    "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.3",
-    "UID": "15cc419c-cfbd-4296-862a-139e770eaffb",
-    "LastModified": "2023-06-30T16:53:26.2902071-07:00",
-    "LastModifiedBy": "Zak"
-  },
-  "Version": "Ver1.1.2",
+  "Version": "Ver1.1.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-06-30T16:53:26.3399681-07:00",
-  "LastModifiedBy": "Zak"
+  "LastModified": "2023-06-02T14:53:49.0491918-07:00",
+  "LastModifiedBy": "iansb"
 }
