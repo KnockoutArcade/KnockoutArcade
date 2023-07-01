@@ -98,7 +98,7 @@ function PerformMotionInputs(attack)
 			}
 			
 			// Enhances input
-			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) )
+			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) ) && (superMeter >= 25)
 			{
 				var currentMotionInput = ds_list_find_value(listOfInputs, longerIndex);
 				var inputString = "";
@@ -108,6 +108,7 @@ function PerformMotionInputs(attack)
 				}
 				
 				enhanced[longerIndex] = true;
+				superMeter -= 25;
 				if (changeImmediately)
 				{
 					changeFrame = animTimer;
