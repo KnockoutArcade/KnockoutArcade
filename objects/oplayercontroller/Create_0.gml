@@ -331,3 +331,8 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 		}
 	}
 }
+isSpirit = false;
+if (selectedCharacter.UniqueData.SpiritData == 2)
+{
+	isSpirit = true;
+}
