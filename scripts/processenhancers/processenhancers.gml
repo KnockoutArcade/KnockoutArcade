@@ -1,7 +1,7 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ProcessEnhancers(Special) {
-	if (Special.NumberOfEnhancements > 0)
+	if (Special.NumberOfEnhancements > 0 && animTimer <= Special.Duration)
 	{
 		for (var i = 0; i < Special.NumberOfEnhancements; i++)
 		{
@@ -11,7 +11,7 @@ function ProcessEnhancers(Special) {
 		SetMotionInputs(motionInput, array_length(motionInput), Special.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately, Special.SpecialData[0].ButtonPressRequired);
 	
 		// Checks to see if the special move can be changed
-		if (CheckChange(Special))
+		if (CheckChange(Special) && inputSet)
 		{
 			// Iterate through each enhancement
 			for (var i = 0; i < Special.NumberOfEnhancements; i++;)

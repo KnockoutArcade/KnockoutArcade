@@ -320,6 +320,12 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 // Spirit Data
 spiritState = 0; // 0 = Spirit OFF, 1 = Spirit ON
 spirit = noone;
+spiritObject = noone;
+spiritSummoned = false;
+spiritMaxHealth = 0;
+spiritcurrentHealth = 0;
+spiritRegenSpeed = 0;
+spiritKORegenSpeed = 0;
 if (selectedCharacter.UniqueData.SpiritData == 1)
 {
 	for (var i = 0; i < array_length(global.characterData); i++)
@@ -327,9 +333,11 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 		if (selectedCharacter.UniqueData.Spirit == global.characterData[i].Name)
 		{
 			spirit = global.characterData[i];
+			spiritMaxHealth = spirit.MaxHP;
+			spiritcurrentHealth = spiritMaxHealth;
+			spiritRegenSpeed = spirit.RegenSpeed;
+			spiritKORegenSpeed = spirit.KORegenSpeed;
 			break;
 		}
 	}
 }
-spiritObject = noone;
-spiritSummoned = false;

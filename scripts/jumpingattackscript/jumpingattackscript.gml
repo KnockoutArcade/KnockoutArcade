@@ -33,8 +33,21 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		// If this move switched Spirit state
 		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState)
 		{
-			if (spiritState) spiritState = false;
-			else spiritState = true;
+			if (!spiritState)
+			{
+				if (!spiritSummoned) SummonSpirit(spirit);
+				spiritState = true;
+			}
+			else
+			{
+				if (spiritSummoned) 
+				{
+					instance_destroy(spiritObject);
+					spiritObject = noone;
+					spiritSummoned = false;
+				}
+				spiritState = false;
+			}
 		}
 	}
 }

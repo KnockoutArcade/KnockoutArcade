@@ -303,7 +303,6 @@ if (state == 0)
     {
         // Go to stage select
         state = 1;
-		show_debug_message("Now entering Stage selection");
     }
 }
 else if (state == 1)
