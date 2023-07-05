@@ -32,6 +32,26 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 				OverwriteMoveset();
 			}
 		}
+		
+		// If this move switched Spirit state
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState)
+		{
+			if (!spiritState)
+			{
+				if (!spiritSummoned) SummonSpirit(spirit);
+				spiritState = true;
+			}
+			else
+			{
+				if (spiritSummoned) 
+				{
+					instance_destroy(spiritObject);
+					spiritObject = noone;
+					spiritSummoned = false;
+				}
+				spiritState = false;
+			}
+		}
 	}
 	
 	if (!ignoreWalkoff)

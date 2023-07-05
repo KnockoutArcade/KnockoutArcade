@@ -28,6 +28,13 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 				OverwriteMoveset();
 			}
 		}
+		
+		// If this move switched Spirit state
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState)
+		{
+			if (spiritState) spiritState = false;
+			else spiritState = true;
+		}
 	}
 	
 	HandleWalkingOffPlatforms(maintainState);
