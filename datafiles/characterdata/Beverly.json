@@ -1207,11 +1207,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1393,11 +1393,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1544,11 +1544,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1716,11 +1716,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1969,11 +1969,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2112,11 +2112,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2270,11 +2270,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2428,11 +2428,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2601,11 +2601,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2802,11 +2802,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2949,11 +2949,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3104,11 +3104,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3332,11 +3332,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3475,11 +3475,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3630,11 +3630,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3838,11 +3838,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4098,11 +4098,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4328,11 +4328,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4394,11 +4394,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4551,11 +4551,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4617,11 +4617,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4683,11 +4683,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4890,11 +4890,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5046,11 +5046,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5181,11 +5181,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5331,11 +5331,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5397,11 +5397,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5463,11 +5463,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5529,11 +5529,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5595,11 +5595,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5661,11 +5661,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5727,11 +5727,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5793,11 +5793,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5859,11 +5859,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5925,11 +5925,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     }
@@ -5957,6 +5957,6 @@
   },
   "Version": "Ver1.1.3",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-04T19:44:42.3528701-07:00",
+  "LastModified": "2023-07-04T23:38:37.3894245-07:00",
   "LastModifiedBy": "colstrau"
 }

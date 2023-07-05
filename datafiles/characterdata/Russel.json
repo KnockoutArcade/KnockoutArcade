@@ -1316,6 +1316,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1533,6 +1534,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1719,6 +1721,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -1870,6 +1873,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2210,6 +2214,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2537,6 +2542,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2684,6 +2690,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -2831,6 +2838,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3008,6 +3016,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3189,6 +3198,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3332,6 +3342,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3556,6 +3567,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3735,6 +3747,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -3874,6 +3887,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4029,6 +4043,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4184,6 +4199,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4439,6 +4455,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4686,6 +4703,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -4899,6 +4917,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5050,6 +5069,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5116,6 +5136,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5182,6 +5203,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5383,6 +5405,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5590,6 +5613,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5764,6 +5788,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5830,6 +5855,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5896,6 +5922,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -5962,6 +5989,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -6028,6 +6056,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -6094,6 +6123,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -6160,6 +6190,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -6226,6 +6257,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -6292,6 +6324,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     }
@@ -6319,6 +6352,6 @@
   },
   "Version": "Ver1.1.3",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-04T19:44:28.6288969-07:00",
+  "LastModified": "2023-07-04T23:12:02.527429-07:00",
   "LastModifiedBy": "colstrau"
 }

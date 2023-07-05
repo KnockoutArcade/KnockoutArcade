@@ -43,8 +43,69 @@
     "NumberOfReplacableColors": 0,
     "ColorPalette": []
   },
-  "NumberOfPalettes": 0,
-  "Palettes": [],
+  "NumberOfPalettes": 10,
+  "Palettes": [
+    {
+      "UID": "0000e62b-e5c1-4f2c-ae66-4991c0c5b7f7",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "5b43dad0-97b6-482d-a414-0a22ca62735e",
+      "Name": "Blue",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "5104fd8c-fb22-4ddc-add2-01b8f646e55a",
+      "Name": "Perry",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "f879e898-6977-46ab-9a38-e4a986d5fa6b",
+      "Name": "Hazama",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "dd4efd5c-96df-46d7-b29d-865a06e2d9f1",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "40e27178-4e55-4420-8394-1df4afd4cf6f",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "a720851a-985e-46c9-9023-397ff43405f5",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "c467f04b-65d0-4fe0-9618-ff6251dd6f78",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "936590dd-fe76-490c-9bd1-b90f7d7bec8d",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "2a9b0394-03ed-4c2c-a423-2496fc2ff1d6",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    }
+  ],
   "MoveData": [
     {
       "UID": "d703f036-f638-4323-ba91-760132f80a87",
@@ -207,11 +268,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": true,
         "Vulnerable": false
       }
     },
@@ -376,11 +437,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": true,
         "Vulnerable": false
       }
     },
@@ -418,7 +479,7 @@
           "Group": 1,
           "Damage": 2,
           "AttackHitStop": 2,
-          "AttackHitStun": 4,
+          "AttackHitStun": 6,
           "AttackType": 1,
           "BlockStun": 0.3,
           "KnockBack": 0.0,
@@ -506,11 +567,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -654,11 +715,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     },
@@ -788,11 +849,11 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
-        "PerformInStandOff": false,
-        "StartAtCurrent": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
+        "MaintainPosition": false,
         "Vulnerable": false
       }
     }
@@ -820,6 +881,6 @@
   },
   "Version": "Ver1.1.3",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-04T20:36:36.0282897-07:00",
+  "LastModified": "2023-07-04T23:43:57.4014012-07:00",
   "LastModifiedBy": "colstrau"
 }
