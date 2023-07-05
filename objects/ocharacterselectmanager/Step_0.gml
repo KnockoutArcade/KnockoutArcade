@@ -78,13 +78,11 @@ if (state == 0)
     {
         P1charSelCol += P1menuColMove;
         P1cursorCooldown = 10;
-        show_debug_message(P1charSelCol);
     }
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
     {
         P1charSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
-        show_debug_message(P1charSelRow);
     }
     if (P1menuRowMove == 0 && P1menuColMove == 0)
     {
@@ -366,8 +364,6 @@ else if (state == 1)
     {
         P1mapSelRow = mapSelRowMax;
     }
-	
-	show_debug_message(string(P1mapSelRow) + ", " + string(P1mapSelCol));
 
     if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
     {
@@ -376,10 +372,8 @@ else if (state == 1)
 
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
-            show_debug_message("Russel");
 			if (selectedMusic == 0) // Auto
 			{
-				show_debug_message("Music: Russel");
 				selectedMusic = 2;
 			}
 			else if (selectedMusic == 1) // Random
@@ -387,17 +381,14 @@ else if (state == 1)
 				P1musicSelRow = irandom_range(0, musicSelRowMax);
 				if (P1musicSelRow == 0)
 				{
-					show_debug_message("Music: Russel");
 					selectedMusic = 2;
 				}
 				else if (P1musicSelRow == 1)
 				{
-					show_debug_message("Music: Beverly");
 					selectedMusic = 3;
 				}
 				else if (P1musicSelRow == 2)
 				{
-					show_debug_message("Music: Jay");
 					selectedMusic = 4;
 				}
 			}
@@ -407,10 +398,8 @@ else if (state == 1)
         }
         else if (P1mapSelCol == 1 && P1mapSelRow == 0)
         {
-            show_debug_message("Beverly");
 			if (selectedMusic == 0) // Auto
 			{
-				show_debug_message("Music: Beverly");
 				selectedMusic = 3;
 			}
 			else if (selectedMusic == 1) // Random
@@ -418,17 +407,14 @@ else if (state == 1)
 				P1musicSelRow = irandom_range(0, musicSelRowMax);
 				if (P1musicSelRow == 0)
 				{
-					show_debug_message("Music: Russel");
 					selectedMusic = 2;
 				}
 				else if (P1musicSelRow == 1)
 				{
-					show_debug_message("Music: Beverly");
 					selectedMusic = 3;
 				}
 				else if (P1musicSelRow == 2)
 				{
-					show_debug_message("Music: Jay");
 					selectedMusic = 4;
 				}
 			}
@@ -438,10 +424,8 @@ else if (state == 1)
         }
         else if (P1mapSelCol == 2 && P1mapSelRow == 0)
         {
-            show_debug_message("Jay");
 			if (selectedMusic == 0) // Auto
 			{
-				show_debug_message("Music: Jay");
 				selectedMusic = 4;
 			}
 			else if (selectedMusic == 1) // Random
@@ -449,17 +433,14 @@ else if (state == 1)
 				P1musicSelRow = irandom_range(0, musicSelRowMax);
 				if (P1musicSelRow == 0)
 				{
-					show_debug_message("Music: Russel");
 					selectedMusic = 2;
 				}
 				else if (P1musicSelRow == 1)
 				{
-					show_debug_message("Music: Beverly");
 					selectedMusic = 3;
 				}
 				else if (P1musicSelRow == 2)
 				{
-					show_debug_message("Music: Jay");
 					selectedMusic = 4;
 				}
 			}
@@ -471,13 +452,10 @@ else if (state == 1)
         {
             P1mapSelRow = irandom_range(0, mapSelRowMax);
             P1mapSelCol = irandom_range(0, mapSelColMax);
-            show_debug_message("Random");
             if (P1mapSelCol == 0 && P1mapSelRow == 0)
             {
-                show_debug_message("Russel");
 				if (selectedMusic == 0) // Auto
 				{
-					show_debug_message("Music: Russel");
 					selectedMusic = 2;
 				}
 				else if (selectedMusic == 1) // Random
@@ -485,17 +463,14 @@ else if (state == 1)
 					P1musicSelRow = irandom_range(0, musicSelRowMax);
 					if (P1musicSelRow == 0)
 					{
-						show_debug_message("Music: Russel");
 						selectedMusic = 2;
 					}
 					else if (P1musicSelRow == 1)
 					{
-						show_debug_message("Music: Beverly");
 						selectedMusic = 3;
 					}
 					else if (P1musicSelRow == 2)
 					{
-						show_debug_message("Music: Jay");
 						selectedMusic = 4;
 					}
 				}
@@ -505,10 +480,8 @@ else if (state == 1)
             }
             else if (P1mapSelCol == 1 && P1mapSelRow == 0)
             {
-                show_debug_message("Beverly");
 				if (selectedMusic == 0) // Auto
 				{
-					show_debug_message("Music: Beverly");
 					selectedMusic = 3;
 				}
 				else if (selectedMusic == 1) // Random
@@ -516,17 +489,14 @@ else if (state == 1)
 					P1musicSelRow = irandom_range(0, musicSelRowMax);
 					if (P1musicSelRow == 0)
 					{
-						show_debug_message("Music: Russel");
 						selectedMusic = 2;
 					}
 					else if (P1musicSelRow == 1)
 					{
-						show_debug_message("Music: Beverly");
 						selectedMusic = 3;
 					}
 					else if (P1musicSelRow == 2)
 					{
-						show_debug_message("Music: Jay");
 						selectedMusic = 4;
 					}
 				}
@@ -536,10 +506,8 @@ else if (state == 1)
             }
             else if (P1mapSelCol == 2 && P1mapSelRow == 0)
             {
-                show_debug_message("Jay");
 				if (selectedMusic == 0) // Auto
 				{
-					show_debug_message("Music: Jay");
 					selectedMusic = 4;
 				}
 				else if (selectedMusic == 1) // Random
@@ -547,17 +515,14 @@ else if (state == 1)
 					P1musicSelRow = irandom_range(0, musicSelRowMax);
 					if (P1musicSelRow == 0)
 					{
-						show_debug_message("Music: Russel");
 						selectedMusic = 2;
 					}
 					else if (P1musicSelRow == 1)
 					{
-						show_debug_message("Music: Beverly");
 						selectedMusic = 3;
 					}
 					else if (P1musicSelRow == 2)
 					{
-						show_debug_message("Music: Jay");
 						selectedMusic = 4;
 					}
 				}
@@ -567,10 +532,8 @@ else if (state == 1)
             }
 			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
 			{
-		        show_debug_message("Locked");
 				if (selectedMusic == 0) // Auto
 				{
-					show_debug_message("Music: Russel");
 					selectedMusic = 2;
 				}
 				else if (selectedMusic == 1) // Random
@@ -578,17 +541,14 @@ else if (state == 1)
 					P1musicSelRow = irandom_range(0, musicSelRowMax);
 					if (P1musicSelRow == 0)
 					{
-						show_debug_message("Music: Russel");
 						selectedMusic = 2;
 					}
 					else if (P1musicSelRow == 1)
 					{
-						show_debug_message("Music: Beverly");
 						selectedMusic = 3;
 					}
 					else if (P1musicSelRow == 2)
 					{
-						show_debug_message("Music: Jay");
 						selectedMusic = 4;
 					}
 				}
@@ -607,7 +567,6 @@ else if (state == 1)
 	if (P1switch)
 	{
 		state = 2;
-		show_debug_message("Now entering Music selection");
 		
 		RTF_animTimer = 0;
         RTF_currentFrame = 0;
@@ -617,7 +576,6 @@ else if (state == 1)
     {
         state = 0;
         P1hasSelectedAlt = false;
-		show_debug_message("Returning to character selection");
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
@@ -658,32 +616,26 @@ else if (state == 2)
 
     if (P1musicSelRow == 0)
     {
-        show_debug_message("Auto");
 		selectedMusic = 0;
     }
 	else if (P1musicSelRow == 1)
 	{
-        show_debug_message("Random");
 		selectedMusic = 1;
 	}
     else if (P1musicSelRow == 2)
     {
-		show_debug_message("Music: Russel");
 		selectedMusic = 2;
     }
     else if (P1musicSelRow == 3)
     {
-        show_debug_message("Music: Beverly");
 		selectedMusic = 3;
     }
 	else if (P1musicSelRow == 4)
     {
-        show_debug_message("Music: Jay");
 		selectedMusic = 4;
     }
     else
     {
-        show_debug_message("Random");
         selectedMusic = 1;
     }
 
@@ -691,7 +643,6 @@ else if (state == 2)
     {
         state = 1;
         P1hasSelectedMap = false;
-		show_debug_message("Returning to Stage selection");
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
