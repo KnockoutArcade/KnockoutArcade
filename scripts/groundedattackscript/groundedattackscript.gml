@@ -9,6 +9,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	image_index = 0;
 	inAttackState = true;
 	
+	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
 	
@@ -20,6 +21,17 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		frameAdvantage = true;
 		hsp = 0;
 		isThrowable = true;
+		isEXFlash = false;
+		
+		// If this move updates the moveset, switch the moveset
+		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
+		{
+			if (moveToDo.SwitchMoveset)
+			{
+				currentMovesetID = moveToDo.SwitchToMoveset;
+				OverwriteMoveset();
+			}
+		}
 	}
 	
 	if (!ignoreWalkoff)

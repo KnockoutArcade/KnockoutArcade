@@ -22,6 +22,7 @@ uniform vec4 colorMatch13;
 uniform vec4 colorMatch14;
 uniform vec4 colorMatch15;
 uniform vec4 colorMatch16;
+uniform vec4 EXmatch;
 // Each color to replace also has its own vec4
 uniform vec4 colorReplace1;
 uniform vec4 colorReplace2;
@@ -39,6 +40,7 @@ uniform vec4 colorReplace13;
 uniform vec4 colorReplace14;
 uniform vec4 colorReplace15;
 uniform vec4 colorReplace16;
+uniform vec4 EXreplace;
 
 void main()
 {
@@ -189,6 +191,10 @@ void main()
 			}
 		}
 	}
+	
+	
+	
+	pixelColor.rgb += (EXreplace.rgb * .3);
 	
 	gl_FragColor = pixelColor;
 }

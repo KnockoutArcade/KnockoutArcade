@@ -293,12 +293,41 @@ comboDamage = 0; // Records how much damage a combo did
 storedComboDamage = 0; // Used as a debug variable to display combo damage
 
 //Meter Related Variables
-superMeter = 0; // the amount of meter the player has
+superMeter = 50; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 meterScaling = 0; // How much meter gain will be scaled
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
+isEXFlash = false; // Whether or not the player should be flashing
+EXFlashTimer = 0; // Timer for EXFlash
+displayEXFlash = false; // Toggle for the flashing
 
 // Character speed trail variables
 speedTrailTimer = 0;
+
+// Moveset-switching related variables
+currentMovesetID = 1; // Which sub-set of a character's moves are we using (starts at 1)
+if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
+{
+	// Iterate through each entry in MoveData (this contains every attack, used or not)
+	// Within each entry, iterate through InMovesets to determine if each move belongs in the player's
+	// current moveset. If InMovesets[j] = currentMovesetID, then we know that that move should be in
+	// the active moveset. To add the move, simply overwrite what was already there.
+	OverwriteMoveset();
+}
+
+// Spirit Data
+spiritState = 0; // 0 = Spirit OFF, 1 = Spirit ON
+spirit = noone;
+if (selectedCharacter.UniqueData.SpiritData == 1)
+{
+	for (var i = 0; i < array_length(global.characterData); i++)
+	{
+		if (selectedCharacter.UniqueData.Spirit == global.characterData[i].Name)
+		{
+			spirit = global.characterData[i];
+			break;
+		}
+	}
+}
