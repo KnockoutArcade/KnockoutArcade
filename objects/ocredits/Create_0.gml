@@ -4,22 +4,28 @@ credits = @"KNOCK-OUT ARCADE
 
 
 TEAM LEAD
-Ryland Kealey - Creator and Project Lead
+Ryland Kealey - Creator, Art Lead, and Project Lead
 John Kidd Jr - Programming Lead
 Ian Sbar - Design Lead
+Zak Habul - Composer / Sound Lead
 
 ART
 Andrea Gutierrez - Character Artist (Beverly)
-Shanice Porter - Character Artist (Jay)
+Bianca Magana - Character Artist (Beverly)
+Kaitlyn Nazar - Character Artist (Jay)
 Jordan Munoz - Stage Artist
 
 PROGRAMMING
 John Kidd Jr - Tools and Engine Programmer
+Collin Strauch - Tools and Engine Programmer
+Colby Goitia - Programmer
 Saul Tellez - Programmer
 Kristopher S. Olds - Programmer
+Mitchel Kelly - Programmer
 
 DESIGN
 Ian Sbar - Move Set Designer
+Boone Oliverio - Move Set Designer
 Isaiah Burkhart - Asset and World Designer
 Gregory Strickland - Enemy Designer
 Zachary Cancasci - Level Designer
