@@ -4,7 +4,7 @@ function SummonSpirit(spiritToSummon)
 {
 	if (spirit.Name == "SmoothCriminal")
 	{
-		spiritObject = instance_create_layer(x, y, "Instances", oSmoothCriminal);
+		spiritObject = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSmoothCriminal);
 	}
 	spiritObject.host = selectedCharacter;
 	spiritObject.hostObject = self;

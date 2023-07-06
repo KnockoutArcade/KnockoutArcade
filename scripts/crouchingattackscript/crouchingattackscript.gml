@@ -34,13 +34,19 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		{
 			if (!spiritState)
 			{
-				if (!spiritSummoned) SummonSpirit(spirit);
+				if (!spiritSummoned) 
+				{
+					var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
+					spiritFire.depth = depth + 1;
+					SummonSpirit(spirit);
+				}
 				spiritState = true;
 			}
 			else
 			{
 				if (spiritSummoned) 
 				{
+					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);
 					spiritObject = noone;

@@ -5,7 +5,7 @@
 // a lot will be cut out since this isn't its own character
 if (host != noone && hostObject != noone)
 {
-	depth = hostObject.depth + 1;
+	depth = hostObject.depth + 2;
 
 	//Pause function, cancel event
 	if (global.game_paused)
