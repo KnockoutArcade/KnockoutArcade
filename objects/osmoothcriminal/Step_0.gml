@@ -263,7 +263,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = hostObject.x + (10 * hostObject.image_xscale);
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 			
 			animTimer = 0;
@@ -341,7 +341,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = hostObject.x + (10 * hostObject.image_xscale);
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 			
 			animTimer = 0;
@@ -625,7 +625,7 @@ if (host != noone && hostObject != noone)
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
-					x = hostObject.x + (10 * hostObject.image_xscale);
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
 				
 				animTimer = 0;
@@ -707,7 +707,7 @@ if (host != noone && hostObject != noone)
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
-					x = hostObject.x + (10 * hostObject.image_xscale);
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
 				
 				animTimer = 0;
@@ -783,7 +783,7 @@ if (host != noone && hostObject != noone)
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
-					x = hostObject.x + (10 * hostObject.image_xscale);
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
 				
 				cancelable = false;
@@ -826,7 +826,7 @@ if (host != noone && hostObject != noone)
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
-					x = hostObject.x + (10 * hostObject.image_xscale);
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
 				
 				cancelable = false;
@@ -898,7 +898,7 @@ if (host != noone && hostObject != noone)
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
-					x = hostObject.x + (10 * hostObject.image_xscale);
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
 				
 				animTimer = 0;
