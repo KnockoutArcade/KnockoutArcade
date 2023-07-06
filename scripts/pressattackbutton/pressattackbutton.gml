@@ -12,6 +12,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.StandLight2.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK_2;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
@@ -20,6 +21,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.StandLight3.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK_3;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
@@ -28,6 +30,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_LIGHT_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (verticalMoveDir = -1)
@@ -36,6 +39,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.CrouchingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_LIGHT_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (state != eState.JUMPSQUAT)
@@ -45,6 +49,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.StandLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else
@@ -53,6 +58,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_LIGHT_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 			break;
@@ -64,6 +70,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_MEDIUM_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (verticalMoveDir == -1)
@@ -72,6 +79,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.CrouchingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_MEDIUM_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (state != eState.JUMPSQUAT)
@@ -81,6 +89,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.StandMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_MEDIUM_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else
@@ -89,6 +98,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_MEDIUM_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 			break;
@@ -100,6 +110,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_HEAVY_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (verticalMoveDir == -1)
@@ -108,6 +119,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.CrouchingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_HEAVY_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (state != eState.JUMPSQUAT)
@@ -117,6 +129,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.StandHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_HEAVY_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 				else
@@ -125,6 +138,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_HEAVY_ATTACK;
+						spiritObject.attack = attack;
 					}
 				}
 			break;
@@ -138,6 +152,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.Grab.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.GRAB;
+						spiritObject.attack = attack;
 					}
 				}
 			break;
@@ -150,6 +165,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.NeutralSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.NEUTRAL_SPECIAL;
+						spiritObject.attack = attack;
 					}
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0)
@@ -159,6 +175,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.SideSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.SIDE_SPECIAL;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (verticalMoveDir == 1)
@@ -169,6 +186,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.UpSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.UP_SPECIAL;
+						spiritObject.attack = attack;
 					}
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
@@ -179,6 +197,7 @@ function PressAttackButton(attack)
 					if (spirit != noone && selectedCharacter.DownSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.DOWN_SPECIAL;
+						spiritObject.attack = attack;
 					}
 				}
 			break;
@@ -237,6 +256,7 @@ function PressAttackButton(attack)
 				if (spirit != noone && selectedCharacter.CommandNormal1.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_1;
+					spiritObject.attack = attack;
 				}
 			}
 		}
@@ -248,6 +268,7 @@ function PressAttackButton(attack)
 				if (spirit != noone && selectedCharacter.CommandNormal2.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_2;
+					spiritObject.attack = attack;
 				}
 			}
 		}
@@ -259,6 +280,7 @@ function PressAttackButton(attack)
 				if (spirit != noone && selectedCharacter.CommandNormal3.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_3;
+					spiritObject.attack = attack;
 				}
 			}
 		}

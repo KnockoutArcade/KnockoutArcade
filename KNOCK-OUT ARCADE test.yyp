@@ -79,7 +79,7 @@
     {"id":{"name":"sRusselMap","path":"sprites/sRusselMap/sRusselMap.yy",},"order":1,},
     {"id":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"order":0,},
     {"id":{"name":"sBeverly_StandMedium_MOCKUP_strip5","path":"sprites/sBeverly_StandMedium_MOCKUP_strip5/sBeverly_StandMedium_MOCKUP_strip5.yy",},"order":23,},
-    {"id":{"name":"PressAttackButton","path":"scripts/PressAttackButton/PressAttackButton.yy",},"order":0,},
+    {"id":{"name":"pressattackbutton","path":"scripts/pressattackbutton/pressattackbutton.yy",},"order":0,},
     {"id":{"name":"GamepadCheck","path":"scripts/GamepadCheck/GamepadCheck.yy",},"order":17,},
     {"id":{"name":"oSpeedTrail","path":"objects/oSpeedTrail/oSpeedTrail.yy",},"order":10,},
     {"id":{"name":"rTitleScreen","path":"rooms/rTitleScreen/rTitleScreen.yy",},"order":1,},
