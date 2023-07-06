@@ -27,6 +27,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
@@ -44,6 +49,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL, selectedCharacter.EnhancedSideSpecial.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedSideSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_SIDE_SPECIAL;
@@ -57,6 +67,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL, selectedCharacter.EnhancedUpSpecial.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedUpSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_UP_SPECIAL;
@@ -70,6 +85,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL, selectedCharacter.EnhancedDownSpecial.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedDownSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_DOWN_SPECIAL;
@@ -83,6 +103,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedNeutralSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_NEUTRAL_SPECIAL_2;
@@ -96,6 +121,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL_2, selectedCharacter.EnhancedSideSpecial2.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedSideSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_SIDE_SPECIAL_2;
@@ -109,6 +139,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL_2, selectedCharacter.EnhancedUpSpecial2.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedUpSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_UP_SPECIAL_2;
@@ -122,6 +157,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL_2, selectedCharacter.EnhancedDownSpecial2.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedDownSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_DOWN_SPECIAL_2;
@@ -135,6 +175,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.RekkaLauncher.SpriteId;
 							CancelIntoMove(eState.REKKA_LAUNCHER, selectedCharacter.RekkaLauncher.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
@@ -152,6 +197,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.RekkaFinisher.SpriteId;
 							CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
@@ -169,6 +219,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.RekkaConnecter.SpriteId;
 							CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
@@ -186,6 +241,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.RekkaLow.SpriteId;
 							CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
@@ -203,6 +263,11 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.RekkaHigh.SpriteId;
 							CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
 							inputSet = false;
+							ds_list_clear(listOfInputs);
+							progressInInputs = [];
+							inputWindowStart = 0;
+							inputWindowEnd = 0;
+							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
