@@ -45,6 +45,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 			{
 				if (spiritSummoned) 
 				{
+					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);
 					spiritObject = noone;
 					spiritSummoned = false;

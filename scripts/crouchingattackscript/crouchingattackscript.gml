@@ -41,6 +41,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			{
 				if (spiritSummoned) 
 				{
+					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);
 					spiritObject = noone;
 					spiritSummoned = false;

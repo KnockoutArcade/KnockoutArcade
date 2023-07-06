@@ -5984,7 +5984,7 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 2,
+      "NumberOfEnhancements": 1,
       "SpecialData": [
         {
           "NumpadInput": "236",
@@ -5996,18 +5996,18 @@
           "TransitionFrame": 0,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
-        },
-        {
-          "NumpadInput": "22",
-          "ButtonPressRequired": false,
-          "StartingFrame": 1,
-          "EndingFrame": 24,
-          "EnhancementMove": 0,
-          "TransitionImmediately": false,
-          "TransitionFrame": 0,
-          "RequiredPosition": 0,
-          "DeactivateSpirit": true
         }
+        //{
+        //  "NumpadInput": "22",
+        //  "ButtonPressRequired": false,
+        //  "StartingFrame": 1,
+        //  "EndingFrame": 24,
+        //  "EnhancementMove": 0,
+        //  "TransitionImmediately": false,
+        //  "TransitionFrame": 0,
+        //  "RequiredPosition": 0,
+        //  "DeactivateSpirit": true
+        //}
       ],
       "IsThrow": false,
       "OpponentPositionData": {
