@@ -15,6 +15,18 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	
 	PerformAttack(moveToDo);
 	
+	// If this move temporarily summons the spirit to attack in Spirit OFF
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff)
+	{
+		if (!spiritSummoned)
+		{
+			var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
+			spiritFire.depth = depth + 1;
+			SummonSpirit(spirit);
+		}
+		spiritObject.state = state;
+	}
+	
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.IDLE;
@@ -50,6 +62,10 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 			{
 				if (spiritSummoned) 
 				{
+					with (hurtbox)
+					{
+						spiritOwner = noone;
+					}
 					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);

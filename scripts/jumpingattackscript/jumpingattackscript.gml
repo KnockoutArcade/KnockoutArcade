@@ -47,6 +47,10 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 			{
 				if (spiritSummoned) 
 				{
+					with (hurtbox)
+					{
+						spiritOwner = noone;
+					}
 					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);

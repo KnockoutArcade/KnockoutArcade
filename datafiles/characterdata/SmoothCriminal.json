@@ -471,15 +471,15 @@
       "AttackData": [
         {
           "Start": 1,
-          "Lifetime": 1,
+          "Lifetime": 2,
           "AttackWidth": 20,
           "AttackHeight": 12,
           "WidthOffset": 7,
           "HeightOffset": 17,
           "Group": 1,
           "Damage": 2,
-          "AttackHitStop": 2,
-          "AttackHitStun": 6,
+          "AttackHitStop": 4,
+          "AttackHitStun": 10,
           "AttackType": 1,
           "BlockStun": 0.3,
           "KnockBack": 0.0,
@@ -585,39 +585,39 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_ALL_StandingLight2_Mockup_strip6",
-      "Duration": 16,
+      "Duration": 60,
       "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 7,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 14,
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 21,
           "ImageIndex": 3
         },
         {
-          "Length": 10,
+          "Length": 28,
           "ImageIndex": 4
         },
         {
-          "Length": 12,
+          "Length": 35,
           "ImageIndex": 5
         },
         {
-          "Length": 14,
+          "Length": 42,
           "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
-          "Lifetime": 2,
+          "Start": 14,
+          "Lifetime": 7,
           "AttackWidth": 23,
           "AttackHeight": 11,
           "WidthOffset": 4,
@@ -625,7 +625,7 @@
           "Group": 1,
           "Damage": 2,
           "AttackHitStop": 2,
-          "AttackHitStun": 10,
+          "AttackHitStun": 30,
           "AttackType": 1,
           "BlockStun": 0.5,
           "KnockBack": 0.0,
@@ -694,7 +694,7 @@
         "HitBox": 1,
         "NumberOfHits": 1,
         "HitOnFrames": [
-          8
+          35
         ]
       },
       "GroundMovementData": {

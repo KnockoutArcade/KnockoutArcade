@@ -8,4 +8,8 @@ owner = noone;
 hurtboxID = 0;
 hurtboxProperty = {};
 
+// These are used to avoid spirit hosts from hitting their own spirits
+hostOwner = noone;
+spiritOwner = noone
+
 depth = -10000;

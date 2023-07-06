@@ -2170,7 +2170,7 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": true,
-        "PerformInSpiritOff": false,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -2323,7 +2323,7 @@
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": true,
-        "PerformInSpiritOff": false,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,

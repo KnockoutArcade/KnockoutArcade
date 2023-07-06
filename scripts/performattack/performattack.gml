@@ -185,7 +185,7 @@ function PerformAttack(Action)
 					
 					// Clears the hitBy data to allow attacks to connect properly
 						ds_list_clear(hitByGroup);
-						if (target != noone)
+						if (target != noone && !ds_list_empty(target.hitByGroup))
 						{
 							ds_list_clear(target.hitByGroup);
 						}

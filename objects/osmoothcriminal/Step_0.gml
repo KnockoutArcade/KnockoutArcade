@@ -5,6 +5,12 @@
 // a lot will be cut out since this isn't its own character
 if (host != noone && hostObject != noone)
 {
+	var hostID = hostObject.id;
+	with (hurtbox) 
+	{
+		hostOwner = hostID;
+	}
+	
 	depth = hostObject.depth + 2;
 
 	//Pause function, cancel event
@@ -260,6 +266,20 @@ if (host != noone && hostObject != noone)
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
 		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with (hostObject.hurtbox)
+				{
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+			
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
@@ -338,6 +358,20 @@ if (host != noone && hostObject != noone)
 
 		if (state == eState.CROUCHING)
 		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with (hostObject.hurtbox)
+				{
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+			
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
@@ -566,7 +600,7 @@ if (host != noone && hostObject != noone)
 					global.freezeTimer = false;
 					animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 					speedTrailTimer = 0;
-					comboScaling += 3.0;
+					hostObject.comboScaling += 3.0;
 					if (!grounded)
 					{
 						state = eState.RUSH_CANCEL_AIR;
@@ -622,6 +656,20 @@ if (host != noone && hostObject != noone)
 		{
 			case eState.WALKING:
 			{
+				// Immediately removes the spirit after the move is over in Spirit OFF
+				if (!hostObject.spiritState)
+				{
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
+				}
+				
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
@@ -704,6 +752,20 @@ if (host != noone && hostObject != noone)
 
 			case eState.RUN_FORWARD:
 			{
+				// Immediately removes the spirit after the move is over in Spirit OFF
+				if (!hostObject.spiritState)
+				{
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
+				}
+				
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
@@ -780,6 +842,20 @@ if (host != noone && hostObject != noone)
 
 			case eState.RUN_BACKWARD:
 			{
+				// Immediately removes the spirit after the move is over in Spirit OFF
+				if (!hostObject.spiritState)
+				{
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
+				}
+				
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
@@ -823,6 +899,20 @@ if (host != noone && hostObject != noone)
 
 			case eState.JUMPSQUAT:
 			{
+				// Immediately removes the spirit after the move is over in Spirit OFF
+				if (!hostObject.spiritState)
+				{
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
+				}
+				
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
@@ -895,6 +985,20 @@ if (host != noone && hostObject != noone)
 
 			case eState.JUMPING:
 			{
+				// Immediately removes the spirit after the move is over in Spirit OFF
+				if (!hostObject.spiritState)
+				{
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
+				}
+				
 				// Stands next to and slightly in front of the player
 				if (nextToPlayer)
 				{
@@ -2110,28 +2214,28 @@ if (host != noone && hostObject != noone)
 			// Combo Counter
 			if (target.cancelCombo)
 			{
-				startCombo = false;
+				hostObject.startCombo = false;
 				target.cancelCombo = false;
 
-				if (combo > 1 && comboCounterID != noone)
+				if (hostObject.combo > 1 && hostObject.comboCounterID != noone)
 				{
-					comboCounterID.endCombo = true;
+					hostObject.comboCounterID.endCombo = true;
 				}
 
-				combo = 0;
-				comboScaling = 0;
-				meterScaling = 0;
-				comboCounterID = noone;
-				comboDamage = 0;
+				hostObject.combo = 0;
+				hostObject.comboScaling = 0;
+				hostObject.meterScaling = 0;
+				hostObject.comboCounterID = noone;
+				hostObject.comboDamage = 0;
 			}
 
-			if (startCombo)
+			if (hostObject.startCombo)
 			{
 				if (playerID == 1)
 				{
-					comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
+					hostObject.comboCounterID = instance_create_layer(-20, 48, "ComboCounter", oComboCounter);
 
-					with(comboCounterID)
+					with(hostObject.comboCounterID)
 					{
 						owner = other.id;
 						screenSide = 1;
@@ -2141,8 +2245,8 @@ if (host != noone && hostObject != noone)
 				}
 				else
 				{
-					comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
-					with(comboCounterID)
+					hostObject.comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
+					with(hostObject.comboCounterID)
 					{
 						owner = other.id;
 						screenSide = -1;
@@ -2150,7 +2254,7 @@ if (host != noone && hostObject != noone)
 						ui_yOffset = 48;
 					}
 				}
-				startCombo = false;
+				hostObject.startCombo = false;
 			}
 		}
 
