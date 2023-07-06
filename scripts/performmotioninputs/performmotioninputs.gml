@@ -109,6 +109,7 @@ function PerformMotionInputs(attack)
 				
 				enhanced[longerIndex] = true;
 				superMeter -= 25;
+				hasUsedMeter = true;
 				if (changeImmediately)
 				{
 					changeFrame = animTimer;
