@@ -955,6 +955,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.StandLight, attack, true);
 				}
+				
+				if (selectedCharacter.StandLight.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -966,6 +971,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.StandLight2, attack, true);
 				}
+				
+				if (selectedCharacter.StandLight2.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -976,6 +986,11 @@ if (host != noone && hostObject != noone)
 				if (cancelable && global.hitstop < 1)
 				{
 					CancelData(selectedCharacter.StandLight3, attack, true);
+				}
+				
+				if (selectedCharacter.StandLight3.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 			}
 			break;
@@ -989,6 +1004,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.StandMedium, attack, true);
 				}
+				
+				if (selectedCharacter.StandMedium.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -999,6 +1019,11 @@ if (host != noone && hostObject != noone)
 				if (cancelable && global.hitstop < 1)
 				{
 					CancelData(selectedCharacter.StandHeavy, attack, true);
+				}
+				
+				if (selectedCharacter.StandHeavy.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 			}
 			break;
@@ -1012,6 +1037,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.CrouchingLight, attack, true);
 				}
+				
+				if (selectedCharacter.CrouchingLight.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -1022,6 +1052,11 @@ if (host != noone && hostObject != noone)
 				if (cancelable && global.hitstop < 1)
 				{
 					CancelData(selectedCharacter.CrouchingMedium, attack, true);
+				}
+				
+				if (selectedCharacter.CrouchingMedium.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 			}
 			break;
@@ -1044,6 +1079,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.CrouchingHeavy, attack, true);
 				}
+				
+				if (selectedCharacter.CrouchingHeavy.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -1057,6 +1097,10 @@ if (host != noone && hostObject != noone)
 					CancelData(selectedCharacter.JumpingLight, attack, true);
 				}
 
+				if (selectedCharacter.JumpingLight.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -1069,6 +1113,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.JumpingMedium, attack, true);
 				}
+				
+				if (selectedCharacter.JumpingMedium.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -1080,6 +1129,11 @@ if (host != noone && hostObject != noone)
 				if (cancelable && global.hitstop < 1)
 				{
 					CancelData(selectedCharacter.JumpingHeavy, attack, true);
+				}
+				
+				if (selectedCharacter.JumpingHeavy.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 			}
 			break;
@@ -1100,6 +1154,11 @@ if (host != noone && hostObject != noone)
 				{
 					CancelData(selectedCharacter.CommandNormal1, attack, true);
 				}
+				
+				if (selectedCharacter.CommandNormal1.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 			}
 			break;
 
@@ -1114,6 +1173,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.NeutralSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.NeutralSpecial);
@@ -1131,6 +1195,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.SideSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.SideSpecial);
 			}
@@ -1146,6 +1215,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.UpSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.UpSpecial);
@@ -1172,6 +1246,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.DownSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.DownSpecial);
 			}
@@ -1188,6 +1267,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.EnhancedNeutralSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 			}
@@ -1202,6 +1286,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.EnhancedSideSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
@@ -1218,6 +1307,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.EnhancedUpSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
 			}
@@ -1232,6 +1326,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.EnhancedDownSpecial.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
@@ -1249,6 +1348,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.RekkaLauncher.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.RekkaLauncher);
 			}
@@ -1263,6 +1367,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.RekkaFinisher.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.RekkaFinisher);
@@ -1279,6 +1388,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.RekkaConnecter.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.RekkaConnecter);
 			}
@@ -1294,6 +1408,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.RekkaLow.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				//ProcessEnhancers(selectedCharacter.RekkaLow);
 			}
@@ -1308,6 +1427,11 @@ if (host != noone && hostObject != noone)
 				else
 				{
 					JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+				}
+				
+				if (selectedCharacter.RekkaHigh.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 
 				//ProcessEnhancers(selectedCharacter.RekkaHigh);
@@ -1331,6 +1455,11 @@ if (host != noone && hostObject != noone)
 				if (animTimer > 24)
 				{
 					state = eState.IDLE;
+				}
+				
+				if (selectedCharacter.Grab.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
 				}
 			}
 			break;
@@ -1406,6 +1535,11 @@ if (host != noone && hostObject != noone)
 				{
 					JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale);
 				}
+				
+				if (selectedCharacter.CommandGrab.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				ProccessCommandGrab();
 			}
@@ -1432,6 +1566,11 @@ if (host != noone && hostObject != noone)
 				image_index = 0;
 
 				PerformAttack(selectedCharacter.ForwardThrow);
+				
+				if (selectedCharacter.ForwardThrow.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				// Set our hsp to 0 if we are on the first active frame of the move
 				if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
@@ -1458,6 +1597,11 @@ if (host != noone && hostObject != noone)
 				image_index = 0;
 
 				PerformAttack(selectedCharacter.BackwardThrow);
+				
+				if (selectedCharacter.BackwardThrow.SpiritData.MaintainPosition)
+				{
+					nextToPlayer = false;
+				}
 
 				// Set our hsp to 0 if we are on the first active frame of the move
 				if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
