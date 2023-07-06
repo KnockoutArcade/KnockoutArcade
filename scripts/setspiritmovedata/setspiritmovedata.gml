@@ -11,9 +11,9 @@ function SetSpiritMoveData(enhancement, move, attack)
 		{
 			spiritObject.attack = attack;
 		}
-		if (move.SpiritData.ReturnToPlayer) 
-		{
-			spiritObject.nextToPlayer = true;
-		}
+	}
+	if (move.SpiritData.ReturnToPlayer) 
+	{
+		spiritObject.nextToPlayer = true;
 	}
 }
