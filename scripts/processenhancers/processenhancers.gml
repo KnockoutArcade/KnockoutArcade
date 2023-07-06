@@ -31,7 +31,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.EnhancedNeutralSpecial.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedNeutralSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_NEUTRAL_SPECIAL;
 							}
@@ -44,7 +44,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL, selectedCharacter.EnhancedSideSpecial.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedSideSpecial.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedSideSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_SIDE_SPECIAL;
 							}
@@ -57,7 +57,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL, selectedCharacter.EnhancedUpSpecial.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedUpSpecial.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedUpSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_UP_SPECIAL;
 							}
@@ -70,7 +70,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL, selectedCharacter.EnhancedDownSpecial.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedDownSpecial.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedDownSpecial.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_DOWN_SPECIAL;
 							}
@@ -83,7 +83,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedNeutralSpecial2.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedNeutralSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_NEUTRAL_SPECIAL_2;
 							}
@@ -96,7 +96,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL_2, selectedCharacter.EnhancedSideSpecial2.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedSideSpecial2.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedSideSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_SIDE_SPECIAL_2;
 							}
@@ -109,7 +109,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_UP_SPECIAL_2, selectedCharacter.EnhancedUpSpecial2.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedUpSpecial2.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedUpSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_UP_SPECIAL_2;
 							}
@@ -122,7 +122,7 @@ function ProcessEnhancers(Special) {
 							sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL_2, selectedCharacter.EnhancedDownSpecial2.SpriteId, 1);
 							inputSet = false;
-							if (spirit != noone && selectedCharacter.EnhancedDownSpecial2.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.EnhancedDownSpecial2.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.ENHANCED_DOWN_SPECIAL_2;
 							}
@@ -139,7 +139,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.RekkaLauncher.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.RekkaLauncher.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.REKKA_LAUNCHER;
 							}
@@ -156,7 +156,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.RekkaFinisher.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.RekkaFinisher.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.REKKA_FINISHER;
 							}
@@ -173,7 +173,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.RekkaConnecter.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.RekkaConnecter.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.REKKA_CONNECTER;
 							}
@@ -190,7 +190,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.RekkaLow.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.RekkaLow.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.REKKA_LOW;
 							}
@@ -207,7 +207,7 @@ function ProcessEnhancers(Special) {
 							{
 								enhanced[j] = false;
 							}
-							if (spirit != noone && selectedCharacter.RekkaHigh.SpiritData.PerformAttack)
+							if (spirit != noone && spiritSummoned && selectedCharacter.RekkaHigh.SpiritData.PerformAttack)
 							{
 								spiritObject.state = eState.REKKA_HIGH;
 							}

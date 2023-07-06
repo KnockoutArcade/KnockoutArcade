@@ -9,7 +9,7 @@ function PressAttackButton(attack)
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
-					if (spirit != noone && selectedCharacter.StandLight2.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && spiritSummoned && selectedCharacter.StandLight2.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK_2;
 						spiritObject.attack = attack;
@@ -18,7 +18,7 @@ function PressAttackButton(attack)
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
-					if (spirit != noone && selectedCharacter.StandLight3.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.StandLight3.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK_3;
 						spiritObject.attack = attack;
@@ -27,7 +27,7 @@ function PressAttackButton(attack)
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 					state = eState.JUMPING_LIGHT_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_LIGHT_ATTACK;
 						spiritObject.attack = attack;
@@ -36,7 +36,7 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir = -1)
 				{
 					state = eState.CROUCHING_LIGHT_ATTACK;
-					if (spirit != noone && selectedCharacter.CrouchingLight.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.CrouchingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_LIGHT_ATTACK;
 						spiritObject.attack = attack;
@@ -46,7 +46,7 @@ function PressAttackButton(attack)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.StandLight.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.StandLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_LIGHT_ATTACK;
 						spiritObject.attack = attack;
@@ -55,7 +55,7 @@ function PressAttackButton(attack)
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_LIGHT_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingLight.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_LIGHT_ATTACK;
 						spiritObject.attack = attack;
@@ -67,7 +67,7 @@ function PressAttackButton(attack)
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_MEDIUM_ATTACK;
 						spiritObject.attack = attack;
@@ -76,7 +76,7 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_MEDIUM_ATTACK;
-					if (spirit != noone && selectedCharacter.CrouchingMedium.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.CrouchingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_MEDIUM_ATTACK;
 						spiritObject.attack = attack;
@@ -86,7 +86,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.STANDING_MEDIUM_ATTACK;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.StandMedium.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.StandMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_MEDIUM_ATTACK;
 						spiritObject.attack = attack;
@@ -95,7 +95,7 @@ function PressAttackButton(attack)
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_MEDIUM_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingMedium.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_MEDIUM_ATTACK;
 						spiritObject.attack = attack;
@@ -107,7 +107,7 @@ function PressAttackButton(attack)
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_HEAVY_ATTACK;
 						spiritObject.attack = attack;
@@ -116,7 +116,7 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_HEAVY_ATTACK;
-					if (spirit != noone && selectedCharacter.CrouchingHeavy.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.CrouchingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.CROUCHING_HEAVY_ATTACK;
 						spiritObject.attack = attack;
@@ -126,7 +126,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.STANDING_HEAVY_ATTACK;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.StandHeavy.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.StandHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.STANDING_HEAVY_ATTACK;
 						spiritObject.attack = attack;
@@ -135,7 +135,7 @@ function PressAttackButton(attack)
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_HEAVY_ATTACK;
-					if (spirit != noone && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.JumpingHeavy.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.JUMPING_HEAVY_ATTACK;
 						spiritObject.attack = attack;
@@ -149,7 +149,7 @@ function PressAttackButton(attack)
 					state = eState.GRAB;
 					sprite_index = sRussel_Grab;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.Grab.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.Grab.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.GRAB;
 						spiritObject.attack = attack;
@@ -162,7 +162,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.NEUTRAL_SPECIAL;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.NeutralSpecial.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.NeutralSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.NEUTRAL_SPECIAL;
 						spiritObject.attack = attack;
@@ -172,7 +172,7 @@ function PressAttackButton(attack)
 				{
 					state = eState.SIDE_SPECIAL;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.SideSpecial.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.SideSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.SIDE_SPECIAL;
 						spiritObject.attack = attack;
@@ -183,7 +183,7 @@ function PressAttackButton(attack)
 					state = eState.UP_SPECIAL
 					animTimer = 0;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.UpSpecial.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.UpSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.UP_SPECIAL;
 						spiritObject.attack = attack;
@@ -194,7 +194,7 @@ function PressAttackButton(attack)
 					state = eState.DOWN_SPECIAL
 					animTimer = 0;
 					image_index = 0;
-					if (spirit != noone && selectedCharacter.DownSpecial.SpiritData.PerformAttack)
+					if (spirit != noone && spiritSummoned && selectedCharacter.DownSpecial.SpiritData.PerformAttack)
 					{
 						spiritObject.state = eState.DOWN_SPECIAL;
 						spiritObject.attack = attack;
@@ -253,7 +253,7 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal1.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal1.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal1.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_1;
-				if (spirit != noone && selectedCharacter.CommandNormal1.SpiritData.PerformAttack)
+				if (spirit != noone && spiritSummoned && selectedCharacter.CommandNormal1.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_1;
 					spiritObject.attack = attack;
@@ -265,7 +265,7 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal2.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal2.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal2.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_2;
-				if (spirit != noone && selectedCharacter.CommandNormal2.SpiritData.PerformAttack)
+				if (spirit != noone && spiritSummoned && selectedCharacter.CommandNormal2.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_2;
 					spiritObject.attack = attack;
@@ -277,7 +277,7 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal3.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal3.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal3.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_3;
-				if (spirit != noone && selectedCharacter.CommandNormal3.SpiritData.PerformAttack)
+				if (spirit != noone && spiritSummoned && selectedCharacter.CommandNormal3.SpiritData.PerformAttack)
 				{
 					spiritObject.state = eState.COMMAND_NORMAL_3;
 					spiritObject.attack = attack;
