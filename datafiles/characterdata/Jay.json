@@ -6041,7 +6041,7 @@
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
-        "ToggleState": false,
+        "ToggleState": true,
         "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
