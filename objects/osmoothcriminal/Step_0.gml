@@ -3,7 +3,7 @@
 
 // A number of things will function similarly to a regular character, but 
 // a lot will be cut out since this isn't its own character
-if (host != noone)
+if (host != noone && hostObject != noone)
 {
 //Pause function, cancel event
 if (global.game_paused)
@@ -256,6 +256,13 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 //{
 //	PerformMotionInputs(attack);
 //}
+
+// Stands next to and slightly in front of the player
+if (nextToPlayer)
+{
+	x = hostObject.x + (10 * hostObject.image_xscale);
+	show_debug_message(hostObject.x);
+}
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)

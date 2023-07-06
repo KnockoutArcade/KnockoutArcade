@@ -3,6 +3,7 @@
 
 // Spirit exclusive data
 host = noone;
+hostObject = noone;
 nextToPlayer = true;
 vulnerable = false;
 

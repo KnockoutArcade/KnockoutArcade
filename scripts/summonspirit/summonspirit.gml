@@ -6,6 +6,7 @@ function SummonSpirit(spiritToSummon)
 	{
 		spiritObject = instance_create_layer(x, y, "Instances", oSmoothCriminal);
 		spiritObject.host = selectedCharacter;
+		spiritObject.hostObject = self;
 		spiritObject.playerID = playerID;
 	}
 	spiritSummoned = true;
