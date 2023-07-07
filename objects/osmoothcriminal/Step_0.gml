@@ -1060,6 +1060,7 @@ if (host != noone && hostObject != noone)
 			case eState.STANDING_LIGHT_ATTACK:
 			{
 				GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
+				//hostObject.state = state;
 
 				if (cancelable && global.hitstop < 1)
 				{
@@ -1076,6 +1077,7 @@ if (host != noone && hostObject != noone)
 			case eState.STANDING_LIGHT_ATTACK_2:
 			{
 				GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
+				//hostObject.state = state;
 
 				if (cancelable && global.hitstop < 1)
 				{
@@ -1092,6 +1094,7 @@ if (host != noone && hostObject != noone)
 			case eState.STANDING_LIGHT_ATTACK_3:
 			{
 				GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
+				//hostObject.state = state;
 
 				if (cancelable && global.hitstop < 1)
 				{
@@ -1753,23 +1756,20 @@ if (host != noone && hostObject != noone)
 				cancelable = false;
 				canTurnAround = false;
 				isEXFlash = false;
-
-				if (!global.game_paused)
-				{
-					hitstun--;
-				}
-
+				hitstun = hostObject.hitstun;
+				knockbackVel = hostObject.knockbackVel;
+				
 				if (hitstun < 1)
 				{
 					ds_list_clear(hitByGroup);
 					FAvictim = false;
-
+			
 					if (grounded)
 					{
 						cancelCombo = true;
 					}
-
-					if (!grounded)
+					
+					if (!grounded) 
 					{
 						state = eState.LAUNCHED;
 					}
@@ -1781,8 +1781,8 @@ if (host != noone && hostObject != noone)
 					{
 						state = eState.WALKING;
 						canBlock = true;
-					}
-					else
+					} 
+					else 
 					{
 						state = eState.WALKING;
 					}
@@ -1824,7 +1824,8 @@ if (host != noone && hostObject != noone)
 				}
 				xHome = x;
 
-				vsp += fallSpeed;
+				hsp = hostObject.hsp;
+				vsp = hostObject.vsp;
 
 			}
 			break;
@@ -1848,11 +1849,9 @@ if (host != noone && hostObject != noone)
 
 				FAvictim = false;
 
-				vsp += fallSpeed;
-				if (!global.game_paused)
-				{
-					hitstun--;
-				}
+				hsp = hostObject.hsp;
+				vsp = hostObject.vsp;
+				hitstun = hostObject.hitstun;
 
 			}
 			break;
@@ -1860,33 +1859,51 @@ if (host != noone && hostObject != noone)
 
 			case eState.KNOCKED_DOWN:
 			{
-				cancelable = false;
-				grounded = true;
-				invincible = true;
-				canTurnAround = false;
-
-				cancelCombo = true;
-
-				if (image_index > (image_number - 1))
+				if (nextToPlayer)
 				{
-					image_speed = 0;
+					cancelable = false;
+					grounded = true;
+					invincible = true;
+					canTurnAround = false;
+	
+					cancelCombo = true;
+
+					if (image_index > (image_number - 1))
+					{
+						image_speed = 0;
+					}
+					else
+					{
+						image_speed = 1;
+					}
+	
+					hitstun = hostObject.hitstun;
+	
+					if (animTimer > 39)
+					{
+						state = eState.GETUP;
+						animTimer = 0;
+						sprite_index = CharacterSprites.getup_Sprite;
+						image_index = 0;
+					}
 				}
 				else
 				{
-					image_speed = 1;
-				}
-
-				if (!global.game_paused)
-				{
-					hitstun--;
-				}
-
-				if (animTimer > 39)
-				{
-					state = eState.GETUP;
-					animTimer = 0;
-					sprite_index = CharacterSprites.getup_Sprite;
-					image_index = 0;
+					hostObject.spiritObject = noone;
+					hostObject.spiritSummoned = false;
+					hostObject.spiritState = false;
+					hostObject.currentMovesetID = 1;
+					with (hostObject)
+					{
+						OverwriteMoveset();
+					}
+					with (hostObject.hurtbox)
+					{
+						spiritOwner = noone;
+					}
+					instance_create_layer(x, y, "Instances", oSpiritFire);
+					instance_destroy(hurtbox);
+					instance_destroy();
 				}
 			}
 			break;
@@ -1903,7 +1920,7 @@ if (host != noone && hostObject != noone)
 
 				if (animTimer > 30)
 				{
-					// Turn the player arround immediately
+					// Turn the player around immediately
 					if (opponent != noone)
 					{
 						if (x < opponent.x)
@@ -2126,7 +2143,7 @@ if (host != noone && hostObject != noone)
 				HandleWalkingOffPlatforms(false);
 
 				// Create speed trail
-				SpeedTrail(0.3, 0.02, 3);
+				//SpeedTrail(0.3, 0.02, 3);
 			}
 			break;
 
@@ -2144,7 +2161,7 @@ if (host != noone && hostObject != noone)
 				hsp = walkSpeed * 1.5 * image_xscale;
 
 				// Create speed trail
-				SpeedTrail(0.3, 0.02, 3);
+				//SpeedTrail(0.3, 0.02, 3);
 			}
 			break;
 
@@ -2162,7 +2179,7 @@ if (host != noone && hostObject != noone)
 				hsp = global.rcAirHorizontalSpeed * image_xscale;
 
 				// Create speed trail
-				SpeedTrail(0.3, 0.02, 1);
+				//SpeedTrail(0.3, 0.02, 1);
 			}
 			break;
 		}
@@ -2269,7 +2286,7 @@ if (host != noone && hostObject != noone)
 		// Collision
 		if (state != eState.HITSTOP)
 		{
-			if (opponent != noone)
+			if (opponent != noone && !nextToPlayer)
 			{
 				// Check to see if players are about to be touching
 				if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))

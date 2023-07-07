@@ -1462,6 +1462,11 @@ switch state
 	
 	case eState.BEING_GRABBED : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		animTimer = 0;
 		hsp = 0;
 		grounded = true;
@@ -1528,6 +1533,11 @@ switch state
 	
 	case eState.THROW_TECH : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		grounded = true;
 		inAttackState = false;
 		
@@ -1544,6 +1554,11 @@ switch state
 	
 	case eState.HURT : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
@@ -1627,6 +1642,11 @@ switch state
 	
 	case eState.LAUNCHED : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		animTimer = 1;
 		sprite_index = CharacterSprites.launched_Sprite;
 			if (image_index > (image_number - 1))
@@ -1655,6 +1675,11 @@ switch state
 	
 	case eState.KNOCKED_DOWN : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		cancelable = false;
 		grounded = true;
 		invincible = true;
@@ -1689,6 +1714,11 @@ switch state
 	
 	case eState.GETUP : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		cancelable = false;
 		grounded = true;
 		invincible = true;
@@ -1899,6 +1929,10 @@ switch state
 		hasSpentDoubleJump = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		if (spiritObject != noone) 
+		{
+			spiritObject.state = state;
+		}
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -1938,6 +1972,10 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		if (spiritObject != noone) 
+		{
+			spiritObject.state = state;
+		}
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
@@ -1959,6 +1997,10 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		if (spiritObject != noone) 
+		{
+			spiritObject.state = state;
+		}
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
