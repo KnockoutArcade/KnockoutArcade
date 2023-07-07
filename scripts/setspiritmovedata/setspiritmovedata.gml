@@ -4,7 +4,7 @@
 // Update the spirit's move whenever the host performs an attack
 function SetSpiritMoveData(enhancement, move, attack)
 {
-	if (spirit != noone && spiritSummoned && spiritSummoned && move.SpiritData.PerformAttack)
+	if (spirit != noone && spiritSummoned && move.SpiritData.PerformAttack)
 	{
 		spiritObject.state = state;
 		if (!enhancement)
@@ -12,7 +12,7 @@ function SetSpiritMoveData(enhancement, move, attack)
 			spiritObject.attack = attack;
 		}
 	}
-	if (move.SpiritData.ReturnToPlayer) 
+	if (move.SpiritData.ReturnToPlayer && spiritState) 
 	{
 		spiritObject.nextToPlayer = true;
 	}

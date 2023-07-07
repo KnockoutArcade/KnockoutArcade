@@ -1366,7 +1366,7 @@ switch state
 		hurtbox.image_yscale = 25;
 		hurtboxOffset = -7;
 		
-		PerformAttack(selectedCharacter.Grab);
+		PerformAttack(selectedCharacter.Grab, false);
 		
 		if (animTimer > 24)
 		{
@@ -1471,7 +1471,7 @@ switch state
 		sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 		image_index = 0;
 		
-		PerformAttack(selectedCharacter.ForwardThrow);
+		PerformAttack(selectedCharacter.ForwardThrow, false);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
@@ -1497,7 +1497,7 @@ switch state
 		sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 		image_index = 0;
 		
-		PerformAttack(selectedCharacter.BackwardThrow);
+		PerformAttack(selectedCharacter.BackwardThrow, false);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)

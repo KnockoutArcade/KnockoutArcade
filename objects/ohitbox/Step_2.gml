@@ -14,9 +14,16 @@ if (lifetime < 1 && !isProjectile)
 	instance_destroy();
 }
 
-
-x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
-y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
+if (!calledBySpirit)
+{
+	x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
+	y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
+}
+else
+{
+	x = spirit.x + attackProperty.WidthOffset * sign(spirit.image_xscale);
+	y = spirit.y - attackProperty.HeightOffset * sign(spirit.image_yscale);
+}
 
 // Handle non-projectiles
 if (!isProjectile)
@@ -50,11 +57,6 @@ if (!isProjectile)
 		// Iterates over every hurtbox being collided with to check if it can be hit.
 		for (var i = 0; i < collisionID; i++;)
 		{
-			if (collision_list[| i].spiritOwner != noone)
-			{
-				show_debug_message(string(collision_list[| i].spiritOwner) + ", " + string(owner));
-			}
-			
 			if (collision_list[| i].owner != owner && collision_list[| i].spiritOwner != owner &&
 				collision_list[| i].hostOwner != owner)
 			{

@@ -9,7 +9,14 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	image_index = 0;
 	inAttackState = true;
 	
-	PerformAttack(moveToDo);
+	if (selectedCharacter.UniqueData.SpiritData == 2)
+	{
+		PerformAttack(moveToDo, true);
+	}
+	else
+	{
+		PerformAttack(moveToDo, false);
+	}
 	
 	if (animTimer > moveToDo.Duration) 
 	{

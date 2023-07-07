@@ -13,7 +13,14 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
 	
-	PerformAttack(moveToDo);
+	if (selectedCharacter.UniqueData.SpiritData == 2)
+	{
+		PerformAttack(moveToDo, true);
+	}
+	else
+	{
+		PerformAttack(moveToDo, false);
+	}
 	
 	// If this move temporarily summons the spirit to attack in Spirit OFF
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff)

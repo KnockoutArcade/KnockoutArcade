@@ -11,7 +11,14 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
 		
-	PerformAttack(moveToDo);
+	if (selectedCharacter.UniqueData.SpiritData == 2)
+	{
+		PerformAttack(moveToDo, true);
+	}
+	else
+	{
+		PerformAttack(moveToDo, false);
+	}
 	
 	if (animTimer > moveToDo.Duration) 
 	{

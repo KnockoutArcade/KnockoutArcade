@@ -20,7 +20,7 @@
 		TLDR: I'm trying to future-proof this code when/if I add more characters.
 */
 
-function PerformAttack(Action)
+function PerformAttack(Action, createdBySpirit)
 {
 	var hitbox = 0;
 	// Animations
@@ -142,6 +142,14 @@ function PerformAttack(Action)
 	{
 		if (animTimer == Action.AttackProperty[i].Start) 
 		{
+			var spiritRef = noone;
+			var hostID = noone;
+			if (createdBySpirit)
+			{
+				spiritRef = id;
+				hostID = hostObject.id;
+			}
+			
 			hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
 			with (hitbox) 
 			{
@@ -149,7 +157,16 @@ function PerformAttack(Action)
 				hitboxID = i;
 				image_xscale = Action.AttackProperty[i].AttackWidth * other.image_xscale;
 				image_yscale = Action.AttackProperty[i].AttackHeight;
-				owner = other.id;
+				if (!createdBySpirit)
+				{
+					owner = other.id;
+				}
+				else
+				{
+					owner = hostID;
+					calledBySpirit = createdBySpirit;
+					spirit = spiritRef;
+				}
 			
 				// Pass through attack data
 				attackProperty = Action.AttackProperty[i];
@@ -168,6 +185,14 @@ function PerformAttack(Action)
 			{
 				if (animTimer == Action.RehitData.HitOnFrames[j]) 
 				{
+					var spiritRef = noone;
+					var hostID = noone;
+					if (createdBySpirit)
+					{
+						spiritRef = id;
+						hostID = hostObject.id;
+					}
+					
 					hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitbox) 
 					{
@@ -175,7 +200,16 @@ function PerformAttack(Action)
 						hitboxID = i;
 						image_xscale = Action.AttackProperty[i].AttackWidth * other.image_xscale;
 						image_yscale = Action.AttackProperty[i].AttackHeight;
-						owner = other.id;
+						if (!createdBySpirit)
+						{
+							owner = other.id;
+						}
+						else
+						{
+							owner = hostID;
+							calledBySpirit = createdBySpirit;
+							spirit = spiritRef;
+						}
 			
 						// Pass through attack data
 						attackProperty = Action.AttackProperty[i];
@@ -185,7 +219,7 @@ function PerformAttack(Action)
 					
 					// Clears the hitBy data to allow attacks to connect properly
 						ds_list_clear(hitByGroup);
-						if (target != noone && !ds_list_empty(target.hitByGroup))
+						if (target != noone)
 						{
 							ds_list_clear(target.hitByGroup);
 						}
@@ -210,13 +244,30 @@ function PerformAttack(Action)
 					image_xscale = other.image_xscale;
 					playerOwner = other.id;
 					
+					var spiritRef = noone;
+					var hostID = noone;
+					if (createdBySpirit)
+					{
+						spiritRef = id;
+						hostID = hostObject.id;
+					}
+					
 					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitboxID) 
 					{
 						hitboxID = i;
 						image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
 						image_yscale = other.hitboxProperties.AttackData[i].AttackHeight;
-						owner = other.id;
+						if (!createdBySpirit)
+						{
+							owner = other.id;
+						}
+						else
+						{
+							owner = hostID;
+							calledBySpirit = createdBySpirit;
+							spirit = spiritRef;
+						}
 						
 						isProjectile = true;
 			

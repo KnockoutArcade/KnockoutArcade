@@ -1060,7 +1060,7 @@ if (host != noone && hostObject != noone)
 					CancelData(selectedCharacter.StandLight, attack, true);
 				}
 				
-				if (selectedCharacter.StandLight.SpiritData.MaintainPosition)
+				if (selectedCharacter.StandLight.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 				{
 					nextToPlayer = false;
 				}
@@ -1076,7 +1076,7 @@ if (host != noone && hostObject != noone)
 					CancelData(selectedCharacter.StandLight2, attack, true);
 				}
 				
-				if (selectedCharacter.StandLight2.SpiritData.MaintainPosition)
+				if (selectedCharacter.StandLight2.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 				{
 					nextToPlayer = false;
 				}
@@ -1092,7 +1092,7 @@ if (host != noone && hostObject != noone)
 					CancelData(selectedCharacter.StandLight3, attack, true);
 				}
 				
-				if (selectedCharacter.StandLight3.SpiritData.MaintainPosition)
+				if (selectedCharacter.StandLight3.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 				{
 					nextToPlayer = false;
 				}
@@ -1109,7 +1109,7 @@ if (host != noone && hostObject != noone)
 					CancelData(selectedCharacter.StandMedium, attack, true);
 				}
 				
-				if (selectedCharacter.StandMedium.SpiritData.MaintainPosition)
+				if (selectedCharacter.StandMedium.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 				{
 					nextToPlayer = false;
 				}
@@ -1554,7 +1554,7 @@ if (host != noone && hostObject != noone)
 				hurtbox.image_yscale = 25;
 				hurtboxOffset = -7;
 
-				PerformAttack(selectedCharacter.Grab);
+				PerformAttack(selectedCharacter.Grab, true);
 
 				if (animTimer > 24)
 				{
@@ -1669,7 +1669,7 @@ if (host != noone && hostObject != noone)
 				sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 				image_index = 0;
 
-				PerformAttack(selectedCharacter.ForwardThrow);
+				PerformAttack(selectedCharacter.ForwardThrow, true);
 				
 				if (selectedCharacter.ForwardThrow.SpiritData.MaintainPosition)
 				{
@@ -1700,7 +1700,7 @@ if (host != noone && hostObject != noone)
 				sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 				image_index = 0;
 
-				PerformAttack(selectedCharacter.BackwardThrow);
+				PerformAttack(selectedCharacter.BackwardThrow, true);
 				
 				if (selectedCharacter.BackwardThrow.SpiritData.MaintainPosition)
 				{
@@ -2263,34 +2263,33 @@ if (host != noone && hostObject != noone)
 		// Collision
 		if (state != eState.HITSTOP)
 		{
-			// Don't collide with the player
-			//if (opponent != noone)
-			//{
-			//	// Check to see if players are about to be touching
-			//	if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
-			//	{
-			//		hsp *= .75; // Reduce player speed
-			//		var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
-			//		// Simulate the opponent moving forwards
-			//		opponent.x += (opponent.hsp * .75) + opponent.environmentDisplacement;
-			//		// While the players are still touching
-			//		while (place_meeting(x + hsp + environmentDisplacement, y, opponent))
-			//		{
-			//			// Move the players away from each other
-			//			if x > opponent.x{
-			//				environmentDisplacement += .5;
-			//				opponent.x -= .5;
-			//			}
-			//			else
-			//			{
-			//				environmentDisplacement -= .5;
-			//				opponent.x += .5;
-			//			}
-			//		}
-			//		opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
-			//		opponent.x = origanalX; // Return oponent to original position
-			//	}
-			//}
+			if (opponent != noone)
+			{
+				// Check to see if players are about to be touching
+				if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+				{
+					hsp *= .75; // Reduce player speed
+					var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+					// Simulate the opponent moving forwards
+					opponent.x += (opponent.hsp * .75) + opponent.environmentDisplacement;
+					// While the players are still touching
+					while (place_meeting(x + hsp + environmentDisplacement, y, opponent))
+					{
+						// Move the players away from each other
+						if x > opponent.x{
+							environmentDisplacement += .5;
+							opponent.x -= .5;
+						}
+						else
+						{
+							environmentDisplacement -= .5;
+							opponent.x += .5;
+						}
+					}
+					opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+					opponent.x = origanalX; // Return oponent to original position
+				}
+			}
 
 
 			// Collisions With Walls
