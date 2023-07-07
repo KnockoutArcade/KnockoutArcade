@@ -23,6 +23,9 @@ for (var i = 0; i < 100; i++;)
 	}
 }
 
+// Draw Debug Origin
+if (global.toggleHitboxVisibility) draw_circle(xHome,y, 1, true)
+
 if (isEXFlash)
 {
 	EXFlashTimer++;

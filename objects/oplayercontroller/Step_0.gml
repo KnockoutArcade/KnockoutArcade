@@ -599,12 +599,14 @@ if (state == eState.HITSTOP)
 		if (hitstun > 0)
 		{
 			image_index = 0;
+			x = xHome;
 			hitstun++;
 		}
 		
 		if (blockstun > 0)
 		{
 			blockstun++;
+			x = xHome;
 		}
 	}
 	image_speed = 0;
@@ -2076,88 +2078,97 @@ if (target != noone)
 
 
 // Collision
+// When a player gets hit, they ossilate back and forth, which will move the player's collision box around.
+// We're storing the actual x Position so we can restore it later.
+// We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
+// player's position without ossilating.
+var actualXPos = x;
+x = xHome;
+
+// Collisions With Players
+if (opponent != noone)
+{
+	// Check to see if players are about to be touching
+	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	{
+		hsp *= .75; // Reduce player speed
+		var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+		// Simulate the opponent moving forwards
+		opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		// While the players are still touching
+		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
+		{
+			// Move the players away from each other
+			if x > opponent.x {
+				environmentDisplacement += .5;
+				opponent.x -= .5;
+			}
+			else 
+			{
+				environmentDisplacement -= .5;
+				opponent.x += .5;
+			}
+		}
+		opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+		opponent.x = origanalX; // Return oponent to original position
+	}
+}
+
+
+// Collisions With Walls
+if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
+{
+	while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
+	{
+		x += sign(hsp+environmentDisplacement);
+	}
+	hsp = 0;
+	environmentDisplacement = 0;
+}
+
+if (place_meeting(x, y+vsp+fallSpeed, oWall))
+{
+	//Determine wether we are rising into a cieling or falling onto a floor.
+	var fallDirection = sign(vsp);
+	
+	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
+	{
+		y += sign(vsp);
+	}
+	
+	isJumpingForward = false;
+	vsp = 0;
+	if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+	{
+		state = eState.IDLE;
+		grounded = true;
+		frameAdvantage = true;
+		inAttackState = false;
+		canTurnAround = true;
+		isThrowable = true;
+	}
+	if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
+	{
+		grounded = true;
+		isThrowable = true;
+	}
+	if (state == eState.LAUNCHED)
+	{
+		state = eState.KNOCKED_DOWN;
+		sprite_index = CharacterSprites.knockdown_Sprite;
+		image_index = 0;
+		hsp = 0;
+		image_speed = 1;
+	}
+}
+x = actualXPos; // Restore the player's actual x position
+
 if (state != eState.HITSTOP)
 {
-	// Collisions With Players
-	if (opponent != noone)
-	{
-		// Check to see if players are about to be touching
-		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
-		{
-			hsp *= .75; // Reduce player speed
-			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
-			// Simulate the opponent moving forwards
-			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
-			// While the players are still touching
-			while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
-			{
-				// Move the players away from each other
-				if x > opponent.x {
-					environmentDisplacement += .5;
-					opponent.x -= .5;
-				}
-				else 
-				{
-					environmentDisplacement -= .5;
-					opponent.x += .5;
-				}
-			}
-			opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
-			opponent.x = origanalX; // Return oponent to original position
-		}
-	}
-	
-	
-	// Collisions With Walls
-	if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
-	{
-		while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
-		{
-			x += sign(hsp+environmentDisplacement);
-		}
-		hsp = 0;
-		environmentDisplacement = 0;
-	}
-	
-	if (place_meeting(x, y+vsp+fallSpeed, oWall))
-	{
-		//Determine wether we are rising into a cieling or falling onto a floor.
-		var fallDirection = sign(vsp);
-		
-		while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
-		{
-			y += sign(vsp);
-		}
-		
-		isJumpingForward = false;
-		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
-		{
-			state = eState.IDLE;
-			grounded = true;
-			frameAdvantage = true;
-			inAttackState = false;
-			canTurnAround = true;
-			isThrowable = true;
-		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
-		{
-			grounded = true;
-			isThrowable = true;
-		}
-		if (state == eState.LAUNCHED)
-		{
-			state = eState.KNOCKED_DOWN;
-			sprite_index = CharacterSprites.knockdown_Sprite;
-			image_index = 0;
-			hsp = 0;
-			image_speed = 1;
-		}
-	}
-
-x += hsp + environmentDisplacement;
-x = clamp(x, global.camObj.x-80, global.camObj.x+80);
-y += vsp;
+	x += hsp + environmentDisplacement;
+	x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	y += vsp;
+}
 
 // Handle Enviornmental Displacement
 environmentDisplacement = 0;
@@ -2184,7 +2195,6 @@ if (!inAttackState && canTurnAround && !rcActivated)
 	{
 		image_xscale = sign(hsp);
 	}
-}
 }
 }
 else 
