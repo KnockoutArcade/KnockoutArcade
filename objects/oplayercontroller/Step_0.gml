@@ -492,6 +492,11 @@ else if (global.hitstop != 0)
 
 if (state == eState.HITSTOP)
 {
+	if (spiritObject != noone)
+	{
+		spiritObject.state = state;
+	}
+	
 	hitstunShuffleTimer++;
 	
 	if (hitstun > 0)

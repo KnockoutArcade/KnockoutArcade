@@ -203,7 +203,6 @@ function PerformAttack(Action, createdBySpirit)
 						{
 							owner = hostID;
 							spirit = other.id;
-							show_debug_message("Rehit move");
 						}
 			
 						// Pass through attack data

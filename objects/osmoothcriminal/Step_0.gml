@@ -402,7 +402,7 @@ if (host != noone && hostObject != noone)
 		}
 
 
-		if (hostObject.state == eState.HITSTOP)
+		if (state == eState.HITSTOP)
 		{
 			hitstunShuffleTimer = hostObject.hitstunShuffleTimer;
 			shuffle = hostObject.shuffle;

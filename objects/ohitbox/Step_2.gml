@@ -75,8 +75,11 @@ if (!isProjectile)
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+			show_debug_message(string(collision_list[| i].owner) + ", " + string(owner) + ", " + string(gotHitBy));
 			if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible)
 			{
+				if (spirit != noone) show_debug_message("(" + string(spirit.x) + ", " + string(spirit.y) + "), (" + string(x) + ", " + string(y) + ")");
+				
 				//Set who the player is currently targeting
 				owner.target = collision_list[| i].owner.id;
 
