@@ -480,11 +480,11 @@ if (state == eState.CROUCHING)
 }
 
 // Animation pauses during hitstop and when the screen freezes
-if (global.hitstop == 0 && state != eState.SCREEN_FREEZE) 
+if (hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
 }
-else if (global.hitstop != 0)
+else if (hitstop != 0)
 {
 	state = eState.HITSTOP;
 }
@@ -512,11 +512,11 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 3);
+			x = xHome + min(hitstop, 3);
 		}
 		else 
 		{
-			x = xHome - min(global.hitstop, 3);
+			x = xHome - min(hitstop, 3);
 		}
 	}
 	else 
@@ -564,16 +564,18 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 1);
+			x = xHome + min(hitstop, 1);
 		}
 		else
 		{
-			x = xHome - min(global.hitstop, 1);
+			x = xHome - min(hitstop, 1);
 		}
 	}
 	
+	hitstop--;
+	
 	// When Hitstop Ends
-	if (global.hitstop < 1) 
+	if (hitstop < 1) 
 	{
 		state = prevState;
 		if (hitstopBuffer)
@@ -581,8 +583,8 @@ if (state == eState.HITSTOP)
 			//sprite_index = prevSprite;
 			image_index = 0;
 			cancelable = false;
-			animTimer = animOffset;
 			animOffset = 0;
+			animTimer = animOffset;
 			hitstopBuffer = false;
 		}
 		
@@ -606,6 +608,8 @@ if (state == eState.HITSTOP)
 		}
 	}
 	image_speed = 0;
+	
+	
 }
 
 // Handle Being Grabbed
@@ -1000,7 +1004,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandLight, attack, true);
 		}
@@ -1011,7 +1015,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandLight2, attack, true);
 		}
@@ -1022,7 +1026,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandLight3, attack, true);
 		}
@@ -1034,7 +1038,7 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandMedium, attack, true);
 		}
@@ -1045,7 +1049,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandHeavy, attack, true);
 		}
@@ -1057,7 +1061,7 @@ switch state
 	{	
 		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 		
-		if (cancelable && global.hitstop < 1) 
+		if (cancelable && hitstop < 1) 
 		{
 			CancelData(selectedCharacter.CrouchingLight, attack, true);
 		}
@@ -1068,7 +1072,7 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CrouchingMedium, attack, true);
 		}
@@ -1089,7 +1093,7 @@ switch state
 			hurtbox.image_yscale = 20;
 		}
 	
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CrouchingHeavy, attack, true);
 		}
@@ -1101,7 +1105,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingLight, attack, true);
 		} 
@@ -1114,7 +1118,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
 	
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingMedium, attack, true);
 		}
@@ -1126,7 +1130,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingHeavy, attack, true);
 		}
@@ -1145,7 +1149,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
 		}
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CommandNormal1, attack, true);
 		}
@@ -1976,7 +1980,7 @@ switch state
 
 
 // If we are IN hitstop
-if (global.hitstop > 0) 
+if (hitstop > 0) 
 {
 	//state = eState.HITSTOP;
 }

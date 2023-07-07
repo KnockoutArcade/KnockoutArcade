@@ -146,7 +146,8 @@ if (!isProjectile)
 					owner.heldOpponent = collision_list[| i].owner;
 					owner.target = collision_list[| i].owner;
 				
-					global.hitstop = attackProperty.AttackHitStop;
+					owner.hitstop = attackProperty.AttackHitStop;
+					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
 					hasHit = true;
@@ -222,7 +223,10 @@ if (!isProjectile)
 					hasHit = true;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
-					global.hitstop = attackProperty.AttackHitStop;
+					
+					// Handle Hitstop
+					owner.hitstop = attackProperty.AttackHitStop;
+					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Allow Cancelling
 					owner.cancelable = true;
