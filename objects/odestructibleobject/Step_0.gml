@@ -85,16 +85,19 @@ switch (state)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 3);
+			x = xHome + min(hitstop, 3);
 		}
 		else 
 		{
-			x = xHome - min(global.hitstop, 3);
+			x = xHome - min(hitstop, 3);
 		}
 		
-		if (global.hitstop == 0)
+		hitstop--;
+		
+		if (hitstop == 0)
 		{
 			state = eState.IDLE;
+			x = xHome;
 		}
 	}
 	break;

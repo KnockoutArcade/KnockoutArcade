@@ -25,6 +25,7 @@ with (wallCollisionBox)
 sprite_index = sTrashBin;
 
 hitstun = 0;
+hitstop = 0;
 inAttackState = false;
 
 // Hurtbox Variables

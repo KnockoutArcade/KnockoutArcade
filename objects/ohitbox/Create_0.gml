@@ -4,7 +4,7 @@
 lifetime = 1;
 owner = noone;
 
-hasHit = false;
+hasHit = ds_list_create();
 
 attackProperty = {};
 counterHitProperty = {};
