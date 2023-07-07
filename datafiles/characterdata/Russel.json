@@ -1940,7 +1940,7 @@
           "BlockStun": 9.0,
           "KnockBack": 3.0,
           "AirKnockbackVertical": -3.0,
-          "AirKnockbackHorizontal": 2.8,
+          "AirKnockbackHorizontal": 2.5,
           "Launches": true,
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 2.0,
@@ -5902,6 +5902,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-07T14:33:13.9340679-07:00",
+  "LastModified": "2023-07-07T14:49:39.146057-07:00",
   "LastModifiedBy": "creep"
 }

@@ -2163,7 +2163,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 }
 x = actualXPos; // Restore the player's actual x position
 
-if (state != eState.HITSTOP)
+if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
 	x += hsp + environmentDisplacement;
 	x = clamp(x, global.camObj.x-80, global.camObj.x+80);
