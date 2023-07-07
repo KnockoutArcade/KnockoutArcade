@@ -68,7 +68,8 @@ if (!isProjectile)
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
-			if (collision_list[| i].owner != owner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
+			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
+			if (collision_list[| i].owner != owner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
 				owner.target = collision_list[| i].owner.id;
@@ -88,7 +89,7 @@ if (!isProjectile)
 					collision_list[| i].owner.superMeter += 5;
 					owner.superMeter += 5;
 				
-					hasHit = true;
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 				} 
 				else if (attackProperty.AttackType == eAttackType.GRAB && // Grabbing
 						collision_list[| i].owner.hitstun < 1 &&
@@ -110,7 +111,7 @@ if (!isProjectile)
 					owner.heldOpponent = collision_list[| i].owner;
 				
 					// Multiple hitboxes
-					hasHit = true;
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 				
 					// Depth Sorting
@@ -150,7 +151,7 @@ if (!isProjectile)
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
-					hasHit = true;
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 				
 					// Depth Sorting
@@ -220,7 +221,6 @@ if (!isProjectile)
 				
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
 					owner.pushbackVel = attackProperty.Pushback;
-					hasHit = true;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
 					
@@ -232,6 +232,7 @@ if (!isProjectile)
 					owner.cancelable = true;
 				
 					// Multiple hitboxes
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 				
 					// Depth Sorting
@@ -283,6 +284,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
@@ -293,6 +295,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 							with (counterParticle) 
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sMediumCounter;
 								depth = 2;
@@ -303,6 +306,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with (counterParticle) 
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sCOUNTERtext;
 								depth = 2;
@@ -363,7 +367,8 @@ else
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
-			if (collision_list[| i].owner != owner.playerOwner && !hasHit && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
+			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
+			if (collision_list[| i].owner != owner.playerOwner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
 			{
 				
 				// Calculate blocking direction
@@ -413,8 +418,6 @@ else
 					owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
 				
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
-					owner.playerOwner.pushbackVel = attackProperty.Pushback;
-					hasHit = true;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
 					
@@ -422,6 +425,7 @@ else
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 				
 					// Depth Sorting

@@ -63,7 +63,7 @@ function ProcessHit( attackProperty, collision_list)
 		}
 		owner.heldOpponent = noone;
 
-		hasHit = true;
+		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
@@ -133,7 +133,7 @@ function ProcessHit( attackProperty, collision_list)
 			collision_list.owner.vsp = 0;
 		}
 
-		hasHit = true;
+		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
