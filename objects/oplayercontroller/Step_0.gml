@@ -1004,7 +1004,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		if (cancelable && hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight, attack, true);
 		}
@@ -1015,7 +1015,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		if (cancelable && hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight2, attack, true);
 		}
@@ -1026,7 +1026,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
 		
-		if (cancelable && hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight3, attack, true);
 		}
@@ -1038,7 +1038,7 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		if (cancelable && hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandMedium, attack, true);
 		}

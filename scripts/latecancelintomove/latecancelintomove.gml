@@ -29,5 +29,6 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 		{ 
 			instance_destroy(playerHitbox);
 		}
+		
 	}
 }

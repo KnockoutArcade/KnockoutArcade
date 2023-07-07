@@ -283,7 +283,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
 							}
@@ -293,7 +293,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sMediumCounter;
 								depth = 2;
 							}
@@ -303,7 +303,7 @@ if (!isProjectile)
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sCOUNTERtext;
 								depth = 2;
 							}
@@ -417,7 +417,9 @@ else
 					hasHit = true;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
-					global.hitstop = attackProperty.AttackHitStop;
+					
+					owner.hitstop = attackProperty.AttackHitStop;
+					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
@@ -471,7 +473,7 @@ else
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
 							}
@@ -481,7 +483,7 @@ else
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sMediumCounter;
 								depth = 2;
 							}
@@ -491,7 +493,7 @@ else
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with (counterParticle) 
 							{
-								lifetime = global.hitstop;
+								lifetime = owner.hitstop;
 								sprite_index = sCOUNTERtext;
 								depth = 2;
 							}
