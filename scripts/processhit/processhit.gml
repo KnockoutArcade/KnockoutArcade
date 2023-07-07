@@ -33,7 +33,7 @@ function ProcessHit( attackProperty, collision_list)
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
-		owner.superMeter += floor(attackProperty.MeterGain);
+		owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		
 		if (!collision_list.owner.grounded)
 		{
@@ -106,7 +106,7 @@ function ProcessHit( attackProperty, collision_list)
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
-		owner.playerOwner.superMeter += floor(attackProperty.MeterGain);
+		owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
 					
 		if (!collision_list.owner.grounded)
 		{

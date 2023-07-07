@@ -270,6 +270,15 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 	}
 }
 
+// Calculate Meter Gain
+if (hasUsedMeter)
+{
+	meterScaling = 0.1;
+}
+else
+{
+	meterScaling = 1;
+}
 
 // Reset motion input values if the player isn't performing a special move
 if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL 
@@ -1889,6 +1898,7 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		projectileInvincible = true;
+		hasUsedMeter = true;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -1927,6 +1937,7 @@ switch state
 		grounded = false;
 		canTurnAround = false;
 		projectileInvincible = true;
+		hasUsedMeter = true;
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
@@ -1947,6 +1958,7 @@ switch state
 		grounded = false;
 		canTurnAround = false;
 		projectileInvincible = true;
+		hasUsedMeter = true;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
@@ -2025,6 +2037,7 @@ if (target != noone)
 		meterScaling = 0;
 		comboCounterID = noone;
 		comboDamage = 0;
+		hasUsedMeter = false;
 	}
 
 	if (startCombo)

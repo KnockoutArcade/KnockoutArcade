@@ -15,7 +15,7 @@ if (playerID == 1)
 	draw_text(20, 30, isEXFlash);
 	draw_text(20, 50, EXFlashTimer);
 	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, displayEXFlash);
+	draw_text(20, 90, hasUsedMeter);
 } 
 else 
 {

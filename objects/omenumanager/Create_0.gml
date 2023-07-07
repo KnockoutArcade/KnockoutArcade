@@ -3,3 +3,5 @@
 startTextTimer = 0;
 
 startTextShow = true;
+
+randomize();
