@@ -239,14 +239,14 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 12,
+            "StartingFrame": 4,
             "HorizontalSpeed": 24.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 13,
+            "StartingFrame": 9,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
@@ -408,14 +408,14 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 12,
+            "StartingFrame": 4,
             "HorizontalSpeed": 24.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 13,
+            "StartingFrame": 9,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
@@ -578,18 +578,34 @@
     {
       "UID": "19c97468-e749-4a1c-b9d1-7a20f3c46b5b",
       "MoveType": 64,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 128,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_ALL_StandingLight2_Mockup_strip6",
-      "Duration": 60,
-      "NumberOfFrames": 6,
+      "Duration": 28,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
-          "Length": 7,
+          "Length": 4,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 6,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 10,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 12,
           "ImageIndex": 1
         },
         {
@@ -597,34 +613,34 @@
           "ImageIndex": 2
         },
         {
-          "Length": 21,
+          "Length": 16,
           "ImageIndex": 3
         },
         {
-          "Length": 28,
+          "Length": 18,
           "ImageIndex": 4
         },
         {
-          "Length": 35,
+          "Length": 20,
           "ImageIndex": 5
         },
         {
-          "Length": 42,
+          "Length": 25,
           "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 7,
-          "Lifetime": 7,
+          "Start": 4,
+          "Lifetime": 2,
           "AttackWidth": 23,
           "AttackHeight": 11,
           "WidthOffset": 4,
           "HeightOffset": 16,
           "Group": 1,
-          "Damage": 2,
-          "AttackHitStop": 2,
+          "Damage": 6,
+          "AttackHitStop": 5,
           "AttackHitStun": 30,
           "AttackType": 1,
           "BlockStun": 0.5,
@@ -692,9 +708,11 @@
       "ProjectileData": [],
       "RehitData": {
         "HitBox": 1,
-        "NumberOfHits": 1,
+        "NumberOfHits": 3,
         "HitOnFrames": [
-          28
+          8,
+          12,
+          16
         ]
       },
       "GroundMovementData": {
@@ -760,7 +778,7 @@
           "HeightOffset": 22,
           "Group": 1,
           "Damage": 15,
-          "AttackHitStop": 5,
+          "AttackHitStop": 8,
           "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 4.0,
@@ -797,7 +815,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -827,7 +845,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -881,6 +899,6 @@
   },
   "Version": "Ver1.1.3",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-04T23:43:57.4014012-07:00",
+  "LastModified": "2023-07-06T22:59:37.1779612-07:00",
   "LastModifiedBy": "colstrau"
 }
