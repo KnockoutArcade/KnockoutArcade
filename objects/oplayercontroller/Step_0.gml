@@ -2126,7 +2126,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	environmentDisplacement = 0;
 }
 
-if (place_meeting(x, y+vsp+fallSpeed, oWall))
+if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 {
 	//Determine wether we are rising into a cieling or falling onto a floor.
 	var fallDirection = sign(vsp);

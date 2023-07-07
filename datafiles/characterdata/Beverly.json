@@ -1268,7 +1268,7 @@
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 2.0,
+          "LaunchKnockbackVertical": -0.5,
           "LaunchKnockbackHorizontal": 4.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
@@ -5460,6 +5460,6 @@
   },
   "Version": "Ver1.1.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-06T22:54:36.8252453-07:00",
+  "LastModified": "2023-07-07T14:35:58.1830233-07:00",
   "LastModifiedBy": "creep"
 }
