@@ -146,7 +146,7 @@ function PerformAttack(Action, createdBySpirit)
 			var hostID = noone;
 			if (createdBySpirit)
 			{
-				spiritRef = id;
+				spiritRef = other.id;
 				hostID = hostObject.id;
 			}
 			
@@ -164,7 +164,6 @@ function PerformAttack(Action, createdBySpirit)
 				else
 				{
 					owner = hostID;
-					calledBySpirit = createdBySpirit;
 					spirit = spiritRef;
 				}
 			
@@ -189,7 +188,7 @@ function PerformAttack(Action, createdBySpirit)
 					var hostID = noone;
 					if (createdBySpirit)
 					{
-						spiritRef = id;
+						spiritRef = other.id;
 						hostID = hostObject.id;
 					}
 					
@@ -207,7 +206,6 @@ function PerformAttack(Action, createdBySpirit)
 						else
 						{
 							owner = hostID;
-							calledBySpirit = createdBySpirit;
 							spirit = spiritRef;
 						}
 			
@@ -248,7 +246,7 @@ function PerformAttack(Action, createdBySpirit)
 					var hostID = noone;
 					if (createdBySpirit)
 					{
-						spiritRef = id;
+						spiritRef = other.id;
 						hostID = hostObject.id;
 					}
 					
@@ -265,7 +263,6 @@ function PerformAttack(Action, createdBySpirit)
 						else
 						{
 							owner = hostID;
-							calledBySpirit = createdBySpirit;
 							spirit = spiritRef;
 						}
 						
@@ -286,6 +283,14 @@ function PerformAttack(Action, createdBySpirit)
 	{
 		if (animTimer == Action.HurtboxProperty[i].Start) 
 		{
+			var spiritRef = noone;
+			var hostID = noone;
+			if (createdBySpirit)
+			{
+				spiritRef = other.id;
+				hostID = hostObject.id;
+			}
+			
 			hitbox = instance_create_layer(x + (Action.HurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.HurtboxProperty[i].HeightOffset, "hitboxes", oPlayerHurtbox);
 			with (hitbox) 
 			{
@@ -293,7 +298,15 @@ function PerformAttack(Action, createdBySpirit)
 				hurtboxID = i;
 				image_xscale = Action.HurtboxProperty[i].AttackWidth * other.image_xscale;
 				image_yscale = Action.HurtboxProperty[i].AttackHeight;
-				owner = other.id;
+				if (!createdBySpirit)
+				{
+					owner = other.id;
+				}
+				else
+				{
+					owner = hostID;
+					spirit = spiritRef;
+				}
 				
 				hurtboxProperty = Action.HurtboxProperty[i];
 			}

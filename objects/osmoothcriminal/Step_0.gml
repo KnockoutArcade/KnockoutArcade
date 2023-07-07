@@ -5,10 +5,29 @@
 // a lot will be cut out since this isn't its own character
 if (host != noone && hostObject != noone)
 {
-	var hostID = hostObject.id;
-	with (hurtbox) 
+	if (!hurtboxSet)
 	{
-		hostOwner = hostID;
+		var hostID = hostObject.id;
+		with (hurtbox) 
+		{
+			owner = hostID;
+			calledBySpirit = true;
+			spirit = id;
+		}
+		hurtboxSet = true;
+	}
+	var xPosition = x;
+	var yPosition = y;
+	var xScale = image_xscale;
+	var yScale = image_yscale
+	var offset = hurtboxOffset;
+	with (hurtbox)
+	{
+		spiritX = xPosition;
+		spiritY = yPosition;
+		spiritXScale = xScale;
+		spiritYScale = yScale;
+		spiritHurtboxOffset = offset;
 	}
 	
 	depth = hostObject.depth + 2;

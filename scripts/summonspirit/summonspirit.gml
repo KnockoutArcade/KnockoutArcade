@@ -11,9 +11,5 @@ function SummonSpirit(spiritToSummon)
 	spiritObject.playerID = playerID;
 	spiritObject.opponent = opponent;
 	var spiritID = spiritObject.id;
-	with (hurtbox) 
-	{
-		spiritOwner = spiritID;
-	}
 	spiritSummoned = true;
 }

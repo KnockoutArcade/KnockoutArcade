@@ -340,8 +340,4 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 			break;
 		}
 	}
-	with (hurtbox)
-	{
-		hostOwner = other.id;
-	}
 }

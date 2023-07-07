@@ -3,7 +3,6 @@
 
 lifetime = 1;
 owner = noone;
-calledBySpirit = false;
 spirit = noone;
 
 hasHit = false;
