@@ -8,7 +8,7 @@ if (host != noone && hostObject != noone)
 	if (!hurtboxSet)
 	{
 		var hostID = hostObject.id;
-		with (hurtbox) 
+		with(hurtbox)
 		{
 			owner = hostID;
 			calledBySpirit = true;
@@ -16,7 +16,7 @@ if (host != noone && hostObject != noone)
 		}
 		hurtboxSet = true;
 	}
-	
+
 	depth = hostObject.depth + 2;
 
 	//Pause function, cancel event
@@ -41,13 +41,6 @@ if (host != noone && hostObject != noone)
 
 			var runButton = global.p1ButtonRun;
 
-			// Attack Buttons
-			var lightattack = global.p1ButtonLight;
-			var mediumattack = 2 * global.p1ButtonMedium;
-			var heavyattack = 3 * global.p1ButtonHeavy;
-			var grab = 4 * global.p1ButtonGrab;
-			var special = 5 * global.p1ButtonSpecial;
-
 		}
 		else
 		{
@@ -60,13 +53,6 @@ if (host != noone && hostObject != noone)
 
 			var runButton = global.p2ButtonRun;
 
-			// Attack Buttons
-			var lightattack = global.p2ButtonLight;
-			var mediumattack = 2 * global.p2ButtonMedium;
-			var heavyattack = 3 * global.p2ButtonHeavy;
-			var grab = 4 * global.p2ButtonGrab;
-			var special = 5 * global.p2ButtonSpecial;
-
 		}
 
 		canBlock = false;
@@ -78,16 +64,6 @@ if (host != noone && hostObject != noone)
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 32;
 		hurtboxOffset = -8;
-
-		if (special)
-		{
-			pressSpecialButtonTimer = 0;
-		}
-		else
-		{
-			pressSpecialButtonTimer++;
-		}
-
 
 		// Handles running
 		if (runButton)
@@ -220,7 +196,7 @@ if (host != noone && hostObject != noone)
 			{
 				hostObject.spiritObject = noone;
 				hostObject.spiritSummoned = false;
-				with (hostObject.hurtbox)
+				with(hostObject.hurtbox)
 				{
 					spiritOwner = noone;
 				}
@@ -228,13 +204,13 @@ if (host != noone && hostObject != noone)
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
-			
+
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
-			
+
 			animTimer = 0;
 			cancelable = false;
 			isShortHopping = false;
@@ -312,7 +288,7 @@ if (host != noone && hostObject != noone)
 			{
 				hostObject.spiritObject = noone;
 				hostObject.spiritSummoned = false;
-				with (hostObject.hurtbox)
+				with(hostObject.hurtbox)
 				{
 					spiritOwner = noone;
 				}
@@ -320,13 +296,13 @@ if (host != noone && hostObject != noone)
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
-			
+
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
-			
+
 			animTimer = 0;
 			cancelable = false;
 			sprite_index = CharacterSprites.crouch_Sprite;
@@ -392,11 +368,11 @@ if (host != noone && hostObject != noone)
 		}
 
 		// Animation pauses during hitstop and when the screen freezes
-		if (global.hitstop == 0 && state != eState.SCREEN_FREEZE)
+		if (hitstop == 0 && state != eState.SCREEN_FREEZE)
 		{
 			animTimer++;
 		}
-		else if (global.hitstop != 0)
+		else if (hitstop != 0)
 		{
 			state = eState.HITSTOP;
 		}
@@ -404,8 +380,7 @@ if (host != noone && hostObject != noone)
 
 		if (state == eState.HITSTOP)
 		{
-			hitstunShuffleTimer = hostObject.hitstunShuffleTimer;
-			shuffle = hostObject.shuffle;
+			hitstunShuffleTimer++;
 
 			if (hitstun > 0)
 			{
@@ -425,11 +400,11 @@ if (host != noone && hostObject != noone)
 
 				if (shuffle % 2 == 1)
 				{
-					x = xHome + min(global.hitstop, 3);
+					x = xHome + min(hitstop, 3);
 				}
 				else
 				{
-					x = xHome - min(global.hitstop, 3);
+					x = xHome - min(hitstop, 3);
 				}
 			}
 			else
@@ -454,10 +429,12 @@ if (host != noone && hostObject != noone)
 					if (attackState != -1)
 					{
 						CancelData(attackState, attack, false);
-						var spiritAttack = attack;
-						with (hostObject)
+						if (spiritObject != noone)
 						{
-							CancelData(attackState, spiritAttack, false);
+							with(spiritObject)
+							{
+								CancelData(attackState, attack, false);
+							}
 						}
 					}
 				}
@@ -482,25 +459,27 @@ if (host != noone && hostObject != noone)
 
 				if (shuffle % 2 == 1)
 				{
-					x = xHome + min(global.hitstop, 1);
+					x = xHome + min(hitstop, 1);
 				}
 				else
 				{
-					x = xHome - min(global.hitstop, 1);
+					x = xHome - min(hitstop, 1);
 				}
 			}
 
+			hitstop--;
+
 			// When Hitstop Ends
-			if (global.hitstop < 1)
+			if (hitstop < 1)
 			{
 				state = prevState;
+				animTimer++;
 				if (hitstopBuffer)
 				{
-					//sprite_index = prevSprite;
 					image_index = 0;
 					cancelable = false;
-					animTimer = animOffset;
 					animOffset = 0;
+					animTimer = animOffset;
 					hitstopBuffer = false;
 				}
 
@@ -515,12 +494,14 @@ if (host != noone && hostObject != noone)
 				if (hitstun > 0)
 				{
 					image_index = 0;
+					x = xHome;
 					hitstun++;
 				}
 
 				if (blockstun > 0)
 				{
 					blockstun++;
+					x = xHome;
 				}
 			}
 			image_speed = 0;
@@ -611,1528 +592,1528 @@ if (host != noone && hostObject != noone)
 		{
 			case eState.WALKING:
 			{
-				// Immediately removes the spirit after the move is over in Spirit OFF
-				if (!hostObject.spiritState)
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with(hostObject.hurtbox)
 				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
+					spiritOwner = noone;
 				}
-				
-				// Stands next to and slightly in front of the player
-				if (nextToPlayer)
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				animTimer = 0;
-				cancelable = false;
-				grounded = true;
-				isShortHopping = false;
-				isSuperJumping = false;
-				hasSpentDoubleJump = false;
-				canBlock = true;
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
 
-				if (movedir == image_xscale)
-				{
-					sprite_index = CharacterSprites.walkForward_Sprite;
-					superMeter += meterBuildRate; // Walking forwards builds meter
-				}
-				else if (movedir == -image_xscale)
-				{
-					sprite_index = CharacterSprites.walkBackward_Sprite;
-				}
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
 
-				// Handle Transition to Run
-				if ((movedir == image_xscale || movedir == 0) && runningForward)
-				{
-					state = eState.RUN_FORWARD;
-				}
-				else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
-				{
-					state = eState.RUN_BACKWARD;
-					sprite_index = CharacterSprites.runBackward_Sprite;
-					image_index = 0;
-				}
+			animTimer = 0;
+			cancelable = false;
+			grounded = true;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			canBlock = true;
 
-				image_speed = 1;
+			if (movedir == image_xscale)
+			{
+				sprite_index = CharacterSprites.walkForward_Sprite;
+				superMeter += meterBuildRate; // Walking forwards builds meter
+			}
+			else if (movedir == -image_xscale)
+			{
+				sprite_index = CharacterSprites.walkBackward_Sprite;
+			}
 
+			// Handle Transition to Run
+			if ((movedir == image_xscale || movedir == 0) && runningForward)
+			{
+				state = eState.RUN_FORWARD;
+			}
+			else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
+			{
+				state = eState.RUN_BACKWARD;
+				sprite_index = CharacterSprites.runBackward_Sprite;
+				image_index = 0;
+			}
+
+			image_speed = 1;
+
+			hsp = walkSpeed * movedir;
+
+			vsp += fallSpeed;
+
+			if (movedir == 0)
+			{
+				state = eState.IDLE;
+			}
+
+			// Handle Jumping And Crouching
+			if (verticalMoveDir == 1)
+			{
+				state = eState.JUMPSQUAT;
 				hsp = walkSpeed * movedir;
+				jumpHsp = hsp;
+				// Is the player jumping forward?
+				isJumpingForward = (movedir == image_xscale);
 
-				vsp += fallSpeed;
-
-				if (movedir == 0)
+				// handle Super Jumping
+				if (storedSuperJump)
 				{
-					state = eState.IDLE;
+					isSuperJumping = true;
+					storedSuperJump = false;
 				}
+			}
+			else if (verticalMoveDir == -1)
+			{
+				state = eState.CROUCHING;
+				hsp = 0;
+			}
 
-				// Handle Jumping And Crouching
-				if (verticalMoveDir == 1)
+			// Hitstun
+			if (hitstun > 0)
+			{
+				state = eState.HURT;
+			}
+
+			HandleWalkingOffPlatforms(false);
+		}
+		break;
+
+
+		case eState.RUN_FORWARD:
+		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with(hostObject.hurtbox)
 				{
-					state = eState.JUMPSQUAT;
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
+
+			animTimer = 0;
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+
+			sprite_index = CharacterSprites.runForward_Sprite;
+			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+
+			if (movedir == -image_xscale) // if we press back, then go back to walking state
+			{
+				state = eState.WALKING;
+				sprite_index = CharacterSprites.walkBackward_Sprite;
+				canBlock = true;
+			}
+
+			image_speed = 1;
+
+			hsp = runSpeed * image_xscale;
+			vsp += fallSpeed;
+
+			if (!runningForward)
+			{
+				state = eState.IDLE;
+			}
+
+			// Handle Jumping And Crouching
+			if verticalMoveDir == 1
+			{
+				state = eState.JUMPSQUAT;
+				jumpHsp = hsp;
+				// Is the player jumping forward?
+				if (movedir != -image_xscale)
+				{
+					isJumpingForward = true;
+				}
+				else
+				{
+					isJumpingForward = false;
 					hsp = walkSpeed * movedir;
 					jumpHsp = hsp;
+				}
+
+				// handle Super Jumping
+				if (storedSuperJump)
+				{
+					isSuperJumping = true;
+					storedSuperJump = false;
+				}
+			}
+			else if (verticalMoveDir == -1)
+			{
+				state = eState.CROUCHING;
+			}
+
+			// Hitstun
+			if (hitstun > 0)
+			{
+				state = eState.HURT;
+			}
+
+			HandleWalkingOffPlatforms(false);
+		}
+		break;
+
+
+		case eState.RUN_BACKWARD:
+		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with(hostObject.hurtbox)
+				{
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
+
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+
+			vsp += fallSpeed;
+
+			sprite_index = CharacterSprites.runBackward_Sprite;
+
+			image_speed = 1;
+
+			// Handle I-Frames
+			invincible = (animTimer <= backdashInvincibility);
+
+			// Handle Startup
+			if (animTimer == backdashStartup)
+			{
+				hsp = backdashSpeed * -image_xscale;
+			}
+
+			// Handle Ending
+			if (animTimer >= backdashDuration)
+			{
+				state = eState.IDLE;
+				hsp = 0;
+				invincible = false;
+			}
+
+
+			HandleWalkingOffPlatforms(false);
+		}
+		break;
+
+		case eState.JUMPSQUAT:
+		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with(hostObject.hurtbox)
+				{
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
+
+			cancelable = false;
+			sprite_index = CharacterSprites.jumpsquat_Sprite;
+			image_speed = 1;
+			grounded = true;
+			isShortHopping = false;
+
+			hsp = jumpHsp;
+
+			if (animTimer > 4)
+			 {
+				if (jumpAttackBuffer != 0)
+				{
+					state = jumpAttackBuffer;
+				}
+				else
+				{
+					state = eState.JUMPING;
+				}
+				grounded = false;
+				jumpAttackBuffer = 0;
+				animTimer = 0;
+
+				if (canShortHop)
+				{
+					if (verticalMoveDir == 1)
+					{
+						vsp = -jumpSpeed;
+						isShortHopping = false;
+						jumpHsp = hsp;
+					}
+					else
+					{
+						vsp = -(jumpSpeed * 0.75);
+						isShortHopping = true;
+						jumpHsp = hsp;
+					}
+				}
+
+				if (canSuperJump)
+				{
+					if (isSuperJumping)
+					{
+						vsp = -(jumpSpeed * 1.25);
+						jumpHsp = hsp * 1.35;
+					}
+					else
+					{
+						vsp = -jumpSpeed;
+						jumpHsp = hsp;
+					}
+				}
+
+				if (!canSuperJump && !canShortHop)
+				{
+					vsp = -jumpSpeed;
+					isShortHopping = false;
+					isSuperJumping = false;
+					jumpHsp = hsp;
+				}
+			}
+		}
+		break;
+
+
+		case eState.JUMPING:
+		{
+			// Immediately removes the spirit after the move is over in Spirit OFF
+			if (!hostObject.spiritState)
+			{
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				with(hostObject.hurtbox)
+				{
+					spiritOwner = noone;
+				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
+
+			animTimer = 0;
+			cancelable = false;
+			sprite_index = CharacterSprites.jump_Sprite;
+			image_speed = 1;
+			grounded = false;
+			canTurnAround = false;
+
+			if image_index > (image_number - 1) image_speed = 0;
+			else image_speed = 1;
+
+			if (isJumpingForward)
+			{
+				superMeter += meterBuildRate;
+			}
+
+			hsp = jumpHsp;
+			if (!isShortHopping)
+			{
+				vsp += fallSpeed;
+			}
+			else
+			{
+				vsp += fastFallSpeed;
+			}
+
+			if (canDoubleJump && !hasSpentDoubleJump)
+			{
+				if (verticalMoveDir == 1 && heldUpFrames <= 1)
+				{
+					vsp = -jumpSpeed;
+					isShortHopping = false;
+					isSuperJumping = false;
+
+					hsp = walkSpeed * movedir;
 					// Is the player jumping forward?
 					isJumpingForward = (movedir == image_xscale);
 
-					// handle Super Jumping
-					if (storedSuperJump)
-					{
-						isSuperJumping = true;
-						storedSuperJump = false;
-					}
-				}
-				else if (verticalMoveDir == -1)
-				{
-					state = eState.CROUCHING;
-					hsp = 0;
-				}
-
-				// Hitstun
-				if (hitstun > 0)
-				{
-					state = eState.HURT;
-				}
-
-				HandleWalkingOffPlatforms(false);
-			}
-			break;
-
-
-			case eState.RUN_FORWARD:
-			{
-				// Immediately removes the spirit after the move is over in Spirit OFF
-				if (!hostObject.spiritState)
-				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
-				}
-				
-				// Stands next to and slightly in front of the player
-				if (nextToPlayer)
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				animTimer = 0;
-				cancelable = false;
-				grounded = true;
-				canTurnAround = false;
-				isShortHopping = false;
-				isSuperJumping = false;
-				hasSpentDoubleJump = false;
-
-				sprite_index = CharacterSprites.runForward_Sprite;
-				superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
-
-				if (movedir == -image_xscale) // if we press back, then go back to walking state
-				{
-					state = eState.WALKING;
-					sprite_index = CharacterSprites.walkBackward_Sprite;
-					canBlock = true;
-				}
-
-				image_speed = 1;
-
-				hsp = runSpeed * image_xscale;
-				vsp += fallSpeed;
-
-				if (!runningForward)
-				{
-					state = eState.IDLE;
-				}
-
-				// Handle Jumping And Crouching
-				if verticalMoveDir == 1
-				{
-					state = eState.JUMPSQUAT;
 					jumpHsp = hsp;
-					// Is the player jumping forward?
-					if (movedir != -image_xscale)
-					{
-						isJumpingForward = true;
-					}
-					else
-					{
-						isJumpingForward = false;
-						hsp = walkSpeed * movedir;
-						jumpHsp = hsp;
-					}
-
-					// handle Super Jumping
-					if (storedSuperJump)
-					{
-						isSuperJumping = true;
-						storedSuperJump = false;
-					}
+					hasSpentDoubleJump = true;
+					image_index = 0;
 				}
-				else if (verticalMoveDir == -1)
-				{
-					state = eState.CROUCHING;
-				}
-
-				// Hitstun
-				if (hitstun > 0)
-				{
-					state = eState.HURT;
-				}
-
-				HandleWalkingOffPlatforms(false);
 			}
-			break;
+		}
+		break;
 
 
-			case eState.RUN_BACKWARD:
+		case eState.STANDING_LIGHT_ATTACK:
+		{
+			GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
+			//hostObject.state = state;
+
+			if (cancelable && hitstop < 1)
 			{
-				// Immediately removes the spirit after the move is over in Spirit OFF
-				if (!hostObject.spiritState)
-				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
-				}
-				
-				// Stands next to and slightly in front of the player
-				if (nextToPlayer)
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				cancelable = false;
-				grounded = true;
-				canTurnAround = false;
-				isShortHopping = false;
-				isSuperJumping = false;
-				hasSpentDoubleJump = false;
-
-				vsp += fallSpeed;
-
-				sprite_index = CharacterSprites.runBackward_Sprite;
-
-				image_speed = 1;
-
-				// Handle I-Frames
-				invincible = (animTimer <= backdashInvincibility);
-
-				// Handle Startup
-				if (animTimer == backdashStartup)
-				{
-					hsp = backdashSpeed * -image_xscale;
-				}
-
-				// Handle Ending
-				if (animTimer >= backdashDuration)
-				{
-					state = eState.IDLE;
-					hsp = 0;
-					invincible = false;
-				}
-
-
-				HandleWalkingOffPlatforms(false);
+				CancelData(selectedCharacter.StandLight, attack, true);
 			}
-			break;
 
-			case eState.JUMPSQUAT:
+			if (selectedCharacter.StandLight.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
-				// Immediately removes the spirit after the move is over in Spirit OFF
-				if (!hostObject.spiritState)
-				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
-				}
-				
-				// Stands next to and slightly in front of the player
-				if (nextToPlayer)
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				cancelable = false;
-				sprite_index = CharacterSprites.jumpsquat_Sprite;
-				image_speed = 1;
-				grounded = true;
-				isShortHopping = false;
+				nextToPlayer = false;
+			}
+		}
+		break;
 
-				hsp = jumpHsp;
+		case eState.STANDING_LIGHT_ATTACK_2:
+		{
+			GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
+			//hostObject.state = state;
 
-				if (animTimer > 4)
-				 {
-					if (jumpAttackBuffer != 0)
-					{
-						state = jumpAttackBuffer;
-					}
-					else
-					{
-						state = eState.JUMPING;
-					}
-					grounded = false;
-					jumpAttackBuffer = 0;
+			if (cancelable)
+			{
+				CancelData(selectedCharacter.StandLight2, attack, true);
+			}
+
+			if (selectedCharacter.StandLight2.SpiritData.MaintainPosition && hostObject.spiritSummoned)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.STANDING_LIGHT_ATTACK_3:
+		{
+			GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
+			//hostObject.state = state;
+
+			if (cancelable)
+			{
+				CancelData(selectedCharacter.StandLight3, attack, true);
+			}
+
+			if (selectedCharacter.StandLight3.SpiritData.MaintainPosition && hostObject.spiritSummoned)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.STANDING_MEDIUM_ATTACK:
+		{
+			GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
+
+			// Cancelable into heavy
+			if (cancelable)
+			{
+				CancelData(selectedCharacter.StandMedium, attack, true);
+			}
+
+			if (selectedCharacter.StandMedium.SpiritData.MaintainPosition && hostObject.spiritSummoned)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.STANDING_HEAVY_ATTACK:
+		{
+			GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.StandHeavy, attack, true);
+			}
+
+			if (selectedCharacter.StandHeavy.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.CROUCHING_LIGHT_ATTACK:
+		{
+			CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.CrouchingLight, attack, true);
+			}
+
+			if (selectedCharacter.CrouchingLight.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.CROUCHING_MEDIUM_ATTACK:
+		{
+			CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.CrouchingMedium, attack, true);
+			}
+
+			if (selectedCharacter.CrouchingMedium.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.CROUCHING_HEAVY_ATTACK:
+		{
+			CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
+
+			hurtboxOffset = -7;
+			hurtbox.image_xscale = 18;
+			hurtbox.image_yscale = 27;
+
+			if (animTimer > 8)
+			{
+				hurtbox.image_yscale = 20;
+			}
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.CrouchingHeavy, attack, true);
+			}
+
+			if (selectedCharacter.CrouchingHeavy.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.JUMPING_LIGHT_ATTACK:
+		{
+			JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.JumpingLight, attack, true);
+			}
+
+			if (selectedCharacter.JumpingLight.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.JUMPING_MEDIUM_ATTACK:
+		{
+			JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.JumpingMedium, attack, true);
+			}
+
+			if (selectedCharacter.JumpingMedium.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.JUMPING_HEAVY_ATTACK:
+		{
+			JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.JumpingHeavy, attack, true);
+			}
+
+			if (selectedCharacter.JumpingHeavy.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+		case eState.COMMAND_NORMAL_1:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, true, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
+			}
+
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.CommandNormal1, attack, true);
+			}
+
+			if (selectedCharacter.CommandNormal1.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+
+
+		case eState.NEUTRAL_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.NeutralSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.NeutralSpecial);
+		}
+		break;
+
+
+		case eState.SIDE_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.SideSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.SideSpecial);
+		}
+		break;
+
+
+		case eState.UP_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.UpSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.UpSpecial);
+
+			if (animTimer < 28)
+			{
+				isThrowable = false;
+			}
+			else
+			{
+				isThrowable = true;
+			}
+		}
+		break;
+
+
+		case eState.DOWN_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.DownSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.DownSpecial);
+		}
+		break;
+
+
+		case eState.ENHANCED_NEUTRAL_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedNeutralSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
+		}
+		break;
+
+		case eState.ENHANCED_SIDE_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedSideSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
+		}
+		break;
+
+		case eState.ENHANCED_UP_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedUpSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
+		}
+		break;
+
+		case eState.ENHANCED_DOWN_SPECIAL:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedDownSpecial.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+		}
+		break;
+
+
+		case eState.REKKA_LAUNCHER:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.RekkaLauncher.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.RekkaLauncher);
+		}
+		break;
+
+		case eState.REKKA_FINISHER:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.RekkaFinisher.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.RekkaFinisher);
+		}
+		break;
+
+		case eState.REKKA_CONNECTER:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.RekkaConnecter.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.RekkaConnecter);
+		}
+		break;
+
+		case eState.REKKA_LOW:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.RekkaLow.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.RekkaLow);
+		}
+		break;
+
+		case eState.REKKA_HIGH:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.RekkaHigh.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+
+			//ProcessEnhancers(selectedCharacter.RekkaHigh);
+		}
+		break;
+
+
+		case eState.GRAB:
+		{
+			grounded = true;
+			inAttackState = true;
+
+			sprite_index = CharacterSprites.grab_Sprite;
+
+			hurtbox.image_xscale = 15;
+			hurtbox.image_yscale = 25;
+			hurtboxOffset = -7;
+
+			PerformAttack(selectedCharacter.Grab, true);
+
+			if (animTimer > 24)
+			{
+				state = eState.IDLE;
+			}
+
+			if (selectedCharacter.Grab.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.HOLD:
+		{
+			hsp = 0;
+			grounded = true;
+			inAttackState = true;
+
+
+			sprite_index = CharacterSprites.hold_Sprite;
+
+			// Transition to a throw
+			if (animTimer > 4)
+			{
+				if (movedir != -image_xscale)
+				{
+					state = eState.FORWARD_THROW;
 					animTimer = 0;
 
-					if (canShortHop)
+					if (target != noone)
 					{
-						if (verticalMoveDir == 1)
-						{
-							vsp = -jumpSpeed;
-							isShortHopping = false;
-							jumpHsp = hsp;
-						}
-						else
-						{
-							vsp = -(jumpSpeed * 0.75);
-							isShortHopping = true;
-							jumpHsp = hsp;
-						}
+						ds_list_clear(target.hitByGroup);
 					}
 
-					if (canSuperJump)
+					// Handle moving the player away from the wall
+					var ThrowDistance = instance_create_layer(x, y - 15, "hitboxes", oThrowEnvDetection);
+					with(ThrowDistance)
 					{
-						if (isSuperJumping)
-						{
-							vsp = -(jumpSpeed * 1.25);
-							jumpHsp = hsp * 1.35;
-						}
-						else
-						{
-							vsp = -jumpSpeed;
-							jumpHsp = hsp;
-						}
+						owner = other.id;
+						image_xscale = other.selectedCharacter.ForwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
+						throwToCheck = other.selectedCharacter.ForwardThrow;
+					}
+				}
+				else
+				{
+					state = eState.BACKWARD_THROW;
+					animTimer = 0;
+					if (target != noone)
+					{
+						ds_list_clear(target.hitByGroup);
 					}
 
-					if (!canSuperJump && !canShortHop)
+					// Handle moving the player away from the wall
+					var ThrowDistance = instance_create_layer(x, y - 15, "hitboxes", oThrowEnvDetection);
+					with(ThrowDistance)
 					{
-						vsp = -jumpSpeed;
-						isShortHopping = false;
-						isSuperJumping = false;
-						jumpHsp = hsp;
+						owner = other.id;
+						image_xscale = other.selectedCharacter.BackwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
+						throwToCheck = other.selectedCharacter.BackwardThrow;
 					}
 				}
 			}
-			break;
+		}
+		break;
 
+		case eState.COMMAND_GRAB:
+		{
+			inAttackState = true;
 
-			case eState.JUMPING:
+			sprite_index = CharacterSprites.grab_Sprite;
+
+			hurtbox.image_xscale = 15;
+			hurtbox.image_yscale = 25;
+			hurtboxOffset = -7;
+
+			if (grounded)
 			{
-				// Immediately removes the spirit after the move is over in Spirit OFF
-				if (!hostObject.spiritState)
-				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
-				}
-				
-				// Stands next to and slightly in front of the player
-				if (nextToPlayer)
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				animTimer = 0;
-				cancelable = false;
-				sprite_index = CharacterSprites.jump_Sprite;
-				image_speed = 1;
-				grounded = false;
-				canTurnAround = false;
-
-				if image_index > (image_number - 1) image_speed = 0;
-				else image_speed = 1;
-
-				if (isJumpingForward)
-				{
-					superMeter += meterBuildRate;
-				}
-
-				hsp = jumpHsp;
-				if (!isShortHopping)
-				{
-					vsp += fallSpeed;
-				}
-				else
-				{
-					vsp += fastFallSpeed;
-				}
-
-				if (canDoubleJump && !hasSpentDoubleJump)
-				{
-					if (verticalMoveDir == 1 && heldUpFrames <= 1)
-					{
-						vsp = -jumpSpeed;
-						isShortHopping = false;
-						isSuperJumping = false;
-
-						hsp = walkSpeed * movedir;
-						// Is the player jumping forward?
-						isJumpingForward = (movedir == image_xscale);
-
-						jumpHsp = hsp;
-						hasSpentDoubleJump = true;
-						image_index = 0;
-					}
-				}
+				GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true);
 			}
-			break;
-
-
-			case eState.STANDING_LIGHT_ATTACK:
+			else
 			{
-				GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
-				//hostObject.state = state;
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.StandLight, attack, true);
-				}
-				
-				if (selectedCharacter.StandLight.SpiritData.MaintainPosition && hostObject.spiritSummoned)
-				{
-					nextToPlayer = false;
-				}
+				JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale);
 			}
-			break;
 
-			case eState.STANDING_LIGHT_ATTACK_2:
+			if (selectedCharacter.CommandGrab.SpiritData.MaintainPosition)
 			{
-				GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
-				//hostObject.state = state;
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.StandLight2, attack, true);
-				}
-				
-				if (selectedCharacter.StandLight2.SpiritData.MaintainPosition && hostObject.spiritSummoned)
-				{
-					nextToPlayer = false;
-				}
+				nextToPlayer = false;
 			}
-			break;
 
-			case eState.STANDING_LIGHT_ATTACK_3:
+			ProccessCommandGrab();
+		}
+		break;
+
+		case eState.BEING_GRABBED:
+		{
+			animTimer = 0;
+			hsp = 0;
+			grounded = true;
+			inAttackState = false;
+			canTurnAround = false;
+
+			isGrabbed = true;
+		}
+		break;
+
+		case eState.FORWARD_THROW:
+		{
+			grounded = true;
+			inAttackState = true;
+
+			sprite_index = selectedCharacter.ForwardThrow.SpriteId;
+			image_index = 0;
+
+			PerformAttack(selectedCharacter.ForwardThrow, true);
+
+			if (selectedCharacter.ForwardThrow.SpiritData.MaintainPosition)
 			{
-				GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
-				//hostObject.state = state;
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.StandLight3, attack, true);
-				}
-				
-				if (selectedCharacter.StandLight3.SpiritData.MaintainPosition && hostObject.spiritSummoned)
-				{
-					nextToPlayer = false;
-				}
+				nextToPlayer = false;
 			}
-			break;
 
-			case eState.STANDING_MEDIUM_ATTACK:
-			{
-				GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
-
-				// Cancelable into heavy
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.StandMedium, attack, true);
-				}
-				
-				if (selectedCharacter.StandMedium.SpiritData.MaintainPosition && hostObject.spiritSummoned)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-			case eState.STANDING_HEAVY_ATTACK:
-			{
-				GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.StandHeavy, attack, true);
-				}
-				
-				if (selectedCharacter.StandHeavy.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.CROUCHING_LIGHT_ATTACK:
-			{
-				CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.CrouchingLight, attack, true);
-				}
-				
-				if (selectedCharacter.CrouchingLight.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-			case eState.CROUCHING_MEDIUM_ATTACK:
-			{
-				CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.CrouchingMedium, attack, true);
-				}
-				
-				if (selectedCharacter.CrouchingMedium.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.CROUCHING_HEAVY_ATTACK:
-			{
-				CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
-
-				hurtboxOffset = -7;
-				hurtbox.image_xscale = 18;
-				hurtbox.image_yscale = 27;
-
-				if (animTimer > 8)
-				{
-					hurtbox.image_yscale = 20;
-				}
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.CrouchingHeavy, attack, true);
-				}
-				
-				if (selectedCharacter.CrouchingHeavy.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.JUMPING_LIGHT_ATTACK:
-			{
-				JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.JumpingLight, attack, true);
-				}
-
-				if (selectedCharacter.JumpingLight.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.JUMPING_MEDIUM_ATTACK:
-			{
-				JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.JumpingMedium, attack, true);
-				}
-				
-				if (selectedCharacter.JumpingMedium.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.JUMPING_HEAVY_ATTACK:
-			{
-				JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.JumpingHeavy, attack, true);
-				}
-				
-				if (selectedCharacter.JumpingHeavy.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-			case eState.COMMAND_NORMAL_1:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, true, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
-				}
-
-				if (cancelable && global.hitstop < 1)
-				{
-					CancelData(selectedCharacter.CommandNormal1, attack, true);
-				}
-				
-				if (selectedCharacter.CommandNormal1.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-
-
-			case eState.NEUTRAL_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.NeutralSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.NeutralSpecial);
-			}
-			break;
-
-
-			case eState.SIDE_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.SideSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.SideSpecial);
-			}
-			break;
-
-
-			case eState.UP_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.UpSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.UpSpecial);
-
-				if (animTimer < 28)
-				{
-					isThrowable = false;
-				}
-				else
-				{
-					isThrowable = true;
-				}
-			}
-			break;
-
-
-			case eState.DOWN_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.DownSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.DownSpecial);
-			}
-			break;
-
-
-			case eState.ENHANCED_NEUTRAL_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.EnhancedNeutralSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
-			}
-			break;
-
-			case eState.ENHANCED_SIDE_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.EnhancedSideSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
-			}
-			break;
-
-			case eState.ENHANCED_UP_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.EnhancedUpSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
-			}
-			break;
-
-			case eState.ENHANCED_DOWN_SPECIAL:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.EnhancedDownSpecial.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
-			}
-			break;
-
-
-			case eState.REKKA_LAUNCHER:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.RekkaLauncher.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.RekkaLauncher);
-			}
-			break;
-
-			case eState.REKKA_FINISHER:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.RekkaFinisher.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.RekkaFinisher);
-			}
-			break;
-
-			case eState.REKKA_CONNECTER:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.RekkaConnecter.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.RekkaConnecter);
-			}
-			break;
-
-			case eState.REKKA_LOW:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.RekkaLow.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.RekkaLow);
-			}
-			break;
-
-			case eState.REKKA_HIGH:
-			{
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.RekkaHigh.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				//ProcessEnhancers(selectedCharacter.RekkaHigh);
-			}
-			break;
-
-
-			case eState.GRAB:
-			{
-				grounded = true;
-				inAttackState = true;
-
-				sprite_index = CharacterSprites.grab_Sprite;
-
-				hurtbox.image_xscale = 15;
-				hurtbox.image_yscale = 25;
-				hurtboxOffset = -7;
-
-				PerformAttack(selectedCharacter.Grab, true);
-
-				if (animTimer > 24)
-				{
-					state = eState.IDLE;
-				}
-				
-				if (selectedCharacter.Grab.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-			}
-			break;
-
-			case eState.HOLD:
+			// Set our hsp to 0 if we are on the first active frame of the move
+			if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 			{
 				hsp = 0;
-				grounded = true;
-				inAttackState = true;
-
-
-				sprite_index = CharacterSprites.hold_Sprite;
-
-				// Transition to a throw
-				if (animTimer > 4)
-				{
-					if (movedir != -image_xscale)
-					{
-						state = eState.FORWARD_THROW;
-						animTimer = 0;
-
-						if (target != noone)
-						{
-							ds_list_clear(target.hitByGroup);
-						}
-
-						// Handle moving the player away from the wall
-						var ThrowDistance = instance_create_layer(x, y - 15, "hitboxes", oThrowEnvDetection);
-						with(ThrowDistance)
-						{
-							owner = other.id;
-							image_xscale = other.selectedCharacter.ForwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
-							throwToCheck = other.selectedCharacter.ForwardThrow;
-						}
-					}
-					else
-					{
-						state = eState.BACKWARD_THROW;
-						animTimer = 0;
-						if (target != noone)
-						{
-							ds_list_clear(target.hitByGroup);
-						}
-
-						// Handle moving the player away from the wall
-						var ThrowDistance = instance_create_layer(x, y - 15, "hitboxes", oThrowEnvDetection);
-						with(ThrowDistance)
-						{
-							owner = other.id;
-							image_xscale = other.selectedCharacter.BackwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
-							throwToCheck = other.selectedCharacter.BackwardThrow;
-						}
-					}
-				}
 			}
-			break;
 
-			case eState.COMMAND_GRAB:
+			if (animTimer > 42)
 			{
-				inAttackState = true;
-
-				sprite_index = CharacterSprites.grab_Sprite;
-
-				hurtbox.image_xscale = 15;
-				hurtbox.image_yscale = 25;
-				hurtboxOffset = -7;
-
-				if (grounded)
-				{
-					GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true);
-				}
-				else
-				{
-					JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale);
-				}
-				
-				if (selectedCharacter.CommandGrab.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				ProccessCommandGrab();
+				state = eState.IDLE;
+				frameAdvantage = true;
+				sprite_index = CharacterSprites.idle_Sprite;
+				x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
 			}
-			break;
+		}
+		break;
 
-			case eState.BEING_GRABBED:
+		case eState.BACKWARD_THROW:
+		{
+			grounded = true;
+			inAttackState = true;
+
+			sprite_index = selectedCharacter.BackwardThrow.SpriteId;
+			image_index = 0;
+
+			PerformAttack(selectedCharacter.BackwardThrow, true);
+
+			if (selectedCharacter.BackwardThrow.SpiritData.MaintainPosition)
 			{
-				animTimer = 0;
+				nextToPlayer = false;
+			}
+
+			// Set our hsp to 0 if we are on the first active frame of the move
+			if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
+			{
 				hsp = 0;
-				grounded = true;
+			}
+
+			if (animTimer > 58)
+			{
+				state = eState.IDLE;
+				frameAdvantage = true;
+				canTurnAround = true;
 				inAttackState = false;
-				canTurnAround = false;
-
-				isGrabbed = true;
+				sprite_index = CharacterSprites.idle_Sprite;
+				x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
 			}
-			break;
+		}
+		break;
 
-			case eState.FORWARD_THROW:
+		case eState.THROW_TECH:
+		{
+			grounded = true;
+			inAttackState = false;
+
+			sprite_index = CharacterSprites.grab_Sprite;
+			image_index = 0;
+
+			if (animTimer > 10)
 			{
-				grounded = true;
-				inAttackState = true;
-
-				sprite_index = selectedCharacter.ForwardThrow.SpriteId;
-				image_index = 0;
-
-				PerformAttack(selectedCharacter.ForwardThrow, true);
-				
-				if (selectedCharacter.ForwardThrow.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				// Set our hsp to 0 if we are on the first active frame of the move
-				if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
-				{
-					hsp = 0;
-				}
-
-				if (animTimer > 42)
-				{
-					state = eState.IDLE;
-					frameAdvantage = true;
-					sprite_index = CharacterSprites.idle_Sprite;
-					x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
-				}
+				state = eState.IDLE;
+				hsp = 0;
 			}
-			break;
+		}
+		break;
 
-			case eState.BACKWARD_THROW:
+		case eState.HURT:
+		{
+			animTimer = 1;
+			cancelable = false;
+			canTurnAround = false;
+			isEXFlash = false;
+			hitstun = hostObject.hitstun;
+			knockbackVel = hostObject.knockbackVel;
+
+			if (hitstun < 1)
 			{
-				grounded = true;
-				inAttackState = true;
-
-				sprite_index = selectedCharacter.BackwardThrow.SpriteId;
-				image_index = 0;
-
-				PerformAttack(selectedCharacter.BackwardThrow, true);
-				
-				if (selectedCharacter.BackwardThrow.SpiritData.MaintainPosition)
-				{
-					nextToPlayer = false;
-				}
-
-				// Set our hsp to 0 if we are on the first active frame of the move
-				if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
-				{
-					hsp = 0;
-				}
-
-				if (animTimer > 58)
-				{
-					state = eState.IDLE;
-					frameAdvantage = true;
-					canTurnAround = true;
-					inAttackState = false;
-					sprite_index = CharacterSprites.idle_Sprite;
-					x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
-				}
-			}
-			break;
-
-			case eState.THROW_TECH:
-			{
-				grounded = true;
-				inAttackState = false;
-
-				sprite_index = CharacterSprites.grab_Sprite;
-				image_index = 0;
-
-				if (animTimer > 10)
-				{
-					state = eState.IDLE;
-					hsp = 0;
-				}
-			}
-			break;
-
-			case eState.HURT:
-			{
-				animTimer = 1;
-				cancelable = false;
-				canTurnAround = false;
-				isEXFlash = false;
-				hitstun = hostObject.hitstun;
-				knockbackVel = hostObject.knockbackVel;
-				
-				if (hitstun < 1)
-				{
-					ds_list_clear(hitByGroup);
-					FAvictim = false;
-			
-					if (grounded)
-					{
-						cancelCombo = true;
-					}
-					
-					if (!grounded) 
-					{
-						state = eState.LAUNCHED;
-					}
-					else if (movedir == 0)
-					{
-						state = eState.IDLE;
-					}
-					else if (movedir != image_xscale)
-					{
-						state = eState.WALKING;
-						canBlock = true;
-					} 
-					else 
-					{
-						state = eState.WALKING;
-					}
-				}
-
-				if (hostObject.grounded)
-				{
-					sprite_index = CharacterSprites.hurt_Sprite;
-
-					// This code handles getting knocked back on the ground.
-					if (knockbackVel > 0)
-					{
-						hsp = knockbackVel * -image_xscale;
-						knockbackVel--;
-					}
-					else if (knockbackVel < 0)
-					{
-						hsp = knockbackVel * -image_xscale;
-						knockbackVel++;
-					}
-					// Prevent player from ocillating if knockbackVel is a decimal.
-					if (knockbackVel > -1 && knockbackVel < 1)
-					{
-						hsp = 0;
-						knockbackVel = 0;
-					}
-				}
-				else
-				{
-					sprite_index = CharacterSprites.launched_Sprite;
-					if (image_index > (image_number - 1))
-					{
-						image_speed = 0;
-					}
-					else
-					{
-						image_speed = 1;
-					}
-				}
-				xHome = x;
-
-				hsp = hostObject.hsp;
-				vsp = hostObject.vsp;
-
-			}
-			break;
-
-
-			case eState.LAUNCHED:
-			{
-				animTimer = 1;
-				sprite_index = CharacterSprites.launched_Sprite;
-					if (image_index > (image_number - 1))
-					{
-						image_speed = 0;
-					}
-					else
-					{
-						image_speed = 1;
-					}
-				cancelable = false;
-				canTurnAround = false;
-				grounded = false;
-
+				ds_list_clear(hitByGroup);
 				FAvictim = false;
 
-				hsp = hostObject.hsp;
-				vsp = hostObject.vsp;
-				hitstun = hostObject.hitstun;
-
-			}
-			break;
-
-
-			case eState.KNOCKED_DOWN:
-			{
-				if (nextToPlayer)
+				if (grounded)
 				{
-					cancelable = false;
-					grounded = true;
-					invincible = true;
-					canTurnAround = false;
-	
 					cancelCombo = true;
-					sprite_index = CharacterSprites.knockdown_Sprite;
-					hsp = 0;
+				}
 
-					if (image_index > (image_number - 1))
-					{
-						image_speed = 0;
-					}
-					else
-					{
-						image_speed = 1;
-					}
-	
-					hitstun = hostObject.hitstun;
-	
-					if (animTimer > 39)
-					{
-						state = eState.GETUP;
-						animTimer = 0;
-						sprite_index = CharacterSprites.getup_Sprite;
-						image_index = 0;
-					}
+				if (!grounded)
+				{
+					state = eState.LAUNCHED;
+				}
+				else if (movedir == 0)
+				{
+					state = eState.IDLE;
+				}
+				else if (movedir != image_xscale)
+				{
+					state = eState.WALKING;
+					canBlock = true;
 				}
 				else
 				{
-					hostObject.spiritObject = noone;
-					hostObject.spiritSummoned = false;
-					hostObject.spiritState = false;
-					hostObject.currentMovesetID = 1;
-					with (hostObject)
-					{
-						OverwriteMoveset();
-					}
-					with (hostObject.hurtbox)
-					{
-						spiritOwner = noone;
-					}
-					instance_create_layer(x, y, "Instances", oSpiritFire);
-					instance_destroy(hurtbox);
-					instance_destroy();
+					state = eState.WALKING;
 				}
 			}
-			break;
+
+			if (hostObject.grounded)
+			{
+				sprite_index = CharacterSprites.hurt_Sprite;
+
+				// This code handles getting knocked back on the ground.
+				if (knockbackVel > 0)
+				{
+					hsp = knockbackVel * -image_xscale;
+					knockbackVel--;
+				}
+				else if (knockbackVel < 0)
+				{
+					hsp = knockbackVel * -image_xscale;
+					knockbackVel++;
+				}
+				// Prevent player from ocillating if knockbackVel is a decimal.
+				if (knockbackVel > -1 && knockbackVel < 1)
+				{
+					hsp = 0;
+					knockbackVel = 0;
+				}
+			}
+			else
+			{
+				sprite_index = CharacterSprites.launched_Sprite;
+				if (image_index > (image_number - 1))
+				{
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
+				}
+			}
+			xHome = x;
+
+			hsp = hostObject.hsp;
+			vsp = hostObject.vsp;
+
+		}
+		break;
 
 
-			case eState.GETUP:
+		case eState.LAUNCHED:
+		{
+			animTimer = 1;
+			sprite_index = CharacterSprites.launched_Sprite;
+				if (image_index > (image_number - 1))
+				{
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
+				}
+			cancelable = false;
+			canTurnAround = false;
+			grounded = false;
+
+			FAvictim = false;
+
+			hsp = hostObject.hsp;
+			vsp = hostObject.vsp;
+			hitstun = hostObject.hitstun;
+
+		}
+		break;
+
+
+		case eState.KNOCKED_DOWN:
+		{
+			if (nextToPlayer)
 			{
 				cancelable = false;
 				grounded = true;
 				invincible = true;
 				canTurnAround = false;
 
-				image_speed = (image_index > image_number - 1) ? 0 : 1;
+				cancelCombo = true;
+				sprite_index = CharacterSprites.knockdown_Sprite;
+				hsp = 0;
 
-				if (animTimer > 30)
+				if (image_index > (image_number - 1))
 				{
-					// Turn the player around immediately
-					if (opponent != noone)
-					{
-						if (x < opponent.x)
-						{
-							image_xscale = 1;
-						}
-						else if (x != opponent.x)
-						{
-							image_xscale = -1;
-						}
-					}
-
-					state = eState.IDLE;
-					invincible = false;
-
-					if (movedir == -image_xscale || toggleIdleBlock)
-					{
-						canBlock = true;
-					}
-
-					if (verticalMoveDir == 1)
-					{
-						state = eState.JUMPSQUAT;
-					}
-
-					if (movedir == -image_xscale && runButton)
-					{
-						canBlock = false;
-						state = eState.RUN_BACKWARD;
-						sprite_index = CharacterSprites.runBackward_Sprite;
-						image_index = 0;
-
-						invincible = true;
-						animTimer = 0;
-					}
+					image_speed = 0;
+				}
+				else
+				{
+					image_speed = 1;
 				}
 
+				hitstun = hostObject.hitstun;
+
+				if (animTimer > 39)
+				{
+					state = eState.GETUP;
+					animTimer = 0;
+					sprite_index = CharacterSprites.getup_Sprite;
+					image_index = 0;
+				}
 			}
-			break;
-
-
-			case eState.BLOCKING:
+			else
 			{
-				animTimer = 1;
-				canBlock = true;
-				cancelable = false;
-				if (isCrouchBlocking)
+				hostObject.spiritObject = noone;
+				hostObject.spiritSummoned = false;
+				hostObject.spiritState = false;
+				hostObject.currentMovesetID = 1;
+				with(hostObject)
 				{
-					sprite_index = CharacterSprites.crouchBlock_Sprite;
+					OverwriteMoveset();
 				}
-				else
+				with(hostObject.hurtbox)
 				{
-					sprite_index = CharacterSprites.standBlock_Sprite;
+					spiritOwner = noone;
 				}
-				grounded = true;
+				instance_create_layer(x, y, "Instances", oSpiritFire);
+				instance_destroy(hurtbox);
+				instance_destroy();
+			}
+		}
+		break;
 
-				if (attack > 0)
+
+		case eState.GETUP:
+		{
+			cancelable = false;
+			grounded = true;
+			invincible = true;
+			canTurnAround = false;
+
+			image_speed = (image_index > image_number - 1) ? 0 : 1;
+
+			if (animTimer > 30)
+			{
+				// Turn the player around immediately
+				if (opponent != noone)
 				{
-					blockbuffer = true;
-				}
-				/*
-				if (playerID == 2)
-				{
-					prevState = eState.STANDING_LIGHT_ATTACK;
-					blockbuffer = true;
-				}
-				*/
-				// Buffer attack out of block
-				switch attack
-				{
-					case 1:
+					if (x < opponent.x)
 					{
-						if (verticalMoveDir == -1)
-						{
-							prevState = eState.CROUCHING_LIGHT_ATTACK;
-						}
-						else
-						{
-							prevState = eState.STANDING_LIGHT_ATTACK;
-						}
+						image_xscale = 1;
 					}
-					break;
-
-					case 2:
+					else if (x != opponent.x)
 					{
-						if (verticalMoveDir == -1)
-						{
-							prevState = eState.CROUCHING_MEDIUM_ATTACK;
-						}
-						else
-						{
-							prevState = eState.STANDING_MEDIUM_ATTACK;
-						}
+						image_xscale = -1;
 					}
-					break;
+				}
 
-					case 3:
+				state = eState.IDLE;
+				invincible = false;
+
+				if (movedir == -image_xscale || toggleIdleBlock)
+				{
+					canBlock = true;
+				}
+
+				if (verticalMoveDir == 1)
+				{
+					state = eState.JUMPSQUAT;
+				}
+
+				if (movedir == -image_xscale && runButton)
+				{
+					canBlock = false;
+					state = eState.RUN_BACKWARD;
+					sprite_index = CharacterSprites.runBackward_Sprite;
+					image_index = 0;
+
+					invincible = true;
+					animTimer = 0;
+				}
+			}
+
+		}
+		break;
+
+
+		case eState.BLOCKING:
+		{
+			animTimer = 1;
+			canBlock = true;
+			cancelable = false;
+			if (isCrouchBlocking)
+			{
+				sprite_index = CharacterSprites.crouchBlock_Sprite;
+			}
+			else
+			{
+				sprite_index = CharacterSprites.standBlock_Sprite;
+			}
+			grounded = true;
+
+			if (attack > 0)
+			{
+				blockbuffer = true;
+			}
+			/*
+			if (playerID == 2)
+			{
+				prevState = eState.STANDING_LIGHT_ATTACK;
+				blockbuffer = true;
+			}
+			*/
+			// Buffer attack out of block
+			switch attack
+			{
+				case 1:
+				{
+					if (verticalMoveDir == -1)
 					{
-						if (verticalMoveDir == -1)
-						{
-							prevState = eState.CROUCHING_HEAVY_ATTACK;
-						}
-						else
-						{
-							prevState = eState.STANDING_HEAVY_ATTACK;
-						}
-					}
-					break;
-
-					case 5:
-					{
-						if (verticalMoveDir == 0 && movedir == 0)
-						{
-							prevState = eState.NEUTRAL_SPECIAL;
-						}
-						else if (movedir != 0)
-						{
-							prevState = eState.SIDE_SPECIAL;
-						}
-						else if (verticalMoveDir == 1)
-						{
-							prevState = eState.UP_SPECIAL;
-						}
-						else if (verticalMoveDir == -1)
-						{
-							prevState = eState.DOWN_SPECIAL;
-						}
-					}
-					break;
-				}
-
-				if (knockbackVel > 0)
-				{
-					hsp = knockbackVel * -image_xscale;
-					knockbackVel--;
-				}
-				else
-				{
-					hsp = 0;
-					knockbackVel = 0;
-				}
-
-
-
-				if (!global.game_paused)
-				{
-					blockstun--;
-				}
-
-				if (blockstun < 1)
-				{
-					FAvictim = false;
-					isCrouchBlocking = false;
-
-					if (blockbuffer)
-					{
-						state = prevState;
-						animTimer = 0;
+						prevState = eState.CROUCHING_LIGHT_ATTACK;
 					}
 					else
 					{
-						if (movedir != 0)
+						prevState = eState.STANDING_LIGHT_ATTACK;
+					}
+				}
+				break;
+
+				case 2:
+				{
+					if (verticalMoveDir == -1)
+					{
+						prevState = eState.CROUCHING_MEDIUM_ATTACK;
+					}
+					else
+					{
+						prevState = eState.STANDING_MEDIUM_ATTACK;
+					}
+				}
+				break;
+
+				case 3:
+				{
+					if (verticalMoveDir == -1)
+					{
+						prevState = eState.CROUCHING_HEAVY_ATTACK;
+					}
+					else
+					{
+						prevState = eState.STANDING_HEAVY_ATTACK;
+					}
+				}
+				break;
+
+				case 5:
+				{
+					if (verticalMoveDir == 0 && movedir == 0)
+					{
+						prevState = eState.NEUTRAL_SPECIAL;
+					}
+					else if (movedir != 0)
+					{
+						prevState = eState.SIDE_SPECIAL;
+					}
+					else if (verticalMoveDir == 1)
+					{
+						prevState = eState.UP_SPECIAL;
+					}
+					else if (verticalMoveDir == -1)
+					{
+						prevState = eState.DOWN_SPECIAL;
+					}
+				}
+				break;
+			}
+
+			if (knockbackVel > 0)
+			{
+				hsp = knockbackVel * -image_xscale;
+				knockbackVel--;
+			}
+			else
+			{
+				hsp = 0;
+				knockbackVel = 0;
+			}
+
+
+
+			if (!global.game_paused)
+			{
+				blockstun--;
+			}
+
+			if (blockstun < 1)
+			{
+				FAvictim = false;
+				isCrouchBlocking = false;
+
+				if (blockbuffer)
+				{
+					state = prevState;
+					animTimer = 0;
+				}
+				else
+				{
+					if (movedir != 0)
+					{
+						state = eState.WALKING;
+						if (verticalMoveDir == -1)
 						{
-							state = eState.WALKING;
-							if (verticalMoveDir == -1)
-							{
-								state = eState.CROUCHING;
-							}
-							if (movedir != image_xscale)
-							{
-								canBlock = true;
-							}
+							state = eState.CROUCHING;
 						}
-						else
+						if (movedir != image_xscale)
 						{
-							state = eState.IDLE;
+							canBlock = true;
 						}
 					}
-
-					hsp = 0;
-					knockbackVel = 0;
-					blockbuffer = false;
+					else
+					{
+						state = eState.IDLE;
+					}
 				}
 
-
-
+				hsp = 0;
+				knockbackVel = 0;
+				blockbuffer = false;
 			}
-			break;
 
-			case eState.RUSH_CANCEL_FORWARD:
+
+
+		}
+		break;
+
+		case eState.RUSH_CANCEL_FORWARD:
+		{
+			animTimer = 0;
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			projectileInvincible = true;
+
+			sprite_index = CharacterSprites.runForward_Sprite;
+			image_speed = 2;
+
+			hsp = global.rcForwardSpeed * image_xscale;
+			vsp += fallSpeed;
+
+			// Handle Ending
+			if (rcForwardTimer >= global.rcForwardDuration)
 			{
-				animTimer = 0;
-				cancelable = false;
-				grounded = true;
-				canTurnAround = false;
-				isShortHopping = false;
-				isSuperJumping = false;
-				hasSpentDoubleJump = false;
-				projectileInvincible = true;
-
-				sprite_index = CharacterSprites.runForward_Sprite;
-				image_speed = 2;
-
-				hsp = global.rcForwardSpeed * image_xscale;
-				vsp += fallSpeed;
-
-				// Handle Ending
-				if (rcForwardTimer >= global.rcForwardDuration)
-				{
-					state = eState.IDLE;
-				}
-				rcForwardTimer++;
-
-				// Hitstun
-				if (hitstun > 0)
-				{
-					state = eState.HURT;
-				}
-
-				HandleWalkingOffPlatforms(false);
-
-				// Create speed trail
-				//SpeedTrail(0.3, 0.02, 3);
+				state = eState.IDLE;
 			}
-			break;
+			rcForwardTimer++;
 
-			case eState.RUSH_CANCEL_UP:
+			// Hitstun
+			if (hitstun > 0)
 			{
-				animTimer = 0;
-				cancelable = false;
-				sprite_index = CharacterSprites.jump_Sprite;
-				image_speed = 1;
-				grounded = false;
-				canTurnAround = false;
-				projectileInvincible = true;
-
-				vsp += global.rcUpFallSpeed;
-				hsp = walkSpeed * 1.5 * image_xscale;
-
-				// Create speed trail
-				//SpeedTrail(0.3, 0.02, 3);
+				state = eState.HURT;
 			}
-			break;
 
-			case eState.RUSH_CANCEL_AIR:
-			{
-				animTimer = 0;
-				cancelable = false;
-				sprite_index = CharacterSprites.jump_Sprite;
-				image_speed = 2;
-				grounded = false;
-				canTurnAround = false;
-				projectileInvincible = true;
+			HandleWalkingOffPlatforms(false);
 
-				vsp = global.rcAirSpeed;
-				hsp = global.rcAirHorizontalSpeed * image_xscale;
+			// Create speed trail
+			//SpeedTrail(0.3, 0.02, 3);
+		}
+		break;
 
-				// Create speed trail
-				//SpeedTrail(0.3, 0.02, 1);
-			}
-			break;
+		case eState.RUSH_CANCEL_UP:
+		{
+			animTimer = 0;
+			cancelable = false;
+			sprite_index = CharacterSprites.jump_Sprite;
+			image_speed = 1;
+			grounded = false;
+			canTurnAround = false;
+			projectileInvincible = true;
+
+			vsp += global.rcUpFallSpeed;
+			hsp = walkSpeed * 1.5 * image_xscale;
+
+			// Create speed trail
+			//SpeedTrail(0.3, 0.02, 3);
+		}
+		break;
+
+		case eState.RUSH_CANCEL_AIR:
+		{
+			animTimer = 0;
+			cancelable = false;
+			sprite_index = CharacterSprites.jump_Sprite;
+			image_speed = 2;
+			grounded = false;
+			canTurnAround = false;
+			projectileInvincible = true;
+
+			vsp = global.rcAirSpeed;
+			hsp = global.rcAirHorizontalSpeed * image_xscale;
+
+			// Create speed trail
+			//SpeedTrail(0.3, 0.02, 1);
+		}
+		break;
 		}
 
 			// Code Outside State Machine
@@ -2140,7 +2121,7 @@ if (host != noone && hostObject != noone)
 
 
 			// If we are IN hitstop
-			if (global.hitstop > 0)
+			if (hitstop > 0)
 			{
 				//state = eState.HITSTOP;
 			}

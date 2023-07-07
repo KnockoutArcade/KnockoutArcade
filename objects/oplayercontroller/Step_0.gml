@@ -494,6 +494,7 @@ if (state == eState.HITSTOP)
 {
 	if (spiritObject != noone)
 	{
+		spiritObject.hitstop = hitstop;
 		spiritObject.state = state;
 	}
 	
@@ -622,8 +623,6 @@ if (state == eState.HITSTOP)
 		}
 	}
 	image_speed = 0;
-	
-	
 }
 
 // Handle Being Grabbed

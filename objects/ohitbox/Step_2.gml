@@ -75,7 +75,7 @@ if (!isProjectile)
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
-			show_debug_message(string(collision_list[| i].owner) + ", " + string(owner) + ", " + string(gotHitBy));
+			//show_debug_message(string(collision_list[| i].owner) + ", " + string(owner) + ", " + string(gotHitBy));
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
 			if (collision_list[| i].owner != owner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 			{
@@ -90,10 +90,24 @@ if (!isProjectile)
 					owner.state = eState.THROW_TECH;
 					owner.hsp = -2 * owner.image_xscale;
 					owner.animTimer = 0;
+					
+					if (spirit != noone)
+					{
+						spirit.state = eState.THROW_TECH;
+						spirit.hsp = -2 * owner.image_xscale;
+						spirit.animTimer = 0;
+					}
 
 					collision_list[| i].owner.state = eState.THROW_TECH;
 					collision_list[| i].owner.hsp = -2 * collision_list[| i].owner.image_xscale;
 					collision_list[| i].owner.animTimer = 0;
+					
+					if (collision_list[| i].spirit != noone)
+					{
+						collision_list[| i].spirit.state = eState.THROW_TECH;
+						collision_list[| i].spirit.hsp = -2 * collision_list[| i].spirit.image_xscale;
+						collision_list[| i].spirit.animTimer = 0;
+					}
 
 					// Meter Build - Both players get some meter
 					collision_list[| i].owner.superMeter += 5;
@@ -158,6 +172,7 @@ if (!isProjectile)
 					owner.target = collision_list[| i].owner;
 				
 					owner.hitstop = attackProperty.AttackHitStop;
+					if (spirit != noone) spirit.hitstop = attackProperty.AttackHitStop;
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
@@ -212,6 +227,11 @@ if (!isProjectile)
 
 					owner.prevState = owner.state; // Set the owner's previous state
 					owner.state = eState.HITSTOP;
+					if (spirit != noone)
+					{
+						spirit.prevState = spirit.state; // Set the owner's previous state
+						spirit.state = eState.HITSTOP;
+					}
 
 					// Handle if the opponent is Crouch blocking or not
 					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
@@ -236,6 +256,7 @@ if (!isProjectile)
 					
 					// Handle Hitstop
 					owner.hitstop = attackProperty.AttackHitStop;
+					if (spirit != noone) spirit.hitstop = attackProperty.AttackHitStop;
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Allow Cancelling
@@ -269,6 +290,7 @@ if (!isProjectile)
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
+						if (collision_list[| i].spirit != noone) collision_list[| i].spirit.sprite_index = collision_list[| i].spirit.CharacterSprites.hurt_Sprite;
 					}
 
 					// Set the correct Sprite
@@ -279,6 +301,7 @@ if (!isProjectile)
 					}
 
 					collision_list[| i].owner.state = eState.HITSTOP;
+					if (collision_list[| i].spirit != noone) collision_list[| i].spirit.state = eState.HITSTOP;
 
 					// Properties on Counter Hit
 					if (collision_list[| i].owner.inAttackState)
@@ -331,6 +354,7 @@ if (!isProjectile)
 
 					//Allow Cancelling
 					owner.cancelable = true;
+					if (spirit != noone) spirit.cancelable = true;
 
 					// Depth Sorting
 					owner.depth = -1;
@@ -373,8 +397,8 @@ else
 		for (var i = 0; i < collisionID; i++;)
 		{
 			// This code handles multiple hitboxes being used
-		// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
-		// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
+			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
+			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
 			if (collision_list[| i].owner != owner.playerOwner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
@@ -432,6 +456,7 @@ else
 					collision_list[| i].owner.shuffle = 0;
 					
 					owner.hitstop = attackProperty.AttackHitStop;
+					if (spirit != noone) spirit.hitstop = attackProperty.AttackHitStop;
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
