@@ -247,7 +247,8 @@ with (hurtbox)
 }
 hurtboxOffset = -9;
 
-hitstun = 0;
+hitstun = 0; // How long we are in hitSTUN for
+hitstop = 0; // How long we are in hitSTOP for
 hitstopBuffer = false;
 prevSprite = 0;
 blockstun = 0;

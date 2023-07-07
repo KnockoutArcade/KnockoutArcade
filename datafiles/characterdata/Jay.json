@@ -1437,7 +1437,7 @@
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 2.0,
+          "LaunchKnockbackVertical": -0.5,
           "LaunchKnockbackHorizontal": 4.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,

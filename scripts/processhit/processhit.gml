@@ -63,11 +63,14 @@ function ProcessHit( attackProperty, collision_list)
 		}
 		owner.heldOpponent = noone;
 
-		hasHit = true;
+		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
-		global.hitstop = attackProperty.AttackHitStop;
 		
+		// Handle Hitstop
+		owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+	
 		
 		//Draw hit effect
 		var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
@@ -130,9 +133,12 @@ function ProcessHit( attackProperty, collision_list)
 			collision_list.owner.vsp = 0;
 		}
 
-		hasHit = true;
+		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
-		global.hitstop = attackProperty.AttackHitStop;
+		
+		// Handle Hitstop
+		owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.hitstop = attackProperty.AttackHitStop;
 	}
 }

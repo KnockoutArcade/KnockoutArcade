@@ -480,11 +480,11 @@ if (state == eState.CROUCHING)
 }
 
 // Animation pauses during hitstop and when the screen freezes
-if (global.hitstop == 0 && state != eState.SCREEN_FREEZE) 
+if (hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
 }
-else if (global.hitstop != 0)
+else if (hitstop != 0)
 {
 	state = eState.HITSTOP;
 }
@@ -517,11 +517,11 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 3);
+			x = xHome + min(hitstop, 3);
 		}
 		else 
 		{
-			x = xHome - min(global.hitstop, 3);
+			x = xHome - min(hitstop, 3);
 		}
 	}
 	else 
@@ -576,25 +576,27 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 1);
+			x = xHome + min(hitstop, 1);
 		}
 		else
 		{
-			x = xHome - min(global.hitstop, 1);
+			x = xHome - min(hitstop, 1);
 		}
 	}
 	
+	hitstop--;
+	
 	// When Hitstop Ends
-	if (global.hitstop < 1) 
+	if (hitstop < 1) 
 	{
 		state = prevState;
+		animTimer++;
 		if (hitstopBuffer)
 		{
-			//sprite_index = prevSprite;
 			image_index = 0;
 			cancelable = false;
-			animTimer = animOffset;
 			animOffset = 0;
+			animTimer = animOffset;
 			hitstopBuffer = false;
 		}
 		
@@ -609,15 +611,19 @@ if (state == eState.HITSTOP)
 		if (hitstun > 0)
 		{
 			image_index = 0;
+			x = xHome;
 			hitstun++;
 		}
 		
 		if (blockstun > 0)
 		{
 			blockstun++;
+			x = xHome;
 		}
 	}
 	image_speed = 0;
+	
+	
 }
 
 // Handle Being Grabbed
@@ -1012,7 +1018,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight, attack, true);
 		}
@@ -1023,7 +1029,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight2, attack, true);
 		}
@@ -1034,7 +1040,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandLight3, attack, true);
 		}
@@ -1046,7 +1052,7 @@ switch state
 		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 		
 		// Cancelable into heavy
-		if (cancelable && global.hitstop < 1)
+		if (cancelable)
 		{
 			CancelData(selectedCharacter.StandMedium, attack, true);
 		}
@@ -1057,7 +1063,7 @@ switch state
 	{
 		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.StandHeavy, attack, true);
 		}
@@ -1069,7 +1075,7 @@ switch state
 	{	
 		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 		
-		if (cancelable && global.hitstop < 1) 
+		if (cancelable && hitstop < 1) 
 		{
 			CancelData(selectedCharacter.CrouchingLight, attack, true);
 		}
@@ -1080,7 +1086,7 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CrouchingMedium, attack, true);
 		}
@@ -1101,7 +1107,7 @@ switch state
 			hurtbox.image_yscale = 20;
 		}
 	
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CrouchingHeavy, attack, true);
 		}
@@ -1113,7 +1119,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingLight, attack, true);
 		} 
@@ -1126,7 +1132,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
 	
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingMedium, attack, true);
 		}
@@ -1138,7 +1144,7 @@ switch state
 	{
 		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.JumpingHeavy, attack, true);
 		}
@@ -1157,7 +1163,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
 		}
 		
-		if (cancelable && global.hitstop < 1)
+		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CommandNormal1, attack, true);
 		}
@@ -2040,7 +2046,7 @@ switch state
 
 
 // If we are IN hitstop
-if (global.hitstop > 0) 
+if (hitstop > 0) 
 {
 	//state = eState.HITSTOP;
 }
@@ -2136,88 +2142,97 @@ if (target != noone)
 
 
 // Collision
-if (state != eState.HITSTOP)
-{
-	// Collisions With Players
-	if (opponent != noone)
-	{
-		// Check to see if players are about to be touching
-		if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
-		{
-			hsp *= .75; // Reduce player speed
-			var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
-			// Simulate the opponent moving forwards
-			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
-			// While the players are still touching
-			while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
-			{
-				// Move the players away from each other
-				if x > opponent.x {
-					environmentDisplacement += .5;
-					opponent.x -= .5;
-				}
-				else 
-				{
-					environmentDisplacement -= .5;
-					opponent.x += .5;
-				}
-			}
-			opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
-			opponent.x = origanalX; // Return oponent to original position
-		}
-	}
-	
-	
-	// Collisions With Walls
-	if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
-	{
-		while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
-		{
-			x += sign(hsp+environmentDisplacement);
-		}
-		hsp = 0;
-		environmentDisplacement = 0;
-	}
-	
-	if (place_meeting(x, y+vsp+fallSpeed, oWall))
-	{
-		//Determine wether we are rising into a cieling or falling onto a floor.
-		var fallDirection = sign(vsp);
-		
-		while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
-		{
-			y += sign(vsp);
-		}
-		
-		isJumpingForward = false;
-		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
-		{
-			state = eState.IDLE;
-			grounded = true;
-			frameAdvantage = true;
-			inAttackState = false;
-			canTurnAround = true;
-			isThrowable = true;
-		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
-		{
-			grounded = true;
-			isThrowable = true;
-		}
-		if (state == eState.LAUNCHED)
-		{
-			state = eState.KNOCKED_DOWN;
-			sprite_index = CharacterSprites.knockdown_Sprite;
-			image_index = 0;
-			hsp = 0;
-			image_speed = 1;
-		}
-	}
+// When a player gets hit, they ossilate back and forth, which will move the player's collision box around.
+// We're storing the actual x Position so we can restore it later.
+// We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
+// player's position without ossilating.
+var actualXPos = x;
+x = xHome;
 
-x += hsp + environmentDisplacement;
-x = clamp(x, global.camObj.x-80, global.camObj.x+80);
-y += vsp;
+// Collisions With Players
+if (opponent != noone)
+{
+	// Check to see if players are about to be touching
+	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	{
+		hsp *= .75; // Reduce player speed
+		var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+		// Simulate the opponent moving forwards
+		opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		// While the players are still touching
+		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
+		{
+			// Move the players away from each other
+			if x > opponent.x {
+				environmentDisplacement += .5;
+				opponent.x -= .5;
+			}
+			else 
+			{
+				environmentDisplacement -= .5;
+				opponent.x += .5;
+			}
+		}
+		opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+		opponent.x = origanalX; // Return oponent to original position
+	}
+}
+
+
+// Collisions With Walls
+if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
+{
+	while (!place_meeting(x+sign(hsp+environmentDisplacement), y, oWall)) 
+	{
+		x += sign(hsp+environmentDisplacement);
+	}
+	hsp = 0;
+	environmentDisplacement = 0;
+}
+
+if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
+{
+	//Determine wether we are rising into a cieling or falling onto a floor.
+	var fallDirection = sign(vsp);
+	
+	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
+	{
+		y += sign(vsp);
+	}
+	
+	isJumpingForward = false;
+	vsp = 0;
+	if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+	{
+		state = eState.IDLE;
+		grounded = true;
+		frameAdvantage = true;
+		inAttackState = false;
+		canTurnAround = true;
+		isThrowable = true;
+	}
+	if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
+	{
+		grounded = true;
+		isThrowable = true;
+	}
+	if (state == eState.LAUNCHED)
+	{
+		state = eState.KNOCKED_DOWN;
+		sprite_index = CharacterSprites.knockdown_Sprite;
+		image_index = 0;
+		hsp = 0;
+		image_speed = 1;
+	}
+}
+x = actualXPos; // Restore the player's actual x position
+
+if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
+{
+	x += hsp + environmentDisplacement;
+	x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	y += vsp;
+}
 
 // Handle Enviornmental Displacement
 environmentDisplacement = 0;
@@ -2244,7 +2259,6 @@ if (!inAttackState && canTurnAround && !rcActivated)
 	{
 		image_xscale = sign(hsp);
 	}
-}
 }
 }
 else 

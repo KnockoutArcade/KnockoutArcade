@@ -15,9 +15,14 @@ if (owner != noone)
 		instance_destroy();
 	}
 
-	if (!primary && !global.game_paused && global.hitstop < 1 && owner.state != eState.HITSTOP)
+	if (!primary && !global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP)
 	{
 		lifetime--;
+	}
+
+	if (!owner.inAttackState && !primary)
+	{
+		instance_destroy();
 	}
 
 	if (!owner.inAttackState && !primary)

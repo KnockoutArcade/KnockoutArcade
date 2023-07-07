@@ -26,7 +26,7 @@ function ActivateRushCancel()
 	rcFreezeTimer = 0;
 	superMeter -= 50;
 	projectileInvincible = true;
-	global.hitstop = 0;
+	hitstop = 0;
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;

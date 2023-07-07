@@ -1,6 +1,6 @@
 {
   "resources": [
-    {"id":{"name":"sBeverly_StandLight1_MOCKUP_strip3","path":"sprites/sBeverly_StandLight1_MOCKUP_strip3/sBeverly_StandLight1_MOCKUP_strip3.yy",},"order":8,},
+    {"id":{"name":"sBeverly_StandLight1","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"order":8,},
     {"id":{"name":"sJay_SC_JumpingMeduim_MOCKUP_strip5","path":"sprites/sJay_SC_JumpingMeduim_MOCKUP_strip5/sJay_SC_JumpingMeduim_MOCKUP_strip5.yy",},"order":17,},
     {"id":{"name":"oJayStageProjector","path":"objects/oJayStageProjector/oJayStageProjector.yy",},"order":7,},
     {"id":{"name":"sTimer9","path":"sprites/sTimer9/sTimer9.yy",},"order":0,},
