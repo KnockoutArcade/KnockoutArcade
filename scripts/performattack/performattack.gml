@@ -142,11 +142,9 @@ function PerformAttack(Action, createdBySpirit)
 	{
 		if (animTimer == Action.AttackProperty[i].Start) 
 		{
-			var spiritRef = noone;
 			var hostID = noone;
 			if (createdBySpirit)
 			{
-				spiritRef = other.id;
 				hostID = hostObject.id;
 			}
 			
@@ -164,7 +162,7 @@ function PerformAttack(Action, createdBySpirit)
 				else
 				{
 					owner = hostID;
-					spirit = spiritRef;
+					spirit = other.id;
 				}
 			
 				// Pass through attack data
@@ -184,11 +182,9 @@ function PerformAttack(Action, createdBySpirit)
 			{
 				if (animTimer == Action.RehitData.HitOnFrames[j]) 
 				{
-					var spiritRef = noone;
 					var hostID = noone;
 					if (createdBySpirit)
 					{
-						spiritRef = other.id;
 						hostID = hostObject.id;
 					}
 					
@@ -206,21 +202,20 @@ function PerformAttack(Action, createdBySpirit)
 						else
 						{
 							owner = hostID;
-							spirit = spiritRef;
+							spirit = other.id;
 						}
 			
 						// Pass through attack data
 						attackProperty = Action.AttackProperty[i];
 						counterHitProperty = Action.CounterHitProperty[i];
-						
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
-						ds_list_clear(hitByGroup);
-						if (target != noone)
-						{
-							ds_list_clear(target.hitByGroup);
-						}
+					ds_list_clear(hitByGroup);
+					if (target != noone)
+					{
+						ds_list_clear(target.hitByGroup);
+					}
 				}
 			}
 		}
@@ -242,11 +237,9 @@ function PerformAttack(Action, createdBySpirit)
 					image_xscale = other.image_xscale;
 					playerOwner = other.id;
 					
-					var spiritRef = noone;
 					var hostID = noone;
 					if (createdBySpirit)
 					{
-						spiritRef = other.id;
 						hostID = hostObject.id;
 					}
 					
@@ -263,7 +256,7 @@ function PerformAttack(Action, createdBySpirit)
 						else
 						{
 							owner = hostID;
-							spirit = spiritRef;
+							spirit = other.id;
 						}
 						
 						isProjectile = true;
@@ -283,11 +276,9 @@ function PerformAttack(Action, createdBySpirit)
 	{
 		if (animTimer == Action.HurtboxProperty[i].Start) 
 		{
-			var spiritRef = noone;
 			var hostID = noone;
 			if (createdBySpirit)
 			{
-				spiritRef = other.id;
 				hostID = hostObject.id;
 			}
 			
@@ -305,12 +296,11 @@ function PerformAttack(Action, createdBySpirit)
 				else
 				{
 					owner = hostID;
-					spirit = spiritRef;
+					spirit = other.id;
 				}
 				
 				hurtboxProperty = Action.HurtboxProperty[i];
 			}
 		}
 	}
-	
 }

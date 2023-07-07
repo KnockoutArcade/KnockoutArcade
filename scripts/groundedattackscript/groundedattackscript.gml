@@ -30,6 +30,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 			var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
 			spiritFire.depth = depth + 1;
 			SummonSpirit(spirit);
+			spiritObject.image_xscale = image_xscale;
 		}
 		spiritObject.state = state;
 	}
@@ -62,6 +63,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 					var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
 					spiritFire.depth = depth + 1;
 					SummonSpirit(spirit);
+					spiritObject.image_xscale = image_xscale;
 				}
 				spiritState = true;
 			}
@@ -69,10 +71,6 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 			{
 				if (spiritSummoned) 
 				{
-					with (hurtbox)
-					{
-						spiritOwner = noone;
-					}
 					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);

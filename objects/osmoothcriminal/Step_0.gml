@@ -12,22 +12,9 @@ if (host != noone && hostObject != noone)
 		{
 			owner = hostID;
 			calledBySpirit = true;
-			spirit = id;
+			spirit = other.id;
 		}
 		hurtboxSet = true;
-	}
-	var xPosition = x;
-	var yPosition = y;
-	var xScale = image_xscale;
-	var yScale = image_yscale
-	var offset = hurtboxOffset;
-	with (hurtbox)
-	{
-		spiritX = xPosition;
-		spiritY = yPosition;
-		spiritXScale = xScale;
-		spiritYScale = yScale;
-		spiritHurtboxOffset = offset;
 	}
 	
 	depth = hostObject.depth + 2;

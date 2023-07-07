@@ -18,6 +18,19 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		PerformAttack(moveToDo, false);
 	}
 	
+	// If this move temporarily summons the spirit to attack in Spirit OFF
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff)
+	{
+		if (!spiritSummoned)
+		{
+			var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
+			spiritFire.depth = depth + 1;
+			SummonSpirit(spirit);
+			spiritObject.image_xscale = image_xscale;
+		}
+		spiritObject.state = state;
+	}
+	
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.CROUCHING;
@@ -46,6 +59,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 					var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
 					spiritFire.depth = depth + 1;
 					SummonSpirit(spirit);
+					spiritObject.image_xscale = image_xscale;
 				}
 				spiritState = true;
 			}
@@ -53,10 +67,6 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			{
 				if (spiritSummoned) 
 				{
-					with (hurtbox)
-					{
-						spiritOwner = noone;
-					}
 					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 					instance_destroy(spiritObject.hurtbox);
 					instance_destroy(spiritObject);

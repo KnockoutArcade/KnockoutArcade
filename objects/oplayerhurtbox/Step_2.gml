@@ -10,9 +10,8 @@ if (primary && owner.state != eState.HITSTOP)
 	}
 	else
 	{
-		show_debug_message(string(owner.x) + ", " + string(spiritX));
-		x = spiritX + (spiritHurtboxOffset * sign(spiritXScale));
-		y = spiritY;
+		x = spirit.x + (spirit.hurtboxOffset * sign(spirit.image_xscale));
+		y = spirit.y;
 	}
 } 
 if (!primary)
@@ -24,9 +23,8 @@ if (!primary)
 	}
 	else
 	{
-		// And for some reason the position is stored properly here...
-		x = spirit.x + hurtboxProperty.WidthOffset * sign(spiritXScale);
-		y = spirit.y - hurtboxProperty.HeightOffset * sign(spiritYScale);
+		x = spirit.x + hurtboxProperty.WidthOffset * sign(spirit.image_xscale);
+		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
 	}
 	
 	if (!owner.inAttackState)

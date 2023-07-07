@@ -470,7 +470,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 1,
+          "Start": 2,
           "Lifetime": 2,
           "AttackWidth": 20,
           "AttackHeight": 12,
@@ -616,7 +616,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 14,
+          "Start": 7,
           "Lifetime": 7,
           "AttackWidth": 23,
           "AttackHeight": 11,
@@ -694,7 +694,7 @@
         "HitBox": 1,
         "NumberOfHits": 1,
         "HitOnFrames": [
-          35
+          28
         ]
       },
       "GroundMovementData": {

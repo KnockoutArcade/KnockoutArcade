@@ -23,6 +23,7 @@ else
 {
 	x = spirit.x + attackProperty.WidthOffset * sign(spirit.image_xscale);
 	y = spirit.y - attackProperty.HeightOffset * sign(spirit.image_yscale);
+	show_debug_message(string(x) + ", " + string(y));
 }
 
 // Handle non-projectiles
