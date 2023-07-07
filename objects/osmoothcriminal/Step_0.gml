@@ -212,63 +212,6 @@ if (host != noone && hostObject != noone)
 			}
 		}
 
-
-		//// Reset motion input values if the player isn't performing a special move
-		//if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.UP_SPECIAL && state != eState.DOWN_SPECIAL 
-		//	&& state != eState.HITSTOP
-		//	&& state != eState.ENHANCED_NEUTRAL_SPECIAL
-		//	&& state != eState.ENHANCED_SIDE_SPECIAL
-		//	&& state != eState.ENHANCED_UP_SPECIAL
-		//	&& state != eState.ENHANCED_DOWN_SPECIAL
-		//	&& state != eState.ENHANCED_NEUTRAL_SPECIAL_2
-		//	&& state != eState.ENHANCED_SIDE_SPECIAL_2
-		//	&& state != eState.ENHANCED_UP_SPECIAL_2
-		//	&& state != eState.ENHANCED_DOWN_SPECIAL_2
-		//	&& state != eState.REKKA_LAUNCHER
-		//	&& state != eState.REKKA_FINISHER
-		//	&& state != eState.REKKA_CONNECTER
-		//	&& state != eState.REKKA_LOW
-		//	&& state != eState.REKKA_HIGH) 
-		//{
-		//	inputSet = false;
-		//	motionInput = [];
-		//	ds_list_clear(listOfInputs);
-		//	progressInInputs = [];
-		//	enhanced = [];
-		//	inputWindowStart = 0;
-		//	inputWindowEnd = 0;
-		//	changeFrame = 999;
-		//	changeImmediately = false;
-		//	requireSpecialButton = false;
-		//}
-		//else if (animTimer > inputWindowEnd)
-		//{
-		//	motionInput = [];
-		//	ds_list_clear(listOfInputs);
-		//	progressInInputs = [];
-		//	inputWindowStart = 0;
-		//	inputWindowEnd = 0;
-		//	requireSpecialButton = false;
-
-		//	var changeSet = false;
-		//	for (i = 0; i < array_length(enhanced); i++)
-		//	{
-		//		if (enhanced[i])
-		//		{
-		//			changeSet = true;
-		//		}
-		//	}
-		//	if (!changeSet)
-		//	{
-		//		changeFrame = 999;
-		//		changeImmediately = false;
-		//	}
-		//}
-		//else
-		//{
-		//	PerformMotionInputs(attack);
-		//}
-
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
 		{
@@ -459,9 +402,10 @@ if (host != noone && hostObject != noone)
 		}
 
 
-		if (state == eState.HITSTOP)
+		if (hostObject.state == eState.HITSTOP)
 		{
-			hitstunShuffleTimer++;
+			hitstunShuffleTimer = hostObject.hitstunShuffleTimer;
+			shuffle = hostObject.shuffle;
 
 			if (hitstun > 0)
 			{
@@ -510,6 +454,11 @@ if (host != noone && hostObject != noone)
 					if (attackState != -1)
 					{
 						CancelData(attackState, attack, false);
+						var spiritAttack = attack;
+						with (hostObject)
+						{
+							CancelData(attackState, spiritAttack, false);
+						}
 					}
 				}
 			}
@@ -1788,7 +1737,7 @@ if (host != noone && hostObject != noone)
 					}
 				}
 
-				if (grounded)
+				if (hostObject.grounded)
 				{
 					sprite_index = CharacterSprites.hurt_Sprite;
 
@@ -1867,6 +1816,8 @@ if (host != noone && hostObject != noone)
 					canTurnAround = false;
 	
 					cancelCombo = true;
+					sprite_index = CharacterSprites.knockdown_Sprite;
+					hsp = 0;
 
 					if (image_index > (image_number - 1))
 					{

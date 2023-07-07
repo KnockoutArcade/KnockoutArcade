@@ -541,6 +541,13 @@ if (state == eState.HITSTOP)
 			if (attackState != -1)
 			{
 				CancelData(attackState, attack, false);
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						CancelData(attackState, attack, false);
+					}
+				}
 			}
 		}
 	}
@@ -1464,7 +1471,17 @@ switch state
 	{
 		if (spiritObject != noone)
 		{
-			spiritObject.state = state;
+			if (spiritSummoned) 
+			{
+				instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
+				instance_destroy(spiritObject.hurtbox);
+				instance_destroy(spiritObject);
+				spiritObject = noone;
+				spiritSummoned = false;
+				spiritState = false;
+				currentMovesetID = 1;
+				OverwriteMoveset();
+			}
 		}
 		
 		animTimer = 0;

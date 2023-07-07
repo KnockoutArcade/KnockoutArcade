@@ -240,7 +240,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 24.0,
+            "HorizontalSpeed": 8.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
@@ -409,7 +409,7 @@
           },
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 24.0,
+            "HorizontalSpeed": 8.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
