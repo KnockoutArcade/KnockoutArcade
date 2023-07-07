@@ -578,9 +578,9 @@ if (state == eState.HITSTOP)
 	if (hitstop < 1) 
 	{
 		state = prevState;
+		animTimer++;
 		if (hitstopBuffer)
 		{
-			//sprite_index = prevSprite;
 			image_index = 0;
 			cancelable = false;
 			animOffset = 0;

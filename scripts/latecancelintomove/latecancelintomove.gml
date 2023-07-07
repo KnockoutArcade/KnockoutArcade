@@ -5,30 +5,39 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	prevState = _prevState;
 	hitstopBuffer = true;
 	sprite_index = moveToCancel.SpriteId;
-	PressAttackButton(attackID);
 	animTimer = 0;
+	PressAttackButton(attackID);
 	isThrowable = true;
 
 	// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+	var allHurtboxes = [];
+	
 	for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
 	{
-		var hurtbox = instance_find(oPlayerHurtbox, i);
+		allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
+	}
 	
-		if (!hurtbox.primary && hurtbox.owner == id)
+	for (var i = 0; i < array_length(allHurtboxes); i++;)
+	{
+		if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == id)
 		{ 
-			instance_destroy(hurtbox);
+			instance_destroy(allHurtboxes[i]);
 		}
 	}
 	
 	// Destroy all hitboxes that belong to this player
+	var allHitboxes = [];
+	
 	for (var i = 0; i < instance_number(oHitbox); i++;)
 	{
-		var playerHitbox = instance_find(oHitbox, i);
-		
-		if (playerHitbox.owner == id)
+		allHitboxes[i] = instance_find(oHitbox, i);
+	}
+	
+	for (var i = 0; i < array_length(allHitboxes); i++;)
+	{
+		if (allHitboxes[i].owner == id)
 		{ 
-			instance_destroy(playerHitbox);
+			instance_destroy(allHitboxes[i]);
 		}
-		
 	}
 }
