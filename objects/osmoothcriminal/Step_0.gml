@@ -413,31 +413,6 @@ if (host != noone && hostObject != noone)
 				{
 					inAttackState = true;
 				}
-
-				// Canceling Moves from Hitstop
-				if (!hitstopBuffer && blockstun <= 0 && attack != 0)
-				{
-					// We need to know what attack state the player is in so we know which move's cancel data
-					// we should to use.
-
-					// We use the player's Previous State since the player's current state at this moment
-					// in the code is HITSTOP. Previous State stores what state we were in before entering
-					// hitstop.
-
-					var attackState = FindAttackState(prevState);
-					// Exception for invalid states
-					if (attackState != -1)
-					{
-						CancelData(attackState, attack, false);
-						if (spiritObject != noone)
-						{
-							with(spiritObject)
-							{
-								CancelData(attackState, attack, false);
-							}
-						}
-					}
-				}
 			}
 			if (blockstun > 0)
 			{
@@ -992,11 +967,6 @@ if (host != noone && hostObject != noone)
 			GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
 			//hostObject.state = state;
 
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.StandLight, attack, true);
-			}
-
 			if (selectedCharacter.StandLight.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
 				nextToPlayer = false;
@@ -1008,11 +978,6 @@ if (host != noone && hostObject != noone)
 		{
 			GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
 			//hostObject.state = state;
-
-			if (cancelable)
-			{
-				CancelData(selectedCharacter.StandLight2, attack, true);
-			}
 
 			if (selectedCharacter.StandLight2.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
@@ -1026,11 +991,6 @@ if (host != noone && hostObject != noone)
 			GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
 			//hostObject.state = state;
 
-			if (cancelable)
-			{
-				CancelData(selectedCharacter.StandLight3, attack, true);
-			}
-
 			if (selectedCharacter.StandLight3.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
 				nextToPlayer = false;
@@ -1042,12 +1002,6 @@ if (host != noone && hostObject != noone)
 		{
 			GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
 
-			// Cancelable into heavy
-			if (cancelable)
-			{
-				CancelData(selectedCharacter.StandMedium, attack, true);
-			}
-
 			if (selectedCharacter.StandMedium.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
 				nextToPlayer = false;
@@ -1058,11 +1012,6 @@ if (host != noone && hostObject != noone)
 		case eState.STANDING_HEAVY_ATTACK:
 		{
 			GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
-
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.StandHeavy, attack, true);
-			}
 
 			if (selectedCharacter.StandHeavy.SpiritData.MaintainPosition)
 			{
@@ -1076,11 +1025,6 @@ if (host != noone && hostObject != noone)
 		{
 			CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
 
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.CrouchingLight, attack, true);
-			}
-
 			if (selectedCharacter.CrouchingLight.SpiritData.MaintainPosition)
 			{
 				nextToPlayer = false;
@@ -1091,11 +1035,6 @@ if (host != noone && hostObject != noone)
 		case eState.CROUCHING_MEDIUM_ATTACK:
 		{
 			CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
-
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.CrouchingMedium, attack, true);
-			}
 
 			if (selectedCharacter.CrouchingMedium.SpiritData.MaintainPosition)
 			{
@@ -1118,11 +1057,6 @@ if (host != noone && hostObject != noone)
 				hurtbox.image_yscale = 20;
 			}
 
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.CrouchingHeavy, attack, true);
-			}
-
 			if (selectedCharacter.CrouchingHeavy.SpiritData.MaintainPosition)
 			{
 				nextToPlayer = false;
@@ -1134,11 +1068,6 @@ if (host != noone && hostObject != noone)
 		case eState.JUMPING_LIGHT_ATTACK:
 		{
 			JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
-
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.JumpingLight, attack, true);
-			}
 
 			if (selectedCharacter.JumpingLight.SpiritData.MaintainPosition)
 			{
@@ -1152,11 +1081,6 @@ if (host != noone && hostObject != noone)
 		{
 			JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
 
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.JumpingMedium, attack, true);
-			}
-
 			if (selectedCharacter.JumpingMedium.SpiritData.MaintainPosition)
 			{
 				nextToPlayer = false;
@@ -1168,11 +1092,6 @@ if (host != noone && hostObject != noone)
 		case eState.JUMPING_HEAVY_ATTACK:
 		{
 			JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
-
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.JumpingHeavy, attack, true);
-			}
 
 			if (selectedCharacter.JumpingHeavy.SpiritData.MaintainPosition)
 			{
@@ -1191,11 +1110,6 @@ if (host != noone && hostObject != noone)
 			else
 			{
 				JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
-			}
-
-			if (cancelable && hitstop < 1)
-			{
-				CancelData(selectedCharacter.CommandNormal1, attack, true);
 			}
 
 			if (selectedCharacter.CommandNormal1.SpiritData.MaintainPosition)

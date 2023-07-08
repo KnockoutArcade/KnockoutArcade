@@ -5584,7 +5584,7 @@
     {
       "UID": "1a8a6520-bcf7-4039-9e99-081309c4c8f4",
       "MoveType": 32,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 199064,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [

@@ -11,6 +11,7 @@ function SetSpiritMoveData(enhancement, move, attack)
 		{
 			spiritObject.attack = attack;
 		}
+		spiritObject.animTimer = 0;
 	}
 	if (move.SpiritData.ReturnToPlayer && spiritState) 
 	{

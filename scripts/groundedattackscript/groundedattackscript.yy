@@ -6,7 +6,7 @@
     "path": "folders/Scripts/AttackScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "GroundedAttackScript",
+  "name": "groundedattackscript",
   "tags": [],
   "resourceType": "GMScript",
 }

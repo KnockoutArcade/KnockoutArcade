@@ -448,7 +448,7 @@
     {
       "UID": "4cd733c8-dc41-4783-b528-548b21f17986",
       "MoveType": 32,
-      "MoveCanCancelInto": 80,
+      "MoveCanCancelInto": 0,//80,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -578,7 +578,7 @@
     {
       "UID": "19c97468-e749-4a1c-b9d1-7a20f3c46b5b",
       "MoveType": 64,
-      "MoveCanCancelInto": 144,
+      "MoveCanCancelInto": 0,//144,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
