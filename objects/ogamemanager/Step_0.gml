@@ -18,6 +18,7 @@ switch (global.gameMode)
 			{
 				ResetGame();
 
+
 				SetupGame();
 		
 				global.gameHalt = 0;
@@ -116,6 +117,8 @@ switch (global.gameMode)
 			else if(gameHaltTimer == 220)
 			{
 				room_goto(rCharacterSelectScreen);
+				audio_group_stop_all(audiogroup_mus);
+
 			}
 		}
 		else if (global.p1Rounds >= 2)
@@ -133,7 +136,7 @@ switch (global.gameMode)
 			else if(gameHaltTimer == 220)
 			{
 				room_goto(rCharacterSelectScreen);
-				audio_group_stop_all(audiogroup_mus)
+				audio_group_stop_all(audiogroup_mus);
 			}
 		}
 		else if (global.p2Rounds >= 2)
@@ -151,7 +154,7 @@ switch (global.gameMode)
 			else if(gameHaltTimer == 220)
 			{
 				room_goto(rCharacterSelectScreen);
-				audio_group_stop_all(audiogroup_mus)
+				audio_group_stop_all(audiogroup_mus);
 			}
 		}
 		

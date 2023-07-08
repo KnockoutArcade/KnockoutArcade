@@ -472,13 +472,13 @@ else
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
 						{
-							audio_play_sound(sfx_SmallCounter, 0, false);
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111* isP2), 61, "Particles", oParticles);
 							with (counterParticle) 
 							{
 								lifetime = global.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
+								audio_play_sound(sfx_SmallCounter, 0, false);
 								
 							}
 						}

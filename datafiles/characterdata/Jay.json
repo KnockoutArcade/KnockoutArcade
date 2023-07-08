@@ -1002,6 +1002,9 @@
       "MoveCanCancelInto": 199000,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_StandLight1_Mockup_strip4",
       "Duration": 10,
       "NumberOfFrames": 4,
@@ -1053,7 +1056,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1076,7 +1080,8 @@
           "LaunchKnockbackVertical": 0.2,
           "LaunchKnockbackHorizontal": 0.1,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1124,7 +1129,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "c14a5529-c9ef-4e2e-806a-7f48a2c0aa9a",
@@ -1132,6 +1139,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_BackwardThrow",
       "Duration": 58,
       "NumberOfFrames": 10,
@@ -1207,7 +1217,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1230,7 +1241,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1324,7 +1336,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "75601a84-ef21-4269-834d-fda92d4ce626",
@@ -1332,6 +1346,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_ForwardThrow",
       "Duration": 42,
       "NumberOfFrames": 9,
@@ -1403,7 +1420,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1426,7 +1444,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1493,7 +1512,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "189e5d3a-d24c-4e85-8ab1-743575916594",
@@ -1501,6 +1522,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Grab",
       "Duration": 24,
       "NumberOfFrames": 5,
@@ -1556,7 +1580,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1579,7 +1604,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1627,7 +1653,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
@@ -1635,6 +1663,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_SideSpecial_mockup_strip5",
       "Duration": 23,
       "NumberOfFrames": 5,
@@ -1690,7 +1721,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1713,7 +1745,8 @@
           "LaunchKnockbackVertical": -1.5,
           "LaunchKnockbackHorizontal": 2.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1761,7 +1794,9 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "15155b21-0122-46a6-9170-41408971b163",
@@ -1769,6 +1804,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_Nspecial_mockup_strip5",
       "Duration": 25,
       "NumberOfFrames": 5,
@@ -1824,7 +1862,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1847,7 +1886,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1895,7 +1935,9 @@
         "GravityScale": 1.0,
         "FallScale": 0.4
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
@@ -1903,6 +1945,9 @@
       "MoveCanCancelInto": 199064,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Standing_Light2",
       "Duration": 14,
       "NumberOfFrames": 4,
@@ -1954,7 +1999,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1977,7 +2023,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2025,7 +2072,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "303b54ea-442b-4669-9d47-ae3eac71217d",
@@ -2033,6 +2082,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Standing_Light3",
       "Duration": 22,
       "NumberOfFrames": 4,
@@ -2084,7 +2136,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2107,7 +2160,8 @@
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 0.1,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2155,7 +2209,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
@@ -2163,6 +2219,9 @@
       "MoveCanCancelInto": 201240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Standing_Medium",
       "Duration": 21,
       "NumberOfFrames": 6,
@@ -2222,7 +2281,8 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2245,7 +2305,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2315,7 +2376,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
@@ -2323,6 +2386,9 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_StandHeavy_Mockup_strip8",
       "Duration": 42,
       "NumberOfFrames": 8,
@@ -2390,7 +2456,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2413,7 +2480,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2483,7 +2551,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
@@ -2491,6 +2561,9 @@
       "MoveCanCancelInto": 198936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Crouching_Light",
       "Duration": 9,
       "NumberOfFrames": 3,
@@ -2538,7 +2611,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2561,7 +2635,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2609,7 +2684,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
@@ -2617,6 +2694,9 @@
       "MoveCanCancelInto": 201240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Crouching_Medium",
       "Duration": 27,
       "NumberOfFrames": 10,
@@ -2692,7 +2772,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "Start": 9,
@@ -2722,7 +2803,8 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2745,7 +2827,8 @@
           "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "CounterHitLevel": 2,
@@ -2766,7 +2849,8 @@
           "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2814,7 +2898,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
@@ -2822,6 +2908,9 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Crouching_Heavy",
       "Duration": 34,
       "NumberOfFrames": 10,
@@ -2897,7 +2986,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2920,7 +3010,8 @@
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 1.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2976,7 +3067,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
@@ -2984,6 +3077,9 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Jumping_Light",
       "Duration": 999,
       "NumberOfFrames": 2,
@@ -3027,7 +3123,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3050,7 +3147,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 3.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3098,7 +3196,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
@@ -3106,6 +3206,9 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Jumping_Medium",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3165,7 +3268,8 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3188,7 +3292,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3236,7 +3341,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
@@ -3244,6 +3351,9 @@
       "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Jumping_Heavy",
       "Duration": 27,
       "NumberOfFrames": 6,
@@ -3303,7 +3413,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3326,7 +3437,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3374,7 +3486,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
@@ -3382,6 +3496,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Grab",
       "Duration": 110,
       "NumberOfFrames": 1,
@@ -3421,7 +3538,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3444,7 +3562,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3541,7 +3660,9 @@
         "GravityScale": 1.5,
         "FallScale": 10.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "df89eb6c-5314-4802-beb4-b2d0e0cd946d",
@@ -3549,6 +3670,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_UpSpecial1_mockup_strip16",
       "Duration": 100,
       "NumberOfFrames": 16,
@@ -3648,7 +3772,8 @@
           "HoldYOffset": 0,
           "MeterGain": 1.0000001,
           "ComboScaling": 0.5,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "Start": 45,
@@ -3678,7 +3803,8 @@
           "HoldYOffset": 15,
           "MeterGain": 2.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3701,7 +3827,8 @@
           "LaunchKnockbackVertical": -10.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.2,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "CounterHitLevel": 3,
@@ -3722,7 +3849,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3824,7 +3952,9 @@
         "GravityScale": 1.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -3832,6 +3962,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "sJay_DownSpecial1_Mockup_strip4",
       "Duration": 36,
       "NumberOfFrames": 12,
@@ -3915,7 +4048,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3938,7 +4072,8 @@
           "LaunchKnockbackVertical": -4.0,
           "LaunchKnockbackHorizontal": 0.75,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -4008,7 +4143,9 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "6406db7f-a360-4eb0-8404-bec650d599f6",
@@ -4016,6 +4153,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4059,7 +4199,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "33e46444-1d88-4027-85ed-7d18f0326ff1",
@@ -4067,6 +4209,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4110,7 +4255,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "15836936-e561-4ef7-a32b-89b738ad93fd",
@@ -4118,6 +4265,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4161,7 +4311,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "8a60301d-8814-4c05-add8-d91a540e7ec5",
@@ -4169,6 +4321,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4212,7 +4367,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "46ac906c-3c8d-481a-9434-3b092a1254b0",
@@ -4220,6 +4377,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4263,7 +4423,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "35c693ad-4c37-44a0-b066-c9c0d48a7ca0",
@@ -4271,6 +4433,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4314,7 +4479,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "723c6e34-dd04-4061-a126-d6037500c92d",
@@ -4322,6 +4489,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4365,7 +4535,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "b94a3ffb-f1b1-40b3-afc9-2f0864a00999",
@@ -4373,6 +4545,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4416,7 +4591,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "042d57a1-6c74-4049-9cb7-21b4f0224321",
@@ -4424,6 +4601,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4467,7 +4647,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "694ea9a5-49d7-4dde-8e1c-12865d9e2760",
@@ -4475,6 +4657,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4518,7 +4703,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "bedd35f2-e6b4-45e7-bc23-bd9a81151a4f",
@@ -4526,6 +4713,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4569,7 +4759,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "08cbeaee-631d-4f23-b06c-c502ac0e3602",
@@ -4577,6 +4769,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4620,7 +4815,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "d8539935-c649-4944-99d7-bc081b4bd553",
@@ -4628,6 +4825,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4671,7 +4871,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "f5adf703-e7ea-411c-8cdd-ecb50127efa8",
@@ -4679,6 +4881,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4722,7 +4927,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "4e043336-638d-4950-9152-e38f51c7bd92",
@@ -4730,6 +4937,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4773,7 +4983,9 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     },
     {
       "UID": "f9922eb8-fbd3-4492-b02f-4b5ced26eb3c",
@@ -4781,6 +4993,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
       "SpriteName": "",
       "Duration": 0,
       "NumberOfFrames": 0,
@@ -4824,11 +5039,33 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": []
     }
   ],
-  "Version": "Ver1.1.1",
+  "UniqueData": {
+    "AdditionalMovesets": 0,
+    "SpiritData": 0,
+    "Version": "Ver1.1.3",
+    "UID": "6f43151f-2487-4936-9c7c-69cc680c0c28",
+    "LastModified": "2023-06-30T17:12:48.3923158-07:00",
+    "LastModifiedBy": "Zak"
+  },
+  "NonmoveSoundData": {
+    "WalkingSoundEffect": "",
+    "WalkForwardFootsteps": [],
+    "WalkBackwardFootsteps": [],
+    "RunningSoundEffect": "",
+    "RunForwardFootsteps": [],
+    "RunBackwardFootsteps": [],
+    "Version": "Ver1.1.3",
+    "UID": "311de9dc-9c77-4342-994c-9f4d0f962034",
+    "LastModified": "2023-06-30T17:12:48.3869694-07:00",
+    "LastModifiedBy": "Zak"
+  },
+  "Version": "Ver1.1.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-06-08T15:48:10.6822554-07:00",
-  "LastModifiedBy": "iansb"
+  "LastModified": "2023-06-30T17:12:48.4166514-07:00",
+  "LastModifiedBy": "Zak"
 }
