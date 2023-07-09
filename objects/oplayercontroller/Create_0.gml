@@ -20,6 +20,9 @@ WalkingSoundEffect = selectedCharacter.NonmoveSoundData.WalkingSoundEffect; // W
 WalkForwardFootsteps = selectedCharacter.NonmoveSoundData.WalkForwardFootsteps; // List of which image frames should play a sound effect
 previousWalkFrame = 0; // Stores the image_index for the previous walk frame (used to know when a frame has been changed)
 
+RunningSoundEffect = selectedCharacter.NonmoveSoundData.RunningSoundEffect;
+RunForwardFootsteps = selectedCharacter.NonmoveSoundData.RunForwardFootsteps;
+
 // Running variables
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not

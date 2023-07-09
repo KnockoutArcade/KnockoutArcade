@@ -6451,8 +6451,11 @@
       4
     ],
     "WalkBackwardFootsteps": [],
-    "RunningSoundEffect": "",
-    "RunForwardFootsteps": [],
+    "RunningSoundEffect": "sfx_Footstep_H",
+    "RunForwardFootsteps": [
+      1,
+      5
+    ],
     "RunBackwardFootsteps": [],
     "Version": "Ver1.1.4",
     "UID": "67e05b9d-7412-4ff4-b6f0-15e2affa6618",
@@ -6461,6 +6464,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T13:15:16.6334075-07:00",
+  "LastModified": "2023-07-09T13:20:09.1568045-07:00",
   "LastModifiedBy": "creep"
 }

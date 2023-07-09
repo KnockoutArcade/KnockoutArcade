@@ -851,6 +851,17 @@ switch state
 			state = eState.HURT;
 		}
 		
+		// Handle Running Sound Effects
+		for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
+		{
+			if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+			{
+				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+			}
+		}
+		
+		previousWalkFrame = floor(image_index);
+		
 		PressAttackButton(attack);
 		
 		HandleWalkingOffPlatforms(false);
