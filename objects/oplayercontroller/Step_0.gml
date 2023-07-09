@@ -898,6 +898,8 @@ switch state
 		
 		if (animTimer > 4)
 		 {
+			audio_play_sound(sfx_Jump, 1, false);
+			
 			if (jumpAttackBuffer != 0)
 			{
 				state = jumpAttackBuffer;
@@ -2148,6 +2150,8 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 			inAttackState = false;
 			canTurnAround = true;
 			isThrowable = true;
+			
+			audio_play_sound(sfx_Landing, 1, false);
 		}
 		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
 		{
