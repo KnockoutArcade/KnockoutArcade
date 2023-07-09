@@ -2138,27 +2138,30 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	
 	isJumpingForward = false;
 	vsp = 0;
-	if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+	if (hitstop < 1)
 	{
-		state = eState.IDLE;
-		grounded = true;
-		frameAdvantage = true;
-		inAttackState = false;
-		canTurnAround = true;
-		isThrowable = true;
-	}
-	if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
-	{
-		grounded = true;
-		isThrowable = true;
-	}
-	if (state == eState.LAUNCHED)
-	{
-		state = eState.KNOCKED_DOWN;
-		sprite_index = CharacterSprites.knockdown_Sprite;
-		image_index = 0;
-		hsp = 0;
-		image_speed = 1;
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+		{
+			state = eState.IDLE;
+			grounded = true;
+			frameAdvantage = true;
+			inAttackState = false;
+			canTurnAround = true;
+			isThrowable = true;
+		}
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
+		{
+			grounded = true;
+			isThrowable = true;
+		}
+		if (state == eState.LAUNCHED)
+		{
+			state = eState.KNOCKED_DOWN;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 0;
+			hsp = 0;
+			image_speed = 1;
+		}
 	}
 }
 x = actualXPos; // Restore the player's actual x position
