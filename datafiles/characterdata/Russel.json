@@ -1289,7 +1289,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -1306,8 +1306,17 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 2,
+          "Version": "Ver1.1.4",
+          "UID": "e5cf9e5b-3f9e-4286-b731-7fe3616a4e10",
+          "LastModified": "2023-07-09T12:37:57.25534-07:00",
+          "LastModifiedBy": "creep"
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2527,8 +2536,89 @@
         "FallScale": 0.5
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 10,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 10,
+          "Version": "Ver1.1.4",
+          "UID": "ae4ee6db-9302-436b-97f2-d1b2bc9a0539",
+          "LastModified": "2023-07-09T12:48:43.5557526-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 12,
+          "Version": "Ver1.1.4",
+          "UID": "afc8bd1b-18c4-49d7-a838-b86e3b2e58d9",
+          "LastModified": "2023-07-09T12:51:36.196228-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 14,
+          "Version": "Ver1.1.4",
+          "UID": "0ed501da-93c4-4c4f-b39e-cb5f4bf06686",
+          "LastModified": "2023-07-09T12:51:36.446919-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 16,
+          "Version": "Ver1.1.4",
+          "UID": "407d553e-b752-4b7b-95f2-40d8c4ca7d82",
+          "LastModified": "2023-07-09T12:51:36.6303869-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 18,
+          "Version": "Ver1.1.4",
+          "UID": "c32323e7-1184-4832-b5de-1b3f6d3a512d",
+          "LastModified": "2023-07-09T12:51:36.897568-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 20,
+          "Version": "Ver1.1.4",
+          "UID": "d7ef65b3-7902-4e12-be66-8c050da33fc8",
+          "LastModified": "2023-07-09T12:51:37.1139197-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 22,
+          "Version": "Ver1.1.4",
+          "UID": "fcbeb73d-a4fc-48e3-8595-0bd3429ec90d",
+          "LastModified": "2023-07-09T12:51:37.3140729-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 24,
+          "Version": "Ver1.1.4",
+          "UID": "6df23ce5-660a-40d5-bc5c-b65a44b2af7e",
+          "LastModified": "2023-07-09T12:51:37.4981347-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 26,
+          "Version": "Ver1.1.4",
+          "UID": "8002af88-c3ca-49d1-8af9-270898ae7734",
+          "LastModified": "2023-07-09T12:51:37.8150442-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 30,
+          "Version": "Ver1.1.4",
+          "UID": "aa9356aa-6335-4564-a2ad-9e73f38b79f1",
+          "LastModified": "2023-07-09T12:51:40.3354758-07:00",
+          "LastModifiedBy": "creep"
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -6368,6 +6458,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T12:27:03.886505-07:00",
+  "LastModified": "2023-07-09T12:52:31.2201706-07:00",
   "LastModifiedBy": "creep"
 }
