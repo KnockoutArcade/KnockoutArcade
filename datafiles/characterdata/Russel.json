@@ -1404,7 +1404,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -1617,7 +1617,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -1982,7 +1982,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         },
         {
           "Start": 26,
@@ -2013,7 +2013,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -2358,7 +2358,7 @@
           "MeterGain": 1.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         },
         {
           "Start": 31,
@@ -2389,7 +2389,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -2601,7 +2601,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -2748,7 +2748,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -2903,7 +2903,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -3084,7 +3084,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -3249,7 +3249,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -3420,7 +3420,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         },
         {
           "Start": 9,
@@ -3451,7 +3451,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -3644,7 +3644,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -3791,7 +3791,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -3946,7 +3946,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -4101,7 +4101,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4280,7 +4280,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4786,7 +4786,7 @@
           "MeterGain": 18.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4971,7 +4971,7 @@
           "MeterGain": 7.999993,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -5274,7 +5274,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -5488,7 +5488,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -5715,7 +5715,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -6368,6 +6368,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T12:14:50.8391033-07:00",
+  "LastModified": "2023-07-09T12:27:03.886505-07:00",
   "LastModifiedBy": "creep"
 }

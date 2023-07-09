@@ -72,6 +72,12 @@ function ProcessHit( attackProperty, collision_list)
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
 	
 		
+		// Play sound effect
+		if (attackProperty.HitSound != "")
+		{
+			audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
+		}
+		
 		//Draw hit effect
 		var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
 		

@@ -334,9 +334,6 @@ if (!isProjectile)
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
-					
-					// Play sound effect
-					audio_play_sound(sfx_light_hit2, 0, false);
 				}
 			}
 		}
