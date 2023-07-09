@@ -223,6 +223,7 @@
     {"id":{"name":"sMainMenuIcons","path":"sprites/sMainMenuIcons/sMainMenuIcons.yy",},"order":1,},
     {"id":{"name":"sBeverly_SideSpecial3Overhead_MOCKUP","path":"sprites/sBeverly_SideSpecial3Overhead_MOCKUP/sBeverly_SideSpecial3Overhead_MOCKUP.yy",},"order":6,},
     {"id":{"name":"sBeverly_SideSpecial3Launch_MOCKUP","path":"sprites/sBeverly_SideSpecial3Launch_MOCKUP/sBeverly_SideSpecial3Launch_MOCKUP.yy",},"order":4,},
+    {"id":{"name":"sfx_StartFowardRun","path":"sounds/sfx_StartFowardRun/sfx_StartFowardRun.yy",},"order":13,},
     {"id":{"name":"oRemapControls","path":"objects/oRemapControls/oRemapControls.yy",},"order":1,},
     {"id":{"name":"sRushCancel","path":"sprites/sRushCancel/sRushCancel.yy",},"order":39,},
     {"id":{"name":"sGarbageCan","path":"sprites/sGarbageCan/sGarbageCan.yy",},"order":1,},

@@ -363,6 +363,7 @@ if (state == eState.IDLE)
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
@@ -439,6 +440,8 @@ if (state == eState.CROUCHING)
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
+		
+		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
@@ -732,6 +735,8 @@ switch state
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
+			
+			audio_play_sound(initialDashSFX, 0, false);
 		}
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
@@ -892,6 +897,17 @@ switch state
 		{
 			hsp = backdashSpeed * -image_xscale;
 		}
+		
+		// Handle Running Sound Effects
+		for (var i = 0; i < array_length(RunBackwardFootsteps); i++;)
+		{
+			if (floor(image_index) == (RunBackwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+			{
+				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+			}
+		}
+		
+		previousWalkFrame = floor(image_index);
 		
 		// Handle Ending
 		if (animTimer >= backdashDuration)
