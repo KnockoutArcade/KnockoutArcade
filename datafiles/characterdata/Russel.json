@@ -6445,8 +6445,11 @@
     "LastModifiedBy": "creep"
   },
   "NonmoveSoundData": {
-    "WalkingSoundEffect": "",
-    "WalkForwardFootsteps": [],
+    "WalkingSoundEffect": "sfx_Footstep_H",
+    "WalkForwardFootsteps": [
+      1,
+      4
+    ],
     "WalkBackwardFootsteps": [],
     "RunningSoundEffect": "",
     "RunForwardFootsteps": [],
@@ -6458,6 +6461,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T12:52:31.2201706-07:00",
+  "LastModified": "2023-07-09T13:15:16.6334075-07:00",
   "LastModifiedBy": "creep"
 }

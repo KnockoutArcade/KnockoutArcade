@@ -11,6 +11,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	formedCharacter.SelectedPalette = formedCharacter.BasePalette;
 	formedCharacter.Name = selectedCharacter.Name;
 	formedCharacter.UniqueData = selectedCharacter.UniqueData;
+	formedCharacter.NonmoveSoundData = selectedCharacter.NonmoveSoundData;
 	
 	// add stats to the character
 	formedCharacter.HorizontalSpeed = selectedCharacter.HorizontalSpeed;

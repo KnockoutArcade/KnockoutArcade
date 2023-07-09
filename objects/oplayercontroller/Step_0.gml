@@ -711,6 +711,17 @@ switch state
 		{
 			sprite_index = CharacterSprites.walkForward_Sprite;
 			superMeter += meterBuildRate; // Walking forwards builds meter
+			
+			// Handle Walking Sound Effects
+			for (var i = 0; i < array_length(WalkForwardFootsteps); i++;)
+			{
+				if (floor(image_index) == (WalkForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+				{
+					audio_play_sound(asset_get_index(WalkingSoundEffect), 1, false);
+				}
+			}
+			
+			previousWalkFrame = floor(image_index);
 		}
 		else if (movedir == -image_xscale)
 		{
