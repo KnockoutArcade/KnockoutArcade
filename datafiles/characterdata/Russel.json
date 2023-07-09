@@ -24,7 +24,7 @@
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sRussel_Walk_Forward",
-    "WalkBackward": "sRussel_Walk_Forward",
+    "WalkBackward": "sRussel_Walk_Backward",
     "RunForward": "sRussel_Run_Forward",
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sRussel_Jumpsquat",
@@ -6450,7 +6450,10 @@
       1,
       4
     ],
-    "WalkBackwardFootsteps": [],
+    "WalkBackwardFootsteps": [
+      1,
+      4
+    ],
     "RunningSoundEffect": "sfx_Footstep_H",
     "RunForwardFootsteps": [
       1,
@@ -6467,6 +6470,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T13:30:27.729707-07:00",
+  "LastModified": "2023-07-09T13:41:50.3434759-07:00",
   "LastModifiedBy": "creep"
 }

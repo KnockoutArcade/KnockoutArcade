@@ -18,6 +18,7 @@ fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 // Movement SFX Variables
 WalkingSoundEffect = selectedCharacter.NonmoveSoundData.WalkingSoundEffect; // What sound effect to play when walking
 WalkForwardFootsteps = selectedCharacter.NonmoveSoundData.WalkForwardFootsteps; // List of which image frames should play a sound effect
+WalkBackwardFootsteps = selectedCharacter.NonmoveSoundData.WalkBackwardFootsteps;
 previousWalkFrame = 0; // Stores the image_index for the previous walk frame (used to know when a frame has been changed)
 
 RunningSoundEffect = selectedCharacter.NonmoveSoundData.RunningSoundEffect;
