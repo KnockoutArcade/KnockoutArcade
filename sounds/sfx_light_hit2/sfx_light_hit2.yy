@@ -8,8 +8,8 @@
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "audiogroup_soundeffect",
+    "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_light_hit2.wav",
   "duration": 1.195828,

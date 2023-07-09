@@ -8,8 +8,8 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "audiogroup_soundeffect",
+    "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_heavy_hit.wav",
   "duration": 1.088163,

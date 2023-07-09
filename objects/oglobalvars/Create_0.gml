@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+audio_group_load(audiogroup_soundeffect);
+audio_group_load(audiogroup_music);
+
 // Projectile Vars
 global.ProjectileBase_HitboxData = { // Seperating the name of the projectile from HitboxData to make it easier to read
 	// Projectiles have slightly different data than normal attacks. They don't need animation or movement data.
