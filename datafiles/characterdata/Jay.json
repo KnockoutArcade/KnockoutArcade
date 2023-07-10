@@ -4821,10 +4821,10 @@
           "NumpadInput": "236",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
-          "EndingFrame": 22,
+          "EndingFrame": 18,
           "EnhancementMove": 16,
           "TransitionImmediately": false,
-          "TransitionFrame": 23,
+          "TransitionFrame": 19,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         }

@@ -5296,45 +5296,57 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Crouching_Medium",
-      "Duration": 21,
-      "NumberOfFrames": 7,
+      "SpriteName": "sRussel_NSpecial_Enhanced",
+      "Duration": 27,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
-          "Length": 0,
+          "Length": 3,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 5,
           "ImageIndex": 2
         },
         {
-          "Length": 1,
+          "Length": 7,
           "ImageIndex": 3
         },
         {
-          "Length": 3,
+          "Length": 9,
           "ImageIndex": 4
         },
         {
-          "Length": 4,
+          "Length": 10,
           "ImageIndex": 5
         },
         {
-          "Length": 7,
+          "Length": 11,
           "ImageIndex": 6
         },
         {
-          "Length": 9,
+          "Length": 14,
           "ImageIndex": 7
         },
         {
-          "Length": 11,
+          "Length": 17,
           "ImageIndex": 8
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 9,
           "Lifetime": 3,
-          "AttackWidth": 24,
+          "AttackWidth": 35,
           "AttackHeight": 35,
           "WidthOffset": 3,
           "HeightOffset": 8,
@@ -5352,7 +5364,7 @@
           "LaunchKnockbackHorizontal": 0.1,
           "Pushback": 1.5,
           "ParticleXOffset": 20,
-          "ParticleYOffset": 10,
+          "ParticleYOffset": 30,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
@@ -5377,7 +5389,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
