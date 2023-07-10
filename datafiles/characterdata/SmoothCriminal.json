@@ -1263,7 +1263,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 1,
+          "Start": 2,
           "Lifetime": 3,
           "AttackWidth": 23,
           "AttackHeight": 13,

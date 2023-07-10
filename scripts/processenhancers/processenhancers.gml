@@ -23,6 +23,7 @@ function ProcessEnhancers(Special) {
 					{
 						case 1: // Enhanced Neutral
 						{
+							show_debug_message("Performing enhanced neutral special");
 							state = eState.ENHANCED_NEUTRAL_SPECIAL;
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
@@ -119,6 +120,7 @@ function ProcessEnhancers(Special) {
 						
 						case 16: // Enhanced Neutral 2
 						{
+							show_debug_message("Performing enhanced neutral special 2");
 							state = eState.ENHANCED_NEUTRAL_SPECIAL_2;
 							sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId;
 							CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);

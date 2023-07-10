@@ -5,6 +5,8 @@
 // a lot will be cut out since this isn't its own character
 if (host != noone && hostObject != noone)
 {
+	show_debug_message(state);
+	
 	if (!hurtboxSet)
 	{
 		var hostID = hostObject.id;
@@ -965,7 +967,6 @@ if (host != noone && hostObject != noone)
 		case eState.STANDING_LIGHT_ATTACK:
 		{
 			GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
-			//hostObject.state = state;
 
 			if (selectedCharacter.StandLight.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
@@ -977,7 +978,6 @@ if (host != noone && hostObject != noone)
 		case eState.STANDING_LIGHT_ATTACK_2:
 		{
 			GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
-			//hostObject.state = state;
 
 			if (selectedCharacter.StandLight2.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{
@@ -989,7 +989,6 @@ if (host != noone && hostObject != noone)
 		case eState.STANDING_LIGHT_ATTACK_3:
 		{
 			GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
-			//hostObject.state = state;
 
 			if (selectedCharacter.StandLight3.SpiritData.MaintainPosition && hostObject.spiritSummoned)
 			{

@@ -1911,7 +1911,7 @@
           "NumpadInput": "236",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
-          "EndingFrame": 24,
+          "EndingFrame": 23,
           "EnhancementMove": 1,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
@@ -2079,28 +2079,24 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_Nspecial_mockup_strip5",
-      "Duration": 25,
-      "NumberOfFrames": 5,
+      "SpriteName": "sJay_SideSpecial_mockup_strip5",
+      "Duration": 7,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 2,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 5,
+          "Length": 1,
           "ImageIndex": 2
         },
         {
-          "Length": 20,
+          "Length": 3,
           "ImageIndex": 3
         },
         {
-          "Length": 23,
+          "Length": 5,
           "ImageIndex": 4
         },
         {
-          "Length": 25,
+          "Length": 6,
           "ImageIndex": 5
         }
       ],
@@ -2340,7 +2336,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -2527,7 +2523,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -2680,7 +2676,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -2886,7 +2882,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -4660,10 +4656,10 @@
           "NumpadInput": "236",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
-          "EndingFrame": 24,
+          "EndingFrame": 22,
           "EnhancementMove": 16,
           "TransitionImmediately": false,
-          "TransitionFrame": 25,
+          "TransitionFrame": 23,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         }
