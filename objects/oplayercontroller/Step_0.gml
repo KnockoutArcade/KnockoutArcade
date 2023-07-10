@@ -363,6 +363,7 @@ if (state == eState.IDLE)
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
@@ -439,6 +440,8 @@ if (state == eState.CROUCHING)
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
+		
+		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
@@ -711,16 +714,40 @@ switch state
 		{
 			sprite_index = CharacterSprites.walkForward_Sprite;
 			superMeter += meterBuildRate; // Walking forwards builds meter
+			
+			// Handle Walking Sound Effects
+			for (var i = 0; i < array_length(WalkForwardFootsteps); i++;)
+			{
+				if (floor(image_index) == (WalkForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+				{
+					audio_play_sound(asset_get_index(WalkingSoundEffect), 1, false);
+				}
+			}
+			
+			previousWalkFrame = floor(image_index);
 		}
 		else if (movedir == -image_xscale)
 		{
 			sprite_index = CharacterSprites.walkBackward_Sprite;
+			
+			// Handle Walking Sound Effects
+			for (var i = 0; i < array_length(WalkBackwardFootsteps); i++;)
+			{
+				if (floor(image_index) == (WalkBackwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+				{
+					audio_play_sound(asset_get_index(WalkingSoundEffect), 1, false);
+				}
+			}
+			
+			previousWalkFrame = floor(image_index);
 		}
 		
 		// Handle Transition to Run
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
+			
+			audio_play_sound(initialDashSFX, 0, false);
 		}
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
@@ -840,6 +867,17 @@ switch state
 			state = eState.HURT;
 		}
 		
+		// Handle Running Sound Effects
+		for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
+		{
+			if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+			{
+				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+			}
+		}
+		
+		previousWalkFrame = floor(image_index);
+		
 		PressAttackButton(attack);
 		
 		HandleWalkingOffPlatforms(false);
@@ -871,6 +909,17 @@ switch state
 			hsp = backdashSpeed * -image_xscale;
 		}
 		
+		// Handle Running Sound Effects
+		for (var i = 0; i < array_length(RunBackwardFootsteps); i++;)
+		{
+			if (floor(image_index) == (RunBackwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+			{
+				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+			}
+		}
+		
+		previousWalkFrame = floor(image_index);
+		
 		// Handle Ending
 		if (animTimer >= backdashDuration)
 		{
@@ -898,6 +947,8 @@ switch state
 		
 		if (animTimer > 4)
 		 {
+			audio_play_sound(sfx_Jump, 1, false);
+			
 			if (jumpAttackBuffer != 0)
 			{
 				state = jumpAttackBuffer;
@@ -2138,27 +2189,32 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	
 	isJumpingForward = false;
 	vsp = 0;
-	if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+	if (hitstop < 1)
 	{
-		state = eState.IDLE;
-		grounded = true;
-		frameAdvantage = true;
-		inAttackState = false;
-		canTurnAround = true;
-		isThrowable = true;
-	}
-	if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
-	{
-		grounded = true;
-		isThrowable = true;
-	}
-	if (state == eState.LAUNCHED)
-	{
-		state = eState.KNOCKED_DOWN;
-		sprite_index = CharacterSprites.knockdown_Sprite;
-		image_index = 0;
-		hsp = 0;
-		image_speed = 1;
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1) 
+		{
+			state = eState.IDLE;
+			grounded = true;
+			frameAdvantage = true;
+			inAttackState = false;
+			canTurnAround = true;
+			isThrowable = true;
+			
+			audio_play_sound(sfx_Landing, 1, false);
+		}
+		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL) 
+		{
+			grounded = true;
+			isThrowable = true;
+		}
+		if (state == eState.LAUNCHED)
+		{
+			state = eState.KNOCKED_DOWN;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 0;
+			hsp = 0;
+			image_speed = 1;
+		}
 	}
 }
 x = actualXPos; // Restore the player's actual x position

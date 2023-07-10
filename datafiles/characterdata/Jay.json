@@ -1,6 +1,8 @@
 {
   "Name": "Jay",
   "MaxHitPoints": 90,
+  "RegenSpeed": 0.0,
+  "KORegenSpeed": 0.0,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
@@ -1058,7 +1060,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1081,7 +1084,8 @@
           "LaunchKnockbackVertical": 0.2,
           "LaunchKnockbackHorizontal": 0.1,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1129,7 +1133,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "c14a5529-c9ef-4e2e-806a-7f48a2c0aa9a",
@@ -1217,7 +1233,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1240,7 +1257,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1334,7 +1352,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "75601a84-ef21-4269-834d-fda92d4ce626",
@@ -1418,7 +1448,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1441,7 +1472,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1508,7 +1540,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "189e5d3a-d24c-4e85-8ab1-743575916594",
@@ -1576,7 +1620,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1599,7 +1644,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1647,7 +1693,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
@@ -1715,7 +1773,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1738,7 +1797,8 @@
           "LaunchKnockbackVertical": -1.5,
           "LaunchKnockbackHorizontal": 2.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1786,7 +1846,19 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "15155b21-0122-46a6-9170-41408971b163",
@@ -1854,7 +1926,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -1877,7 +1950,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -1925,7 +1999,19 @@
         "GravityScale": 1.0,
         "FallScale": 0.4
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
@@ -1989,7 +2075,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2012,7 +2099,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2060,7 +2148,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "303b54ea-442b-4669-9d47-ae3eac71217d",
@@ -2124,7 +2224,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2147,7 +2248,8 @@
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 0.1,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2195,7 +2297,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
@@ -2271,7 +2385,8 @@
           "HoldYOffset": 0,
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2294,7 +2409,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2364,7 +2480,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
@@ -2444,7 +2572,8 @@
           "HoldYOffset": 0,
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2467,7 +2596,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2537,7 +2667,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
@@ -2605,7 +2747,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.2999997,
           "ComboScaling": 1.8,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2628,7 +2771,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.8,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2676,7 +2820,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
@@ -2744,7 +2900,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 1.4999999,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2767,7 +2924,8 @@
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 0.5,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -2845,7 +3003,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
@@ -2921,7 +3091,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.500002,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "Start": 10,
@@ -2951,7 +3122,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.5,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -2974,7 +3146,8 @@
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 1.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "CounterHitLevel": 0,
@@ -2995,7 +3168,8 @@
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": -2.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3059,7 +3233,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
@@ -3123,7 +3309,8 @@
           "HoldYOffset": 0,
           "MeterGain": 4.2,
           "ComboScaling": 3.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3146,7 +3333,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 3.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3194,7 +3382,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
@@ -3262,7 +3462,8 @@
           "HoldYOffset": 0,
           "MeterGain": 6.4999995,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3285,7 +3486,8 @@
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 5.0,
           "ComboScaling": 1.4999999,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3333,7 +3535,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
@@ -3405,7 +3619,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 1.3999999,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3428,7 +3643,8 @@
           "LaunchKnockbackVertical": -4.499998,
           "LaunchKnockbackHorizontal": 0.70000255,
           "ComboScaling": 0.99999976,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3476,7 +3692,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
@@ -3528,7 +3756,8 @@
           "HoldYOffset": 0,
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3551,7 +3780,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3648,7 +3878,19 @@
         "GravityScale": 1.5,
         "FallScale": 10.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "df89eb6c-5314-4802-beb4-b2d0e0cd946d",
@@ -3760,7 +4002,8 @@
           "HoldYOffset": 0,
           "MeterGain": 1.0000001,
           "ComboScaling": 0.5,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "Start": 45,
@@ -3790,7 +4033,8 @@
           "HoldYOffset": 15,
           "MeterGain": 2.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -3813,7 +4057,8 @@
           "LaunchKnockbackVertical": -10.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.2,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         },
         {
           "CounterHitLevel": 3,
@@ -3834,7 +4079,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -3936,7 +4182,19 @@
         "GravityScale": 1.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -4032,7 +4290,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -4055,7 +4314,8 @@
           "LaunchKnockbackVertical": -4.0,
           "LaunchKnockbackHorizontal": 0.75,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -4125,7 +4385,19 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "6406db7f-a360-4eb0-8404-bec650d599f6",
@@ -4181,7 +4453,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "33e46444-1d88-4027-85ed-7d18f0326ff1",
@@ -4237,7 +4521,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "15836936-e561-4ef7-a32b-89b738ad93fd",
@@ -4293,7 +4589,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "35c693ad-4c37-44a0-b066-c9c0d48a7ca0",
@@ -4357,7 +4665,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -4380,7 +4689,8 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -4419,7 +4729,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "723c6e34-dd04-4061-a126-d6037500c92d",
@@ -4473,7 +4795,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "b94a3ffb-f1b1-40b3-afc9-2f0864a00999",
@@ -4527,7 +4861,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "042d57a1-6c74-4049-9cb7-21b4f0224321",
@@ -4581,7 +4927,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "694ea9a5-49d7-4dde-8e1c-12865d9e2760",
@@ -4635,7 +4993,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "bedd35f2-e6b4-45e7-bc23-bd9a81151a4f",
@@ -4689,7 +5059,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "08cbeaee-631d-4f23-b06c-c502ac0e3602",
@@ -4743,7 +5125,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "d8539935-c649-4944-99d7-bc081b4bd553",
@@ -4797,7 +5191,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "f5adf703-e7ea-411c-8cdd-ecb50127efa8",
@@ -4851,7 +5257,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "4e043336-638d-4950-9152-e38f51c7bd92",
@@ -4905,7 +5323,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "f9922eb8-fbd3-4492-b02f-4b5ced26eb3c",
@@ -4959,7 +5389,19 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     },
     {
       "UID": "ef30ab6c-33a1-4050-99ac-3c2e78ad935b",
@@ -5055,7 +5497,8 @@
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CounterData": [
@@ -5078,7 +5521,8 @@
           "LaunchKnockbackVertical": -4.0,
           "LaunchKnockbackHorizontal": 0.75,
           "ComboScaling": 2.0,
-          "CausesWallbounce": false
+          "CausesWallbounce": false,
+          "HitSound": ""
         }
       ],
       "CommandNormalData": {
@@ -5148,19 +5592,44 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": ""
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
     }
   ],
   "UniqueData": {
     "AdditionalMovesets": 1,
     "SpiritData": 1,
+    "Spirit": "None",
     "Version": "Ver1.1.2",
     "UID": "3936b267-34e8-408d-85ec-c844051a147e",
     "LastModified": "2023-06-21T13:01:18.4737136-07:00",
     "LastModifiedBy": "creep"
   },
-  "Version": "Ver1.1.2",
+  "NonmoveSoundData": {
+    "WalkingSoundEffect": "",
+    "WalkForwardFootsteps": [],
+    "WalkBackwardFootsteps": [],
+    "RunningSoundEffect": "",
+    "RunForwardFootsteps": [],
+    "RunBackwardFootsteps": [],
+    "Version": "Ver1.1.4",
+    "UID": "6f839104-c5a1-4b65-9fb2-c77477b4cd35",
+    "LastModified": "2023-07-09T12:01:54.6687367-07:00",
+    "LastModifiedBy": "creep"
+  },
+  "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-07T14:36:14.7303464-07:00",
+  "LastModified": "2023-07-09T12:08:48.3424122-07:00",
   "LastModifiedBy": "creep"
 }
