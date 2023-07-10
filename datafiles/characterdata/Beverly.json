@@ -5972,7 +5972,8 @@
   "UniqueData": {
     "AdditionalMovesets": 0,
     "SpiritData": 0,
-    "Spirit": "None"
+    "Spirit": "None",
+    "DoubleJump": false
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "sfx_Footstep_H",
@@ -5990,6 +5991,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-10T14:32:22.4984734-07:00",
+  "LastModified": "2023-07-10T14:41:34.0833646-07:00",
   "LastModifiedBy": "colstrau"
 }

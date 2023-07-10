@@ -1730,7 +1730,8 @@
   "UniqueData": {
     "AdditionalMovesets": 0,
     "SpiritData": 2,
-    "Spirit": "None"
+    "Spirit": "None",
+    "DoubleJump": false
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -1742,6 +1743,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-10T14:34:55.3916389-07:00",
+  "LastModified": "2023-07-10T14:42:09.5433018-07:00",
   "LastModifiedBy": "colstrau"
 }

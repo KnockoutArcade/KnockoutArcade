@@ -16,7 +16,7 @@
   "BackDashSpeed": 4.0,
   "BackDashStartup": 3.0,
   "FastFallSpeed": 0.35,
-  "JumpType": 1,
+  "JumpType": 0,
   "JumpHorizontalSpeed": 0.0,
   "CharacterSprites": {
     "Idle": "sJay_Idle",
@@ -6024,7 +6024,8 @@
   "UniqueData": {
     "AdditionalMovesets": 1,
     "SpiritData": 1,
-    "Spirit": "SmoothCriminal"
+    "Spirit": "SmoothCriminal",
+    "DoubleJump": true
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -6036,6 +6037,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-10T14:33:21.9743753-07:00",
+  "LastModified": "2023-07-10T14:41:51.5991104-07:00",
   "LastModifiedBy": "colstrau"
 }
