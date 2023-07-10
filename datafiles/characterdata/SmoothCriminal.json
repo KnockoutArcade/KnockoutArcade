@@ -272,7 +272,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
-        "MaintainPosition": false,
+        "MaintainPosition": true,
         "Vulnerable": false
       }
     },
@@ -441,7 +441,7 @@
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
-        "MaintainPosition": false,
+        "MaintainPosition": true,
         "Vulnerable": false
       }
     },
@@ -1243,40 +1243,32 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_crouchingLight_mockup_strip5",
-      "Duration": 10,
-      "NumberOfFrames": 5,
+      "SpriteName": "sJay_SC_CrouchingLight_MOCKUP_strip3",
+      "Duration": 12,
+      "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 4,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 6,
+          "Length": 9,
           "ImageIndex": 3
-        },
-        {
-          "Length": 8,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 10,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 2,
-          "Lifetime": 2,
-          "AttackWidth": 16,
-          "AttackHeight": 19,
-          "WidthOffset": 8,
-          "HeightOffset": 4,
+          "Start": 1,
+          "Lifetime": 3,
+          "AttackWidth": 23,
+          "AttackHeight": 13,
+          "WidthOffset": 6,
+          "HeightOffset": 0,
           "Group": 1,
           "Damage": 3,
           "AttackHitStop": 0,
@@ -1400,6 +1392,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-09T18:28:08.8204053-07:00",
-  "LastModifiedBy": "colstrau"
+  "LastModified": "2023-07-09T19:08:25.065632-07:00",
+  "LastModifiedBy": "cstra"
 }

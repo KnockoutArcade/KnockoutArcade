@@ -1960,7 +1960,7 @@
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
-        "ToggleState": false,
+        "ToggleState": true,
         "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
@@ -2059,8 +2059,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
-        "PerformInSpiritOff": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -2157,8 +2157,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
-        "PerformInSpiritOff": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -4333,7 +4333,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
@@ -4412,7 +4412,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "ReturnToPlayer": false,
+        "ReturnToPlayer": true,
         "MaintainPosition": false,
         "Vulnerable": false
       }
@@ -4614,7 +4614,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
@@ -4701,8 +4701,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
-        "PerformInSpiritOff": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -4771,7 +4771,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
@@ -4846,8 +4846,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
-        "PerformInSpiritOff": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -5657,7 +5657,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -5757,7 +5757,7 @@
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
-        "ToggleState": false,
+        "ToggleState": true,
         "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
@@ -5791,6 +5791,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-09T18:15:11.6391942-07:00",
-  "LastModifiedBy": "colstrau"
+  "LastModified": "2023-07-09T19:10:37.4416366-07:00",
+  "LastModifiedBy": "cstra"
 }
