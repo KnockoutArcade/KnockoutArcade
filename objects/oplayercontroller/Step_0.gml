@@ -492,7 +492,6 @@ else if (hitstop != 0)
 	state = eState.HITSTOP;
 }
 
-
 if (state == eState.HITSTOP)
 {
 	if (spiritObject != noone)
@@ -1308,6 +1307,8 @@ switch state
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
 		}
 		
+		//show_debug_message("In Enhanced Neutral Special 2");
+		
 		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 	}
 	break;
@@ -1356,7 +1357,66 @@ switch state
 		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
 	}
 	break;
-
+	
+	case eState.ENHANCED_NEUTRAL_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_SIDE_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_UP_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_DOWN_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+	}
+	break;
 
 	case eState.REKKA_LAUNCHER: 
 	{

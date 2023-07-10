@@ -5,8 +5,6 @@
 // a lot will be cut out since this isn't its own character
 if (host != noone && hostObject != noone)
 {
-	show_debug_message(state);
-	
 	if (!hurtboxSet)
 	{
 		var hostID = hostObject.id;
@@ -1141,8 +1139,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.NeutralSpecial);
 		}
 		break;
 
@@ -1162,8 +1158,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.SideSpecial);
 		}
 		break;
 
@@ -1183,8 +1177,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.UpSpecial);
 
 			if (animTimer < 28)
 			{
@@ -1213,8 +1205,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.DownSpecial);
 		}
 		break;
 
@@ -1234,8 +1224,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 		}
 		break;
 
@@ -1254,8 +1242,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
 		}
 		break;
 
@@ -1274,8 +1260,6 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
-
-			//ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
 		}
 		break;
 
@@ -1294,8 +1278,78 @@ if (host != noone && hostObject != noone)
 			{
 				nextToPlayer = false;
 			}
+		}
+		break;
+		
+		case eState.ENHANCED_NEUTRAL_SPECIAL_2:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale);
+			}
 
-			//ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+			if (selectedCharacter.EnhancedNeutralSpecial2.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.ENHANCED_SIDE_SPECIAL_2:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedSideSpecial2.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.ENHANCED_UP_SPECIAL_2:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedUpSpecial2.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
+		}
+		break;
+
+		case eState.ENHANCED_DOWN_SPECIAL_2:
+		{
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
+			}
+			else
+			{
+				JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale);
+			}
+
+			if (selectedCharacter.EnhancedDownSpecial2.SpiritData.MaintainPosition)
+			{
+				nextToPlayer = false;
+			}
 		}
 		break;
 
