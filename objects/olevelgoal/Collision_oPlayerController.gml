@@ -3,7 +3,6 @@
 
 room_goto(levelDestination);
 
-audio_stop_sound(testBGM);
 
 global.campaignMapLocationX = mapReturnX;
 global.campaignMapLocationY = mapReturnY;
