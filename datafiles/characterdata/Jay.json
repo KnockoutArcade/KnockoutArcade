@@ -1960,7 +1960,7 @@
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
-        "ToggleState": true,
+        "ToggleState": false,
         "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
@@ -2059,8 +2059,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
-        "PerformInSpiritOff": true,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -2157,8 +2157,8 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
-        "PerformInSpiritOff": true,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
         "ReturnToPlayer": false,
@@ -4412,7 +4412,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "ReturnToPlayer": true,
+        "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
       }
@@ -4701,7 +4701,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
+        "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -4846,7 +4846,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
+        "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -5657,7 +5657,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
+        "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -5757,7 +5757,7 @@
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
-        "ToggleState": true,
+        "ToggleState": false,
         "PerformAttack": false,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
@@ -5789,8 +5789,8 @@
     "LastModified": "2023-07-04T17:44:55.8016733-07:00",
     "LastModifiedBy": "colstrau"
   },
-  "Version": "Ver1.1.3",
+  "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-06T22:12:47.7875865-07:00",
-  "LastModifiedBy": "colstrau"
+  "LastModified": "2023-07-09T02:40:11.3397203-07:00",
+  "LastModifiedBy": "cstra"
 }
