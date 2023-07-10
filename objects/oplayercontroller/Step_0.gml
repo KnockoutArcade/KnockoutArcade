@@ -499,6 +499,8 @@ if (state == eState.HITSTOP)
 	{
 		spiritObject.hitstop = hitstop;
 		spiritObject.state = state;
+		spiritObject.blockstun = blockstun;
+		spiritObject.isCrouchBlocking = isCrouchBlocking;
 	}
 	
 	hitstunShuffleTimer++;
@@ -1867,13 +1869,7 @@ switch state
 		{
 			blockbuffer = true;
 		}
-		/*
-		if (playerID == 2)
-		{
-			prevState = eState.STANDING_LIGHT_ATTACK;
-			blockbuffer = true;
-		}
-		*/
+		
 		// Buffer attack out of block
 		switch attack 
 		{
@@ -1949,8 +1945,6 @@ switch state
 			knockbackVel = 0;
 		}
 		
-		
-		
 		if (!global.game_paused)
 		{
 			blockstun--;
@@ -1991,7 +1985,19 @@ switch state
 			blockbuffer = false;
 		}
 		
-		
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+			spiritObject.animTimer = 1;
+			spiritObject.canBlock = true;
+			spiritObject.cancelable = false;
+			spiritObject.grounded = true;
+			spiritObject.blockstun = blockstun;
+			spiritObject.isCrouchBlocking = isCrouchBlocking;
+			spiritObject.hsp = hsp;
+			spiritObject.knockbackVel = knockbackVel;
+			spiritObject.blockbuffer = blockbuffer;
+		}
 		
 	}
 	break;

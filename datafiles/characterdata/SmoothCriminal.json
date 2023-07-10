@@ -117,7 +117,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_NspecialEN_MOCKUP_strip4",
-      "Duration": 20,
+      "Duration": 25,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -286,7 +286,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_NspecialEN_MOCKUP_strip4",
-      "Duration": 20,
+      "Duration": 25,
       "NumberOfFrames": 4,
       "FrameData": [
         {

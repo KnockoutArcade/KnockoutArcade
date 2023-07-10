@@ -189,6 +189,12 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 			}
 		}
+		
+		// If the spirit is close to its host, set nextToPlayer to true
+		if (abs(x - hostObject.x) < 10)
+		{
+			nextToPlayer = true;
+		}
 
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
@@ -1809,9 +1815,6 @@ if (host != noone && hostObject != noone)
 
 		case eState.BLOCKING:
 		{
-			animTimer = 1;
-			canBlock = true;
-			cancelable = false;
 			if (isCrouchBlocking)
 			{
 				sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -1820,84 +1823,8 @@ if (host != noone && hostObject != noone)
 			{
 				sprite_index = CharacterSprites.standBlock_Sprite;
 			}
-			grounded = true;
 
-			if (attack > 0)
-			{
-				blockbuffer = true;
-			}
-			/*
-			if (playerID == 2)
-			{
-				prevState = eState.STANDING_LIGHT_ATTACK;
-				blockbuffer = true;
-			}
-			*/
-			// Buffer attack out of block
-			switch attack
-			{
-				case 1:
-				{
-					if (verticalMoveDir == -1)
-					{
-						prevState = eState.CROUCHING_LIGHT_ATTACK;
-					}
-					else
-					{
-						prevState = eState.STANDING_LIGHT_ATTACK;
-					}
-				}
-				break;
-
-				case 2:
-				{
-					if (verticalMoveDir == -1)
-					{
-						prevState = eState.CROUCHING_MEDIUM_ATTACK;
-					}
-					else
-					{
-						prevState = eState.STANDING_MEDIUM_ATTACK;
-					}
-				}
-				break;
-
-				case 3:
-				{
-					if (verticalMoveDir == -1)
-					{
-						prevState = eState.CROUCHING_HEAVY_ATTACK;
-					}
-					else
-					{
-						prevState = eState.STANDING_HEAVY_ATTACK;
-					}
-				}
-				break;
-
-				case 5:
-				{
-					if (verticalMoveDir == 0 && movedir == 0)
-					{
-						prevState = eState.NEUTRAL_SPECIAL;
-					}
-					else if (movedir != 0)
-					{
-						prevState = eState.SIDE_SPECIAL;
-					}
-					else if (verticalMoveDir == 1)
-					{
-						prevState = eState.UP_SPECIAL;
-					}
-					else if (verticalMoveDir == -1)
-					{
-						prevState = eState.DOWN_SPECIAL;
-					}
-				}
-				break;
-			}
-
-			if (knockbackVel > 0)
+			if (hostObject.knockbackVel > 0)
 			{
 				hsp = knockbackVel * -image_xscale;
 				knockbackVel--;
@@ -1907,8 +1834,6 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 				knockbackVel = 0;
 			}
-
-
 
 			if (!global.game_paused)
 			{
