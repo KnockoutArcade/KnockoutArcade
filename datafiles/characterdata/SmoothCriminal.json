@@ -640,7 +640,7 @@
           "HeightOffset": 16,
           "Group": 1,
           "Damage": 6,
-          "AttackHitStop": 20,
+          "AttackHitStop": 4,
           "AttackHitStun": 30,
           "AttackType": 1,
           "BlockStun": 0.5,
