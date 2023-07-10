@@ -1,15 +1,15 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 0.0,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
   "type": 1,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_default",
-    "path": "audiogroups/audiogroup_default",
+    "name": "audiogroup_music",
+    "path": "audiogroups/audiogroup_music",
   },
   "soundFile": "testbgm.wav",
   "duration": 98.66159,

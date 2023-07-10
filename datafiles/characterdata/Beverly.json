@@ -5944,19 +5944,25 @@
     "LastModifiedBy": "colstrau"
   },
   "NonmoveSoundData": {
-    "WalkingSoundEffect": "",
-    "WalkForwardFootsteps": [],
-    "WalkBackwardFootsteps": [],
-    "RunningSoundEffect": "",
+    "WalkingSoundEffect": "sfx_Footstep_H",
+    "WalkForwardFootsteps": [
+      3,
+      7
+    ],
+    "WalkBackwardFootsteps": [
+      3,
+      7
+    ],
+    "RunningSoundEffect": "sfx_Footstep_H",
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.3",
-    "UID": "7525edea-6512-4485-a226-18b47f0c58ea",
-    "LastModified": "2023-07-04T17:44:55.8012094-07:00",
-    "LastModifiedBy": "colstrau"
+    "Version": "Ver1.1.4",
+    "UID": "388d04db-e4c6-44c2-bcee-af0580cf6fef",
+    "LastModified": "2023-07-09T12:01:54.6685982-07:00",
+    "LastModifiedBy": "creep"
   },
   "Version": "Ver1.1.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-09T19:11:50.5808512-07:00",
-  "LastModifiedBy": "cstra"
+  "LastModified": "2023-07-09T13:36:49.4114701-07:00",
+  "LastModifiedBy": "creep"
 }

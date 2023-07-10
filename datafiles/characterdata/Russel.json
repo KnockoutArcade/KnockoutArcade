@@ -24,7 +24,7 @@
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sRussel_Walk_Forward",
-    "WalkBackward": "sRussel_Walk_Forward",
+    "WalkBackward": "sRussel_Walk_Backward",
     "RunForward": "sRussel_Run_Forward",
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sRussel_Jumpsquat",
@@ -1289,7 +1289,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -1306,8 +1306,17 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 2,
+          "Version": "Ver1.1.4",
+          "UID": "e5cf9e5b-3f9e-4286-b731-7fe3616a4e10",
+          "LastModified": "2023-07-09T12:37:57.25534-07:00",
+          "LastModifiedBy": "creep"
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -1404,7 +1413,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -1617,7 +1626,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -1982,7 +1991,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         },
         {
           "Start": 26,
@@ -2013,7 +2022,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -2358,7 +2367,7 @@
           "MeterGain": 1.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         },
         {
           "Start": 31,
@@ -2389,7 +2398,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -2527,8 +2536,89 @@
         "FallScale": 0.5
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 10,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 10,
+          "Version": "Ver1.1.4",
+          "UID": "ae4ee6db-9302-436b-97f2-d1b2bc9a0539",
+          "LastModified": "2023-07-09T12:48:43.5557526-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 12,
+          "Version": "Ver1.1.4",
+          "UID": "afc8bd1b-18c4-49d7-a838-b86e3b2e58d9",
+          "LastModified": "2023-07-09T12:51:36.196228-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 14,
+          "Version": "Ver1.1.4",
+          "UID": "0ed501da-93c4-4c4f-b39e-cb5f4bf06686",
+          "LastModified": "2023-07-09T12:51:36.446919-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 16,
+          "Version": "Ver1.1.4",
+          "UID": "407d553e-b752-4b7b-95f2-40d8c4ca7d82",
+          "LastModified": "2023-07-09T12:51:36.6303869-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 18,
+          "Version": "Ver1.1.4",
+          "UID": "c32323e7-1184-4832-b5de-1b3f6d3a512d",
+          "LastModified": "2023-07-09T12:51:36.897568-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 20,
+          "Version": "Ver1.1.4",
+          "UID": "d7ef65b3-7902-4e12-be66-8c050da33fc8",
+          "LastModified": "2023-07-09T12:51:37.1139197-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 22,
+          "Version": "Ver1.1.4",
+          "UID": "fcbeb73d-a4fc-48e3-8595-0bd3429ec90d",
+          "LastModified": "2023-07-09T12:51:37.3140729-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 24,
+          "Version": "Ver1.1.4",
+          "UID": "6df23ce5-660a-40d5-bc5c-b65a44b2af7e",
+          "LastModified": "2023-07-09T12:51:37.4981347-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 26,
+          "Version": "Ver1.1.4",
+          "UID": "8002af88-c3ca-49d1-8af9-270898ae7734",
+          "LastModified": "2023-07-09T12:51:37.8150442-07:00",
+          "LastModifiedBy": "creep"
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 30,
+          "Version": "Ver1.1.4",
+          "UID": "aa9356aa-6335-4564-a2ad-9e73f38b79f1",
+          "LastModified": "2023-07-09T12:51:40.3354758-07:00",
+          "LastModifiedBy": "creep"
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2601,7 +2691,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -2748,7 +2838,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -2903,7 +2993,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -3084,7 +3174,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -3249,7 +3339,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -3420,7 +3510,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         },
         {
           "Start": 9,
@@ -3451,7 +3541,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -3644,7 +3734,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -3791,7 +3881,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -3946,7 +4036,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -4101,7 +4191,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4280,7 +4370,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4786,7 +4876,7 @@
           "MeterGain": 18.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -4819,8 +4909,20 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
+      "NumberOfEnhancements": 1,
+      "SpecialData": [
+        {
+          "NumpadInput": "623",
+          "ButtonPressRequired": false,
+          "StartingFrame": 1,
+          "EndingFrame": 27,
+          "EnhancementMove": 8,
+          "TransitionImmediately": false,
+          "TransitionFrame": 24,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -4967,7 +5069,7 @@
           "MeterGain": 7.999993,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -5256,9 +5358,9 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 4.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -5463,7 +5565,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -5690,7 +5792,7 @@
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -6306,19 +6408,31 @@
     "LastModifiedBy": "colstrau"
   },
   "NonmoveSoundData": {
-    "WalkingSoundEffect": "",
-    "WalkForwardFootsteps": [],
-    "WalkBackwardFootsteps": [],
-    "RunningSoundEffect": "",
-    "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.3",
-    "UID": "c829c575-4841-4577-965d-ea1e60d5ef40",
-    "LastModified": "2023-07-04T17:44:55.8017622-07:00",
-    "LastModifiedBy": "colstrau"
+    "WalkingSoundEffect": "sfx_Footstep_H",
+    "WalkForwardFootsteps": [
+      1,
+      4
+    ],
+    "WalkBackwardFootsteps": [
+      1,
+      4
+    ],
+    "RunningSoundEffect": "sfx_Footstep_H",
+    "RunForwardFootsteps": [
+      1,
+      5
+    ],
+    "RunBackwardFootsteps": [
+      5,
+      6
+    ],
+    "Version": "Ver1.1.4",
+    "UID": "67e05b9d-7412-4ff4-b6f0-15e2affa6618",
+    "LastModified": "2023-07-09T12:01:54.6688114-07:00",
+    "LastModifiedBy": "creep"
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-09T19:12:00.6355472-07:00",
-  "LastModifiedBy": "cstra"
+  "LastModified": "2023-07-09T13:41:50.3434759-07:00",
+  "LastModifiedBy": "creep"
 }

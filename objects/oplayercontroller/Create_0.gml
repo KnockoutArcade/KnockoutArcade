@@ -15,6 +15,17 @@ traction = selectedCharacter.Traction; // How much this character slows down eac
 jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls
 
+// Movement SFX Variables
+WalkingSoundEffect = selectedCharacter.NonmoveSoundData.WalkingSoundEffect; // What sound effect to play when walking
+WalkForwardFootsteps = selectedCharacter.NonmoveSoundData.WalkForwardFootsteps; // List of which image frames should play a sound effect
+WalkBackwardFootsteps = selectedCharacter.NonmoveSoundData.WalkBackwardFootsteps;
+previousWalkFrame = 0; // Stores the image_index for the previous walk frame (used to know when a frame has been changed)
+
+RunningSoundEffect = selectedCharacter.NonmoveSoundData.RunningSoundEffect;
+RunForwardFootsteps = selectedCharacter.NonmoveSoundData.RunForwardFootsteps;
+RunBackwardFootsteps = selectedCharacter.NonmoveSoundData.RunBackwardFootsteps;
+initialDashSFX = sfx_Jump;
+
 // Running variables
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not
