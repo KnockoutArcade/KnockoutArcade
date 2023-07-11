@@ -24,15 +24,12 @@ if (P1menuDown == -1 && menuCooldown < 1)
 	menuCooldown = menuCooldownBuffer;
 }
 
-if (P1menuRight && menuCooldown < 1 && image_index = 0)
+if (P1menuRight && image_index = 0)
 {
 	if (musicVolume < 1)
 	{
 		musicVolume += 0.1;
 	}
-	
-	audio_group_set_gain(audiogroup_music, musicVolume, 0);
-	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 0)
@@ -41,9 +38,6 @@ if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 0)
 	{
 		musicVolume -= 0.1;
 	}
-	
-	audio_group_set_gain(audiogroup_music, musicVolume, 0);
-	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuRight && menuCooldown < 1 && image_index = 1)
@@ -52,9 +46,6 @@ if (P1menuRight && menuCooldown < 1 && image_index = 1)
 	{
 		sfxVolume += 0.1;
 	}
-	
-	audio_group_set_gain(audiogroup_soundeffect, sfxVolume, 0);
-	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
@@ -63,7 +54,11 @@ if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
 	{
 		sfxVolume -= 0.1;
 	}
-	
+}
+
+if (menuCooldown < 1)
+{
+	audio_group_set_gain(audiogroup_music, musicVolume, 0);
 	audio_group_set_gain(audiogroup_soundeffect, sfxVolume, 0);
 	menuCooldown = menuCooldownBuffer;
 }

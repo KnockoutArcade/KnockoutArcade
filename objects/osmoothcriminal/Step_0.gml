@@ -298,7 +298,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -582,7 +581,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -678,7 +676,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -768,7 +765,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -825,7 +821,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -911,7 +906,6 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -2249,6 +2243,10 @@ if (host != noone && hostObject != noone)
 			spiritOwner = noone;
 		}
 		hostObject.spiritBroken = true;
+		hostObject.hitstop = 60;
+		hostObject.state = eState.LAUNCHED;
+		hostObject.vsp = -4; // Launches the player up
+		hostObject.hsp = 0;
 		instance_create_layer(x, y, "Instances", oSpiritFire);
 		instance_destroy(hurtbox);
 		instance_destroy();

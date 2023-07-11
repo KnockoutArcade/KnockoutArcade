@@ -25,21 +25,23 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	{
 		if (!spiritSummoned)
 		{
-			var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
-			spiritFire.depth = depth + 1;
 			SummonSpirit(spirit);
 			spiritObject.image_xscale = image_xscale;
-			if (moveToDo.SpiritData.SummonSpirit)
+			spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
+			spiritObject.y += moveToDo.SpiritData.StartYOffset;
+			var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
+			spiritFire.depth = depth + 1;
+		}
+		if (moveToDo.SpiritData.SummonSpirit)
+		{
+			spiritState = true;
+			if (selectedCharacter.UniqueData.DoubleJump)
 			{
-				spiritState = true;
-				if (selectedCharacter.UniqueData.DoubleJump)
-				{
-					canDoubleJump = true;
-				}
-				// Temporary code to change Jay's moveset when summoning Smooth Criminal
-				currentMovesetID = 2;
-				OverwriteMoveset();
+				canDoubleJump = true;
 			}
+			// Temporary code to change Jay's moveset when summoning Smooth Criminal
+			currentMovesetID = 2;
+			OverwriteMoveset();
 		}
 		spiritObject.state = state;
 	}
