@@ -25,11 +25,12 @@ function ProcessHit( attackProperty, collision_list)
 		
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
+		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 		{
 			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		
 		// Record Combo Damage
 		owner.comboDamage += scaledDamage;
@@ -43,12 +44,23 @@ function ProcessHit( attackProperty, collision_list)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			}
 		}
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.grounded = false;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.grounded = false;
+			}
 		
 			// This fixes and issue where Destructible Objects would slide once they hit the ground.
 			if (collision_list.owner.isDestructibleObject)
@@ -59,6 +71,10 @@ function ProcessHit( attackProperty, collision_list)
 		else 
 		{
 			collision_list.owner.vsp = 0;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp = 0;
+			}
 		}
 	
 		if (owner.grounded)
@@ -119,11 +135,12 @@ function ProcessHit( attackProperty, collision_list)
 				
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
+		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 		{
 			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 					
 		owner.playerOwner.comboDamage += scaledDamage;
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
@@ -136,12 +153,23 @@ function ProcessHit( attackProperty, collision_list)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			}
 		}
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
 			collision_list.owner.grounded = false;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.grounded = false;
+			}
 		
 			// This fixes and issue where Destructible Objects would slide once they hit the ground.
 			if (collision_list.owner.isDestructibleObject)
@@ -152,6 +180,10 @@ function ProcessHit( attackProperty, collision_list)
 		else 
 		{
 			collision_list.owner.vsp = 0;
+			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			{
+				collision_list.owner.spiritObject.vsp = 0;
+			}
 		}
 
 		ds_list_add(hasHit, collision_list.owner.id);
