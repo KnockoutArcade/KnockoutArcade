@@ -26,18 +26,64 @@ function ProcessHit( attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if ((collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) || collision_list.owner.pendingToggle) 
 		{
-			if (!collision_list.owner.spiritObject.vulnerable)
+			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
+				if (!collision_list.owner.spiritState)
+				{
+					with (collision_list.owner)
+					{
+						SummonSpirit(spirit);
+						spiritObject.image_xscale = image_xscale;
+						var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
+						spiritFire.depth = depth + 1;
+						spiritState = true;
+						pendingToggle = false;
+						if (selectedCharacter.UniqueData.DoubleJump)
+						{
+							canDoubleJump = true;
+						}
+						// Temporary code
+						currentMovesetID = 2;
+						OverwriteMoveset();
+					}
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+				}
+				else
+				{
+					with (collision_list.owner)
+					{
+						instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
+						instance_destroy(spiritObject.hurtbox);
+						instance_destroy(spiritObject);
+						spiritObject = noone;
+						spiritSummoned = false;
+						spiritState = false;
+						pendingToggle = false;
+						if ((selectedCharacter.JumpType & 1) != 1)
+						{
+							canDoubleJump = false;
+						}
+						// Temporary code
+						currentMovesetID = 1;
+						OverwriteMoveset();
+					}
+				}
 			}
 			else
 			{
-				// Instantly kills the spirit if its current move makes it vulnerable
-				collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				if (!collision_list.owner.spiritObject.vulnerable)
+				{
+					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+				}
+				else
+				{
+					// Instantly kills the spirit if its current move makes it vulnerable
+					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				}
 			}
-			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
 		
 		// Record Combo Damage
@@ -144,18 +190,64 @@ function ProcessHit( attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if ((collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) || collision_list.owner.pendingToggle) 
 		{
-			if (!collision_list.owner.spiritObject.vulnerable)
+			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
+				if (!collision_list.owner.spiritState)
+				{
+					with (collision_list.owner)
+					{
+						SummonSpirit(spirit);
+						spiritObject.image_xscale = image_xscale;
+						var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
+						spiritFire.depth = depth + 1;
+						spiritState = true;
+						pendingToggle = false;
+						if (selectedCharacter.UniqueData.DoubleJump)
+						{
+							canDoubleJump = true;
+						}
+						// Temporary code
+						currentMovesetID = 2;
+						OverwriteMoveset();
+					}
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+				}
+				else
+				{
+					with (collision_list.owner)
+					{
+						instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
+						instance_destroy(spiritObject.hurtbox);
+						instance_destroy(spiritObject);
+						spiritObject = noone;
+						spiritSummoned = false;
+						spiritState = false;
+						pendingToggle = false;
+						if ((selectedCharacter.JumpType & 1) != 1)
+						{
+							canDoubleJump = false;
+						}
+						// Temporary code
+						currentMovesetID = 1;
+						OverwriteMoveset();
+					}
+				}
 			}
 			else
 			{
-				// Instantly kills the spirit if its current move makes it vulnerable
-				collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				if (!collision_list.owner.spiritObject.vulnerable)
+				{
+					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+				}
+				else
+				{
+					// Instantly kills the spirit if its current move makes it vulnerable
+					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				}
 			}
-			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
 					
 		owner.playerOwner.comboDamage += scaledDamage;

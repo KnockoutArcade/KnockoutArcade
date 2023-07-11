@@ -2190,7 +2190,7 @@ else
 }
 
 
-
+// Handle player and spirit health
 if (hp < 0)
 {
 	hp = 0;
@@ -2206,13 +2206,16 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && !spiritBroken && spiritCurrentHealth < spiritMaxHealth)
+	if (!spiritState && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0)
 	{
-		spiritCurrentHealth += spiritRegenSpeed;
-	}
-	if (!spiritState && spiritBroken && spiritCurrentHealth < spiritMaxHealth)
-	{
-		spiritCurrentHealth += spiritKORegenSpeed;
+		if (!spiritBroken)
+		{
+			spiritCurrentHealth += spiritRegenSpeed;
+		}
+		else
+		{
+			spiritCurrentHealth += spiritKORegenSpeed;
+		}
 	}
 	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth)
 	{
@@ -2229,6 +2232,10 @@ if (superMeter < 0)
 	superMeter = 0;
 }
 
+if (spirit != noone && playerID == 1)
+{
+	show_debug_message(pendingToggle);
+}
 
 if (target != noone)
 {

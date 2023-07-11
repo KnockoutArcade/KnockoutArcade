@@ -22,6 +22,13 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		PerformAttack(moveToDo, false);
 	}
 	
+	// Activate pending summon
+	// The purpose of this is to actiate/deactivate spirit if a toggle move is performed but it's interrupted before it ends
+	if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+	{
+		pendingToggle = true;
+	}
+	
 	// If this move temporarily summons the spirit to attack in Spirit OFF
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
@@ -46,6 +53,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			OverwriteMoveset();
 		}
 		spiritObject.state = state;
+		pendingToggle = false;
 	}
 	
 	if (animTimer > moveToDo.Duration) 
@@ -79,6 +87,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 					spiritObject.image_xscale = image_xscale;
 				}
 				spiritState = true;
+				pendingToggle = false;
 				if (selectedCharacter.UniqueData.DoubleJump)
 				{
 					canDoubleJump = true;
@@ -95,6 +104,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 					spiritSummoned = false;
 				}
 				spiritState = false;
+				pendingToggle = false;
 				if ((selectedCharacter.JumpType & 1) != 1)
 				{
 					canDoubleJump = false;
