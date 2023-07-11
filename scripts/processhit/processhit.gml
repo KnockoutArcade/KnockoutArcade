@@ -25,6 +25,10 @@ function ProcessHit( attackProperty, collision_list)
 		
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+		}
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		
 		// Record Combo Damage
@@ -108,6 +112,10 @@ function ProcessHit( attackProperty, collision_list)
 				
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+		}
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 					
 		owner.playerOwner.comboDamage += scaledDamage;

@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-image_xscale = (attatchedTo.spiritCurrentHealth / attatchedTo.spiritMaxHealth) * MaxLength;
+if (attatchedTo.spirit != noone)
+{
+	image_xscale = (attatchedTo.spiritCurrentHealth / attatchedTo.spiritMaxHealth) * MaxLength;
+}
 
 if (ui_xOffset < 80)
 {

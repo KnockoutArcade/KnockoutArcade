@@ -19,7 +19,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	}
 	
 	// If this move temporarily summons the spirit to attack in Spirit OFF
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff)
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
 		if (!spiritSummoned)
 		{
@@ -53,7 +53,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
 		{
-			if (moveToDo.SwitchMoveset)
+			if (moveToDo.SwitchMoveset && !spiritBroken)
 			{
 				currentMovesetID = moveToDo.SwitchToMoveset;
 				OverwriteMoveset();
@@ -61,7 +61,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		}
 		
 		// If this move switched Spirit state
-		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState)
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
 		{
 			if (!spiritState)
 			{

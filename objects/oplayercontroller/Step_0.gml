@@ -2195,6 +2195,31 @@ if (hp < 0)
 {
 	hp = 0;
 }
+if (spirit != noone)
+{
+	if (spiritCurrentHealth < 0)
+	{
+		spiritCurrentHealth = 0;
+		spiritBroken = true;
+	}
+	if (spiritCurrentHealth > spiritMaxHealth)
+	{
+		spiritCurrentHealth = spiritMaxHealth;
+	}
+	if (!spiritState && !spiritBroken && spiritCurrentHealth < spiritMaxHealth)
+	{
+		spiritCurrentHealth += spiritRegenSpeed;
+	}
+	if (!spiritState && spiritBroken && spiritCurrentHealth < spiritMaxHealth)
+	{
+		spiritCurrentHealth += spiritKORegenSpeed;
+	}
+	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth)
+	{
+		spiritCurrentHealth = spiritMaxHealth;
+		spiritBroken = false;
+	}
+}
 if (superMeter > 100)
 {
 	superMeter = 100;

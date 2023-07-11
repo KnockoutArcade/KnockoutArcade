@@ -1797,11 +1797,11 @@ if (host != noone && hostObject != noone)
 				hostObject.spiritObject = noone;
 				hostObject.spiritSummoned = false;
 				hostObject.spiritState = false;
-				hostObject.currentMovesetID = 1;
 				if ((host.JumpType & 1) != 1)
 				{
 					hostObject.canDoubleJump = false;
 				}
+				hostObject.currentMovesetID = 1;
 				with(hostObject)
 				{
 					OverwriteMoveset();
@@ -2226,5 +2226,30 @@ if (host != noone && hostObject != noone)
 	{
 		image_speed = 0;
 		if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite;
+	}
+	
+	
+	// Instantly delete the spirit when spirit health is reduced to zero
+	if (hostObject.spiritCurrentHealth <= 0)
+	{
+		hostObject.spiritObject = noone;
+		hostObject.spiritSummoned = false;
+		hostObject.spiritState = false;
+		if ((host.JumpType & 1) != 1)
+		{
+			hostObject.canDoubleJump = false;
+		}
+		hostObject.currentMovesetID = 1;
+		with(hostObject)
+		{
+			OverwriteMoveset();
+		}
+		with(hostObject.hurtbox)
+		{
+			spiritOwner = noone;
+		}
+		instance_create_layer(x, y, "Instances", oSpiritFire);
+		instance_destroy(hurtbox);
+		instance_destroy();
 	}
 }

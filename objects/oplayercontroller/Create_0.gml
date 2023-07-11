@@ -331,10 +331,11 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 }
 
 // Spirit Data
-spiritState = 0; // 0 = Spirit OFF, 1 = Spirit ON
+spiritState = false; // false = Spirit OFF, false = Spirit ON
 spirit = noone;
 spiritObject = noone;
 spiritSummoned = false;
+spiritBroken = false; // Host cannot summon spirit when the spirit loses all its health
 spiritMaxHealth = 0;
 spiritCurrentHealth = 0;
 spiritRegenSpeed = 0;
@@ -354,3 +355,5 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 		}
 	}
 }
+// If host is trying to summon/unsummon spirit but gets interrupted, spirit gets summoned after hitstop
+pendToggle = false;
