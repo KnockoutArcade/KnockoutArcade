@@ -69,12 +69,19 @@ function ProcessHit( attackProperty, collision_list)
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
+		}
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
-	
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+		}
 		
 		// Play sound effect
 		if (attackProperty.HitSound != "")
@@ -149,10 +156,18 @@ function ProcessHit( attackProperty, collision_list)
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
+		}
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		{
+			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+		}
 	}
 }

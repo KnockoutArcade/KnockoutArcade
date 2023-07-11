@@ -2248,6 +2248,7 @@ if (host != noone && hostObject != noone)
 		{
 			spiritOwner = noone;
 		}
+		hostObject.spiritBroken = true;
 		instance_create_layer(x, y, "Instances", oSpiritFire);
 		instance_destroy(hurtbox);
 		instance_destroy();
