@@ -1798,6 +1798,10 @@ if (host != noone && hostObject != noone)
 				hostObject.spiritSummoned = false;
 				hostObject.spiritState = false;
 				hostObject.currentMovesetID = 1;
+				if ((host.JumpType & 1) != 1)
+				{
+					hostObject.canDoubleJump = false;
+				}
 				with(hostObject)
 				{
 					OverwriteMoveset();

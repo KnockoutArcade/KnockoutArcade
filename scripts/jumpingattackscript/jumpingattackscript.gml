@@ -29,6 +29,17 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 			spiritFire.depth = depth + 1;
 			SummonSpirit(spirit);
 			spiritObject.image_xscale = image_xscale;
+			if (moveToDo.SpiritData.SummonSpirit)
+			{
+				spiritState = true;
+				if (selectedCharacter.UniqueData.DoubleJump)
+				{
+					canDoubleJump = true;
+				}
+				// Temporary code to change Jay's moveset when summoning Smooth Criminal
+				currentMovesetID = 2;
+				OverwriteMoveset();
+			}
 		}
 		spiritObject.state = state;
 	}
@@ -63,6 +74,10 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 					spiritObject.image_xscale = image_xscale;
 				}
 				spiritState = true;
+				if (selectedCharacter.UniqueData.DoubleJump)
+				{
+					canDoubleJump = true;
+				}
 			}
 			else
 			{
@@ -75,6 +90,10 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 					spiritSummoned = false;
 				}
 				spiritState = false;
+				if ((selectedCharacter.JumpType & 1) != 1)
+				{
+					canDoubleJump = false;
+				}
 			}
 		}
 	}
