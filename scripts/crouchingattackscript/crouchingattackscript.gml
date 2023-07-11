@@ -12,6 +12,10 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
 		PerformAttack(moveToDo, true);
+		if (moveToDo.SpiritData.Vulnerable)
+		{
+			vulnerable = true;
+		}
 	}
 	else
 	{

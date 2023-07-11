@@ -223,6 +223,7 @@ if (host != noone && hostObject != noone)
 			isSuperJumping = false;
 			hasSpentDoubleJump = false;
 			canBlock = true;
+			vulnerable = false;
 
 			sprite_index = CharacterSprites.idle_Sprite;
 			image_speed = 1;
@@ -298,6 +299,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -316,6 +318,7 @@ if (host != noone && hostObject != noone)
 			isShortHopping = false;
 			hasSpentDoubleJump = false;
 			canBlock = true;
+			vulnerable = false;
 
 			hurtbox.image_xscale = 15;
 			hurtbox.image_yscale = 27;
@@ -581,6 +584,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -598,6 +602,7 @@ if (host != noone && hostObject != noone)
 			isSuperJumping = false;
 			hasSpentDoubleJump = false;
 			canBlock = true;
+			vulnerable = false;
 
 			if (movedir == image_xscale)
 			{
@@ -676,6 +681,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -693,6 +699,7 @@ if (host != noone && hostObject != noone)
 			isShortHopping = false;
 			isSuperJumping = false;
 			hasSpentDoubleJump = false;
+			vulnerable = false;
 
 			sprite_index = CharacterSprites.runForward_Sprite;
 			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
@@ -765,6 +772,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -781,6 +789,7 @@ if (host != noone && hostObject != noone)
 			isShortHopping = false;
 			isSuperJumping = false;
 			hasSpentDoubleJump = false;
+			vulnerable = false;
 
 			vsp += fallSpeed;
 
@@ -821,6 +830,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -836,6 +846,7 @@ if (host != noone && hostObject != noone)
 			image_speed = 1;
 			grounded = true;
 			isShortHopping = false;
+			vulnerable = false;
 
 			hsp = jumpHsp;
 
@@ -906,6 +917,7 @@ if (host != noone && hostObject != noone)
 				{
 					spiritOwner = noone;
 				}
+				instance_create_layer(x, y, "Instances", oSpiritFire);
 				instance_destroy(hurtbox);
 				instance_destroy();
 			}
@@ -922,6 +934,7 @@ if (host != noone && hostObject != noone)
 			image_speed = 1;
 			grounded = false;
 			canTurnAround = false;
+			vulnerable = false;
 
 			if image_index > (image_number - 1) image_speed = 0;
 			else image_speed = 1;

@@ -14,6 +14,10 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
 		PerformAttack(moveToDo, true);
+		if (moveToDo.SpiritData.Vulnerable)
+		{
+			vulnerable = true;
+		}
 	}
 	else
 	{

@@ -28,7 +28,15 @@ function ProcessHit( attackProperty, collision_list)
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 		{
-			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			if (!collision_list.owner.spiritObject.vulnerable)
+			{
+				collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			}
+			else
+			{
+				// Instantly kills the spirit if its current move makes it vulnerable
+				collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+			}
 			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
 		
@@ -138,7 +146,15 @@ function ProcessHit( attackProperty, collision_list)
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 		{
-			collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			if (!collision_list.owner.spiritObject.vulnerable)
+			{
+				collision_list.owner.spiritCurrentHealth -= scaledDamage;
+			}
+			else
+			{
+				// Instantly kills the spirit if its current move makes it vulnerable
+				collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+			}
 			collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		}
 					

@@ -9,13 +9,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	image_index = 0;
 	inAttackState = true;
 	
-	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
 	
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
 		PerformAttack(moveToDo, true);
+		if (moveToDo.SpiritData.Vulnerable)
+		{
+			vulnerable = true;
+		}
 	}
 	else
 	{
