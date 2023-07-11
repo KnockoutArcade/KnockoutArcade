@@ -271,6 +271,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
         "Vulnerable": false
@@ -440,6 +441,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
         "Vulnerable": false
@@ -482,9 +484,9 @@
           "AttackHitStun": 10,
           "AttackType": 1,
           "BlockStun": 0.3,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -0.5,
+          "AirKnockbackHorizontal": 0.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -498,7 +500,7 @@
           "MeterGain": 0.2,
           "ComboScaling": 0.2,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
@@ -515,14 +517,14 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sSmallHitspark",
+          "ParticleDuration": 2,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CommandNormalData": {
@@ -570,6 +572,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -654,13 +657,13 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 2,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 0.2,
           "ComboScaling": 0.2,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_light_hit2"
         }
       ],
       "CounterData": [
@@ -684,7 +687,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.2,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_light_hit2"
         }
       ],
       "CommandNormalData": {
@@ -736,6 +739,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -798,7 +802,7 @@
           "MeterGain": 2.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -815,14 +819,14 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -870,6 +874,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -941,6 +946,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1009,13 +1015,13 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -1032,7 +1038,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -1087,6 +1093,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1151,13 +1158,13 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -1174,7 +1181,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -1229,6 +1236,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1248,15 +1256,15 @@
       "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 12,
           "ImageIndex": 3
         }
       ],
@@ -1264,7 +1272,7 @@
       "AttackData": [
         {
           "Start": 2,
-          "Lifetime": 3,
+          "Lifetime": 4,
           "AttackWidth": 23,
           "AttackHeight": 13,
           "WidthOffset": 6,
@@ -1274,10 +1282,10 @@
           "AttackHitStop": 3,
           "AttackHitStun": 5,
           "AttackType": 2,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "BlockStun": 3.0,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -0.5,
+          "AirKnockbackHorizontal": 0.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -1285,37 +1293,37 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
+          "MeterGain": 4.0,
+          "ComboScaling": 3.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
+          "CounterHitLevel": 1,
+          "Group": 1,
+          "Damage": 3,
           "MeterGain": 0.0,
           "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Pushback": 0.0,
+          "AttackHitStun": 3,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": -0.5,
+          "AirKnockbackHorizontal": 0.5,
+          "Pushback": 1.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sSmallHitspark",
+          "ParticleDuration": 5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1363,6 +1371,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1431,13 +1440,13 @@
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -1454,14 +1463,14 @@
           "Pushback": 1.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
+          "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
           "Launches": true,
           "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 1.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1510,7 +1519,7 @@
         "Windows": [
           {
             "StartingFrame": 0,
-            "HorizontalSpeed": 10.0,
+            "HorizontalSpeed": 1.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -1524,7 +1533,7 @@
           },
           {
             "StartingFrame": 24,
-            "HorizontalSpeed": -3.0,
+            "HorizontalSpeed": -1.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -1555,6 +1564,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1623,13 +1633,13 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "MeterGain": 9.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
@@ -1647,13 +1657,13 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "Launches": true,
           "LaunchKnockbackVertical": -5.0,
           "LaunchKnockbackHorizontal": 0.5,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1710,6 +1720,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1796,7 +1807,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 2.5,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Light_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1853,6 +1864,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2004,6 +2016,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2155,6 +2168,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2165,10 +2179,7 @@
     "AdditionalMovesets": 0,
     "SpiritData": 2,
     "Spirit": "None",
-    "Version": "Ver1.1.4",
-    "UID": "dc049453-3ae8-498a-a527-140cb3f628a3",
-    "LastModified": "2023-07-10T20:00:37.5486755-07:00",
-    "LastModifiedBy": "iansb"
+    "DoubleJump": false
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -2176,14 +2187,10 @@
     "WalkBackwardFootsteps": [],
     "RunningSoundEffect": "",
     "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.4",
-    "UID": "bf1daa1c-b472-4b5b-9ce2-dee6b3a4cdb3",
-    "LastModified": "2023-07-10T20:00:37.5487998-07:00",
-    "LastModifiedBy": "iansb"
+    "RunBackwardFootsteps": []
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-10T21:05:22.5277979-07:00",
+  "LastModified": "2023-07-10T21:42:30.7066527-07:00",
   "LastModifiedBy": "iansb"
 }

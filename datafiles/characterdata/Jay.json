@@ -1142,6 +1142,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1361,6 +1362,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1549,6 +1551,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1702,6 +1705,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1855,6 +1859,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2020,6 +2025,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2173,6 +2179,7 @@
         "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2322,6 +2329,7 @@
         "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2505,6 +2513,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2692,6 +2701,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2845,6 +2855,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3051,6 +3062,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3281,6 +3293,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3430,6 +3443,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3583,6 +3597,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3740,6 +3755,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3926,6 +3942,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4230,6 +4247,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4433,6 +4451,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4573,6 +4592,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": true,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4641,6 +4661,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4709,6 +4730,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4866,6 +4888,7 @@
         "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5011,6 +5034,7 @@
         "PerformInSpiritOff": true,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5077,6 +5101,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5088,7 +5113,9 @@
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
+      "InMovesets": [
+        1
+      ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "",
@@ -5143,6 +5170,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5209,6 +5237,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5275,6 +5304,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5341,6 +5371,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5407,6 +5438,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5473,6 +5505,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5539,6 +5572,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5605,6 +5639,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5671,6 +5706,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5678,11 +5714,13 @@
     },
     {
       "UID": "f9922eb8-fbd3-4492-b02f-4b5ced26eb3c",
-      "MoveType": 0,
+      "MoveType": 32768,
       "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
-      "InMovesets": [],
+      "InMovesets": [
+        1
+      ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "",
@@ -5737,6 +5775,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5893,6 +5932,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5994,6 +6034,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6075,6 +6116,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6164,6 +6206,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6237,6 +6280,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6310,6 +6354,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6391,6 +6436,246 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
+    },
+    {
+      "UID": "6e5b6d3a-cdac-43ad-96fc-843bde9d3097",
+      "MoveType": 8192,
+      "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [
+        2
+      ],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJayStandOn_JumpingLight_Pose_mockup_strip4",
+      "Duration": 999,
+      "NumberOfFrames": 3,
+      "FrameData": [
+        {
+          "Length": 2,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 4,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 999,
+          "ImageIndex": 3
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 4,
+          "Lifetime": 999,
+          "AttackWidth": 18,
+          "AttackHeight": 16,
+          "WidthOffset": 1,
+          "HeightOffset": 0
+        }
+      ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
+    },
+    {
+      "UID": "9281d28a-f195-44ec-9a6b-11e2d35c1ebc",
+      "MoveType": 16384,
+      "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [
+        2
+      ],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_Jump_mockup_strip2",
+      "Duration": 27,
+      "NumberOfFrames": 1,
+      "FrameData": [
+        {
+          "Length": 27,
+          "ImageIndex": 2
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false
+      }
+    },
+    {
+      "UID": "06dad826-5599-4ee0-9e32-a8f736d77210",
+      "MoveType": 32768,
+      "MoveCanCancelInto": 196632,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [
+        2
+      ],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_Jump_mockup_strip2",
+      "Duration": 35,
+      "NumberOfFrames": 1,
+      "FrameData": [
+        {
+          "Length": 35,
+          "ImageIndex": 2
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": true,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -6401,10 +6686,7 @@
     "AdditionalMovesets": 1,
     "SpiritData": 1,
     "Spirit": "SmoothCriminal",
-    "Version": "Ver1.1.4",
-    "UID": "cb631408-d433-4d5f-b973-08fefd5eefe5",
-    "LastModified": "2023-07-10T19:39:38.3573618-07:00",
-    "LastModifiedBy": "iansb"
+    "DoubleJump": true
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -6412,14 +6694,10 @@
     "WalkBackwardFootsteps": [],
     "RunningSoundEffect": "",
     "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.4",
-    "UID": "8c29fb3b-fcd7-4696-8c6e-5a8faac91364",
-    "LastModified": "2023-07-10T19:39:38.3574351-07:00",
-    "LastModifiedBy": "iansb"
+    "RunBackwardFootsteps": []
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-10T20:10:43.3041651-07:00",
+  "LastModified": "2023-07-10T21:45:50.2328242-07:00",
   "LastModifiedBy": "iansb"
 }
