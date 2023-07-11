@@ -90,6 +90,7 @@
     {"id":{"name":"sBeverly_downSpecial_MOCKUP_strip5","path":"sprites/sBeverly_downSpecial_MOCKUP_strip5/sBeverly_downSpecial_MOCKUP_strip5.yy",},"order":8,},
     {"id":{"name":"CrouchingAttackScript","path":"scripts/CrouchingAttackScript/CrouchingAttackScript.yy",},"order":0,},
     {"id":{"name":"sFinalRoundStart","path":"sprites/sFinalRoundStart/sFinalRoundStart.yy",},"order":9,},
+    {"id":{"name":"sh_SpiritBroken","path":"shaders/sh_SpiritBroken/sh_SpiritBroken.yy",},"order":1,},
     {"id":{"name":"sCharSel_NameBeverly","path":"sprites/sCharSel_NameBeverly/sCharSel_NameBeverly.yy",},"order":1,},
     {"id":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"order":11,},
     {"id":{"name":"sJay_DownSpecial2A_Mockup_strip4","path":"sprites/sJay_DownSpecial2A_Mockup_strip4/sJay_DownSpecial2A_Mockup_strip4.yy",},"order":4,},

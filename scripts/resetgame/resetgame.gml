@@ -17,6 +17,7 @@ function ResetGame()
 	instance_destroy(oTimer);
 	instance_destroy(oSuperMeterUI);
 	instance_destroy(oProjectileBase);
+	instance_destroy(oSpiritFire);
 	
 	instance_destroy(global.camObj);
 }

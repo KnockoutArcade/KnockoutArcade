@@ -3,4 +3,16 @@
 
 x = (global.camObj.x-80) + ui_xOffset;
 
-draw_self();
+
+
+if (attatchedTo.spiritBroken)
+{
+	shader_set(sh_SpiritBroken);
+	//shader_set_uniform_f_array(uniColor, color);
+	draw_self();
+	shader_reset();
+}
+else
+{
+	draw_self();
+}
