@@ -1307,8 +1307,6 @@ switch state
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
 		}
 		
-		//show_debug_message("In Enhanced Neutral Special 2");
-		
 		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 	}
 	break;
@@ -2230,11 +2228,6 @@ if (superMeter > 100)
 if (superMeter < 0)
 {
 	superMeter = 0;
-}
-
-if (spirit != noone && playerID == 1)
-{
-	show_debug_message(pendingToggle);
 }
 
 if (target != noone)

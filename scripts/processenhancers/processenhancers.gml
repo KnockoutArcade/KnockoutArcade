@@ -18,6 +18,7 @@ function ProcessEnhancers(Special) {
 			{
 				if (enhanced[i])
 				{
+					pendingToggle = false;
 					// Which move should we switch to?
 					switch (Special.SpecialData[i].EnhancementMove)
 					{
