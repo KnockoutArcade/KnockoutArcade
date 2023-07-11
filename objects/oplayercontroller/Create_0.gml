@@ -336,7 +336,7 @@ spirit = noone;
 spiritObject = noone;
 spiritSummoned = false;
 spiritMaxHealth = 0;
-spiritcurrentHealth = 0;
+spiritCurrentHealth = 0;
 spiritRegenSpeed = 0;
 spiritKORegenSpeed = 0;
 if (selectedCharacter.UniqueData.SpiritData == 1)
@@ -347,7 +347,7 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 		{
 			spirit = global.characterData[i];
 			spiritMaxHealth = spirit.MaxHP;
-			spiritcurrentHealth = spiritMaxHealth;
+			spiritCurrentHealth = spiritMaxHealth;
 			spiritRegenSpeed = spirit.RegenSpeed;
 			spiritKORegenSpeed = spirit.KORegenSpeed;
 			break;

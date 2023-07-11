@@ -19,6 +19,10 @@ else if (p1Character == oJay)
 	draw_sprite(sHUDPortraits, 2, x+15, 2); 
 	draw_sprite(sCharacterNames, 2, x+33, 18);
 	draw_sprite(sUISpirit, 2, x+32, 26);
+	if (p1Reference.spiritState)
+	{
+		draw_sprite(sSpiritText, 2, x+12, 26);
+	}
 }
 
 if (p2Character == oRussel)
@@ -36,6 +40,10 @@ else if (p2Character == oJay)
 	draw_sprite_ext(sHUDPortraits, 2, x+143, 2, -1, 1, 0, c_white, 1);
 	draw_sprite(sCharacterNames, 2, x+113, 18);
 	draw_sprite(sUISpirit, 2, x+89, 26);
+	if (p2Reference.spiritState)
+	{
+		draw_sprite(sSpiritText, 2, x+129, 26);
+	}
 }
 
 draw_self();

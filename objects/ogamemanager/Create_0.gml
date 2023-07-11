@@ -18,7 +18,9 @@ p2 = noone;
 global.camObj = noone;
 
 healthbar1 = noone;
-healthbar1 = noone;
+healthbar2 = noone;
+spiritbar1 = noone;
+spiritbar2 = noone;
 TimerObject = noone;
 hudObject = noone;
 
