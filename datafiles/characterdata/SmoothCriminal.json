@@ -271,7 +271,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
         "Vulnerable": false
@@ -441,7 +440,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
         "Vulnerable": false
@@ -572,7 +570,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -739,7 +736,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -874,7 +870,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -946,7 +941,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1093,7 +1087,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1109,7 +1102,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_StandingHeavy_MOCKUP_strip5",
-      "Duration": 19,
+      "Duration": 30,
       "NumberOfFrames": 5,
       "FrameData": [
         {
@@ -1117,26 +1110,26 @@
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 12,
+          "Length": 22,
           "ImageIndex": 4
         },
         {
-          "Length": 16,
+          "Length": 27,
           "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 6,
+          "Start": 8,
           "Lifetime": 3,
           "AttackWidth": 18,
           "AttackHeight": 22,
@@ -1236,7 +1229,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1371,7 +1363,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1564,7 +1555,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1720,7 +1710,6 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
-        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1731,7 +1720,10 @@
     "AdditionalMovesets": 0,
     "SpiritData": 2,
     "Spirit": "None",
-    "DoubleJump": false
+    "Version": "Ver1.1.4",
+    "UID": "dc049453-3ae8-498a-a527-140cb3f628a3",
+    "LastModified": "2023-07-10T20:00:37.5486755-07:00",
+    "LastModifiedBy": "iansb"
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -1739,10 +1731,14 @@
     "WalkBackwardFootsteps": [],
     "RunningSoundEffect": "",
     "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": []
+    "RunBackwardFootsteps": [],
+    "Version": "Ver1.1.4",
+    "UID": "bf1daa1c-b472-4b5b-9ce2-dee6b3a4cdb3",
+    "LastModified": "2023-07-10T20:00:37.5487998-07:00",
+    "LastModifiedBy": "iansb"
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-10T14:42:09.5433018-07:00",
-  "LastModifiedBy": "colstrau"
+  "LastModified": "2023-07-10T20:11:38.0278548-07:00",
+  "LastModifiedBy": "iansb"
 }
