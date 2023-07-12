@@ -262,6 +262,7 @@ function PerformAttack(Action, createdBySpirit)
 					else
 					{
 						playerOwner = hostID;
+						spiritOwner = other.id;
 					}
 					
 					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);

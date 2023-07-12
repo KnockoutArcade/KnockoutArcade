@@ -24,6 +24,7 @@ transcendent = false; // Whether this projectile will phase through other projec
 projectileHealth = 1; // How many hits from another projectile it takes to destroy this projectile
 
 playerOwner = noone; // Who fired this projectile
+spiritOwner = noone; // If spirit fired a projectile
 
 hitboxProperties = global.ProjectileBase_HitboxData; // Which hitbox properties should this projectile use?
 hitboxID = noone; // The ID of this projectile's hitbox
