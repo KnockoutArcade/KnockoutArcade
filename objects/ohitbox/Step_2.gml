@@ -71,9 +71,11 @@ if (!isProjectile)
 
 			var blockingDirection = -ownerOnSide;
 
-			if (spirit != noone)
+			// Turns the target around if the spirit is attacking from behind
+			if (collision_list[| i].owner != owner && spirit != noone)
 			{
 				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
+				show_debug_message(collision_list[| i].owner.image_xscale);
 			}
 
 			// This code handles multiple hitboxes being used
@@ -420,6 +422,11 @@ else
 
 				var blockingDirection = -ownerOnSide;
 
+				// Turns the target around if the spirit is attacking from behind
+				if (collision_list[| i].owner != owner && spirit != noone)
+				{
+					collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
+				}
 
 				//Set who the player is currently targeting
 				owner.playerOwner.target = collision_list[| i].owner.id;

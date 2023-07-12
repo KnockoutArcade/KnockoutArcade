@@ -9,7 +9,7 @@ function ProcessHit( attackProperty, collision_list)
 		var scaledDamage = attackProperty.Damage; // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
-					
+		
 		if (owner.combo > 2) 
 		{
 			scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
