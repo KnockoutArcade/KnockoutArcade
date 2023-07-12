@@ -97,7 +97,16 @@ function ProcessHit( attackProperty, collision_list)
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			// Horizontal direction of destructible objects are based on the player hitting them
+			if (collision_list.owner.isDestructibleObject)
+			{
+				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * owner.image_xscale;
+			}
+			else
+			{
+				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			}
+			
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
@@ -107,8 +116,17 @@ function ProcessHit( attackProperty, collision_list)
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			// Horizontal direction of destructible objects are based on the player hitting them
+			if (collision_list.owner.isDestructibleObject)
+			{
+				collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * owner.image_xscale;
+			}
+			else
+			{
+				collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			}
 			collision_list.owner.grounded = false;
+			
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
@@ -260,7 +278,16 @@ function ProcessHit( attackProperty, collision_list)
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			// Horizontal direction of destructible objects are based on the player hitting them
+			if (collision_list.owner.isDestructibleObject)
+			{
+				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * owner.image_xscale;
+			}
+			else
+			{
+				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			}
+			
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
@@ -270,8 +297,17 @@ function ProcessHit( attackProperty, collision_list)
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			// Horizontal direction of destructible objects are based on the player hitting them
+			if (collision_list.owner.isDestructibleObject)
+			{
+				collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * owner.image_xscale;
+			}
+			else
+			{
+				collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
+			}
 			collision_list.owner.grounded = false;
+			
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
