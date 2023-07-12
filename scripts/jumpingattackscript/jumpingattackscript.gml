@@ -26,39 +26,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	
 	// Activate pending summon
 	// The purpose of this is to actiate/deactivate spirit if a toggle move is performed but it's interrupted before it ends
-	if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
-	{
-		pendingToggle = true;
-	}
-	
-	// If this move temporarily summons the spirit to attack in Spirit OFF
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
-	{
-		if (!spiritSummoned)
-		{
-			SummonSpirit(spirit);
-			spiritObject.image_xscale = image_xscale;
-			spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
-			spiritObject.y += moveToDo.SpiritData.StartYOffset;
-			var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-			spiritFire.depth = depth + 1;
-		}
-		if (moveToDo.SpiritData.SummonSpirit)
-		{
-			spiritState = true;
-			if (selectedCharacter.UniqueData.DoubleJump)
-			{
-				canDoubleJump = true;
-			}
-			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
-			{
-				currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
-				OverwriteMoveset();
-			}
-		}
-		spiritObject.state = state;
-		pendingToggle = false;
-	}
+	SummonInSpiritOff(moveToDo);
 	
 	if (animTimer > moveToDo.Duration) 
 	{
@@ -90,19 +58,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		{
 			if (!spiritState)
 			{
-				if (!spiritSummoned) 
-				{
-					var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
-					spiritFire.depth = depth + 1;
-					SummonSpirit(spirit);
-					spiritObject.image_xscale = image_xscale;
-				}
-				spiritState = true;
-				pendingToggle = false;
-				if (selectedCharacter.UniqueData.DoubleJump)
-				{
-					canDoubleJump = true;
-				}
+				SummonSpirit();
 			}
 			else
 			{

@@ -35,10 +35,6 @@ function PerformAttack(Action, createdBySpirit)
 	
 	// Momentum Data
 	// Grounded
-	if (createdBySpirit)
-	{
-		show_debug_message(grounded);
-	}
 	if (Action.GroundMovementData.NumberOfWindows > 0 && grounded)
 	{
 		var currentMovementWindow = 0; // The current window that we are using for momentum data

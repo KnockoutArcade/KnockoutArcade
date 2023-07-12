@@ -35,16 +35,7 @@ function ProcessHit( attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						SummonSpirit(spirit);
-						spiritObject.image_xscale = image_xscale;
-						var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
-						spiritFire.depth = depth + 1;
-						spiritState = true;
-						pendingToggle = false;
-						if (selectedCharacter.UniqueData.DoubleJump)
-						{
-							canDoubleJump = true;
-						}
+						SummonSpirit();
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
 							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;

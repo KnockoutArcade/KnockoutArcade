@@ -2,11 +2,11 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "EnhancerScripts",
-    "path": "folders/Scripts/EnhancerScripts.yy",
+    "name": "SpiritScripts",
+    "path": "folders/Scripts/SpiritScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "SetMotionInputs",
+  "name": "SummonInSpiritOff",
   "tags": [],
   "resourceType": "GMScript",
 }
