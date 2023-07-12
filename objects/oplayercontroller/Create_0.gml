@@ -237,6 +237,7 @@ state = eState.IDLE;
 prevState = 0;
 inAttackState = false;
 canTurnAround = true;
+cancelOnLanding = true; // whether or not the character should cancel their current air attack if they land
 
 // Intro
 hasPerformedIntro = true;

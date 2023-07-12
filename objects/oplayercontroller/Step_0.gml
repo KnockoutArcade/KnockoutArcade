@@ -623,6 +623,9 @@ if (!isGrabbed)
 	image_angle = 0;
 }
 
+// Reset cancelOnLanding
+cancelOnLanding = true;
+
 
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
@@ -1193,6 +1196,7 @@ switch state
 	
 	case eState.COMMAND_NORMAL_1:
 	{
+		cancelOnLanding = selectedCharacter.CommandNormal1.CommandNormalData.CancelWhenLanding;
 		if (grounded)
 		{	
 			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, false, true);
@@ -1213,6 +1217,7 @@ switch state
 
 	case eState.NEUTRAL_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{	
 			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
@@ -1229,6 +1234,7 @@ switch state
 
 	case eState.SIDE_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true);
@@ -1245,6 +1251,7 @@ switch state
 	
 	case eState.UP_SPECIAL: 
 	{
+		cancelOnLanding = true;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
@@ -1270,6 +1277,7 @@ switch state
 	
 	case eState.DOWN_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
@@ -1286,6 +1294,7 @@ switch state
 	
 	case eState.ENHANCED_NEUTRAL_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
@@ -1301,6 +1310,7 @@ switch state
 	
 	case eState.ENHANCED_SIDE_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
@@ -1316,6 +1326,7 @@ switch state
 	
 	case eState.ENHANCED_UP_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
@@ -1331,6 +1342,7 @@ switch state
 	
 	case eState.ENHANCED_DOWN_SPECIAL: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
@@ -1347,6 +1359,7 @@ switch state
 
 	case eState.REKKA_LAUNCHER: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
@@ -1362,6 +1375,7 @@ switch state
 	
 	case eState.REKKA_FINISHER: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
@@ -1377,6 +1391,7 @@ switch state
 	
 	case eState.REKKA_CONNECTER: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
@@ -1392,6 +1407,7 @@ switch state
 	
 	case eState.REKKA_LOW: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
@@ -1407,6 +1423,7 @@ switch state
 	
 	case eState.REKKA_HIGH: 
 	{
+		cancelOnLanding = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
@@ -1497,6 +1514,7 @@ switch state
 	case eState.COMMAND_GRAB : 
 	{
 		inAttackState = true;
+		cancelOnLanding = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		
@@ -2191,7 +2209,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	vsp = 0;
 	if (hitstop < 1)
 	{
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && state != eState.COMMAND_NORMAL_1 && fallDirection == 1) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -2202,7 +2220,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 			
 			audio_play_sound(sfx_Landing, 1, false);
 		}
-		if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL || state == eState.COMMAND_NORMAL_1) 
+		if (!cancelOnLanding) 
 		{
 			grounded = true;
 			isThrowable = true;
