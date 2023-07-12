@@ -3014,6 +3014,190 @@
         "Vulnerable": false,
         "OnlyInSpiritOff": false
       }
+    },
+    {
+      "UID": "f5fde31c-c332-48e8-a698-b0f31716e497",
+      "MoveType": 8,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_SC_Sidespecia_MOCKUP_strip4",
+      "Duration": 23,
+      "NumberOfFrames": 4,
+      "FrameData": [
+        {
+          "Length": 9,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 4
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 1,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 9,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": 35,
+          "ProjectileObject": "oTestLobbingProjectile"
+        }
+      ],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      }
+    },
+    {
+      "UID": "7228da7c-c949-4924-85ee-7ed9c7337365",
+      "MoveType": 8,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_SC_Sidespecia_MOCKUP_strip4",
+      "Duration": 23,
+      "NumberOfFrames": 4,
+      "FrameData": [
+        {
+          "Length": 9,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 4
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 1,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 9,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": 35,
+          "ProjectileObject": "oTestLobbingProjectile"
+        }
+      ],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "SupplimentaryScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": true
+      }
     }
   ],
   "UniqueData": {
@@ -3035,6 +3219,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-11T22:52:04.7506347-07:00",
+  "LastModified": "2023-07-12T13:49:48.8428483-07:00",
   "LastModifiedBy": "iansb"
 }
