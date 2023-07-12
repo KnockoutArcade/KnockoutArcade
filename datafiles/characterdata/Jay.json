@@ -7178,9 +7178,9 @@
     "SpiritData": 1,
     "Spirit": "SmoothCriminal",
     "DoubleJump": true,
-    "LinkMovesetsWithSpirits": false,
-    "SpiritOffMoveset": 0,
-    "SpiritOnMoveset": 0
+    "LinkMovesetsWithSpirits": true,
+    "SpiritOffMoveset": 1,
+    "SpiritOnMoveset": 2
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",

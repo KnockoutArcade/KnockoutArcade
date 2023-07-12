@@ -1600,8 +1600,11 @@ switch state
 				spiritObject = noone;
 				spiritSummoned = false;
 				spiritState = false;
-				currentMovesetID = 1;
-				OverwriteMoveset();
+				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+				{
+					currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+					OverwriteMoveset();
+				}
 			}
 		}
 		

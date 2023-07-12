@@ -45,9 +45,11 @@ function ProcessHit( attackProperty, collision_list)
 						{
 							canDoubleJump = true;
 						}
-						// Temporary code
-						currentMovesetID = 2;
-						OverwriteMoveset();
+						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+						{
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+							OverwriteMoveset();
+						}
 					}
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
@@ -66,9 +68,11 @@ function ProcessHit( attackProperty, collision_list)
 						{
 							canDoubleJump = false;
 						}
-						// Temporary code
-						currentMovesetID = 1;
-						OverwriteMoveset();
+						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+						{
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+							OverwriteMoveset();
+						}
 					}
 				}
 			}
@@ -227,9 +231,11 @@ function ProcessHit( attackProperty, collision_list)
 						{
 							canDoubleJump = true;
 						}
-						// Temporary code
-						currentMovesetID = 2;
-						OverwriteMoveset();
+						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+						{
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+							OverwriteMoveset();
+						}
 					}
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
@@ -248,9 +254,11 @@ function ProcessHit( attackProperty, collision_list)
 						{
 							canDoubleJump = false;
 						}
-						// Temporary code
-						currentMovesetID = 1;
-						OverwriteMoveset();
+						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+						{
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+							OverwriteMoveset();
+						}
 					}
 				}
 			}

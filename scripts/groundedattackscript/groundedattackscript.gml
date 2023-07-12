@@ -51,9 +51,11 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 			{
 				canDoubleJump = true;
 			}
-			// Temporary code to change Jay's moveset when summoning Smooth Criminal
-			currentMovesetID = 2;
-			OverwriteMoveset();
+			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+			{
+				currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+				OverwriteMoveset();
+			}
 		}
 		spiritObject.state = state;
 		pendingToggle = false;
@@ -70,10 +72,18 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
 		{
-			if (moveToDo.SwitchMoveset && !spiritBroken)
+			if (moveToDo.SwitchMoveset)
 			{
-				currentMovesetID = moveToDo.SwitchToMoveset;
-				OverwriteMoveset();
+				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
+				{
+					currentMovesetID = moveToDo.SwitchToMoveset;
+					OverwriteMoveset();
+				}
+				else if (!selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+				{
+					currentMovesetID = moveToDo.SwitchToMoveset;
+					OverwriteMoveset();
+				}
 			}
 		}
 		

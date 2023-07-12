@@ -1805,10 +1805,13 @@ if (host != noone && hostObject != noone)
 				{
 					hostObject.canDoubleJump = false;
 				}
-				hostObject.currentMovesetID = 1;
-				with(hostObject)
+				if (host.UniqueData.LinkMovesetsWithSpirits)
 				{
-					OverwriteMoveset();
+					hostObject.currentMovesetID = host.UniqueData.SpiritOffMoveset;
+					with(hostObject)
+					{
+						OverwriteMoveset();
+					}
 				}
 				with(hostObject.hurtbox)
 				{
@@ -2243,10 +2246,13 @@ if (host != noone && hostObject != noone)
 		{
 			hostObject.canDoubleJump = false;
 		}
-		hostObject.currentMovesetID = 1;
-		with(hostObject)
+		if (host.UniqueData.LinkMovesetsWithSpirits)
 		{
-			OverwriteMoveset();
+			hostObject.currentMovesetID = host.UniqueData.SpiritOffMoveset;
+			with(hostObject)
+			{
+				OverwriteMoveset();
+			}
 		}
 		with(hostObject.hurtbox)
 		{
