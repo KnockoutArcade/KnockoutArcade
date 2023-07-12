@@ -187,12 +187,6 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 			}
 		}
-		
-		// If the spirit is close to its host, set nextToPlayer to true
-		if (abs(x - hostObject.x) < 10)
-		{
-			nextToPlayer = true;
-		}
 
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
@@ -200,15 +194,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -293,15 +285,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -506,41 +496,9 @@ if (host != noone && hostObject != noone)
 			vsp = 0;
 
 			// If player is performing Rush Cancel
-			if (rcActivated)
+			if (hostObject.rcActivated)
 			{
 				isEXFlash = true;
-				// Screen freeze for Rush Cancel lasts for 30 frames
-				if (rcFreezeTimer >= 30)
-				{
-					rcActivated = false;
-					rcFreezeTimer = 0;
-					activateFreeze = false;
-					stateBeforeFreeze = 0;
-					global.freezeTimer = false;
-					animTimer = 0; // Reset the animation timer when entering Rush Cancel state
-					speedTrailTimer = 0;
-					hostObject.comboScaling += 3.0;
-					if (!grounded)
-					{
-						state = eState.RUSH_CANCEL_AIR;
-					}
-					else if (verticalMoveDir == 1)
-					{
-						vsp = -global.rcUpSpeed;
-						jumpHsp = walkSpeed * 1.5 * image_xscale;
-						state = eState.RUSH_CANCEL_UP;
-						grounded = false;
-					}
-					else
-					{
-						rcForwardTimer = 0;
-						state = eState.RUSH_CANCEL_FORWARD;
-					}
-				}
-				else
-				{
-					rcFreezeTimer++;
-				}
 			}
 			// If opponent froze the screen
 			else if (opponent != noone && !opponent.activateFreeze && !hostObject.activateFreeze && !activateFreeze)
@@ -578,15 +536,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -675,15 +631,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -766,15 +720,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -824,15 +776,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -911,15 +861,13 @@ if (host != noone && hostObject != noone)
 			// Immediately removes the spirit after the move is over in Spirit OFF
 			if (!hostObject.spiritState)
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
+			}
+			
+			// If the spirit is close to its host, set nextToPlayer to true
+			if (abs(x - hostObject.x) < 10)
+			{
+				nextToPlayer = true;
 			}
 
 			// Stands next to and slightly in front of the player
@@ -1976,8 +1924,8 @@ if (host != noone && hostObject != noone)
 			canTurnAround = false;
 			projectileInvincible = true;
 
-			vsp = hostObject.vsp;
-			hsp = hostObject.hsp * image_xscale;
+			vsp += global.rcUpFallSpeed;
+			hsp = walkSpeed * 1.5 * image_xscale;
 			
 			if (state != hostObject.state)
 			{

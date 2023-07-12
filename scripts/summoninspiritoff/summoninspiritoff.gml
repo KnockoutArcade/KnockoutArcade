@@ -8,6 +8,10 @@ function SummonInSpiritOff(moveToDo)
 	if (!moveToDo.SpiritData.SummonSpirit)
 	{
 		spiritState = false;
+		if ((selectedCharacter.JumpType & 1) != 1)
+		{
+			canDoubleJump = false;
+		}
 	}
 	else
 	{

@@ -662,6 +662,13 @@ if (state == eState.SCREEN_FREEZE)
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						state = eState.RUSH_CANCEL_AIR;
+					}
+				}
 			}
 			else if (verticalMoveDir == 1)
 			{
@@ -669,11 +676,29 @@ if (state == eState.SCREEN_FREEZE)
 				jumpHsp = walkSpeed * 1.5 * image_xscale;
 				state = eState.RUSH_CANCEL_UP;
 				grounded = false;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						vsp = -global.rcUpSpeed;
+						jumpHsp = walkSpeed * 1.5 * image_xscale;
+						state = eState.RUSH_CANCEL_UP;
+						grounded = false;
+					}
+				}
 			}
 			else
 			{
 				rcForwardTimer = 0;
 				state = eState.RUSH_CANCEL_FORWARD;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						rcForwardTimer = 0;
+						state = eState.RUSH_CANCEL_FORWARD;
+					}
+				}
 			}
 		}
 		else
@@ -2066,10 +2091,6 @@ switch state
 		hasSpentDoubleJump = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
-		if (spiritObject != noone) 
-		{
-			spiritObject.state = state;
-		}
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -2109,10 +2130,6 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
-		if (spiritObject != noone) 
-		{
-			spiritObject.state = state;
-		}
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
@@ -2134,10 +2151,6 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
-		if (spiritObject != noone) 
-		{
-			spiritObject.state = state;
-		}
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
