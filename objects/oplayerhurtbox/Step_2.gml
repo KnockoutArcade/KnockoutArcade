@@ -10,7 +10,14 @@ if (primary && owner.state != eState.HITSTOP)
 	}
 	else
 	{
-		x = spirit.x + (spirit.hurtboxOffset * sign(spirit.image_xscale));
+		if (sign(owner.image_xscale) == sign(spirit.image_xscale))
+		{
+			x = spirit.x + (spirit.hurtboxOffset * sign(spirit.image_xscale));
+		}
+		else
+		{
+			x = spirit.x + (spirit.hurtboxOffset * sign(-spirit.image_xscale));
+		}
 		y = spirit.y;
 	}
 } 
