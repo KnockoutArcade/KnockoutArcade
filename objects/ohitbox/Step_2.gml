@@ -71,11 +71,16 @@ if (!isProjectile)
 
 			var blockingDirection = -ownerOnSide;
 
+			if (spirit != noone)
+			{
+				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
+			}
+
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
 			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
-			//show_debug_message(string(collision_list[| i].owner) + ", " + string(owner) + ", " + string(gotHitBy));
+			
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
 			if (collision_list[| i].owner != owner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
 			{

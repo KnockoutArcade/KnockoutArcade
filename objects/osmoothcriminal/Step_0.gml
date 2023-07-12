@@ -1667,7 +1667,6 @@ if (host != noone && hostObject != noone)
 			canTurnAround = false;
 			isEXFlash = false;
 			hitstun = hostObject.hitstun;
-			knockbackVel = hostObject.knockbackVel;
 
 			if (hitstun < 1)
 			{
@@ -1734,7 +1733,6 @@ if (host != noone && hostObject != noone)
 			}
 			xHome = x;
 
-			hsp = hostObject.hsp;
 			vsp = hostObject.vsp;
 
 		}
@@ -1759,7 +1757,6 @@ if (host != noone && hostObject != noone)
 
 			FAvictim = false;
 
-			hsp = hostObject.hsp;
 			vsp = hostObject.vsp;
 			hitstun = hostObject.hitstun;
 

@@ -97,22 +97,22 @@ function ProcessHit( attackProperty, collision_list)
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			collision_list.owner.grounded = false;
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 				collision_list.owner.spiritObject.grounded = false;
 			}
 		
@@ -260,22 +260,22 @@ function ProcessHit( attackProperty, collision_list)
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
-				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
 		else if (attackProperty.Launches)
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			collision_list.owner.grounded = false;
 			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
-				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * owner.image_xscale * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 				collision_list.owner.spiritObject.grounded = false;
 			}
 		
