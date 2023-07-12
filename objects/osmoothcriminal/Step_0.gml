@@ -1798,28 +1798,7 @@ if (host != noone && hostObject != noone)
 			}
 			else
 			{
-				hostObject.spiritObject = noone;
-				hostObject.spiritSummoned = false;
-				hostObject.spiritState = false;
-				if ((host.JumpType & 1) != 1)
-				{
-					hostObject.canDoubleJump = false;
-				}
-				if (host.UniqueData.LinkMovesetsWithSpirits)
-				{
-					hostObject.currentMovesetID = host.UniqueData.SpiritOffMoveset;
-					with(hostObject)
-					{
-						OverwriteMoveset();
-					}
-				}
-				with(hostObject.hurtbox)
-				{
-					spiritOwner = noone;
-				}
-				instance_create_layer(x, y, "Instances", oSpiritFire);
-				instance_destroy(hurtbox);
-				instance_destroy();
+				DeactivateSpirit(true);
 			}
 		}
 		break;
@@ -2254,33 +2233,13 @@ if (host != noone && hostObject != noone)
 	// Instantly delete the spirit when spirit health is reduced to zero
 	if (hostObject.spiritCurrentHealth <= 0)
 	{
-		hostObject.spiritObject = noone;
-		hostObject.spiritSummoned = false;
-		hostObject.spiritState = false;
-		if ((host.JumpType & 1) != 1)
-		{
-			hostObject.canDoubleJump = false;
-		}
-		if (host.UniqueData.LinkMovesetsWithSpirits)
-		{
-			hostObject.currentMovesetID = host.UniqueData.SpiritOffMoveset;
-			with(hostObject)
-			{
-				OverwriteMoveset();
-			}
-		}
-		with(hostObject.hurtbox)
-		{
-			spiritOwner = noone;
-		}
 		hostObject.spiritBroken = true;
 		hostObject.hitstop = 60;
 		hostObject.state = eState.LAUNCHED;
 		hostObject.grounded = false;
 		hostObject.vsp = -4; // Launches the player up
 		hostObject.hsp = 0;
-		instance_create_layer(x, y, "Instances", oSpiritFire);
-		instance_destroy(hurtbox);
-		instance_destroy();
+		
+		DeactivateSpirit(true);
 	}
 }

@@ -26,6 +26,12 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	
 	// Activate pending summon
 	// The purpose of this is to actiate/deactivate spirit if a toggle move is performed but it's interrupted before it ends
+	if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+	{
+		pendingToggle = true;
+	}
+	
+	// If this move temporarily summons the spirit to attack in Spirit OFF
 	SummonInSpiritOff(moveToDo);
 	
 	if (animTimer > moveToDo.Duration) 
@@ -62,20 +68,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 			}
 			else
 			{
-				if (spiritSummoned) 
-				{
-					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-					instance_destroy(spiritObject.hurtbox);
-					instance_destroy(spiritObject);
-					spiritObject = noone;
-					spiritSummoned = false;
-				}
-				spiritState = false;
-				pendingToggle = false;
-				if ((selectedCharacter.JumpType & 1) != 1)
-				{
-					canDoubleJump = false;
-				}
+				DeactivateSpirit(false);
 			}
 		}
 	}

@@ -48,17 +48,7 @@ function ProcessHit( attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-						instance_destroy(spiritObject.hurtbox);
-						instance_destroy(spiritObject);
-						spiritObject = noone;
-						spiritSummoned = false;
-						spiritState = false;
-						pendingToggle = false;
-						if ((selectedCharacter.JumpType & 1) != 1)
-						{
-							canDoubleJump = false;
-						}
+						DeactivateSpirit(false);
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
 							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;

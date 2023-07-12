@@ -67,20 +67,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			}
 			else
 			{
-				if (spiritSummoned) 
-				{
-					instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-					instance_destroy(spiritObject.hurtbox);
-					instance_destroy(spiritObject);
-					spiritObject = noone;
-					spiritSummoned = false;
-				}
-				spiritState = false;
-				pendingToggle = false;
-				if ((selectedCharacter.JumpType & 1) != 1)
-				{
-					canDoubleJump = false;
-				}
+				DeactivateSpirit(false);
 			}
 		}
 	}

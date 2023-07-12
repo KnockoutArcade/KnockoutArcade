@@ -1592,19 +1592,11 @@ switch state
 	{
 		if (spiritObject != noone)
 		{
-			if (spiritSummoned) 
+			DeactivateSpirit(false);
+			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 			{
-				instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-				instance_destroy(spiritObject.hurtbox);
-				instance_destroy(spiritObject);
-				spiritObject = noone;
-				spiritSummoned = false;
-				spiritState = false;
-				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
-				{
-					currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
-					OverwriteMoveset();
-				}
+				currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+				OverwriteMoveset();
 			}
 		}
 		
