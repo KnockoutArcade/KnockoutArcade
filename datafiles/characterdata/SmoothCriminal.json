@@ -234,8 +234,8 @@
           {
             "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "VerticalSpeed": 1.0,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {

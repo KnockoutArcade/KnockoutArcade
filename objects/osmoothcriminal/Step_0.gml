@@ -1974,6 +1974,11 @@ if (host != noone && hostObject != noone)
 			{
 				state = eState.HURT;
 			}
+			
+			if (state != hostObject.state)
+			{
+				state = hostObject.state;
+			}
 
 			HandleWalkingOffPlatforms(false);
 
@@ -1992,8 +1997,13 @@ if (host != noone && hostObject != noone)
 			canTurnAround = false;
 			projectileInvincible = true;
 
-			vsp += global.rcUpFallSpeed;
-			hsp = walkSpeed * 1.5 * image_xscale;
+			vsp = hostObject.vsp;
+			hsp = hostObject.hsp * image_xscale;
+			
+			if (state != hostObject.state)
+			{
+				state = hostObject.state;
+			}
 
 			// Create speed trail
 			//SpeedTrail(0.3, 0.02, 3);
@@ -2012,6 +2022,11 @@ if (host != noone && hostObject != noone)
 
 			vsp = global.rcAirSpeed;
 			hsp = global.rcAirHorizontalSpeed * image_xscale;
+			
+			if (state != hostObject.state)
+			{
+				state = hostObject.state;
+			}
 
 			// Create speed trail
 			//SpeedTrail(0.3, 0.02, 1);
