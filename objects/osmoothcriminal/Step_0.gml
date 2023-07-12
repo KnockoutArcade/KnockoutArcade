@@ -1504,9 +1504,9 @@ if (host != noone && hostObject != noone)
 					state = eState.FORWARD_THROW;
 					animTimer = 0;
 
-					if (target != noone)
+					if (hostObject.target != noone)
 					{
-						ds_list_clear(target.hitByGroup);
+						ds_list_clear(hostObject.target.hitByGroup);
 					}
 
 					// Handle moving the player away from the wall
@@ -1522,9 +1522,9 @@ if (host != noone && hostObject != noone)
 				{
 					state = eState.BACKWARD_THROW;
 					animTimer = 0;
-					if (target != noone)
+					if (hostObject.target != noone)
 					{
-						ds_list_clear(target.hitByGroup);
+						ds_list_clear(hostObject.target.hitByGroup);
 					}
 
 					// Handle moving the player away from the wall
@@ -1670,7 +1670,7 @@ if (host != noone && hostObject != noone)
 
 			if (hitstun < 1)
 			{
-				ds_list_clear(hitByGroup);
+				ds_list_clear(hostObject.hitByGroup);
 				FAvictim = false;
 
 				if (grounded)
