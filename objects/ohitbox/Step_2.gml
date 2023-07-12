@@ -423,7 +423,7 @@ else
 				var blockingDirection = -ownerOnSide;
 
 				// Turns the target around if the spirit is attacking from behind
-				if (owner.playerOwner.spirit != noone)
+				if (owner.playerOwner.spiritObject != noone)
 				{
 					collision_list[| i].owner.image_xscale = owner.playerOwner.spiritObject.image_xscale * -1;
 				}
