@@ -30,7 +30,16 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	}
 	
 	// If this move temporarily summons the spirit to attack in Spirit OFF
-	SummonInSpiritOff(moveToDo);
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
+	{
+		SummonInSpiritOff(moveToDo);
+	}
+	
+	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && !moveToDo.SpiritData.PerformInSpiritOff)
+	{
+		DeactivateSpirit(false);
+	}
 	
 	if (animTimer > moveToDo.Duration) 
 	{
