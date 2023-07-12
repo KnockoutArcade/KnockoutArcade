@@ -4,29 +4,29 @@ function SummonInSpiritOff(moveToDo)
 {
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
-		if (!spiritSummoned)
+		SummonSpirit();
+		spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
+		spiritObject.y += moveToDo.SpiritData.StartYOffset;
+		if (!moveToDo.SpiritData.SummonSpirit)
 		{
-			SummonSpirit(spirit);
-			spiritObject.image_xscale = image_xscale;
-			spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
-			spiritObject.y += moveToDo.SpiritData.StartYOffset;
-			var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-			spiritFire.depth = depth + 1;
+			spiritState = false;
 		}
-		if (moveToDo.SpiritData.SummonSpirit)
+		else
 		{
-			spiritState = true;
-			if (selectedCharacter.UniqueData.DoubleJump)
-			{
-				canDoubleJump = true;
-			}
 			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 			{
 				currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
 				OverwriteMoveset();
 			}
 		}
+		
+		with (spiritObject)
+		{
+			OverwriteSpiritMoveset(true);
+		}
+		spiritObject.inSpiritOff = true;
 		spiritObject.state = state;
+		spiritObject.startingMove = state;
 		pendingToggle = false;
 	}
 }

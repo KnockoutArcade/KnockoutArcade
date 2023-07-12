@@ -2242,4 +2242,10 @@ if (host != noone && hostObject != noone)
 		
 		DeactivateSpirit(true);
 	}
+	
+	if (inSpiritOff && state != startingMove && state != eState.HITSTOP)
+	{
+		OverwriteSpiritMoveset(false);
+		inSpiritOff = false;
+	}
 }

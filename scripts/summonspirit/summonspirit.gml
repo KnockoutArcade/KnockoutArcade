@@ -12,7 +12,6 @@ function SummonSpirit()
 		spiritObject.hostObject = self;
 		spiritObject.playerID = playerID;
 		spiritObject.opponent = opponent;
-		var spiritID = spiritObject.id;
 		spiritSummoned = true;
 		
 		spiritObject.image_xscale = image_xscale;
