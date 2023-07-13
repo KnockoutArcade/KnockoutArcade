@@ -8,6 +8,7 @@ nextToPlayer = true;
 vulnerable = false;
 hurtboxSet = false;
 attack = 0; // Matches Jay's attack
+creatingHitbox = false;
 
 // Variables for when spirit is summoned in Spirit OFF
 inSpiritOff = false;

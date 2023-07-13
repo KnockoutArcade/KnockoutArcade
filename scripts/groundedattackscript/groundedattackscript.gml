@@ -14,6 +14,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
+		// Hackey way of preventing a crash where a move gets interrupted as soon as a hitbox is created
+		creatingHitbox = false;
+		for (var i = 0; i < array_length(moveToDo.RehitData.HitOnFrames); i++)
+		{
+			if (animTimer == moveToDo.RehitData.HitOnFrames[i] + 1 || animTimer == moveToDo.RehitData.HitOnFrames[i])
+			{
+				creatingHitbox = true;
+				break;
+			}
+		}
 		PerformAttack(moveToDo, true);
 		if (moveToDo.SpiritData.Vulnerable)
 		{
@@ -42,7 +52,10 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
 		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
 	{
-		DeactivateSpirit(false);
+		if (!spiritObject.creatingHitbox)
+		{
+			DeactivateSpirit(false);
+		}
 	}
 	
 	if (animTimer > moveToDo.Duration) 
