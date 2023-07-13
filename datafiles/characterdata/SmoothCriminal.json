@@ -3073,7 +3073,7 @@
         {
           "SpawnFrame": 9,
           "SpawnXOffset": 10,
-          "SpawnYOffset": 35,
+          "SpawnYOffset": -35,
           "ProjectileObject": "oTestLobbingProjectile"
         }
       ],
