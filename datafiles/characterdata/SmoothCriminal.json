@@ -1012,7 +1012,7 @@
           "AttackType": 1,
           "BlockStun": 1.0,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": 1.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -1024,34 +1024,34 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
+          "MeterGain": 5.0,
+          "ComboScaling": 2.0,
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
+          "CounterHitLevel": 2,
+          "Group": 1,
+          "Damage": 12,
+          "MeterGain": 9.0,
+          "AttackHitStop": 13,
+          "AttackHitStun": 27,
+          "KnockBack": 2.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 0.5,
+          "Pushback": 2.0,
+          "ParticleXOffset": 10,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -3231,6 +3231,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-13T15:57:09.2985251-07:00",
+  "LastModified": "2023-07-13T16:31:57.4161974-07:00",
   "LastModifiedBy": "iansb"
 }
