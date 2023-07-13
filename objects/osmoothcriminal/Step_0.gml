@@ -2191,7 +2191,8 @@ if (host != noone && hostObject != noone)
 		DeactivateSpirit(true);
 	}
 	
-	if (inSpiritOff && state != startingMove && state != eState.HITSTOP)
+	// CHanges the moveset to its Spirit ON version
+	if (inSpiritOff && state != startingMove && state != eState.HITSTOP && hostObject.spiritState)
 	{
 		OverwriteSpiritMoveset(false);
 		inSpiritOff = false;
