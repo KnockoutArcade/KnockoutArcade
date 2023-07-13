@@ -2198,7 +2198,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_UpSpecial_MOCKUP_strip8",
-      "Duration": 40,
+      "Duration": 27,
       "NumberOfFrames": 8,
       "FrameData": [
         {
@@ -2214,23 +2214,23 @@
           "ImageIndex": 3
         },
         {
-          "Length": 20,
+          "Length": 17,
           "ImageIndex": 4
         },
         {
-          "Length": 22,
+          "Length": 19,
           "ImageIndex": 5
         },
         {
-          "Length": 29,
+          "Length": 23,
           "ImageIndex": 6
         },
         {
-          "Length": 36,
+          "Length": 25,
           "ImageIndex": 7
         },
         {
-          "Length": 40,
+          "Length": 27,
           "ImageIndex": 8
         }
       ],
@@ -2238,10 +2238,10 @@
       "AttackData": [
         {
           "Start": 15,
-          "Lifetime": 13,
-          "AttackWidth": 14,
-          "AttackHeight": 46,
-          "WidthOffset": 9,
+          "Lifetime": 8,
+          "AttackWidth": 18,
+          "AttackHeight": 47,
+          "WidthOffset": 3,
           "HeightOffset": 11,
           "Group": 12,
           "Damage": 12,
@@ -2307,8 +2307,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 15,
+          "Lifetime": 5,
+          "AttackWidth": 18,
+          "AttackHeight": 35,
+          "WidthOffset": 2,
+          "HeightOffset": 24
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -2606,11 +2615,11 @@
           "AttackType": 2,
           "BlockStun": 10.0,
           "KnockBack": 2.0,
-          "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 0.5,
+          "AirKnockbackVertical": -2.5,
+          "AirKnockbackHorizontal": 0.0,
           "Launches": true,
           "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 0.25,
+          "LaunchKnockbackHorizontal": -0.25,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
@@ -2634,7 +2643,7 @@
           "AttackHitStun": 30,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 0.25,
+          "AirKnockbackHorizontal": -0.25,
           "Pushback": 1.0,
           "ParticleXOffset": 5,
           "ParticleYOffset": 0,
@@ -2642,7 +2651,7 @@
           "ParticleDuration": 5,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "LaunchKnockbackHorizontal": -0.5,
           "ComboScaling": 0.5,
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
@@ -3222,6 +3231,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-12T18:10:21.8970824-07:00",
+  "LastModified": "2023-07-13T15:57:09.2985251-07:00",
   "LastModifiedBy": "iansb"
 }

@@ -6317,7 +6317,7 @@
     {
       "UID": "2871012d-430a-4c86-aba6-597111deac51",
       "MoveType": 4096,
-      "MoveCanCancelInto": 393240,
+      "MoveCanCancelInto": 196632,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7081,7 +7081,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_UpSpecial2_Mockup_strip6",
-      "Duration": 40,
+      "Duration": 27,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -7097,15 +7097,15 @@
           "ImageIndex": 3
         },
         {
-          "Length": 27,
+          "Length": 23,
           "ImageIndex": 4
         },
         {
-          "Length": 35,
+          "Length": 24,
           "ImageIndex": 5
         },
         {
-          "Length": 40,
+          "Length": 27,
           "ImageIndex": 6
         }
       ],
@@ -7347,6 +7347,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-12T18:11:37.5946563-07:00",
+  "LastModified": "2023-07-13T15:57:24.3691855-07:00",
   "LastModifiedBy": "iansb"
 }
