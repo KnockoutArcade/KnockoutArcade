@@ -4045,7 +4045,7 @@
           "MeterGain": 1.0000001,
           "ComboScaling": 0.5,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_light_hit2"
         },
         {
           "Start": 45,
@@ -4076,7 +4076,7 @@
           "MeterGain": 2.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
@@ -4100,7 +4100,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.2,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         },
         {
           "CounterHitLevel": 3,
@@ -4122,7 +4122,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 2.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -4405,7 +4405,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -7347,6 +7347,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-12T13:44:16.4951867-07:00",
+  "LastModified": "2023-07-12T18:11:37.5946563-07:00",
   "LastModifiedBy": "iansb"
 }

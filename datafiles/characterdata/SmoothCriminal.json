@@ -2251,10 +2251,10 @@
           "BlockStun": 2.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 0.5,
           "Launches": true,
           "LaunchKnockbackVertical": -5.0,
-          "LaunchKnockbackHorizontal": 1.0,
+          "LaunchKnockbackHorizontal": 0.5,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 10,
@@ -2278,7 +2278,7 @@
           "AttackHitStun": 21,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -5.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 0.5,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 10,
@@ -2286,7 +2286,7 @@
           "ParticleDuration": 0,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
-          "LaunchKnockbackHorizontal": 1.0,
+          "LaunchKnockbackHorizontal": 0.5,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
@@ -2412,8 +2412,8 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 9,
-          "Lifetime": 25,
+          "Start": 6,
+          "Lifetime": 5,
           "AttackWidth": 29,
           "AttackHeight": 42,
           "WidthOffset": -7,
@@ -2427,9 +2427,9 @@
           "KnockBack": 1.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -2.0,
-          "LaunchKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "Pushback": 1.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -2459,7 +2459,7 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
-          "Launches": true,
+          "Launches": false,
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 1.0,
           "ComboScaling": 1.5,
@@ -2488,8 +2488,11 @@
       "ProjectileData": [],
       "RehitData": {
         "HitBox": 1,
-        "NumberOfHits": 0,
-        "HitOnFrames": []
+        "NumberOfHits": 2,
+        "HitOnFrames": [
+          12,
+          18
+        ]
       },
       "GroundMovementData": {
         "NumberOfWindows": 2,
@@ -2604,10 +2607,10 @@
           "BlockStun": 10.0,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 0.5,
           "Launches": true,
           "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 1.0,
+          "LaunchKnockbackHorizontal": 0.25,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
@@ -2631,15 +2634,15 @@
           "AttackHitStun": 30,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 0.25,
           "Pushback": 1.0,
           "ParticleXOffset": 5,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
+          "ParticleDuration": 5,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
-          "LaunchKnockbackHorizontal": 1.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 0.5,
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
@@ -2683,7 +2686,7 @@
         "Windows": [
           {
             "StartingFrame": 0,
-            "HorizontalSpeed": 0.75,
+            "HorizontalSpeed": 0.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -3219,6 +3222,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-12T13:49:48.8428483-07:00",
+  "LastModified": "2023-07-12T18:10:21.8970824-07:00",
   "LastModifiedBy": "iansb"
 }
