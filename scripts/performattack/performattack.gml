@@ -221,7 +221,7 @@ function PerformAttack(Action, createdBySpirit)
 					
 					// Clears the hitBy data to allow attacks to connect properly
 					ds_list_clear(hitByGroup);
-					if (createdBySpirit)
+					if (createdBySpirit && hostObject.target != noone)
 					{
 						ds_list_clear(hostObject.target.hitByGroup);
 					}

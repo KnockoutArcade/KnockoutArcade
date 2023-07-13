@@ -39,7 +39,8 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	}
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && !moveToDo.SpiritData.PerformInSpiritOff)
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
 	{
 		DeactivateSpirit(false);
 	}
