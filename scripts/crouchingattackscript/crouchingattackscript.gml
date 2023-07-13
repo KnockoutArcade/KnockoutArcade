@@ -11,6 +11,16 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
+		// Hackey way of preventing a crash where a move gets interrupted as soon as a hitbox is created
+		creatingHitbox = false;
+		for (var i = 0; i < array_length(moveToDo.RehitData.HitOnFrames); i++)
+		{
+			if (animTimer == moveToDo.RehitData.HitOnFrames[i] + 1 || animTimer == moveToDo.RehitData.HitOnFrames[i])
+			{
+				creatingHitbox = true;
+				break;
+			}
+		}
 		PerformAttack(moveToDo, true);
 		if (moveToDo.SpiritData.Vulnerable)
 		{
@@ -36,9 +46,13 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	}
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && !moveToDo.SpiritData.PerformInSpiritOff)
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
 	{
-		DeactivateSpirit(false);
+		if (!spiritObject.creatingHitbox)
+		{
+			DeactivateSpirit(false);
+		}
 	}
 	
 	if (animTimer > moveToDo.Duration) 
