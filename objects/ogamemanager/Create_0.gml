@@ -8,6 +8,7 @@ global.freezeTimer = false; // For SCREEN_FREEZE
 global.hitstop = 0;
 
 global.toggleHitboxVisibility = false;
+global.togglePresentationMode = false;
 
 global.currentRound = 0;
 
