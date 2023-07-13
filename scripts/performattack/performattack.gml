@@ -137,6 +137,7 @@ function PerformAttack(Action, createdBySpirit)
 	}
 	
 	// Sound FX
+	// Keep this commented out until every move has sound effects.
 	//for (var i = 0; i < Action.NumberOfSounds; i++)
 	//{
 	//	if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
