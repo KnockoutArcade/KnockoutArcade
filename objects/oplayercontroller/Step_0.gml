@@ -492,9 +492,16 @@ else if (hitstop != 0)
 	state = eState.HITSTOP;
 }
 
-
 if (state == eState.HITSTOP)
 {
+	if (spiritObject != noone)
+	{
+		spiritObject.hitstop = hitstop;
+		spiritObject.state = state;
+		spiritObject.blockstun = blockstun;
+		spiritObject.isCrouchBlocking = isCrouchBlocking;
+	}
+	
 	hitstunShuffleTimer++;
 	
 	if (hitstun > 0)
@@ -544,6 +551,13 @@ if (state == eState.HITSTOP)
 			if (attackState != -1)
 			{
 				CancelData(attackState, attack, false);
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						CancelData(attackState, attack, false);
+					}
+				}
 			}
 		}
 	}
@@ -613,8 +627,6 @@ if (state == eState.HITSTOP)
 		}
 	}
 	image_speed = 0;
-	
-	
 }
 
 // Handle Being Grabbed
@@ -650,6 +662,13 @@ if (state == eState.SCREEN_FREEZE)
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						state = eState.RUSH_CANCEL_AIR;
+					}
+				}
 			}
 			else if (verticalMoveDir == 1)
 			{
@@ -657,11 +676,29 @@ if (state == eState.SCREEN_FREEZE)
 				jumpHsp = walkSpeed * 1.5 * image_xscale;
 				state = eState.RUSH_CANCEL_UP;
 				grounded = false;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						vsp = -global.rcUpSpeed;
+						jumpHsp = walkSpeed * 1.5 * image_xscale;
+						state = eState.RUSH_CANCEL_UP;
+						grounded = false;
+					}
+				}
 			}
 			else
 			{
 				rcForwardTimer = 0;
 				state = eState.RUSH_CANCEL_FORWARD;
+				if (spiritObject != noone)
+				{
+					with (spiritObject)
+					{
+						rcForwardTimer = 0;
+						state = eState.RUSH_CANCEL_FORWARD;
+					}
+				}
 			}
 		}
 		else
@@ -1343,7 +1380,66 @@ switch state
 		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
 	}
 	break;
-
+	
+	case eState.ENHANCED_NEUTRAL_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_SIDE_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_UP_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial2);
+	}
+	break;
+	
+	case eState.ENHANCED_DOWN_SPECIAL_2: 
+	{
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale);
+		}
+		
+		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
+	}
+	break;
 
 	case eState.REKKA_LAUNCHER: 
 	{
@@ -1432,7 +1528,7 @@ switch state
 		hurtbox.image_yscale = 25;
 		hurtboxOffset = -7;
 		
-		PerformAttack(selectedCharacter.Grab);
+		PerformAttack(selectedCharacter.Grab, false);
 		
 		if (animTimer > 24)
 		{
@@ -1519,6 +1615,16 @@ switch state
 	
 	case eState.BEING_GRABBED : 
 	{
+		if (spiritObject != noone)
+		{
+			DeactivateSpirit(false);
+			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
+			{
+				currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+				OverwriteMoveset();
+			}
+		}
+		
 		animTimer = 0;
 		hsp = 0;
 		grounded = true;
@@ -1537,7 +1643,7 @@ switch state
 		sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 		image_index = 0;
 		
-		PerformAttack(selectedCharacter.ForwardThrow);
+		PerformAttack(selectedCharacter.ForwardThrow, false);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
@@ -1563,7 +1669,7 @@ switch state
 		sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 		image_index = 0;
 		
-		PerformAttack(selectedCharacter.BackwardThrow);
+		PerformAttack(selectedCharacter.BackwardThrow, false);
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
@@ -1585,6 +1691,11 @@ switch state
 	
 	case eState.THROW_TECH : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		grounded = true;
 		inAttackState = false;
 		
@@ -1601,6 +1712,11 @@ switch state
 	
 	case eState.HURT : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;
@@ -1684,6 +1800,11 @@ switch state
 	
 	case eState.LAUNCHED : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		animTimer = 1;
 		sprite_index = CharacterSprites.launched_Sprite;
 			if (image_index > (image_number - 1))
@@ -1712,6 +1833,11 @@ switch state
 	
 	case eState.KNOCKED_DOWN : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		cancelable = false;
 		grounded = true;
 		invincible = true;
@@ -1746,6 +1872,11 @@ switch state
 	
 	case eState.GETUP : 
 	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
 		cancelable = false;
 		grounded = true;
 		invincible = true;
@@ -1816,13 +1947,7 @@ switch state
 		{
 			blockbuffer = true;
 		}
-		/*
-		if (playerID == 2)
-		{
-			prevState = eState.STANDING_LIGHT_ATTACK;
-			blockbuffer = true;
-		}
-		*/
+		
 		// Buffer attack out of block
 		switch attack 
 		{
@@ -1898,8 +2023,6 @@ switch state
 			knockbackVel = 0;
 		}
 		
-		
-		
 		if (!global.game_paused)
 		{
 			blockstun--;
@@ -1940,7 +2063,19 @@ switch state
 			blockbuffer = false;
 		}
 		
-		
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+			spiritObject.animTimer = 1;
+			spiritObject.canBlock = true;
+			spiritObject.cancelable = false;
+			spiritObject.grounded = true;
+			spiritObject.blockstun = blockstun;
+			spiritObject.isCrouchBlocking = isCrouchBlocking;
+			spiritObject.hsp = hsp;
+			spiritObject.knockbackVel = knockbackVel;
+			spiritObject.blockbuffer = blockbuffer;
+		}
 		
 	}
 	break;
@@ -2061,10 +2196,38 @@ else
 }
 
 
-
+// Handle player and spirit health
 if (hp < 0)
 {
 	hp = 0;
+}
+if (spirit != noone)
+{
+	if (spiritCurrentHealth < 0)
+	{
+		spiritCurrentHealth = 0;
+		spiritBroken = true;
+	}
+	if (spiritCurrentHealth > spiritMaxHealth)
+	{
+		spiritCurrentHealth = spiritMaxHealth;
+	}
+	if (!spiritState && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0)
+	{
+		if (!spiritBroken)
+		{
+			spiritCurrentHealth += spiritRegenSpeed;
+		}
+		else
+		{
+			spiritCurrentHealth += spiritKORegenSpeed;
+		}
+	}
+	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth)
+	{
+		spiritCurrentHealth = spiritMaxHealth;
+		spiritBroken = false;
+	}
 }
 if (superMeter > 100)
 {
@@ -2074,7 +2237,6 @@ if (superMeter < 0)
 {
 	superMeter = 0;
 }
-
 
 if (target != noone)
 {

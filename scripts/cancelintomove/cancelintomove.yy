@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "CancelScripts",
+    "path": "folders/Scripts/CancelScripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "CancelIntoMove",

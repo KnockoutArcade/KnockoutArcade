@@ -1,8 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-x = (global.camObj.x-80) + ui_xOffset;
+if (!global.togglePresentationMode)
+{
+	x = (global.camObj.x-80) + ui_xOffset;
 
-draw_self();
-
-
+	draw_self();
+}

@@ -24,6 +24,10 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 				{
 					image_xscale = -this.image_xscale;
 				}
+				else
+				{
+					image_xscale = this.image_xscale;
+				}
 			}
 			else
 			{

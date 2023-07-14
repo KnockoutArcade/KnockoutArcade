@@ -1210,6 +1210,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1396,6 +1397,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1547,6 +1549,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1719,6 +1722,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -1972,6 +1976,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2115,6 +2120,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2273,6 +2279,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2431,6 +2438,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2604,6 +2612,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2805,6 +2814,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -2952,6 +2962,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3107,6 +3118,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3335,6 +3347,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3478,6 +3491,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3633,6 +3647,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -3841,6 +3856,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4101,6 +4117,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4331,6 +4348,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4397,6 +4415,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4554,6 +4573,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4620,6 +4640,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4686,6 +4707,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -4893,6 +4915,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5049,6 +5072,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5184,6 +5208,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5334,6 +5359,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5400,6 +5426,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5466,6 +5493,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5532,6 +5560,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5598,6 +5627,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5664,6 +5694,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5730,6 +5761,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5796,6 +5828,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5862,6 +5895,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5928,6 +5962,7 @@
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
+        "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
         "Vulnerable": false
@@ -5938,10 +5973,7 @@
     "AdditionalMovesets": 0,
     "SpiritData": 0,
     "Spirit": "None",
-    "Version": "Ver1.1.2",
-    "UID": "5f3ef75e-dd61-463d-a008-3a7c55721297",
-    "LastModified": "2023-06-23T13:48:54.5187982-07:00",
-    "LastModifiedBy": "iansb"
+    "DoubleJump": false
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "sfx_Footstep_H",
@@ -5955,14 +5987,10 @@
     ],
     "RunningSoundEffect": "sfx_Footstep_H",
     "RunForwardFootsteps": [],
-    "RunBackwardFootsteps": [],
-    "Version": "Ver1.1.4",
-    "UID": "388d04db-e4c6-44c2-bcee-af0580cf6fef",
-    "LastModified": "2023-07-09T12:01:54.6685982-07:00",
-    "LastModifiedBy": "creep"
+    "RunBackwardFootsteps": []
   },
   "Version": "Ver1.1.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-09T13:36:49.4114701-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-07-10T14:41:34.0833646-07:00",
+  "LastModifiedBy": "colstrau"
 }

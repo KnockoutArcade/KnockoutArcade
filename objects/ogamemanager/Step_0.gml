@@ -11,6 +11,9 @@ switch (global.gameMode)
 		// A player is defeated
 		if (p1.hp == 0 || p2.hp == 0)
 		{
+			p1.isEXFlash = false;
+			p2.isEXFlash = false;
+			
 			global.gameHalt = true;
 			gameHaltTimer++;
 	

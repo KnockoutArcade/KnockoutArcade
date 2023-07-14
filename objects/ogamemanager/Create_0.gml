@@ -8,6 +8,7 @@ global.freezeTimer = false; // For SCREEN_FREEZE
 global.hitstop = 0;
 
 global.toggleHitboxVisibility = false;
+global.togglePresentationMode = false;
 
 global.currentRound = 0;
 
@@ -18,7 +19,9 @@ p2 = noone;
 global.camObj = noone;
 
 healthbar1 = noone;
-healthbar1 = noone;
+healthbar2 = noone;
+spiritbar1 = noone;
+spiritbar2 = noone;
 TimerObject = noone;
 hudObject = noone;
 
