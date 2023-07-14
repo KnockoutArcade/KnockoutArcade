@@ -113,13 +113,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sDraw;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		else if (global.p1Rounds >= 2)
@@ -131,13 +132,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sPlayer1Wins;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		else if (global.p2Rounds >= 2)
@@ -149,13 +151,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sPlayer2Wins;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		
