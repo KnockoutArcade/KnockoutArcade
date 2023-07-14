@@ -38,8 +38,6 @@ function ResultsScreen()
     {
         P1resultSelRow = P1resultSelRowMax - 1;
     }
-	
-	P1cursorY = 69 * P1resultSelRow + 240; 
 
     if (P1menuConfirm)
 	{
@@ -67,8 +65,6 @@ function ResultsScreen()
     {
         P2resultSelRow = P2resultSelRowMax - 1;
     }
-	
-	//P2cursorY = 69 * P2resultSelRow + 240; 
 
     if (P2menuConfirm)
 	{
