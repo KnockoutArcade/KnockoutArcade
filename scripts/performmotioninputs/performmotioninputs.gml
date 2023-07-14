@@ -67,6 +67,7 @@ function PerformMotionInputs(attack)
 			if (enhanced[i])
 			{
 				inputPerformed = true;
+				isEXFlash = true;
 			}
 		}
 		
@@ -97,7 +98,7 @@ function PerformMotionInputs(attack)
 			}
 			
 			// Enhances input
-			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) )
+			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) ) && (superMeter >= 25 || array_length(currentMotionInput) <= 1)
 			{
 				var currentMotionInput = ds_list_find_value(listOfInputs, longerIndex);
 				var inputString = "";
@@ -106,8 +107,13 @@ function PerformMotionInputs(attack)
 					inputString = inputString + string(currentMotionInput[i]);
 				}
 				
-				show_debug_message("Input " + inputString + " Performed");
 				enhanced[longerIndex] = true;
+				if (array_length(currentMotionInput) > 1) // hackey way of detecting if the motion is a Rekka by assuming that all motions done with 1 input are Rekkas
+				{
+					superMeter -= 25;
+					hasUsedMeter = true
+				}
+				
 				if (changeImmediately)
 				{
 					changeFrame = animTimer;

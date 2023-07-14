@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+audio_group_load(audiogroup_soundeffect);
+audio_group_load(audiogroup_music);
+
 // Projectile Vars
 global.ProjectileBase_HitboxData = { // Seperating the name of the projectile from HitboxData to make it easier to read
 	// Projectiles have slightly different data than normal attacks. They don't need animation or movement data.
@@ -88,3 +91,12 @@ global.campaignMapLocationX = 0;
 global.campaignMapLocationY = 0;
 
 global.completedLevels = ds_list_create();
+
+// Rush Cancel global variables (both players use them)
+global.rcForwardSpeed = 4;
+global.rcForwardDuration = 12;
+global.rcUpSpeed = 5;
+global.rcUpForwardSpeed = 2;
+global.rcUpFallSpeed = 0.4;
+global.rcAirSpeed = 10;
+global.rcAirHorizontalSpeed = 2;

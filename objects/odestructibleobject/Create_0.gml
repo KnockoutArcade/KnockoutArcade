@@ -3,6 +3,10 @@
 
 hp = 50;
 
+// Prevents crashes from ProcessHit
+spiritObject = noone;
+pendingToggle = false;
+
 hsp = 0;
 vsp = 0;
 
@@ -25,6 +29,7 @@ with (wallCollisionBox)
 sprite_index = sTrashBin;
 
 hitstun = 0;
+hitstop = 0;
 inAttackState = false;
 
 // Hurtbox Variables

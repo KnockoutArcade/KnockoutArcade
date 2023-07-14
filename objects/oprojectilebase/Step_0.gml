@@ -6,7 +6,7 @@ if (global.game_paused)
 	exit;
 }
 
-if (!global.gameHalt)
+if (!global.gameHalt && !global.freezeTimer)
 {
 	lifetime--;
 	

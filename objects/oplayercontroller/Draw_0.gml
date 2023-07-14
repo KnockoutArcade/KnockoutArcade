@@ -23,6 +23,28 @@ for (var i = 0; i < 100; i++;)
 	}
 }
 
+// Draw Debug Origin
+if (global.toggleHitboxVisibility) draw_circle(xHome,y, 1, true)
+
+if (isEXFlash)
+{
+	EXFlashTimer++;
+	if (EXFlashTimer >= 2 && !displayEXFlash)
+	{
+		displayEXFlash = true; // Toggle flash
+		EXFlashTimer = 0;
+	}
+	else if (EXFlashTimer >= 2 && displayEXFlash)
+	{
+		displayEXFlash = false; // Toggle flash
+		EXFlashTimer = 0;
+	}
+}
+else
+{
+	displayEXFlash = false; // Disable flash
+	EXFlashTimer = 0;
+}
 
 shader_set(sh_CharPalettes);
 
@@ -126,6 +148,13 @@ shader_set_uniform_f(sh_handle_match16,
 	colorMatch16.blue,
 	
 );
+shader_set_uniform_f(sh_handle_EXmatch,
+	EXmatch.red,
+	EXmatch.green,
+	EXmatch.blue,
+	
+);
+
 #endregion
 
 // Set up color Replaces
@@ -226,6 +255,25 @@ shader_set_uniform_f(sh_handle_replace16,
 	colorReplace16.blue,
 	
 );
+
+if (displayEXFlash)
+{
+	shader_set_uniform_f(sh_handle_EXreplace,
+		1,
+		1,
+		0,
+	
+	);
+}
+else
+{
+	shader_set_uniform_f(sh_handle_EXreplace,
+		0,
+		0,
+		0,
+	
+	);
+}
 #endregion
 
 draw_self();

@@ -5,6 +5,8 @@ lifetime = 0;
 primary = false;
 
 owner = noone;
+spirit = noone;
+
 hurtboxID = 0;
 hurtboxProperty = {};
 

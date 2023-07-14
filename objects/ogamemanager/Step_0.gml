@@ -11,6 +11,9 @@ switch (global.gameMode)
 		// A player is defeated
 		if (p1.hp == 0 || p2.hp == 0)
 		{
+			p1.isEXFlash = false;
+			p2.isEXFlash = false;
+			
 			global.gameHalt = true;
 			gameHaltTimer++;
 	
@@ -75,11 +78,11 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1)
 			{
-				if (p1.hp > p2.hp)
+				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
 					global.p1Rounds++;
 				}
-				else if (p2.hp > p1.hp)
+				else if (p2.hp/p2.maxHitPoints > p1.hp/p1.maxHitPoints)
 				{
 					global.p2Rounds++;
 				}
@@ -110,13 +113,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sDraw;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		else if (global.p1Rounds >= 2)
@@ -128,13 +132,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sPlayer1Wins;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		else if (global.p2Rounds >= 2)
@@ -146,13 +151,14 @@ switch (global.gameMode)
 				{
 					sprite_index = sPlayer2Wins;
 					image_index = true;
-					lifetime = 130;
+					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer == 220)
+			else if(gameHaltTimer >= 220)
 			{
-				room_goto(rCharacterSelectScreen);
+				state = 1;
 				audio_stop_sound(testBGM);
+				ResultsScreen();
 			}
 		}
 		

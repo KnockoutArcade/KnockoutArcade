@@ -20,7 +20,7 @@
 		TLDR: I'm trying to future-proof this code when/if I add more characters.
 */
 
-function PerformAttack(Action)
+function PerformAttack(Action, createdBySpirit)
 {
 	var hitbox = 0;
 	// Animations
@@ -136,12 +136,28 @@ function PerformAttack(Action)
 		}
 	}
 	
+	// Sound FX
+	// Keep this commented out until every move has sound effects.
+	//for (var i = 0; i < Action.NumberOfSounds; i++)
+	//{
+	//	if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
+	//	{
+	//		audio_play_sound(asset_get_index(Action.MoveSoundData[i].SoundEffect), 1, false);
+	//	}
+	//}
+	
 	
 	// Hitboxes
 	for (var i = 0; i < Action.NumberOfHitboxes; i++;) 
 	{
 		if (animTimer == Action.AttackProperty[i].Start) 
 		{
+			var hostID = noone;
+			if (createdBySpirit)
+			{
+				hostID = hostObject.id;
+			}
+			
 			hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
 			with (hitbox) 
 			{
@@ -149,7 +165,15 @@ function PerformAttack(Action)
 				hitboxID = i;
 				image_xscale = Action.AttackProperty[i].AttackWidth * other.image_xscale;
 				image_yscale = Action.AttackProperty[i].AttackHeight;
-				owner = other.id;
+				if (!createdBySpirit)
+				{
+					owner = other.id;
+				}
+				else
+				{
+					owner = hostID;
+					spirit = other.id;
+				}
 			
 				// Pass through attack data
 				attackProperty = Action.AttackProperty[i];
@@ -168,6 +192,12 @@ function PerformAttack(Action)
 			{
 				if (animTimer == Action.RehitData.HitOnFrames[j]) 
 				{
+					var hostID = noone;
+					if (createdBySpirit)
+					{
+						hostID = hostObject.id;
+					}
+					
 					hitbox = instance_create_layer(x + (Action.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - Action.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitbox) 
 					{
@@ -175,20 +205,31 @@ function PerformAttack(Action)
 						hitboxID = i;
 						image_xscale = Action.AttackProperty[i].AttackWidth * other.image_xscale;
 						image_yscale = Action.AttackProperty[i].AttackHeight;
-						owner = other.id;
+						if (!createdBySpirit)
+						{
+							owner = other.id;
+						}
+						else
+						{
+							owner = hostID;
+							spirit = other.id;
+						}
 			
 						// Pass through attack data
 						attackProperty = Action.AttackProperty[i];
 						counterHitProperty = Action.CounterHitProperty[i];
-						
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
-						ds_list_clear(hitByGroup);
-						if (target != noone)
-						{
-							ds_list_clear(target.hitByGroup);
-						}
+					ds_list_clear(hitByGroup);
+					if (createdBySpirit && hostObject.target != noone)
+					{
+						ds_list_clear(hostObject.target.hitByGroup);
+					}
+					if (target != noone)
+					{
+						ds_list_clear(target.hitByGroup);
+					}
 				}
 			}
 		}
@@ -203,12 +244,27 @@ function PerformAttack(Action)
 		{
 			if (animTimer == Action.ProjectileData[i].SpawnFrame)
 			{
+				var hostID = noone;
+				if (createdBySpirit)
+				{
+					hostID = hostObject.id;
+				}
+				
 				var Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", asset_get_index(Action.ProjectileData[i].ProjectileObject));
 			
 				with (Projectile)
 				{
 					image_xscale = other.image_xscale;
-					playerOwner = other.id;
+					
+					if (!createdBySpirit)
+					{
+						playerOwner = other.id;
+					}
+					else
+					{
+						playerOwner = hostID;
+						spiritOwner = other.id;
+					}
 					
 					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
 					with (hitboxID) 
@@ -235,6 +291,12 @@ function PerformAttack(Action)
 	{
 		if (animTimer == Action.HurtboxProperty[i].Start) 
 		{
+			var hostID = noone;
+			if (createdBySpirit)
+			{
+				hostID = hostObject.id;
+			}
+			
 			hitbox = instance_create_layer(x + (Action.HurtboxProperty[i].WidthOffset * other.image_xscale), y - Action.HurtboxProperty[i].HeightOffset, "hitboxes", oPlayerHurtbox);
 			with (hitbox) 
 			{
@@ -242,11 +304,18 @@ function PerformAttack(Action)
 				hurtboxID = i;
 				image_xscale = Action.HurtboxProperty[i].AttackWidth * other.image_xscale;
 				image_yscale = Action.HurtboxProperty[i].AttackHeight;
-				owner = other.id;
+				if (!createdBySpirit)
+				{
+					owner = other.id;
+				}
+				else
+				{
+					owner = hostID;
+					spirit = other.id;
+				}
 				
 				hurtboxProperty = Action.HurtboxProperty[i];
 			}
 		}
 	}
-	
 }

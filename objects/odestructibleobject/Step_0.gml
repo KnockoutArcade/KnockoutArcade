@@ -13,55 +13,58 @@ switch (state)
 	{
 		cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
 		
-		// Update Movement
-		vsp += fallSpeed;
-		
-		if (grounded)
+		if (!global.freezeTimer)
 		{
-			sprite_index = CharacterSprites.hurt_Sprite;
+			// Update Movement
+			vsp += fallSpeed;
 			
-			// This code handles getting knocked back on the ground.
-			// We use 1 instead of 0 to make sure any decimal values just get ignored.
-			// It would be possible if our knockbackVel had a value of 2.5 for example. Since
-			// we only decrease KnockbackVel by 1, the remaining .5 would cause the object
-			// to occillate.
-			if (knockbackVel > 1)
+			if (grounded)
 			{
-				hsp = knockbackVel * knockbackDirection;
-				knockbackVel--;
+				sprite_index = CharacterSprites.hurt_Sprite;
+				
+				// This code handles getting knocked back on the ground.
+				// We use 1 instead of 0 to make sure any decimal values just get ignored.
+				// It would be possible if our knockbackVel had a value of 2.5 for example. Since
+				// we only decrease KnockbackVel by 1, the remaining .5 would cause the object
+				// to occillate.
+				if (knockbackVel > 1)
+				{
+					hsp = knockbackVel * knockbackDirection;
+					knockbackVel--;
+				} 
+				else if (knockbackVel < -1) 
+				{
+					hsp = knockbackVel * knockbackDirection;
+					knockbackVel++;
+				}
+				else
+				{
+					hsp = 0;
+					knockbackVel = 0;
+				}
 			} 
-			else if (knockbackVel < -1) 
+			
+			if (hitstun > 0)
 			{
-				hsp = knockbackVel * knockbackDirection;
-				knockbackVel++;
+				hitstun--;
 			}
 			else
 			{
-				hsp = 0;
-				knockbackVel = 0;
+				ds_list_clear(hitByGroup);
 			}
-		} 
-		
-		if (hitstun > 0)
-		{
-			hitstun--;
-		}
-		else
-		{
-			ds_list_clear(hitByGroup);
-		}
-		
-		// Destroy this object if at 0 hp
-		if (hp <= 0)
-		{
-			instance_destroy(hurtbox);
-			if (hasWallCollision)
+			
+			// Destroy this object if at 0 hp
+			if (hp <= 0)
 			{
-				instance_destroy(wallCollisionBox);
+				instance_destroy(hurtbox);
+				if (hasWallCollision)
+				{
+					instance_destroy(wallCollisionBox);
+				}
+				ds_list_destroy(hitByGroup);
+				instance_destroy();
+				oPlayerController.target = noone;
 			}
-			ds_list_destroy(hitByGroup);
-			instance_destroy();
-			oPlayerController.target = noone;
 		}
 	}
 	break;
@@ -82,16 +85,19 @@ switch (state)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(global.hitstop, 3);
+			x = xHome + min(hitstop, 3);
 		}
 		else 
 		{
-			x = xHome - min(global.hitstop, 3);
+			x = xHome - min(hitstop, 3);
 		}
 		
-		if (global.hitstop == 0)
+		hitstop--;
+		
+		if (hitstop == 0)
 		{
 			state = eState.IDLE;
+			x = xHome;
 		}
 	}
 	break;
@@ -134,11 +140,14 @@ if (state != eState.HITSTOP)
 			inAttackState = false;
 		}
 	}
-
-	x += hsp;
-	y += vsp;
-
-	floor(y);
+	
+	if (!global.freezeTimer)
+	{
+		x += hsp;
+		y += vsp;
+		
+		floor(y);
+	}
 }
 
 
