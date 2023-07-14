@@ -168,15 +168,15 @@
           "MeterGain": 2.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 1,
+          "CounterHitLevel": 2,
           "Group": 1,
           "Damage": 15,
-          "MeterGain": 0.0,
+          "MeterGain": 3.0,
           "AttackHitStop": 5,
           "AttackHitStun": 20,
           "KnockBack": 4.0,
@@ -185,14 +185,14 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "ComboScaling": 1.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -274,8 +274,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -445,8 +444,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": true,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -507,15 +505,15 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "CounterHitLevel": 1,
+          "Group": 1,
+          "Damage": 3,
+          "MeterGain": 0.3,
+          "AttackHitStop": 4,
+          "AttackHitStun": 10,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -0.5,
+          "AirKnockbackHorizontal": 0.5,
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -524,7 +522,7 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "ComboScaling": 0.0,
+          "ComboScaling": 0.2,
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit"
         }
@@ -577,8 +575,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -645,7 +642,7 @@
           "WidthOffset": 4,
           "HeightOffset": 16,
           "Group": 1,
-          "Damage": 6,
+          "Damage": 2,
           "AttackHitStop": 4,
           "AttackHitStun": 30,
           "AttackType": 1,
@@ -673,8 +670,8 @@
         {
           "CounterHitLevel": 1,
           "Group": 1,
-          "Damage": 6,
-          "MeterGain": 0.0,
+          "Damage": 3,
+          "MeterGain": 0.2,
           "AttackHitStop": 4,
           "AttackHitStun": 30,
           "KnockBack": 0.0,
@@ -745,8 +742,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -785,7 +781,7 @@
           "WidthOffset": 7,
           "HeightOffset": 22,
           "Group": 1,
-          "Damage": 15,
+          "Damage": 6,
           "AttackHitStop": 8,
           "AttackHitStun": 20,
           "AttackType": 1,
@@ -811,24 +807,24 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "CounterHitLevel": 1,
+          "Group": 1,
+          "Damage": 7,
+          "MeterGain": 2.0,
+          "AttackHitStop": 8,
+          "AttackHitStun": 20,
+          "KnockBack": 4.0,
+          "AirKnockbackVertical": 1.0,
+          "AirKnockbackHorizontal": 3.0,
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "ComboScaling": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": 0.2,
+          "LaunchKnockbackHorizontal": 2.0,
+          "ComboScaling": 1.0,
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         }
@@ -881,8 +877,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -954,8 +949,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1102,8 +1096,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1168,34 +1161,34 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
+          "MeterGain": 7.0,
+          "ComboScaling": 3.0,
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
+          "CounterHitLevel": 3,
+          "Group": 3,
+          "Damage": 18,
+          "MeterGain": 10.0,
+          "AttackHitStop": 24,
+          "AttackHitStun": 45,
+          "KnockBack": 1.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
-          "Pushback": 0.0,
+          "Pushback": 0.5,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "ComboScaling": 0.0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 8,
+          "Launches": true,
+          "LaunchKnockbackVertical": 2.0,
+          "LaunchKnockbackHorizontal": 2.0,
+          "ComboScaling": 3.0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1246,8 +1239,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1315,9 +1307,9 @@
           "CounterHitLevel": 1,
           "Group": 1,
           "Damage": 3,
-          "MeterGain": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 3,
+          "MeterGain": 4.0,
+          "AttackHitStop": 3,
+          "AttackHitStun": 6,
           "KnockBack": 3.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 0.5,
@@ -1329,7 +1321,7 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "ComboScaling": 0.0,
+          "ComboScaling": 3.0,
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit"
         }
@@ -1382,8 +1374,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1576,8 +1567,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1733,8 +1723,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -1878,8 +1867,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -2031,8 +2019,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -2184,8 +2171,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -2364,8 +2350,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -2557,8 +2542,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": true
+        "Vulnerable": false
       }
     },
     {
@@ -2729,8 +2713,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": true,
-        "OnlyInSpiritOff": false
+        "Vulnerable": true
       }
     },
     {
@@ -2888,8 +2871,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -3023,8 +3005,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -3115,8 +3096,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": false
+        "Vulnerable": false
       }
     },
     {
@@ -3207,8 +3187,7 @@
         "SummonSpirit": false,
         "ReturnToPlayer": false,
         "MaintainPosition": false,
-        "Vulnerable": false,
-        "OnlyInSpiritOff": true
+        "Vulnerable": false
       }
     }
   ],
@@ -3216,10 +3195,7 @@
     "AdditionalMovesets": 0,
     "SpiritData": 2,
     "Spirit": "None",
-    "DoubleJump": false,
-    "LinkMovesetsWithSpirits": false,
-    "SpiritOffMoveset": 0,
-    "SpiritOnMoveset": 0
+    "DoubleJump": false
   },
   "NonmoveSoundData": {
     "WalkingSoundEffect": "",
@@ -3231,6 +3207,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-13T17:45:54.0668311-07:00",
-  "LastModifiedBy": "iansb"
+  "LastModified": "2023-07-13T19:37:51.2768044-07:00",
+  "LastModifiedBy": "cstra"
 }
