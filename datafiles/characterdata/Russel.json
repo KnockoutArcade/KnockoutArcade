@@ -5775,7 +5775,7 @@
       "UID": "9cc77472-ac4b-4444-93cf-ecdf536ce0c2",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 8,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
