@@ -7153,8 +7153,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -7347,6 +7347,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-13T15:57:24.3691855-07:00",
+  "LastModified": "2023-07-13T17:45:34.2398857-07:00",
   "LastModifiedBy": "iansb"
 }
