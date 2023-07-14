@@ -330,3 +330,31 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 	// the active moveset. To add the move, simply overwrite what was already there.
 	OverwriteMoveset();
 }
+
+// Spirit Data
+spiritState = false; // false = Spirit OFF, false = Spirit ON
+spirit = noone;
+spiritObject = noone;
+spiritSummoned = false;
+spiritBroken = false; // Host cannot summon spirit when the spirit loses all its health
+spiritMaxHealth = 0;
+spiritCurrentHealth = 0;
+spiritRegenSpeed = 0;
+spiritKORegenSpeed = 0;
+if (selectedCharacter.UniqueData.SpiritData == 1)
+{
+	for (var i = 0; i < array_length(global.characterData); i++)
+	{
+		if (selectedCharacter.UniqueData.Spirit == global.characterData[i].Name)
+		{
+			spirit = global.characterData[i];
+			spiritMaxHealth = spirit.MaxHP;
+			spiritCurrentHealth = spiritMaxHealth;
+			spiritRegenSpeed = spirit.RegenSpeed;
+			spiritKORegenSpeed = spirit.KORegenSpeed;
+			break;
+		}
+	}
+}
+// If host is trying to summon/unsummon spirit but gets interrupted, spirit gets summoned after hitstop
+pendingToggle = false;

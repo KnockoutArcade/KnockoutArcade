@@ -3,6 +3,10 @@
 
 hp = 50;
 
+// Prevents crashes from ProcessHit
+spiritObject = noone;
+pendingToggle = false;
+
 hsp = 0;
 vsp = 0;
 

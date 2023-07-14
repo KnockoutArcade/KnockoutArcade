@@ -32,6 +32,7 @@ function OverwriteMoveset()
 				nextMove.InMovesets = selectedCharacter.MoveData[i].InMovesets;
 				nextMove.SwitchMoveset = selectedCharacter.MoveData[i].SwitchMoveset;
 				nextMove.SwitchToMoveset = selectedCharacter.MoveData[i].SwitchToMoveset;
+				nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
 
 				if(selectedCharacter.MoveData[i].IsThrow)
 				{

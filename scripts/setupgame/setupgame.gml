@@ -59,6 +59,28 @@ function SetupGame()
 				image_xscale = 39;
 				ui_xOffset = 89;
 			}
+			
+			if (p1.spirit != noone)
+			{
+				spiritbar1 = instance_create_layer(66, 30, "UI", oSpiritBar);
+				with (spiritbar1) 
+				{
+					attatchedTo = other.p1;
+					image_xscale = -33;
+					ui_xOffset = 68;
+				}
+			}
+	
+			if (p2.spirit != noone)
+			{
+				spiritbar2 = instance_create_layer(94, 30, "UI", oSpiritBar);
+				with (spiritbar2) 
+				{
+					attatchedTo = other.p2;
+					image_xscale = 33;
+					ui_xOffset = 92;
+				}
+			}
 	
 			TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
 			global.gameTimer = 99;
@@ -89,6 +111,8 @@ function SetupGame()
 				p1Character = global.p1SelectedCharacter;
 				p2Character = global.p2SelectedCharacter;
 			}
+			hudObject.p1Reference = p1;
+			hudObject.p2Reference = p2;
 	
 			frameAdvantage = 0;
 			calculateFrameData = false;

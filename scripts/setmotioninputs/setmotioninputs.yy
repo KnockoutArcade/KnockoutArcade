@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "EnhancerScripts",
+    "path": "folders/Scripts/EnhancerScripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "SetMotionInputs",
