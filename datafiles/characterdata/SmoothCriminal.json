@@ -1,7 +1,7 @@
 {
   "Name": "SmoothCriminal",
   "MaxHitPoints": 50,
-  "RegenSpeed": 0.25,
+  "RegenSpeed": 0.175,
   "KORegenSpeed": 0.1,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
