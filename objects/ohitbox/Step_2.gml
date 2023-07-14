@@ -521,6 +521,7 @@ else
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 23) + (111 * isP2), 61, "Particles", oParticles);
 							with(counterParticle)
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sSmallCounter;
 								depth = 2;
@@ -531,6 +532,7 @@ else
 							var counterParticle = instance_create_layer((global.camObj.x - 80 + 30) + (97 * isP2), 70, "Particles", oParticles);
 							with(counterParticle)
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sMediumCounter;
 								depth = 2;
@@ -541,6 +543,7 @@ else
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with(counterParticle)
 							{
+								owner = other.owner;
 								lifetime = owner.hitstop;
 								sprite_index = sCOUNTERtext;
 								depth = 2;
