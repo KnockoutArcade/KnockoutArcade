@@ -6,8 +6,8 @@ draw_rectangle(10, 0, 50, 100, false);
 draw_set_alpha(1);
 draw_set_color(c_white);
 
-draw_text(20, 10, musicVolume);
-draw_text(20, 30, sfxVolume);
+draw_text(20, 10, global.musicVolume);
+draw_text(20, 30, global.sfxVolume);
 draw_text(20, 50, menuCooldown);
 
 

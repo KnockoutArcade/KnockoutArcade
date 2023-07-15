@@ -24,42 +24,46 @@ if (P1menuDown == -1 && menuCooldown < 1)
 	menuCooldown = menuCooldownBuffer;
 }
 
-if (P1menuRight && image_index = 0)
+if (P1menuRight && menuCooldown < 1 && image_index = 0)
 {
-	if (musicVolume < 1)
+	if (global.musicVolume < 1)
 	{
-		musicVolume += 0.1;
+		global.musicVolume += 0.1;
 	}
+	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 0)
 {
-	if (musicVolume > 0)
+	if (global.musicVolume > 0)
 	{
-		musicVolume -= 0.1;
+		global.musicVolume -= 0.1;
 	}
+	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuRight && menuCooldown < 1 && image_index = 1)
 {
-	if (sfxVolume < 1)
+	if (global.sfxVolume < 1)
 	{
-		sfxVolume += 0.1;
+		global.sfxVolume += 0.1;
 	}
+	menuCooldown = menuCooldownBuffer;
 }
 
 if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
 {
-	if (sfxVolume > 0)
+	if (global.sfxVolume > 0)
 	{
-		sfxVolume -= 0.1;
+		global.sfxVolume -= 0.1;
 	}
+	menuCooldown = menuCooldownBuffer;
 }
 
 if (menuCooldown < 1)
 {
-	audio_group_set_gain(audiogroup_music, musicVolume, 0);
-	audio_group_set_gain(audiogroup_soundeffect, sfxVolume, 0);
+	audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
+	audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
 	menuCooldown = menuCooldownBuffer;
 }
 
