@@ -100,3 +100,7 @@ global.rcUpForwardSpeed = 2;
 global.rcUpFallSpeed = 0.4;
 global.rcAirSpeed = 10;
 global.rcAirHorizontalSpeed = 2;
+
+// Volume Vars
+global.musicVolume = 0.5;
+global.sfxVolume = 0.5;
