@@ -32,6 +32,7 @@ frameAdvantage = 0;
 victim = 0;
 nonVictim = 0;
 
+paused = false;
 pauseTimer = 0;
 buttonReleased = false; // Determines if the pause buttons are relased when pause menu is opened
 

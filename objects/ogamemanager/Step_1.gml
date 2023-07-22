@@ -4,15 +4,14 @@
 var p1Pause = global.p1ButtonPause;
 var p2Pause = global.p2ButtonPause;
 
-if (!global.gameHalt)
+if (!global.gameHalt && global.hasCompletedIntros && !global.game_paused)
 {
 	if (p1Pause || p2Pause)
 	{
-		show_debug_message(pauseTimer);
-		
 		pauseTimer++;
 		if (pauseTimer >= 30)
 		{
+			paused = true;
 			global.gameHalt = true;
 		}
 	}
@@ -31,6 +30,7 @@ else
 	{
 		pauseTimer = 0;
 		buttonReleased = false;
+		paused = false;
 		global.gameHalt = false;
 	}
 }

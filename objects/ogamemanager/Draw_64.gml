@@ -12,6 +12,11 @@ if (global.toggleHitboxVisibility)
 	draw_text(200, 200, frameAdvantage);
 }
 
+if (global.gameHalt && paused)
+{
+	// Add pause menu here
+}
+
 // Results Screen
 if (state == 1)
 {
