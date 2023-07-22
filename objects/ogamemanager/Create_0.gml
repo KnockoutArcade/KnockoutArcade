@@ -32,6 +32,9 @@ frameAdvantage = 0;
 victim = 0;
 nonVictim = 0;
 
+pauseTimer = 0;
+buttonReleased = false; // Determines if the pause buttons are relased when pause menu is opened
+
 SetupGame();
 
 global.p1Rounds = 0;

@@ -16,6 +16,7 @@ function SetPlayerButtons()
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : vk_rcontrol,
 			buttonRun : vk_lcontrol,
+			buttonPause : vk_escape,
 		};
 	} 
 	else 
@@ -32,6 +33,7 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonPause : gp_start,
 		};
 	}
 	
@@ -49,6 +51,7 @@ function SetPlayerButtons()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
+			buttonPause : vk_pagedown,
 		};
 	} 
 	else 
@@ -65,6 +68,7 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonPause : gp_start,
 		};
 	}
 }
