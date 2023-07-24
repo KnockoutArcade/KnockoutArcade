@@ -3117,7 +3117,7 @@
           "SpawnFrame": 9,
           "SpawnXOffset": 10,
           "SpawnYOffset": -35,
-          "ProjectileObject": "oTestLobbingProjectile"
+          "ProjectileObject": "TestLobbingProjectile"
         }
       ],
       "RehitData": {
@@ -3209,7 +3209,7 @@
           "SpawnFrame": 9,
           "SpawnXOffset": 10,
           "SpawnYOffset": -35,
-          "ProjectileObject": "oTestLobbingProjectile"
+          "ProjectileObject": "TestLobbingProjectile"
         }
       ],
       "RehitData": {
@@ -3265,6 +3265,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-22T17:42:29.2840669-07:00",
+  "LastModified": "2023-07-23T21:22:16.5548877-07:00",
   "LastModifiedBy": "colstrau"
 }

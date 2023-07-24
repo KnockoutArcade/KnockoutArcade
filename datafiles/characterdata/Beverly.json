@@ -1682,7 +1682,7 @@
           "SpawnFrame": 14,
           "SpawnXOffset": 10,
           "SpawnYOffset": -10,
-          "ProjectileObject": "oTestLobbingProjectile"
+          "ProjectileObject": "TestLobbingProjectile"
         }
       ],
       "RehitData": {
@@ -6091,6 +6091,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-22T17:42:21.725946-07:00",
+  "LastModified": "2023-07-23T21:21:00.3052919-07:00",
   "LastModifiedBy": "colstrau"
 }
