@@ -26,82 +26,11 @@
     "NumberOfReplacableColors": 0,
     "ColorPalette": []
   },
-  "CopyCharacterPalette": true,
-  "Character": "Russel",
-  "Palettes": [
-    {
-      "UID": "99bc65fc-0d9b-453a-a331-9b79232c622d",
-      "Name": "Default",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "bd96fb25-b775-4823-995e-91916229a5b8",
-      "Name": "Blue",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "bc576f7d-ae78-431e-b897-225a2caab7ad",
-      "Name": "Yellow",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "3b30e991-94c1-4206-9c09-48be4435ecab",
-      "Name": "Green",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "6e1bece2-6772-49cb-a95c-f0e60893e918",
-      "Name": "Black - Kyo",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "fdf3669b-2100-4220-bbeb-ac8d66ad8518",
-      "Name": "White - Ryu",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "42e0b005-636f-49e9-a835-53736e6e0148",
-      "Name": "Purple - T. Turner",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "36263f7f-c644-454a-8b24-17f4d99061b9",
-      "Name": "Orange",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "5661e37f-ec52-4389-b54e-5fd2a644a574",
-      "Name": "DIO",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "951b7ee9-7dc7-4ee4-bf67-1c3a8099201e",
-      "Name": "Rock Howard",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "ea41be1d-c1d0-41fa-9fb1-a2b1d5ce917c",
-      "Name": "Scorpion",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    },
-    {
-      "UID": "1f92e692-eb33-417c-aa38-5b2365e1c400",
-      "Name": "Sub-Zero",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
-    }
-  ],
+  "CopyCharacterPalette": false,
+  "Character": "Beverly",
+  "Palettes": [],
+  "NumberOfFrames": 0,
+  "FrameData": [],
   "NumberOfHitboxes": 1,
   "AttackData": [
     {
@@ -169,6 +98,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2023-07-23T22:49:00.4669573-07:00",
+  "LastModified": "2023-07-24T16:10:49.0602579-07:00",
   "LastModifiedBy": "colstrau"
 }
