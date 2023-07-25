@@ -3243,8 +3243,13 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_TestHeavyWhiff",
+          "SFXPlayFrame": 12
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3795,8 +3800,13 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_TestHeavyWhiff",
+          "SFXPlayFrame": 9
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -6523,6 +6533,6 @@
   },
   "Version": "Ver1.1.4",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-13T20:20:05.8347725-07:00",
+  "LastModified": "2023-07-21T20:00:55.5978688-07:00",
   "LastModifiedBy": "creep"
 }
