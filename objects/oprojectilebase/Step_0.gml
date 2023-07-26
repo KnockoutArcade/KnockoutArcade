@@ -8,6 +8,8 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
+	animTimer++;
+	
 	if (hasLifetime)
 	{
 		lifetime--;
