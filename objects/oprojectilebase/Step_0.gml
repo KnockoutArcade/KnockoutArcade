@@ -8,7 +8,10 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
-	lifetime--;
+	if (hasLifetime)
+	{
+		lifetime--;
+	}
 	
 	// Calculate Traction
 	if (grounded)
@@ -106,7 +109,7 @@ if (!global.gameHalt && !global.freezeTimer)
 		instance_destroy();
 	}
 	
-	if (lifetime == 0)
+	if (lifetime == 0 && hasLifetime)
 	{
 		if (hitboxID != noone)
 		{
