@@ -259,9 +259,31 @@
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 1.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 4,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          }
+        ],
+        "GravityScale": 1.0,
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
@@ -347,16 +369,16 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "CounterHitLevel": 2,
+          "Group": 1,
+          "Damage": 15,
+          "MeterGain": 3.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 5,
+          "AttackHitStun": 20,
+          "KnockBack": 4.0,
+          "AirKnockbackVertical": 1.0,
+          "AirKnockbackHorizontal": 3.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -364,10 +386,10 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -409,8 +431,8 @@
           {
             "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "VerticalSpeed": 1.0,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {
@@ -432,9 +454,31 @@
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 1.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 4,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          }
+        ],
+        "GravityScale": 1.0,
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
@@ -655,7 +699,7 @@
           "MeterGain": 0.2,
           "ComboScaling": 0.2,
           "AttackHitStop": 4,
-          "AttackHitStun": 30,
+          "AttackHitStun": 17,
           "AttackType": 1,
           "BlockStun": 0.5,
           "KnockBack": 0.0,
@@ -949,7 +993,7 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
+        "GravityScale": 1.0,
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
@@ -1171,11 +1215,11 @@
           "BlockStun": 1.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 1.0,
-          "LaunchKnockbackHorizontal": 1.0,
-          "GravityScaling": 0.0,
+          "LaunchKnockbackVertical": 0.5,
+          "LaunchKnockbackHorizontal": 2.0,
+          "GravityScaling": 0.5,
           "Pushback": 0.5,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -2283,7 +2327,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": -5.0,
           "LaunchKnockbackHorizontal": 0.5,
-          "GravityScaling": 0.0,
+          "GravityScaling": 1.0,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 10,
@@ -2746,8 +2790,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0000001,
+        "FallScale": 1.0000001
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -2907,8 +2951,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0000001,
+        "FallScale": 1.0000001
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -3134,8 +3178,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -3226,8 +3270,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -3265,6 +3309,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-25T00:12:29.6859539-07:00",
+  "LastModified": "2023-07-28T03:13:59.8897201-07:00",
   "LastModifiedBy": "cstra"
 }
