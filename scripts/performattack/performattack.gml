@@ -250,6 +250,7 @@ function PerformAttack(Action, createdBySpirit)
 					hostID = hostObject.id;
 				}
 				
+				// Add to this list whenever a new projectile is created and is in the files
 				var Projectile = noone;
 				if (Action.ProjectileData[i].ProjectileObject == "TestLobbingProjectile")
 				{
@@ -268,6 +269,18 @@ function PerformAttack(Action, createdBySpirit)
 					{
 						playerOwner = hostID;
 						spiritOwner = other.id;
+					}
+					
+					if (copyCharacterPalette)
+					{
+						if (playerOwner.playerID == 1)
+						{
+							PaletteSetup(global.p1PaletteID, selectedProjectile);
+						}
+						else
+						{
+							PaletteSetup(global.p2PaletteID, selectedProjectile);
+						}
 					}
 				}
 			}

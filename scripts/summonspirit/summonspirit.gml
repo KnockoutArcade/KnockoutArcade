@@ -13,6 +13,17 @@ function SummonSpirit()
 		spiritObject.playerID = playerID;
 		spiritObject.opponent = opponent;
 		spiritSummoned = true;
+		with (spiritObject)
+		{
+			if (hostObject.playerID == 1)
+			{
+				PaletteSetup(global.p1PaletteID, selectedCharacter);
+			}
+			else
+			{
+				PaletteSetup(global.p2PaletteID, selectedCharacter);
+			}
+		}
 		
 		spiritObject.image_xscale = image_xscale;
 		var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
