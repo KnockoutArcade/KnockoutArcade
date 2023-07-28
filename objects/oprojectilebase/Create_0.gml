@@ -10,6 +10,10 @@ vsp = selectedProjectile.VerticalSpeed;
 hasLifetime = selectedProjectile.HasLifetime;
 lifetime = selectedProjectile.Lifetime; // How long this projectile lasts in frames
 animationSpeed = selectedProjectile.AnimationSpeed;
+if (!hasLifetime)
+{
+	sprite_set_speed(object_get_sprite(object_index), animationSpeed, spritespeed_framespersecond);
+}
 
 fallSpeed = selectedProjectile.FallSpeed; // How fast this projectile accelerates downward
 grounded = false; // Whether this projectile is on the ground or not

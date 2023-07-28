@@ -5,75 +5,102 @@
 function PerformProjectile(playerOwner, spiritOwner)
 {
 	var hitboxPropertiesCopy = hitboxProperties;
-	// Animations
-	for (var i = 0; i < selectedProjectile.NumberOfWindows; i++) 
+
+	if (hasLifetime)
 	{
-		if (animTimer >= selectedProjectile.Window[i].Length)
+		// Animations
+		for (var i = 0; i < selectedProjectile.NumberOfWindows; i++)
 		{
-			image_index = selectedProjectile.Window[i].ImageIndex;
-		}
-	}
-	
-	// Hitboxes
-	for (var i = 0; i < hitboxPropertiesCopy.NumberOfHitboxes; i++;) 
-	{
-		if (animTimer == hitboxPropertiesCopy.AttackProperty[i].Start) 
-		{
-			hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
-			with (hitboxID) 
+			if (animTimer >= selectedProjectile.Window[i].Length)
 			{
-				lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
-				hitboxID = i;
-				image_xscale = hitboxPropertiesCopy.AttackProperty[i].AttackWidth * other.image_xscale;
-				image_yscale = hitboxPropertiesCopy.AttackProperty[i].AttackHeight;
-				owner = other.id;
-				
-				isProjectile = true;
-			
-				// Pass through attack data
-				attackProperty = hitboxPropertiesCopy.AttackProperty[i];
-				counterHitProperty = hitboxPropertiesCopy.CounterHitProperty[i];
+				image_index = selectedProjectile.Window[i].ImageIndex;
+			}
+		}
+
+		// Hitboxes
+		for (var i = 0; i < hitboxPropertiesCopy.NumberOfHitboxes; i++;)
+		{
+			if (animTimer == hitboxPropertiesCopy.AttackProperty[i].Start)
+			{
+				hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
+				with(hitboxID)
+				{
+					lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
+					hitboxID = i;
+					image_xscale = hitboxPropertiesCopy.AttackProperty[i].AttackWidth * other.image_xscale;
+					image_yscale = hitboxPropertiesCopy.AttackProperty[i].AttackHeight;
+					owner = other.id;
+
+					isProjectile = true;
+
+					// Pass through attack data
+					attackProperty = hitboxPropertiesCopy.AttackProperty[i];
+					counterHitProperty = hitboxPropertiesCopy.CounterHitProperty[i];
+				}
+			}
+		}
+
+
+		// Re-hitting Hitboxes
+		if (hitboxPropertiesCopy.RehitData.NumberOfHits > 0)
+		{
+			for (var i = 0; i < hitboxPropertiesCopy.RehitData.HitBox; i++;)
+			{
+				for (var j = 0; j < hitboxPropertiesCopy.RehitData.NumberOfHits; j++;)
+				{
+					if (animTimer == hitboxPropertiesCopy.RehitData.HitOnFrames[j])
+					{
+						hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
+						with(hitboxID)
+						{
+							lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
+							hitboxID = i;
+							image_xscale = hitboxPropertiesCopy.AttackProperty[i].AttackWidth * other.image_xscale;
+							image_yscale = hitboxPropertiesCopy.AttackProperty[i].AttackHeight;
+							owner = other.id;
+
+							isProjectile = true;
+
+							// Pass through attack data
+							attackProperty = hitboxPropertiesCopy.AttackProperty[i];
+							counterHitProperty = hitboxPropertiesCopy.CounterHitProperty[i];
+						}
+
+						// Clears the hitBy data to allow attacks to connect properly
+						ds_list_clear(playerOwner.hitByGroup);
+						if (spiritOwner != noone && spiritOwner.hostObject.target != noone)
+						{
+							ds_list_clear(spiritOwner.hostObject.target.hitByGroup);
+						}
+						if (playerOwner.target != noone)
+						{
+							ds_list_clear(playerOwner.target.hitByGroup);
+						}
+					}
+				}
 			}
 		}
 	}
-	
-	
-	// Re-hitting Hitboxes
-	if (hitboxPropertiesCopy.RehitData.NumberOfHits > 0) 
+	else
 	{
-		for (var i = 0; i < hitboxPropertiesCopy.RehitData.HitBox; i++;) 
+		animTimer = 0;
+		image_speed = 1;
+
+		for (var i = 0; i < hitboxPropertiesCopy.NumberOfHitboxes; i++;)
 		{
-			for (var j = 0; j < hitboxPropertiesCopy.RehitData.NumberOfHits; j++;) 
+			hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
+			with(hitboxID)
 			{
-				if (animTimer == hitboxPropertiesCopy.RehitData.HitOnFrames[j]) 
-				{
-					hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
-					with (hitboxID) 
-					{
-						lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
-						hitboxID = i;
-						image_xscale = hitboxPropertiesCopy.AttackProperty[i].AttackWidth * other.image_xscale;
-						image_yscale = hitboxPropertiesCopy.AttackProperty[i].AttackHeight;
-						owner = other.id;
-						
-						isProjectile = true;
-			
-						// Pass through attack data
-						attackProperty = hitboxPropertiesCopy.AttackProperty[i];
-						counterHitProperty = hitboxPropertiesCopy.CounterHitProperty[i];
-					}
-					
-					// Clears the hitBy data to allow attacks to connect properly
-					ds_list_clear(playerOwner.hitByGroup);
-					if (spiritOwner != noone && spiritOwner.hostObject.target != noone)
-					{
-						ds_list_clear(spiritOwner.hostObject.target.hitByGroup);
-					}
-					if (playerOwner.target != noone)
-					{
-						ds_list_clear(playerOwner.target.hitByGroup);
-					}
-				}
+				hitboxID = i;
+				image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
+				image_yscale = other.hitboxProperties.AttackData[i].AttackHeight;
+				owner = other.id;
+
+				isProjectile = true;
+
+				// Pass through attack data
+				attackProperty = other.hitboxProperties.AttackData[i];
+				counterHitProperty = other.hitboxProperties.CounterData[i];
 			}
 		}
 	}
