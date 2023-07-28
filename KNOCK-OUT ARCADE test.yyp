@@ -206,6 +206,7 @@
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":0,},
     {"id":{"name":"sGrabBox","path":"sprites/sGrabBox/sGrabBox.yy",},"order":1,},
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
+    {"id":{"name":"PerformProjectile","path":"scripts/PerformProjectile/PerformProjectile.yy",},"order":35,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
     {"id":{"name":"StructCopy","path":"scripts/StructCopy/StructCopy.yy",},"order":27,},
     {"id":{"name":"sBeverlyStage","path":"sprites/sBeverlyStage/sBeverlyStage.yy",},"order":3,},

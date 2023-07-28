@@ -250,7 +250,11 @@ function PerformAttack(Action, createdBySpirit)
 					hostID = hostObject.id;
 				}
 				
-				var Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", asset_get_index(Action.ProjectileData[i].ProjectileObject));
+				var Projectile = noone;
+				if (Action.ProjectileData[i].ProjectileObject == "TestLobbingProjectile")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oTestLobbingProjectile);
+				}
 			
 				with (Projectile)
 				{
@@ -264,21 +268,6 @@ function PerformAttack(Action, createdBySpirit)
 					{
 						playerOwner = hostID;
 						spiritOwner = other.id;
-					}
-					
-					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
-					with (hitboxID) 
-					{
-						hitboxID = i;
-						image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
-						image_yscale = other.hitboxProperties.AttackData[i].AttackHeight;
-						owner = other.id;
-						
-						isProjectile = true;
-			
-						// Pass through attack data
-						attackProperty = other.hitboxProperties.AttackData[i];
-						counterHitProperty = other.hitboxProperties.CounterData[i];
 					}
 				}
 			}

@@ -124,4 +124,6 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	x += hsp * image_xscale;
 	y += vsp;
+	
+	PerformProjectile(playerOwner, spiritOwner);
 }
