@@ -43,6 +43,6 @@ hitboxProperties.AttackProperty = selectedProjectile.AttackProperty;
 hitboxProperties.CounterHitProperty = selectedProjectile.CounterHitProperty;
 hitboxProperties.RehitData = selectedProjectile.RehitData;
 
-hitboxID = noone; // The ID of this projectile's hitbox
+hitboxID = ds_list_create(); // The IDs of this projectile's hitboxes
 
 collidedWithProjectile = false; // Whether this projectile has collided with another

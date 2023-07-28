@@ -6,6 +6,7 @@ function PerformProjectile(playerOwner, spiritOwner)
 {
 	var hitboxPropertiesCopy = hitboxProperties;
 
+	var hitbox = 0;
 	if (hasLifetime)
 	{
 		// Animations
@@ -22,8 +23,9 @@ function PerformProjectile(playerOwner, spiritOwner)
 		{
 			if (animTimer == hitboxPropertiesCopy.AttackProperty[i].Start)
 			{
-				hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
-				with(hitboxID)
+				hitbox = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
+				ds_list_add(hitboxID, hitbox);
+				with(hitbox)
 				{
 					lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
 					hitboxID = i;
@@ -50,8 +52,9 @@ function PerformProjectile(playerOwner, spiritOwner)
 				{
 					if (animTimer == hitboxPropertiesCopy.RehitData.HitOnFrames[j])
 					{
-						hitboxID = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
-						with(hitboxID)
+						hitbox = instance_create_layer(x + (hitboxPropertiesCopy.AttackProperty[i].WidthOffset * other.image_xscale) + 0.5, y - hitboxPropertiesCopy.AttackProperty[i].HeightOffset, "hitboxes", oHitbox);
+						ds_list_add(hitboxID, hitbox);
+						with(hitbox)
 						{
 							lifetime = hitboxPropertiesCopy.AttackProperty[i].Lifetime;
 							hitboxID = i;
@@ -88,8 +91,9 @@ function PerformProjectile(playerOwner, spiritOwner)
 
 		for (var i = 0; i < hitboxPropertiesCopy.NumberOfHitboxes; i++;)
 		{
-			hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
-			with(hitboxID)
+			hitbox = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
+			ds_list_add(hitboxID, hitbox);
+			with(hitbox)
 			{
 				hitboxID = i;
 				image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
