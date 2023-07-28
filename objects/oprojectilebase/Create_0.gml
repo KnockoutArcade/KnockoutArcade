@@ -4,6 +4,8 @@
 animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 
+copyCharacterPalette = selectedProjectile.CopyCharacterPalette;
+
 hsp = selectedProjectile.HorizontalSpeed; // Keeping naming consistent for velocity-based variables
 vsp = selectedProjectile.VerticalSpeed;
 
