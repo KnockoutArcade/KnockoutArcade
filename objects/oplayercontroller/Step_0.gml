@@ -2235,6 +2235,7 @@ if (spirit != noone)
 		 && state != eState.GETUP
 		 && state != eState.HITSTOP
 		 && state != eState.HURT
+		 && state != eState.KNOCKED_DOWN
 		 && state != eState.LAUNCHED
 		 && state != eState.SCREEN_FREEZE)
 	{

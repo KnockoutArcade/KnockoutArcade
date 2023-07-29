@@ -2179,20 +2179,27 @@ if (host != noone && hostObject != noone)
 			// Change the player's direction
 			if (!inAttackState && canTurnAround && !rcActivated)
 			{
-				if (opponent != noone)
+				if (!nextToPlayer)
 				{
-					if (x < opponent.x)
+					if (opponent != noone)
 					{
-						image_xscale = 1;
+						if (x < opponent.x)
+						{
+							image_xscale = 1;
+						}
+						else if (x != opponent.x)
+						{
+							image_xscale = -1;
+						}
 					}
-					else if (x != opponent.x)
+					else if (hsp != 0)
 					{
-						image_xscale = -1;
+						image_xscale = sign(hsp);
 					}
 				}
-				else if (hsp != 0)
+				else
 				{
-					image_xscale = sign(hsp);
+					image_xscale = hostObject.image_xscale;
 				}
 			}
 		}
