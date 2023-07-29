@@ -43,7 +43,7 @@
     "NumberOfReplacableColors": 0,
     "ColorPalette": []
   },
-  "NumberOfPalettes": 10,
+  "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "0000e62b-e5c1-4f2c-ae66-4991c0c5b7f7",
@@ -71,37 +71,49 @@
     },
     {
       "UID": "dd4efd5c-96df-46d7-b29d-865a06e2d9f1",
-      "Name": "Default",
+      "Name": "Red",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "40e27178-4e55-4420-8394-1df4afd4cf6f",
-      "Name": "Default",
+      "Name": "Green",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "a720851a-985e-46c9-9023-397ff43405f5",
-      "Name": "Default",
+      "Name": "Star Platinum",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "c467f04b-65d0-4fe0-9618-ff6251dd6f78",
-      "Name": "Default",
+      "Name": "Fedora Vergil",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "936590dd-fe76-490c-9bd1-b90f7d7bec8d",
-      "Name": "Default",
+      "Name": "Doppelganger",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "2a9b0394-03ed-4c2c-a423-2496fc2ff1d6",
-      "Name": "Default",
+      "Name": "Gold Experience",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "e83c9b05-d279-4a5a-8bb4-7ab9eac3b7ac",
+      "Name": "Blue Eyes White Dragon",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "105e6cd8-f692-4d34-b1f9-4842a3f6fae0",
+      "Name": "Pikachu",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     }
@@ -3309,6 +3321,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-28T03:13:59.8897201-07:00",
+  "LastModified": "2023-07-29T00:05:09.9200609-07:00",
   "LastModifiedBy": "cstra"
 }
