@@ -9,8 +9,15 @@ if (attackProperty.AttackType == eAttackType.GRAB)
 	sprite_index = sGrabBox;
 }
 
-if (lifetime < 1 && !isProjectile)
+if (lifetime < 1)
 {
+	if (isProjectile)
+	{
+		with (owner)
+		{
+			ds_list_delete(hitboxID, ds_list_find_index(hitboxID, other.id));
+		}
+	}
 	instance_destroy();
 }
 

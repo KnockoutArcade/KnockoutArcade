@@ -1,3 +1,4 @@
+// Character data
 global.numberOfCharacters = 0;
 
 var i = 0;
@@ -27,6 +28,42 @@ while(fileName != "")
 	
 	global.characterData[i] = SetupCharacter(importedCharacter);
 	global.numberOfCharacters++;
+	fileName = file_find_next();
+	i++;
+}
+
+file_find_close();
+
+// Projectile data
+global.numberOfProjectiles = 0;
+
+i = 0;
+filePath = working_directory + "/projectiledata/";
+fileName = file_find_first(filePath + "*.json", fa_directory);
+
+while(fileName != "")
+{
+	var importedProjectile;
+	var fullPath = filePath + fileName;
+	
+	if (file_exists(fullPath))
+	{
+		var json = "";
+	
+		var file = file_text_open_read(fullPath);
+	
+		while(!file_text_eof(file))
+		{
+			json += file_text_readln(file);
+		}
+	
+		file_text_close(file);
+	
+		importedProjectile = json_parse(json);
+	}
+	
+	global.projectileData[i] = SetupProjectile(importedProjectile);
+	global.numberOfProjectiles++;
 	fileName = file_find_next();
 	i++;
 }

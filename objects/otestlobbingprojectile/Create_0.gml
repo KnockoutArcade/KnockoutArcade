@@ -1,27 +1,21 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// We can get the data of a projectile by getting the data from an index of projectileData. Since the index
+// of each projectile may be different from build to build, I've set up this code that will iterate
+// through each index to find the name of each index, with which we can use to access the correct
+// projectile data
+selectedProjectile = -1;
+for (var i = 0; i < global.numberOfProjectiles; i++;)
+{
+	if (global.projectileData[i].Name == "TestLobbingProjectile")
+	{
+		selectedProjectile = global.projectileData[i];
+		break;
+	}
+}
+
 event_inherited();
-
-hsp = 2.5; // Keeping naming consistent for velocity-based variables
-vsp = -5;
-
-lifetime = 120;
-
-fallSpeed = .5; // How fast this projectile accelerates downward
-grounded = false; // Whether this projectile is on the ground or not
-airTraction = 0; // How much this projectile slows down in the air
-groundTraction = 0; // How much this projectile slows down on the ground
-
-bounceOnFloor = true; // Whether this projectile should bounce on the floor
-bounceOnWall = true; // Whether this projectile should bounce on the wall
-
-numberOfBounces = 1; // How many times this projectile can bounce off of surfaces
-
-transcendent = false; // Whether this projectile will phase through other projectiles
-projectileHealth = 1; // How many hits from another projectile it takes to destroy this projectile
-
-hitboxProperties = global.ProjectileBase_HitboxData; // Which hitbox properties should this projectile use?
 
 
 
