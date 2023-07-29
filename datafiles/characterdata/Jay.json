@@ -741,14 +741,14 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0.47843137,
-          "Blue": 0.2,
-          "Green": 0.24313726
+          "Red": 0.74509805,
+          "Blue": 0.5058824,
+          "Green": 0.59607846
         },
         {
-          "Red": 0.36078432,
-          "Blue": 0.20392157,
-          "Green": 0.16862746
+          "Red": 0.59607846,
+          "Blue": 0.38039216,
+          "Green": 0.45490196
         },
         {
           "Red": 0.06501341,
@@ -828,14 +828,14 @@
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0.41360724,
-          "Blue": 0.23283483,
-          "Green": 0.26084182
+          "Red": 0.74509805,
+          "Blue": 0.5058824,
+          "Green": 0.59607846
         },
         {
-          "Red": 0.36078432,
-          "Blue": 0.20392157,
-          "Green": 0.16862746
+          "Red": 0.59607846,
+          "Blue": 0.38039216,
+          "Green": 0.45490196
         },
         {
           "Red": 0.8022788,
@@ -2230,7 +2230,8 @@
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
-        1
+        1,
+        2
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
@@ -2387,28 +2388,33 @@
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
-        1
+        1,
+        2
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SideSpecial_mockup_strip5",
-      "Duration": 7,
-      "NumberOfFrames": 4,
+      "Duration": 23,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 1,
+          "Length": 3,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 3,
+          "Length": 17,
           "ImageIndex": 3
         },
         {
-          "Length": 5,
+          "Length": 20,
           "ImageIndex": 4
         },
         {
-          "Length": 6,
+          "Length": 23,
           "ImageIndex": 5
         }
       ],
@@ -7575,6 +7581,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-29T00:21:39.0093695-07:00",
+  "LastModified": "2023-07-29T00:35:37.0167019-07:00",
   "LastModifiedBy": "cstra"
 }
