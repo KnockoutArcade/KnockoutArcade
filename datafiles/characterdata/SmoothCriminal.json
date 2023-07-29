@@ -711,7 +711,7 @@
           "MeterGain": 2.0,
           "ComboScaling": 0.5,
           "AttackHitStop": 4,
-          "AttackHitStun": 17,
+          "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 1.0,
           "KnockBack": 0.0,
@@ -3325,6 +3325,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-29T00:59:48.5892834-07:00",
+  "LastModified": "2023-07-29T09:59:37.9566196-07:00",
   "LastModifiedBy": "cstra"
 }
