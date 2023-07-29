@@ -206,8 +206,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -301,8 +306,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -556,8 +566,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -655,8 +670,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -748,8 +768,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -808,8 +833,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -897,8 +927,13 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				if (!grounded)
+				// Only tries putting the spirit next to the player if they aren't flying into a wall
+				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
+				{
+					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				}
+				
+				if (!hostObject.grounded)
 				{
 					y = hostObject.y;
 				}
@@ -2145,17 +2180,23 @@ if (host != noone && hostObject != noone)
 				vsp = 0;
 				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1)
 				{
-					state = eState.IDLE;
-					grounded = true;
-					frameAdvantage = true;
-					inAttackState = false;
-					canTurnAround = true;
-					isThrowable = true;
+					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
+					{
+						state = eState.IDLE;
+						grounded = true;
+						frameAdvantage = true;
+						inAttackState = false;
+						canTurnAround = true;
+						isThrowable = true;
+					}
 				}
 				if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL)
 				{
-					grounded = true;
-					isThrowable = true;
+					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
+					{
+						grounded = true;
+						isThrowable = true;
+					}
 				}
 				if (state == eState.LAUNCHED)
 				{
