@@ -138,13 +138,13 @@ function PerformAttack(Action, createdBySpirit)
 	
 	// Sound FX
 	// Keep this commented out until every move has sound effects.
-	//for (var i = 0; i < Action.NumberOfSounds; i++)
-	//{
-	//	if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
-	//	{
-	//		audio_play_sound(asset_get_index(Action.MoveSoundData[i].SoundEffect), 1, false);
-	//	}
-	//}
+	for (var i = 0; i < Action.NumberOfSounds; i++)
+	{
+		if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
+		{
+			audio_play_sound(asset_get_index(Action.MoveSoundData[i].SoundEffect), 1, false);
+		}
+	}
 	
 	
 	// Hitboxes

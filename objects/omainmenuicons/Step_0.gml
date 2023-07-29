@@ -7,13 +7,18 @@ menuCooldown--;
 if (P1menuUp && menuCooldown < 1)
 {
 	image_index--;
-	menuCooldown = 7;
-}
-
-if (P1menuDown == -1 && menuCooldown < 1)
+	menuCooldown = menuCooldownBuffer;
+	drawInitialText = false;
+} 
+else if (P1menuDown == -1 && menuCooldown < 1)
 {
 	image_index++;
-	menuCooldown = 7;
+	menuCooldown = menuCooldownBuffer;
+	drawInitialText = false;
+}
+else if (P1menuUp + P1menuDown == 0)
+{
+	menuCooldown = 0;
 }
 
 if (image_index == 0 && P1menuConfirm)
@@ -48,4 +53,17 @@ if (image_index == 2 && P1menuConfirm)
 	
 	global.p1SelectedCharacter = oRussel;
 	global.p1PaletteID = 0;
+}
+
+// Control Percy's Blinking
+percyBlinkTimer++;
+if (percyBlinkTimer >= percyEyesOpenTimerCap) && (!isPercyEyesClosed)
+{
+	percyBlinkTimer = 0;
+	isPercyEyesClosed = true;
+}
+else if (percyBlinkTimer >= percyEyesClosedTimerCap) && (isPercyEyesClosed)
+{
+	percyBlinkTimer = 0;
+	isPercyEyesClosed = false;
 }

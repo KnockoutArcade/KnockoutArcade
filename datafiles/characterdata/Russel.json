@@ -3267,8 +3267,13 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_TestHeavyWhiff",
+          "SFXPlayFrame": 12
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3827,8 +3832,13 @@
         "FallScale": 0.0
       },
       "SupplimentaryScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_TestHeavyWhiff",
+          "SFXPlayFrame": 9
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
