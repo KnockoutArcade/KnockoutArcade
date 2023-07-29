@@ -207,6 +207,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			animTimer = 0;
@@ -298,6 +302,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			animTimer = 0;
@@ -549,6 +557,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			animTimer = 0;
@@ -644,6 +656,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			animTimer = 0;
@@ -733,6 +749,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			cancelable = false;
@@ -789,6 +809,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			cancelable = false;
@@ -874,6 +898,10 @@ if (host != noone && hostObject != noone)
 			if (nextToPlayer)
 			{
 				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+				if (!grounded)
+				{
+					y = hostObject.y;
+				}
 			}
 
 			animTimer = 0;
@@ -2105,7 +2133,7 @@ if (host != noone && hostObject != noone)
 
 			if (place_meeting(x, y + vsp + fallSpeed, oWall))
 			{
-				//Determine wether we are rising into a cieling or falling onto a floor.
+				//Determine wether we are rising into a ceiling or falling onto a floor.
 				var fallDirection = sign(vsp);
 
 				while (!place_meeting(x, y + sign(vsp + fallSpeed), oWall))
@@ -2147,8 +2175,6 @@ if (host != noone && hostObject != noone)
 			environmentDisplacement = 0;
 
 			floor(y);
-
-
 
 			// Change the player's direction
 			if (!inAttackState && canTurnAround && !rcActivated)
