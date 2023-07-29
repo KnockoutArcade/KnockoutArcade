@@ -1742,7 +1742,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.KNOCKED_DOWN:
 		{
-			if (nextToPlayer)
+			if (nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 25 && abs(y - hostObject.y) < 25)
 			{
 				cancelable = false;
 				grounded = true;
