@@ -2075,8 +2075,8 @@
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 4.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.5,
-          "LaunchKnockbackHorizontal": 2.0,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 1.5,
           "GravityScaling": 0.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
@@ -4899,19 +4899,19 @@
           "WidthOffset": 7,
           "HeightOffset": -1,
           "Group": 1,
-          "Damage": 14,
+          "Damage": 12,
           "MeterGain": 18.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 20,
+          "AttackHitStop": 14,
           "AttackHitStun": 19,
           "AttackType": 0,
-          "BlockStun": 13.0,
+          "BlockStun": 16.0,
           "KnockBack": 3.0,
           "AirKnockbackVertical": 5.0,
           "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 5.0,
-          "LaunchKnockbackHorizontal": 2.0,
+          "LaunchKnockbackVertical": -2.5,
+          "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 0.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
@@ -4979,8 +4979,8 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 23,
-          "Lifetime": 16,
+          "Start": 19,
+          "Lifetime": 32,
           "AttackWidth": 19,
           "AttackHeight": 30,
           "WidthOffset": 6,
@@ -5005,8 +5005,8 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 10.0
       },
       "AirMovementData": {
         "NumberOfWindows": 3,
@@ -5021,7 +5021,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 0.5,
-            "VerticalSpeed": -2.0,
+            "VerticalSpeed": -1.5,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -5496,7 +5496,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 0,
-          "Damage": 6,
+          "Damage": 3,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
           "AttackHitStop": 30,
@@ -5505,8 +5505,8 @@
           "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": 4.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 4.0,
+          "LaunchKnockbackVertical": -5.0,
+          "LaunchKnockbackHorizontal": 0.1,
           "GravityScaling": 0.0,
           "Pushback": 2.0,
           "ParticleXOffset": 20,
@@ -5532,8 +5532,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 5,
+          "Lifetime": 30,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": 5,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5542,28 +5551,35 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 3,
+        "NumberOfWindows": 4,
         "Windows": [
           {
-            "StartingFrame": 1,
-            "HorizontalSpeed": 3.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
-          },
-          {
-            "StartingFrame": 2,
+            "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 3,
+            "StartingFrame": 4,
+            "HorizontalSpeed": 2.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 5,
+            "HorizontalSpeed": 0.5,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 7,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           }
         ],
         "GravityScale": 1.0,
@@ -5573,21 +5589,21 @@
         "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 1,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -2.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
-          },
-          {
-            "StartingFrame": 2,
+            "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 3,
+            "StartingFrame": 4,
+            "HorizontalSpeed": 2.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 5,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -5680,7 +5696,7 @@
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 4.0,
           "Launches": false,
-          "LaunchKnockbackVertical": 5.0,
+          "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 2.0,
@@ -6578,6 +6594,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-07-29T14:06:25.5778505-07:00",
+  "LastModified": "2023-07-29T14:37:29.9346639-07:00",
   "LastModifiedBy": "creep"
 }
