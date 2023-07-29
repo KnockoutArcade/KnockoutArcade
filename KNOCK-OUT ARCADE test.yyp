@@ -206,6 +206,7 @@
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":0,},
     {"id":{"name":"sGrabBox","path":"sprites/sGrabBox/sGrabBox.yy",},"order":1,},
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
+    {"id":{"name":"PerformProjectile","path":"scripts/PerformProjectile/PerformProjectile.yy",},"order":35,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
     {"id":{"name":"StructCopy","path":"scripts/StructCopy/StructCopy.yy",},"order":27,},
     {"id":{"name":"sBeverlyStage","path":"sprites/sBeverlyStage/sBeverlyStage.yy",},"order":3,},
@@ -293,6 +294,7 @@
     {"id":{"name":"sRussel_Hold","path":"sprites/sRussel_Hold/sRussel_Hold.yy",},"order":20,},
     {"id":{"name":"sBeverly_JumpDownHeavy_Mockup_strip2","path":"sprites/sBeverly_JumpDownHeavy_Mockup_strip2/sBeverly_JumpDownHeavy_Mockup_strip2.yy",},"order":18,},
     {"id":{"name":"sBeverly_JumpHeavy_Mockup_strip6","path":"sprites/sBeverly_JumpHeavy_Mockup_strip6/sBeverly_JumpHeavy_Mockup_strip6.yy",},"order":19,},
+    {"id":{"name":"SetupProjectile","path":"scripts/SetupProjectile/SetupProjectile.yy",},"order":34,},
     {"id":{"name":"sJay_SC_UpSpecial_MOCKUP_strip8","path":"sprites/sJay_SC_UpSpecial_MOCKUP_strip8/sJay_SC_UpSpecial_MOCKUP_strip8.yy",},"order":3,},
     {"id":{"name":"sJayStandOn_StandHeavy_Posel_mockup_strip5","path":"sprites/sJayStandOn_StandHeavy_Posel_mockup_strip5/sJayStandOn_StandHeavy_Posel_mockup_strip5.yy",},"order":27,},
     {"id":{"name":"sPlayerControls","path":"sprites/sPlayerControls/sPlayerControls.yy",},"order":1,},
@@ -409,6 +411,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Beverly.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Jay.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"TestLobbingProjectile.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"SmoothCriminal.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
