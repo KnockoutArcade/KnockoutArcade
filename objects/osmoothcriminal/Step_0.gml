@@ -2154,7 +2154,7 @@ if (host != noone && hostObject != noone)
 				}
 			}
 
-
+			
 			// Collisions With Walls
 			if (place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 			{
