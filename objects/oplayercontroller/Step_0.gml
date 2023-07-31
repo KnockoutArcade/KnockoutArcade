@@ -2323,6 +2323,25 @@ if (target != noone)
 		startCombo = false;
 	}
 }
+else if (spiritObject != noone)
+{
+	if (spiritObject.target == noone)
+	{
+		startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+	}
+}
 else
 {
 	startCombo = false;

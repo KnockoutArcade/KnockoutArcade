@@ -187,6 +187,11 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 			}
 		}
+		
+		if (nextToPlayer && !grounded)
+		{
+			y = hostObject.y;
+		}
 
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
@@ -210,11 +215,6 @@ if (host != noone && hostObject != noone)
 				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
 				}
 			}
 
@@ -310,11 +310,6 @@ if (host != noone && hostObject != noone)
 				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
 				}
 			}
 
@@ -571,11 +566,6 @@ if (host != noone && hostObject != noone)
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
-				}
 			}
 
 			animTimer = 0;
@@ -675,11 +665,6 @@ if (host != noone && hostObject != noone)
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
-				}
 			}
 
 			animTimer = 0;
@@ -773,11 +758,6 @@ if (host != noone && hostObject != noone)
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
-				}
 			}
 
 			cancelable = false;
@@ -837,11 +817,6 @@ if (host != noone && hostObject != noone)
 				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
 				}
 			}
 
@@ -931,11 +906,6 @@ if (host != noone && hostObject != noone)
 				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
 				{
 					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
-				
-				if (!hostObject.grounded)
-				{
-					y = hostObject.y;
 				}
 			}
 
@@ -2120,7 +2090,6 @@ if (host != noone && hostObject != noone)
 				hostObject.startCombo = false;
 			}
 		}
-
 
 
 		// Collision
