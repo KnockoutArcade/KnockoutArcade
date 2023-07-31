@@ -9,7 +9,11 @@ function CheckChange(Move){
 		{
 			if (target != noone)
 			{
-				if (framesSinceHitstun == 0)
+				if (Move.NumberOfHitboxes > 0 && framesSinceHitstun == 0)
+				{
+					canChange = true;
+				}
+				else if (Move.NumberOfHitboxes == 0)
 				{
 					canChange = true;
 				}

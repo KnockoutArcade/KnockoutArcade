@@ -106,7 +106,7 @@
     {"id":{"name":"sRussel_NSpecial_Enhanced","path":"sprites/sRussel_NSpecial_Enhanced/sRussel_NSpecial_Enhanced.yy",},"order":35,},
     {"id":{"name":"oCredits","path":"objects/oCredits/oCredits.yy",},"order":9,},
     {"id":{"name":"sSuperMeterBackground","path":"sprites/sSuperMeterBackground/sSuperMeterBackground.yy",},"order":1,},
-    {"id":{"name":"CancelData","path":"scripts/CancelData/CancelData.yy",},"order":0,},
+    {"id":{"name":"canceldata","path":"scripts/canceldata/canceldata.yy",},"order":0,},
     {"id":{"name":"sBeverly_StandLight2_MOCKUP_strip3","path":"sprites/sBeverly_StandLight2_MOCKUP_strip3/sBeverly_StandLight2_MOCKUP_strip3.yy",},"order":9,},
     {"id":{"name":"oComboCounter","path":"objects/oComboCounter/oComboCounter.yy",},"order":0,},
     {"id":{"name":"LateCancelIntoMove","path":"scripts/LateCancelIntoMove/LateCancelIntoMove.yy",},"order":2,},

@@ -76,7 +76,6 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 			inputWindowEnd = setWindowEnd;
 			changeFrame = setChangeFrame;
 			changeImmediately = setChangeImmediately;
-			target = noone;
 			requireSpecialButton = specialButtonRequired;
 		}
 		
