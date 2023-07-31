@@ -638,7 +638,6 @@ if (!isGrabbed)
 // Reset cancelOnLanding
 cancelOnLanding = true;
 
-
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
 {
@@ -735,6 +734,18 @@ if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZ
 	freezeEnvironmentDisplacement = environmentDisplacement;
 	freezeVSP = vsp;
 	state = eState.SCREEN_FREEZE;
+}
+
+// Prevents freezing the screen if the RC is activated as sson as the player gets hit
+if (rcActivated && state != eState.SCREEN_FREEZE)
+{
+	rcActivated = false;
+	rcFreezeTimer = 0;
+	activateFreeze = false;
+	stateBeforeFreeze = 0;
+	global.freezeTimer = false;
+	animTimer = 0; // Reset the animation timer when entering Rush Cancel state
+	speedTrailTimer = 0;
 }
 
 // State Machine
@@ -2312,7 +2323,22 @@ if (target != noone)
 		startCombo = false;
 	}
 }
-
+else
+{
+	startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+}
 
 
 // Collision
