@@ -1659,7 +1659,7 @@ if (host != noone && hostObject != noone)
 					cancelCombo = true;
 				}
 
-				if (!grounded)
+				if (!hostObject.grounded)
 				{
 					state = eState.LAUNCHED;
 				}
@@ -2234,7 +2234,7 @@ if (host != noone && hostObject != noone)
 		DeactivateSpirit(true);
 	}
 	
-	// CHanges the moveset to its Spirit ON version
+	// Changes the moveset to its Spirit ON version
 	if (inSpiritOff && state != startingMove && state != eState.HITSTOP && hostObject.spiritState)
 	{
 		OverwriteSpiritMoveset(false);
