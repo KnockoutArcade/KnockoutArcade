@@ -118,6 +118,7 @@ else if (movedir == image_xscale) // If moving forward
 	}
 	holdForwardTimer++;
 	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
 }
 else if (movedir == -image_xscale) // If moving backward
 {
@@ -133,6 +134,7 @@ else if (movedir == -image_xscale) // If moving backward
 	}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
+	runForwardTimer = 16;
 }
 else if ((!runButton && movedir == 0))
 {
@@ -142,6 +144,17 @@ else if ((!runButton && movedir == 0))
 	holdBackwardTimer = 0;
 	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
 	runButtonPressed = false;
+}
+
+// Reset all run timers if holding down
+if (verticalMoveDir == -1)
+{
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
 }
 
 // Handles timer for running forward
@@ -944,6 +957,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		runningBackward = false;
 		
 		vsp += fallSpeed;
 		
