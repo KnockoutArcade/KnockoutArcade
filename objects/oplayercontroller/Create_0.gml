@@ -358,3 +358,7 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 }
 // If host is trying to summon/unsummon spirit but gets interrupted, spirit gets summoned after hitstop
 pendingToggle = false;
+
+// Data used by spirits, but kept here to avoid errors
+host = noone;
+hostObject = noone;
