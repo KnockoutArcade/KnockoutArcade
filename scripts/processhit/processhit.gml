@@ -13,8 +13,15 @@ function ProcessHit( attackProperty, collision_list)
 		if (owner.combo > 2) 
 		{
 			scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
-			scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
-			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
+			if (attackProperty.Damage > 1) // If the attack's base damage is less than 1, allow decimals
+			{
+				scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
+				scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
+			}
+			else
+			{
+				scaledDamage = max(scaledDamage, 0.1); // The lowest amount of damage possible must be 0.1 HP
+			}
 		} // increase the level of scaling for the combo
 		else if (owner.combo == 2)
 		{
