@@ -535,33 +535,6 @@ else if (state == 1)
 					room = rJayStage;
 					global.gameMode = GAMEMODE.VERSUS;
 			    }
-				else if (P1mapSelCol == 3 && P1mapSelRow == 0)
-				{
-					if (selectedMusic == 0) // Auto
-					{
-						selectedMusic = 2;
-					}
-					else if (selectedMusic == 1) // Random
-					{
-						P1musicSelRow = irandom_range(0, musicSelRowMax);
-						if (P1musicSelRow == 0)
-						{
-							selectedMusic = 2;
-						}
-						else if (P1musicSelRow == 1)
-						{
-							selectedMusic = 3;
-						}
-						else if (P1musicSelRow == 2)
-						{
-							selectedMusic = 4;
-						}
-					}
-					
-					validStage = true;
-					room = rStageArcade;
-					global.gameMode = GAMEMODE.VERSUS;
-				}
 			}
         }
         else
