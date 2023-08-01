@@ -188,7 +188,7 @@ if (host != noone && hostObject != noone)
 			}
 		}
 		
-		if (nextToPlayer && !grounded)
+		if (nextToPlayer && !hostObject.grounded)
 		{
 			y = hostObject.y;
 		}
@@ -211,11 +211,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			animTimer = 0;
@@ -306,11 +302,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			animTimer = 0;
@@ -561,11 +553,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			animTimer = 0;
@@ -660,11 +648,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			animTimer = 0;
@@ -753,11 +737,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			cancelable = false;
@@ -813,11 +793,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			cancelable = false;
@@ -902,11 +878,7 @@ if (host != noone && hostObject != noone)
 			// Stands next to and slightly in front of the player
 			if (nextToPlayer)
 			{
-				// Only tries putting the spirit next to the player if they aren't flying into a wall
-				if (!(place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED))
-				{
-					x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
-				}
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
 			}
 
 			animTimer = 0;
