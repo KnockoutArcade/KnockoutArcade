@@ -40,7 +40,14 @@ function DeactivateSpirit(executedBySpirit)
 		{
 			spiritOwner = noone;
 		}
-		instance_create_layer(x, y, "Instances", oSpiritFire);
+		if (hostObject.spiritCurrentHealth <= 0)
+		{
+			instance_create_layer(x, y, "Instances", oSpiritDeath);
+		}
+		else
+		{
+			instance_create_layer(x, y, "Instances", oSpiritFire);
+		}
 		instance_destroy(hurtbox);
 		instance_destroy();
 	}
