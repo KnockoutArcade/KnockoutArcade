@@ -26,7 +26,7 @@ function ProcessHit(attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		if ((collision_list.owner.spiritObject != noone) || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
@@ -62,6 +62,7 @@ function ProcessHit(attackProperty, collision_list)
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
@@ -211,19 +212,10 @@ function ProcessHit(attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						SummonSpirit(spirit);
-						spiritObject.image_xscale = image_xscale;
-						var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
-						spiritFire.depth = depth + 1;
-						spiritState = true;
-						pendingToggle = false;
-						if (selectedCharacter.UniqueData.DoubleJump)
-						{
-							canDoubleJump = true;
-						}
+						SummonSpirit();
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
-							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
 							OverwriteMoveset();
 						}
 					}
@@ -233,20 +225,10 @@ function ProcessHit(attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-						instance_destroy(spiritObject.hurtbox);
-						instance_destroy(spiritObject);
-						spiritObject = noone;
-						spiritSummoned = false;
-						spiritState = false;
-						pendingToggle = false;
-						if ((selectedCharacter.JumpType & 1) != 1)
-						{
-							canDoubleJump = false;
-						}
+						DeactivateSpirit(false);
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
-							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
 							OverwriteMoveset();
 						}
 					}
@@ -257,6 +239,7 @@ function ProcessHit(attackProperty, collision_list)
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
