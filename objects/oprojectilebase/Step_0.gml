@@ -15,6 +15,8 @@ if (!global.gameHalt && !global.freezeTimer)
 		lifetime--;
 	}
 	
+	PerformProjectile(playerOwner, spiritOwner);
+	
 	// Calculate Traction
 	if (grounded)
 	{
@@ -150,6 +152,4 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	x += hsp * image_xscale;
 	y += vsp;
-	
-	PerformProjectile(playerOwner, spiritOwner);
 }

@@ -124,7 +124,7 @@
       }
     ]
   },
-  "NumberOfPalettes": 10,
+  "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "48769fd7-d894-44e5-87df-03b42821fd18",
@@ -476,7 +476,7 @@
     },
     {
       "UID": "7696a43a-0586-49ae-8c2d-ac7e40fcfbe3",
-      "Name": "Default",
+      "Name": "Red",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -495,34 +495,34 @@
           "Green": 0.06666667
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 1.0,
+          "Blue": 0.3297587,
+          "Green": 0.3297587
         },
         {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
+          "Red": 0.7520107,
+          "Blue": 0.21270007,
+          "Green": 0.21270007
         },
         {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.5878016,
+          "Blue": 0.21747082,
+          "Green": 0.21747082
         },
         {
-          "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Red": 0.8391421,
+          "Blue": 0.18110171,
+          "Green": 0.18110171
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.6581769,
+          "Blue": 0.14425191,
+          "Green": 0.14425191
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
-          "Green": 0.24313726
+          "Red": 0.31635386,
+          "Blue": 0.095839106,
+          "Green": 0.095839106
         },
         {
           "Red": 0.0,
@@ -563,7 +563,7 @@
     },
     {
       "UID": "21eba704-b7a8-4add-aff5-0d8a423488dd",
-      "Name": "Default",
+      "Name": "Green",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -582,34 +582,34 @@
           "Green": 0.06666667
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.64962345,
+          "Blue": 0.6123183,
+          "Green": 0.92941177
         },
         {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
+          "Red": 0.5454916,
+          "Blue": 0.5131257,
+          "Green": 0.7882353
         },
         {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.37891307,
+          "Blue": 0.34786624,
+          "Green": 0.6117647
         },
         {
-          "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Red": 0.3550173,
+          "Blue": 0.31294116,
+          "Green": 0.67058825
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.31823054,
+          "Blue": 0.28589004,
+          "Green": 0.56078434
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
-          "Green": 0.24313726
+          "Red": 0.18204762,
+          "Blue": 0.16135332,
+          "Green": 0.3372549
         },
         {
           "Red": 0.0,
@@ -650,7 +650,7 @@
     },
     {
       "UID": "8b5d67a0-cdb2-4149-a220-6c4ebc8df3c0",
-      "Name": "Default",
+      "Name": "Black - Jotaro",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -664,39 +664,39 @@
           "Green": 0.16862746
         },
         {
-          "Red": 0.14901961,
-          "Blue": 0.011764706,
-          "Green": 0.06666667
-        },
-        {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
-        },
-        {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
-        },
-        {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.06836462,
+          "Blue": 0.06836462,
+          "Green": 0.06836462
         },
         {
           "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Blue": 0.61960787,
+          "Green": 0.6901961
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.5294118,
+          "Blue": 0.45882353,
+          "Green": 0.54509807
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
-          "Green": 0.24313726
+          "Red": 0.28627452,
+          "Blue": 0.23921569,
+          "Green": 0.29803923
+        },
+        {
+          "Red": 0.26943696,
+          "Blue": 0.26943696,
+          "Green": 0.26943696
+        },
+        {
+          "Red": 0.15884715,
+          "Blue": 0.15884715,
+          "Green": 0.15884715
+        },
+        {
+          "Red": 0.10980392,
+          "Blue": 0.05882353,
+          "Green": 0.08627451
         },
         {
           "Red": 0.0,
@@ -737,53 +737,53 @@
     },
     {
       "UID": "3c2468d2-7961-4d23-91d2-e3f3ca501a0f",
-      "Name": "Default",
+      "Name": "Donte",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0.47843137,
-          "Blue": 0.2,
-          "Green": 0.24313726
+          "Red": 0.74509805,
+          "Blue": 0.5058824,
+          "Green": 0.59607846
         },
         {
-          "Red": 0.36078432,
-          "Blue": 0.20392157,
-          "Green": 0.16862746
+          "Red": 0.59607846,
+          "Blue": 0.38039216,
+          "Green": 0.45490196
         },
         {
-          "Red": 0.14901961,
-          "Blue": 0.011764706,
-          "Green": 0.06666667
+          "Red": 0.06501341,
+          "Blue": 0.06501341,
+          "Green": 0.06501341
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.96313673,
+          "Blue": 0.7533382,
+          "Green": 0.8750732
         },
         {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
+          "Red": 0.80898124,
+          "Blue": 0.6463174,
+          "Green": 0.7160305
         },
         {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.38672918,
+          "Blue": 0.21824796,
+          "Green": 0.2660262
         },
         {
-          "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Red": 0.17560321,
+          "Blue": 0.17560321,
+          "Green": 0.17560321
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.09182304,
+          "Blue": 0.09182304,
+          "Green": 0.09182304
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
-          "Green": 0.24313726
+          "Red": 0.33646113,
+          "Blue": 0.0,
+          "Green": 0.0
         },
         {
           "Red": 0.0,
@@ -824,53 +824,53 @@
     },
     {
       "UID": "f88b717e-c676-4888-a16c-034e4a694008",
-      "Name": "Default",
+      "Name": "Vergil",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
-          "Red": 0.41360724,
-          "Blue": 0.23283483,
-          "Green": 0.26084182
+          "Red": 0.74509805,
+          "Blue": 0.5058824,
+          "Green": 0.59607846
         },
         {
-          "Red": 0.36078432,
-          "Blue": 0.20392157,
-          "Green": 0.16862746
+          "Red": 0.59607846,
+          "Blue": 0.38039216,
+          "Green": 0.45490196
         },
         {
-          "Red": 0.14901961,
-          "Blue": 0.011764706,
-          "Green": 0.06666667
+          "Red": 0.8022788,
+          "Blue": 0.8022788,
+          "Green": 0.8022788
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.1350653,
+          "Blue": 0.2627346,
+          "Green": 0.1451625
         },
         {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
+          "Red": 0.11126563,
+          "Blue": 0.19235921,
+          "Green": 0.10404416
         },
         {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.07262324,
+          "Blue": 0.12868631,
+          "Green": 0.07705719
         },
         {
-          "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Red": 0.16357298,
+          "Blue": 0.8357909,
+          "Green": 0.5140998
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.14105794,
+          "Blue": 0.55093837,
+          "Green": 0.3877555
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
-          "Green": 0.24313726
+          "Red": 0.10107255,
+          "Blue": 0.3264075,
+          "Green": 0.2095113
         },
         {
           "Red": 0.0,
@@ -911,7 +911,7 @@
     },
     {
       "UID": "150fa2d3-2f55-44e8-ae71-0a6b73bc7c84",
-      "Name": "Default",
+      "Name": "Giorno",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -925,39 +925,213 @@
           "Green": 0.16862746
         },
         {
-          "Red": 0.14901961,
-          "Blue": 0.011764706,
-          "Green": 0.06666667
+          "Red": 0.8955686,
+          "Blue": 0.17302014,
+          "Green": 0.8994638
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.69411767,
+          "Blue": 0.6627451,
+          "Green": 0.44313726
         },
         {
-          "Red": 0.7882353,
-          "Blue": 0.5137255,
-          "Green": 0.6313726
+          "Red": 0.4457883,
+          "Blue": 0.49396783,
+          "Green": 0.17116715
         },
         {
-          "Red": 0.6117647,
-          "Blue": 0.34901962,
-          "Green": 0.42352942
+          "Red": 0.09019608,
+          "Blue": 0.09019608,
+          "Green": 0.08627451
         },
         {
-          "Red": 0.67058825,
-          "Blue": 0.3137255,
-          "Green": 0.4862745
+          "Red": 0.69411767,
+          "Blue": 0.6627451,
+          "Green": 0.44313726
         },
         {
-          "Red": 0.56078434,
-          "Blue": 0.28627452,
-          "Green": 0.34117648
+          "Red": 0.3920009,
+          "Blue": 0.43364608,
+          "Green": 0.15462446
         },
         {
-          "Red": 0.3372549,
-          "Blue": 0.16078432,
+          "Red": 0.27114785,
+          "Blue": 0.30965143,
+          "Green": 0.13012832
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "92410671-c439-4942-8608-7eb1ad2a0b7d",
+      "Name": "Seto Kaiba",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.47843137,
+          "Blue": 0.2,
           "Green": 0.24313726
+        },
+        {
+          "Red": 0.36078432,
+          "Blue": 0.20392157,
+          "Green": 0.16862746
+        },
+        {
+          "Red": 0.25268096,
+          "Blue": 0.024895508,
+          "Green": 0.11600968
+        },
+        {
+          "Red": 0.21568628,
+          "Blue": 0.34117648,
+          "Green": 0.23921569
+        },
+        {
+          "Red": 0.14117648,
+          "Blue": 0.27450982,
+          "Green": 0.15294118
+        },
+        {
+          "Red": 0.043137256,
+          "Blue": 0.13725491,
+          "Green": 0.03137255
+        },
+        {
+          "Red": 0.9137255,
+          "Blue": 0.93333334,
+          "Green": 0.91764706
+        },
+        {
+          "Red": 0.47843137,
+          "Blue": 0.60784316,
+          "Green": 0.52156866
+        },
+        {
+          "Red": 0.21568628,
+          "Blue": 0.34117648,
+          "Green": 0.23921569
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "9f8abe7f-6bab-48e6-8823-7ac648c7597b",
+      "Name": "Pokemon Trainer",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.47843137,
+          "Blue": 0.2,
+          "Green": 0.24313726
+        },
+        {
+          "Red": 0.36078432,
+          "Blue": 0.20392157,
+          "Green": 0.16862746
+        },
+        {
+          "Red": 0.32941177,
+          "Blue": 0.28235295,
+          "Green": 0.28235295
+        },
+        {
+          "Red": 0.3647059,
+          "Blue": 0.3647059,
+          "Green": 0.3647059
+        },
+        {
+          "Red": 0.2,
+          "Blue": 0.22352941,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.21181509,
+          "Blue": 0.36662197,
+          "Green": 0.3051546
+        },
+        {
+          "Red": 0.82573724,
+          "Blue": 0.30826786,
+          "Green": 0.38787854
+        },
+        {
+          "Red": 0.67828417,
+          "Blue": 0.24717923,
+          "Green": 0.23503548
+        },
+        {
+          "Red": 0.13873994,
+          "Blue": 0.13873994,
+          "Green": 0.13873994
         },
         {
           "Red": 0.0,
@@ -1046,8 +1220,8 @@
           "AttackHitStop": 6,
           "AttackHitStun": 10,
           "AttackType": 1,
-          "BlockStun": 3.4999995,
-          "KnockBack": 1.5000001,
+          "BlockStun": 3.0,
+          "KnockBack": 1.5,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
@@ -1076,7 +1250,7 @@
           "AttackHitStun": 14,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 1.5000018,
+          "AirKnockbackHorizontal": 1.5,
           "Launches": true,
           "LaunchKnockbackVertical": 0.2,
           "LaunchKnockbackHorizontal": 0.1,
@@ -1916,66 +2090,9 @@
           "ImageIndex": 5
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 1,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 2,
-          "Damage": 6,
-          "MeterGain": 6.0,
-          "ComboScaling": 1.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 21,
-          "KnockBack": 5.0,
-          "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
-          "GravityScaling": 0.0,
-          "Pushback": 3.0,
-          "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 10,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -2056,7 +2173,8 @@
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
-        1
+        1,
+        2
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
@@ -2085,66 +2203,9 @@
           "ImageIndex": 5
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 1,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 2,
-          "Damage": 6,
-          "MeterGain": 6.0,
-          "ComboScaling": 1.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 21,
-          "KnockBack": 5.0,
-          "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
-          "GravityScaling": 0.0,
-          "Pushback": 3.0,
-          "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 10,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -2213,91 +2274,39 @@
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
-        1
+        1,
+        2
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SideSpecial_mockup_strip5",
-      "Duration": 7,
-      "NumberOfFrames": 4,
+      "Duration": 23,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 1,
+          "Length": 3,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 3,
+          "Length": 17,
           "ImageIndex": 3
         },
         {
-          "Length": 5,
+          "Length": 20,
           "ImageIndex": 4
         },
         {
-          "Length": 6,
+          "Length": 23,
           "ImageIndex": 5
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 6,
-          "Lifetime": 3,
-          "AttackWidth": 27,
-          "AttackHeight": 8,
-          "WidthOffset": 12,
-          "HeightOffset": 15,
-          "Group": 1,
-          "Damage": 3,
-          "MeterGain": 4.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 14,
-          "AttackHitStun": 14,
-          "AttackType": 1,
-          "BlockStun": 9.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 0.1,
-          "GravityScaling": 0.0,
-          "Pushback": 2.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 1,
-          "Group": 1,
-          "Damage": 6,
-          "MeterGain": 8.0,
-          "ComboScaling": 1.0,
-          "AttackHitStop": 18,
-          "AttackHitStun": 14,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 0.1,
-          "GravityScaling": 0.0,
-          "Pushback": 2.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -2610,7 +2619,7 @@
           "AttackHitStop": 18,
           "AttackHitStun": 14,
           "AttackType": 1,
-          "BlockStun": 18.999996,
+          "BlockStun": 19.0,
           "KnockBack": 9.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 3.0,
@@ -4063,10 +4072,10 @@
           "Damage": 1,
           "MeterGain": 1.0000001,
           "ComboScaling": 0.5,
-          "AttackHitStop": 0,
+          "AttackHitStop": 1,
           "AttackHitStun": 10,
           "AttackType": 1,
-          "BlockStun": 0.9,
+          "BlockStun": 1.0,
           "KnockBack": 0.0,
           "AirKnockbackVertical": -1.7000028,
           "AirKnockbackHorizontal": 0.0,
@@ -4098,7 +4107,7 @@
           "AttackHitStop": 9,
           "AttackHitStun": 24,
           "AttackType": 1,
-          "BlockStun": 0.0,
+          "BlockStun": 1.0,
           "KnockBack": 0.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.1000001,
@@ -4358,66 +4367,9 @@
           "ImageIndex": 4
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 1,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 1,
-          "Damage": 20,
-          "MeterGain": 20.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 25,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 2.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 0.75,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 20,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -4533,66 +4485,9 @@
           "ImageIndex": 4
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 2,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 4,
         "Button": 1,
@@ -4822,66 +4717,9 @@
           "ImageIndex": 5
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 2,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -4983,66 +4821,9 @@
           "ImageIndex": 5
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 2,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "",
-          "ParticleDuration": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -5825,66 +5606,9 @@
           "ImageIndex": 8
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 1,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 1,
-          "Damage": 20,
-          "MeterGain": 20.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 25,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 2.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 0.75,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 20,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -6753,66 +6477,9 @@
           "ImageIndex": 4
         }
       ],
-      "NumberOfHitboxes": 1,
-      "AttackData": [
-        {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
-          "HeightOffset": 0,
-          "Group": 0,
-          "Damage": 0,
-          "MeterGain": 0.0,
-          "ComboScaling": 0.0,
-          "AttackHitStop": 0,
-          "AttackHitStun": 0,
-          "AttackType": 1,
-          "BlockStun": 0.0,
-          "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 0,
-          "HoldXOffset": 0,
-          "HoldYOffset": 0,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
-      "CounterData": [
-        {
-          "CounterHitLevel": 3,
-          "Group": 1,
-          "Damage": 20,
-          "MeterGain": 20.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 25,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 2.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 0.75,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
-          "ParticleXOffset": 20,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
-          "CausesWallbounce": false,
-          "HitSound": ""
-        }
-      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -7401,6 +7068,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-07-29T00:27:44.025678-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-07-31T13:30:13.0445023-07:00",
+  "LastModifiedBy": "cstra"
 }

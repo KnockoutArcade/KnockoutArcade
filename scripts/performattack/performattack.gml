@@ -137,7 +137,6 @@ function PerformAttack(Action, createdBySpirit)
 	}
 	
 	// Sound FX
-	// Keep this commented out until every move has sound effects.
 	for (var i = 0; i < Action.NumberOfSounds; i++)
 	{
 		if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
@@ -226,7 +225,7 @@ function PerformAttack(Action, createdBySpirit)
 					{
 						ds_list_clear(hostObject.target.hitByGroup);
 					}
-					if (target != noone)
+					else if (target != noone)
 					{
 						ds_list_clear(target.hitByGroup);
 					}

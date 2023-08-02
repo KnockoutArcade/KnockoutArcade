@@ -187,6 +187,11 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 			}
 		}
+		
+		if (nextToPlayer && !hostObject.grounded)
+		{
+			y = hostObject.y;
+		}
 
 		// IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 		if (state == eState.IDLE)
@@ -1626,7 +1631,7 @@ if (host != noone && hostObject != noone)
 					cancelCombo = true;
 				}
 
-				if (!grounded)
+				if (!hostObject.grounded)
 				{
 					state = eState.LAUNCHED;
 				}
@@ -1714,7 +1719,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.KNOCKED_DOWN:
 		{
-			if (nextToPlayer)
+			if (nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 25 && abs(y - hostObject.y) < 25)
 			{
 				cancelable = false;
 				grounded = true;
@@ -2059,7 +2064,6 @@ if (host != noone && hostObject != noone)
 		}
 
 
-
 		// Collision
 		if (state != eState.HITSTOP)
 		{
@@ -2091,7 +2095,7 @@ if (host != noone && hostObject != noone)
 				}
 			}
 
-
+			
 			// Collisions With Walls
 			if (place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 			{
@@ -2105,7 +2109,7 @@ if (host != noone && hostObject != noone)
 
 			if (place_meeting(x, y + vsp + fallSpeed, oWall))
 			{
-				//Determine wether we are rising into a cieling or falling onto a floor.
+				//Determine wether we are rising into a ceiling or falling onto a floor.
 				var fallDirection = sign(vsp);
 
 				while (!place_meeting(x, y + sign(vsp + fallSpeed), oWall))
@@ -2117,17 +2121,23 @@ if (host != noone && hostObject != noone)
 				vsp = 0;
 				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1)
 				{
-					state = eState.IDLE;
-					grounded = true;
-					frameAdvantage = true;
-					inAttackState = false;
-					canTurnAround = true;
-					isThrowable = true;
+					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
+					{
+						state = eState.IDLE;
+						grounded = true;
+						frameAdvantage = true;
+						inAttackState = false;
+						canTurnAround = true;
+						isThrowable = true;
+					}
 				}
 				if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL)
 				{
-					grounded = true;
-					isThrowable = true;
+					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
+					{
+						grounded = true;
+						isThrowable = true;
+					}
 				}
 				if (state == eState.LAUNCHED)
 				{
@@ -2148,25 +2158,30 @@ if (host != noone && hostObject != noone)
 
 			floor(y);
 
-
-
 			// Change the player's direction
 			if (!inAttackState && canTurnAround && !rcActivated)
 			{
-				if (opponent != noone)
+				if (!nextToPlayer)
 				{
-					if (x < opponent.x)
+					if (opponent != noone)
 					{
-						image_xscale = 1;
+						if (x < opponent.x)
+						{
+							image_xscale = 1;
+						}
+						else if (x != opponent.x)
+						{
+							image_xscale = -1;
+						}
 					}
-					else if (x != opponent.x)
+					else if (hsp != 0)
 					{
-						image_xscale = -1;
+						image_xscale = sign(hsp);
 					}
 				}
-				else if (hsp != 0)
+				else
 				{
-					image_xscale = sign(hsp);
+					image_xscale = hostObject.image_xscale;
 				}
 			}
 		}
@@ -2191,7 +2206,7 @@ if (host != noone && hostObject != noone)
 		DeactivateSpirit(true);
 	}
 	
-	// CHanges the moveset to its Spirit ON version
+	// Changes the moveset to its Spirit ON version
 	if (inSpiritOff && state != startingMove && state != eState.HITSTOP && hostObject.spiritState)
 	{
 		OverwriteSpiritMoveset(false);

@@ -71,7 +71,14 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 			{
 				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
 				{
-					currentMovesetID = moveToDo.SwitchToMoveset;
+					if (!spiritState)
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+					}
+					else
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+					}
 					OverwriteMoveset();
 				}
 				else if (!selectedCharacter.UniqueData.LinkMovesetsWithSpirits)

@@ -33,6 +33,8 @@ function OverwriteSpiritMoveset(spiritOff)
 			nextMove.SwitchMoveset = selectedCharacter.MoveData[i].SwitchMoveset;
 			nextMove.SwitchToMoveset = selectedCharacter.MoveData[i].SwitchToMoveset;
 			nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
+			nextMove.NumberOfSounds = selectedCharacter.MoveData[i].NumberOfSounds;
+			nextMove.MoveSoundData = selectedCharacter.MoveData[i].MoveSoundData;
 
 			if (selectedCharacter.MoveData[i].IsThrow)
 			{

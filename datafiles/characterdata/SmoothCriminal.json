@@ -1,6 +1,6 @@
 {
   "Name": "SmoothCriminal",
-  "MaxHitPoints": 50,
+  "MaxHitPoints": 45,
   "RegenSpeed": 0.175,
   "KORegenSpeed": 0.1,
   "HorizontalSpeed": 0.0,
@@ -43,7 +43,7 @@
     "NumberOfReplacableColors": 0,
     "ColorPalette": []
   },
-  "NumberOfPalettes": 10,
+  "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "0000e62b-e5c1-4f2c-ae66-4991c0c5b7f7",
@@ -71,37 +71,49 @@
     },
     {
       "UID": "dd4efd5c-96df-46d7-b29d-865a06e2d9f1",
-      "Name": "Default",
+      "Name": "Red",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "40e27178-4e55-4420-8394-1df4afd4cf6f",
-      "Name": "Default",
+      "Name": "Green",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "a720851a-985e-46c9-9023-397ff43405f5",
-      "Name": "Default",
+      "Name": "Star Platinum",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "c467f04b-65d0-4fe0-9618-ff6251dd6f78",
-      "Name": "Default",
+      "Name": "Fedora Vergil",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "936590dd-fe76-490c-9bd1-b90f7d7bec8d",
-      "Name": "Default",
+      "Name": "Doppelganger",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     },
     {
       "UID": "2a9b0394-03ed-4c2c-a423-2496fc2ff1d6",
-      "Name": "Default",
+      "Name": "Gold Experience",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "e83c9b05-d279-4a5a-8bb4-7ab9eac3b7ac",
+      "Name": "Blue Eyes White Dragon",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "105e6cd8-f692-4d34-b1f9-4842a3f6fae0",
+      "Name": "Pikachu",
       "NumberOfReplacableColors": 0,
       "ColorPalette": []
     }
@@ -530,12 +542,12 @@
           "HeightOffset": 17,
           "Group": 1,
           "Damage": 2,
-          "MeterGain": 0.2,
-          "ComboScaling": 0.2,
+          "MeterGain": 4.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 4,
           "AttackHitStun": 10,
           "AttackType": 1,
-          "BlockStun": 0.3,
+          "BlockStun": 1.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 0.5,
@@ -559,8 +571,8 @@
           "CounterHitLevel": 1,
           "Group": 1,
           "Damage": 3,
-          "MeterGain": 0.3,
-          "ComboScaling": 0.2,
+          "MeterGain": 4.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 4,
           "AttackHitStun": 10,
           "KnockBack": 1.0,
@@ -696,12 +708,12 @@
           "HeightOffset": 16,
           "Group": 1,
           "Damage": 2,
-          "MeterGain": 0.2,
-          "ComboScaling": 0.2,
+          "MeterGain": 2.0,
+          "ComboScaling": 0.5,
           "AttackHitStop": 4,
-          "AttackHitStun": 17,
+          "AttackHitStun": 12,
           "AttackType": 1,
-          "BlockStun": 0.5,
+          "BlockStun": 1.0,
           "KnockBack": 0.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
@@ -725,10 +737,10 @@
           "CounterHitLevel": 1,
           "Group": 1,
           "Damage": 3,
-          "MeterGain": 0.2,
-          "ComboScaling": 0.2,
+          "MeterGain": 1.5,
+          "ComboScaling": 0.5,
           "AttackHitStop": 4,
-          "AttackHitStun": 30,
+          "AttackHitStun": 17,
           "KnockBack": 0.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
@@ -740,7 +752,7 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 2,
+          "ParticleDuration": 5,
           "CausesWallbounce": false,
           "HitSound": "sfx_light_hit2"
         }
@@ -811,35 +823,39 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_NspecialEN_MOCKUP_strip4",
-      "Duration": 13,
-      "NumberOfFrames": 3,
+      "Duration": 23,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 7,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 12,
           "ImageIndex": 3
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
           "Start": 4,
-          "Lifetime": 3,
+          "Lifetime": 5,
           "AttackWidth": 22,
           "AttackHeight": 8,
           "WidthOffset": 7,
           "HeightOffset": 22,
           "Group": 1,
           "Damage": 6,
-          "MeterGain": 2.0,
-          "ComboScaling": 1.0,
+          "MeterGain": 10.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 8,
           "AttackHitStun": 20,
           "AttackType": 1,
@@ -867,8 +883,8 @@
           "CounterHitLevel": 1,
           "Group": 1,
           "Damage": 7,
-          "MeterGain": 2.0,
-          "ComboScaling": 1.0,
+          "MeterGain": 15.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 8,
           "AttackHitStun": 20,
           "KnockBack": 4.0,
@@ -994,7 +1010,7 @@
         "NumberOfWindows": 0,
         "Windows": [],
         "GravityScale": 1.0,
-        "FallScale": 0.0
+        "FallScale": 0.4
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -1064,9 +1080,9 @@
           "MeterGain": 5.0,
           "ComboScaling": 2.0,
           "AttackHitStop": 7,
-          "AttackHitStun": 20,
+          "AttackHitStun": 10,
           "AttackType": 1,
-          "BlockStun": 1.0,
+          "BlockStun": 14.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
@@ -1209,16 +1225,16 @@
           "Damage": 15,
           "MeterGain": 7.0,
           "ComboScaling": 3.0,
-          "AttackHitStop": 12,
-          "AttackHitStun": 30,
+          "AttackHitStop": 18,
+          "AttackHitStun": 14,
           "AttackType": 1,
-          "BlockStun": 1.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 2.0,
+          "BlockStun": 18.0,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 3.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 0.5,
-          "LaunchKnockbackHorizontal": 2.0,
+          "LaunchKnockbackVertical": 1.0,
+          "LaunchKnockbackHorizontal": 3.0,
           "GravityScaling": 0.5,
           "Pushback": 0.5,
           "ParticleXOffset": 0,
@@ -1998,7 +2014,7 @@
           "AttackHitStop": 10,
           "AttackHitStun": 12,
           "AttackType": 0,
-          "BlockStun": 6.5,
+          "BlockStun": 7.0,
           "KnockBack": 3.0,
           "AirKnockbackVertical": 1.0,
           "AirKnockbackHorizontal": 1.0,
@@ -2504,7 +2520,7 @@
           "MeterGain": 3.0,
           "ComboScaling": 2.0,
           "AttackHitStop": 10,
-          "AttackHitStun": 25,
+          "AttackHitStun": 15,
           "AttackType": 1,
           "BlockStun": 12.0,
           "KnockBack": 1.0,
@@ -3309,6 +3325,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-28T23:52:53.1242727-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-07-31T13:30:55.7570422-07:00",
+  "LastModifiedBy": "cstra"
 }

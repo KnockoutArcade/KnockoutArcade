@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function ProcessHit( attackProperty, collision_list)
+function ProcessHit(attackProperty, collision_list)
 {
 	if (!isProjectile)
 	{
@@ -26,7 +26,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		if ((collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
@@ -62,6 +62,7 @@ function ProcessHit( attackProperty, collision_list)
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
@@ -92,7 +93,7 @@ function ProcessHit( attackProperty, collision_list)
 				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			}
 			
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
@@ -112,7 +113,7 @@ function ProcessHit( attackProperty, collision_list)
 			}
 			collision_list.owner.grounded = false;
 			
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
@@ -128,7 +129,7 @@ function ProcessHit( attackProperty, collision_list)
 		else 
 		{
 			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp = 0;
 			}
@@ -142,7 +143,7 @@ function ProcessHit( attackProperty, collision_list)
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
@@ -151,7 +152,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
 		}
@@ -163,10 +164,19 @@ function ProcessHit( attackProperty, collision_list)
 		}
 		
 		//Draw hit effect
-		var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+		var particle = noone;
+		if (spirit != noone)
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * spirit.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(spirit.image_xscale);
+		}
+		else
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(owner.image_xscale);
+		}
 		
 		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
-		particle.image_xscale = sign(owner.image_xscale);
 		particle.lifetime = attackProperty.ParticleDuration;
 	}
 	else
@@ -193,7 +203,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		if ((collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
@@ -202,19 +212,10 @@ function ProcessHit( attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						SummonSpirit(spirit);
-						spiritObject.image_xscale = image_xscale;
-						var spiritFire = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSpiritFire);
-						spiritFire.depth = depth + 1;
-						spiritState = true;
-						pendingToggle = false;
-						if (selectedCharacter.UniqueData.DoubleJump)
-						{
-							canDoubleJump = true;
-						}
+						SummonSpirit();
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
-							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
 							OverwriteMoveset();
 						}
 					}
@@ -224,20 +225,10 @@ function ProcessHit( attackProperty, collision_list)
 				{
 					with (collision_list.owner)
 					{
-						instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-						instance_destroy(spiritObject.hurtbox);
-						instance_destroy(spiritObject);
-						spiritObject = noone;
-						spiritSummoned = false;
-						spiritState = false;
-						pendingToggle = false;
-						if ((selectedCharacter.JumpType & 1) != 1)
-						{
-							canDoubleJump = false;
-						}
+						DeactivateSpirit(false);
 						if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 						{
-							currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+							currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
 							OverwriteMoveset();
 						}
 					}
@@ -248,6 +239,7 @@ function ProcessHit( attackProperty, collision_list)
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
@@ -277,7 +269,7 @@ function ProcessHit( attackProperty, collision_list)
 				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			}
 			
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
@@ -297,7 +289,7 @@ function ProcessHit( attackProperty, collision_list)
 			}
 			collision_list.owner.grounded = false;
 			
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
@@ -313,7 +305,7 @@ function ProcessHit( attackProperty, collision_list)
 		else 
 		{
 			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+			if (collision_list.owner.spiritObject != noone) 
 			{
 				collision_list.owner.spiritObject.vsp = 0;
 			}
@@ -321,7 +313,7 @@ function ProcessHit( attackProperty, collision_list)
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
@@ -330,7 +322,7 @@ function ProcessHit( attackProperty, collision_list)
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
-		if (collision_list.owner.spiritObject != noone && collision_list.owner.spiritState) 
+		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
 		}
