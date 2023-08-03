@@ -31,6 +31,7 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	for (var i = 0; i < instance_number(oHitbox); i++;)
 	{
 		allHitboxes[i] = instance_find(oHitbox, i);
+		
 	}
 	
 	for (var i = 0; i < array_length(allHitboxes); i++;)

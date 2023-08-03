@@ -4,34 +4,46 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 {
 	prevState = _prevState;
 	prevSprite = _prevSprite;
+	animOffset = _animOffset;
+	hitstopBuffer = true;
+	isThrowable = true;
+	
 	ds_list_clear(hitByGroup);
 	if (target != noone)
 	{
 		ds_list_clear(target.hitByGroup);
 	}
-	animOffset = _animOffset;
-	hitstopBuffer = true;
-	isThrowable = true;
+	
+	// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+	var allHurtboxes = [];
 
-	// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
-	for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+	for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
 	{
-		var hurtbox = instance_find(oPlayerHurtbox, i);
-		
-		if (!hurtbox.primary && hurtbox.owner == id)
+		allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
+	}
+	
+	for (var i = 0; i < array_length(allHurtboxes); i++;)
+	{
+		if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == id)
 		{ 
-			instance_destroy(hurtbox);
+			instance_destroy(allHurtboxes[i]);
 		}
 	}
 	
 	// Destroy all hitboxes that belong to this player
+	var allHitboxes = [];
+	
 	for (var i = 0; i < instance_number(oHitbox); i++;)
 	{
-		var playerHitbox = instance_find(oHitbox, i);
+		allHitboxes[i] = instance_find(oHitbox, i);
 		
-		if (playerHitbox.owner == id)
+	}
+	
+	for (var i = 0; i < array_length(allHitboxes); i++;)
+	{
+		if (allHitboxes[i].owner == id)
 		{ 
-			instance_destroy(playerHitbox);
+			instance_destroy(allHitboxes[i]);
 		}
 	}
 }
