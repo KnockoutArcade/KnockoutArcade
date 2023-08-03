@@ -1836,7 +1836,6 @@ switch state
 		xHome = x;
 		
 		vsp += fallSpeed;
-
 	}
 	break;
 	
@@ -2419,8 +2418,16 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	{
 		x += sign(hsp+environmentDisplacement);
 	}
-	hsp = 0;
-	environmentDisplacement = 0;
+	
+	if(state == eState.LAUNCHED || (state == eState.HURT && !grounded))
+	{
+		hsp = -hsp * 3;
+	}
+	else
+	{
+		hsp = 0;
+		environmentDisplacement = 0;
+	}
 }
 
 if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
