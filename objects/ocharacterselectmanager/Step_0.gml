@@ -476,114 +476,95 @@ else if (state == 1)
 			room = rJayStage;
 			global.gameMode = GAMEMODE.VERSUS;
         }
-        else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+        else if (P1mapSelCol == 3 && P1mapSelRow == 1) // Random
         {
-            P1mapSelRow = irandom_range(0, mapSelRowMax);
-            P1mapSelCol = irandom_range(0, mapSelColMax);
-            if (P1mapSelCol == 0 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 2;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rRusselStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-            else if (P1mapSelCol == 1 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 3;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rBeverlyStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-            else if (P1mapSelCol == 2 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 4;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rJayStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
+			var validStage = false;
+			while (!validStage)
 			{
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 2;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
+				P1mapSelRow = irandom_range(0, mapSelRowMax);
+				P1mapSelCol = irandom_range(0, mapSelColMax);
+			    if (P1mapSelCol == 0 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 2;
 					}
-					else if (P1musicSelRow == 1)
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rRusselStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			    else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 3;
 					}
-					else if (P1musicSelRow == 2)
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rBeverlyStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			    else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 4;
 					}
-				}
-				
-				room = rStageArcade;
-				global.gameMode = GAMEMODE.VERSUS;
-		    }
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rJayStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			}
         }
         else
         {

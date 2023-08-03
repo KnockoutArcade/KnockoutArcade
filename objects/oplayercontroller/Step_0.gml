@@ -118,6 +118,7 @@ else if (movedir == image_xscale) // If moving forward
 	}
 	holdForwardTimer++;
 	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
 }
 else if (movedir == -image_xscale) // If moving backward
 {
@@ -133,6 +134,7 @@ else if (movedir == -image_xscale) // If moving backward
 	}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
+	runForwardTimer = 16;
 }
 else if ((!runButton && movedir == 0))
 {
@@ -142,6 +144,17 @@ else if ((!runButton && movedir == 0))
 	holdBackwardTimer = 0;
 	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
 	runButtonPressed = false;
+}
+
+// Reset all run timers if holding down
+if (verticalMoveDir == -1)
+{
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
 }
 
 // Handles timer for running forward
@@ -638,7 +651,6 @@ if (!isGrabbed)
 // Reset cancelOnLanding
 cancelOnLanding = true;
 
-
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
 {
@@ -735,6 +747,18 @@ if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZ
 	freezeEnvironmentDisplacement = environmentDisplacement;
 	freezeVSP = vsp;
 	state = eState.SCREEN_FREEZE;
+}
+
+// Prevents freezing the screen if the RC is activated as sson as the player gets hit
+if (rcActivated && state != eState.SCREEN_FREEZE)
+{
+	rcActivated = false;
+	rcFreezeTimer = 0;
+	activateFreeze = false;
+	stateBeforeFreeze = 0;
+	global.freezeTimer = false;
+	animTimer = 0; // Reset the animation timer when entering Rush Cancel state
+	speedTrailTimer = 0;
 }
 
 // State Machine
@@ -933,6 +957,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		runningBackward = false;
 		
 		vsp += fallSpeed;
 		
@@ -2230,7 +2255,14 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0)
+	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0
+		 && state != eState.BEING_GRABBED
+		 && state != eState.GETUP
+		 && state != eState.HITSTOP
+		 && state != eState.HURT
+		 && state != eState.KNOCKED_DOWN
+		 && state != eState.LAUNCHED
+		 && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
 		{
@@ -2305,7 +2337,41 @@ if (target != noone)
 		startCombo = false;
 	}
 }
-
+else if (spiritObject != noone)
+{
+	if (spiritObject.target == noone)
+	{
+		startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+	}
+}
+else
+{
+	startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+}
 
 
 // Collision

@@ -20,4 +20,6 @@ function ResetGame()
 	instance_destroy(oSpiritFire);
 	
 	instance_destroy(global.camObj);
+	
+	global.freezeTimer = false;
 }
