@@ -1868,7 +1868,6 @@ switch state
 		{
 			hitstun--;
 		}
-
 	}
 	break;
 	
@@ -2203,27 +2202,6 @@ switch state
 		SpeedTrail(0.3, 0.02, 1);
 	}
 	break;
-	
-	case eState.WALL_STICK:
-	{
-		hsp = 0;
-		vsp = 0;
-		image_speed = 0;
-		delay++;
-		if(delay >= 10)
-		{
-			hsp = currentHsp;
-			vsp = currentVsp;
-			image_speed = 1;
-			show_debug_message(hsp);
-			
-			wallBouncing = false;
-			delay = 0;
-			state = stateBeforeWallBounce;
-			hsp = -hsp * 3;
-		}
-	}
-	break;
 }
 
 // Code Outside State Machine
@@ -2442,13 +2420,9 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	
 	if((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
 	{
-		if (delay == 0)
-		{
-			currentHsp = hsp;
-			currentVsp = vsp;
-			stateBeforeWallBounce = state;
-			state = eState.WALL_STICK;
-		}
+		hitstop = 10;
+		state = eState.LAUNCHED;
+		hsp = -hsp * 3;
 	}
 	else
 	{

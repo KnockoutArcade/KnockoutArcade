@@ -196,8 +196,7 @@ enum eState {
 	RUSH_CANCEL_FORWARD,
 	RUSH_CANCEL_UP,
 	RUSH_CANCEL_AIR,
-	SCREEN_FREEZE,
-	WALL_STICK
+	SCREEN_FREEZE
 }
 
 enum eAttackType {
@@ -242,10 +241,6 @@ cancelOnLanding = true; // whether or not the character should cancel their curr
 
 // Wall bounce Variables
 wallBouncing = false;
-delay = 0;
-currentHsp = 0; // Used for wall bounces
-currentVsp = 0; // Used for wall bounces
-stateBeforeWallBounce = state;
 
 // Intro
 hasPerformedIntro = true;
