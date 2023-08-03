@@ -181,7 +181,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -312,6 +315,17 @@
         "MaintainPosition": true,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -376,7 +390,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -507,6 +524,17 @@
         "MaintainPosition": true,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -563,7 +591,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Light_Hit"
+          "HitSound": "sfx_Light_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -641,6 +672,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -729,7 +771,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2"
+          "HitSound": "sfx_light_hit2",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -811,6 +856,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -875,7 +931,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -953,6 +1012,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1026,6 +1096,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1098,7 +1179,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1176,6 +1260,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1244,7 +1339,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1322,6 +1420,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1382,7 +1491,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Light_Hit"
+          "HitSound": "sfx_Light_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1460,6 +1572,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1532,7 +1655,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1656,6 +1782,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1728,7 +1865,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1815,6 +1955,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -1875,7 +2026,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Light_Hit"
+          "HitSound": "sfx_Light_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -1962,6 +2116,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2030,7 +2195,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2117,6 +2285,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2185,7 +2364,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2272,6 +2454,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2352,7 +2545,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2454,6 +2650,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2538,7 +2745,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2"
+          "HitSound": "sfx_light_hit2",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2649,6 +2859,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": true
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2721,7 +2942,10 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2823,6 +3047,17 @@
         "MaintainPosition": false,
         "Vulnerable": true,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -2891,7 +3126,10 @@
           "HoldXOffset": 10,
           "HoldYOffset": 20,
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "TimeStopDuration": 0
         }
       ],
       "CounterData": [
@@ -2984,6 +3222,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -3119,6 +3368,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -3211,6 +3471,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     },
     {
@@ -3303,6 +3574,17 @@
         "MaintainPosition": false,
         "Vulnerable": false,
         "OnlyInSpiritOff": true
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
       }
     }
   ],
@@ -3323,8 +3605,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.0",
+  "Version": "Ver1.2.1",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-07-31T13:30:55.7570422-07:00",
+  "LastModified": "2023-08-03T15:54:18.3677427-07:00",
   "LastModifiedBy": "cstra"
 }
