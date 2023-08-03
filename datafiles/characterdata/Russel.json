@@ -2035,7 +2035,7 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "CausesWallbounce": true,
+          "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
