@@ -241,6 +241,7 @@ canTurnAround = true;
 cancelOnLanding = true; // whether or not the character should cancel their current air attack if they land
 
 // Wall bounce Variables
+wallBouncing = false;
 delay = 0;
 currentHsp = 0; // Used for wall bounces
 currentVsp = 0; // Used for wall bounces

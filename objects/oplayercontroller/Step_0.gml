@@ -2217,6 +2217,7 @@ switch state
 			image_speed = 1;
 			show_debug_message(hsp);
 			
+			wallBouncing = false;
 			delay = 0;
 			state = stateBeforeWallBounce;
 			hsp = -hsp * 3;
@@ -2439,7 +2440,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		x += sign(hsp+environmentDisplacement);
 	}
 	
-	if(state == eState.LAUNCHED || (state == eState.HURT && !grounded))
+	if((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
 	{
 		if (delay == 0)
 		{
