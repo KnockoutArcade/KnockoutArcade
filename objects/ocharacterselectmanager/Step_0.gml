@@ -122,6 +122,10 @@ if (state == 0)
         {
             global.p1SelectedCharacter = oJay;
         }
+		else if (P1charSelCol == 0 && P1charSelRow == 1)
+        {
+            global.p1SelectedCharacter = oGunther;
+        }
         else
         {
             P1hasSelectedChar = false;
@@ -227,6 +231,10 @@ if (state == 0)
         {
             global.p2SelectedCharacter = oJay;
             p2charSelFrameRate = 6;
+        }
+		else if (P1charSelCol == 0 && P1charSelRow == 1)
+        {
+            global.p1SelectedCharacter = oGunther;
         }
         else
         {

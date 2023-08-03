@@ -40,11 +40,180 @@
   "BaseColor": {
     "UID": "f47a134b-b7ee-4a0c-811e-e57df467b1aa",
     "Name": "",
-    "NumberOfReplacableColors": 0,
-    "ColorPalette": []
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      }
+    ]
   },
-  "NumberOfPalettes": 0,
-  "Palettes": [],
+  "NumberOfPalettes": 1,
+  "Palettes": [
+    {
+      "UID": "f425b468-41c3-4bb1-a8fb-36ecff1fa000",
+      "Name": "default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    }
+  ],
   "MoveData": [
     {
       "UID": "42a2e15c-f7e2-4c0b-af95-b8f39b46c9e7",
@@ -745,7 +914,7 @@
           "Pushback": 5.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
+          "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
           "HoldXOffset": 5,
           "HoldYOffset": 40,
@@ -1588,6 +1757,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2023-07-29T21:11:29.7510561-07:00",
+  "LastModified": "2023-07-30T22:19:25.1512267-07:00",
   "LastModifiedBy": "iansb"
 }
