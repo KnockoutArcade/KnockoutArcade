@@ -6,14 +6,14 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 	{
 		// Combo Scaling
 		owner.combo++; // Add 1 to our combo length
-		var scaledDamage = attackProperty.Damage; // Set the initial amount of damage to do
+		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
 		
 		if (owner.combo > 2) 
 		{
 			scaledDamage *= scaleAmount; // The amount of damage this hit will do. Important that this is updated before scaling is updated
-			if (attackProperty.Damage > 1) // If the attack's base damage is less than 1, allow decimals
+			if (attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage) > 1) // If the attack's base damage is less than 1, allow decimals
 			{
 				scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 				scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
@@ -234,7 +234,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 	{
 		// Combo Scaling
 		owner.playerOwner.combo++; // Add 1 to our combo length
-		var scaledDamage = attackProperty.Damage; // Set the initial amount of damage to do
+		var scaledDamage = attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.playerOwner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
 					

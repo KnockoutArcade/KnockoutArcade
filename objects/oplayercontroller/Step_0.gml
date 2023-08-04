@@ -657,6 +657,7 @@ cancelOnLanding = true;
 if (state == eState.SCREEN_FREEZE)
 {
 	// Freezes all movement in screen freeze
+	canTurnAround = false;
 	hsp = 0;
 	environmentDisplacement = 0;
 	vsp = 0;
@@ -781,7 +782,10 @@ switch state
 		if (movedir == image_xscale) 
 		{
 			sprite_index = CharacterSprites.walkForward_Sprite;
-			superMeter += meterBuildRate; // Walking forwards builds meter
+			if (!timeStopActivated && !installActivated)
+			{
+				superMeter += meterBuildRate; // Walking forwards builds meter
+			}
 			
 			// Handle Walking Sound Effects
 			for (var i = 0; i < array_length(WalkForwardFootsteps); i++;)
@@ -826,7 +830,7 @@ switch state
 		
 		image_speed = 1;
 		
-		hsp = walkSpeed * movedir;
+		hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 		
 		vsp += fallSpeed;
 
@@ -839,7 +843,7 @@ switch state
 		if (verticalMoveDir == 1)
 		{
 			state = eState.JUMPSQUAT;
-			hsp = walkSpeed * movedir;
+			hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 			jumpHsp = hsp;
 			// Is the player jumping forward?
 			isJumpingForward = (movedir == image_xscale);
@@ -881,7 +885,10 @@ switch state
 		hasSpentDoubleJump = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
-		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+		if (!timeStopActivated && !installActivated)
+		{
+			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+		}
 		
 		if (movedir == -image_xscale) // if we press back, then go back to walking state
 		{
@@ -892,7 +899,7 @@ switch state
 
 		image_speed = 1;
 		
-		hsp = runSpeed * image_xscale;
+		hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
 		vsp += fallSpeed;
 
 		if (!runningForward) 
@@ -913,7 +920,7 @@ switch state
 			else 
 			{
 				isJumpingForward = false;
-				hsp = walkSpeed * movedir;
+				hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 				jumpHsp = hsp;
 			}
 			
@@ -975,7 +982,7 @@ switch state
 		// Handle Startup
 		if (animTimer == backdashStartup)
 		{
-			hsp = backdashSpeed * -image_xscale;
+			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
 		}
 		
 		// Handle Running Sound Effects
@@ -1615,6 +1622,11 @@ switch state
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
 		{
 			show_debug_message("Actiating install super");
+			installActivated = true;
+			installTimer = 0;
+			installInterval = selectedCharacter.Super.SuperData.Duration;
+			damageBonus = selectedCharacter.Super.SuperData.damageBonus;
+			speedBonus = selectedCharacter.Super.SuperData.speedBonus;
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -2567,8 +2579,6 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 environmentDisplacement = 0;
 
 floor(y);
-
-
 
 // Change the player's direction
 if (!inAttackState && canTurnAround && !rcActivated)

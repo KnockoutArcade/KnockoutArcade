@@ -374,3 +374,6 @@ timeStopInterval = 0; // timeStopTimer counts up to this
 installActivated = false;
 installTimer = 0; // Install starts counting after the screen freeze
 installInterval = 0;
+damageBonus = 0; // Add this to all attacks
+speedBonus = 0; // Add this to all instances of walking, running, and jumping
+spiritInstall = false;
