@@ -114,8 +114,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 		owner.storedComboDamage = owner.comboDamage;
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
-		owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
+		if (!owner.timeStopActivated && !owner.installActivated)
+		{
+			collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
+			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
+		}
 		
 		if (!collision_list.owner.grounded)
 		{
@@ -185,6 +188,17 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
+		
+		// Handle time stop
+		if (attackProperty.ActivateTimeStop)
+		{
+			show_debug_message("Activated time stop");
+			owner.timeStopActivated = true;
+			owner.timeStopTimer = 0;
+			owner.timeStopInterval = attackProperty.TimeStopDuration;
+			owner.activateFreeze = true;
+			global.freezeTimer = true;
+		}
 		
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
@@ -290,8 +304,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
 					
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
-		owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
+		if (!owner.playerOwner.timeStopActivated && !owner.playerOwner.installActivated)
+		{
+			collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
+			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
+		}
 					
 		if (!collision_list.owner.grounded)
 		{

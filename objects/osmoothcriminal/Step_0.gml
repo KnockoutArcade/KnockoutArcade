@@ -517,7 +517,7 @@ if (host != noone && hostObject != noone)
 		}
 
 		// Freezes the player if the opponent freezes the screen
-		if (((opponent != noone && opponent.activateFreeze) || (hostObject.activateFreeze && state != eState.SUPER)) && state != eState.SCREEN_FREEZE)
+		if (((opponent != noone && opponent.activateFreeze) || (hostObject.activateFreeze && state != eState.SUPER && !hostObject.timeStopActivated)) && state != eState.SCREEN_FREEZE)
 		{
 			// Change some states when opponent activates screen freeze
 			if (state == eState.BEING_GRABBED)

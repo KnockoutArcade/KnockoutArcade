@@ -753,7 +753,7 @@ if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZ
 }
 
 // Prevents freezing the screen if the RC or super is activated as sson as the player gets hit
-if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.SUPER)
+if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.SUPER && !timeStopActivated)
 {
 	rcActivated = false;
 	superActivated = false;
@@ -2445,6 +2445,23 @@ else
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
+}
+
+// Handle the time stop timers outside of the FSM
+if (timeStopActivated)
+{
+	if (timeStopTimer >= timeStopInterval)
+	{
+		timeStopTimer = 0;
+		timeStopInterval = 0;
+		timeStopActivated = false;
+		activateFreeze = false;
+		global.freezeTimer = false;
+	}
+	else
+	{
+		timeStopTimer++;
+	}
 }
 
 
