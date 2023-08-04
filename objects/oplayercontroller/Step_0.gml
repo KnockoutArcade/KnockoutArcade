@@ -498,7 +498,7 @@ if (state == eState.CROUCHING)
 }
 
 // Animation pauses during hitstop and when the screen freezes
-if (hitstop == 0 && state != eState.SCREEN_FREEZE) 
+if (hitstop == 0 && (state != eState.SCREEN_FREEZE || superActivated)) 
 {
 	animTimer++;
 }
@@ -656,10 +656,11 @@ cancelOnLanding = true;
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
 {
-	image_speed = 0;
+	// Freezes all movement in screen freeze
 	hsp = 0;
 	environmentDisplacement = 0;
 	vsp = 0;
+	image_speed = 0;
 	
 	// If player is performing Rush Cancel
 	if (rcActivated)
@@ -751,15 +752,16 @@ if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZ
 	state = eState.SCREEN_FREEZE;
 }
 
-// Prevents freezing the screen if the RC is activated as sson as the player gets hit
-if (rcActivated && state != eState.SCREEN_FREEZE)
+// Prevents freezing the screen if the RC or super is activated as sson as the player gets hit
+if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.SUPER)
 {
 	rcActivated = false;
+	superActivated = false;
 	rcFreezeTimer = 0;
+	superFreezeTimer = 0;
 	activateFreeze = false;
 	stateBeforeFreeze = 0;
 	global.freezeTimer = false;
-	animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 	speedTrailTimer = 0;
 }
 
@@ -1562,14 +1564,52 @@ switch state
 	
 	case eState.SUPER: 
 	{
-		cancelOnLanding = false;
-		if (grounded)
+		// Attack Super
+		if (animTimer <= 1 && !activateFreeze)
 		{
-			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+			superActivated = true;
+			superFreezeTimer = 0;
+			activateFreeze = true;
+			global.freezeTimer = true;
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+			if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime)
+			{
+				superActivated = false;
+				superFreezeTimer = 0;
+				activateFreeze = false;
+				global.freezeTimer = false;
+			}
+			else
+			{
+				superFreezeTimer++;
+			}
+		}
+		
+		if (superActivated)
+		{
+			hsp = 0;
+			environmentDisplacement = 0;
+			vsp = 0;
+		}
+		
+		if (selectedCharacter.Super.SuperData.Type == 0)
+		{
+			cancelOnLanding = false;
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+			}
+			else 
+			{
+				JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+			}
+		}
+		// Install Super
+		else
+		{
+			
 		}
 		
 		if (cancelable && hitstop < 1)

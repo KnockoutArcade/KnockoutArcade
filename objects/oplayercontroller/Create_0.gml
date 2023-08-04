@@ -363,3 +363,7 @@ pendingToggle = false;
 // Data used by spirits, but kept here to avoid errors
 host = noone;
 hostObject = noone;
+
+// Super Data
+superActivated = false;
+superFreezeTimer = 0; // Counts up to the specified freeze duration, then deactivates the freeze frame

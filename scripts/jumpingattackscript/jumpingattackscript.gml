@@ -1,6 +1,7 @@
 /// @function                  JumpingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
+// 
 function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
 {
 	sprite_index = moveToDo.SpriteId;

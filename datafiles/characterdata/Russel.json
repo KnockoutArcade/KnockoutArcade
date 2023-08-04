@@ -7071,7 +7071,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_NSpecial",
-      "Duration": 50,
+      "Duration": 75,
       "NumberOfFrames": 25,
       "FrameData": [
         {
@@ -7079,106 +7079,106 @@
           "ImageIndex": 1
         },
         {
-          "Length": 4,
+          "Length": 10,
           "ImageIndex": 2
         },
         {
-          "Length": 6,
+          "Length": 20,
           "ImageIndex": 3
         },
         {
-          "Length": 10,
+          "Length": 35,
           "ImageIndex": 4
         },
         {
-          "Length": 11,
+          "Length": 36,
           "ImageIndex": 5
         },
         {
-          "Length": 12,
+          "Length": 37,
           "ImageIndex": 6
         },
         {
-          "Length": 13,
+          "Length": 38,
           "ImageIndex": 7
         },
         {
-          "Length": 14,
+          "Length": 39,
           "ImageIndex": 8
         },
         {
-          "Length": 15,
+          "Length": 40,
           "ImageIndex": 9
         },
         {
-          "Length": 16,
+          "Length": 41,
           "ImageIndex": 10
         },
         {
-          "Length": 17,
+          "Length": 42,
           "ImageIndex": 11
         },
         {
-          "Length": 18,
+          "Length": 43,
           "ImageIndex": 12
         },
         {
-          "Length": 19,
+          "Length": 44,
           "ImageIndex": 13
         },
         {
-          "Length": 20,
+          "Length": 45,
           "ImageIndex": 14
         },
         {
-          "Length": 21,
+          "Length": 46,
           "ImageIndex": 15
         },
         {
-          "Length": 22,
+          "Length": 47,
           "ImageIndex": 16
         },
         {
-          "Length": 23,
+          "Length": 48,
           "ImageIndex": 17
         },
         {
-          "Length": 24,
+          "Length": 49,
           "ImageIndex": 18
         },
         {
-          "Length": 25,
+          "Length": 50,
           "ImageIndex": 19
         },
         {
-          "Length": 26,
+          "Length": 51,
           "ImageIndex": 20
         },
         {
-          "Length": 27,
+          "Length": 52,
           "ImageIndex": 21
         },
         {
-          "Length": 28,
+          "Length": 53,
           "ImageIndex": 22
         },
         {
-          "Length": 31,
+          "Length": 56,
           "ImageIndex": 23
         },
         {
-          "Length": 36,
+          "Length": 58,
           "ImageIndex": 24
         },
         {
-          "Length": 40,
+          "Length": 67,
           "ImageIndex": 25
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 10,
+          "Start": 35,
           "Lifetime": 1,
           "AttackWidth": 35,
           "AttackHeight": 20,
@@ -7213,7 +7213,7 @@
           "TimeStopDuration": 0
         },
         {
-          "Start": 31,
+          "Start": 56,
           "Lifetime": 4,
           "AttackWidth": 35,
           "AttackHeight": 20,
@@ -7314,7 +7314,7 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 10,
+          "Start": 35,
           "Lifetime": 16,
           "AttackWidth": 30,
           "AttackHeight": 30,
@@ -7328,14 +7328,14 @@
         "HitBox": 1,
         "NumberOfHits": 8,
         "HitOnFrames": [
-          12,
-          14,
-          16,
-          18,
-          20,
-          22,
-          24,
-          26
+          37,
+          39,
+          41,
+          43,
+          45,
+          47,
+          49,
+          51
         ]
       },
       "GroundMovementData": {
@@ -7431,7 +7431,7 @@
       "SuperData": {
         "Type": 0,
         "ScreenFreezeTime": 30,
-        "InvincibilityFrames": 0,
+        "InvincibilityFrames": 5,
         "FinalBlowKO": true,
         "Duration": 0,
         "IncreaseAttackBy": 0.0,
@@ -7472,6 +7472,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-08-03T15:55:18.9901425-07:00",
+  "LastModified": "2023-08-03T23:28:18.6216399-07:00",
   "LastModifiedBy": "cstra"
 }

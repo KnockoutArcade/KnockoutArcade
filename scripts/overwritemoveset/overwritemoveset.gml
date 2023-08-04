@@ -35,6 +35,7 @@ function OverwriteMoveset()
 				nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
 				nextMove.NumberOfSounds = selectedCharacter.MoveData[i].NumberOfSounds;
 				nextMove.MoveSoundData = selectedCharacter.MoveData[i].MoveSoundData;
+				nextMove.SuperData = selectedCharacter.MoveData[i].SuperData;
 
 				if(selectedCharacter.MoveData[i].IsThrow)
 				{
