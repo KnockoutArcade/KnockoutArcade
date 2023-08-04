@@ -197,7 +197,7 @@ if (host != noone && hostObject != noone)
 		if (state == eState.IDLE)
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -288,7 +288,7 @@ if (host != noone && hostObject != noone)
 		if (state == eState.CROUCHING)
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -539,7 +539,7 @@ if (host != noone && hostObject != noone)
 			case eState.WALKING:
 			{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -634,7 +634,7 @@ if (host != noone && hostObject != noone)
 		case eState.RUN_FORWARD:
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -723,7 +723,7 @@ if (host != noone && hostObject != noone)
 		case eState.RUN_BACKWARD:
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -779,7 +779,7 @@ if (host != noone && hostObject != noone)
 		case eState.JUMPSQUAT:
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -864,7 +864,7 @@ if (host != noone && hostObject != noone)
 		case eState.JUMPING:
 		{
 			// Immediately removes the spirit after the move is over in Spirit OFF
-			if (!hostObject.spiritState)
+			if (!hostObject.spiritState && !hostObject.spiritInstall)
 			{
 				DeactivateSpirit(true);
 			}
@@ -1786,7 +1786,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.KNOCKED_DOWN:
 		{
-			if (nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 25 && abs(y - hostObject.y) < 25)
+			if ((nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 25 && abs(y - hostObject.y) < 25) || hostObject.spiritInstall)
 			{
 				cancelable = false;
 				grounded = true;
@@ -2263,6 +2263,50 @@ if (host != noone && hostObject != noone)
 	// Instantly delete the spirit when spirit health is reduced to zero
 	if (hostObject.spiritCurrentHealth <= 0)
 	{
+		if (hostObject.spiritInstall)
+		{
+			with (hostObject)
+			{
+				installTimer = 0;
+				installInterval = 0;
+				installActivated = false;
+				damageBonus = 0;
+				speedBonus = 0;
+				
+				// Reset jump types
+				// A short hop is when the player breifly taps up so they don't jump as high.
+				if (selectedCharacter.JumpType & 4 == 4)
+				{
+					canShortHop = true; // Whether the player can shorthop or not
+				}
+				else
+				{
+					canShortHop = false;
+				}
+				
+				// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+				if (selectedCharacter.JumpType & 2 == 2)
+				{
+					canSuperJump = true; // Whether this character can Super Jump or not
+				}
+				else
+				{
+					canSuperJump = false;
+				}
+				
+				// A double jump is when the player jumps again in the air
+				if ((selectedCharacter.JumpType & 1) == 1)
+				{
+					canDoubleJump = true; // Whether this character can Double Jump or not
+				}
+				else
+				{
+					canDoubleJump = false;
+				}
+				
+				spiritInstall = false;
+			}
+		}
 		hostObject.spiritBroken = true;
 		hostObject.hitstop = 60;
 		hostObject.state = eState.LAUNCHED;

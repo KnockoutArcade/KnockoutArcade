@@ -1625,8 +1625,48 @@ switch state
 			installActivated = true;
 			installTimer = 0;
 			installInterval = selectedCharacter.Super.SuperData.Duration;
-			damageBonus = selectedCharacter.Super.SuperData.damageBonus;
-			speedBonus = selectedCharacter.Super.SuperData.speedBonus;
+			
+			// Apply bonuses
+			damageBonus = selectedCharacter.Super.SuperData.IncreaseAttackBy;
+			speedBonus = selectedCharacter.Super.SuperData.IncreaseSpeedBy;
+			
+			// Change jump type
+			if (selectedCharacter.Super.SuperData.JumpType & 4 == 4)
+			{
+				canShortHop = true; // Whether the player can shorthop or not
+			}
+			else
+			{
+				canShortHop = false;
+			}
+			
+			// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+			if (selectedCharacter.Super.SuperData.JumpType & 2 == 2)
+			{
+				canSuperJump = true; // Whether this character can Super Jump or not
+			}
+			else
+			{
+				canSuperJump = false;
+			}
+			
+			// A double jump is when the player jumps again in the air
+			if ((selectedCharacter.Super.SuperData.JumpType & 1) == 1)
+			{
+				canDoubleJump = true; // Whether this character can Double Jump or not
+			}
+			else
+			{
+				canDoubleJump = false;
+			}
+			
+			spiritInstall = selectedCharacter.Super.SuperData.SpiritInstall;
+			if (spiritInstall)
+			{
+				spiritBroken = false;
+				spiritCurrentHealth = spiritMaxHealth;
+				SummonSpirit();
+			}
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1635,7 +1675,7 @@ switch state
 		}
 		
 		// Freeze movement during screen freeze
-		// This code is here to animate the moves during the screen freeze
+		// This code is here instead of in the screen freeze state to animate the moves during the screen freeze
 		if (!superActivated)
 		{
 			hsp = 0;
@@ -1744,7 +1784,7 @@ switch state
 	
 	case eState.BEING_GRABBED : 
 	{
-		if (spiritObject != noone)
+		if (spiritObject != noone && !spiritInstall)
 		{
 			DeactivateSpirit(false);
 			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
@@ -2457,6 +2497,60 @@ else
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
+}
+
+// Handle the install timers outside of the FSM
+if (installActivated)
+{
+	if (installTimer >= installInterval)
+	{
+		installTimer = 0;
+		installInterval = 0;
+		installActivated = false;
+		damageBonus = 0;
+		speedBonus = 0;
+		
+		// Reset jump types
+		// A short hop is when the player breifly taps up so they don't jump as high.
+		if (selectedCharacter.JumpType & 4 == 4)
+		{
+			canShortHop = true; // Whether the player can shorthop or not
+		}
+		else
+		{
+			canShortHop = false;
+		}
+		
+		// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+		if (selectedCharacter.JumpType & 2 == 2)
+		{
+			canSuperJump = true; // Whether this character can Super Jump or not
+		}
+		else
+		{
+			canSuperJump = false;
+		}
+		
+		// A double jump is when the player jumps again in the air
+		if ((selectedCharacter.JumpType & 1) == 1)
+		{
+			canDoubleJump = true; // Whether this character can Double Jump or not
+		}
+		else
+		{
+			canDoubleJump = false;
+		}
+		
+		if (spiritInstall)
+		{
+			spiritInstall = false;
+			DeactivateSpirit(false);
+		}
+	}
+	else
+	{
+		installTimer++;
+	}
 }
 
 // Handle the time stop timers outside of the FSM

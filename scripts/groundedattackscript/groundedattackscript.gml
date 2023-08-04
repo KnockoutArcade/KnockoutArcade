@@ -60,7 +60,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
-		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
 		if (!spiritObject.creatingHitbox)
 		{
@@ -81,7 +81,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			if (moveToDo.SwitchMoveset)
 			{
-				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
+				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken && !spiritInstall)
 				{
 					if (!spiritState)
 					{
@@ -102,7 +102,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		}
 		
 		// If this move switched Spirit state
-		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken && !spiritInstall)
 		{
 			if (!spiritState)
 			{

@@ -60,7 +60,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, deactivate it
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
-		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
 		if (!spiritObject.creatingHitbox)
 		{
@@ -78,7 +78,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
 		{
-			if (moveToDo.SwitchMoveset && !spiritBroken)
+			if (moveToDo.SwitchMoveset && !spiritBroken && !spiritInstall)
 			{
 				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
 				{
@@ -101,7 +101,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		}
 		
 		// If this move switched Spirit state
-		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken && !spiritInstall)
 		{
 			if (!spiritState)
 			{
