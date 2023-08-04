@@ -535,11 +535,25 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome + min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome + min(hitstop, 3);
+			}
 		}
-		else 
+		else
 		{
-			x = xHome - min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome - min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome - min(hitstop, 3);
+			}
 		}
 	}
 	else 
@@ -618,7 +632,11 @@ if (state == eState.HITSTOP)
 			hitstopBuffer = false;
 		}
 		
-		
+		if (wallHit)
+		{
+			wallBouncing = false;
+			wallHit = false;
+		}
 		prevSprite = 0;
 		shuffle = 0;
 		framesSinceHitstun = 0;
@@ -630,6 +648,7 @@ if (state == eState.HITSTOP)
 		{
 			image_index = 0;
 			x = xHome;
+			y = yHome;
 			hitstun++;
 		}
 		
@@ -637,6 +656,7 @@ if (state == eState.HITSTOP)
 		{
 			blockstun++;
 			x = xHome;
+			y = yHome;
 		}
 	}
 	image_speed = 0;
@@ -1834,6 +1854,7 @@ switch state
 			}
 		}
 		xHome = x;
+		yHome = y;
 		
 		vsp += fallSpeed;
 	}
@@ -2224,6 +2245,7 @@ else
 		prevState = state;
 	}
 	xHome = x;
+	yHome = y;
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
@@ -2378,10 +2400,12 @@ else
 // We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
 // player's position without ossilating.
 var actualXPos = x;
+var actualYPos = y;
 x = xHome;
+y = yHome;
 
 // Collisions With Players
-if (opponent != noone)
+if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
 	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
@@ -2420,9 +2444,10 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	
 	if((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
 	{
+		wallHit = true;
 		hitstop = 10;
 		state = eState.LAUNCHED;
-		hsp = -hsp * 3;
+		hsp = -hsp;
 	}
 	else
 	{
@@ -2433,7 +2458,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 
 if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 {
-	//Determine wether we are rising into a cieling or falling onto a floor.
+	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
 	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
@@ -2472,6 +2497,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 }
 x = actualXPos; // Restore the player's actual x position
+y = actualYPos; // Restore the player's actual y position
 
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
@@ -2484,7 +2510,6 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 environmentDisplacement = 0;
 
 floor(y);
-
 
 
 // Change the player's direction

@@ -241,6 +241,7 @@ cancelOnLanding = true; // whether or not the character should cancel their curr
 
 // Wall bounce Variables
 wallBouncing = false;
+wallHit = false; // this is to dectect when the player hits the wall
 
 // Intro
 hasPerformedIntro = true;
@@ -270,6 +271,7 @@ blockstun = 0;
 isCrouchBlocking = false;
 blockbuffer = false;
 xHome = x;
+yHome = y;
 hitstunShuffleTimer = 0;
 shuffle = 0;
 framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
