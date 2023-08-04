@@ -1564,7 +1564,7 @@ switch state
 	
 	case eState.SUPER: 
 	{
-		// Attack Super
+		// Handle Screen Freeze
 		if (animTimer <= 1 && !activateFreeze)
 		{
 			superActivated = false;

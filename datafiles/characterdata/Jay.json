@@ -1175,7 +1175,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 32,
-      "MoveCanCancelInto": 199000,
+      "MoveCanCancelInto": 4393304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2250,7 +2250,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 199064,
+      "MoveCanCancelInto": 4393368,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2474,7 +2474,7 @@
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 256,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2675,7 +2675,7 @@
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
       "MoveType": 512,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2880,7 +2880,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 198936,
+      "MoveCanCancelInto": 4393240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3051,7 +3051,7 @@
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 2048,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3244,7 +3244,7 @@
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
       "MoveType": 4096,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3497,7 +3497,7 @@
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 8192,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3664,7 +3664,7 @@
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
       "MoveType": 16384,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3835,7 +3835,7 @@
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
       "MoveType": 32768,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -4555,7 +4555,7 @@
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
       "MoveType": 131072,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -5986,7 +5986,7 @@
     {
       "UID": "1a8a6520-bcf7-4039-9e99-081309c4c8f4",
       "MoveType": 32,
-      "MoveCanCancelInto": 199000,
+      "MoveCanCancelInto": 4393304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6214,7 +6214,7 @@
     {
       "UID": "2073dfc1-f8a1-4b14-918e-85145648d7ed",
       "MoveType": 256,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6308,7 +6308,7 @@
     {
       "UID": "570f35c5-5b42-46a3-91d2-2c0d69de8a6a",
       "MoveType": 512,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6410,7 +6410,7 @@
     {
       "UID": "4afa7429-6d41-4bd5-97f3-04638476f409",
       "MoveType": 1024,
-      "MoveCanCancelInto": 203544,
+      "MoveCanCancelInto": 4397848,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6496,7 +6496,7 @@
     {
       "UID": "b0bd9bb2-37ff-4865-b873-591085816194",
       "MoveType": 2048,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6582,7 +6582,7 @@
     {
       "UID": "2871012d-430a-4c86-aba6-597111deac51",
       "MoveType": 4096,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6676,7 +6676,7 @@
     {
       "UID": "6e5b6d3a-cdac-43ad-96fc-843bde9d3097",
       "MoveType": 8192,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6779,7 +6779,7 @@
     {
       "UID": "9281d28a-f195-44ec-9a6b-11e2d35c1ebc",
       "MoveType": 16384,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6865,7 +6865,7 @@
     {
       "UID": "06dad826-5599-4ee0-9e32-a8f736d77210",
       "MoveType": 32768,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7359,7 +7359,7 @@
     {
       "UID": "11e09b5f-3317-44a6-a541-3c9278051207",
       "MoveType": 65536,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7944,6 +7944,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-08-04T02:11:25.9107806-07:00",
+  "LastModified": "2023-08-04T03:05:07.4082748-07:00",
   "LastModifiedBy": "cstra"
 }

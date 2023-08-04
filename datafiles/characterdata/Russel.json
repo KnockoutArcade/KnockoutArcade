@@ -1175,7 +1175,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 32,
-      "MoveCanCancelInto": 723288,
+      "MoveCanCancelInto": 4917592,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -1953,7 +1953,7 @@
     {
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
       "MoveType": 8,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2316,7 +2316,7 @@
     {
       "UID": "15155b21-0122-46a6-9170-41408971b163",
       "MoveType": 16,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2707,7 +2707,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 723352,
+      "MoveCanCancelInto": 4917656,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3037,7 +3037,7 @@
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 256,
-      "MoveCanCancelInto": 725528,
+      "MoveCanCancelInto": 4919832,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3232,7 +3232,7 @@
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
       "MoveType": 512,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3436,7 +3436,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 198936,
+      "MoveCanCancelInto": 4393240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3597,7 +3597,7 @@
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 2048,
-      "MoveCanCancelInto": 725528,
+      "MoveCanCancelInto": 4919832,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4880,7 +4880,7 @@
     {
       "UID": "df89eb6c-5314-4802-beb4-b2d0e0cd946d",
       "MoveType": 65536,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -5145,7 +5145,7 @@
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
       "MoveType": 131072,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -5388,7 +5388,7 @@
     {
       "UID": "9b2daffb-58bf-4a67-914d-abf9a3561af9",
       "MoveType": 524288,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -7472,6 +7472,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-08-03T23:28:18.6216399-07:00",
+  "LastModified": "2023-08-04T03:00:42.9416913-07:00",
   "LastModifiedBy": "cstra"
 }
