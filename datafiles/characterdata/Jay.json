@@ -1317,7 +1317,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -2650,7 +2650,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -2855,7 +2855,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3026,7 +3026,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3219,7 +3219,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3472,7 +3472,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3639,7 +3639,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3810,7 +3810,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -3985,7 +3985,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -4530,7 +4530,7 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
+        "PerformAttack": true,
         "PerformInSpiritOff": false,
         "StartXOffset": 0,
         "StartYOffset": 0,
@@ -7944,6 +7944,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2023-08-04T03:05:07.4082748-07:00",
+  "LastModified": "2023-08-04T13:03:25.076306-07:00",
   "LastModifiedBy": "cstra"
 }
