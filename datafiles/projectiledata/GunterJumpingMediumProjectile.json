@@ -6,7 +6,7 @@
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 5.0,
   "EnvironmentalDisplacement": 0,
-  "FallSpeed": 10.0,
+  "FallSpeed": 5.0,
   "GroundTraction": 0.0,
   "AirTraction": 0.0,
   "DestroyOnFloor": true,
@@ -16,10 +16,10 @@
   "NumberOfBounces": 0,
   "Bounciness": 0.0,
   "Transcendent": false,
-  "Health": 1,
+  "Health": 10,
   "ProjectileSprites": {
     "Sprite": "sGunther_JumpingMedium_Projectile",
-    "Destroy": "sHitEffect"
+    "Destroy": "sGunther_JumpingMedium_Projectile_destroy_strip4"
   },
   "BaseColor": {
     "UID": "dcb0f6de-1710-45b3-937f-3d09284f7c8a",
@@ -199,11 +199,23 @@
       ]
     }
   ],
-  "NumberOfFrames": 1,
+  "NumberOfFrames": 4,
   "FrameData": [
     {
-      "Length": 60,
+      "Length": 2,
       "ImageIndex": 1
+    },
+    {
+      "Length": 4,
+      "ImageIndex": 2
+    },
+    {
+      "Length": 6,
+      "ImageIndex": 3
+    },
+    {
+      "Length": 8,
+      "ImageIndex": 4
     }
   ],
   "NumberOfHitboxes": 1,
@@ -267,12 +279,12 @@
     }
   ],
   "RehitData": {
-    "HitBox": 0,
+    "HitBox": 1,
     "NumberOfHits": 0,
     "HitOnFrames": []
   },
   "Version": "Ver1.2.1",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2023-08-03T17:05:02.4703774-07:00",
+  "LastModified": "2023-08-03T19:21:22.5228509-07:00",
   "LastModifiedBy": "iansb"
 }

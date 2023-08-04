@@ -12,6 +12,7 @@
     {"id":{"name":"sTestSprite","path":"sprites/sTestSprite/sTestSprite.yy",},"order":12,},
     {"id":{"name":"sFinishFlag","path":"sprites/sFinishFlag/sFinishFlag.yy",},"order":2,},
     {"id":{"name":"sStageSelect_Cursor","path":"sprites/sStageSelect_Cursor/sStageSelect_Cursor.yy",},"order":1,},
+    {"id":{"name":"sGunther_JumpingMedium_Projectile_destroy_strip4","path":"sprites/sGunther_JumpingMedium_Projectile_destroy_strip4/sGunther_JumpingMedium_Projectile_destroy_strip4.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial2_MOCKUP","path":"sprites/sBeverly_SideSpecial2_MOCKUP/sBeverly_SideSpecial2_MOCKUP.yy",},"order":3,},
     {"id":{"name":"CheckChange","path":"scripts/CheckChange/CheckChange.yy",},"order":3,},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},"order":2,},
