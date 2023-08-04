@@ -324,7 +324,7 @@ if (!isProjectile)
 						// Determine if we should display the coutner hit text on the p1 or p2 side
 						var isP2 = (owner.playerID == 2);
 
-						ProcessHit(counterHitProperty, collision_list[| i]);
+						ProcessHit(counterHitProperty, collision_list[| i], finalBlowSuper);
 
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
@@ -364,7 +364,7 @@ if (!isProjectile)
 					}
 					else
 					{ // on Regular Hit
-						ProcessHit(attackProperty, collision_list[| i]);
+						ProcessHit(attackProperty, collision_list[| i], finalBlowSuper);
 					}
 
 					//Allow Cancelling
@@ -520,7 +520,7 @@ else
 						// Determine if we should display the coutner hit text on the p1 or p2 side
 						var isP2 = (owner.playerOwner.playerID == 2);
 
-						ProcessHit(counterHitProperty, collision_list[| i]);
+						ProcessHit(counterHitProperty, collision_list[| i], finalBlowSuper);
 
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
@@ -560,7 +560,7 @@ else
 					}
 					else
 					{ // on Regular Hit
-						ProcessHit(attackProperty, collision_list[| i]);
+						ProcessHit(attackProperty, collision_list[| i], finalBlowSuper);
 					}
 
 

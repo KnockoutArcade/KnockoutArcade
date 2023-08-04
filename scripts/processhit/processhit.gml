@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function ProcessHit(attackProperty, collision_list)
+function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 {
 	if (!isProjectile)
 	{
@@ -31,7 +31,22 @@ function ProcessHit(attackProperty, collision_list)
 		owner.comboScaling += attackProperty.ComboScaling;
 		
 		// Apply Damage
-		collision_list.owner.hp -= scaledDamage;
+		if (finalBlowSuper)
+		{
+			if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+			{
+				collision_list.owner.hp = 1;
+			}
+			else
+			{
+				collision_list.owner.hp -= scaledDamage;
+			}
+		}
+		else
+		{
+			collision_list.owner.hp -= scaledDamage;
+		}
+		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
@@ -68,7 +83,22 @@ function ProcessHit(attackProperty, collision_list)
 			{
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
-					collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					if (finalBlowSuper)
+					{
+						if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+						{
+							collision_list.owner.spiritCurrentHealth = 1;
+						}
+						else
+						{
+							collision_list.owner.spiritCurrentHealth -= scaledDamage;
+						}
+					}
+					else
+					{
+						collision_list.owner.spiritCurrentHealth -= scaledDamage;
+					}
+					
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
