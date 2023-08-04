@@ -1567,19 +1567,21 @@ switch state
 		// Attack Super
 		if (animTimer <= 1 && !activateFreeze)
 		{
-			superActivated = true;
+			superActivated = false;
 			superFreezeTimer = 0;
 			activateFreeze = true;
 			global.freezeTimer = true;
 		}
 		else 
 		{
-			if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime)
+			if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime && !superActivated)
 			{
-				superActivated = false;
+				superActivated = true;
 				superFreezeTimer = 0;
 				activateFreeze = false;
 				global.freezeTimer = false;
+				superInvincibilityTimer = 0;
+				invincible = true;
 			}
 			else
 			{
@@ -1587,11 +1589,23 @@ switch state
 			}
 		}
 		
-		if (superActivated)
+		if (!superActivated)
 		{
 			hsp = 0;
 			environmentDisplacement = 0;
 			vsp = 0;
+		}
+		
+		if (invincible)
+		{
+			if (superInvincibilityTimer >= selectedCharacter.Super.SuperData.InvincibilityFrames)
+			{
+				invincible = false;
+			}
+			else
+			{
+				superInvincibilityTimer++;
+			}
 		}
 		
 		if (selectedCharacter.Super.SuperData.Type == 0)

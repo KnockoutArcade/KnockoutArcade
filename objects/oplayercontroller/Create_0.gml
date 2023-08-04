@@ -366,4 +366,5 @@ hostObject = noone;
 
 // Super Data
 superActivated = false;
+superInvincibilityTimer = 0; // Invincibility starts counting after the screen freeze
 superFreezeTimer = 0; // Counts up to the specified freeze duration, then deactivates the freeze frame
