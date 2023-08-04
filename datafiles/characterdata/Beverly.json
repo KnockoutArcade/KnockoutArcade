@@ -6610,8 +6610,8 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 10,
-          "Lifetime": 16,
+          "Start": 35,
+          "Lifetime": 36,
           "AttackWidth": 16,
           "AttackHeight": 27,
           "WidthOffset": 3,
@@ -6743,6 +6743,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-08-04T01:33:36.4470265-07:00",
+  "LastModified": "2023-08-04T02:25:51.1548167-07:00",
   "LastModifiedBy": "cstra"
 }
