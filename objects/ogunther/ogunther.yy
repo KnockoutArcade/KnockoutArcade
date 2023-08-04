@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sRussel_Idle",
+    "path": "sprites/sRussel_Idle/sRussel_Idle.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oPlayerController",
