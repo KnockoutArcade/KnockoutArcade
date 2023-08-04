@@ -1562,15 +1562,20 @@ switch state
 	
 	case eState.SUPER: 
 	{
-		//cancelOnLanding = false;
-		//if (grounded)
-		//{
-		//	GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
-		//}
-		//else 
-		//{
-		//	JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
-		//}
+		cancelOnLanding = false;
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.Super, attack, true);
+		}
 	}
 	break;
 

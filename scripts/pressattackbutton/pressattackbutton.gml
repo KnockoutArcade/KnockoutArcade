@@ -130,6 +130,7 @@ function PressAttackButton(attack)
 				if (superMeter >= 100)
 				{
 					show_debug_message("Perform Super");
+					superMeter -= 100;
 					//state = eState.SUPER;
 					//image_index = 0;
 					//SetSpiritMoveData(false, selectedCharacter.Super, attack);
