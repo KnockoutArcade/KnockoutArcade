@@ -125,6 +125,16 @@ function PressAttackButton(attack)
 					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
 				}
 			break;
+			
+			case 6:
+				if (superMeter >= 100)
+				{
+					show_debug_message("Perform Super");
+					//state = eState.SUPER;
+					//image_index = 0;
+					//SetSpiritMoveData(false, selectedCharacter.Super, attack);
+				}
+			break;
 		}
 		
 		

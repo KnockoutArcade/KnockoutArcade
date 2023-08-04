@@ -109,7 +109,9 @@ function OverwriteMoveset()
 					case 2097152: // command normal 3
 					selectedCharacter.CommandNormal3 = nextMove;
 					break;
-			
+					case 4194304: // super
+					selectedCharacter.Super = nextMove;
+					break;
 				}
 		
 				switch (selectedCharacter.MoveData[i].EnhanceMoveType)

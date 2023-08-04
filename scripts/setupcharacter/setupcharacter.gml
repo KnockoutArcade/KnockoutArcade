@@ -167,7 +167,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 2097152: // command normal 3
 			formedCharacter.CommandNormal3 = nextMove;
 			break;
-			
+			case 4194304: // super
+			formedCharacter.Super = nextMove;
+			break;
 		}
 		
 		switch (selectedCharacter.MoveData[i].EnhanceMoveType)

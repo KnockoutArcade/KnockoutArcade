@@ -42,7 +42,8 @@ if (playerID == 1)
 	var heavyattack = 3 * global.p1ButtonHeavy;
 	var grab = 4 * global.p1ButtonGrab;
 	var special = 5 * global.p1ButtonSpecial;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special);
+	var super = 6 * global.p1ButtonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
 else 
@@ -62,7 +63,8 @@ else
 	var heavyattack = 3 * global.p2ButtonHeavy;
 	var grab = 4 * global.p2ButtonGrab;
 	var special = 5 * global.p2ButtonSpecial;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special);
+	var super = 6 * global.p2ButtonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 }
 
@@ -1557,7 +1559,20 @@ switch state
 		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
-
+	
+	case eState.SUPER: 
+	{
+		//cancelOnLanding = false;
+		//if (grounded)
+		//{
+		//	GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+		//}
+		//else 
+		//{
+		//	JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+		//}
+	}
+	break;
 
 	case eState.GRAB : 
 	{
