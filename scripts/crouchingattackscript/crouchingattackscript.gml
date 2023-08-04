@@ -9,6 +9,16 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	image_index = 0;
 	inAttackState = true;
 	
+	// Resets all run timers
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	runningForward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
+	runningBackward = false;
+	
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
 		// Hackey way of preventing a crash where a move gets interrupted as soon as a hitbox is created
