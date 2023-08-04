@@ -1589,13 +1589,6 @@ switch state
 			}
 		}
 		
-		if (!superActivated)
-		{
-			hsp = 0;
-			environmentDisplacement = 0;
-			vsp = 0;
-		}
-		
 		if (invincible)
 		{
 			if (superInvincibilityTimer >= selectedCharacter.Super.SuperData.InvincibilityFrames)
@@ -1629,6 +1622,13 @@ switch state
 		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.Super, attack, true);
+		}
+		
+		if (!superActivated)
+		{
+			hsp = 0;
+			environmentDisplacement = 0;
+			vsp = 0;
 		}
 	}
 	break;
