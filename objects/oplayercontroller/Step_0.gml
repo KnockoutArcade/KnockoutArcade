@@ -1601,22 +1601,20 @@ switch state
 			}
 		}
 		
-		if (selectedCharacter.Super.SuperData.Type == 0)
+		cancelOnLanding = false;
+		if (grounded)
 		{
-			cancelOnLanding = false;
-			if (grounded)
-			{
-				GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
-			}
-			else 
-			{
-				JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
-			}
+			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
 		}
-		// Install Super
-		else
+		else 
 		{
-			
+			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+		}
+		
+		// Install Super
+		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
+		{
+			show_debug_message("Actiating install super");
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1624,6 +1622,8 @@ switch state
 			CancelData(selectedCharacter.Super, attack, true);
 		}
 		
+		// Freeze movement during screen freeze
+		// This code is here to animate the moves during the screen freeze
 		if (!superActivated)
 		{
 			hsp = 0;

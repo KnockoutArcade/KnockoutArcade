@@ -3668,7 +3668,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": true,
-          "TimeStopDuration": 300
+          "TimeStopDuration": 315
         }
       ],
       "CounterData": [

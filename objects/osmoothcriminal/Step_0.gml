@@ -517,7 +517,7 @@ if (host != noone && hostObject != noone)
 		}
 
 		// Freezes the player if the opponent freezes the screen
-		if (((opponent != noone && opponent.activateFreeze) || hostObject.activateFreeze) && state != eState.SCREEN_FREEZE)
+		if (((opponent != noone && opponent.activateFreeze) || (hostObject.activateFreeze && state != eState.SUPER)) && state != eState.SCREEN_FREEZE)
 		{
 			// Change some states when opponent activates screen freeze
 			if (state == eState.BEING_GRABBED)
@@ -1411,6 +1411,73 @@ if (host != noone && hostObject != noone)
 			}
 
 			//ProcessEnhancers(selectedCharacter.RekkaHigh);
+		}
+		break;
+		
+		case eState.SUPER: 
+		{
+			// Attack Super
+			if (animTimer <= 1 && !activateFreeze)
+			{
+				superActivated = false;
+				superFreezeTimer = 0;
+			}
+			else 
+			{
+				if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime && !superActivated)
+				{
+					superActivated = true;
+					superFreezeTimer = 0;
+					superInvincibilityTimer = 0;
+					invincible = true;
+				}
+				else
+				{
+					superFreezeTimer++;
+				}
+			}
+				
+			if (invincible)
+			{
+				if (superInvincibilityTimer >= selectedCharacter.Super.SuperData.InvincibilityFrames)
+				{
+					invincible = false;
+				}
+					else
+				{
+					superInvincibilityTimer++;
+				}
+			}
+			
+			cancelOnLanding = false;
+			if (grounded)
+			{
+				GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+			}
+			else 
+			{
+				JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+			}
+			
+			// Install Super
+			if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
+			{
+				show_debug_message("Actiating install super");
+			}
+			
+			if (cancelable && hitstop < 1)
+			{
+				CancelData(selectedCharacter.Super, attack, true);
+			}
+			
+			// Freeze movement during screen freeze
+			// This code is here to animate the moves during the screen freeze
+			if (!superActivated)
+			{
+				hsp = 0;
+				environmentDisplacement = 0;
+				vsp = 0;
+			}
 		}
 		break;
 
