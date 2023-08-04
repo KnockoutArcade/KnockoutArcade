@@ -257,7 +257,7 @@ function PerformAttack(Action, createdBySpirit)
 				}
 				else if (Action.ProjectileData[i].ProjectileObject == "GunterJumpingMediumProjectile")
 				{
-				Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oGunther_JumpingMedium_Projectile);
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oGunther_JumpingMedium_Projectile);
 				}			
 				with (Projectile)
 				{
