@@ -2544,7 +2544,7 @@ if (installActivated)
 		if (spiritInstall)
 		{
 			spiritInstall = false;
-			DeactivateSpirit(false);
+			spiritState = false;
 		}
 	}
 	else
