@@ -2568,6 +2568,18 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 		timeStopObject.depth = 600;
 		timeStopObject.owner = id;
 	}
+	
+	if (spiritObject != noone)
+	{
+		timeStopObject.x = spiritObject.x;
+		timeStopObject.y = spiritObject.y;
+	}
+	else
+	{
+		timeStopObject.x = x;
+		timeStopObject.y = y;
+	}
+	
 	if (superMeter <= 0)
 	{
 		timeStopObject.owner = noone;
