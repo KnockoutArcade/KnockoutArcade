@@ -2578,7 +2578,7 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 	}
 	else
 	{
-		superMeter -= 0.3;
+		superMeter -= 0.2;
 	}
 }
 
