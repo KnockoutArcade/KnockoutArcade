@@ -149,7 +149,7 @@ else if ((!runButton && movedir == 0))
 }
 
 // Reset all run timers if holding down
-if (verticalMoveDir == -1)
+if (verticalMoveDir == -1 && !runButton)
 {
 	holdBackwardTimer = 0;
 	runBackwardTimer = 16;
@@ -2499,7 +2499,7 @@ else
 }
 
 // Handle the install timers outside of the FSM
-if (installActivated)
+if (installActivated && state != eState.SCREEN_FREEZE)
 {
 	if (installTimer >= installInterval)
 	{
@@ -2553,19 +2553,32 @@ if (installActivated)
 }
 
 // Handle the time stop timers outside of the FSM
-if (timeStopActivated)
+if (timeStopActivated && state != eState.SCREEN_FREEZE)
 {
-	if (timeStopTimer >= timeStopInterval)
+	if (timeStopObject == noone)
 	{
-		timeStopTimer = 0;
-		timeStopInterval = 0;
+		if (spiritObject != noone)
+		{
+			timeStopObject = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oTimeStop);
+		}
+		else
+		{
+			timeStopObject = instance_create_layer(x, y, "Instances", oTimeStop);
+		}
+		timeStopObject.depth = 600;
+		timeStopObject.owner = id;
+	}
+	if (superMeter <= 0)
+	{
+		timeStopObject.owner = noone;
+		timeStopObject = noone;
 		timeStopActivated = false;
 		activateFreeze = false;
 		global.freezeTimer = false;
 	}
 	else
 	{
-		timeStopTimer++;
+		superMeter -= 0.3;
 	}
 }
 

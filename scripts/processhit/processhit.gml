@@ -193,23 +193,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 		if (attackProperty.ActivateTimeStop)
 		{
 			owner.timeStopActivated = true;
-			owner.timeStopTimer = 0;
-			owner.timeStopInterval = attackProperty.TimeStopDuration;
 			owner.activateFreeze = true;
 			global.freezeTimer = true;
-			
-			var timeStopObject = noone;
-			if (owner.spiritObject != noone)
-			{
-				timeStopObject = instance_create_layer(owner.spiritObject.x, owner.spiritObject.y, "Instances", oTimeStop);
-			}
-			else
-			{
-				timeStopObject = instance_create_layer(owner.x, owner.y, "Instances", oTimeStop);
-			}
-			timeStopObject.lifetime = attackProperty.TimeStopDuration;
-			timeStopObject.lifetimeSet = true;
-			timeStopObject.depth = owner.depth + 10;
 		}
 		
 		// Handle Hitstop
