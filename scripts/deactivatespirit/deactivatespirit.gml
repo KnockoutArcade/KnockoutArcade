@@ -18,7 +18,7 @@ function DeactivateSpirit(executedBySpirit)
 	
 				for (var i = 0; i < array_length(allHitboxes); i++;)
 				{
-					if (allHitboxes[i].owner == id)
+					if (allHitboxes[i].spirit == id)
 					{ 
 						instance_destroy(allHitboxes[i]);
 					}
@@ -50,7 +50,7 @@ function DeactivateSpirit(executedBySpirit)
 
 		for (var i = 0; i < array_length(allHitboxes); i++;)
 		{
-			if (allHitboxes[i].owner == id)
+			if (allHitboxes[i].spirit == id)
 			{ 
 				instance_destroy(allHitboxes[i]);
 			}

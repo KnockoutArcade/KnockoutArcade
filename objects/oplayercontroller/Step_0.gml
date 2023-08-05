@@ -1621,7 +1621,6 @@ switch state
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
 		{
-			show_debug_message("Actiating install super");
 			installActivated = true;
 			installTimer = 0;
 			installInterval = selectedCharacter.Super.SuperData.Duration;

@@ -127,9 +127,9 @@ function PressAttackButton(attack)
 			break;
 			
 			case 6:
-				if (superMeter >= 100)
+				if (superMeter >= 50)
 				{
-					superMeter -= 100;
+					superMeter -= 50;
 					state = eState.SUPER;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.Super, attack);

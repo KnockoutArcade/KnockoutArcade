@@ -226,9 +226,9 @@ function CancelData(_array, _attack, _late)
 		}
 	}
 	// Super
-	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 100))
+	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 50))
 	{
-		superMeter -= 100;
+		superMeter -= 50;
 		if (_late)
 		{
 			LateCancelIntoMove(eState.SUPER, selectedCharacter.Super, _attack);
