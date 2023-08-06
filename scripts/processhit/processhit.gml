@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function ProcessHit(attackProperty, collision_list, finalBlowSuper)
+function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTimeStop = false)
 {
 	if (!isProjectile)
 	{
@@ -190,7 +190,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle time stop
-		if (attackProperty.ActivateTimeStop)
+		if (activateTimeStop)
 		{
 			owner.timeStopActivated = true;
 			owner.activateFreeze = true;

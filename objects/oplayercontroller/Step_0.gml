@@ -1578,6 +1578,7 @@ switch state
 			superFreezeTimer = 0;
 			activateFreeze = true;
 			global.freezeTimer = true;
+			instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperFlashBackground);
 		}
 		else 
 		{
@@ -1587,6 +1588,7 @@ switch state
 				superFreezeTimer = 0;
 				activateFreeze = false;
 				global.freezeTimer = false;
+				instance_destroy(oSuperFlashBackground);
 				superInvincibilityTimer = 0;
 				invincible = true;
 			}

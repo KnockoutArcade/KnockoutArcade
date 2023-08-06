@@ -390,7 +390,7 @@
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "TimeStopDuration": 0
@@ -3803,6 +3803,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-08-04T13:06:58.6230988-07:00",
+  "LastModified": "2023-08-05T20:44:39.5975353-07:00",
   "LastModifiedBy": "cstra"
 }
