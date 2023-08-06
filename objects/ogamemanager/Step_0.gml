@@ -50,6 +50,16 @@ switch (global.gameMode)
 				}
 				else
 				{
+					if (p1.state == eState.SUPER || p1.installActivated || p1.timeStopActivated || 
+						 p2.state == eState.SUPER || p2.installActivated || p2.timeStopActivated)
+					{
+						var superBackground = instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperKO);
+						with (superBackground) 
+						{
+							depth = 599;
+							lifetime = 89;
+						}
+					}
 					var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 					with (particle) 
 					{

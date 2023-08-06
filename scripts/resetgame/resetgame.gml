@@ -18,8 +18,12 @@ function ResetGame()
 	instance_destroy(oSuperMeterUI);
 	instance_destroy(oProjectileBase);
 	instance_destroy(oSpiritFire);
+	instance_destroy(oSuperKO);
+	instance_destroy(oSuperKOFirst);
+	instance_destroy(oSuperKOOrange);
 	
 	instance_destroy(global.camObj);
 	
 	global.freezeTimer = false;
+	audio_resume_sound(testBGM);
 }

@@ -195,6 +195,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper)
 			owner.timeStopActivated = true;
 			owner.activateFreeze = true;
 			global.freezeTimer = true;
+			audio_pause_sound(testBGM);
 		}
 		
 		// Handle Hitstop

@@ -2587,6 +2587,7 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 		timeStopActivated = false;
 		activateFreeze = false;
 		global.freezeTimer = false;
+		audio_resume_sound(testBGM);
 	}
 	else
 	{
