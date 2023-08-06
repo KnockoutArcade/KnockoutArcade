@@ -56,7 +56,7 @@ switch (global.gameMode)
 						var superBackground = instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperKO);
 						with (superBackground) 
 						{
-							depth = 599;
+							depth = 650;
 							lifetime = 89;
 						}
 					}
