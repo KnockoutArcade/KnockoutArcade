@@ -6,7 +6,7 @@
     "path": "folders/Scripts/EnhancerScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "performmotioninputs",
+  "name": "PerformMotionInputs",
   "tags": [],
   "resourceType": "GMScript",
 }

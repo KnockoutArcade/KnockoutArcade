@@ -763,7 +763,6 @@ if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.
 	activateFreeze = false;
 	stateBeforeFreeze = 0;
 	global.freezeTimer = false;
-	speedTrailTimer = 0;
 }
 
 // State Machine

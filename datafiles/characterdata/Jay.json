@@ -7914,7 +7914,7 @@
       },
       "SuperData": {
         "Type": 0,
-        "ScreenFreezeTime": 45,
+        "ScreenFreezeTime": 30,
         "InvincibilityFrames": 0,
         "FinalBlowKO": false,
         "Duration": 0,
