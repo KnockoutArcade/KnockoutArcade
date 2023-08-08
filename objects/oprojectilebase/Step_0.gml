@@ -8,7 +8,6 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
-	show_debug_message("Animating projectile");
 	animTimer++;
 	
 	if (hasLifetime)
@@ -127,12 +126,15 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		with (collisionID)
+		if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
+			with (collisionID)
+			{
+				collidedWithProjectile = true;
+			}
+			
 			collidedWithProjectile = true;
 		}
-		
-		collidedWithProjectile = true;
 	}
 	
 	if (collidedWithProjectile)
