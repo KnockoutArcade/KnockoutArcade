@@ -498,7 +498,7 @@ if (state == eState.CROUCHING)
 }
 
 // Animation pauses during hitstop and when the screen freezes
-if (hitstop == 0 && (state != eState.SCREEN_FREEZE || superActivated)) 
+if (hitstop == 0 && state != eState.SCREEN_FREEZE) 
 {
 	animTimer++;
 }
@@ -2581,7 +2581,7 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 		timeStopObject.y = y;
 	}
 	
-	if (superMeter <= 0)
+	if (superMeter <= 0 && timeStopTimer <= 0)
 	{
 		timeStopObject.owner = noone;
 		timeStopObject = noone;
