@@ -14,6 +14,7 @@ switch (global.gameMode)
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
 			instance_destroy(oTimeStop);
+			audio_resume_sound(testBGM);
 			
 			global.gameHalt = true;
 			gameHaltTimer++;

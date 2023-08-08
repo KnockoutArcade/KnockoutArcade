@@ -2585,10 +2585,15 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 	{
 		timeStopObject.owner = noone;
 		timeStopObject = noone;
+		timeStopTimer = 30;
 		timeStopActivated = false;
 		activateFreeze = false;
 		global.freezeTimer = false;
 		audio_resume_sound(testBGM);
+	}
+	else if (timeStopTimer > 0)
+	{
+		timeStopTimer--;
 	}
 	else
 	{

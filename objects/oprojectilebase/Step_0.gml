@@ -8,6 +8,7 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
+	show_debug_message("Animating projectile");
 	animTimer++;
 	
 	if (hasLifetime)
@@ -57,6 +58,10 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
+			}
 			instance_destroy();
 		}
 		else if (bounceOnWall)
@@ -87,6 +92,10 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
+			}
 			instance_destroy();
 		}
 		else if (bounceOnFloor)
@@ -107,6 +116,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	
@@ -132,6 +145,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	
@@ -145,6 +162,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	

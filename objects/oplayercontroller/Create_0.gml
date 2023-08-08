@@ -370,6 +370,7 @@ superInvincibilityTimer = 0; // Invincibility starts counting after the screen f
 superFreezeTimer = 0; // Counts up to the specified freeze duration, then deactivates the freeze frame
 timeStopActivated = false;
 timeStopObject = noone; // Background effect that grays out the background
+timeStopTimer = 30; // Adds a 30 frame delay before the meter starts draining
 installActivated = false;
 installTimer = 0; // Install starts counting after the screen freeze
 installInterval = 0;

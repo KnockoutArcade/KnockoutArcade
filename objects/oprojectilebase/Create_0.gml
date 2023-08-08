@@ -36,6 +36,7 @@ projectileHealth = selectedProjectile.Health; // How many hits from another proj
 
 playerOwner = noone; // Who fired this projectile
 spiritOwner = noone; // If spirit fired a projectile
+target = noone; // The thing this projectile hit
 
 hitboxProperties = {};
 hitboxProperties.NumberOfHitboxes = selectedProjectile.NumberOfHitboxes;

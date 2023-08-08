@@ -112,11 +112,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Record Combo Damage
 		owner.comboDamage += scaledDamage;
 		owner.storedComboDamage = owner.comboDamage;
-					
+		
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		if (!owner.timeStopActivated && !owner.installActivated)
 		{
-			collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		}
 		
@@ -300,11 +300,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					
 		owner.playerOwner.comboDamage += scaledDamage;
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
-					
+		
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		if (!owner.playerOwner.timeStopActivated && !owner.playerOwner.installActivated)
 		{
-			collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
 		}
 					
@@ -377,6 +377,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+		}
+		
+		// Play sound effect
+		if (attackProperty.HitSound != "")
+		{
+			audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
 		}
 	}
 }

@@ -3,7 +3,7 @@
 
 if (owner != noone)
 {
-	if (image_xscale < 5)
+	if (image_xscale < 8)
 	{
 		image_xscale += 1;
 		image_yscale += 1;
@@ -12,8 +12,8 @@ if (owner != noone)
 }
 else
 {
-	image_xscale -= 0.5;
-	image_yscale -= 0.5;
+	image_xscale -= 0.8;
+	image_yscale -= 0.8;
 	if (image_xscale <= 0)
 	{
 		instance_destroy();

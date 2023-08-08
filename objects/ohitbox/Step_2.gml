@@ -262,7 +262,10 @@ if (!isProjectile)
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
 					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
-					owner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					if (owner.state != eState.SUPER)
+					{
+						owner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
 					owner.pushbackVel = attackProperty.Pushback;
@@ -388,7 +391,7 @@ if (!isProjectile)
 		}
 	}
 }
-else
+else if (!global.freezeTimer)
 {
 	if (!global.game_paused && owner.playerOwner.state != eState.HITSTOP)
 	{
@@ -415,6 +418,8 @@ else
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
 			if (collision_list[| i].owner != owner.playerOwner && collision_list[| i].owner != owner.spiritOwner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
 			{
+				owner.target = collision_list[| i].owner.id;
+				
 				// Calculate blocking direction
 				if (collision_list[| i].owner.x >= owner.playerOwner.x)
 				{
@@ -465,7 +470,10 @@ else
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
 					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
-					owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					if (owner.playerOwner.state != eState.SUPER)
+					{
+						owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
