@@ -187,7 +187,7 @@ if (host != noone && hostObject != noone)
 				hsp = 0;
 			}
 		}
-		
+
 		if (nextToPlayer && !hostObject.grounded)
 		{
 			y = hostObject.y;
@@ -201,7 +201,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -491,6 +491,8 @@ if (host != noone && hostObject != noone)
 			image_angle = 0;
 		}
 
+		// Reset cancelOnLanding
+		cancelOnLanding = true;
 
 		// Handle freezing screen
 		if (state == eState.SCREEN_FREEZE)
@@ -543,7 +545,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -638,7 +640,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -727,7 +729,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -783,7 +785,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -868,7 +870,7 @@ if (host != noone && hostObject != noone)
 			{
 				DeactivateSpirit(true);
 			}
-			
+
 			// If the spirit is close to its host, set nextToPlayer to true
 			if (abs(x - hostObject.x) < 10)
 			{
@@ -1240,7 +1242,7 @@ if (host != noone && hostObject != noone)
 			}
 		}
 		break;
-		
+
 		case eState.ENHANCED_NEUTRAL_SPECIAL_2:
 		{
 			if (grounded)
@@ -1413,8 +1415,8 @@ if (host != noone && hostObject != noone)
 			//ProcessEnhancers(selectedCharacter.RekkaHigh);
 		}
 		break;
-		
-		case eState.SUPER: 
+
+		case eState.SUPER:
 		{
 			// Attack Super
 			if (animTimer <= 1 && !activateFreeze)
@@ -1422,7 +1424,7 @@ if (host != noone && hostObject != noone)
 				superActivated = false;
 				superFreezeTimer = 0;
 			}
-			else 
+			else
 			{
 				if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime && !superActivated)
 				{
@@ -1436,7 +1438,7 @@ if (host != noone && hostObject != noone)
 					superFreezeTimer++;
 				}
 			}
-				
+
 			if (invincible)
 			{
 				if (superInvincibilityTimer >= selectedCharacter.Super.SuperData.InvincibilityFrames)
@@ -1448,28 +1450,28 @@ if (host != noone && hostObject != noone)
 					superInvincibilityTimer++;
 				}
 			}
-			
+
 			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
 			}
-			else 
+			else
 			{
 				JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
 			}
-			
+
 			// Install Super
 			if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
 			{
 				show_debug_message("Actiating install super");
 			}
-			
+
 			if (cancelable && hitstop < 1)
 			{
 				CancelData(selectedCharacter.Super, attack, true);
 			}
-			
+
 			// Freeze movement during screen freeze
 			// This code is here to animate the moves during the screen freeze
 			if (!superActivated)
@@ -1973,7 +1975,7 @@ if (host != noone && hostObject != noone)
 			{
 				state = eState.HURT;
 			}
-			
+
 			if (state != hostObject.state)
 			{
 				state = hostObject.state;
@@ -1998,7 +2000,7 @@ if (host != noone && hostObject != noone)
 
 			vsp += global.rcUpFallSpeed;
 			hsp = walkSpeed * 1.5 * image_xscale;
-			
+
 			if (state != hostObject.state)
 			{
 				state = hostObject.state;
@@ -2021,7 +2023,7 @@ if (host != noone && hostObject != noone)
 
 			vsp = global.rcAirSpeed;
 			hsp = global.rcAirHorizontalSpeed * image_xscale;
-			
+
 			if (state != hostObject.state)
 			{
 				state = hostObject.state;
@@ -2130,63 +2132,70 @@ if (host != noone && hostObject != noone)
 			}
 		}
 
-
 		// Collision
-		if (state != eState.HITSTOP)
+		// When a player gets hit, they ossilate back and forth, which will move the player's collision box around.
+		// We're storing the actual x Position so we can restore it later.
+		// We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
+		// player's position without ossilating.
+		var actualXPos = x;
+		x = xHome;
+
+		// Collisions With Players
+		if (opponent != noone && !nextToPlayer)
 		{
-			if (opponent != noone && !nextToPlayer)
+			// Check to see if players are about to be touching
+			if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 			{
-				// Check to see if players are about to be touching
-				if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+				hsp *= .75; // Reduce player speed
+				var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
+				// Simulate the opponent moving forwards
+				opponent.x += (opponent.hsp * .75) + opponent.environmentDisplacement;
+				// While the players are still touching
+				while (place_meeting(x + hsp + environmentDisplacement, y, opponent))
 				{
-					hsp *= .75; // Reduce player speed
-					var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
-					// Simulate the opponent moving forwards
-					opponent.x += (opponent.hsp * .75) + opponent.environmentDisplacement;
-					// While the players are still touching
-					while (place_meeting(x + hsp + environmentDisplacement, y, opponent))
-					{
-						// Move the players away from each other
-						if x > opponent.x{
-							environmentDisplacement += .5;
-							opponent.x -= .5;
-						}
-						else
-						{
-							environmentDisplacement -= .5;
-							opponent.x += .5;
-						}
+					// Move the players away from each other
+					if x > opponent.x{
+						environmentDisplacement += .5;
+						opponent.x -= .5;
 					}
-					opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
-					opponent.x = origanalX; // Return oponent to original position
+					else
+					{
+						environmentDisplacement -= .5;
+						opponent.x += .5;
+					}
 				}
+				opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+				opponent.x = origanalX; // Return oponent to original position
+			}
+		}
+
+
+		// Collisions With Walls
+		if (place_meeting(x + hsp + environmentDisplacement, y, oWall))
+		{
+			while (!place_meeting(x + sign(hsp + environmentDisplacement), y, oWall))
+			{
+				x += sign(hsp + environmentDisplacement);
+			}
+			hsp = 0;
+			environmentDisplacement = 0;
+		}
+
+		if (place_meeting(x, y + vsp + fallSpeed, oWall))
+		{
+			//Determine wether we are rising into a cieling or falling onto a floor.
+			var fallDirection = sign(vsp);
+
+			while (!place_meeting(x, y + sign(vsp + fallSpeed), oWall))
+			{
+				y += sign(vsp);
 			}
 
-			
-			// Collisions With Walls
-			if (place_meeting(x + hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
+			isJumpingForward = false;
+			vsp = 0;
+			if (hitstop < 1)
 			{
-				while (!place_meeting(x + sign(hsp + environmentDisplacement), y, oWall))
-				{
-					x += sign(hsp + environmentDisplacement);
-				}
-				hsp = 0;
-				environmentDisplacement = 0;
-			}
-
-			if (place_meeting(x, y + vsp + fallSpeed, oWall))
-			{
-				//Determine wether we are rising into a ceiling or falling onto a floor.
-				var fallDirection = sign(vsp);
-
-				while (!place_meeting(x, y + sign(vsp + fallSpeed), oWall))
-				{
-					y += sign(vsp);
-				}
-
-				isJumpingForward = false;
-				vsp = 0;
-				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != eState.DOWN_SPECIAL && state != eState.ENHANCED_NEUTRAL_SPECIAL && state != eState.ENHANCED_SIDE_SPECIAL && state != eState.ENHANCED_UP_SPECIAL && state != eState.ENHANCED_DOWN_SPECIAL && state != eState.COMMAND_GRAB && fallDirection == 1)
+				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1)
 				{
 					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
 					{
@@ -2198,7 +2207,7 @@ if (host != noone && hostObject != noone)
 						isThrowable = true;
 					}
 				}
-				if (state == eState.NEUTRAL_SPECIAL || state == eState.SIDE_SPECIAL || state == eState.DOWN_SPECIAL || state == eState.COMMAND_GRAB || state == eState.ENHANCED_NEUTRAL_SPECIAL || state == eState.ENHANCED_SIDE_SPECIAL || state == eState.ENHANCED_UP_SPECIAL || state == eState.ENHANCED_DOWN_SPECIAL)
+				if (!cancelOnLanding)
 				{
 					if ((nextToPlayer && hostObject.grounded) || !nextToPlayer)
 					{
@@ -2215,64 +2224,69 @@ if (host != noone && hostObject != noone)
 					image_speed = 1;
 				}
 			}
+		}
+		x = actualXPos; // Restore the player's actual x position
 
+		if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
+		{
 			x += hsp + environmentDisplacement;
 			x = clamp(x, global.camObj.x - 80, global.camObj.x + 80);
 			y += vsp;
+		}
 
-			// Handle Enviornmental Displacement
-			environmentDisplacement = 0;
+		// Handle Enviornmental Displacement
+		environmentDisplacement = 0;
 
-			floor(y);
+		floor(y);
 
-			// Change the player's direction
-			if (!inAttackState && canTurnAround && !rcActivated)
+		// Change the player's direction
+		if (!inAttackState && canTurnAround && !rcActivated)
+		{
+			if (!nextToPlayer)
 			{
-				if (!nextToPlayer)
+				if (opponent != noone)
 				{
-					if (opponent != noone)
+					if (x < opponent.x)
 					{
-						if (x < opponent.x)
-						{
-							image_xscale = 1;
-						}
-						else if (x != opponent.x)
-						{
-							image_xscale = -1;
-						}
+						image_xscale = 1;
 					}
-					else if (hsp != 0)
+					else if (x != opponent.x)
 					{
-						image_xscale = sign(hsp);
+						image_xscale = -1;
 					}
 				}
-				else
+				else if (hsp != 0)
 				{
-					image_xscale = hostObject.image_xscale;
+					image_xscale = sign(hsp);
 				}
+			}
+			else
+			{
+				image_xscale = hostObject.image_xscale;
 			}
 		}
 	}
+
 	else
 	{
 		image_speed = 0;
 		if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite;
 	}
-	
-	
+
+
 	// Instantly delete the spirit when spirit health is reduced to zero
 	if (hostObject.spiritCurrentHealth <= 0)
 	{
 		if (hostObject.spiritInstall)
 		{
-			with (hostObject)
+			with(hostObject)
 			{
 				installTimer = 0;
 				installInterval = 0;
 				installActivated = false;
 				damageBonus = 0;
 				speedBonus = 0;
-				
+
 				// Reset jump types
 				// A short hop is when the player breifly taps up so they don't jump as high.
 				if (selectedCharacter.JumpType & 4 == 4)
@@ -2283,7 +2297,7 @@ if (host != noone && hostObject != noone)
 				{
 					canShortHop = false;
 				}
-				
+
 				// A super jump is when the player presses Down just before jumping, allowing them to go higher.
 				if (selectedCharacter.JumpType & 2 == 2)
 				{
@@ -2293,7 +2307,7 @@ if (host != noone && hostObject != noone)
 				{
 					canSuperJump = false;
 				}
-				
+
 				// A double jump is when the player jumps again in the air
 				if ((selectedCharacter.JumpType & 1) == 1)
 				{
@@ -2303,7 +2317,7 @@ if (host != noone && hostObject != noone)
 				{
 					canDoubleJump = false;
 				}
-				
+
 				spiritInstall = false;
 			}
 		}
@@ -2313,10 +2327,10 @@ if (host != noone && hostObject != noone)
 		hostObject.grounded = false;
 		hostObject.vsp = -4; // Launches the player up
 		hostObject.hsp = 0;
-		
+
 		DeactivateSpirit(true);
 	}
-	
+
 	// Changes the moveset to its Spirit ON version
 	if (inSpiritOff && state != startingMove && state != eState.HITSTOP && hostObject.spiritState)
 	{
