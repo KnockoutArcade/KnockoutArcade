@@ -51,3 +51,8 @@ draw_sprite(sOptionsMeter, OptionsConvertDecimaltoWhole(global.voicesVolume), 81
 
 
 draw_self();
+
+if (isClosingOptionsMenu)
+{
+	draw_sprite(sOptionsPanelClose, exitingAnimationFrame, 0, 0);
+}
