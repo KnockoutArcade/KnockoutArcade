@@ -25,6 +25,7 @@
     {"id":{"name":"sfx_UI_Hover","path":"sounds/sfx_UI_Hover/sfx_UI_Hover.yy",},"order":3,},
     {"id":{"name":"sStageSelect_ShadeBox","path":"sprites/sStageSelect_ShadeBox/sStageSelect_ShadeBox.yy",},"order":6,},
     {"id":{"name":"sGeyser","path":"sprites/sGeyser/sGeyser.yy",},"order":38,},
+    {"id":{"name":"sRussel_WallSplat","path":"sprites/sRussel_WallSplat/sRussel_WallSplat.yy",},"order":38,},
     {"id":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},"order":1,},
     {"id":{"name":"sDraw","path":"sprites/sDraw/sDraw.yy",},"order":12,},
     {"id":{"name":"oGarbageCan","path":"objects/oGarbageCan/oGarbageCan.yy",},"order":2,},
@@ -424,9 +425,9 @@
   "IncludedFiles": [
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"TestLobbingProjectile.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Beverly.json","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"SmoothCriminal.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Jay.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
