@@ -3,6 +3,7 @@
 
 audio_group_load(audiogroup_soundeffect);
 audio_group_load(audiogroup_music);
+audio_group_load(audiogroup_voices);
 
 global.p1PaletteID = 0;
 global.p2PaletteID = 1;
@@ -34,3 +35,4 @@ global.rcAirHorizontalSpeed = 2;
 // Volume Vars
 global.musicVolume = 0.5;
 global.sfxVolume = 0.5;
+global.voicesVolume = 0.5;
