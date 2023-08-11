@@ -78,11 +78,15 @@ if (state == 0)
     {
         P1charSelCol += P1menuColMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
     {
         P1charSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P1menuRowMove == 0 && P1menuColMove == 0)
     {
@@ -109,6 +113,8 @@ if (state == 0)
     {
         P1hasSelectedChar = true;
         P1menuConfirmBuffer = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 
         if (P1charSelCol == 0 && P1charSelRow == 0)
         {
@@ -148,6 +154,8 @@ if (state == 0)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 
     // Handle Palette Selection
@@ -157,6 +165,8 @@ if (state == 0)
         {
             global.p1PaletteID += P1menuColMove;
             P1cursorCooldown = 10;
+			
+			audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
         }
 
         if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
@@ -172,6 +182,8 @@ if (state == 0)
         {
             P1hasSelectedAlt = true;
             P1menuAltSelBuffer = true;
+			
+			audio_play_sound(sfx_CharSel_Ready, 0, false);
         }
     }
 
@@ -181,11 +193,15 @@ if (state == 0)
     {
         P2charSelCol += P2menuColMove;
         P2cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
     {
         P2charSelRow += P2menuRowMove;
         P2cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P2menuRowMove == 0 && P2menuColMove == 0)
     {
@@ -213,6 +229,9 @@ if (state == 0)
     {
         P2hasSelectedChar = true;
         P2menuConfirmBuffer = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+		
         if (P2charSelCol == 0 && P2charSelRow == 0)
         {
             global.p2SelectedCharacter = oRussel;
@@ -249,6 +268,8 @@ if (state == 0)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 
     // Handle Palette Selection
@@ -258,6 +279,8 @@ if (state == 0)
         {
             global.p2PaletteID += P2menuColMove;
             P2cursorCooldown = 10;
+			
+			audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
         }
 
         // Handle Palette Data
@@ -274,6 +297,8 @@ if (state == 0)
         {
             P2hasSelectedAlt = true;
             P2menuConfirmBuffer = true;
+			
+			audio_play_sound(sfx_CharSel_Ready, 0, false);
         }
     }
 
@@ -331,12 +356,16 @@ else if (state == 1)
     {
         P1mapSelCol += P1menuColMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
     {
         P1mapSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P1menuRowMove == 0 && P1menuColMove == 0)
@@ -559,6 +588,19 @@ else if (state == 1)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+    }
+	
+	if (P2menuCancel)
+    {
+        state = 0;
+        P2hasSelectedAlt = false;
+
+        RTF_animTimer = 0;
+        RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 }
 else if (state == 2)

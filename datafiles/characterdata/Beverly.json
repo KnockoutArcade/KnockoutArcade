@@ -2867,24 +2867,24 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_CrouchLight_MOCKUP_strip4",
+      "SpriteName": "sBeverly_Crouch_Light",
       "Duration": 10,
       "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 1,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 4,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 6,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 8,
+          "Length": 10,
           "ImageIndex": 3
         }
       ],
@@ -6091,6 +6091,6 @@
   },
   "Version": "Ver1.2.0",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-07-25T00:12:29.6388983-07:00",
-  "LastModifiedBy": "cstra"
+  "LastModified": "2023-08-02T20:11:55.5803273-07:00",
+  "LastModifiedBy": "creep"
 }

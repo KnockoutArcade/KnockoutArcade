@@ -26,15 +26,19 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"8376e079-4b5d-432d-9ee6-6fd78b23ac42","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"8376e079-4b5d-432d-9ee6-6fd78b23ac42","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"c96c1503-387d-422a-99aa-7ed4f2361adc","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8376e079-4b5d-432d-9ee6-6fd78b23ac42","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"63d3c776-13e7-4af6-8f4e-ae6178fff53b","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_StandLight1","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"8376e079-4b5d-432d-9ee6-6fd78b23ac42","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"8731fdd3-8a45-459e-9ed6-013aef01ef32","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"8731fdd3-8a45-459e-9ed6-013aef01ef32","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"c96c1503-387d-422a-99aa-7ed4f2361adc","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"8731fdd3-8a45-459e-9ed6-013aef01ef32","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"63d3c776-13e7-4af6-8f4e-ae6178fff53b","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_StandLight1","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"8731fdd3-8a45-459e-9ed6-013aef01ef32","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"61a0ba6f-8ad8-476b-beaf-3106bfc65263","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"61a0ba6f-8ad8-476b-beaf-3106bfc65263","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"c96c1503-387d-422a-99aa-7ed4f2361adc","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"61a0ba6f-8ad8-476b-beaf-3106bfc65263","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"63d3c776-13e7-4af6-8f4e-ae6178fff53b","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_StandLight1","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"61a0ba6f-8ad8-476b-beaf-3106bfc65263","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"ba77f019-6f00-44da-bf6c-2b170650bbd2","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"ba77f019-6f00-44da-bf6c-2b170650bbd2","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"c96c1503-387d-422a-99aa-7ed4f2361adc","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"ba77f019-6f00-44da-bf6c-2b170650bbd2","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"LayerId":{"name":"63d3c776-13e7-4af6-8f4e-ae6178fff53b","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_StandLight1","path":"sprites/sBeverly_StandLight1/sBeverly_StandLight1.yy",},"resourceVersion":"1.0","name":"ba77f019-6f00-44da-bf6c-2b170650bbd2","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -77,6 +81,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"63d3c776-13e7-4af6-8f4e-ae6178fff53b","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"c96c1503-387d-422a-99aa-7ed4f2361adc","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
