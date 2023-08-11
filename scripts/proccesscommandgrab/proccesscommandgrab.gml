@@ -26,4 +26,26 @@ function ProccessCommandGrab()
 			}
 		}
 	}
+	
+	//Gunther's Neutral Special Command Grab
+	if (selectedCharacter.Name == "Gunther")
+	{
+		// Detect if we have hit the ground. We're using the late part of the move as the activation hitbox.
+		if (grounded && animTimer < 99)
+		{
+			animTimer = 99;
+		}
+		else if (animTimer == 1)
+		{
+			// Handle moving the player away from the wall
+			var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
+			with (ThrowDistance)
+			{
+				owner = other.id;
+				image_xscale = other.selectedCharacter.CommandGrab.OpponentPositionData.DistanceFromWall * other.image_xscale;
+				throwToCheck = other.selectedCharacter.CommandGrab;
+				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
+			}
+		}
+	}
 }

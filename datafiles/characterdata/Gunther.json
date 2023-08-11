@@ -2472,7 +2472,7 @@
         {
           "Start": 4,
           "Lifetime": 3,
-          "AttackWidth": 16,
+          "AttackWidth": 25,
           "AttackHeight": 34,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -2494,7 +2494,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
+          "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
           "HoldXOffset": 20,
           "HoldYOffset": 10,
@@ -2563,8 +2563,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0000001,
+        "FallScale": 1.0000001
       },
       "SupplimentaryScript": "",
       "NumberOfSounds": 0,
@@ -2603,7 +2603,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_NSpecial_mockup_strip11",
-      "Duration": 51,
+      "Duration": 110,
       "NumberOfFrames": 19,
       "FrameData": [
         {
@@ -2659,27 +2659,27 @@
           "ImageIndex": 5
         },
         {
-          "Length": 40,
+          "Length": 99,
           "ImageIndex": 6
         },
         {
-          "Length": 42,
+          "Length": 101,
           "ImageIndex": 7
         },
         {
-          "Length": 44,
+          "Length": 103,
           "ImageIndex": 8
         },
         {
-          "Length": 46,
+          "Length": 105,
           "ImageIndex": 9
         },
         {
-          "Length": 48,
+          "Length": 107,
           "ImageIndex": 10
         },
         {
-          "Length": 51,
+          "Length": 109,
           "ImageIndex": 11
         }
       ],
@@ -2903,7 +2903,7 @@
           {
             "StartingFrame": 10,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 10.0,
+            "VerticalSpeed": 5.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -2922,7 +2922,7 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 40,
+            "StartingFrame": 99,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
@@ -4381,6 +4381,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2023-08-11T14:06:25.122249-07:00",
+  "LastModified": "2023-08-11T14:43:48.2637886-07:00",
   "LastModifiedBy": "iansb"
 }
