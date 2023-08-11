@@ -24,6 +24,7 @@
     {"id":{"name":"sBeverly_NSpecial_MOCKUP","path":"sprites/sBeverly_NSpecial_MOCKUP/sBeverly_NSpecial_MOCKUP.yy",},"order":1,},
     {"id":{"name":"sStageSelect_ShadeBox","path":"sprites/sStageSelect_ShadeBox/sStageSelect_ShadeBox.yy",},"order":6,},
     {"id":{"name":"sGeyser","path":"sprites/sGeyser/sGeyser.yy",},"order":38,},
+    {"id":{"name":"sRussel_WallSplat","path":"sprites/sRussel_WallSplat/sRussel_WallSplat.yy",},"order":38,},
     {"id":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},"order":1,},
     {"id":{"name":"sDraw","path":"sprites/sDraw/sDraw.yy",},"order":12,},
     {"id":{"name":"oGarbageCan","path":"objects/oGarbageCan/oGarbageCan.yy",},"order":2,},

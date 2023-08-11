@@ -517,9 +517,9 @@ if (state == eState.HITSTOP)
 	
 	hitstunShuffleTimer++;
 	
-	if (hitstun > 0)
+	if (hitstun > 0 || prevState = eState.LAUNCHED)
 	{
-		if (!isGrabbed)
+		if (!isGrabbed && !wallBouncing)
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 		}
@@ -636,6 +636,7 @@ if (state == eState.HITSTOP)
 		{
 			wallBouncing = false;
 			wallHit = false;
+			image_xscale *= -1; // Flip opponent around
 		}
 		prevSprite = 0;
 		shuffle = 0;
@@ -2433,6 +2434,8 @@ if (opponent != noone && !wallHit)
 	}
 }
 
+x = actualXPos; // Restore the player's actual x position
+y = actualYPos; // Restore the player's actual y position
 
 // Collisions With Walls
 if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
@@ -2442,14 +2445,16 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		x += sign(hsp+environmentDisplacement);
 	}
 	
-	if((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
 	{
 		wallHit = true;
-		hitstop = 10;
+		hitstop = 20;
 		state = eState.LAUNCHED;
-		hsp = -hsp;
+		sprite_index = sRussel_WallSplat;
+		hsp = -(hsp * .5);
+		vsp = -2;
 	}
-	else
+	else if (state != eState.HITSTOP)
 	{
 		hsp = 0;
 		environmentDisplacement = 0;
@@ -2458,6 +2463,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 
 if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 {
+	
 	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
@@ -2467,7 +2473,10 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 	
 	isJumpingForward = false;
-	vsp = 0;
+	if (state != eState.HITSTOP)
+	{
+		vsp = 0;
+	}
 	if (hitstop < 1)
 	{
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
@@ -2496,8 +2505,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 		}
 	}
 }
-x = actualXPos; // Restore the player's actual x position
-y = actualYPos; // Restore the player's actual y position
+
 
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
