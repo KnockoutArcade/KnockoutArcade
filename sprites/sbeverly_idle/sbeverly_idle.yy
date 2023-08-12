@@ -57,7 +57,7 @@
     "spriteId": {"name":"sBeverly_Idle","path":"sprites/sBeverly_Idle/sBeverly_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 6.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -30,8 +30,19 @@ function ProccessCommandGrab()
 	//Gunther's Neutral Special Command Grab
 	if (selectedCharacter.Name == "Gunther")
 	{
-		// Detect if we have hit the ground. We're using the late part of the move as the activation hitbox.
-		if (grounded && animTimer < 99)
+		
+		//spawns the Bathtub after a certain amount of time passes
+		if (animTimer == 9)
+		{
+			var Bathtub = instance_create_layer(x+(30 * image_xscale),y,"Instances" ,oGunther_NSpecial_Bathtub);
+			with Bathtub
+			{
+				owner = other.id;
+			}
+		}
+		
+		// Detect if we have hit the ground after leaving it. We're using the late part of the move as the activation hitbox.
+		if ((grounded && animTimer < 99) && animTimer >20)
 		{
 			animTimer = 99;
 		}
@@ -46,6 +57,10 @@ function ProccessCommandGrab()
 				throwToCheck = other.selectedCharacter.CommandGrab;
 				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
 			}
+		}
+		if (animTimer == 99)
+		{
+			
 		}
 	}
 }

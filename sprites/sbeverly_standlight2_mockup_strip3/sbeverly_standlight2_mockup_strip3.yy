@@ -38,7 +38,7 @@
     "spriteId": {"name":"sBeverly_StandLight2_MOCKUP_strip3","path":"sprites/sBeverly_StandLight2_MOCKUP_strip3/sBeverly_StandLight2_MOCKUP_strip3.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

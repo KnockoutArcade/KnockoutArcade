@@ -32,7 +32,7 @@
     "spriteId": {"name":"sGunther_CrouchIdle_mockup_strip1","path":"sprites/sGunther_CrouchIdle_mockup_strip1/sGunther_CrouchIdle_mockup_strip1.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

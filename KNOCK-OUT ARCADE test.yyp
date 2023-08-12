@@ -250,6 +250,7 @@
     {"id":{"name":"oTestPlayer","path":"objects/oTestPlayer/oTestPlayer.yy",},"order":5,},
     {"id":{"name":"sJay_crouch_mockup_strip1","path":"sprites/sJay_crouch_mockup_strip1/sJay_crouch_mockup_strip1.yy",},"order":21,},
     {"id":{"name":"sGunther_jumpingMedium_mockup_strip6","path":"sprites/sGunther_jumpingMedium_mockup_strip6/sGunther_jumpingMedium_mockup_strip6.yy",},"order":1,},
+    {"id":{"name":"oGunther_NSpecial_Bathtub","path":"objects/oGunther_NSpecial_Bathtub/oGunther_NSpecial_Bathtub.yy",},"order":6,},
     {"id":{"name":"sRussel_Crouch","path":"sprites/sRussel_Crouch/sRussel_Crouch.yy",},"order":10,},
     {"id":{"name":"sJay_JumpingLight_Mockup_strip4","path":"sprites/sJay_JumpingLight_Mockup_strip4/sJay_JumpingLight_Mockup_strip4.yy",},"order":17,},
     {"id":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"order":22,},

@@ -921,7 +921,7 @@
           "AirKnockbackVertical": -1.5,
           "AirKnockbackHorizontal": 0.25,
           "Launches": true,
-          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": -0.5,
           "GravityScaling": 0.5,
           "Pushback": 0.2,
@@ -953,7 +953,7 @@
           "AttackType": 1,
           "BlockStun": 2.0,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": -1.5,
+          "AirKnockbackVertical": -3.999998,
           "AirKnockbackHorizontal": 0.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -2472,15 +2472,15 @@
         {
           "Start": 4,
           "Lifetime": 3,
-          "AttackWidth": 25,
-          "AttackHeight": 34,
-          "WidthOffset": 8,
+          "AttackWidth": 22,
+          "AttackHeight": 30,
+          "WidthOffset": 2,
           "HeightOffset": 0,
           "Group": 1,
           "Damage": 0,
           "MeterGain": 4.0,
           "ComboScaling": 0.0,
-          "AttackHitStop": 0,
+          "AttackHitStop": 10,
           "AttackHitStun": 0,
           "AttackType": 4,
           "BlockStun": 0.0,
@@ -2497,7 +2497,7 @@
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
           "HoldXOffset": 20,
-          "HoldYOffset": 10,
+          "HoldYOffset": 0,
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
@@ -2686,11 +2686,11 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 40,
-          "Lifetime": 6,
-          "AttackWidth": 36,
-          "AttackHeight": 24,
-          "WidthOffset": 17,
+          "Start": 100,
+          "Lifetime": 5,
+          "AttackWidth": 50,
+          "AttackHeight": 40,
+          "WidthOffset": 0,
           "HeightOffset": 0,
           "Group": 1,
           "Damage": 20,
@@ -2703,15 +2703,15 @@
           "KnockBack": 0.0,
           "AirKnockbackVertical": -1.0000001,
           "AirKnockbackHorizontal": 2.0000002,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": 2.0,
           "GravityScaling": 1.0,
           "Pushback": 0.0,
-          "ParticleXOffset": 40,
+          "ParticleXOffset": 20,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 10,
+          "ParticleEffect": "sGeyser",
+          "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "CausesWallbounce": false,
@@ -2763,128 +2763,128 @@
           {
             "Frame": 1,
             "RelativeX": 34,
-            "RelativeY": 28,
+            "RelativeY": 0,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 0
+            "XScale": -1
           },
           {
             "Frame": 10,
             "RelativeX": 36,
-            "RelativeY": 28,
+            "RelativeY": -10,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 0
+            "XScale": -1
           },
           {
             "Frame": 12,
-            "RelativeX": 22,
-            "RelativeY": 6,
+            "RelativeX": -5,
+            "RelativeY": -8,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -90,
+            "XScale": -1
           },
           {
             "Frame": 14,
-            "RelativeX": -15,
-            "RelativeY": 35,
+            "RelativeX": -10,
+            "RelativeY": -60,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -180,
+            "XScale": -1
           },
           {
             "Frame": 16,
-            "RelativeX": 3,
-            "RelativeY": 54,
+            "RelativeX": 27,
+            "RelativeY": -65,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -270,
+            "XScale": -1
           },
           {
             "Frame": 18,
             "RelativeX": 36,
-            "RelativeY": 28,
+            "RelativeY": -10,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 0
+            "XScale": -1
           },
           {
             "Frame": 20,
-            "RelativeX": 22,
-            "RelativeY": 6,
+            "RelativeX": -5,
+            "RelativeY": -8,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -90,
+            "XScale": -1
           },
           {
             "Frame": 22,
             "RelativeX": -15,
-            "RelativeY": 35,
+            "RelativeY": -60,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -180,
+            "XScale": -1
           },
           {
             "Frame": 24,
-            "RelativeX": 3,
-            "RelativeY": 54,
+            "RelativeX": 27,
+            "RelativeY": -65,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -270,
+            "XScale": -1
           },
           {
             "Frame": 26,
             "RelativeX": 36,
-            "RelativeY": 28,
+            "RelativeY": -10,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 0
+            "XScale": -1
           },
           {
             "Frame": 28,
-            "RelativeX": 22,
-            "RelativeY": 6,
+            "RelativeX": -5,
+            "RelativeY": -8,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -90,
+            "XScale": -1
           },
           {
             "Frame": 30,
             "RelativeX": -15,
-            "RelativeY": 35,
+            "RelativeY": -60,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -180,
+            "XScale": -1
           },
           {
             "Frame": 32,
-            "RelativeX": 6,
-            "RelativeY": 54,
+            "RelativeX": 27,
+            "RelativeY": -65,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 0,
-            "XScale": 0
+            "Rotation": -270,
+            "XScale": -1
           },
           {
             "Frame": 34,
             "RelativeX": 36,
-            "RelativeY": 28,
+            "RelativeY": -10,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 0,
-            "XScale": 0
+            "XScale": -1
           }
         ]
       },
@@ -2898,26 +2898,33 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 4,
+        "NumberOfWindows": 5,
         "Windows": [
           {
-            "StartingFrame": 10,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 5.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
-          },
-          {
-            "StartingFrame": 32,
+            "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
           {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -5.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
             "StartingFrame": 34,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -15.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 36,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 15.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -2933,8 +2940,44 @@
         "FallScale": 0.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 5,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -5.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 34,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 36,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 15.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 99,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -4381,6 +4424,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2023-08-11T14:43:48.2637886-07:00",
+  "LastModified": "2023-08-11T21:27:31.4097994-07:00",
   "LastModifiedBy": "iansb"
 }

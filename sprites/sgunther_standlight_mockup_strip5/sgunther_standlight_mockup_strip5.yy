@@ -44,7 +44,7 @@
     "spriteId": {"name":"sGunther_StandLight_mockup_strip5","path":"sprites/sGunther_StandLight_mockup_strip5/sGunther_StandLight_mockup_strip5.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

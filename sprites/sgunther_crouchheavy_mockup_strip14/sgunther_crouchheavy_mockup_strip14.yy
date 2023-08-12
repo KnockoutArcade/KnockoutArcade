@@ -71,7 +71,7 @@
     "spriteId": {"name":"sGunther_CrouchHeavy_mockup_strip14","path":"sprites/sGunther_CrouchHeavy_mockup_strip14/sGunther_CrouchHeavy_mockup_strip14.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

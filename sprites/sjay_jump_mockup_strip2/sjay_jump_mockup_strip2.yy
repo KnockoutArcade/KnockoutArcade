@@ -35,7 +35,7 @@
     "spriteId": {"name":"sJay_Jump_mockup_strip2","path":"sprites/sJay_Jump_mockup_strip2/sJay_Jump_mockup_strip2.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -41,7 +41,7 @@
     "spriteId": {"name":"sGunther_SideSpecialWalkCycle_mockup_strip4","path":"sprites/sGunther_SideSpecialWalkCycle_mockup_strip4/sGunther_SideSpecialWalkCycle_mockup_strip4.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

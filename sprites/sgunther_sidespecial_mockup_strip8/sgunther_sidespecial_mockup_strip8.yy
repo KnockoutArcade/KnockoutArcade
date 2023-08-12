@@ -53,7 +53,7 @@
     "spriteId": {"name":"sGunther_SideSpecial_mockup_strip8","path":"sprites/sGunther_SideSpecial_mockup_strip8/sGunther_SideSpecial_mockup_strip8.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

@@ -50,7 +50,7 @@
     "spriteId": {"name":"sGunther_JumpLight_mockup_strip7","path":"sprites/sGunther_JumpLight_mockup_strip7/sGunther_JumpLight_mockup_strip7.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
