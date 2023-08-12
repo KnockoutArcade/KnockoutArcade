@@ -1086,8 +1086,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1317,8 +1316,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1505,8 +1503,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1666,8 +1663,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1852,8 +1848,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2127,8 +2122,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2288,8 +2282,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2464,8 +2457,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2652,8 +2644,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2847,8 +2838,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3062,8 +3052,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3227,8 +3216,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3420,8 +3408,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 11,
@@ -3455,8 +3442,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3647,8 +3633,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3820,8 +3805,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3993,8 +3977,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 17,
@@ -4028,8 +4011,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4224,8 +4206,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 16,
@@ -4259,8 +4240,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4507,8 +4487,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 8,
@@ -4542,8 +4521,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4819,8 +4797,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5160,8 +5137,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5385,8 +5361,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5551,8 +5526,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5704,8 +5678,7 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -6743,6 +6716,6 @@
   },
   "Version": "Ver1.2.1",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-08-05T20:42:43.6435984-07:00",
-  "LastModifiedBy": "cstra"
+  "LastModified": "2023-08-11T18:01:21.6953942-07:00",
+  "LastModifiedBy": "colstrau"
 }
