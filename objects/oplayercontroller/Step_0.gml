@@ -2412,7 +2412,14 @@ if (spirit != noone)
 		spiritBroken = false;
 	}
 }
-clamp(superMeter, 0, 100);
+if (superMeter > 100)
+{
+	superMeter = 100;
+}
+if (superMeter < 0)
+{
+	superMeter = 0;
+}
 
 if (target != noone)
 {
