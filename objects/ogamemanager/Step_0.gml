@@ -52,8 +52,8 @@ switch (global.gameMode)
 				}
 				else
 				{
-					if (p1.state == eState.SUPER || p1.installActivated || p1.timeStopActivated || 
-						 p2.state == eState.SUPER || p2.installActivated || p2.timeStopActivated)
+					if ((p2.hp == 0 && (p1.state == eState.SUPER || p1.installActivated || p1.timeStopActivated)) || 
+						 (p1.hp == 0 && (p2.state == eState.SUPER || p2.installActivated || p2.timeStopActivated)))
 					{
 						var superBackground = instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperKO);
 						with (superBackground) 

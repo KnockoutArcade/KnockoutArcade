@@ -1088,6 +1088,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.NEUTRAL_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
@@ -1107,6 +1108,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.SIDE_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true);
@@ -1126,6 +1128,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.UP_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
@@ -1154,6 +1157,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.DOWN_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
@@ -1173,6 +1177,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_NEUTRAL_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
@@ -1191,6 +1196,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_SIDE_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
@@ -1209,6 +1215,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_UP_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
@@ -1227,6 +1234,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_DOWN_SPECIAL:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
@@ -1245,6 +1253,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_NEUTRAL_SPECIAL_2:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
@@ -1263,6 +1272,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_SIDE_SPECIAL_2:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
@@ -1281,6 +1291,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_UP_SPECIAL_2:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
@@ -1299,6 +1310,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.ENHANCED_DOWN_SPECIAL_2:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
@@ -1318,6 +1330,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.REKKA_LAUNCHER:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
@@ -1338,6 +1351,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.REKKA_FINISHER:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
@@ -1358,6 +1372,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.REKKA_CONNECTER:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
@@ -1378,6 +1393,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.REKKA_LOW:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
@@ -1398,6 +1414,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.REKKA_HIGH:
 		{
+			cancelOnLanding = false;
 			if (grounded)
 			{
 				GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
@@ -1694,11 +1711,6 @@ if (host != noone && hostObject != noone)
 			{
 				ds_list_clear(hostObject.hitByGroup);
 				FAvictim = false;
-
-				if (grounded)
-				{
-					cancelCombo = true;
-				}
 
 				if (!hostObject.grounded)
 				{
@@ -2073,15 +2085,6 @@ if (host != noone && hostObject != noone)
 		{
 			hp = 0;
 		}
-		if (superMeter > 100)
-		{
-			superMeter = 100;
-		}
-		if (superMeter < 0)
-		{
-			superMeter = 0;
-		}
-
 
 		if (target != noone)
 		{

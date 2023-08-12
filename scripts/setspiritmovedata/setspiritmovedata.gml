@@ -4,13 +4,15 @@
 // Update the spirit's move whenever the host performs an attack
 function SetSpiritMoveData(enhancement, move, attack)
 {
+	if (state == eState.SUPER)
+	{
+		show_debug_message("E");
+	}
+	
 	if (spirit != noone && spiritSummoned && move.SpiritData.PerformAttack)
 	{
 		spiritObject.state = state;
-		if (!enhancement)
-		{
-			spiritObject.attack = attack;
-		}
+		spiritObject.attack = attack;
 		spiritObject.animTimer = 0;
 	}
 	if (move.SpiritData.ReturnToPlayer && spiritState) 
