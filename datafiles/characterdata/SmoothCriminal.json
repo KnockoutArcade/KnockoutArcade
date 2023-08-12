@@ -545,22 +545,30 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_StandLight_MOCKUP_strip3",
-      "Duration": 8,
-      "NumberOfFrames": 2,
+      "Duration": 10,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 5,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 7,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 9,
           "ImageIndex": 2
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 2,
+          "Start": 5,
           "Lifetime": 2,
           "AttackWidth": 20,
           "AttackHeight": 12,
@@ -571,7 +579,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "AttackHitStop": 4,
-          "AttackHitStun": 10,
+          "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 1.0,
           "KnockBack": 1.0,
