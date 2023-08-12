@@ -2049,8 +2049,6 @@ if (host != noone && hostObject != noone)
 
 			// Code Outside State Machine
 
-
-
 			// If we are IN hitstop
 			if (hitstop > 0)
 			{
@@ -2078,8 +2076,6 @@ if (host != noone && hostObject != noone)
 					pushbackVel--;
 				}
 			}
-
-
 
 		if (hp < 0)
 		{
