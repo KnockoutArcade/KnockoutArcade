@@ -3365,19 +3365,21 @@
           "AttackHitStun": 14,
           "KnockBack": 5.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
+          "AirKnockbackHorizontal": 8.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
+          "LaunchKnockbackVertical": -4.0,
+          "LaunchKnockbackHorizontal": 8.0,
           "GravityScaling": 0.0,
           "Pushback": 3.0,
           "ParticleXOffset": 18,
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
+
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -6428,8 +6430,8 @@
           "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": 2.0,
           "Launches": false,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 2.0,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
@@ -6467,9 +6469,11 @@
           "ParticleYOffset": 40,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
+
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -7209,6 +7213,8 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
+
   "LastModified": "2023-08-12T15:21:01.738218-07:00",
   "LastModifiedBy": "iansb"
+
 }

@@ -33,6 +33,7 @@ function ProcessHit(attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
@@ -210,6 +211,7 @@ function ProcessHit(attackProperty, collision_list)
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
