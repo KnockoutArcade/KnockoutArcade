@@ -83,25 +83,25 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			{
 				if (!collision_list.owner.spiritObject.vulnerable)
 				{
-					if (finalBlowSuper)
+					if (finalBlowSuper && !collision_list.owner.spiritInstall)
 					{
 						if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
 						{
 							collision_list.owner.spiritCurrentHealth = 1;
 						}
-						else
+						else if (!collision_list.owner.spiritInstall)
 						{
 							collision_list.owner.spiritCurrentHealth -= scaledDamage;
 						}
 					}
-					else
+					else if (!collision_list.owner.spiritInstall)
 					{
 						collision_list.owner.spiritCurrentHealth -= scaledDamage;
 					}
 					
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
-				else
+				else if (!collision_list.owner.spiritInstall)
 				{
 					// Instantly kills the spirit if its current move makes it vulnerable
 					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
@@ -285,12 +285,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			}
 			else
 			{
-				if (!collision_list.owner.spiritObject.vulnerable)
+				if (!collision_list.owner.spiritObject.vulnerable && !collision_list.owner.spiritInstall)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
-				else
+				else if (!collision_list.owner.spiritInstall)
 				{
 					// Instantly kills the spirit if its current move makes it vulnerable
 					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;

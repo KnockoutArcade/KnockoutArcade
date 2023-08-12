@@ -127,7 +127,7 @@ function PressAttackButton(attack)
 			break;
 			
 			case 6:
-				if (superMeter >= 50 && !timeStopActivated)
+				if (superMeter >= 50 && !timeStopActivated && !spiritBroken)
 				{
 					superMeter -= 50;
 					state = eState.SUPER;

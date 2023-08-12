@@ -226,7 +226,7 @@ function CancelData(_array, _attack, _late)
 		}
 	}
 	// Super
-	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 50 && !timeStopActivated))
+	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 50 && !timeStopActivated && !spiritBroken))
 	{
 		if (_late)
 		{
