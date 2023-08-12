@@ -521,9 +521,9 @@ if (state == eState.HITSTOP)
 	
 	hitstunShuffleTimer++;
 	
-	if (hitstun > 0)
+	if (hitstun > 0 || prevState = eState.LAUNCHED)
 	{
-		if (!isGrabbed)
+		if (!isGrabbed && !wallBouncing)
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 		}
@@ -539,11 +539,25 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome + min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome + min(hitstop, 3);
+			}
 		}
-		else 
+		else
 		{
-			x = xHome - min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome - min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome - min(hitstop, 3);
+			}
 		}
 	}
 	else 
@@ -622,7 +636,12 @@ if (state == eState.HITSTOP)
 			hitstopBuffer = false;
 		}
 		
-		
+		if (wallHit)
+		{
+			wallBouncing = false;
+			wallHit = false;
+			image_xscale *= -1; // Flip opponent around
+		}
 		prevSprite = 0;
 		shuffle = 0;
 		framesSinceHitstun = 0;
@@ -634,6 +653,7 @@ if (state == eState.HITSTOP)
 		{
 			image_index = 0;
 			x = xHome;
+			y = yHome;
 			hitstun++;
 		}
 		
@@ -641,6 +661,7 @@ if (state == eState.HITSTOP)
 		{
 			blockstun++;
 			x = xHome;
+			y = yHome;
 		}
 	}
 	image_speed = 0;
@@ -1967,9 +1988,9 @@ switch state
 			}
 		}
 		xHome = x;
+		yHome = y;
 		
 		vsp += fallSpeed;
-
 	}
 	break;
 	
@@ -2002,7 +2023,6 @@ switch state
 		{
 			hitstun--;
 		}
-
 	}
 	break;
 	
@@ -2359,6 +2379,7 @@ else
 		prevState = state;
 	}
 	xHome = x;
+	yHome = y;
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
@@ -2615,10 +2636,12 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 // We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
 // player's position without ossilating.
 var actualXPos = x;
+var actualYPos = y;
 x = xHome;
+y = yHome;
 
 // Collisions With Players
-if (opponent != noone)
+if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
 	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
@@ -2646,6 +2669,8 @@ if (opponent != noone)
 	}
 }
 
+x = actualXPos; // Restore the player's actual x position
+y = actualYPos; // Restore the player's actual y position
 
 // Collisions With Walls
 if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
@@ -2654,13 +2679,27 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	{
 		x += sign(hsp+environmentDisplacement);
 	}
-	hsp = 0;
-	environmentDisplacement = 0;
+	
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	{
+		wallHit = true;
+		hitstop = 20;
+		state = eState.LAUNCHED;
+		sprite_index = sRussel_WallSplat;
+		hsp = -(hsp * .5);
+		vsp = -2;
+	}
+	else if (state != eState.HITSTOP)
+	{
+		hsp = 0;
+		environmentDisplacement = 0;
+	}
 }
 
 if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 {
-	//Determine wether we are rising into a cieling or falling onto a floor.
+	
+	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
 	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
@@ -2669,7 +2708,10 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 	
 	isJumpingForward = false;
-	vsp = 0;
+	if (state != eState.HITSTOP)
+	{
+		vsp = 0;
+	}
 	if (hitstop < 1)
 	{
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
@@ -2698,7 +2740,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 		}
 	}
 }
-x = actualXPos; // Restore the player's actual x position
+
 
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {

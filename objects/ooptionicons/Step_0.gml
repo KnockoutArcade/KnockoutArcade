@@ -1,84 +1,162 @@
-var P1menuUp = global.p1ButtonUp;
-var P1menuDown = global.p1ButtonDown;
-var P1menuLeft = global.p1ButtonLeft;
-var P1menuRight = global.p1ButtonRight;
-var P1menuConfirm = global.p1ButtonLight;
-var P1menuCancel = global.p1ButtonMedium;
-
-menuCooldown--;
-
-if keyboard_check_pressed(ord("Q"))
+if (!isClosingOptionsMenu)
 {
-	audio_play_sound(sfx_Heavy_Hit, 1, false);
-}
+	var P1menuUp = global.p1ButtonUp;
+	var P1menuDown = global.p1ButtonDown;
+	P1menuLeft = global.p1ButtonLeft;
+	P1menuRight = global.p1ButtonRight;
+	var P1menuConfirm = global.p1ButtonLight;
+	var P1menuCancel = global.p1ButtonMedium;
 
-if (P1menuUp && menuCooldown < 1)
-{
-	image_index--;
-	menuCooldown = menuCooldownBuffer;
-}
+	menuCooldown--;
 
-if (P1menuDown == -1 && menuCooldown < 1)
-{
-	image_index++;
-	menuCooldown = menuCooldownBuffer;
-}
-
-if (P1menuRight && menuCooldown < 1 && image_index = 0)
-{
-	if (global.musicVolume < 1)
+	if (P1menuUp && menuCooldown < 1)
 	{
-		global.musicVolume += 0.1;
+		image_index--;
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Hover, 0, false);
 	}
-	menuCooldown = menuCooldownBuffer;
-}
 
-if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 0)
-{
-	if (global.musicVolume > 0)
+	if (P1menuDown == -1 && menuCooldown < 1)
 	{
-		global.musicVolume -= 0.1;
+		image_index++;
+		menuCooldown = menuCooldownBuffer;
+		audio_play_sound(sfx_UI_Hover, 0, false);
 	}
-	menuCooldown = menuCooldownBuffer;
-}
 
-if (P1menuRight && menuCooldown < 1 && image_index = 1)
-{
-	if (global.sfxVolume < 1)
+	if (P1menuRight && menuCooldown < 1 && image_index = 0)
 	{
-		global.sfxVolume += 0.1;
+		if (global.musicVolume < 1)
+		{
+			global.musicVolume += 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 	}
-	menuCooldown = menuCooldownBuffer;
-}
 
-if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
-{
-	if (global.sfxVolume > 0)
+	if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 0)
 	{
-		global.sfxVolume -= 0.1;
+		if (global.musicVolume > 0)
+		{
+			global.musicVolume -= 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 	}
-	menuCooldown = menuCooldownBuffer;
-}
 
-if (menuCooldown < 1)
+	if (P1menuRight && menuCooldown < 1 && image_index = 1)
+	{
+		if (global.sfxVolume < 1)
+		{
+			global.sfxVolume += 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+
+	if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 1)
+	{
+		if (global.sfxVolume > 0)
+		{
+			global.sfxVolume -= 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+
+	if (P1menuRight && menuCooldown < 1 && image_index = 2)
+	{
+		if (global.voicesVolume < 1)
+		{
+			global.voicesVolume += 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+
+	if (P1menuLeft == -1 && menuCooldown < 1 && image_index = 2)
+	{
+		if (global.voicesVolume > 0)
+		{
+			global.voicesVolume -= 0.1;
+		}
+		menuCooldown = menuCooldownBuffer;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+
+	if (menuCooldown < 1)
+	{
+		audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
+		audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+		audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+		menuCooldown = menuCooldownBuffer;
+	}
+
+	// if the player releases the direction, immediately refresh the cooldown
+	if (P1menuLeft == 0 && P1menuRight == 0 && P1menuUp == 0 && P1menuDown == 0)
+	{
+		menuCooldown = 0;
+	}
+
+	if (P1menuConfirm && image_index = 3)
+	{	
+		room_goto(rControlsRoom);
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+
+	if (P1menuCancel)
+	{
+		isClosingOptionsMenu = true;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+	}
+}
+else
 {
-	audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
-	audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
-	menuCooldown = menuCooldownBuffer;
-}
-
-// if the player releases the direction, immediately refresh the cooldown
-if (P1menuLeft == 0 && P1menuRight == 0 && P1menuUp == 0 && P1menuDown == 0)
-{
-	menuCooldown = 0;
-}
-
-if (P1menuConfirm && image_index = 2)
-{	
-	room_goto(rControlsRoom);
-}
-
-if (P1menuCancel)
-{
-	room_goto(rMainMenu);
+	exitingAnimationTimer++;
+	
+	if (exitingAnimationTimer < 4)
+	{
+		exitingAnimationFrame = 0;
+	}
+	else if (exitingAnimationTimer < 8)
+	{
+		exitingAnimationFrame = 1;
+	}
+	else if (exitingAnimationTimer < 12)
+	{
+		exitingAnimationFrame = 2;
+	}
+	else if (exitingAnimationTimer < 16)
+	{
+		exitingAnimationFrame = 3;
+	}
+	else if (exitingAnimationTimer < 20)
+	{
+		exitingAnimationFrame = 4;
+	}
+	else if (exitingAnimationTimer < 24)
+	{
+		exitingAnimationFrame = 5;
+	}
+	else if (exitingAnimationTimer < 28)
+	{
+		exitingAnimationFrame = 6;
+	}
+	else if (exitingAnimationTimer < 32)
+	{
+		exitingAnimationFrame = 7;
+	}
+	
+	if (exitingAnimationTimer == 40)
+	{
+		room_goto(rMainMenu);
+	}
 }
