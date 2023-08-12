@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 state = 0; // 0 for character select, 1 for stage select, 2 for music select
+holdTimer = 0;
 
 P1charSelRow = 0;
 P1charSelCol = 0;

@@ -36,6 +36,26 @@ var P2menuConfirmBuffer = false;
 P1cursorCooldown--;
 P2cursorCooldown--;
 
+// Hold P1menuCancel or P2menuCancel to go back
+if (P1menuCancel || P2menuCancel)
+{
+	holdTimer++;
+	if (holdTimer >= 30)
+	{
+		P1hasSelectedAlt = false;
+		P2hasSelectedAlt = false;
+		P1hasSelectedChar = false;
+        global.p1SelectedCharacter = noone;
+		P2hasSelectedChar = false;
+        global.p2SelectedCharacter = noone;
+		room_goto(rMainMenu);
+	}
+}
+else
+{
+	holdTimer = 0;
+}
+
 if (state == 0)
 {
     charSelBoxTimer++;
