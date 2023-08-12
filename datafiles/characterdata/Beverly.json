@@ -34,7 +34,9 @@
     "Hold": "sRussel_Hold",
     "Launched": "sRussel_Launched",
     "Knockdown": "sRussel_KnockedDown",
-    "GetUp": "sRussel_Getup"
+    "GetUp": "sRussel_Getup",
+    "RushCancel": "",
+    "WallSplat": ""
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -1083,11 +1085,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1111,6 +1114,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -1206,7 +1211,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1314,11 +1320,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1342,6 +1349,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -1410,7 +1419,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1502,11 +1512,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1530,6 +1541,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -1579,7 +1592,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1663,11 +1677,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1691,6 +1706,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -1769,7 +1786,8 @@
         "GravityScale": 1.0,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1849,11 +1867,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1877,6 +1896,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2040,7 +2061,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2124,11 +2146,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2152,6 +2175,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2201,7 +2226,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2285,11 +2311,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2313,6 +2340,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2377,7 +2406,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2461,11 +2491,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2489,6 +2520,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2553,7 +2586,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2649,11 +2683,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2677,6 +2712,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2748,7 +2785,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2844,11 +2882,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2872,6 +2911,8 @@
           "ParticleYOffset": 18,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2971,7 +3012,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3059,11 +3101,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3087,6 +3130,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3136,7 +3181,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3224,11 +3270,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3252,6 +3299,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3309,7 +3358,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3417,11 +3467,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 11,
@@ -3452,11 +3503,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3480,6 +3532,8 @@
           "ParticleYOffset": 18,
           "ParticleEffect": "sHitbox",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         },
@@ -3503,6 +3557,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3560,7 +3616,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3644,11 +3701,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3672,6 +3730,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3721,7 +3781,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3817,11 +3878,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3845,6 +3907,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3894,7 +3958,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3990,11 +4055,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 17,
@@ -4025,11 +4091,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4053,6 +4120,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         },
@@ -4076,6 +4145,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4125,7 +4196,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4221,11 +4293,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 16,
@@ -4256,11 +4329,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4284,6 +4358,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         },
@@ -4307,6 +4383,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4408,7 +4486,8 @@
         "GravityScale": 1.5,
         "FallScale": 0.5000001
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4504,11 +4583,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 8,
@@ -4539,11 +4619,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4567,6 +4648,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitbox",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         },
@@ -4590,6 +4673,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4661,7 +4746,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4740,7 +4826,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4816,11 +4903,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4844,6 +4932,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4915,7 +5005,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4994,7 +5085,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5073,7 +5165,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5157,11 +5250,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5185,6 +5279,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -5298,7 +5394,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5382,11 +5479,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5410,6 +5508,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -5472,7 +5572,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5548,11 +5649,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5576,6 +5678,8 @@
           "ParticleYOffset": 5,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -5625,7 +5729,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5701,11 +5806,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -5729,6 +5835,8 @@
           "ParticleYOffset": 25,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -5793,7 +5901,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5872,7 +5981,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5951,7 +6061,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6030,7 +6141,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6109,7 +6221,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6188,7 +6301,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6267,7 +6381,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6346,7 +6461,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6425,7 +6541,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6504,7 +6621,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6555,8 +6673,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.1",
+  "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-08-03T17:04:07.6791299-07:00",
+  "LastModified": "2023-08-12T15:21:01.6603842-07:00",
   "LastModifiedBy": "iansb"
 }

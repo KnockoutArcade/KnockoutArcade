@@ -34,7 +34,9 @@
     "Hold": "sRussel_Hold",
     "Launched": "sRussel_Launched",
     "Knockdown": "sRussel_KnockedDown",
-    "GetUp": "sRussel_Getup"
+    "GetUp": "sRussel_Getup",
+    "RushCancel": "",
+    "WallSplat": ""
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -124,11 +126,968 @@
       }
     ]
   },
-  "NumberOfPalettes": 1,
+  "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "f425b468-41c3-4bb1-a8fb-36ecff1fa000",
       "Name": "default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "eb7758c0-04ab-4ea1-824e-57f8209158d9",
+      "Name": "copy 1",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "4eefc9ad-6cad-4abb-844b-4dd4eb4768bf",
+      "Name": "copy 2",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "e1f3e445-44b8-4fd5-8188-4c151169dd03",
+      "Name": "copy 3",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "dffeaf6e-5ce0-4da7-a476-ee07b69a8008",
+      "Name": "copy 4",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "fc02ffcd-1ed2-4d30-957d-0086ac812563",
+      "Name": "copy 5",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "a463eb45-bbbd-4edc-9206-63cff701e481",
+      "Name": "copy 6",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "80923759-8dd6-4be2-a205-cccc73af57d6",
+      "Name": "copy 7",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "8eb529ee-7dad-44b0-8277-9277c7f54826",
+      "Name": "copy 8",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "5f54509c-825f-4ef8-b16b-1cfeff324a44",
+      "Name": "copy 9",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "3a1ddf93-9f18-434b-b03c-dc2a95fd3fa3",
+      "Name": "copy 10",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    },
+    {
+      "UID": "d8e361c5-3b48-41a6-b70c-486b69708ee0",
+      "Name": "copy 11",
       "NumberOfReplacableColors": 16,
       "ColorPalette": [
         {
@@ -265,7 +1224,7 @@
           "AttackHitStop": 6,
           "AttackHitStun": 9,
           "AttackType": 1,
-          "BlockStun": 3.0,
+          "BlockStun": 13.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 1.0,
@@ -280,11 +1239,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -308,6 +1268,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit"
         }
@@ -357,7 +1319,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -450,7 +1413,7 @@
           "AttackHitStop": 6,
           "AttackHitStun": 11,
           "AttackType": 1,
-          "BlockStun": 4.0,
+          "BlockStun": 13.0,
           "KnockBack": 1.5,
           "AirKnockbackVertical": -1.0000001,
           "AirKnockbackHorizontal": 0.5,
@@ -465,11 +1428,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_light_hit2",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -493,6 +1457,8 @@
           "ParticleYOffset": 20,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_light_hit2"
         }
@@ -564,7 +1530,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -680,11 +1647,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 10,
@@ -715,11 +1683,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -743,7 +1712,9 @@
           "ParticleYOffset": 35,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "CausesWallbounce": true,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         },
         {
@@ -766,7 +1737,9 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "CausesWallbounce": true,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         }
       ],
@@ -815,7 +1788,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -931,11 +1905,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 16,
@@ -952,9 +1927,9 @@
           "AttackHitStun": 11,
           "AttackType": 1,
           "BlockStun": 2.0,
-          "KnockBack": 1.0,
+          "KnockBack": 0.75,
           "AirKnockbackVertical": -3.999998,
-          "AirKnockbackHorizontal": 0.0,
+          "AirKnockbackHorizontal": 0.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -966,11 +1941,12 @@
           "ParticleDuration": 0,
           "HoldXOffset": 5,
           "HoldYOffset": 40,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -994,6 +1970,8 @@
           "ParticleYOffset": 20,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         },
@@ -1017,6 +1995,8 @@
           "ParticleYOffset": 40,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -1109,7 +2089,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1194,7 +2175,7 @@
           "AttackHitStop": 6,
           "AttackHitStun": 9,
           "AttackType": 2,
-          "BlockStun": 3.0,
+          "BlockStun": 13.0,
           "KnockBack": 1.5,
           "AirKnockbackVertical": -0.25,
           "AirKnockbackHorizontal": 5.0,
@@ -1209,11 +2190,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1237,6 +2219,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit"
         }
@@ -1294,7 +2278,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1391,7 +2376,7 @@
           "AttackHitStop": 13,
           "AttackHitStun": 18,
           "AttackType": 2,
-          "BlockStun": 4.0,
+          "BlockStun": 11.0,
           "KnockBack": 0.5,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 2.0,
@@ -1406,11 +2391,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1434,6 +2420,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         }
@@ -1499,7 +2487,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1612,7 +2601,7 @@
           "AttackHitStop": 14,
           "AttackHitStun": 30,
           "AttackType": 2,
-          "BlockStun": 4.0,
+          "BlockStun": 8.0,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 3.0,
@@ -1621,17 +2610,18 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 1.0,
           "Pushback": 2.0,
-          "ParticleXOffset": 46,
+          "ParticleXOffset": 30,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 14,
@@ -1656,17 +2646,18 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 1.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 65,
+          "ParticleXOffset": 40,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 16,
@@ -1691,17 +2682,18 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 1.0,
           "Pushback": 0.0,
-          "ParticleXOffset": 90,
+          "ParticleXOffset": 45,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "HoldXOffset": 9,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1721,10 +2713,12 @@
           "LaunchKnockbackHorizontal": 0.2,
           "GravityScaling": 1.0,
           "Pushback": 2.0,
-          "ParticleXOffset": 46,
+          "ParticleXOffset": 30,
           "ParticleYOffset": 0,
           "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         },
@@ -1744,10 +2738,12 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 1.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 65,
+          "ParticleXOffset": 40,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         },
@@ -1767,10 +2763,12 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 1.0,
           "Pushback": 0.0,
-          "ParticleXOffset": 90,
+          "ParticleXOffset": 45,
           "ParticleYOffset": 0,
           "ParticleEffect": "sGunther_StandHeavy_mockup_strip11",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -1820,7 +2818,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -1905,7 +2904,7 @@
           "AttackHitStop": 6,
           "AttackHitStun": 10,
           "AttackType": 0,
-          "BlockStun": 2.0,
+          "BlockStun": 10.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 0.5,
@@ -1920,11 +2919,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_light_hit2",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -1948,6 +2948,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit"
         }
@@ -2005,7 +3007,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2086,7 +3089,7 @@
           "AttackHitStop": 15,
           "AttackHitStun": 20,
           "AttackType": 0,
-          "BlockStun": 2.0,
+          "BlockStun": 12.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.0,
@@ -2101,11 +3104,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2129,6 +3133,8 @@
           "ParticleYOffset": 30,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit"
         }
@@ -2176,7 +3182,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2276,11 +3283,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         },
         {
           "Start": 11,
@@ -2306,16 +3314,17 @@
           "GravityScaling": 0.0,
           "Pushback": 1.0,
           "ParticleXOffset": 0,
-          "ParticleYOffset": -10,
+          "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2336,9 +3345,11 @@
           "GravityScaling": 0.5,
           "Pushback": 2.0,
           "ParticleXOffset": 15,
-          "ParticleYOffset": 15,
+          "ParticleYOffset": -15,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         },
@@ -2358,10 +3369,12 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.5,
           "Pushback": 1.0,
-          "ParticleXOffset": -10,
+          "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -2402,7 +3415,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2498,11 +3512,12 @@
           "ParticleDuration": 0,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2526,6 +3541,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2566,7 +3583,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 1.0000001
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2714,11 +3732,12 @@
           "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -2742,6 +3761,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -2981,7 +4002,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "ProccessCommandGrab",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3109,11 +4131,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3137,6 +4160,8 @@
           "ParticleYOffset": 202,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -3194,7 +4219,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 1.0000001
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3346,11 +4372,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3374,6 +4401,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -3470,7 +4499,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 1.0000001
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3574,7 +4604,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3686,11 +4717,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3714,6 +4746,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -3790,7 +4824,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -3882,11 +4917,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -3910,6 +4946,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -3959,7 +4997,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4071,11 +5110,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4099,6 +5139,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4194,7 +5236,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4302,11 +5345,12 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4330,6 +5374,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": ""
         }
@@ -4398,7 +5444,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4498,11 +5545,12 @@
           "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false,
-          "TimeStopDuration": 0
+          "ActivateTimeStop": false
         }
       ],
       "CounterData": [
@@ -4526,6 +5574,8 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -4583,7 +5633,8 @@
         "GravityScale": 0.5,
         "FallScale": 0.5
       },
-      "SupplimentaryScript": "",
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4628,8 +5679,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.1",
+  "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2023-08-12T07:46:57.4369525-07:00",
+  "LastModified": "2023-08-12T16:15:15.5839324-07:00",
   "LastModifiedBy": "iansb"
 }

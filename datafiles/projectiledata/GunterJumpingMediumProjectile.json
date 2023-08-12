@@ -249,6 +249,8 @@
       "ParticleDuration": 5,
       "HoldXOffset": 0,
       "HoldYOffset": 0,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
       "CausesWallbounce": false,
       "HitSound": "sfx_light_hit2"
     }
@@ -274,6 +276,8 @@
       "ParticleYOffset": 20,
       "ParticleEffect": "sSmallHitspark",
       "ParticleDuration": 5,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
       "CausesWallbounce": false,
       "HitSound": "sfx_light_hit2"
     }
@@ -283,8 +287,8 @@
     "NumberOfHits": 0,
     "HitOnFrames": []
   },
-  "Version": "Ver1.2.1",
+  "Version": "Ver1.2.2",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2023-08-03T19:21:22.5228509-07:00",
+  "LastModified": "2023-08-12T15:21:01.8152835-07:00",
   "LastModifiedBy": "iansb"
 }
