@@ -360,6 +360,7 @@ if (state == eState.IDLE)
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
 	canBlock = true;
+	invincible = false;
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -437,6 +438,7 @@ if (state == eState.CROUCHING)
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
 	canBlock = true;
+	invincible = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -777,6 +779,7 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		canBlock = true;
+		invincible = false;
 		
 		if (movedir == image_xscale) 
 		{
@@ -882,6 +885,7 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		invincible = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		if (!timeStopActivated && !installActivated)
@@ -968,6 +972,7 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		runningBackward = false;
+		invincible = false;
 		
 		vsp += fallSpeed;
 		
@@ -1015,6 +1020,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		invincible = false;
 
 		hsp = jumpHsp;
 		
@@ -1086,6 +1092,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		invincible = false;
 		
 		if image_index > (image_number - 1) image_speed = 0;
 		else image_speed = 1;
