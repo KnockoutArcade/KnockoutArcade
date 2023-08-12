@@ -34,6 +34,7 @@ function ProccessCommandGrab()
 		//spawns the Bathtub after a certain amount of time passes
 		if (animTimer == 9)
 		{
+			//Creates a bathtub object that is assigned to an owner, which is Gunther in this case
 			var Bathtub = instance_create_layer(x+(30 * image_xscale),y,"Instances" ,oGunther_NSpecial_Bathtub);
 			with Bathtub
 			{
@@ -58,9 +59,6 @@ function ProccessCommandGrab()
 				mode = ThrowEnvironmentWallDetectionMode.CONSTANTCHECK;
 			}
 		}
-		if (animTimer == 99)
-		{
-			
-		}
+		
 	}
 }
