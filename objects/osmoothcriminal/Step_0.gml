@@ -1706,6 +1706,12 @@ if (host != noone && hostObject != noone)
 			canTurnAround = false;
 			isEXFlash = false;
 			hitstun = hostObject.hitstun;
+			
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
 
 			if (hitstun < 1)
 			{
@@ -1788,6 +1794,12 @@ if (host != noone && hostObject != noone)
 			cancelable = false;
 			canTurnAround = false;
 			grounded = false;
+			
+			// Stands next to and slightly in front of the player
+			if (nextToPlayer)
+			{
+				x = lerp(x, hostObject.x + (10 * hostObject.image_xscale), 0.2);
+			}
 
 			FAvictim = false;
 
@@ -1800,7 +1812,7 @@ if (host != noone && hostObject != noone)
 
 		case eState.KNOCKED_DOWN:
 		{
-			if ((nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 25 && abs(y - hostObject.y) < 25) || hostObject.spiritInstall)
+			if ((nextToPlayer && abs(x - hostObject.x + (10 * hostObject.image_xscale)) < 30 && abs(y - hostObject.y) < 25) || hostObject.spiritInstall)
 			{
 				cancelable = false;
 				grounded = true;
@@ -2140,7 +2152,7 @@ if (host != noone && hostObject != noone)
 		x = xHome;
 
 		// Collisions With Players
-		if (opponent != noone && !nextToPlayer)
+		if (opponent != noone)
 		{
 			// Check to see if players are about to be touching
 			if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
