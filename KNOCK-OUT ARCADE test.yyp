@@ -17,7 +17,6 @@
     {"id":{"name":"sStageSelect_Cursor","path":"sprites/sStageSelect_Cursor/sStageSelect_Cursor.yy",},"order":1,},
     {"id":{"name":"sGunther_JumpingMedium_Projectile_destroy_strip4","path":"sprites/sGunther_JumpingMedium_Projectile_destroy_strip4/sGunther_JumpingMedium_Projectile_destroy_strip4.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial2_MOCKUP","path":"sprites/sBeverly_SideSpecial2_MOCKUP/sBeverly_SideSpecial2_MOCKUP.yy",},"order":3,},
-    {"id":{"name":"CheckChange","path":"scripts/CheckChange/CheckChange.yy",},"order":3,},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},"order":2,},
     {"id":{"name":"sRussel_Intro","path":"sprites/sRussel_Intro/sRussel_Intro.yy",},"order":27,},
     {"id":{"name":"sRussel_Launched","path":"sprites/sRussel_Launched/sRussel_Launched.yy",},"order":13,},
@@ -461,12 +460,9 @@
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Beverly.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"SmoothCriminal.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Jay.json","resourceType":"GMIncludedFile",},
-
-    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"imgui.ini","resourceType":"GMIncludedFile",},
-    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"imgui.ini","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Gunther.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"GunterJumpingMediumProjectile.json","resourceType":"GMIncludedFile",},
-
+    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
