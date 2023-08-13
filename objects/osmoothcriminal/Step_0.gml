@@ -2152,12 +2152,16 @@ if (host != noone && hostObject != noone)
 		x = xHome;
 
 		// Collisions With Players
-		if (opponent != noone)
+		if (opponent != noone && !inSpiritOff)
 		{
 			// Check to see if players are about to be touching
 			if (place_meeting(x + hsp + environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 			{
 				hsp *= .75; // Reduce player speed
+				if (nextToPlayer)
+				{
+					hostObject.hsp *= .75;
+				}
 				var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
 				// Simulate the opponent moving forwards
 				opponent.x += (opponent.hsp * .75) + opponent.environmentDisplacement;
@@ -2167,11 +2171,19 @@ if (host != noone && hostObject != noone)
 					// Move the players away from each other
 					if x > opponent.x{
 						environmentDisplacement += .5;
+						if (nextToPlayer)
+						{
+							hostObject.environmentDisplacement += .5;
+						}
 						opponent.x -= .5;
 					}
 					else
 					{
 						environmentDisplacement -= .5;
+						if (nextToPlayer)
+						{
+							hostObject.environmentDisplacement -= .5;
+						}
 						opponent.x += .5;
 					}
 				}
