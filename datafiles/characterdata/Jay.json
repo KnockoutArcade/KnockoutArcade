@@ -7747,7 +7747,7 @@
       "CounterData": [],
       "CommandNormalData": {
         "NumpadDirection": 4,
-        "Button": 1,
+        "Button": 2,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
