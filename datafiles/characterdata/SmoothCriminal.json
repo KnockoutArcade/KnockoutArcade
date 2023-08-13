@@ -1837,7 +1837,7 @@
         {
           "Start": 9,
           "Lifetime": 7,
-          "AttackWidth": 22,
+          "AttackWidth": 24,
           "AttackHeight": 33,
           "WidthOffset": 5,
           "HeightOffset": 15,
@@ -1854,7 +1854,7 @@
           "AirKnockbackHorizontal": -0.75,
           "Launches": true,
           "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 0.5,
+          "LaunchKnockbackHorizontal": -0.25,
           "GravityScaling": 0.0,
           "Pushback": 3.0,
           "ParticleXOffset": 0,
