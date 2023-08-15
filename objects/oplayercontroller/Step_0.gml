@@ -684,6 +684,10 @@ if (state == eState.SCREEN_FREEZE)
 	if (rcActivated)
 	{
 		isEXFlash = true;
+		if (rcFreezeTimer == 1)
+		{
+			audio_play_sound(sfx_spend50Meter, 0, false);
+		}
 		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)
 		{

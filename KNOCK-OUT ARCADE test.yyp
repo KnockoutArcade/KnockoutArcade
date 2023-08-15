@@ -198,6 +198,7 @@
     {"id":{"name":"sShadow","path":"sprites/sShadow/sShadow.yy",},"order":0,},
     {"id":{"name":"sJay_UpSpecial1_mockup_strip16","path":"sprites/sJay_UpSpecial1_mockup_strip16/sJay_UpSpecial1_mockup_strip16.yy",},"order":10,},
     {"id":{"name":"sSpiritFire","path":"sprites/sSpiritFire/sSpiritFire.yy",},"order":40,},
+    {"id":{"name":"sfx_spend50Meter","path":"sounds/sfx_spend50Meter/sfx_spend50Meter.yy",},"order":16,},
     {"id":{"name":"sDoubleKOText","path":"sprites/sDoubleKOText/sDoubleKOText.yy",},"order":35,},
     {"id":{"name":"sBeverly_SideSpecial1_MOCKUP","path":"sprites/sBeverly_SideSpecial1_MOCKUP/sBeverly_SideSpecial1_MOCKUP.yy",},"order":2,},
     {"id":{"name":"SummonSpirit","path":"scripts/SummonSpirit/SummonSpirit.yy",},"order":1,},
