@@ -1477,6 +1477,9 @@ if (host != noone && hostObject != noone)
 			{
 				JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
 			}
+			
+			// Create speed trail
+			SpeedTrail(0.3, 0.08, 1);
 
 			// Install Super
 			if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)

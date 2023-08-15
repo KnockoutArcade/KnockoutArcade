@@ -1606,6 +1606,7 @@ switch state
 			activateFreeze = true;
 			global.freezeTimer = true;
 			instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperFlashBackground);
+			speedTrailTimer = 0;
 		}
 		else 
 		{
@@ -1646,6 +1647,9 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
 		}
+		
+		// Create speed trail
+		SpeedTrail(0.3, 0.08, 1);
 		
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
