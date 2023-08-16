@@ -262,7 +262,10 @@ if (!isProjectile)
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
 					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
-					owner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					if (owner.state != eState.SUPER && !owner.installActivated && !owner.timeStopActivated)
+					{
+						owner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
 					owner.pushbackVel = attackProperty.Pushback;
@@ -324,7 +327,7 @@ if (!isProjectile)
 						// Determine if we should display the coutner hit text on the p1 or p2 side
 						var isP2 = (owner.playerID == 2);
 
-						ProcessHit(counterHitProperty, collision_list[| i]);
+						ProcessHit(counterHitProperty, collision_list[| i], finalBlowSuper, attackProperty.ActivateTimeStop);
 
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
@@ -364,7 +367,7 @@ if (!isProjectile)
 					}
 					else
 					{ // on Regular Hit
-						ProcessHit(attackProperty, collision_list[| i]);
+						ProcessHit(attackProperty, collision_list[| i], finalBlowSuper, attackProperty.ActivateTimeStop);
 					}
 
 					//Allow Cancelling
@@ -388,7 +391,7 @@ if (!isProjectile)
 		}
 	}
 }
-else
+else if (!global.freezeTimer)
 {
 	if (!global.game_paused && owner.playerOwner.state != eState.HITSTOP)
 	{
@@ -415,6 +418,8 @@ else
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit 
 			if (collision_list[| i].owner != owner.playerOwner && collision_list[| i].owner != owner.spiritOwner && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible && !collision_list[| i].owner.projectileInvincible) 
 			{
+				owner.target = collision_list[| i].owner.id;
+				
 				// Calculate blocking direction
 				if (collision_list[| i].owner.x >= owner.playerOwner.x)
 				{
@@ -465,7 +470,10 @@ else
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
 					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
-					owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					if (owner.playerOwner.state != eState.SUPER && !owner.installActivated && !owner.timeStopActivated)
+					{
+						owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
+					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
@@ -520,7 +528,7 @@ else
 						// Determine if we should display the coutner hit text on the p1 or p2 side
 						var isP2 = (owner.playerOwner.playerID == 2);
 
-						ProcessHit(counterHitProperty, collision_list[| i]);
+						ProcessHit(counterHitProperty, collision_list[| i], finalBlowSuper);
 
 						// Display counterhit text
 						if (other.counterHitProperty.CounterHitLevel == 1)
@@ -560,7 +568,7 @@ else
 					}
 					else
 					{ // on Regular Hit
-						ProcessHit(attackProperty, collision_list[| i]);
+						ProcessHit(attackProperty, collision_list[| i], finalBlowSuper);
 					}
 
 

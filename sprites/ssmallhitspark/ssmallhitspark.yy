@@ -85,8 +85,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "SpecialEffects",
+    "path": "folders/Sprites/SpecialEffects.yy",
   },
   "resourceVersion": "1.0",
   "name": "sSmallHitspark",

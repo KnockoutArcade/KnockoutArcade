@@ -7,6 +7,12 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	animOffset = _animOffset;
 	hitstopBuffer = true;
 	isThrowable = true;
+	if (spiritObject != noone)
+	{
+		spiritObject.prevState = _prevState;
+		spiritObject.animOffset = _animOffset;
+		spiritObject.hitstopBuffer = true;
+	}
 	
 	ds_list_clear(hitByGroup);
 	if (target != noone)

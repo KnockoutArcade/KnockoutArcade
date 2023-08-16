@@ -57,6 +57,10 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
+			}
 			instance_destroy();
 		}
 		else if (bounceOnWall)
@@ -87,6 +91,10 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
+			}
 			instance_destroy();
 		}
 		else if (bounceOnFloor)
@@ -107,6 +115,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	
@@ -114,12 +126,15 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		with (collisionID)
+		if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
+			with (collisionID)
+			{
+				collidedWithProjectile = true;
+			}
+			
 			collidedWithProjectile = true;
 		}
-		
-		collidedWithProjectile = true;
 	}
 	
 	if (collidedWithProjectile)
@@ -132,6 +147,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	
@@ -145,6 +164,10 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
+		}
 		instance_destroy();
 	}
 	

@@ -14,8 +14,8 @@ function SetPlayerButtons()
 			buttonHeavy : ord("L"),
 			buttonGrab : vk_space,
 			buttonSpecial : 186,    // Keyboard code value for ";"
-			buttonSuper : vk_rcontrol,
-			buttonRun : vk_lcontrol,
+			buttonSuper : ord("M"),
+			buttonRun : vk_lshift,
 		};
 	} 
 	else 
