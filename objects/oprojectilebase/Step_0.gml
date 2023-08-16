@@ -6,7 +6,7 @@ if (global.game_paused)
 	exit;
 }
 
-if (!global.gameHalt && !global.freezeTimer)
+if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 {
 	animTimer++;
 	
@@ -57,7 +57,12 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
-			instance_destroy();
+			if (destroySprite != -1)
+			{
+				sprite_index = destroySprite;
+				image_index = 0;
+			}
+			canDestroySprite = true;
 		}
 		else if (bounceOnWall)
 		{
@@ -87,7 +92,12 @@ if (!global.gameHalt && !global.freezeTimer)
 				}
 			}
 			ds_list_clear(hitboxID);
-			instance_destroy();
+			if (destroySprite != -1)
+			{
+				sprite_index = destroySprite;
+				image_index = 0;
+			}
+			canDestroySprite = true;
 		}
 		else if (bounceOnFloor)
 		{
@@ -107,7 +117,12 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
-		instance_destroy();
+		if (destroySprite != -1)
+		{
+			sprite_index = destroySprite;
+			image_index = 0;
+		}
+		canDestroySprite = true;
 	}
 	
 	if (place_meeting(x + (hsp * image_xscale), y, oProjectileBase) && !transcendent)
@@ -132,7 +147,12 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
-		instance_destroy();
+		if (destroySprite != -1)
+		{
+			sprite_index = destroySprite;
+			image_index = 0;
+		}
+		canDestroySprite = true;
 	}
 	
 	if (lifetime == 0 && hasLifetime)
@@ -145,11 +165,23 @@ if (!global.gameHalt && !global.freezeTimer)
 			}
 		}
 		ds_list_clear(hitboxID);
-		instance_destroy();
+		if (destroySprite != -1)
+		{
+			sprite_index = destroySprite;
+			image_index = 0;
+		}
+		canDestroySprite = true;
 	}
 	
 	#endregion
 	
 	x += hsp * image_xscale;
 	y += vsp;
+}
+else if (!global.gameHalt && !global.freezeTimer && canDestroySprite)
+{
+	if (image_index > (image_number - 1)) 
+	{
+		instance_destroy();
+	}
 }

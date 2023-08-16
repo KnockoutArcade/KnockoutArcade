@@ -4,6 +4,9 @@
 animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 
+destroySprite = selectedProjectile.Sprites.Destroy;
+canDestroySprite = false; // Plays the destroy sprite 
+
 copyCharacterPalette = selectedProjectile.CopyCharacterPalette;
 
 hsp = selectedProjectile.HorizontalSpeed; // Keeping naming consistent for velocity-based variables
