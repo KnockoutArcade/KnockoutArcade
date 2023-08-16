@@ -1,12 +1,23 @@
 /// @function                  JumpingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
+// 
 function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
 {
 	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	
+	// Resets all run timers
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	runningForward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
+	runningBackward = false;
 	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;

@@ -6,7 +6,7 @@
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 5.0,
   "EnvironmentalDisplacement": 0,
-  "FallSpeed": 5.0,
+  "FallSpeed": 1.0,
   "GroundTraction": 0.0,
   "AirTraction": 0.0,
   "DestroyOnFloor": true,
