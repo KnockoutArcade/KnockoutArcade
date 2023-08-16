@@ -1328,6 +1328,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.NeutralSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.NeutralSpecial, attack, true);
+		}
 	}
 	break;
 	
@@ -1345,6 +1350,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.SideSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.SideSpecial, attack, true);
+		}
 	}
 	break;
 	
@@ -1362,6 +1372,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.UpSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.UpSpecial, attack, true);
+		}
 		
 		if (animTimer < 28)
 		{
@@ -1388,6 +1403,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.DownSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.DownSpecial, attack, true);
+		}
 	}
 	break;
 	
