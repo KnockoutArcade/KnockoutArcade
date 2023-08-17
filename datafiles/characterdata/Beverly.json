@@ -126,7 +126,7 @@
       }
     ]
   },
-  "NumberOfPalettes": 10,
+  "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "b0da4ab6-a494-40ef-a8ea-29284ecc4337",
@@ -997,6 +997,180 @@
           "Green": 0.3372549
         }
       ]
+    },
+    {
+      "UID": "f144e0d1-c6ec-44a8-b350-819827b63355",
+      "Name": "Default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.92941177,
+          "Blue": 0.3764706,
+          "Green": 0.8784314
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
+        },
+        {
+          "Red": 0.3372549,
+          "Blue": 0.16078432,
+          "Green": 0.24313726
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.6117647,
+          "Green": 0.79607844
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 0.45490196,
+          "Green": 0.6627451
+        },
+        {
+          "Red": 0.67058825,
+          "Blue": 0.3137255,
+          "Green": 0.4862745
+        },
+        {
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.7764706,
+          "Green": 0.6039216
+        },
+        {
+          "Red": 0.8901961,
+          "Blue": 0.72156864,
+          "Green": 0.42745098
+        },
+        {
+          "Red": 0.34509805,
+          "Blue": 0.39215687,
+          "Green": 0.8392157
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
+        },
+        {
+          "Red": 0.87058824,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
+        }
+      ]
+    },
+    {
+      "UID": "67f3d556-74f7-43b1-b86a-e92024d34a3c",
+      "Name": "Default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.92941177,
+          "Blue": 0.3764706,
+          "Green": 0.8784314
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
+        },
+        {
+          "Red": 0.3372549,
+          "Blue": 0.16078432,
+          "Green": 0.24313726
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.6117647,
+          "Green": 0.79607844
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 0.45490196,
+          "Green": 0.6627451
+        },
+        {
+          "Red": 0.67058825,
+          "Blue": 0.3137255,
+          "Green": 0.4862745
+        },
+        {
+          "Red": 0.11764706,
+          "Blue": 0.10980392,
+          "Green": 0.0627451
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.7764706,
+          "Green": 0.6039216
+        },
+        {
+          "Red": 0.8901961,
+          "Blue": 0.72156864,
+          "Green": 0.42745098
+        },
+        {
+          "Red": 0.34509805,
+          "Blue": 0.39215687,
+          "Green": 0.8392157
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
+        },
+        {
+          "Red": 0.87058824,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
+        }
+      ]
     }
   ],
   "MoveData": [
@@ -1817,7 +1991,7 @@
     {
       "UID": "032032e6-71fc-4f2c-bf79-7b5e75d8fe99",
       "MoveType": 8,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2092,7 +2266,7 @@
     {
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
       "MoveType": 32,
-      "MoveCanCancelInto": 199000,
+      "MoveCanCancelInto": 4393304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2257,7 +2431,7 @@
     {
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
       "MoveType": 64,
-      "MoveCanCancelInto": 199576,
+      "MoveCanCancelInto": 4393880,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2617,7 +2791,7 @@
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
       "MoveType": 256,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2816,7 +2990,7 @@
     {
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
       "MoveType": 512,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3043,7 +3217,7 @@
     {
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
       "MoveType": 1024,
-      "MoveCanCancelInto": 198936,
+      "MoveCanCancelInto": 4393240,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3212,7 +3386,7 @@
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
       "MoveType": 2048,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4395544,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3389,7 +3563,7 @@
     {
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
       "MoveType": 4096,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3647,7 +3821,7 @@
     {
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
       "MoveType": 8192,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3812,7 +3986,7 @@
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
       "MoveType": 16384,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3989,7 +4163,7 @@
     {
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
       "MoveType": 32768,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4227,7 +4401,7 @@
     {
       "UID": "7316822a-00ef-464c-94a0-875d7db960c9",
       "MoveType": 65536,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4517,7 +4691,7 @@
     {
       "UID": "4014c4eb-f2e9-4750-9633-50f3736dc021",
       "MoveType": 131072,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -6648,6 +6822,193 @@
         "JumpType": 0,
         "SpiritInstall": false
       }
+    },
+    {
+      "UID": "d33d2427-1cef-46fe-b15d-dd94995d1d09",
+      "MoveType": 4194304,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sBeverly_NSpecial_MOCKUP",
+      "Duration": 90,
+      "NumberOfFrames": 11,
+      "FrameData": [
+        {
+          "Length": 2,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 35,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 39,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 43,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 47,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 51,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 55,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 59,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 63,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 67,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 71,
+          "ImageIndex": 2
+        }
+      ],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 35,
+          "Lifetime": 36,
+          "AttackWidth": 16,
+          "AttackHeight": 27,
+          "WidthOffset": 3,
+          "HeightOffset": 6
+        }
+      ],
+      "NumberOfProjectiles": 5,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 35,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -10,
+          "ProjectileObject": "TestLobbingProjectile"
+        },
+        {
+          "SpawnFrame": 43,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -10,
+          "ProjectileObject": "TestLobbingProjectile"
+        },
+        {
+          "SpawnFrame": 51,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -10,
+          "ProjectileObject": "TestLobbingProjectile"
+        },
+        {
+          "SpawnFrame": 59,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -10,
+          "ProjectileObject": "TestLobbingProjectile"
+        },
+        {
+          "SpawnFrame": 67,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -10,
+          "ProjectileObject": "TestLobbingProjectile"
+        }
+      ],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -2.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 0.5
+      },
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 30,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
+      }
     }
   ],
   "UniqueData": {
@@ -6675,6 +7036,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-08-12T15:21:01.6603842-07:00",
-  "LastModifiedBy": "iansb"
+  "LastModified": "2023-08-15T19:31:55.1633762-07:00",
+  "LastModifiedBy": "creep"
 }

@@ -210,6 +210,14 @@ function FindAttackState(stateToSearch){
 		}
 		break;
 		
+		// Super
+		case eState.SUPER : 
+		{
+			return selectedCharacter.Super;
+		}
+		break;
+		
+		
 		// Default Case
 		default:
 		{

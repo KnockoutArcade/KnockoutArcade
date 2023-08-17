@@ -28,8 +28,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "SpecialEffects",
+    "path": "folders/Objects/SpecialEffects.yy",
   },
   "resourceVersion": "1.0",
   "name": "oRushCancel",

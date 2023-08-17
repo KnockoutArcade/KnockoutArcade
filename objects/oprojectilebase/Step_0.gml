@@ -6,7 +6,7 @@ if (global.game_paused)
 	exit;
 }
 
-if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
+if (!global.gameHalt && !global.freezeTimer)
 {
 	animTimer++;
 	
@@ -57,12 +57,11 @@ if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 				}
 			}
 			ds_list_clear(hitboxID);
-			if (destroySprite != -1)
+			if (target != noone)
 			{
-				sprite_index = destroySprite;
-				image_index = 0;
+				ds_list_clear(target.hitByGroup);
 			}
-			canDestroySprite = true;
+			instance_destroy();
 		}
 		else if (bounceOnWall)
 		{
@@ -92,12 +91,11 @@ if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 				}
 			}
 			ds_list_clear(hitboxID);
-			if (destroySprite != -1)
+			if (target != noone)
 			{
-				sprite_index = destroySprite;
-				image_index = 0;
+				ds_list_clear(target.hitByGroup);
 			}
-			canDestroySprite = true;
+			instance_destroy();
 		}
 		else if (bounceOnFloor)
 		{
@@ -117,24 +115,26 @@ if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 			}
 		}
 		ds_list_clear(hitboxID);
-		if (destroySprite != -1)
+		if (target != noone)
 		{
-			sprite_index = destroySprite;
-			image_index = 0;
+			ds_list_clear(target.hitByGroup);
 		}
-		canDestroySprite = true;
+		instance_destroy();
 	}
 	
 	if (place_meeting(x + (hsp * image_xscale), y, oProjectileBase) && !transcendent)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		with (collisionID)
+		if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
+			with (collisionID)
+			{
+				collidedWithProjectile = true;
+			}
+			
 			collidedWithProjectile = true;
 		}
-		
-		collidedWithProjectile = true;
 	}
 	
 	if (collidedWithProjectile)
@@ -147,12 +147,11 @@ if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 			}
 		}
 		ds_list_clear(hitboxID);
-		if (destroySprite != -1)
+		if (target != noone)
 		{
-			sprite_index = destroySprite;
-			image_index = 0;
+			ds_list_clear(target.hitByGroup);
 		}
-		canDestroySprite = true;
+		instance_destroy();
 	}
 	
 	if (lifetime == 0 && hasLifetime)
@@ -165,23 +164,15 @@ if (!global.gameHalt && !global.freezeTimer && !canDestroySprite)
 			}
 		}
 		ds_list_clear(hitboxID);
-		if (destroySprite != -1)
+		if (target != noone)
 		{
-			sprite_index = destroySprite;
-			image_index = 0;
+			ds_list_clear(target.hitByGroup);
 		}
-		canDestroySprite = true;
+		instance_destroy();
 	}
 	
 	#endregion
 	
 	x += hsp * image_xscale;
 	y += vsp;
-}
-else if (!global.gameHalt && !global.freezeTimer && canDestroySprite)
-{
-	if (image_index > (image_number - 1)) 
-	{
-		instance_destroy();
-	}
 }

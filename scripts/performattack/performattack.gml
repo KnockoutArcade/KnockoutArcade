@@ -177,6 +177,7 @@ function PerformAttack(Action, createdBySpirit)
 				// Pass through attack data
 				attackProperty = Action.AttackProperty[i];
 				counterHitProperty = Action.CounterHitProperty[i];
+				finalBlowSuper = Action.SuperData.FinalBlowKO;
 			}
 		}
 	}
@@ -217,6 +218,7 @@ function PerformAttack(Action, createdBySpirit)
 						// Pass through attack data
 						attackProperty = Action.AttackProperty[i];
 						counterHitProperty = Action.CounterHitProperty[i];
+						finalBlowSuper = Action.SuperData.FinalBlowKO;
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
