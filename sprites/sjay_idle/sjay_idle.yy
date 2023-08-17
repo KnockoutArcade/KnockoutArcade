@@ -53,7 +53,7 @@
     "spriteId": {"name":"sJay_Idle","path":"sprites/sJay_Idle/sJay_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
