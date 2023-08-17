@@ -11,7 +11,7 @@ function ProcessEnhancers(Special) {
 		SetMotionInputs(motionInput, array_length(motionInput), Special.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately, Special.SpecialData[0].ButtonPressRequired);
 	
 		// Checks to see if the special move can be changed
-		if (inputSet)
+		if (CheckChange(Special) && inputSet)
 		{
 			// Iterate through each enhancement
 			for (var i = 0; i < Special.NumberOfEnhancements; i++;)

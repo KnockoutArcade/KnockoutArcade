@@ -330,6 +330,7 @@
     {"id":{"name":"sRoundCounter","path":"sprites/sRoundCounter/sRoundCounter.yy",},"order":2,},
     {"id":{"name":"sRound1Start","path":"sprites/sRound1Start/sRound1Start.yy",},"order":4,},
     {"id":{"name":"sJay_SC_StandMedium_MOCKUP_strip6","path":"sprites/sJay_SC_StandMedium_MOCKUP_strip6/sJay_SC_StandMedium_MOCKUP_strip6.yy",},"order":12,},
+    {"id":{"name":"CheckChange","path":"scripts/CheckChange/CheckChange.yy",},"order":3,},
     {"id":{"name":"sRussel_Crouching_Medium","path":"sprites/sRussel_Crouching_Medium/sRussel_Crouching_Medium.yy",},"order":12,},
     {"id":{"name":"sSpiritbar","path":"sprites/sSpiritbar/sSpiritbar.yy",},"order":13,},
     {"id":{"name":"PerformMotionInputs","path":"scripts/PerformMotionInputs/PerformMotionInputs.yy",},"order":1,},
