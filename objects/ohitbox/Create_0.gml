@@ -9,6 +9,7 @@ hasHit = ds_list_create();
 
 attackProperty = {};
 counterHitProperty = {};
+finalBlowSuper = false;
 
 isProjectile = false;
 

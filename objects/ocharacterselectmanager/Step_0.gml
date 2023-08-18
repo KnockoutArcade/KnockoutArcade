@@ -78,11 +78,15 @@ if (state == 0)
     {
         P1charSelCol += P1menuColMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
     {
         P1charSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P1menuRowMove == 0 && P1menuColMove == 0)
     {
@@ -109,6 +113,8 @@ if (state == 0)
     {
         P1hasSelectedChar = true;
         P1menuConfirmBuffer = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 
         if (P1charSelCol == 0 && P1charSelRow == 0)
         {
@@ -121,6 +127,10 @@ if (state == 0)
         else if (P1charSelCol == 2 && P1charSelRow == 0)
         {
             global.p1SelectedCharacter = oJay;
+        }
+		else if (P1charSelCol == 0 && P1charSelRow == 1)
+        {
+            global.p1SelectedCharacter = oGunther;
         }
         else
         {
@@ -148,6 +158,8 @@ if (state == 0)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 
     // Handle Palette Selection
@@ -157,6 +169,8 @@ if (state == 0)
         {
             global.p1PaletteID += P1menuColMove;
             P1cursorCooldown = 10;
+			
+			audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
         }
 
         if (global.p1PaletteID >= p1LocalPalette.NumberOfPalettes)
@@ -172,6 +186,8 @@ if (state == 0)
         {
             P1hasSelectedAlt = true;
             P1menuAltSelBuffer = true;
+			
+			audio_play_sound(sfx_CharSel_Ready, 0, false);
         }
     }
 
@@ -181,11 +197,15 @@ if (state == 0)
     {
         P2charSelCol += P2menuColMove;
         P2cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
     {
         P2charSelRow += P2menuRowMove;
         P2cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
     if (P2menuRowMove == 0 && P2menuColMove == 0)
     {
@@ -213,6 +233,9 @@ if (state == 0)
     {
         P2hasSelectedChar = true;
         P2menuConfirmBuffer = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
+		
         if (P2charSelCol == 0 && P2charSelRow == 0)
         {
             global.p2SelectedCharacter = oRussel;
@@ -227,6 +250,10 @@ if (state == 0)
         {
             global.p2SelectedCharacter = oJay;
             p2charSelFrameRate = 6;
+        }
+		else if (P2charSelCol == 0 && P2charSelRow == 1)
+        {
+            global.p2SelectedCharacter = oGunther;
         }
         else
         {
@@ -249,6 +276,8 @@ if (state == 0)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 
     // Handle Palette Selection
@@ -258,6 +287,8 @@ if (state == 0)
         {
             global.p2PaletteID += P2menuColMove;
             P2cursorCooldown = 10;
+			
+			audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
         }
 
         // Handle Palette Data
@@ -274,6 +305,8 @@ if (state == 0)
         {
             P2hasSelectedAlt = true;
             P2menuConfirmBuffer = true;
+			
+			audio_play_sound(sfx_CharSel_Ready, 0, false);
         }
     }
 
@@ -331,12 +364,16 @@ else if (state == 1)
     {
         P1mapSelCol += P1menuColMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
     {
         P1mapSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P1menuRowMove == 0 && P1menuColMove == 0)
@@ -447,114 +484,95 @@ else if (state == 1)
 			room = rJayStage;
 			global.gameMode = GAMEMODE.VERSUS;
         }
-        else if (P1mapSelCol == 3 && P1mapSelRow == 1)
+        else if (P1mapSelCol == 3 && P1mapSelRow == 1) // Random
         {
-            P1mapSelRow = irandom_range(0, mapSelRowMax);
-            P1mapSelCol = irandom_range(0, mapSelColMax);
-            if (P1mapSelCol == 0 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 2;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rRusselStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-            else if (P1mapSelCol == 1 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 3;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rBeverlyStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-            else if (P1mapSelCol == 2 && P1mapSelRow == 0)
-            {
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 4;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
-					{
-						selectedMusic = 2;
-					}
-					else if (P1musicSelRow == 1)
-					{
-						selectedMusic = 3;
-					}
-					else if (P1musicSelRow == 2)
-					{
-						selectedMusic = 4;
-					}
-				}
-				
-				room = rJayStage;
-				global.gameMode = GAMEMODE.VERSUS;
-            }
-			else if (P1mapSelCol == 3 && P1mapSelRow == 0)
+			var validStage = false;
+			while (!validStage)
 			{
-				if (selectedMusic == 0) // Auto
-				{
-					selectedMusic = 2;
-				}
-				else if (selectedMusic == 1) // Random
-				{
-					P1musicSelRow = irandom_range(0, musicSelRowMax);
-					if (P1musicSelRow == 0)
+				P1mapSelRow = irandom_range(0, mapSelRowMax);
+				P1mapSelCol = irandom_range(0, mapSelColMax);
+			    if (P1mapSelCol == 0 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 2;
 					}
-					else if (P1musicSelRow == 1)
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rRusselStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			    else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 3;
 					}
-					else if (P1musicSelRow == 2)
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rBeverlyStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			    else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+			    {
+					if (selectedMusic == 0) // Auto
 					{
 						selectedMusic = 4;
 					}
-				}
-				
-				room = rStageArcade;
-				global.gameMode = GAMEMODE.VERSUS;
-		    }
+					else if (selectedMusic == 1) // Random
+					{
+						P1musicSelRow = irandom_range(0, musicSelRowMax);
+						if (P1musicSelRow == 0)
+						{
+							selectedMusic = 2;
+						}
+						else if (P1musicSelRow == 1)
+						{
+							selectedMusic = 3;
+						}
+						else if (P1musicSelRow == 2)
+						{
+							selectedMusic = 4;
+						}
+					}
+					
+					validStage = true;
+					room = rJayStage;
+					global.gameMode = GAMEMODE.VERSUS;
+			    }
+			}
         }
         else
         {
@@ -578,6 +596,19 @@ else if (state == 1)
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+    }
+	
+	if (P2menuCancel)
+    {
+        state = 0;
+        P2hasSelectedAlt = false;
+
+        RTF_animTimer = 0;
+        RTF_currentFrame = 0;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 }
 else if (state == 2)

@@ -42,7 +42,8 @@ if (playerID == 1)
 	var heavyattack = 3 * global.p1ButtonHeavy;
 	var grab = 4 * global.p1ButtonGrab;
 	var special = 5 * global.p1ButtonSpecial;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special);
+	var super = 6 * global.p1ButtonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
 else 
@@ -62,7 +63,8 @@ else
 	var heavyattack = 3 * global.p2ButtonHeavy;
 	var grab = 4 * global.p2ButtonGrab;
 	var special = 5 * global.p2ButtonSpecial;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special);
+	var super = 6 * global.p2ButtonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 }
 
@@ -118,6 +120,7 @@ else if (movedir == image_xscale) // If moving forward
 	}
 	holdForwardTimer++;
 	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
 }
 else if (movedir == -image_xscale) // If moving backward
 {
@@ -133,6 +136,7 @@ else if (movedir == -image_xscale) // If moving backward
 	}
 	holdBackwardTimer++;
 	holdForwardTimer = 0;
+	runForwardTimer = 16;
 }
 else if ((!runButton && movedir == 0))
 {
@@ -142,6 +146,17 @@ else if ((!runButton && movedir == 0))
 	holdBackwardTimer = 0;
 	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
 	runButtonPressed = false;
+}
+
+// Reset all run timers if holding down
+if (verticalMoveDir == -1 && !runButton)
+{
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
 }
 
 // Handles timer for running forward
@@ -345,6 +360,7 @@ if (state == eState.IDLE)
 	isSuperJumping = false;
 	hasSpentDoubleJump = false;
 	canBlock = true;
+	invincible = false;
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -422,6 +438,7 @@ if (state == eState.CROUCHING)
 	isShortHopping = false;
 	hasSpentDoubleJump = false;
 	canBlock = true;
+	invincible = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -504,9 +521,9 @@ if (state == eState.HITSTOP)
 	
 	hitstunShuffleTimer++;
 	
-	if (hitstun > 0)
+	if (hitstun > 0 || prevState = eState.LAUNCHED)
 	{
-		if (!isGrabbed)
+		if (!isGrabbed && !wallBouncing)
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 		}
@@ -522,11 +539,25 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome + min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome + min(hitstop, 3);
+			}
 		}
-		else 
+		else
 		{
-			x = xHome - min(hitstop, 3);
+			if (wallHit)
+			{
+				y = yHome - min(hitstop, 3);
+			}
+			else
+			{
+				x = xHome - min(hitstop, 3);
+			}
 		}
 	}
 	else 
@@ -605,7 +636,12 @@ if (state == eState.HITSTOP)
 			hitstopBuffer = false;
 		}
 		
-		
+		if (wallHit)
+		{
+			wallBouncing = false;
+			wallHit = false;
+			image_xscale *= -1; // Flip opponent around
+		}
 		prevSprite = 0;
 		shuffle = 0;
 		framesSinceHitstun = 0;
@@ -617,6 +653,7 @@ if (state == eState.HITSTOP)
 		{
 			image_index = 0;
 			x = xHome;
+			y = yHome;
 			hitstun++;
 		}
 		
@@ -624,6 +661,7 @@ if (state == eState.HITSTOP)
 		{
 			blockstun++;
 			x = xHome;
+			y = yHome;
 		}
 	}
 	image_speed = 0;
@@ -638,19 +676,24 @@ if (!isGrabbed)
 // Reset cancelOnLanding
 cancelOnLanding = true;
 
-
 // Handle freezing screen
 if (state == eState.SCREEN_FREEZE)
 {
-	image_speed = 0;
+	// Freezes all movement in screen freeze
+	canTurnAround = false;
 	hsp = 0;
 	environmentDisplacement = 0;
 	vsp = 0;
+	image_speed = 0;
 	
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
 		isEXFlash = true;
+		if (rcFreezeTimer == 1)
+		{
+			audio_play_sound(sfx_spend50Meter, 0, false);
+		}
 		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)
 		{
@@ -737,6 +780,18 @@ if (opponent != noone && opponent.activateFreeze && state != eState.SCREEN_FREEZ
 	state = eState.SCREEN_FREEZE;
 }
 
+// Prevents freezing the screen if the RC or super is activated as sson as the player gets hit
+if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.SUPER && !timeStopActivated)
+{
+	rcActivated = false;
+	superActivated = false;
+	rcFreezeTimer = 0;
+	superFreezeTimer = 0;
+	activateFreeze = false;
+	stateBeforeFreeze = 0;
+	global.freezeTimer = false;
+}
+
 // State Machine
 switch state 
 {
@@ -749,11 +804,15 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		canBlock = true;
+		invincible = false;
 		
 		if (movedir == image_xscale) 
 		{
 			sprite_index = CharacterSprites.walkForward_Sprite;
-			superMeter += meterBuildRate; // Walking forwards builds meter
+			if (!timeStopActivated && !installActivated)
+			{
+				superMeter += meterBuildRate; // Walking forwards builds meter
+			}
 			
 			// Handle Walking Sound Effects
 			for (var i = 0; i < array_length(WalkForwardFootsteps); i++;)
@@ -798,7 +857,7 @@ switch state
 		
 		image_speed = 1;
 		
-		hsp = walkSpeed * movedir;
+		hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 		
 		vsp += fallSpeed;
 
@@ -811,7 +870,7 @@ switch state
 		if (verticalMoveDir == 1)
 		{
 			state = eState.JUMPSQUAT;
-			hsp = walkSpeed * movedir;
+			hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 			jumpHsp = hsp;
 			// Is the player jumping forward?
 			isJumpingForward = (movedir == image_xscale);
@@ -851,9 +910,13 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		invincible = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
-		superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+		if (!timeStopActivated && !installActivated)
+		{
+			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+		}
 		
 		if (movedir == -image_xscale) // if we press back, then go back to walking state
 		{
@@ -864,7 +927,7 @@ switch state
 
 		image_speed = 1;
 		
-		hsp = runSpeed * image_xscale;
+		hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
 		vsp += fallSpeed;
 
 		if (!runningForward) 
@@ -885,7 +948,7 @@ switch state
 			else 
 			{
 				isJumpingForward = false;
-				hsp = walkSpeed * movedir;
+				hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 				jumpHsp = hsp;
 			}
 			
@@ -933,6 +996,8 @@ switch state
 		isShortHopping = false;
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
+		runningBackward = false;
+		invincible = false;
 		
 		vsp += fallSpeed;
 		
@@ -946,7 +1011,7 @@ switch state
 		// Handle Startup
 		if (animTimer == backdashStartup)
 		{
-			hsp = backdashSpeed * -image_xscale;
+			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
 		}
 		
 		// Handle Running Sound Effects
@@ -980,6 +1045,7 @@ switch state
 		image_speed = 1;
 		grounded = true;
 		isShortHopping = false;
+		invincible = false;
 
 		hsp = jumpHsp;
 		
@@ -1051,6 +1117,7 @@ switch state
 		image_speed = 1;
 		grounded = false;
 		canTurnAround = false;
+		invincible = false;
 		
 		if image_index > (image_number - 1) image_speed = 0;
 		else image_speed = 1;
@@ -1265,6 +1332,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.NeutralSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.NeutralSpecial, attack, true);
+		}
 	}
 	break;
 	
@@ -1282,6 +1354,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.SideSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.SideSpecial, attack, true);
+		}
 	}
 	break;
 	
@@ -1299,6 +1376,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.UpSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.UpSpecial, attack, true);
+		}
 		
 		if (animTimer < 28)
 		{
@@ -1325,6 +1407,11 @@ switch state
 		}
 		
 		ProcessEnhancers(selectedCharacter.DownSpecial);
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.DownSpecial, attack, true);
+		}
 	}
 	break;
 	
@@ -1532,7 +1619,127 @@ switch state
 		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
-
+	
+	case eState.SUPER: 
+	{
+		// Handle Screen Freeze
+		if (animTimer <= 1 && !activateFreeze)
+		{
+			superActivated = false;
+			superFreezeTimer = 0;
+			activateFreeze = true;
+			global.freezeTimer = true;
+			instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperFlashBackground);
+			speedTrailTimer = 0;
+		}
+		else 
+		{
+			if (superFreezeTimer >= selectedCharacter.Super.SuperData.ScreenFreezeTime && !superActivated)
+			{
+				superActivated = true;
+				superFreezeTimer = 0;
+				activateFreeze = false;
+				global.freezeTimer = false;
+				instance_destroy(oSuperFlashBackground);
+				superInvincibilityTimer = 0;
+				invincible = true;
+			}
+			else
+			{
+				superFreezeTimer++;
+			}
+		}
+		
+		if (invincible)
+		{
+			if (superInvincibilityTimer >= selectedCharacter.Super.SuperData.InvincibilityFrames)
+			{
+				invincible = false;
+			}
+			else
+			{
+				superInvincibilityTimer++;
+			}
+		}
+		
+		cancelOnLanding = false;
+		if (grounded)
+		{
+			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+		}
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+		}
+		
+		// Create speed trail
+		SpeedTrail(0.3, 0.08, 1);
+		
+		// Install Super
+		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
+		{
+			installActivated = true;
+			installTimer = 0;
+			installInterval = selectedCharacter.Super.SuperData.Duration;
+			
+			// Apply bonuses
+			damageBonus = selectedCharacter.Super.SuperData.IncreaseAttackBy;
+			speedBonus = selectedCharacter.Super.SuperData.IncreaseSpeedBy;
+			
+			// Change jump type
+			if (selectedCharacter.Super.SuperData.JumpType & 4 == 4)
+			{
+				canShortHop = true; // Whether the player can shorthop or not
+			}
+			else
+			{
+				canShortHop = false;
+			}
+			
+			// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+			if (selectedCharacter.Super.SuperData.JumpType & 2 == 2)
+			{
+				canSuperJump = true; // Whether this character can Super Jump or not
+			}
+			else
+			{
+				canSuperJump = false;
+			}
+			
+			// A double jump is when the player jumps again in the air
+			if ((selectedCharacter.Super.SuperData.JumpType & 1) == 1)
+			{
+				canDoubleJump = true; // Whether this character can Double Jump or not
+			}
+			else
+			{
+				canDoubleJump = false;
+			}
+			
+			spiritInstall = selectedCharacter.Super.SuperData.SpiritInstall;
+			if (spiritInstall)
+			{
+				spiritBroken = false;
+				spiritCurrentHealth = spiritMaxHealth;
+				SummonSpirit();
+			}
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.Super, attack, true);
+		}
+		
+		// Freeze movement during screen freeze
+		// This code is here instead of in the screen freeze state to animate the moves during the screen freeze
+		if (!superActivated)
+		{
+			hsp = 0;
+			environmentDisplacement = 0;
+			vsp = 0;
+		}
+	}
+	break;
 
 	case eState.GRAB : 
 	{
@@ -1633,7 +1840,7 @@ switch state
 	
 	case eState.BEING_GRABBED : 
 	{
-		if (spiritObject != noone)
+		if (spiritObject != noone && !spiritInstall)
 		{
 			DeactivateSpirit(false);
 			if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
@@ -1809,9 +2016,9 @@ switch state
 			}
 		}
 		xHome = x;
+		yHome = y;
 		
 		vsp += fallSpeed;
-
 	}
 	break;
 	
@@ -1844,7 +2051,6 @@ switch state
 		{
 			hitstun--;
 		}
-
 	}
 	break;
 	
@@ -2201,6 +2407,7 @@ else
 		prevState = state;
 	}
 	xHome = x;
+	yHome = y;
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
@@ -2230,7 +2437,14 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0)
+	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0
+		 && state != eState.BEING_GRABBED
+		 && state != eState.GETUP
+		 && state != eState.HITSTOP
+		 && state != eState.HURT
+		 && state != eState.KNOCKED_DOWN
+		 && state != eState.LAUNCHED
+		 && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
 		{
@@ -2305,7 +2519,143 @@ if (target != noone)
 		startCombo = false;
 	}
 }
+else if (spiritObject != noone)
+{
+	if (spiritObject.target == noone)
+	{
+		startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+	}
+}
+else
+{
+	startCombo = false;
+	
+	if (combo > 1 && comboCounterID != noone)
+	{
+		comboCounterID.endCombo = true;
+	}
+	
+	combo = 0;
+	comboScaling = 0;
+	meterScaling = 0;
+	comboCounterID = noone;
+	comboDamage = 0;
+	hasUsedMeter = false;
+}
 
+// Handle the install timers outside of the FSM
+if (installActivated && state != eState.SCREEN_FREEZE)
+{
+	if (installTimer >= installInterval)
+	{
+		installTimer = 0;
+		installInterval = 0;
+		installActivated = false;
+		damageBonus = 0;
+		speedBonus = 0;
+		
+		// Reset jump types
+		// A short hop is when the player breifly taps up so they don't jump as high.
+		if (selectedCharacter.JumpType & 4 == 4)
+		{
+			canShortHop = true; // Whether the player can shorthop or not
+		}
+		else
+		{
+			canShortHop = false;
+		}
+		
+		// A super jump is when the player presses Down just before jumping, allowing them to go higher.
+		if (selectedCharacter.JumpType & 2 == 2)
+		{
+			canSuperJump = true; // Whether this character can Super Jump or not
+		}
+		else
+		{
+			canSuperJump = false;
+		}
+		
+		// A double jump is when the player jumps again in the air
+		if ((selectedCharacter.JumpType & 1) == 1)
+		{
+			canDoubleJump = true; // Whether this character can Double Jump or not
+		}
+		else
+		{
+			canDoubleJump = false;
+		}
+		
+		if (spiritInstall)
+		{
+			spiritInstall = false;
+			spiritState = false;
+		}
+	}
+	else
+	{
+		installTimer++;
+	}
+}
+
+// Handle the time stop timers outside of the FSM
+if (timeStopActivated && state != eState.SCREEN_FREEZE)
+{
+	if (timeStopObject == noone)
+	{
+		if (spiritObject != noone)
+		{
+			timeStopObject = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oTimeStop);
+		}
+		else
+		{
+			timeStopObject = instance_create_layer(x, y, "Instances", oTimeStop);
+		}
+		timeStopObject.depth = 600;
+		timeStopObject.owner = id;
+	}
+	
+	if (spiritObject != noone)
+	{
+		timeStopObject.x = spiritObject.x;
+		timeStopObject.y = spiritObject.y;
+	}
+	else
+	{
+		timeStopObject.x = x;
+		timeStopObject.y = y;
+	}
+	
+	if (superMeter <= 0 && timeStopTimer <= 0)
+	{
+		timeStopObject.owner = noone;
+		timeStopObject = noone;
+		timeStopTimer = 30;
+		timeStopActivated = false;
+		activateFreeze = false;
+		global.freezeTimer = false;
+		audio_resume_sound(testBGM);
+	}
+	else if (timeStopTimer > 0)
+	{
+		timeStopTimer--;
+	}
+	else
+	{
+		superMeter -= 0.2;
+	}
+}
 
 
 // Collision
@@ -2314,10 +2664,12 @@ if (target != noone)
 // We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
 // player's position without ossilating.
 var actualXPos = x;
+var actualYPos = y;
 x = xHome;
+y = yHome;
 
 // Collisions With Players
-if (opponent != noone)
+if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
 	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
@@ -2345,6 +2697,8 @@ if (opponent != noone)
 	}
 }
 
+x = actualXPos; // Restore the player's actual x position
+y = actualYPos; // Restore the player's actual y position
 
 // Collisions With Walls
 if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
@@ -2353,13 +2707,27 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	{
 		x += sign(hsp+environmentDisplacement);
 	}
-	hsp = 0;
-	environmentDisplacement = 0;
+	
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	{
+		wallHit = true;
+		hitstop = 20;
+		state = eState.LAUNCHED;
+		sprite_index = sRussel_WallSplat;
+		hsp = -(hsp * .5);
+		vsp = -2;
+	}
+	else if (state != eState.HITSTOP)
+	{
+		hsp = 0;
+		environmentDisplacement = 0;
+	}
 }
 
 if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 {
-	//Determine wether we are rising into a cieling or falling onto a floor.
+	
+	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
 	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
@@ -2368,7 +2736,10 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 	
 	isJumpingForward = false;
-	vsp = 0;
+	if (state != eState.HITSTOP)
+	{
+		vsp = 0;
+	}
 	if (hitstop < 1)
 	{
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
@@ -2397,7 +2768,7 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 		}
 	}
 }
-x = actualXPos; // Restore the player's actual x position
+
 
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
@@ -2410,8 +2781,6 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 environmentDisplacement = 0;
 
 floor(y);
-
-
 
 // Change the player's direction
 if (!inAttackState && canTurnAround && !rcActivated)

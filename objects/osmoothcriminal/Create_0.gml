@@ -2,8 +2,6 @@
 // You can write your code in this editor
 
 // Spirit exclusive data
-host = noone;
-hostObject = noone;
 nextToPlayer = true;
 vulnerable = false;
 hurtboxSet = false;

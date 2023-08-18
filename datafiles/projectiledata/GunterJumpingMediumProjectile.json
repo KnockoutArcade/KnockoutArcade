@@ -1,0 +1,294 @@
+{
+  "Name": "GunterJumpingMediumProjectile",
+  "HasLifetime": true,
+  "Lifetime": 60,
+  "AnimationSpeed": 0,
+  "HorizontalSpeed": 0.0,
+  "VerticalSpeed": 5.0,
+  "EnvironmentalDisplacement": 0,
+  "FallSpeed": 1.0,
+  "GroundTraction": 0.0,
+  "AirTraction": 0.0,
+  "DestroyOnFloor": true,
+  "DestroyOnWall": false,
+  "BounceOnFloor": false,
+  "BounceOnWall": false,
+  "NumberOfBounces": 0,
+  "Bounciness": 0.0,
+  "Transcendent": false,
+  "Health": 10,
+  "ProjectileSprites": {
+    "Sprite": "sGunther_JumpingMedium_Projectile",
+    "Destroy": "sGunther_JumpingMedium_Projectile_destroy_strip4"
+  },
+  "BaseColor": {
+    "UID": "dcb0f6de-1710-45b3-937f-3d09284f7c8a",
+    "Name": "",
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      }
+    ]
+  },
+  "CopyCharacterPalette": true,
+  "Character": "Gunther",
+  "Palettes": [
+    {
+      "UID": "1ae4e202-670e-484a-9045-dff617ae9eb5",
+      "Name": "default",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
+    }
+  ],
+  "NumberOfFrames": 4,
+  "FrameData": [
+    {
+      "Length": 2,
+      "ImageIndex": 1
+    },
+    {
+      "Length": 4,
+      "ImageIndex": 2
+    },
+    {
+      "Length": 6,
+      "ImageIndex": 3
+    },
+    {
+      "Length": 8,
+      "ImageIndex": 4
+    }
+  ],
+  "NumberOfHitboxes": 1,
+  "AttackData": [
+    {
+      "Start": 1,
+      "Lifetime": 60,
+      "AttackWidth": 28,
+      "AttackHeight": 30,
+      "WidthOffset": -18,
+      "HeightOffset": 0,
+      "Group": 0,
+      "Damage": 5,
+      "MeterGain": 3.0,
+      "ComboScaling": 3.0,
+      "AttackHitStop": 10,
+      "AttackHitStun": 15,
+      "AttackType": 1,
+      "BlockStun": 3.0,
+      "KnockBack": 1.0,
+      "AirKnockbackVertical": -1.0,
+      "AirKnockbackHorizontal": 1.0,
+      "Launches": false,
+      "LaunchKnockbackVertical": 0.0,
+      "LaunchKnockbackHorizontal": 0.0,
+      "GravityScaling": 2.0,
+      "Pushback": 0.5,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 20,
+      "ParticleEffect": "sSmallHitspark",
+      "ParticleDuration": 5,
+      "HoldXOffset": 0,
+      "HoldYOffset": 0,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_light_hit2"
+    }
+  ],
+  "CounterData": [
+    {
+      "CounterHitLevel": 1,
+      "Group": 1,
+      "Damage": 10,
+      "MeterGain": 4.0,
+      "ComboScaling": 0.0,
+      "AttackHitStop": 15,
+      "AttackHitStun": 25,
+      "KnockBack": 1.0,
+      "AirKnockbackVertical": -1.0,
+      "AirKnockbackHorizontal": 1.0,
+      "Launches": false,
+      "LaunchKnockbackVertical": 0.0,
+      "LaunchKnockbackHorizontal": 0.0,
+      "GravityScaling": 1.0,
+      "Pushback": 0.5,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 20,
+      "ParticleEffect": "sSmallHitspark",
+      "ParticleDuration": 5,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_light_hit2"
+    }
+  ],
+  "RehitData": {
+    "HitBox": 1,
+    "NumberOfHits": 0,
+    "HitOnFrames": []
+  },
+  "Version": "Ver1.2.2",
+  "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
+  "LastModified": "2023-08-12T15:21:01.8152835-07:00",
+  "LastModifiedBy": "iansb"
+}

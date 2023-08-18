@@ -137,14 +137,13 @@ function PerformAttack(Action, createdBySpirit)
 	}
 	
 	// Sound FX
-	// Keep this commented out until every move has sound effects.
-	//for (var i = 0; i < Action.NumberOfSounds; i++)
-	//{
-	//	if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
-	//	{
-	//		audio_play_sound(asset_get_index(Action.MoveSoundData[i].SoundEffect), 1, false);
-	//	}
-	//}
+	for (var i = 0; i < Action.NumberOfSounds; i++)
+	{
+		if (animTimer == Action.MoveSoundData[i].SFXPlayFrame) 
+		{
+			audio_play_sound(asset_get_index(Action.MoveSoundData[i].SoundEffect), 1, false);
+		}
+	}
 	
 	
 	// Hitboxes
@@ -178,6 +177,7 @@ function PerformAttack(Action, createdBySpirit)
 				// Pass through attack data
 				attackProperty = Action.AttackProperty[i];
 				counterHitProperty = Action.CounterHitProperty[i];
+				finalBlowSuper = Action.SuperData.FinalBlowKO;
 			}
 		}
 	}
@@ -218,6 +218,7 @@ function PerformAttack(Action, createdBySpirit)
 						// Pass through attack data
 						attackProperty = Action.AttackProperty[i];
 						counterHitProperty = Action.CounterHitProperty[i];
+						finalBlowSuper = Action.SuperData.FinalBlowKO;
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
@@ -226,7 +227,7 @@ function PerformAttack(Action, createdBySpirit)
 					{
 						ds_list_clear(hostObject.target.hitByGroup);
 					}
-					if (target != noone)
+					else if (target != noone)
 					{
 						ds_list_clear(target.hitByGroup);
 					}
@@ -250,8 +251,17 @@ function PerformAttack(Action, createdBySpirit)
 					hostID = hostObject.id;
 				}
 				
-				var Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", asset_get_index(Action.ProjectileData[i].ProjectileObject));
-			
+				// Add to this list whenever a new projectile is created and is in the files
+				var Projectile = noone;
+				if (Action.ProjectileData[i].ProjectileObject == "TestLobbingProjectile")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oTestLobbingProjectile);
+				}
+				else if (Action.ProjectileData[i].ProjectileObject == "GunterJumpingMediumProjectile")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oGunther_JumpingMedium_Projectile);
+				}
+				Projectile.depth = depth - 5;
 				with (Projectile)
 				{
 					image_xscale = other.image_xscale;
@@ -266,19 +276,16 @@ function PerformAttack(Action, createdBySpirit)
 						spiritOwner = other.id;
 					}
 					
-					hitboxID = instance_create_layer(x + (hitboxProperties.AttackData[i].AttackWidth * other.image_xscale) + 0.5, y - hitboxProperties.AttackData[i].HeightOffset, "hitboxes", oHitbox);
-					with (hitboxID) 
+					if (copyCharacterPalette)
 					{
-						hitboxID = i;
-						image_xscale = other.hitboxProperties.AttackData[i].AttackWidth * other.image_xscale;
-						image_yscale = other.hitboxProperties.AttackData[i].AttackHeight;
-						owner = other.id;
-						
-						isProjectile = true;
-			
-						// Pass through attack data
-						attackProperty = other.hitboxProperties.AttackData[i];
-						counterHitProperty = other.hitboxProperties.CounterData[i];
+						if (playerOwner.playerID == 1)
+						{
+							PaletteSetup(global.p1PaletteID, selectedProjectile);
+						}
+						else
+						{
+							PaletteSetup(global.p2PaletteID, selectedProjectile);
+						}
 					}
 				}
 			}

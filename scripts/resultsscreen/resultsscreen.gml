@@ -22,6 +22,8 @@ function ResultsScreen()
     {
         P1resultSelRow -= P1menuRowMove;
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P1menuRowMove == 0)
@@ -42,6 +44,8 @@ function ResultsScreen()
     if (P1menuConfirm)
 	{
 		P1hasSelectedresult = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 	
 	// Handle result selection (Player 2)
@@ -49,6 +53,8 @@ function ResultsScreen()
     {
         P2resultSelRow -= P2menuRowMove;
         P2cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
     if (P2menuRowMove == 0)
@@ -69,6 +75,8 @@ function ResultsScreen()
     if (P2menuConfirm)
 	{
 		P2hasSelectedresult = true;
+		
+		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 	
 	if (P1hasSelectedresult && P2hasSelectedresult)

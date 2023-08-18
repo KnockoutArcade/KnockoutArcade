@@ -33,6 +33,9 @@ function OverwriteMoveset()
 				nextMove.SwitchMoveset = selectedCharacter.MoveData[i].SwitchMoveset;
 				nextMove.SwitchToMoveset = selectedCharacter.MoveData[i].SwitchToMoveset;
 				nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
+				nextMove.NumberOfSounds = selectedCharacter.MoveData[i].NumberOfSounds;
+				nextMove.MoveSoundData = selectedCharacter.MoveData[i].MoveSoundData;
+				nextMove.SuperData = selectedCharacter.MoveData[i].SuperData;
 
 				if(selectedCharacter.MoveData[i].IsThrow)
 				{
@@ -107,7 +110,9 @@ function OverwriteMoveset()
 					case 2097152: // command normal 3
 					selectedCharacter.CommandNormal3 = nextMove;
 					break;
-			
+					case 4194304: // super
+					selectedCharacter.Super = nextMove;
+					break;
 				}
 		
 				switch (selectedCharacter.MoveData[i].EnhanceMoveType)

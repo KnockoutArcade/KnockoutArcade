@@ -42,7 +42,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	formedCharacter.JumpType = selectedCharacter.JumpType;
 	formedCharacter.JumpHorizontalSpeed = selectedCharacter.JumpHorizontalSpeed;
 	formedCharacter.SuperMeterBuildRate = selectedCharacter.SuperMeterBuildRate;
-	formedCharacter.Sprites =
+	formedCharacter.Sprites = 
 	{
 		Idle : asset_get_index(selectedCharacter.CharacterSprites.Idle),
 		Crouch : asset_get_index(selectedCharacter.CharacterSprites.Crouch),
@@ -93,6 +93,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.SpiritData = selectedCharacter.MoveData[i].SpiritData;
 		nextMove.NumberOfSounds = selectedCharacter.MoveData[i].NumberOfSounds;
 		nextMove.MoveSoundData = selectedCharacter.MoveData[i].MoveSoundData;
+		nextMove.SuperData = selectedCharacter.MoveData[i].SuperData;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{
@@ -167,7 +168,9 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 			case 2097152: // command normal 3
 			formedCharacter.CommandNormal3 = nextMove;
 			break;
-			
+			case 4194304: // super
+			formedCharacter.Super = nextMove;
+			break;
 		}
 		
 		switch (selectedCharacter.MoveData[i].EnhanceMoveType)

@@ -7,8 +7,8 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": {
-    "name": "sJay_SC_Idle_MOCKUP_strip8",
-    "path": "sprites/sJay_SC_Idle_MOCKUP_strip8/sJay_SC_Idle_MOCKUP_strip8.yy",
+    "name": "sRussel_Idle",
+    "path": "sprites/sRussel_Idle/sRussel_Idle.yy",
   },
   "persistent": false,
   "parentObjectId": {

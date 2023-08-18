@@ -125,6 +125,16 @@ function PressAttackButton(attack)
 					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
 				}
 			break;
+			
+			case 6:
+				if (superMeter >= 50 && !timeStopActivated && !spiritBroken)
+				{
+					superMeter -= 50;
+					state = eState.SUPER;
+					image_index = 0;
+					SetSpiritMoveData(false, selectedCharacter.Super, attack);
+				}
+			break;
 		}
 		
 		
@@ -200,7 +210,14 @@ function PressAttackButton(attack)
 		
 	// Clears the hitBy data to allow attacks to connect properly
 	ds_list_clear(hitByGroup);
-	if (target != noone)
+	if (hostObject != noone)
+	{
+		if (hostObject.target != noone)
+		{
+			ds_list_clear(hostObject.target.hitByGroup);
+		}
+	}
+	else if (target != noone)
 	{
 		ds_list_clear(target.hitByGroup);
 	}

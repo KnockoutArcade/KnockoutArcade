@@ -35,7 +35,7 @@
     "spriteId": {"name":"sBeverly_SideSpecial3Low_MOCKUP","path":"sprites/sBeverly_SideSpecial3Low_MOCKUP/sBeverly_SideSpecial3Low_MOCKUP.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

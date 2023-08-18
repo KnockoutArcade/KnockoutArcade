@@ -180,6 +180,7 @@ enum eState {
 	REKKA_CONNECTER,
 	REKKA_LOW,
 	REKKA_HIGH,
+	SUPER,
 	GRAB,
 	COMMAND_GRAB,
 	HOLD,
@@ -239,6 +240,10 @@ inAttackState = false;
 canTurnAround = true;
 cancelOnLanding = true; // whether or not the character should cancel their current air attack if they land
 
+// Wall bounce Variables
+wallBouncing = false;
+wallHit = false; // this is to dectect when the player hits the wall
+
 // Intro
 hasPerformedIntro = true;
 
@@ -267,6 +272,7 @@ blockstun = 0;
 isCrouchBlocking = false;
 blockbuffer = false;
 xHome = x;
+yHome = y;
 hitstunShuffleTimer = 0;
 shuffle = 0;
 framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
@@ -358,3 +364,21 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 }
 // If host is trying to summon/unsummon spirit but gets interrupted, spirit gets summoned after hitstop
 pendingToggle = false;
+
+// Data used by spirits, but kept here to avoid errors
+host = noone;
+hostObject = noone;
+
+// Super Data
+superActivated = false;
+superInvincibilityTimer = 0; // Invincibility starts counting after the screen freeze
+superFreezeTimer = 0; // Counts up to the specified freeze duration, then deactivates the freeze frame
+timeStopActivated = false;
+timeStopObject = noone; // Background effect that grays out the background
+timeStopTimer = 30; // Adds a 30 frame delay before the meter starts draining
+installActivated = false;
+installTimer = 0; // Install starts counting after the screen freeze
+installInterval = 0;
+damageBonus = 0; // Add this to all attacks
+speedBonus = 0; // Add this to all instances of walking, running, and jumping
+spiritInstall = false;

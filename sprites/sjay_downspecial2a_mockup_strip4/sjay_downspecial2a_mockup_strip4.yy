@@ -41,7 +41,7 @@
     "spriteId": {"name":"sJay_DownSpecial2A_Mockup_strip4","path":"sprites/sJay_DownSpecial2A_Mockup_strip4/sJay_DownSpecial2A_Mockup_strip4.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

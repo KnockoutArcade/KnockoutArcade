@@ -9,6 +9,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	image_index = 0;
 	inAttackState = true;
 	
+	// Resets all run timers
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	runningForward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
+	runningBackward = false;
+	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
 	
@@ -50,7 +60,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
-		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
 		if (!spiritObject.creatingHitbox)
 		{
@@ -71,9 +81,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			if (moveToDo.SwitchMoveset)
 			{
-				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
+				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken && !spiritInstall)
 				{
-					currentMovesetID = moveToDo.SwitchToMoveset;
+					if (!spiritState)
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+					}
+					else
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+					}
 					OverwriteMoveset();
 				}
 				else if (!selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
@@ -85,7 +102,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		}
 		
 		// If this move switched Spirit state
-		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken && !spiritInstall)
 		{
 			if (!spiritState)
 			{

@@ -1,12 +1,23 @@
 /// @function                  JumpingAttackScript(moveToDo, onGround);
 /// @param {moveToDo}  message  The message to show
 
+// 
 function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
 {
 	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	
+	// Resets all run timers
+	holdBackwardTimer = 0;
+	runBackwardTimer = 16;
+	startedMovingBackward = false;
+	runningForward = false;
+	holdForwardTimer = 0;
+	runForwardTimer = 16;
+	startedMovingForward = false;
+	runningBackward = false;
 	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
@@ -49,7 +60,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, deactivate it
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
-		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle)
+		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
 		if (!spiritObject.creatingHitbox)
 		{
@@ -67,11 +78,18 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...
 		{
-			if (moveToDo.SwitchMoveset && !spiritBroken)
+			if (moveToDo.SwitchMoveset && !spiritBroken && !spiritInstall)
 			{
 				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken)
 				{
-					currentMovesetID = moveToDo.SwitchToMoveset;
+					if (!spiritState)
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+					}
+					else
+					{
+						currentMovesetID = selectedCharacter.UniqueData.SpiritOffMoveset;
+					}
 					OverwriteMoveset();
 				}
 				else if (!selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
@@ -83,7 +101,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		}
 		
 		// If this move switched Spirit state
-		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken)
+		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken && !spiritInstall)
 		{
 			if (!spiritState)
 			{

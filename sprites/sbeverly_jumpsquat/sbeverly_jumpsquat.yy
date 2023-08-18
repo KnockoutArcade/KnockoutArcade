@@ -26,6 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"caf879d9-5d7a-468e-8e67-8b8891990d58","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"caf879d9-5d7a-468e-8e67-8b8891990d58","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"LayerId":{"name":"1ce3af7a-5e68-413d-9b87-c538aeb5483f","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"caf879d9-5d7a-468e-8e67-8b8891990d58","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"LayerId":{"name":"a20bd2fb-2c7e-423d-931a-eb961fbcb3ad","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Jumpsquat","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"resourceVersion":"1.0","name":"caf879d9-5d7a-468e-8e67-8b8891990d58","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -65,6 +66,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"Layer 1","resourceVersion":"1.0","name":"a20bd2fb-2c7e-423d-931a-eb961fbcb3ad","tags":[],"resourceType":"GMImageLayer",},
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1ce3af7a-5e68-413d-9b87-c538aeb5483f","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,

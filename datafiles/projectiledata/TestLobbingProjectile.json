@@ -1,0 +1,113 @@
+{
+  "Name": "TestLobbingProjectile",
+  "HasLifetime": true,
+  "Lifetime": 120,
+  "AnimationSpeed": 0,
+  "HorizontalSpeed": 2.5,
+  "VerticalSpeed": -5.0,
+  "EnvironmentalDisplacement": 0,
+  "FallSpeed": 0.5,
+  "GroundTraction": 0.0,
+  "AirTraction": 0.0,
+  "DestroyOnFloor": true,
+  "DestroyOnWall": false,
+  "BounceOnFloor": true,
+  "BounceOnWall": true,
+  "NumberOfBounces": 1,
+  "Bounciness": 0.5,
+  "Transcendent": false,
+  "Health": 1,
+  "ProjectileSprites": {
+    "Sprite": "sTestProjectile",
+    "Destroy": ""
+  },
+  "BaseColor": {
+    "UID": "098bdd54-18a9-474f-b613-487d125c4c37",
+    "Name": "",
+    "NumberOfReplacableColors": 0,
+    "ColorPalette": []
+  },
+  "CopyCharacterPalette": false,
+  "Character": "Beverly",
+  "Palettes": [],
+  "NumberOfFrames": 1,
+  "FrameData": [
+    {
+      "Length": 0,
+      "ImageIndex": 0
+    }
+  ],
+  "NumberOfHitboxes": 1,
+  "AttackData": [
+    {
+      "Start": 1,
+      "Lifetime": 120,
+      "AttackWidth": 10,
+      "AttackHeight": 5,
+      "WidthOffset": -5,
+      "HeightOffset": -2,
+      "Group": 1,
+      "Damage": 10,
+      "MeterGain": 4.0,
+      "ComboScaling": 2.0,
+      "AttackHitStop": 6,
+      "AttackHitStun": 9,
+      "AttackType": 1,
+      "BlockStun": 3.0,
+      "KnockBack": 1.0,
+      "AirKnockbackVertical": 0.0,
+      "AirKnockbackHorizontal": 1.0,
+      "Launches": false,
+      "LaunchKnockbackVertical": 0.0,
+      "LaunchKnockbackHorizontal": 0.0,
+      "GravityScaling": 0.3,
+      "Pushback": 1.0,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 0,
+      "ParticleEffect": "sSmallHitspark",
+      "ParticleDuration": 5,
+      "HoldXOffset": 0,
+      "HoldYOffset": 0,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_Light_Hit"
+    }
+  ],
+  "CounterData": [
+    {
+      "CounterHitLevel": 1,
+      "Group": 1,
+      "Damage": 12,
+      "MeterGain": 4.0,
+      "ComboScaling": 2.0,
+      "AttackHitStop": 6,
+      "AttackHitStun": 9,
+      "KnockBack": 1.0,
+      "AirKnockbackVertical": 0.0,
+      "AirKnockbackHorizontal": 1.0,
+      "Launches": false,
+      "LaunchKnockbackVertical": 0.0,
+      "LaunchKnockbackHorizontal": 0.0,
+      "GravityScaling": 0.3,
+      "Pushback": 1.0,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 0,
+      "ParticleEffect": "sSmallHitspark",
+      "ParticleDuration": 5,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_Light_Hit"
+    }
+  ],
+  "RehitData": {
+    "HitBox": 1,
+    "NumberOfHits": 0,
+    "HitOnFrames": []
+  },
+  "Version": "Ver1.2.2",
+  "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
+  "LastModified": "2023-08-15T19:31:55.2412859-07:00",
+  "LastModifiedBy": "creep"
+}

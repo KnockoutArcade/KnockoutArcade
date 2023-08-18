@@ -8,7 +8,14 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
-	lifetime--;
+	animTimer++;
+	
+	if (hasLifetime)
+	{
+		lifetime--;
+	}
+	
+	PerformProjectile(playerOwner, spiritOwner);
 	
 	// Calculate Traction
 	if (grounded)
@@ -42,9 +49,17 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		if (destroyOnWall && numberOfBounces == 0)
 		{
-			if (hitboxID != noone)
+			for (var i = 0; i < ds_list_size(hitboxID); i++)
 			{
-				instance_destroy(hitboxID);
+				with (ds_list_find_value(hitboxID, i))
+				{
+					lifetime = 0;
+				}
+			}
+			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
 			}
 			instance_destroy();
 		}
@@ -54,7 +69,13 @@ if (!global.gameHalt && !global.freezeTimer)
 			
 			image_xscale = -image_xscale;
 			
-			hitboxID.image_xscale *= -1;
+			for (var i = 0; i < ds_list_size(hitboxID); i++)
+			{
+				with (ds_list_find_value(hitboxID, i))
+				{
+					image_xscale *= -1;
+				}
+			}
 		}
 	}
 	
@@ -62,9 +83,17 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		if (destroyOnFloor && numberOfBounces == 0)
 		{
-			if (hitboxID != noone)
+			for (var i = 0; i < ds_list_size(hitboxID); i++)
 			{
-				instance_destroy(hitboxID);
+				with (ds_list_find_value(hitboxID, i))
+				{
+					lifetime = 0;
+				}
+			}
+			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
 			}
 			instance_destroy();
 		}
@@ -78,9 +107,17 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	if (projectileHealth == 0)
 	{
-		if (hitboxID != noone)
+		for (var i = 0; i < ds_list_size(hitboxID); i++)
 		{
-			instance_destroy(hitboxID);
+			with (ds_list_find_value(hitboxID, i))
+			{
+				lifetime = 0;
+			}
+		}
+		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
 		}
 		instance_destroy();
 	}
@@ -89,28 +126,47 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		with (collisionID)
+		if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
+			with (collisionID)
+			{
+				collidedWithProjectile = true;
+			}
+			
 			collidedWithProjectile = true;
 		}
-		
-		collidedWithProjectile = true;
 	}
 	
 	if (collidedWithProjectile)
 	{
-		if (hitboxID != noone)
+		for (var i = 0; i < ds_list_size(hitboxID); i++)
 		{
-			instance_destroy(hitboxID);
+			with (ds_list_find_value(hitboxID, i))
+			{
+				lifetime = 0;
+			}
+		}
+		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
 		}
 		instance_destroy();
 	}
 	
-	if (lifetime == 0)
+	if (lifetime == 0 && hasLifetime)
 	{
-		if (hitboxID != noone)
+		for (var i = 0; i < ds_list_size(hitboxID); i++)
 		{
-			instance_destroy(hitboxID);
+			with (ds_list_find_value(hitboxID, i))
+			{
+				lifetime = 0;
+			}
+		}
+		ds_list_clear(hitboxID);
+		if (target != noone)
+		{
+			ds_list_clear(target.hitByGroup);
 		}
 		instance_destroy();
 	}
