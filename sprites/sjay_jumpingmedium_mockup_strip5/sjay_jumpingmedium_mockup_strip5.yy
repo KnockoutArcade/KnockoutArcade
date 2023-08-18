@@ -44,7 +44,7 @@
     "spriteId": {"name":"sJay_JumpingMedium_mockup_strip5","path":"sprites/sJay_JumpingMedium_mockup_strip5/sJay_JumpingMedium_mockup_strip5.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

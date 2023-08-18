@@ -53,7 +53,7 @@
     "spriteId": {"name":"sBeverly_Walk_Forward","path":"sprites/sBeverly_Walk_Forward/sBeverly_Walk_Forward.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 12.0,
+    "playbackSpeed": 10.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

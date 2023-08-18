@@ -42,7 +42,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 	formedCharacter.JumpType = selectedCharacter.JumpType;
 	formedCharacter.JumpHorizontalSpeed = selectedCharacter.JumpHorizontalSpeed;
 	formedCharacter.SuperMeterBuildRate = selectedCharacter.SuperMeterBuildRate;
-	formedCharacter.Sprites =
+	formedCharacter.Sprites = 
 	{
 		Idle : asset_get_index(selectedCharacter.CharacterSprites.Idle),
 		Crouch : asset_get_index(selectedCharacter.CharacterSprites.Crouch),

@@ -3375,9 +3375,11 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
+
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
+
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -6467,9 +6469,15 @@
           "ParticleYOffset": 40,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
+
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
+
           "HitSound": "sfx_Heavy_Hit"
         }
       ],

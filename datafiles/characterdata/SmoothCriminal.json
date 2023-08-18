@@ -1391,10 +1391,10 @@
           "AttackHitStop": 24,
           "AttackHitStun": 45,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": 2.0,
+          "LaunchKnockbackVertical": -2.0,
           "LaunchKnockbackHorizontal": 2.0,
           "GravityScaling": 0.0,
           "Pushback": 0.5,
@@ -1404,7 +1404,7 @@
           "ParticleDuration": 8,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
+          "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -2444,7 +2444,7 @@
           "AirKnockbackHorizontal": 3.0,
           "Launches": true,
           "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": 4.0,
+          "LaunchKnockbackHorizontal": 3.0,
           "GravityScaling": 0.0,
           "Pushback": 2.0,
           "ParticleXOffset": 10,
@@ -2453,7 +2453,7 @@
           "ParticleDuration": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
+          "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -3889,6 +3889,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-08-15T19:31:55.2157374-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2023-08-16T19:33:44.0611276-07:00",
+  "LastModifiedBy": "iansb"
 }
