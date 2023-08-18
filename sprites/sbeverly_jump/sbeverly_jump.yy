@@ -49,7 +49,7 @@
     "spriteId": {"name":"sBeverly_Jump","path":"sprites/sBeverly_Jump/sBeverly_Jump.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 15.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
