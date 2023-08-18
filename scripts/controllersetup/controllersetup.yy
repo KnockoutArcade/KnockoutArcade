@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Scripts",
-    "path": "folders/Scripts.yy",
+    "name": "SetupScripts",
+    "path": "folders/Scripts/SetupScripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "ControllerSetup",

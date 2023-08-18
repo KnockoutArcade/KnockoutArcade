@@ -77,7 +77,7 @@
     "spriteId": {"name":"sJay_UpSpecial1_mockup_strip16","path":"sprites/sJay_UpSpecial1_mockup_strip16/sJay_UpSpecial1_mockup_strip16.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 0.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,

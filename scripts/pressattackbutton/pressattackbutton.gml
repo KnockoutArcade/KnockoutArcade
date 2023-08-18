@@ -125,6 +125,16 @@ function PressAttackButton(attack)
 					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
 				}
 			break;
+			
+			case 6:
+				if (superMeter >= 50 && !timeStopActivated && !spiritBroken)
+				{
+					superMeter -= 50;
+					state = eState.SUPER;
+					image_index = 0;
+					SetSpiritMoveData(false, selectedCharacter.Super, attack);
+				}
+			break;
 		}
 		
 		

@@ -9,10 +9,12 @@ switch (global.gameMode)
 		var winConditionMet = (global.p1Rounds >= 2 || global.p2Rounds >= 2);
 		
 		// A player is defeated
-		if (p1.hp == 0 || p2.hp == 0)
+		if (p1.hp <= 0 || p2.hp <= 0)
 		{
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
+			instance_destroy(oTimeStop);
+			audio_resume_sound(testBGM);
 			
 			global.gameHalt = true;
 			gameHaltTimer++;
@@ -28,17 +30,17 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1)
 			{
-				if (p2.hp == 0)
+				if (p2.hp <= 0)
 				{
 					global.p1Rounds++;
 				}
 				
-				if (p1.hp == 0)
+				if (p1.hp <= 0)
 				{
 					global.p2Rounds++;
 				}
 				
-				if (p1.hp == 0 && p2.hp == 0)
+				if (p1.hp <= 0 && p2.hp <= 0)
 				{
 					var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 					with (particle) 
@@ -50,6 +52,16 @@ switch (global.gameMode)
 				}
 				else
 				{
+					if ((p2.hp <= 0 && (p1.state == eState.SUPER || p1.installActivated || p1.timeStopActivated)) || 
+						 (p1.hp <= 0 && (p2.state == eState.SUPER || p2.installActivated || p2.timeStopActivated)))
+					{
+						var superBackground = instance_create_layer(global.camObj.x, global.camObj.y + 60, "KO_Text", oSuperKO);
+						with (superBackground) 
+						{
+							depth = 650;
+							lifetime = 89;
+						}
+					}
 					var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 					with (particle) 
 					{

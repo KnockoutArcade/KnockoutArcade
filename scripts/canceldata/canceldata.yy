@@ -6,7 +6,7 @@
     "path": "folders/Scripts/CancelScripts.yy",
   },
   "resourceVersion": "1.0",
-  "name": "canceldata",
+  "name": "CancelData",
   "tags": [],
   "resourceType": "GMScript",
 }

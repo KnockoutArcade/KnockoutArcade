@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 // Create variables to initialize
+hasColorPalettes = false;
 startingOpacity = 1;
 fadeSpeed = 0.01;
 

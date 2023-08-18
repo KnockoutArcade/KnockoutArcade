@@ -34,14 +34,23 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 				image_xscale = this.image_xscale;
 			}
 			
-			if (this.playerID == 1)
+			if (array_length(this.selectedCharacter.BasePalette) > 0)
 			{
-				PaletteSetup(global.p1PaletteID, this.selectedCharacter);
+				hasColorPalettes = true;
+				if (this.playerID == 1)
+				{
+					PaletteSetup(global.p1PaletteID, this.selectedCharacter);
+				}
+				else
+				{
+					PaletteSetup(global.p2PaletteID, this.selectedCharacter);
+				}
 			}
 			else
 			{
-				PaletteSetup(global.p2PaletteID, this.selectedCharacter);
+				hasColorPalettes = false;
 			}
+			
 			startingOpacity = setStartingOpacity;
 			fadeSpeed = setFadeSpeed;
 			initialized = true;

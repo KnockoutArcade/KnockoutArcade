@@ -6,6 +6,25 @@ function DeactivateSpirit(executedBySpirit)
 	{
 		if (spiritSummoned) 
 		{
+			with (spiritObject)
+			{
+				// Destroy all hitboxes that belong to this player
+				var allHitboxes = [];
+				
+				for (var i = 0; i < instance_number(oHitbox); i++;)
+				{
+					allHitboxes[i] = instance_find(oHitbox, i);
+				}
+	
+				for (var i = 0; i < array_length(allHitboxes); i++;)
+				{
+					if (allHitboxes[i].spirit == id)
+					{ 
+						instance_destroy(allHitboxes[i]);
+					}
+				}
+			}
+			
 			instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 			instance_destroy(spiritObject.hurtbox);
 			instance_destroy(spiritObject);
@@ -21,6 +40,22 @@ function DeactivateSpirit(executedBySpirit)
 	}
 	else
 	{
+		// Destroy all hitboxes that belong to this player
+		var allHitboxes = [];
+		
+		for (var i = 0; i < instance_number(oHitbox); i++;)
+		{
+			allHitboxes[i] = instance_find(oHitbox, i);
+		}
+
+		for (var i = 0; i < array_length(allHitboxes); i++;)
+		{
+			if (allHitboxes[i].spirit == id)
+			{ 
+				instance_destroy(allHitboxes[i]);
+			}
+		}
+		
 		hostObject.spiritObject = noone;
 		hostObject.spiritSummoned = false;
 		hostObject.spiritState = false;

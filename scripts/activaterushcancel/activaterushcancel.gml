@@ -30,5 +30,6 @@ function ActivateRushCancel()
 	activateFreeze = true;
 	global.freezeTimer = true;
 	state = eState.SCREEN_FREEZE;
-	instance_create_layer(x, y, "Instances", oRushCancel);
+	var rushCancel = instance_create_layer(x, y, "Instances", oRushCancel);
+	rushCancel.depth = 600;
 }

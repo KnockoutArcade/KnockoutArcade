@@ -225,6 +225,19 @@ function CancelData(_array, _attack, _late)
 			CancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial.SpriteId, 1);
 		}
 	}
+	// Super
+	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 50 && !timeStopActivated && !spiritBroken))
+	{
+		if (_late)
+		{
+			LateCancelIntoMove(eState.SUPER, selectedCharacter.Super, _attack);
+		}
+		else
+		{
+			superMeter -= 50;
+			CancelIntoMove(eState.SUPER, selectedCharacter.Super.SpriteId, 1);
+		}
+	}
 	
 	
 	// Command Normal 1

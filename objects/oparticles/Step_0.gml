@@ -21,7 +21,7 @@ if (lifetime < 1)
 
 if (sprite_index == sKOText || sprite_index == sDoubleKOText)
 {
-	depth = 100;
+	depth = 101;
 }
 
 lifetime--;

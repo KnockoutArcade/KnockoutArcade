@@ -4,18 +4,10 @@
 animTimer = 0;
 animOffset = 4; // How many frames to offset an animation by (specifically during hitstop)
 
+destroySprite = selectedProjectile.Sprites.Destroy;
+canDestroySprite = false; // Plays the destroy sprite 
+
 copyCharacterPalette = selectedProjectile.CopyCharacterPalette;
-if (copyCharacterPalette)
-{
-	if (playerOwner.playerID == 1)
-	{
-		PaletteSetup(global.p1PaletteID, selectedProjectile);
-	}
-	else
-	{
-		PaletteSetup(global.p2PaletteID, selectedProjectile);
-	}
-}
 
 hsp = selectedProjectile.HorizontalSpeed; // Keeping naming consistent for velocity-based variables
 vsp = selectedProjectile.VerticalSpeed;
@@ -47,6 +39,7 @@ projectileHealth = selectedProjectile.Health; // How many hits from another proj
 
 playerOwner = noone; // Who fired this projectile
 spiritOwner = noone; // If spirit fired a projectile
+target = noone; // The thing this projectile hit
 
 hitboxProperties = {};
 hitboxProperties.NumberOfHitboxes = selectedProjectile.NumberOfHitboxes;
