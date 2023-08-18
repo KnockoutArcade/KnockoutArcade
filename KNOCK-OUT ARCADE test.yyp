@@ -358,6 +358,7 @@
     {"id":{"name":"sLogo","path":"sprites/sLogo/sLogo.yy",},"order":0,},
     {"id":{"name":"sResults_Options","path":"sprites/sResults_Options/sResults_Options.yy",},"order":15,},
     {"id":{"name":"sRussel_Block","path":"sprites/sRussel_Block/sRussel_Block.yy",},"order":6,},
+    {"id":{"name":"sCharSel_NameGunther","path":"sprites/sCharSel_NameGunther/sCharSel_NameGunther.yy",},"order":3,},
     {"id":{"name":"SetupGame","path":"scripts/SetupGame/SetupGame.yy",},"order":2,},
     {"id":{"name":"sBeverly_Hurt","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"order":23,},
     {"id":{"name":"sJay_UpSpecial2_Mockup_strip6","path":"sprites/sJay_UpSpecial2_Mockup_strip6/sJay_UpSpecial2_Mockup_strip6.yy",},"order":9,},

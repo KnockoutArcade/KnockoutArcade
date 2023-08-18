@@ -267,6 +267,10 @@ if (state == 0)
     {
         draw_sprite(sJay_Idle, 0 + P1charSelCurrentFrame, 29, 65);
     }
+	else if (P1charSelCol == 0 && P1charSelRow == 1)
+    {
+        draw_sprite(sGunther_Idle_mockup_strip1, 0 + P1charSelCurrentFrame, 29, 65);
+    }
     shader_reset();
 
     if (P1charSelCol == 0 && P1charSelRow == 0)
@@ -280,6 +284,10 @@ if (state == 0)
     else if (P1charSelCol == 2 && P1charSelRow == 0)
     {
         draw_sprite(sCharSel_NameJay, 0, 14, 69);
+    }
+	else if (P1charSelCol == 0 && P1charSelRow == 1)
+    {
+        draw_sprite(sCharSel_NameGunther, 0, 14, 69);
     }
 
 
@@ -534,6 +542,10 @@ if (state == 0)
     {
         draw_sprite_ext(sJay_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
     }
+	else if (P2charSelCol == 0 && P2charSelRow == 1)
+    {
+        draw_sprite_ext(sGunther_Idle_mockup_strip1, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
+    }
     shader_reset();
 
     if (P2charSelCol == 0 && P2charSelRow == 0)
@@ -547,6 +559,10 @@ if (state == 0)
     else if (P2charSelCol == 2 && P2charSelRow == 0)
     {
         draw_sprite(sCharSel_NameJay, 0, 118, 69);
+    }
+	else if (P2charSelCol == 0 && P2charSelRow == 1)
+    {
+        draw_sprite(sCharSel_NameGunther, 0, 118, 69);
     }
 
 
