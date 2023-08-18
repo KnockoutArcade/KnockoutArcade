@@ -300,6 +300,7 @@
     {"id":{"name":"sEvenSmallerShadow","path":"sprites/sEvenSmallerShadow/sEvenSmallerShadow.yy",},"order":2,},
     {"id":{"name":"rCampaignLevelTemplate","path":"rooms/rCampaignLevelTemplate/rCampaignLevelTemplate.yy",},"order":2,},
     {"id":{"name":"sJay_DownSpecial1_Mockup_strip4","path":"sprites/sJay_DownSpecial1_Mockup_strip4/sJay_DownSpecial1_Mockup_strip4.yy",},"order":3,},
+    {"id":{"name":"sBeverly_Crouch_Medium","path":"sprites/sBeverly_Crouch_Medium/sBeverly_Crouch_Medium.yy",},"order":29,},
     {"id":{"name":"ControllerSetup","path":"scripts/ControllerSetup/ControllerSetup.yy",},"order":5,},
     {"id":{"name":"GetPrintableKeyName","path":"scripts/GetPrintableKeyName/GetPrintableKeyName.yy",},"order":16,},
     {"id":{"name":"sThrowEnvDetection","path":"sprites/sThrowEnvDetection/sThrowEnvDetection.yy",},"order":4,},
