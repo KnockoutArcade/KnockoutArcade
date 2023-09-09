@@ -7,4 +7,4 @@ levelDestination = rMainMenu;
 mapReturnX = 0;
 mapReturnY = 0;
 
-levelName = "CampaignTest"
+levelName = "CampaignTest";

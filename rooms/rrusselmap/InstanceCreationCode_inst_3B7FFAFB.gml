@@ -12,3 +12,7 @@ if (ds_list_find_index(global.completedLevels, levelName) != -1)
 {
 	image_index = 1;
 }
+else
+{
+	image_index = 0;
+}
