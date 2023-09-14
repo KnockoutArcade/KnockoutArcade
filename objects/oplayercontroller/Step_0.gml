@@ -2708,12 +2708,20 @@ buffer = false;
 if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp) != -1)
 {
 	y = floor(y);
+	
 	// Snap player to Slope's surface
+	// If we are inside a slope, bring us out
 	while (place_meeting(x, y - 1, oSlope))
 	{
 		y -= 1;
 	}
+	// If we are still touching a slope, bring us out
+	if (place_meeting(x, y, oSlope))
+	{
+		y -=1;
+	}
 	
+	// If we are above a slope, bring us down until we are barely touching it
 	while (!place_meeting(x, y + 1, oSlope))
 	{
 		y += 1;
