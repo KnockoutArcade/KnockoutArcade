@@ -2701,30 +2701,10 @@ x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
 // Slope Collision
-/*
-if (place_meeting(x+hsp+environmentDisplacement, y, oSlope) && state != eState.BEING_GRABBED)
-{
-	while (place_meeting(x+sign(hsp+environmentDisplacement), y, oSlope)) 
-	{
-		y -= 1;
-	}
-	
-	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
-	{
-		wallHit = true;
-		hitstop = 20;
-		state = eState.LAUNCHED;
-		sprite_index = sRussel_WallSplat;
-		hsp = -(hsp * .5);
-		vsp = -2;
-	}
-	else if (state != eState.HITSTOP)
-	{
-		hsp = 0;
-		environmentDisplacement = 0;
-	}
-}
-*/
+
+// Using y + 8 so that if the player is going downhill on a slope, they can stay snapped to the surface
+// Otherwise, the player would jitter as they went down
+buffer = false;
 if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp) != -1)
 {
 	y = floor(y);
@@ -2739,6 +2719,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 		y += 1;
 	}
 	
+	buffer = true;
 	isJumpingForward = false;
 	if (state != eState.HITSTOP)
 	{

@@ -51,8 +51,6 @@ function HandleWalkingOffPlatforms(maintainState)
 	ds_list_destroy(semiSolidCollision_list);
 	#endregion
 	
-	buffer = false;
-	
 	//Handle walking off of platforms by checking if solid ground is below us
 	if (!place_meeting(x, y+1, oWall) && canFallThrough && !place_meeting(x, y+8, oSlope))
 	{
@@ -65,6 +63,5 @@ function HandleWalkingOffPlatforms(maintainState)
 		isThrowable = true;
 		
 		jumpHsp = hsp;
-		buffer = true;
 	}
 }
