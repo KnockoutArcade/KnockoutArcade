@@ -141,6 +141,46 @@ if (state != eState.HITSTOP)
 		}
 	}
 	
+	// Semisolid Platform Collision
+	var semiSolidCollisionCheck = place_meeting(x, y+vsp+fallSpeed, oSemiSolid);
+	var collisionID = noone;
+
+	if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
+	{
+		//Determine wether we are rising into a ceiling or falling onto a floor.
+		var fallDirection = sign(vsp);
+	
+		// Creates a list containing all of the semisolids we're colliding with.
+		var semiSolidCollision_list = ds_list_create();
+		collisionID = instance_place_list(x, y+vsp+fallSpeed, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
+	
+		// Iterate through each semisolid
+		for (var i = 0; i < collisionID; i++;)
+		{
+			// Determine if we are above the platform's surface
+			if (y < semiSolidCollision_list[| i].y + 1) && (fallDirection == 1)
+			{
+				while (!place_meeting(x, y + sign(vsp+fallSpeed), semiSolidCollision_list[| i]))
+				{
+					y += sign(vsp);
+				}
+		
+				vsp = 0;
+				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+				{
+					state = eState.IDLE;
+					grounded = true;
+					inAttackState = false;
+				}
+			}
+		}
+	
+		ds_list_destroy(semiSolidCollision_list);
+	}
+	
+	
+	
+	
 	if (!global.freezeTimer)
 	{
 		x += hsp;
