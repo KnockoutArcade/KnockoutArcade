@@ -5,7 +5,38 @@
 var foundFloor = false;
 for (var i = 0; i < 100; i++;)
 {
-	if (place_meeting(x, floor(y)+i, oWall) && !foundFloor && !isGrabbed)
+	// Exception for Semisolids
+	if (place_meeting(x, floor(y)+i, oSemiSolid) && !foundFloor && !isGrabbed)
+	{
+		with (instance_place(x, floor(y)+i, oSemiSolid))
+		{
+			if (floor(other.y) <= y)
+			{
+				foundFloor = true;
+			}
+		}
+		
+		if foundFloor
+		{
+			if (i < 25)
+				{
+					draw_sprite(sShadow, 0, x, floor(y)+i);
+				}
+				else if (i < 50)
+				{
+					draw_sprite(sSmallShadow, 0, x, floor(y)+i);
+				}
+				else
+				{
+					draw_sprite(sEvenSmallerShadow, 0, x, floor(y)+i);
+				}
+				foundFloor = true;
+		}
+		
+	}
+	
+	// Find floor
+	if ((place_meeting(x, floor(y)+i, oWall) || place_meeting(x, floor(y)+i, oSlope)) && !foundFloor && !isGrabbed)
 	{
 		if (i < 25)
 		{
