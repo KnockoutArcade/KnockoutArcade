@@ -470,7 +470,7 @@ else if (!global.freezeTimer)
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
 					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
-					if (owner.playerOwner.state != eState.SUPER && !owner.installActivated && !owner.timeStopActivated)
+					if (owner.playerOwner.state != eState.SUPER && !owner.playerOwner.installActivated && !owner.playerOwner.timeStopActivated)
 					{
 						owner.playerOwner.superMeter += floor(attackProperty.MeterGain * 0.75);
 					}

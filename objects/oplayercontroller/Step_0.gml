@@ -2704,7 +2704,6 @@ y = actualYPos; // Restore the player's actual y position
 
 // Using y + 8 so that if the player is going downhill on a slope, they can stay snapped to the surface
 // Otherwise, the player would jitter as they went down
-buffer = false;
 if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp) != -1)
 {
 	y = floor(y);
@@ -2727,7 +2726,6 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 		y += 1;
 	}
 	
-	buffer = true;
 	isJumpingForward = false;
 	if (state != eState.HITSTOP)
 	{

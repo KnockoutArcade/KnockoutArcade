@@ -45,6 +45,35 @@ if (!global.gameHalt && !global.freezeTimer)
 	vsp += fallSpeed;
 	
 	#region // Handle Destroy
+	
+	// Slopes
+	if (place_meeting(x, y + vsp, oSlope) && sign(vsp) != -1)
+	{
+		if (destroyOnFloor && numberOfBounces == 0)
+		{
+			for (var i = 0; i < ds_list_size(hitboxID); i++)
+			{
+				with (ds_list_find_value(hitboxID, i))
+				{
+					lifetime = 0;
+				}
+			}
+			ds_list_clear(hitboxID);
+			if (target != noone)
+			{
+				ds_list_clear(target.hitByGroup);
+			}
+			instance_destroy();
+		}
+		else if (bounceOnFloor)
+		{
+			vsp = -vsp * bounciness;
+			
+			numberOfBounces--;
+		}
+	}
+	
+	// Wall Collision
 	if (place_meeting(x+(hsp * image_xscale), y, oWall))
 	{
 		if (destroyOnWall && numberOfBounces == 0)
@@ -104,6 +133,39 @@ if (!global.gameHalt && !global.freezeTimer)
 			numberOfBounces--;
 		}
 	}
+	
+	// SemiSolids
+	if (place_meeting(x, y + vsp, oSemiSolid) && sign(vsp) != -1)
+	{
+		var semiSolid = instance_place(x, y + vsp, oSemiSolid)
+		// Check if we're on the surface of the semiSolid
+		if (floor(y) <= semiSolid.y)
+		{
+			if (destroyOnFloor && numberOfBounces == 0)
+			{
+				for (var i = 0; i < ds_list_size(hitboxID); i++)
+				{
+					with (ds_list_find_value(hitboxID, i))
+					{
+						lifetime = 0;
+					}
+				}
+				ds_list_clear(hitboxID);
+				if (target != noone)
+				{
+					ds_list_clear(target.hitByGroup);
+				}
+				instance_destroy();
+			}
+			else if (bounceOnFloor)
+			{
+				vsp = -vsp * bounciness;
+			
+				numberOfBounces--;
+			}
+		}
+	}
+	
 	
 	if (projectileHealth == 0)
 	{
