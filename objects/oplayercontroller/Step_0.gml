@@ -2700,6 +2700,80 @@ if (opponent != noone && !wallHit)
 x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
+// Slope Collision
+/*
+if (place_meeting(x+hsp+environmentDisplacement, y, oSlope) && state != eState.BEING_GRABBED)
+{
+	while (place_meeting(x+sign(hsp+environmentDisplacement), y, oSlope)) 
+	{
+		y -= 1;
+	}
+	
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	{
+		wallHit = true;
+		hitstop = 20;
+		state = eState.LAUNCHED;
+		sprite_index = sRussel_WallSplat;
+		hsp = -(hsp * .5);
+		vsp = -2;
+	}
+	else if (state != eState.HITSTOP)
+	{
+		hsp = 0;
+		environmentDisplacement = 0;
+	}
+}
+*/
+if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp) != -1)
+{
+	y = floor(y);
+	// Snap player to Slope's surface
+	while (place_meeting(x, y - 1, oSlope))
+	{
+		y -= 1;
+	}
+	
+	while (!place_meeting(x, y + 1, oSlope))
+	{
+		y += 1;
+	}
+	
+	isJumpingForward = false;
+	if (state != eState.HITSTOP)
+	{
+		vsp = 0;
+	}
+	if (hitstop < 1)
+	{
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding) 
+		{
+			state = eState.IDLE;
+			grounded = true;
+			frameAdvantage = true;
+			inAttackState = false;
+			canTurnAround = true;
+			isThrowable = true;
+			
+			audio_play_sound(sfx_Landing, 1, false);
+		}
+		if (!cancelOnLanding) 
+		{
+			grounded = true;
+			isThrowable = true;
+		}
+		if (state == eState.LAUNCHED)
+		{
+			state = eState.KNOCKED_DOWN;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 0;
+			hsp = 0;
+			image_speed = 1;
+		}
+	}
+}
+
+
 // Collisions With Walls
 if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 {
