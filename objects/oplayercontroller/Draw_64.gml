@@ -14,8 +14,8 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, grounded);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, y);
+	draw_text(20, 70, y);
+	draw_text(20, 90, buffer);
 } 
 else 
 {
