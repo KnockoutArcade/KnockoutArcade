@@ -1,6 +1,3 @@
-// Destructable objects act as obsticales that the player can collide with and destroy. They rely on the same
-// system that players use for hit detection, which is why a lot of the variables here are shared.
-
 hp = 50;
 
 // Prevents crashes from ProcessHit
@@ -18,7 +15,7 @@ knockbackDirection = 0; // Which way we should be taking knockback
 
 hasWallCollision = true;
 wallXScale = 4; // The wall object has an initial size of 16 px by 16px. These values are mulitplied by the scale values
-wallYScale = 2;
+wallYScale = 6;
 wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
 with (wallCollisionBox)
 {
@@ -26,7 +23,7 @@ with (wallCollisionBox)
 	image_yscale = -other.wallYScale;
 }
 
-sprite_index = sTrashBin;
+sprite_index = sLargeDumpster;
 
 hitstun = 0;
 hitstop = 0;
@@ -39,11 +36,7 @@ with (hurtbox)
 	primary = true;
 	owner = other.id;
 	image_xscale = 64;
-	image_yscale = 32;
-	x = other.x;
-	x += hurtboxXOffset;
-	y = other.y;
-	y += hurtboxYOffset;
+	image_yscale = 96;
 }
 hurtboxOffset = 0;
 

@@ -178,7 +178,11 @@ if (state != eState.HITSTOP)
 		ds_list_destroy(semiSolidCollision_list);
 	}
 	
-	
+	// Handle Hurtbox Placement
+	with (hurtbox)
+	{
+		
+	}
 	
 	
 	if (!global.freezeTimer)
