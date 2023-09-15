@@ -24,11 +24,18 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [
-    {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-  ],
+  "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"hurtboxXOffset","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"-11","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hurtboxXSize","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"21","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hurtboxYSize","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"32","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hp","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"30","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"knockbackMultiplier","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"1.5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"launchable","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"isThrowable","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hasWallCollision","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"False","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Single Player Objects",
     "path": "folders/Objects/Single Player Objects.yy",

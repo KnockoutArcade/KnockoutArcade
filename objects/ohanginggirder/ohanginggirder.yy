@@ -26,7 +26,10 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [],
+  "overriddenProperties": [
+    {"propertyId":{"name":"hurtboxXOffset","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"-1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"hurtboxYOffset","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"-40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+  ],
   "parent": {
     "name": "Single Player Objects",
     "path": "folders/Objects/Single Player Objects.yy",

@@ -35,10 +35,9 @@ with (hurtbox)
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 64;
-	image_yscale = 96;
+	image_xscale = hurtboxXSize;
+	image_yscale = hurtboxYSize;
 }
-hurtboxOffset = 0;
 
 // State
 state = eState.IDLE;
