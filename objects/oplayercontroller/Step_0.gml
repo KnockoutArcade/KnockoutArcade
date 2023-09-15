@@ -76,7 +76,7 @@ projectileInvincible = false;
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
-hurtboxOffset = -8;
+hurtboxXOffset = -8;
 
 if (special)
 {
@@ -1244,7 +1244,7 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
 		
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		hurtbox.image_xscale = 18;
 		hurtbox.image_yscale = 27;
 		
@@ -1750,7 +1750,7 @@ switch state
 		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		
 		PerformAttack(selectedCharacter.Grab, false);
 		
@@ -1823,7 +1823,7 @@ switch state
 		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		
 		if (grounded)
 		{

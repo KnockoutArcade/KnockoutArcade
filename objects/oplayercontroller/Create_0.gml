@@ -262,7 +262,8 @@ with (hurtbox)
 	image_xscale = 15;
 	image_yscale = 32;
 }
-hurtboxOffset = -9;
+hurtboxXOffset = -9;
+hurtboxYOffset = 0;
 
 hitstun = 0; // How long we are in hitSTUN for
 hitstop = 0; // How long we are in hitSTOP for

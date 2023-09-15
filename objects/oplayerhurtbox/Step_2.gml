@@ -5,8 +5,8 @@ if (primary && owner.state != eState.HITSTOP)
 {
 	if (spirit == noone)
 	{
-		x = owner.x + (owner.hurtboxOffset * sign(owner.image_xscale));
-		y = owner.y;
+		x = owner.x + (owner.hurtboxXOffset * sign(owner.image_xscale));
+		y = owner.y + owner.hurtboxYOffset;
 	}
 	else
 	{

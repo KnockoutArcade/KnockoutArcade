@@ -41,9 +41,9 @@ with (hurtbox)
 	image_xscale = 64;
 	image_yscale = 32;
 	x = other.x;
-	x += hurtboxXOffset;
+	x += other.hurtboxXOffset;
 	y = other.y;
-	y += hurtboxYOffset;
+	y += other.hurtboxYOffset;
 }
 hurtboxOffset = 0;
 
