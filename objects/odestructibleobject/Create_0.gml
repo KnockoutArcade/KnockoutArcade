@@ -11,12 +11,16 @@ vsp = 0;
 isDestructibleObject = true; // Identify this object as destructable
 knockbackDirection = 0; // Which way we should be taking knockback
 
-wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
-
-with (wallCollisionBox)
+// Wall Collision
+if (hasWallCollision)
 {
-	image_xscale = other.wallXScale;
-	image_yscale = -other.wallYScale;
+	wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
+
+	with (wallCollisionBox)
+	{
+		image_xscale = other.wallXScale;
+		image_yscale = -other.wallYScale;
+	}
 }
 
 hitstun = 0;
@@ -29,8 +33,8 @@ with (hurtbox)
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = hurtboxXSize;
-	image_yscale = hurtboxYSize;
+	image_xscale = other.hurtboxXSize;
+	image_yscale = other.hurtboxYSize;
 }
 
 // State
@@ -65,7 +69,6 @@ state = eState.IDLE;
 	pushbackVel = 0;
 	
 	grounded = true;
-	fallSpeed = .25; // How fast a character falls
 
 	// Combo Related Variables
 	combo = 0;

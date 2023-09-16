@@ -1,12 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Remove this objects collision if it is not supposed to have it
-if (!hasWallCollision)
-{
-	instance_destroy(wallCollisionBox);
-}
-
 switch (state)
 {
 	case eState.IDLE:
