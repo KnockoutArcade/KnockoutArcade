@@ -18,7 +18,7 @@ if (hasWallCollision)
 {
 	if (collisionIsSemisolid)
 	{
-		wallCollisionBox = instance_create_layer(x, y, "SuperMeter", oSemiSolid);
+		wallCollisionBox = instance_create_layer(x, y, "Walls", oSemiSolid);
 	}
 	else
 	{
