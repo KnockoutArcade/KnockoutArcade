@@ -99,6 +99,7 @@ switch (state)
 
 if (state != eState.HITSTOP)
 {
+	// Animating pushback
 	xHome = x;
 	if (pushbackVel >= 0)
 	{
@@ -172,13 +173,7 @@ if (state != eState.HITSTOP)
 		ds_list_destroy(semiSolidCollision_list);
 	}
 	
-	// Handle Hurtbox Placement
-	with (hurtbox)
-	{
-		
-	}
-	
-	
+	// Update Movement
 	if (!global.freezeTimer)
 	{
 		x += hsp;

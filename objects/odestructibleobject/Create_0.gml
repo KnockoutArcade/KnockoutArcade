@@ -11,6 +11,8 @@ vsp = 0;
 isDestructibleObject = true; // Identify this object as destructable
 knockbackDirection = 0; // Which way we should be taking knockback
 
+isOpened = false; // For chests, determine if they are open
+
 // Wall Collision
 if (hasWallCollision)
 {
