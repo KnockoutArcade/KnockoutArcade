@@ -24,7 +24,9 @@
   "physicsStartAwake": true,
   "physicsKinematic": false,
   "physicsShapePoints": [],
-  "eventList": [],
+  "eventList": [
+    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+  ],
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"hurtboxXOffset","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"23","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},

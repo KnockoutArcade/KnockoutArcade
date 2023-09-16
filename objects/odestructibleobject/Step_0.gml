@@ -47,8 +47,8 @@ switch (state)
 				ds_list_clear(hitByGroup);
 			}
 			
-			// Destroy this object if at 0 hp
-			if (hp <= 0)
+			// Destroy this object if at 0 hp and this object has no unique death properties
+			if (hp <= 0 && !hasUniqueDeath)
 			{
 				instance_destroy(hurtbox);
 				if (hasWallCollision)
