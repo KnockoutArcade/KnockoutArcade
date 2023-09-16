@@ -14,7 +14,14 @@ knockbackDirection = 0; // Which way we should be taking knockback
 // Wall Collision
 if (hasWallCollision)
 {
-	wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
+	if (collisionIsSemisolid)
+	{
+		wallCollisionBox = instance_create_layer(x, y, "Walls", oSemiSolid);
+	}
+	else
+	{
+		wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
+	}
 
 	with (wallCollisionBox)
 	{
