@@ -220,6 +220,7 @@
     {"id":{"name":"sComboCounter_Base","path":"sprites/sComboCounter_Base/sComboCounter_Base.yy",},"order":0,},
     {"id":{"name":"sCharSel_ChooseYourCharacter","path":"sprites/sCharSel_ChooseYourCharacter/sCharSel_ChooseYourCharacter.yy",},"order":4,},
     {"id":{"name":"sShadow","path":"sprites/sShadow/sShadow.yy",},"order":0,},
+    {"id":{"name":"HandleHitboxCollision","path":"scripts/HandleHitboxCollision/HandleHitboxCollision.yy",},"order":37,},
     {"id":{"name":"sJay_UpSpecial1_mockup_strip16","path":"sprites/sJay_UpSpecial1_mockup_strip16/sJay_UpSpecial1_mockup_strip16.yy",},"order":10,},
     {"id":{"name":"sSpiritFire","path":"sprites/sSpiritFire/sSpiritFire.yy",},"order":40,},
     {"id":{"name":"sfx_spend50Meter","path":"sounds/sfx_spend50Meter/sfx_spend50Meter.yy",},"order":16,},
