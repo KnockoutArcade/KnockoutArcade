@@ -4,6 +4,7 @@
 if (!isCurrentlyActive)
 {
 	isTriggered = true;
-
+	
+	instanceThatTriggeredThis = instance_place(x,y,oPlayerController);
 }
 

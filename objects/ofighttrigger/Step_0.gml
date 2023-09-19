@@ -10,6 +10,9 @@ if (isTriggered)
 		playerID = 3;
 		
 		hp = 10;
+		
+		image_xscale = other.enemyInitialDirection;
+		opponent = other.instanceThatTriggeredThis;
 	}
 	
 	isCurrentlyActive = true;
