@@ -300,7 +300,13 @@ function HandleHitboxCollision(ownerType)
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 						if (collision_list[| i].spirit != noone) collision_list[| i].spirit.sprite_index = collision_list[| i].spirit.CharacterSprites.hurt_Sprite;
 					}
-
+					
+					// Face opponent towards the source of damage;
+					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
+					{
+						collision_list[| i].owner.image_xscale = ownerOnSide;
+					}
+					
 					// Set the correct Sprite
 					if (!collision_list[| i].owner.isDestructibleObject) // Check if the hurbox is attatched to a destructible object
 					{
@@ -315,11 +321,7 @@ function HandleHitboxCollision(ownerType)
 						collision_list[| i].spirit.state = eState.HITSTOP;
 					}
 
-					// Face opponent towards the source of damage;
-					if (!collision_list[| i].owner.isDestructibleObject)
-					{
-						collision_list[| i].owner.image_xscale = ownerOnSide;
-					}
+					
 					
 					// Properties on Counter Hit
 					if (collision_list[| i].owner.inAttackState)
