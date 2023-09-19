@@ -8,6 +8,8 @@ if (isTriggered)
 	with (enemyID)
 	{
 		playerID = 3;
+		
+		hp = 10;
 	}
 	
 	isCurrentlyActive = true;
@@ -22,5 +24,11 @@ if (isTriggered)
 
 if (isCurrentlyActive)
 {
-	
+	if (enemyID.hp <= 0)
+	{
+		isCurrentlyActive = false;
+		global.camObj.isLocked = false;
+		
+		instance_destroy();
+	}
 }
