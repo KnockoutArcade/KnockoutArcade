@@ -220,6 +220,12 @@ function HandleHitboxCollision(ownerType)
 						spirit.prevState = spirit.state; // Set the owner's previous state
 						spirit.state = eState.HITSTOP;
 					}
+					
+					// Face opponent towards the source of damage;
+					if (!collision_list[| i].owner.isDestructibleObject)
+					{
+						collision_list[| i].owner.image_xscale = ownerOnSide;
+					}
 
 					// Handle if the opponent is Crouch blocking or not
 					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
@@ -301,10 +307,20 @@ function HandleHitboxCollision(ownerType)
 						collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
 						collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
 					}
-
+					
+					// Set opponent's correct state
 					collision_list[| i].owner.state = eState.HITSTOP;
-					if (collision_list[| i].spirit != noone) collision_list[| i].spirit.state = eState.HITSTOP;
+					if (collision_list[| i].spirit != noone) 
+					{
+						collision_list[| i].spirit.state = eState.HITSTOP;
+					}
 
+					// Face opponent towards the source of damage;
+					if (!collision_list[| i].owner.isDestructibleObject)
+					{
+						collision_list[| i].owner.image_xscale = ownerOnSide;
+					}
+					
 					// Properties on Counter Hit
 					if (collision_list[| i].owner.inAttackState)
 					{
