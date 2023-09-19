@@ -46,7 +46,7 @@ if (playerID == 1)
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
-else 
+else if (playerID == 2) 
 {
 	var moveleft = global.p2ButtonLeft;
 	var moveright = global.p2ButtonRight;
@@ -66,6 +66,26 @@ else
 	var super = 6 * global.p2ButtonSuper;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
+}
+else
+{
+	var moveleft = false;
+	var moveright = false;
+	movedir = moveleft + moveright;
+	var jumpButton = false;
+	var crouchButton = false;
+	verticalMoveDir = jumpButton + crouchButton;
+
+	var runButton = global.p2ButtonRun;
+
+	// Attack Buttons
+	var lightattack = false;
+	var mediumattack = false;
+	var heavyattack = false;
+	var grab = false;
+	var special = false;
+	var super = false;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 }
 
 canBlock = false;
