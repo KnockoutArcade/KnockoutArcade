@@ -2505,7 +2505,7 @@ if (target != noone)
 	
 		combo = 0;
 		comboScaling = 0;
-		meterScaling = 0;
+		meterScaling = 1;
 		comboCounterID = noone;
 		comboDamage = 0;
 		hasUsedMeter = false;
@@ -2552,7 +2552,7 @@ else if (spiritObject != noone)
 	
 	combo = 0;
 	comboScaling = 0;
-	meterScaling = 0;
+	meterScaling = 1;
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
@@ -2569,7 +2569,7 @@ else
 	
 	combo = 0;
 	comboScaling = 0;
-	meterScaling = 0;
+	meterScaling = 1;
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
