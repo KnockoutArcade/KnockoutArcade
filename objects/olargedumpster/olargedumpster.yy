@@ -29,7 +29,7 @@
   "overriddenProperties": [
     {"propertyId":{"name":"hurtboxXSize","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"64","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"hurtboxYSize","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"96","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"hp","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"65","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"MaxHitPoints","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"65","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"wallYScale","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"6","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {

@@ -92,6 +92,21 @@ switch (state)
 		{
 			state = eState.IDLE;
 			x = xHome;
+			
+			// Show Damage according to health
+			if (hp < (MaxHitPoints * 0.1))
+			{
+				image_index = 3;
+			}
+			else if (hp < (MaxHitPoints * 0.5))
+			{
+				image_index = 2;
+			}
+			else if (hp < (MaxHitPoints * 0.95))
+			{
+				image_index = 1;
+			}
+			
 		}
 	}
 	break;
