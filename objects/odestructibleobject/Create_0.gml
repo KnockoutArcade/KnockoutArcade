@@ -103,3 +103,5 @@ CharacterSprites = {
 	knockdown_Sprite : sprite_index,
 	getup_Sprite : sprite_index,
 }
+
+image_speed = 0; // Prevent sprite from animating until we tell it to
