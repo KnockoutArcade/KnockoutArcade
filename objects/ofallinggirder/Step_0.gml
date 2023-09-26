@@ -22,7 +22,6 @@ if (place_meeting(x, y + vsp, oWall))
 	{
 		var collidedObjectsList = ds_list_create();
 		var collidedObjects = instance_place_list(x, y, oDestructibleObject, collidedObjectsList, false);
-		hasFallen = true;
 		
 		for (var i = 0; i < collidedObjects; i++;)
 		{
@@ -38,6 +37,32 @@ if (place_meeting(x, y + vsp, oWall))
 		
 		ds_list_destroy(collidedObjectsList);
 	}
+	
+	hasFallen = true;
 }
 
 y += vsp;
+
+if (hasFallen)
+{
+	despawnTimer++;
+	
+	// Alternate visibilty (blink while despawning)
+	if (despawnTimer mod blinkInterval == 0)
+	{
+		if (visible)
+		{
+			visible = false;
+		}
+		else
+		{
+			visible = true;
+		}
+	}
+	
+	// Destroy the object
+	if (despawnTimer >= despawnLength)
+	{
+		instance_destroy();
+	}
+}

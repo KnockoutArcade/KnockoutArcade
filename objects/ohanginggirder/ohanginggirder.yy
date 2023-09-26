@@ -39,6 +39,7 @@
     {"propertyId":{"name":"collisionIsSemisolid","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"True","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"wallXScale","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
     {"propertyId":{"name":"wallYScale","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"animationSpeed","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"1","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Single Player Objects",

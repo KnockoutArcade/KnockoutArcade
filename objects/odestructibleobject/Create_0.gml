@@ -104,4 +104,4 @@ CharacterSprites = {
 	getup_Sprite : sprite_index,
 }
 
-image_speed = 0; // Prevent sprite from animating until we tell it to
+image_speed = animationSpeed; // Prevent sprite from animating until we tell it to
