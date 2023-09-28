@@ -1,6 +1,15 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+var collidingPlayer = instance_place(x, y, oPlayerController);
+if (collidingPlayer != noone)
+{
+	collidingPlayer.coinScore += coinValue;
+	
+	instance_destroy();
+}
+
+
 if (obeyGravity)
 {
 	vsp += fallSpeed;

@@ -215,6 +215,15 @@ function SetupGame()
 				sprite_index = sUIBaseSingleplayer;
 			}
 			
+			// Coin Count
+			singleplayerCoinCount = instance_create_layer(83, 9, "UI", oSingleplayerCoinCount);
+			with (singleplayerCoinCount)
+			{
+				owner = other.p1;
+				ui_xOffset = x;
+				depth -= 1;
+			}
+			
 			//Frame Advantage Debug
 			frameAdvantage = 0;
 			calculateFrameData = false;

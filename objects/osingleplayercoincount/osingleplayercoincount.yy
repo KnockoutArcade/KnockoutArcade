@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sQuarter",
-    "path": "sprites/sQuarter/sQuarter.yy",
+    "name": "sSingleplayerHudNumbers",
+    "path": "sprites/sSingleplayerHudNumbers/sSingleplayerHudNumbers.yy",
   },
   "solid": false,
   "visible": true,
@@ -23,16 +23,17 @@
   "physicsShapePoints": [],
   "eventList": [
     {"isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
-    {"isDnD":false,"eventNum":0,"eventType":3,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
+    {"isDnD":false,"eventNum":64,"eventType":8,"collisionObjectId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMEvent",},
   ],
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Single Player Objects",
-    "path": "folders/Objects/Single Player Objects.yy",
+    "name": "UI",
+    "path": "folders/Objects/UI.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oQuarterCollectable",
+  "name": "oSingleplayerCoinCount",
   "tags": [],
   "resourceType": "GMObject",
 }
