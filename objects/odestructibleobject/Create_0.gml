@@ -14,6 +14,7 @@ isDestructibleObject = true; // Identify this object as destructable
 knockbackDirection = 0; // Which way we should be taking knockback
 
 isOpened = false; // For chests, determine if they are open
+hasSpawnedCoins = false; // Ensure that a chest that opens only spawns its coins once
 
 // Wall Collision
 if (hasWallCollision)

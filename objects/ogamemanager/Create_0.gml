@@ -34,23 +34,6 @@ nonVictim = 0;
 
 SetupGame();
 
-global.p1Rounds = 0;
-p1RoundCounter = instance_create_layer(70, 4, "UI", oRoundCounter);
-with (p1RoundCounter) 
-{
-	owner = 1;
-	ui_xOffset = 70;
-}
-
-global.p2Rounds = 0;
-p2RoundCounter = instance_create_layer(90, 4, "UI", oRoundCounter);
-with (p2RoundCounter) 
-{
-	image_xscale = -1;
-	owner = 2;
-	ui_xOffset = 90;
-}
-
 audio_play_sound(testBGM, 0, true);
 
 P1resultSelRow = 0;

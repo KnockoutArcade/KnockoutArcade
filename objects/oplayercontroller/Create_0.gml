@@ -383,3 +383,6 @@ installInterval = 0;
 damageBonus = 0; // Add this to all attacks
 speedBonus = 0; // Add this to all instances of walking, running, and jumping
 spiritInstall = false;
+
+// Singleplayer coin score
+coinScore = 0; // How much money the player has

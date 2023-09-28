@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "SpecialEffects",
-    "path": "folders/Sprites/SpecialEffects.yy",
+    "name": "Particle Effects",
+    "path": "folders/Sprites/Particle Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "sHitEffect",

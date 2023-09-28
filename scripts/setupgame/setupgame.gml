@@ -113,7 +113,26 @@ function SetupGame()
 			}
 			hudObject.p1Reference = p1;
 			hudObject.p2Reference = p2;
-	
+			
+			// Round Counter
+			global.p1Rounds = 0;
+			p1RoundCounter = instance_create_layer(70, 4, "UI", oRoundCounter);
+			with (p1RoundCounter) 
+			{
+				owner = 1;
+				ui_xOffset = 70;
+			}
+
+			global.p2Rounds = 0;
+			p2RoundCounter = instance_create_layer(90, 4, "UI", oRoundCounter);
+			with (p2RoundCounter) 
+			{
+				image_xscale = -1;
+				owner = 2;
+				ui_xOffset = 90;
+			}
+			
+			// Frame Advantage
 			frameAdvantage = 0;
 			calculateFrameData = false;
 	
@@ -179,10 +198,6 @@ function SetupGame()
 				ui_xOffset = 71;
 			}
 			
-			//Setup Timer
-			TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
-			global.gameTimer = 99;
-			
 			// Create Super Meter UI for Player 1
 			p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
 			with (p1SuperMeter)
@@ -196,6 +211,8 @@ function SetupGame()
 			with (hudObject)
 			{
 				p1Character = global.p1SelectedCharacter;
+				
+				sprite_index = sUIBaseSingleplayer;
 			}
 			
 			//Frame Advantage Debug

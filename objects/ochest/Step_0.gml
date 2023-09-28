@@ -14,4 +14,11 @@ if (isOpened)
 	{
 		image_speed = 0;
 	}
+	
+	if (!hasSpawnedCoins)
+	{
+		DropCoins(coinsToDrop);
+		
+		hasSpawnedCoins = true;
+	}
 }

@@ -50,6 +50,8 @@ switch (state)
 			// Destroy this object if at 0 hp and this object has no unique death properties
 			if (hp <= 0 && !hasUniqueDeath)
 			{
+				DropCoins(coinsToDrop);
+				
 				instance_destroy(hurtbox);
 				if (hasWallCollision)
 				{

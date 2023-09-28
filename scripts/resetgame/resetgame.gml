@@ -7,6 +7,7 @@ function ResetGame()
 	instance_destroy(oBeverly);
 	instance_destroy(oJay);
 	instance_destroy(oSmoothCriminal);
+	instance_destroy(oGunther);
 	
 	instance_destroy(oHitbox);
 	instance_destroy(oThrowEnvDetection);
@@ -22,6 +23,7 @@ function ResetGame()
 	instance_destroy(oSuperKO);
 	instance_destroy(oSuperKOFirst);
 	instance_destroy(oSuperKOOrange);
+	instance_destroy(oRoundCounter);
 	
 	instance_destroy(global.camObj);
 	
