@@ -6,6 +6,13 @@ if (collidingPlayer != noone)
 {
 	collidingPlayer.coinScore += coinValue;
 	
+	var particle = instance_create_layer(x, y, "Particles", oParticles);
+	with(particle)
+	{
+		lifetime = 25;
+		sprite_index = sCollectionSparkle;
+	}
+	
 	instance_destroy();
 }
 

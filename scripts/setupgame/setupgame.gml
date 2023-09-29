@@ -216,8 +216,17 @@ function SetupGame()
 			}
 			
 			// Coin Count
-			singleplayerCoinCount = instance_create_layer(83, 9, "UI", oSingleplayerCoinCount);
+			singleplayerCoinCount = instance_create_layer(83, 10, "UI", oSingleplayerCoinCount);
 			with (singleplayerCoinCount)
+			{
+				owner = other.p1;
+				ui_xOffset = x;
+				depth -= 1;
+			}
+			
+			// Timer
+			singleplayerTimer = instance_create_layer(83, 17, "UI", oSingleplayerTimer);
+			with (singleplayerTimer)
 			{
 				owner = other.p1;
 				ui_xOffset = x;
