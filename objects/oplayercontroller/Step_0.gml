@@ -2952,3 +2952,10 @@ else
 	image_speed = 0;
 	if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite; 
 }
+
+// Play Victory animation
+if (state == eState.ROUND_WIN)
+{
+	sprite_index = sRussel_Intro;
+	image_speed = 1;
+}

@@ -236,6 +236,8 @@ switch (global.gameMode)
 					image_index = true;
 					lifetime = 99999;
 				}
+				
+				p1.state = eState.ROUND_WIN;
 			}
 			
 			if (levelCompleteTimer == 300)
