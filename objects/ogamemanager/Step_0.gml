@@ -220,6 +220,38 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
+		// When a player completes a level
+		if (global.hasCompletedLevel)
+		{
+			global.gameHalt = true;
+			
+			levelCompleteTimer++;
+			
+			if (levelCompleteTimer == 10)
+			{
+				levelCompleteParticle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
+				with (levelCompleteParticle) 
+				{
+					sprite_index = sLevelComplete;
+					image_index = true;
+					lifetime = 99999;
+				}
+			}
+			
+			if (levelCompleteTimer == 300)
+			{
+				room_goto(global.campaignMapRoom);
+				global.hasCompletedLevel = false;
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		// handle intros
 		if (p1.hasPerformedIntro && !global.hasCompletedIntros) 
 		{

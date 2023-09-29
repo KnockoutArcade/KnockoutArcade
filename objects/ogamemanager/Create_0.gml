@@ -15,6 +15,8 @@ global.togglePresentationMode = false;
 global.currentRound = 0;
 
 global.hasCompletedIntros = false;
+levelCompleteTimer = 0; // Timer for the level end sequence
+levelCompleteParticle = noone; // Pointer to the particle effect responsible for putting the results on the screen
 
 p1 = noone;
 p2 = noone;
@@ -33,6 +35,9 @@ victim = 0;
 nonVictim = 0;
 
 SetupGame();
+
+global.p1Rounds = 0;
+global.p2Rounds = 0;
 
 audio_play_sound(testBGM, 0, true);
 

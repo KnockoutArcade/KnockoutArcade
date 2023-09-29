@@ -115,7 +115,6 @@ function SetupGame()
 			hudObject.p2Reference = p2;
 			
 			// Round Counter
-			global.p1Rounds = 0;
 			p1RoundCounter = instance_create_layer(70, 4, "UI", oRoundCounter);
 			with (p1RoundCounter) 
 			{
@@ -123,7 +122,6 @@ function SetupGame()
 				ui_xOffset = 70;
 			}
 
-			global.p2Rounds = 0;
 			p2RoundCounter = instance_create_layer(90, 4, "UI", oRoundCounter);
 			with (p2RoundCounter) 
 			{
