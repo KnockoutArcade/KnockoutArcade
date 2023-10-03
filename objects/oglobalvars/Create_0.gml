@@ -24,6 +24,9 @@ global.campaignMapLocationY = 0;
 // What room to put the player in after exiting a singleplayer level
 global.campaignMapRoom = 0;
 
+// How long until the level start text appears
+global.campaignStartLevelDelay = 0;
+
 // List of comleted levels
 global.completedLevels = ds_list_create();
 

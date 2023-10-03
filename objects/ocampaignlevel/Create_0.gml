@@ -10,6 +10,9 @@ levelStartY = 104;
 
 levelName = "CampaignTest";
 
+// How long to wait until the round start text appears
+startLevelDelay = 0;
+
 // If the level for this object has been completed, change its color
 if (ds_list_find_index(global.completedLevels, levelName) != -1)
 {

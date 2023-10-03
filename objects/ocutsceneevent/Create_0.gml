@@ -23,5 +23,7 @@ sceneID = 0; // The index for which script we are executing in the cutscene
 waitTimer = 0; // Timer for the wait command
 inputTimer = 0; // Timer for the input commands
 
+activateByPlayer = true; // Whether this cutscene should activate if a player touches the trigger
+isActivated = false; // Whether this cutscene has been activated
 
-
+isIntroCutscene = false; // Whether this cutscene is an intro cutscene

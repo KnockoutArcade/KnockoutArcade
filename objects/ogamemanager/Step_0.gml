@@ -263,6 +263,16 @@ switch (global.gameMode)
 			{
 				sprite_index = sRound1Start;
 				lifetime = 110;
+				startDelay = global.campaignStartLevelDelay;
+				
+				// Set invisible so we don't see it flicker for 1 frame if it's supposed to be delayed
+				if (startDelay > 0)
+				{
+					visible = false;
+				}
+				
+				// Reset Start Delay
+				global.campaignStartLevelDelay = 0;
 			}
 		}
 		

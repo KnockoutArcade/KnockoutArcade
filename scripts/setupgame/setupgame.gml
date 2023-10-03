@@ -247,8 +247,16 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
+					startDelay = global.campaignStartLevelDelay;
 					sprite_index = sRound1Start;
 					lifetime = 110;
+					
+					if (startDelay > 0)
+					{
+						visible = false;
+					}
+					
+					global.campaignStartLevelDelay = 0;
 				}
 			}
 		}

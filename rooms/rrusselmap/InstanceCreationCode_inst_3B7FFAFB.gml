@@ -3,7 +3,7 @@ levelDestination = rCampaignTutorial;
 
 // Where to start the player in the level
 levelStartX = 32;
-levelStartY = 104;
+levelStartY = -10;
 
 levelName = "CampaignTutorial";
 
@@ -16,3 +16,5 @@ else
 {
 	image_index = 0;
 }
+
+startLevelDelay = 100;
