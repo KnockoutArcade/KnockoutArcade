@@ -18,5 +18,6 @@ function Cutscene_ENDSCENE()
 				player.isInCutscene = false;
 			}
 		}
+		
 	}
 }

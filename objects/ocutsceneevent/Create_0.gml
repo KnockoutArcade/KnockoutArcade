@@ -21,7 +21,9 @@ Each entry in the second dimention is an argument for the script in that slot.
 sceneID = 0; // The index for which script we are executing in the cutscene
 
 waitTimer = 0; // Timer for the wait command
-inputTimer = 0; // Timer for the input commands
+cameraTimer = 0; // Timer for the camera commands
+cameraTravelDistanceX = 0; // How much the camera must travel on the x axis
+cameraTravelDistanceY = 0; // How much the camera msut travel on the y axis
 
 activateByPlayer = true; // Whether this cutscene should activate if a player touches the trigger
 isActivated = false; // Whether this cutscene has been activated

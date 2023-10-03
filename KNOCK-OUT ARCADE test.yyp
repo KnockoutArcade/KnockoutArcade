@@ -237,6 +237,7 @@
     {"id":{"name":"sfx_spend50Meter","path":"sounds/sfx_spend50Meter/sfx_spend50Meter.yy",},"order":16,},
     {"id":{"name":"sDoubleKOText","path":"sprites/sDoubleKOText/sDoubleKOText.yy",},"order":17,},
     {"id":{"name":"sBeverly_SideSpecial1_MOCKUP","path":"sprites/sBeverly_SideSpecial1_MOCKUP/sBeverly_SideSpecial1_MOCKUP.yy",},"order":2,},
+    {"id":{"name":"Cutscene_PanCameraLinear","path":"scripts/Cutscene_PanCameraLinear/Cutscene_PanCameraLinear.yy",},"order":7,},
     {"id":{"name":"SummonSpirit","path":"scripts/SummonSpirit/SummonSpirit.yy",},"order":1,},
     {"id":{"name":"sJay_SC_DownSpecia2A_MOCKUP_strip5","path":"sprites/sJay_SC_DownSpecia2A_MOCKUP_strip5/sJay_SC_DownSpecia2A_MOCKUP_strip5.yy",},"order":5,},
     {"id":{"name":"sStageSelect_Text_strip2","path":"sprites/sStageSelect_Text_strip2/sStageSelect_Text_strip2.yy",},"order":0,},
