@@ -23,9 +23,5 @@ sceneID = 0; // The index for which script we are executing in the cutscene
 waitTimer = 0; // Timer for the wait command
 inputTimer = 0; // Timer for the input commands
 
-sceneInfo = [
-	[Cutscene_Wait, 60],
-	[Cutscene_TeleportObject, oRussel, 31, 0]
-];
 
 

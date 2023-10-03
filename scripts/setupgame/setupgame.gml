@@ -36,12 +36,14 @@ function SetupGame()
 				opponent = other.p1;
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
@@ -159,7 +161,6 @@ function SetupGame()
 					}
 				}
 			}
-			global.game_paused = true;
 		}
 		break;
 		
@@ -185,6 +186,7 @@ function SetupGame()
 				opponent = noone;
 				hasPerformedIntro = true;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 			
 			//Setup Health Bar
@@ -249,8 +251,6 @@ function SetupGame()
 					lifetime = 110;
 				}
 			}
-			// Unpauses game
-			global.game_paused = true;
 		}
 		break;
 	}

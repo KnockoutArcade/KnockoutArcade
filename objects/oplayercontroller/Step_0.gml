@@ -24,7 +24,7 @@ if (!global.gameHalt)
 { 
 
 // Handle Inputs
-if (playerID == 1)
+if (playerID == 1 && !isInCutscene)
 {
 	//Movement Buttons
 	var moveleft = global.p1ButtonLeft;
@@ -46,7 +46,7 @@ if (playerID == 1)
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
-else if (playerID == 2) 
+else if (playerID == 2 && !isInCutscene) 
 {
 	var moveleft = global.p2ButtonLeft;
 	var moveright = global.p2ButtonRight;
@@ -76,7 +76,7 @@ else
 	var crouchButton = false;
 	verticalMoveDir = jumpButton + crouchButton;
 
-	var runButton = global.p2ButtonRun;
+	var runButton = false;
 
 	// Attack Buttons
 	var lightattack = false;
@@ -2918,7 +2918,10 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
 	x += hsp + environmentDisplacement;
-	x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	if (!isInCutscene)
+	{
+		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	}
 	y += vsp;
 }
 
