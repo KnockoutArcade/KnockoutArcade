@@ -391,3 +391,6 @@ coinScore = 0; // How much money the player has
 
 // Cutscenes
 isInCutscene = false; // Whether the player is currently in a cutscene
+
+// Controller ID
+controllerID = noone; // The ID for the controller object that controls this.
