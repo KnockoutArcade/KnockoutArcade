@@ -3,7 +3,7 @@ draw_set_color(c_black);
 
 draw_set_halign(fa_center);
 
-draw_text(80, 1, "<  " + playerSelectedText + "  >");
+draw_text(80, 1, "<  " + playerControlsType + "  >");
 
 draw_set_halign(fa_left);
 
@@ -68,20 +68,40 @@ switch (selectedOption)
 
 draw_set_color(c_navy);
 
-// column 1
-draw_text(26, 16, GetPrintableKeyName(playerControlsToChange.buttonUp));
-draw_text(26, 28, GetPrintableKeyName(playerControlsToChange.buttonDown));
-draw_text(26, 43, GetPrintableKeyName(playerControlsToChange.buttonLeft));
-draw_text(26, 58, GetPrintableKeyName(playerControlsToChange.buttonRight));
+if (playerControlsType == "KEYBOARD")
+{
+	// column 1
+	draw_text(26, 16, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonUp));
+	draw_text(26, 28, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonDown));
+	draw_text(26, 43, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonLeft));
+	draw_text(26, 58, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonRight));
 
-// column 2
-draw_text(110, 16, GetPrintableKeyName(playerControlsToChange.buttonLight));
-draw_text(110, 28, GetPrintableKeyName(playerControlsToChange.buttonMedium));
-draw_text(110, 43, GetPrintableKeyName(playerControlsToChange.buttonHeavy));
-draw_text(110, 58, GetPrintableKeyName(playerControlsToChange.buttonGrab));
-draw_text(110, 73, GetPrintableKeyName(playerControlsToChange.buttonSpecial));
-draw_text(110, 88, GetPrintableKeyName(playerControlsToChange.buttonSuper));
-draw_text(110, 103, GetPrintableKeyName(playerControlsToChange.buttonRun));
+	// column 2
+	draw_text(110, 16, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonLight));
+	draw_text(110, 28, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonMedium));
+	draw_text(110, 43, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonHeavy));
+	draw_text(110, 58, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonGrab));
+	draw_text(110, 73, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonSpecial));
+	draw_text(110, 88, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonSuper));
+	draw_text(110, 103, GetPrintableKeyName(playerControlsToChange.Keyboard.buttonRun));
+}
+else
+{
+	// column 1
+	draw_text(26, 16, GetPrintableKeyName(playerControlsToChange.Controller.buttonUp));
+	draw_text(26, 28, GetPrintableKeyName(playerControlsToChange.Controller.buttonDown));
+	draw_text(26, 43, GetPrintableKeyName(playerControlsToChange.Controller.buttonLeft));
+	draw_text(26, 58, GetPrintableKeyName(playerControlsToChange.Controller.buttonRight));
+
+	// column 2
+	draw_text(110, 16, GetPrintableKeyName(playerControlsToChange.Controller.buttonLight));
+	draw_text(110, 28, GetPrintableKeyName(playerControlsToChange.Controller.buttonMedium));
+	draw_text(110, 43, GetPrintableKeyName(playerControlsToChange.Controller.buttonHeavy));
+	draw_text(110, 58, GetPrintableKeyName(playerControlsToChange.Controller.buttonGrab));
+	draw_text(110, 73, GetPrintableKeyName(playerControlsToChange.Controller.buttonSpecial));
+	draw_text(110, 88, GetPrintableKeyName(playerControlsToChange.Controller.buttonSuper));
+	draw_text(110, 103, GetPrintableKeyName(playerControlsToChange.Controller.buttonRun));
+}
 
 if (showMessage)
 {

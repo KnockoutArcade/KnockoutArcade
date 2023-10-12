@@ -40,7 +40,9 @@ if (menuCooldown < 1 && !showMessage)
 		
 		if (selectedOption == -1)
 		{
+			// If we are selecting the very top option, switch between changing player 1 and player 2's controls
 			playerControlsToChange = (playerControlsToChange == global.player1Controls) ? global.player2Controls : global.player1Controls;
+			playerControlsType = (playerControlsType == global.player1ControllerType) ? global.player2ControllerType : global.player1ControllerType;
 		}
 		else
 		{
@@ -53,7 +55,9 @@ if (menuCooldown < 1 && !showMessage)
 		
 		if (selectedOption == -1)
 		{
+			// If we are selecting the very top option, switch between changing player 1 and player 2's controls
 			playerControlsToChange = (playerControlsToChange == global.player1Controls) ? global.player2Controls : global.player1Controls;
+			playerControlsType = (playerControlsType == global.player1ControllerType) ? global.player2ControllerType : global.player1ControllerType;
 		}
 		else
 		{
@@ -96,7 +100,7 @@ else if(showMessage)
 	
 	if (playerControlsToChange == global.player1Controls)
 	{
-		if (global.player1ControllerType == "KEYBOARD")
+		if (playerControlsType == "KEYBOARD")
 		{
 			newKeyPressed = keyboard_check_pressed(vk_anykey);
 			newKey = keyboard_lastkey;
@@ -109,7 +113,7 @@ else if(showMessage)
 	}
 	else
 	{
-		if (global.player2ControllerType == "KEYBOARD")
+		if (playerControlsType == "KEYBOARD")
 		{
 			newKeyPressed = keyboard_check_pressed(vk_anykey);
 			newKey = keyboard_lastkey;
@@ -130,52 +134,128 @@ else if(showMessage)
 		switch (selectedOption)
 		{
 			case 0: // up
-				playerControlsToChange.buttonUp = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonUp = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonUp = newKey;
+				}
 			break;
 			
 			case 1: // down
-				playerControlsToChange.buttonDown = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonDown = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonDown = newKey;
+				}
 			break;
 			
 			case 2: // left
-				playerControlsToChange.buttonLeft = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonLeft = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonLeft = newKey;
+				}
 			break;
 			
 			case 3: // right
-				playerControlsToChange.buttonRight = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonRight = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonRight = newKey;
+				}
 			break;
 			
 			case 8: // light
-				playerControlsToChange.buttonLight = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonLight = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonLight = newKey;
+				}
 			break;
 			
 			case 9: // medium
-				playerControlsToChange.buttonMedium = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonMedium = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonMedium = newKey;
+				}
 			break;
 			
 			case 10: // heavy
-				playerControlsToChange.buttonHeavy = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonHeavy = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonHeavy = newKey;
+				}
 			break;
 			
 			case 11: //grab
-				playerControlsToChange.buttonGrab = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonGrab = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonGrab = newKey;
+				}
 			break;
 			
 			case 12: //special
-				playerControlsToChange.buttonSpecial = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonSpecial = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonSpecial = newKey;
+				}
 			break;
 			
 			case 13: //Super
-				playerControlsToChange.buttonSuper = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonSuper = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonSuper = newKey;
+				}
 			break;
 			
 			case 14: //Run
-				playerControlsToChange.buttonRun = newKey;
+				if (playerControlsType == "KEYBOARD")
+				{
+					playerControlsToChange.Keyboard.buttonRun = newKey;
+				}
+				else
+				{
+					playerControlsToChange.Controller.buttonRun = newKey;
+				}
 			break;
 		}
+		SaveControls();
 	}
-	
-	SaveControls();
 }
 
 if (menuBack && !showMessage)
