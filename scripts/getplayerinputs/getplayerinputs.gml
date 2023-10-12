@@ -117,5 +117,4 @@ function GetPlayerInputs()
 		global.p2ButtonSuper = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonSuper);
 		global.p2ButtonRun = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonRun);
 	};
-
 }

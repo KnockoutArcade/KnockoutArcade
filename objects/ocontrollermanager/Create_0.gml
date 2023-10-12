@@ -19,6 +19,3 @@ ControllerSetup();
 SetPlayerButtons();
 
 LoadControls();
-
-drawTemp = global.player1Controls.Controller.buttonSpecial;
-drawTemp2 = 0;

@@ -12,7 +12,6 @@ function LoadControls()
 		show_debug_message(loadedControls);
 		
 		global.player1Controls = loadedControls;
-		show_debug_message(global.player1Controls);
 	}
 	
 	if (file_exists("2PlayerControls.save"))
