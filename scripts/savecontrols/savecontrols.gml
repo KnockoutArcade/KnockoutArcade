@@ -12,11 +12,11 @@ function SaveControls()
 	buffer_delete(controlBuffer);
 	
 	// Save Player 2 Controls
-	savedControls = json_stringify(global.player2Controls);
+	var p2savedControls = json_stringify(global.player2Controls);
 	
-	controlBuffer = buffer_create(string_byte_length(savedControls) + 1, buffer_fixed, 1);
+	var p2controlBuffer = buffer_create(string_byte_length(p2savedControls) + 1, buffer_fixed, 1);
 	
-	buffer_write(controlBuffer, buffer_string, savedControls);
-	buffer_save(controlBuffer, "2PlayerControls.save");
-	buffer_delete(controlBuffer);
+	buffer_write(p2controlBuffer, buffer_string, p2savedControls);
+	buffer_save(p2controlBuffer, "2PlayerControls.save");
+	buffer_delete(p2controlBuffer);
 }

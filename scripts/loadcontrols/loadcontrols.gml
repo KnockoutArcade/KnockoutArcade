@@ -9,18 +9,20 @@ function LoadControls()
 		buffer_delete(controlBuffer);
 		
 		var loadedControls = json_parse(controlString);
+		show_debug_message(loadedControls);
 		
 		global.player1Controls = loadedControls;
+		show_debug_message(global.player1Controls);
 	}
 	
 	if (file_exists("2PlayerControls.save"))
 	{
-		var controlBuffer = buffer_load("2PlayerControls.save");
-		var controlString = buffer_read(controlBuffer, buffer_string);
-		buffer_delete(controlBuffer);
+		var p2controlBuffer = buffer_load("2PlayerControls.save");
+		var p2controlString = buffer_read(p2controlBuffer, buffer_string);
+		buffer_delete(p2controlBuffer);
 		
-		var loadedControls = json_parse(controlString);
+		var p2loadedControls = json_parse(p2controlString);
 		
-		global.player2Controls = loadedControls;
+		global.player2Controls = p2loadedControls;
 	}
 }
