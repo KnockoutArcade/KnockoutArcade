@@ -174,6 +174,8 @@ else if(showMessage)
 			break;
 		}
 	}
+	
+	SaveControls();
 }
 
 if (menuBack && !showMessage)

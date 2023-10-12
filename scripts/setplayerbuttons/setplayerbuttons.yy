@@ -2,8 +2,8 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "SetupScripts",
-    "path": "folders/Scripts/SetupScripts.yy",
+    "name": "ControlsScripts",
+    "path": "folders/Scripts/ControlsScripts.yy",
   },
   "resourceVersion": "1.0",
   "name": "SetPlayerButtons",

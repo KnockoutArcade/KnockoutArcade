@@ -18,3 +18,5 @@ SetPlayerButtons();
 
 
 ControllerSetup();
+
+LoadControls();
