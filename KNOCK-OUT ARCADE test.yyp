@@ -107,6 +107,7 @@
     {"id":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"order":0,},
     {"id":{"name":"pressattackbutton","path":"scripts/pressattackbutton/pressattackbutton.yy",},"order":0,},
     {"id":{"name":"GamepadCheck","path":"scripts/GamepadCheck/GamepadCheck.yy",},"order":17,},
+    {"id":{"name":"oController","path":"objects/oController/oController.yy",},"order":1,},
     {"id":{"name":"sGunther_JumpLight_mockup_strip7","path":"sprites/sGunther_JumpLight_mockup_strip7/sGunther_JumpLight_mockup_strip7.yy",},"order":3,},
     {"id":{"name":"oSpeedTrail","path":"objects/oSpeedTrail/oSpeedTrail.yy",},"order":10,},
     {"id":{"name":"rTitleScreen","path":"rooms/rTitleScreen/rTitleScreen.yy",},"order":1,},
@@ -524,6 +525,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"GunterJumpingMediumProjectile.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Gunther.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/controlsdata","resourceVersion":"1.0","name":"test.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
