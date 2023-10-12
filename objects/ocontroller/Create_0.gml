@@ -3,5 +3,4 @@
 
 controllerSet = 0;
 
-
 isAIController = false; // Whether this is controlling an AI opponent or not

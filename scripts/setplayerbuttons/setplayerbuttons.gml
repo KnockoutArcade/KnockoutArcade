@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetPlayerButtons() 
 {
-	if (global.player1ControllerType == "KEYBOARD") 
+	global.player1Controls = 
 	{
-		global.player1Controls = {
+		Keyboard : 
+		{
 			buttonLeft : ord("A"),
 			buttonRight : ord("D"),
 			buttonUp : ord("W"),
@@ -15,12 +16,11 @@ function SetPlayerButtons()
 			buttonGrab : vk_space,
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : ord("M"),
-			buttonRun : vk_lshift,
-		};
-	} 
-	else 
-	{
-		global.player1Controls = {
+			buttonRun : vk_lshift
+		},
+		
+		Controller : 
+		{
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
 			buttonUp : gp_axislv,
@@ -32,12 +32,12 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
-		};
-	}
+		}
+	};
 	
-	if (global.player2ControllerType == "KEYBOARD")
-	{
-		global.player2Controls = {
+	global.player2Controls = {
+		Keyboard : 
+		{
 			buttonLeft : vk_left,
 			buttonRight : vk_right,
 			buttonUp : vk_up,
@@ -49,11 +49,9 @@ function SetPlayerButtons()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
-		};
-	} 
-	else 
-	{
-		global.player2Controls = {
+		},
+		Controller : 
+		{
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
 			buttonUp : gp_axislv,
@@ -65,6 +63,6 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
-		};
-	}
+		}
+	};
 }

@@ -16,7 +16,6 @@ global.player2ControllerType = "KEYBOARD";
 
 SetPlayerButtons();
 
-
 ControllerSetup();
 
 LoadControls();
