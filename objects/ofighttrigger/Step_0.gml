@@ -25,6 +25,9 @@ if (isTriggered)
 		image_xscale = other.enemyInitialDirection;
 		opponent = other.instanceThatTriggeredThis;
 		
+		// Setup the palette for this object
+		PaletteSetup(other.enemyPaletteID, selectedCharacter);
+		
 		// Hook up controller
 		controllerID = other.enemyControllerID;
 	}
