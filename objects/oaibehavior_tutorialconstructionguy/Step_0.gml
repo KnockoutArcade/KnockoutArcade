@@ -4,6 +4,21 @@
 // Increase the event timer
 AIEventTimer++;
 
+// If this has been hit, go to hurt state
+if (characterID.hitstun > 0)
+{
+	// Set the state
+	AIState = eAIState.HURT;
+	
+	// Clear inputs
+	controllerID.buttonLeft = false;
+	controllerID.buttonRight = false;
+	controllerID.buttonHeavy = false;
+			
+	// Reset Timer
+	AIEventTimer = 0;
+}
+
 // FSM - Finite State Machine
 switch (AIState)
 {
@@ -21,26 +36,45 @@ switch (AIState)
 		controllerID.buttonUp = false;
 		controllerID.buttonDown = false;
 		
-		// if enough time has passed
-		if (AIEventTimer >= 120)
+		// Once enough time has passed
+		if (AIEventTimer >= randomDelayTimer)
 		{
 			// Set the state
 			AIState = eAIState.WALK;
 			
-			// Set where we are going
-			targetPositionX = opponent.x;
-			targetPositionY = opponent.y;
-			
-			// Reset event timer
+			// Reset event timers
 			AIEventTimer = 0;
+			
+			// Determine random delay
+			randomDelayTimer = irandom_range(30, 120);
+			
+			// Determine random ideal range
+			idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
+			
+			// Set where we are going
+			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
+			targetPositionY = opponent.y;
 		}
 	}
 	break;
 	
 	case eAIState.WALK :
 	{
+		// Determine where we need to go (refresh every 5 frames)
+		// In this case, our target is some distance away from the player (based on the direction this is facing)
+		if (AIEventTimer mod 5 == 0)
+		{
+			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
+		}
+		
 		// Determine which direction we need to walk in
 		var walkDirection = sign(targetPositionX - characterID.x);
+		
+		// Determine if we have reached our destination
+		if (characterID.x < (targetPositionX + closeEnoughToTargetRange)) && (characterID.x > targetPositionX - closeEnoughToTargetRange)
+		{
+			walkDirection = 0;
+		}
 		
 		// If the destination is to the left
 		if (walkDirection == -1)
@@ -59,18 +93,39 @@ switch (AIState)
 			controllerID.buttonRight = false;
 		}
 		
-		// After some time has passed, attack
-		if (AIEventTimer >= 30)
+		// After some time has passed, choose to attack or go idle
+		if (AIEventTimer >= randomDelayTimer)
 		{
-			// Set the state
-			AIState = eAIState.ATTACK;
+			// Roll 3-sided die
+			var chooseIdleOrAttack = irandom(2);
 			
-			// Clear inputs
-			controllerID.buttonLeft = false;
-			controllerID.buttonRight = false;
+			// If 0, go to idle (1 in 3)
+			if (chooseIdleOrAttack == 0)
+			{
+				// Set the state
+				AIState = eAIState.IDLE;
 			
-			// Reset Timer
-			AIEventTimer = 0;
+				// Clear inputs
+				controllerID.buttonLeft = false;
+				controllerID.buttonRight = false;
+			
+				// Reset Timer
+				AIEventTimer = 0;
+				randomDelayTimer = irandom_range(10, 60);
+			}
+			else // Otherwise, attack (2 in 3)
+			{
+				// Set the state
+				AIState = eAIState.ATTACK;
+			
+				// Clear inputs
+				controllerID.buttonLeft = false;
+				controllerID.buttonRight = false;
+			
+				// Reset Timer
+				AIEventTimer = 0;
+			}
+			
 		}
 	}
 	break;
@@ -99,13 +154,32 @@ switch (AIState)
 			
 			// Reset Timer
 			AIEventTimer = 0;
+			randomDelayTimer = irandom_range(80, 120);
 		}
 	}
 	break;
 	
 	case eAIState.HURT :
 	{
-		
+		// Return to Walk once we've recovered
+		if (characterID.state == eState.IDLE)
+		{
+			// Set the state
+			AIState = eAIState.WALK;
+			
+			// Reset event timers
+			AIEventTimer = 0;
+			
+			// Determine random delay
+			randomDelayTimer = irandom_range(30, 120);
+			
+			// Determine random ideal range
+			idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
+			
+			// Set where we are going
+			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
+			targetPositionY = opponent.y;
+		}
 	}
 	break;
 	
