@@ -2962,7 +2962,7 @@ environmentDisplacement = 0;
 floor(y);
 
 // Change the player's direction
-if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP)
+if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
 {
 	if (opponent != noone)
 	{
