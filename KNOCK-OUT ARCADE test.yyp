@@ -63,6 +63,7 @@
     {"id":{"name":"sJay_JumpingHeavy_Mockup_strip6","path":"sprites/sJay_JumpingHeavy_Mockup_strip6/sJay_JumpingHeavy_Mockup_strip6.yy",},"order":15,},
     {"id":{"name":"sfx_Medium_Hit","path":"sounds/sfx_Medium_Hit/sfx_Medium_Hit.yy",},"order":0,},
     {"id":{"name":"sCharSel_Portraits","path":"sprites/sCharSel_Portraits/sCharSel_Portraits.yy",},"order":5,},
+    {"id":{"name":"oAIBehavior_TutorialConstructionGuy","path":"objects/oAIBehavior_TutorialConstructionGuy/oAIBehavior_TutorialConstructionGuy.yy",},"order":1,},
     {"id":{"name":"oJay","path":"objects/oJay/oJay.yy",},"order":3,},
     {"id":{"name":"sfx_blocking","path":"sounds/sfx_blocking/sfx_blocking.yy",},"order":4,},
     {"id":{"name":"sJay_Nspecial_mockup_strip5","path":"sprites/sJay_Nspecial_mockup_strip5/sJay_Nspecial_mockup_strip5.yy",},"order":6,},
@@ -322,6 +323,7 @@
     {"id":{"name":"sUISpirit","path":"sprites/sUISpirit/sUISpirit.yy",},"order":4,},
     {"id":{"name":"sTutorialBackgroundTest","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"order":0,},
     {"id":{"name":"sSuperMeterP1","path":"sprites/sSuperMeterP1/sSuperMeterP1.yy",},"order":0,},
+    {"id":{"name":"oAIBase","path":"objects/oAIBase/oAIBase.yy",},"order":0,},
     {"id":{"name":"sJay_Jump_mockup_strip2","path":"sprites/sJay_Jump_mockup_strip2/sJay_Jump_mockup_strip2.yy",},"order":16,},
     {"id":{"name":"rCharacterSelectScreen","path":"rooms/rCharacterSelectScreen/rCharacterSelectScreen.yy",},"order":2,},
     {"id":{"name":"fntControls","path":"fonts/fntControls/fntControls.yy",},"order":1,},
@@ -510,6 +512,7 @@
     {"folderPath":"folders/Scripts/CutsceneScripts.yy","order":39,"resourceVersion":"1.0","name":"CutsceneScripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Controllers.yy","order":11,"resourceVersion":"1.0","name":"Controllers","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/ControlsScripts.yy","order":40,"resourceVersion":"1.0","name":"ControlsScripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/AI-Related Objects.yy","order":12,"resourceVersion":"1.0","name":"AI-Related Objects","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

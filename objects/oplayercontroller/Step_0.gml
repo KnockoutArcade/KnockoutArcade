@@ -24,7 +24,7 @@ if (!global.gameHalt)
 { 
 
 // Handle Inputs
-if (playerID == 1 && !isInCutscene)
+if (playerID == 1 && !isInCutscene) // Player 1
 {
 	//Movement Buttons
 	var moveleft = global.p1ButtonLeft;
@@ -46,7 +46,7 @@ if (playerID == 1 && !isInCutscene)
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
-else if (playerID == 2 && !isInCutscene) 
+else if (playerID == 2 && !isInCutscene) // Player 2
 {
 	var moveleft = global.p2ButtonLeft;
 	var moveright = global.p2ButtonRight;
