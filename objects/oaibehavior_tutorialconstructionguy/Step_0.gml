@@ -19,6 +19,9 @@ if (characterID.hitstun > 0)
 	AIEventTimer = 0;
 }
 
+// Prevent this object from running
+characterID.canRun = false;
+
 // FSM - Finite State Machine
 switch (AIState)
 {

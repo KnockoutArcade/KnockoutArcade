@@ -27,6 +27,7 @@ RunBackwardFootsteps = selectedCharacter.NonmoveSoundData.RunBackwardFootsteps;
 initialDashSFX = sfx_Jump;
 
 // Running variables
+canRun = true; // Whether the player is allowed to run/backdash or not
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not
 holdForwardTimer = 8; // Determines the amount of time forward is held

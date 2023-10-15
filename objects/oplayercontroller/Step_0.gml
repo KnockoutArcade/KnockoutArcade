@@ -128,63 +128,66 @@ else
 
 
 // Handles running
-if (runButton)
+if (canRun)
 {
-	if (!runButtonPressed)
+	if (runButton)
 	{
-		holdRunButtonTimer = 0;
-		runButtonPressed = true;
-	}
-	if (movedir == image_xscale || movedir == 0)
-	{
-		runningForward = true;
-	}
-	else if (movedir == -image_xscale)
-	{
-		runningBackward = true;
-	}
-	holdRunButtonTimer++;
-}
-else if (movedir == image_xscale) // If moving forward
-{
-	if (holdForwardTimer == 0)
-	{
-		startedMovingForward = true;
-		
-		// Player must press the button again wihin 15 frames to dash
-		if (runForwardTimer < 15)
+		if (!runButtonPressed)
+		{
+			holdRunButtonTimer = 0;
+			runButtonPressed = true;
+		}
+		if (movedir == image_xscale || movedir == 0)
 		{
 			runningForward = true;
 		}
-	}
-	holdForwardTimer++;
-	holdBackwardTimer = 0;
-	runBackwardTimer = 16;
-}
-else if (movedir == -image_xscale) // If moving backward
-{
-	if (holdBackwardTimer == 0)
-	{
-		startedMovingBackward = true;
-		
-		// Player must press the button again wihin 15 frames to dash
-		if (runBackwardTimer < 15)
+		else if (movedir == -image_xscale)
 		{
 			runningBackward = true;
 		}
+		holdRunButtonTimer++;
 	}
-	holdBackwardTimer++;
-	holdForwardTimer = 0;
-	runForwardTimer = 16;
-}
-else if ((!runButton && movedir == 0))
-{
-	runningForward = false;
-	runningBackward = false;
-	holdForwardTimer = 0;
-	holdBackwardTimer = 0;
-	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
-	runButtonPressed = false;
+	else if (movedir == image_xscale) // If moving forward
+	{
+		if (holdForwardTimer == 0)
+		{
+			startedMovingForward = true;
+		
+			// Player must press the button again wihin 15 frames to dash
+			if (runForwardTimer < 15)
+			{
+				runningForward = true;
+			}
+		}
+		holdForwardTimer++;
+		holdBackwardTimer = 0;
+		runBackwardTimer = 16;
+	}
+	else if (movedir == -image_xscale) // If moving backward
+	{
+		if (holdBackwardTimer == 0)
+		{
+			startedMovingBackward = true;
+		
+			// Player must press the button again wihin 15 frames to dash
+			if (runBackwardTimer < 15)
+			{
+				runningBackward = true;
+			}
+		}
+		holdBackwardTimer++;
+		holdForwardTimer = 0;
+		runForwardTimer = 16;
+	}
+	else if ((!runButton && movedir == 0))
+	{
+		runningForward = false;
+		runningBackward = false;
+		holdForwardTimer = 0;
+		holdBackwardTimer = 0;
+		holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
+		runButtonPressed = false;
+	}
 }
 
 // Reset all run timers if holding down
