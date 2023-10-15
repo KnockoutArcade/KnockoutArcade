@@ -28,7 +28,7 @@
     "path": "folders/Objects/Controllers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oController",
+  "name": "oAIController",
   "tags": [],
   "resourceType": "GMObject",
 }

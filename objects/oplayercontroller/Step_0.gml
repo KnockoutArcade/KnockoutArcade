@@ -65,16 +65,35 @@ else if (playerID == 2 && !isInCutscene)
 	var special = 5 * global.p2ButtonSpecial;
 	var super = 6 * global.p2ButtonSuper;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
-
 }
-else
+else if (controllerID != noone) // AI Controller
+{
+	var moveleft = controllerID.buttonLeft * -1;
+	var moveright = controllerID.buttonRight;
+	movedir = moveleft + moveright;
+	var jumpButton = controllerID.buttonUp;
+	var crouchButton = controllerID.buttonDown * -1;
+	verticalMoveDir = jumpButton + crouchButton;
+
+	var runButton = controllerID.buttonRun;
+
+	// Attack Buttons
+	var lightattack = controllerID.buttonLight;
+	var mediumattack = controllerID.buttonMedium;
+	var heavyattack = controllerID.buttonHeavy;
+	var grab = controllerID.buttonGrab;
+	var special = controllerID.buttonSpecial;
+	var super = controllerID.buttonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+}
+else // Safegaurd in case an empty character is spawned
 {
 	var moveleft = false;
 	var moveright = false;
-	movedir = moveleft + moveright;
+	movedir = 0;
 	var jumpButton = false;
 	var crouchButton = false;
-	verticalMoveDir = jumpButton + crouchButton;
+	verticalMoveDir = 0;
 
 	var runButton = false;
 
@@ -85,7 +104,7 @@ else
 	var grab = false;
 	var special = false;
 	var super = false;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+	var attack = 0;
 }
 
 canBlock = false;
