@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// If the owner ever stops existing, destroy this hurtbox
+if (!instance_exists(owner))
+{
+	instance_destroy();
+}
 
 visible = global.toggleHitboxVisibility;
 

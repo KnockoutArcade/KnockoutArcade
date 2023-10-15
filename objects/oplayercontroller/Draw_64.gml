@@ -2,6 +2,10 @@
 // You can write your code in this editor
 if (global.toggleHitboxVisibility)
 {
+	if (controllerID != noone)
+	{
+		draw_text(20, 110, controllerID.buttonLight);
+	}
 
 if (playerID == 1)
 {

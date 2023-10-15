@@ -89,7 +89,7 @@ switch (AIState)
 		}
 		
 		// Once the attack has finished (the character is not in an attack state anymore)
-		if (!controllerID.inAttackState)
+		if (!characterID.inAttackState && AIEventTimer > 1)
 		{
 			// Set the state
 			AIState = eAIState.IDLE;

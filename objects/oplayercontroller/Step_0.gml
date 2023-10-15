@@ -79,11 +79,11 @@ else if (controllerID != noone) // AI Controller
 
 	// Attack Buttons
 	var lightattack = controllerID.buttonLight;
-	var mediumattack = controllerID.buttonMedium;
-	var heavyattack = controllerID.buttonHeavy;
-	var grab = controllerID.buttonGrab;
-	var special = controllerID.buttonSpecial;
-	var super = controllerID.buttonSuper;
+	var mediumattack = 2 * controllerID.buttonMedium;
+	var heavyattack = 3 * controllerID.buttonHeavy;
+	var grab = 4 * controllerID.buttonGrab;
+	var special = 5 * controllerID.buttonSpecial;
+	var super = 6 * controllerID.buttonSuper;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 }
 else // Safegaurd in case an empty character is spawned
@@ -388,6 +388,15 @@ else if (animTimer > inputWindowEnd)
 else
 {
 	PerformMotionInputs(attack);
+}
+
+// If our target ever stops existing, reset our target
+if (target != noone)
+{
+	if (!instance_exists(target))
+	{
+		target = noone;
+	}
 }
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
