@@ -4,6 +4,7 @@
 // Increase the event timer
 AIEventTimer++;
 
+// FSM - Finite State Machine
 switch (AIState)
 {
 	case eAIState.INACTIVE :
@@ -39,7 +40,7 @@ switch (AIState)
 	case eAIState.WALK :
 	{
 		// Determine which direction we need to walk in
-		var walkDirection = sign(targetPositionX - x);
+		var walkDirection = sign(targetPositionX - characterID.x);
 		
 		// If the destination is to the left
 		if (walkDirection == -1)
@@ -57,12 +58,48 @@ switch (AIState)
 			controllerID.buttonLeft = false;
 			controllerID.buttonRight = false;
 		}
+		
+		// After some time has passed, attack
+		if (AIEventTimer >= 30)
+		{
+			// Set the state
+			AIState = eAIState.ATTACK;
+			
+			// Clear inputs
+			controllerID.buttonLeft = false;
+			controllerID.buttonRight = false;
+			
+			// Reset Timer
+			AIEventTimer = 0;
+		}
 	}
 	break;
 	
 	case eAIState.ATTACK :
 	{
+		// Upon entering this state
+		if (AIEventTimer <= 1)
+		{
+			// Input a heavy attack
+			controllerID.buttonHeavy = true;
+		}
+		else
+		{
+			controllerID.buttonHeavy = false;
+		}
 		
+		// Once the attack has finished (the character is not in an attack state anymore)
+		if (!controllerID.inAttackState)
+		{
+			// Set the state
+			AIState = eAIState.IDLE;
+			
+			// Clear inputs
+			controllerID.buttonHeavy = false;
+			
+			// Reset Timer
+			AIEventTimer = 0;
+		}
 	}
 	break;
 	
@@ -71,4 +108,12 @@ switch (AIState)
 		
 	}
 	break;
+	
+	default : // If this has entered an invalid state
+	{
+		// Set the state
+		AIState = eAIState.IDLE;
+		// Reset event timer
+		AIEventTimer = 0;
+	}
 }
