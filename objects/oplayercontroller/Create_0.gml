@@ -273,6 +273,7 @@ hitstop = 0; // How long we are in hitSTOP for
 hitstopBuffer = false;
 prevSprite = 0;
 blockstun = 0;
+isAbleToBlock = true; // Whether this character can block or not (yes for all playable characters)
 isCrouchBlocking = false;
 blockbuffer = false;
 xHome = x;
@@ -395,3 +396,6 @@ isInCutscene = false; // Whether the player is currently in a cutscene
 
 // Controller ID
 controllerID = noone; // The ID for the controller object that controls this.
+
+// Stay on Screen
+shouldStayOnScreen = true; // Whether this objectw will force itself to stay on screen or not

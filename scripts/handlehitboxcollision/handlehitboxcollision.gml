@@ -205,6 +205,7 @@ function HandleHitboxCollision(ownerType)
 
 				}
 				else if (collision_list[| i].owner.canBlock) && // Blocking
+					(collision_list[| i].owner.isAbleToBlock) &&
 					(((attackProperty.AttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) ||
 						attackProperty.AttackType == eAttackType.MID ||
 						(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&

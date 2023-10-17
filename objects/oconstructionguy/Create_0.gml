@@ -17,4 +17,4 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 
 event_inherited();
 
-
+isAbleToBlock = false;

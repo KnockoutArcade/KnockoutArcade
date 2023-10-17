@@ -59,6 +59,7 @@ state = eState.IDLE;
 	hitstopBuffer = false;
 	prevSprite = 0;
 	blockstun = 0;
+	isAbleToBlock = false;
 	isCrouchBlocking = false;
 	blockbuffer = false;
 	xHome = x;
