@@ -82,7 +82,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Jay",
-    "path": "folders/Sprites/Characters/Jay.yy",
+    "path": "folders/Sprites/Characters/Playable/Jay.yy",
   },
   "resourceVersion": "1.0",
   "name": "sJay_JumpingLight_Mockup_strip4",
