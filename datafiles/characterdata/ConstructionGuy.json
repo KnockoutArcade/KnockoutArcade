@@ -23,8 +23,8 @@
     "Crouch": "sBeverly_Crouch",
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
-    "WalkForward": "sConstructionGuy_Idle",
-    "WalkBackward": "sConstructionGuy_Idle",
+    "WalkForward": "sConstructionGuy_Walk_Forwards",
+    "WalkBackward": "sConstructionGuy_Walk_Forwards",
     "RunForward": "sConstructionGuy_Idle",
     "RunBackward": "sConstructionGuy_Idle",
     "JumpSquat": "sConstructionGuy_Idle",
@@ -34,7 +34,7 @@
     "Hold": "sConstructionGuy_Idle",
     "Launched": "sConstructionGuy_Hurt",
     "Knockdown": "sConstructionGuy_KnockedDown",
-    "GetUp": "sRussel_Getup",
+    "GetUp": "sConstructionGuy_Getup",
     "RushCancel": "sConstructionGuy_Idle",
     "WallSplat": "sConstructionGuy_Idle"
   },
@@ -431,6 +431,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2023-10-17T11:51:50.926888-07:00",
+  "LastModified": "2023-10-17T13:48:07.5377874-07:00",
   "LastModifiedBy": "creep"
 }
