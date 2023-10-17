@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!isCurrentlyActive)
+if (!isCurrentlyActive && other.playerID != 0)
 {
 	isTriggered = true;
 	

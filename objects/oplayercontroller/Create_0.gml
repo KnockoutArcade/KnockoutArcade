@@ -398,4 +398,4 @@ isInCutscene = false; // Whether the player is currently in a cutscene
 controllerID = noone; // The ID for the controller object that controls this.
 
 // Stay on Screen
-shouldStayOnScreen = true; // Whether this objectw will force itself to stay on screen or not
+shouldStayOnScreen = true; // Whether this object will force itself to stay on screen or not
