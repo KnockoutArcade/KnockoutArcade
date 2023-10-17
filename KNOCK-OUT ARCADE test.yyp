@@ -156,6 +156,7 @@
     {"id":{"name":"sHUDPortraits","path":"sprites/sHUDPortraits/sHUDPortraits.yy",},"order":2,},
     {"id":{"name":"sJay_ALL_StandingLight2_Mockup_strip6","path":"sprites/sJay_ALL_StandingLight2_Mockup_strip6/sJay_ALL_StandingLight2_Mockup_strip6.yy",},"order":18,},
     {"id":{"name":"sRussel_Walk_Forward","path":"sprites/sRussel_Walk_Forward/sRussel_Walk_Forward.yy",},"order":4,},
+    {"id":{"name":"sConstructionGuy_KnockedDown","path":"sprites/sConstructionGuy_KnockedDown/sConstructionGuy_KnockedDown.yy",},"order":3,},
     {"id":{"name":"sJay_JumpingMedium_mockup_strip5","path":"sprites/sJay_JumpingMedium_mockup_strip5/sJay_JumpingMedium_mockup_strip5.yy",},"order":18,},
     {"id":{"name":"sRussel_UpSpecial","path":"sprites/sRussel_UpSpecial/sRussel_UpSpecial.yy",},"order":32,},
     {"id":{"name":"sRussel_Grab","path":"sprites/sRussel_Grab/sRussel_Grab.yy",},"order":19,},

@@ -29,11 +29,11 @@
     "RunBackward": "sConstructionGuy_Idle",
     "JumpSquat": "sConstructionGuy_Idle",
     "Jump": "sConstructionGuy_Idle",
-    "Hurt": "sRussel_Hurt",
+    "Hurt": "sConstructionGuy_Hurt",
     "Grab": "sConstructionGuy_Idle",
     "Hold": "sConstructionGuy_Idle",
-    "Launched": "sConstructionGuy_Idle",
-    "Knockdown": "sRussel_KnockedDown",
+    "Launched": "sConstructionGuy_Hurt",
+    "Knockdown": "sConstructionGuy_KnockedDown",
     "GetUp": "sRussel_Getup",
     "RushCancel": "sConstructionGuy_Idle",
     "WallSplat": "sConstructionGuy_Idle"
@@ -324,8 +324,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 40,
+          "Lifetime": 20,
+          "AttackWidth": 40,
+          "AttackHeight": 30,
+          "WidthOffset": 0,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -422,6 +431,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2023-10-17T11:17:16.1316261-07:00",
+  "LastModified": "2023-10-17T11:51:50.926888-07:00",
   "LastModifiedBy": "creep"
 }
