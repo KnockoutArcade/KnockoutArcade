@@ -15,6 +15,7 @@
     {"id":{"name":"sTestSprite","path":"sprites/sTestSprite/sTestSprite.yy",},"order":9,},
     {"id":{"name":"sOptionsMeter","path":"sprites/sOptionsMeter/sOptionsMeter.yy",},"order":5,},
     {"id":{"name":"OptionsConvertDecimaltoWhole","path":"scripts/OptionsConvertDecimaltoWhole/OptionsConvertDecimaltoWhole.yy",},"order":36,},
+    {"id":{"name":"oConstructionGuy","path":"objects/oConstructionGuy/oConstructionGuy.yy",},"order":0,},
     {"id":{"name":"sFinishFlag","path":"sprites/sFinishFlag/sFinishFlag.yy",},"order":2,},
     {"id":{"name":"sStageSelect_Cursor","path":"sprites/sStageSelect_Cursor/sStageSelect_Cursor.yy",},"order":1,},
     {"id":{"name":"sGunther_JumpingMedium_Projectile_destroy_strip4","path":"sprites/sGunther_JumpingMedium_Projectile_destroy_strip4/sGunther_JumpingMedium_Projectile_destroy_strip4.yy",},"order":2,},
@@ -517,6 +518,7 @@
     {"folderPath":"folders/Sprites/Characters/NPCs.yy","order":5,"resourceVersion":"1.0","name":"NPCs","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Characters/Playable.yy","order":6,"resourceVersion":"1.0","name":"Playable","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Characters/NPCs/ConstructionGuy.yy","order":1,"resourceVersion":"1.0","name":"ConstructionGuy","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Objects/Characters/NPCs.yy","order":7,"resourceVersion":"1.0","name":"NPCs","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
@@ -535,6 +537,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Russel.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"GunterJumpingMediumProjectile.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Gunther.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"ConstructionGuy.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
