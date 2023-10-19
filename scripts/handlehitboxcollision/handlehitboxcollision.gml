@@ -61,7 +61,7 @@ function HandleHitboxCollision(ownerType)
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit
 			
 			// Multiple projectiles may be hitting the same target.
-			// If this is the case, we want to ignore hasHitThis, since otherwise only one of the projectiles 
+			// If this is the case, we want to ignore gotHitBy, since otherwise only one of the projectiles 
 			// could hit at a time if they share the same group value.
 			// This code will check if this projectile has already hit before, and if not, ignore group IDs
 			if (isProjectile)
@@ -69,9 +69,9 @@ function HandleHitboxCollision(ownerType)
 				var hasThisProjectileAlreadyHitTarget = ds_list_find_index(collision_list[| i].owner.projectileHitByGroup, id);
 				
 				// If this projectile has not hit, ignore group IDs
-				if (!hasThisProjectileAlreadyHitTarget)
+				if (hasThisProjectileAlreadyHitTarget == -1)
 				{
-					hasHitThis = -1;
+					gotHitBy = -1;
 				}
 			}
 			else
