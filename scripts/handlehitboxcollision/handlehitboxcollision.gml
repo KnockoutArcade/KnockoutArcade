@@ -213,9 +213,7 @@ function HandleHitboxCollision(ownerType)
 				{
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
-
-					ownerType.prevState = ownerType.state; // Set the owner's previous state
-					ownerType.state = eState.HITSTOP;
+					
 					if (spirit != noone)
 					{
 						spirit.prevState = spirit.state; // Set the owner's previous state
@@ -248,21 +246,33 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
-					ownerType.pushbackVel = attackProperty.Pushback;
+					
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
 					
 					// Handle Hitstop
-					ownerType.hitstop = attackProperty.AttackHitStop;
 					if (spirit != noone) 
 					{
 						spirit.hitstop = attackProperty.AttackHitStop;
 					}
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
-				
-					// Allow Cancelling
-					ownerType.cancelable = true;
-
+					
+					// If this is not a projectile...
+					if (!isProjectile)
+					{
+						ownerType.prevState = ownerType.state; // Set the owner's previous state
+						ownerType.state = eState.HITSTOP;
+						
+						// Apply pushback
+						ownerType.pushbackVel = attackProperty.Pushback;
+						
+						// Apply hitstop
+						ownerType.hitstop = attackProperty.AttackHitStop;
+						
+						// Allow Cancelling
+						ownerType.cancelable = true;
+					}
+					
 					// Multiple hitboxes
 					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
