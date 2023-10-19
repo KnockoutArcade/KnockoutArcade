@@ -287,10 +287,17 @@ isGrabbed = false;
 invincible = false;
 projectileInvincible = false;
 
+// This list contains all of the hitboxes that have recently hit us. We keep track of it so that
+// hitboxes that have the same "group" value don't both hit
 hitByGroup = ds_list_create();
 ds_list_clear(hitByGroup);
 // Note to self: any time the player exits the move they are currently doing, the hitByGroup list MUST be cleared!
 
+// This list contanis all of the projectiles that have recently hit us. We keep track of it so that
+// multiple projectiles can hit us at once if their hitboxes share the same "group" value
+projectileHitByGroup = ds_list_create();
+ds_list_clear(projectileHitByGroup);
+// Note: This should be cleared any time the player exits hitstun.
 
 toggleIdleBlock = false;
 cancelable = false;

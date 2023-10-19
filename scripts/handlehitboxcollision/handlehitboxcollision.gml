@@ -57,10 +57,29 @@ function HandleHitboxCollision(ownerType)
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
-			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+			var gotHitBy = ds_list_find_index(collision_list[| i].owner.hitByGroup, attackProperty.Group); // Checks if the group value has already hit the target
 			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); // Search the hasHit list for objects that this hitbox has hit
 			
-			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && gotHitBy == -1 && !collision_list[| i].owner.invincible) 
+			// Multiple projectiles may be hitting the same target.
+			// If this is the case, we want to ignore hasHitThis, since otherwise only one of the projectiles 
+			// could hit at a time if they share the same group value.
+			// This code will check if this projectile has already hit before, and if not, ignore group IDs
+			if (isProjectile)
+			{
+				var hasThisProjectileAlreadyHitTarget = ds_list_find_index(collision_list[| i].owner.projectileHitByGroup, id);
+				
+				// If this projectile has not hit, ignore group IDs
+				if (!hasThisProjectileAlreadyHitTarget)
+				{
+					hasHitThis = -1;
+				}
+			}
+			else
+			{
+				var hasThisProjectileAlreadyHitTarget = -1;
+			}
+			
+			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && gotHitBy == -1 && hasThisProjectileAlreadyHitTarget == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
 				ownerType.target = collision_list[| i].owner.id;
@@ -276,6 +295,11 @@ function HandleHitboxCollision(ownerType)
 					// Multiple hitboxes
 					ds_list_add(hasHit, collision_list[| i].owner.id);
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+					// If this is a projectile, add its ID to the target's projectileHitBy list
+					if (isProjectile)
+					{
+						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
+					}
 
 					// Depth Sorting
 					ownerType.depth = -1;

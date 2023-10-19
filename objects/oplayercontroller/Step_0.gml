@@ -2005,7 +2005,10 @@ switch state
 		
 		if (hitstun < 1)
 		{
+			// Clear the hitByGroups to allow follow-up attacks to connect
 			ds_list_clear(hitByGroup);
+			ds_list_clear(projectileHitByGroup);
+			
 			FAvictim = false;
 			
 			if (grounded)

@@ -372,6 +372,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
+		// Since this is a projectile, add its ID to the target's projectileHitBy list
+		ds_list_add(collision_list.owner.projectileHitByGroup, id);
 		
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
