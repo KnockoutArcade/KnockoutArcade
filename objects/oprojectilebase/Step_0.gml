@@ -49,7 +49,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	// Slopes
 	if (place_meeting(x, y + vsp, oSlope) && sign(vsp) != -1)
 	{
-		if (destroyOnFloor && numberOfBounces == 0)
+		if (destroyOnFloor && numberOfBounces <= 0)
 		{
 			for (var i = 0; i < ds_list_size(hitboxID); i++)
 			{
@@ -76,7 +76,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	// Wall Collision
 	if (place_meeting(x+(hsp * image_xscale), y, oWall))
 	{
-		if (destroyOnWall && numberOfBounces == 0)
+		if (destroyOnWall && numberOfBounces <= 0)
 		{
 			for (var i = 0; i < ds_list_size(hitboxID); i++)
 			{
@@ -110,7 +110,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	if (place_meeting(x, y+vsp, oWall))
 	{
-		if (destroyOnFloor && numberOfBounces == 0)
+		if (destroyOnFloor && numberOfBounces <= 0)
 		{
 			for (var i = 0; i < ds_list_size(hitboxID); i++)
 			{
@@ -141,7 +141,7 @@ if (!global.gameHalt && !global.freezeTimer)
 		// Check if we're on the surface of the semiSolid
 		if (floor(y) <= semiSolid.y)
 		{
-			if (destroyOnFloor && numberOfBounces == 0)
+			if (destroyOnFloor && numberOfBounces <= 0)
 			{
 				for (var i = 0; i < ds_list_size(hitboxID); i++)
 				{
@@ -167,7 +167,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	}
 	
 	
-	if (projectileHealth == 0)
+	if (projectileHealth <= 0)
 	{
 		for (var i = 0; i < ds_list_size(hitboxID); i++)
 		{
@@ -188,7 +188,20 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
 		
-		if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
+		// If the projectile has no spirit, then it doesn't need to worry about it's spirit owner
+		if (spiritOwner == noone)
+		{
+			if (playerOwner != collisionID.playerOwner)
+			{
+				with (collisionID)
+				{
+					collidedWithProjectile = true;
+				}
+			
+				collidedWithProjectile = true;
+			}
+		}
+		else if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
 			with (collisionID)
 			{

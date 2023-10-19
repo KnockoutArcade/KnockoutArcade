@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-ds_list_destroy(hasHit);
+
+draw_text(x, 100, playerOwner);
+draw_text(x, 120, spiritOwner);
 
 

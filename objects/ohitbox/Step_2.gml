@@ -14,6 +14,18 @@ if (attackProperty.AttackType == eAttackType.GRAB)
 	sprite_index = sGrabBox;
 }
 
+if (spirit == noone)
+{
+	x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
+	y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
+}
+else
+{
+	x = spirit.x + attackProperty.WidthOffset * sign(spirit.image_xscale);
+	y = spirit.y - attackProperty.HeightOffset * sign(spirit.image_yscale);
+}
+
+// Destoy if expired
 if (lifetime < 1)
 {
 	if (isProjectile)
@@ -24,17 +36,6 @@ if (lifetime < 1)
 		}
 	}
 	instance_destroy();
-}
-
-if (spirit == noone)
-{
-	x = owner.x + attackProperty.WidthOffset * sign(owner.image_xscale);
-	y = owner.y - attackProperty.HeightOffset * sign(owner.image_yscale);
-}
-else
-{
-	x = spirit.x + attackProperty.WidthOffset * sign(spirit.image_xscale);
-	y = spirit.y - attackProperty.HeightOffset * sign(spirit.image_yscale);
 }
 
 // Handle non-projectiles
