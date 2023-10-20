@@ -18,7 +18,7 @@ function SetPlayerButtons()
 			buttonSuper : ord("M"),
 			buttonRun : vk_lshift,
 			
-			// Menu Controls
+			// Menu Controls - These will never be changed
 			buttonMenuLeft : ord("A"),
 			buttonMenuRight : ord("D"),
 			buttonMenuUp : ord("W"),
@@ -41,7 +41,7 @@ function SetPlayerButtons()
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
 			
-			// Menu Controls
+			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
@@ -70,7 +70,7 @@ function SetPlayerButtons()
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
 			
-			// Menu Controls
+			// Menu Controls - These will never be changed
 			buttonMenuLeft : vk_left,
 			buttonMenuRight : vk_right,
 			buttonMenuUp : vk_up,
@@ -92,7 +92,7 @@ function SetPlayerButtons()
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
 			
-			// Menu Controls
+			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
