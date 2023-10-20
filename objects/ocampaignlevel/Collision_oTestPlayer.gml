@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (global.p1ButtonLight)
+if (global.p1ButtonMenuConfirm)
 {
 	
 	global.p1StartingPositionX = levelStartX;

@@ -2,21 +2,21 @@ playerSelectedText = (playerControlsToChange == global.player1Controls) ? "Playe
 
 if (playerID == 1)
 {
-	var menuUp = global.p1ButtonUp;
-	var menuDown = global.p1ButtonDown;
-	var menuLeft = global.p1ButtonLeft;
-	var menuRight = global.p1ButtonRight;
-	var menuConfirm = global.p1ButtonLight;
-	var menuBack = global.p1ButtonMedium;
+	var menuUp = global.p1ButtonMenuUp;
+	var menuDown = global.p1ButtonMenuDown;
+	var menuLeft = global.p1ButtonMenuLeft;
+	var menuRight = global.p1ButtonMenuRight;
+	var menuConfirm = global.p1ButtonMenuConfirm;
+	var menuBack = global.p1ButtonMenuDeny;
 }
 else
 {
-	var menuUp = global.p2ButtonUp;
-	var menuDown = global.p2ButtonDown;
-	var menuLeft = global.p1ButtonLeft;
-	var menuRight = global.p1ButtonRight;
-	var menuConfirm = global.p2ButtonLight;
-	var menuBack = global.p2ButtonMedium;
+	var menuUp = global.p2ButtonMenuUp;
+	var menuDown = global.p2ButtonMenuDown;
+	var menuLeft = global.p1ButtonMenuLeft;
+	var menuRight = global.p1ButtonMenuRight;
+	var menuConfirm = global.p2ButtonMenuConfirm;
+	var menuBack = global.p2ButtonMenuDeny;
 }
 
 menuCooldown--;
