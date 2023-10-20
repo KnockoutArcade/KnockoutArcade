@@ -17,12 +17,20 @@ function GetPlayerInputs()
 		global.p1ButtonSpecial = keyboard_check_pressed(global.player1Controls.Keyboard.buttonSpecial);
 		global.p1ButtonSuper = keyboard_check_pressed(global.player1Controls.Keyboard.buttonSuper);
 		global.p1ButtonRun = keyboard_check(global.player1Controls.Keyboard.buttonRun);
+		
+		// Menu Controls
+		global.p1ButtonMenuLeft = keyboard_check(global.player1Controls.Keyboard.buttonMenuLeft) * -1;
+		global.p1ButtonMenuRight = keyboard_check(global.player1Controls.Keyboard.buttonMenuRight);
+		global.p1ButtonMenuUp = keyboard_check(global.player1Controls.Keyboard.buttonMenuUp);
+		global.p1ButtonMenuDown = keyboard_check(global.player1Controls.Keyboard.buttonMenuDown) * -1;
+		global.p1ButtonMenuConfirm = keyboard_check(global.player1Controls.Keyboard.buttonMenuConfirm) * -1;
+		global.p1ButtonMenuDeny = keyboard_check(global.player1Controls.Keyboard.buttonMenuDeny) * -1;
 	} 
 	else
 	{
 		if (GamepadCodeIsAxis(global.player1Controls.Controller.buttonLeft))
 		{
-			global.p1ButtonLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonLeft) < -.4) * -1;
+			global.p1ButtonLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonLeft) < -.25) * -1;
 		}
 		else
 		{
@@ -30,7 +38,7 @@ function GetPlayerInputs()
 		}
 		if (GamepadCodeIsAxis(global.player1Controls.Controller.buttonRight))
 		{
-			global.p1ButtonRight = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonRight) > .4);
+			global.p1ButtonRight = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonRight) > .25);
 		}
 		else
 		{
@@ -38,7 +46,7 @@ function GetPlayerInputs()
 		}
 		if(GamepadCodeIsAxis(global.player1Controls.Controller.buttonUp))
 		{
-			global.p1ButtonUp = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonUp) < -.4);
+			global.p1ButtonUp = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonUp) < -.25);
 		}
 		else
 		{
@@ -46,7 +54,7 @@ function GetPlayerInputs()
 		}
 		if(GamepadCodeIsAxis(global.player1Controls.Controller.buttonDown))
 		{
-			global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonDown) > .4) * -1;
+			global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonDown) > .25) * -1;
 		}
 		else
 		{

@@ -46,6 +46,10 @@ function SetPlayerButtons()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			buttonMenuLeftDPAD : gp_padl,
+			buttonMenuRightDPAD : gp_padr,
+			buttonMenuUpDPAD : gp_padu,
+			buttonMenuDownDPAD : gp_padd,
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2
 		}
@@ -93,6 +97,10 @@ function SetPlayerButtons()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			buttonMenuLeftDPAD : gp_padl,
+			buttonMenuRightDPAD : gp_padr,
+			buttonMenuUpDPAD : gp_padu,
+			buttonMenuDownDPAD : gp_padd,
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2
 		}
