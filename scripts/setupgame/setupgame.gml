@@ -174,7 +174,6 @@ function SetupGame()
 			global.camObj.p1 = p1;
 			
 			//Setup Controller
-			ControllerSetup();
 			p1.controller = global.player1ControllerSlot;
 			
 			//Set the player's ID
