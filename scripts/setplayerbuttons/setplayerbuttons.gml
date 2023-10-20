@@ -24,7 +24,9 @@ function SetPlayerButtons()
 			buttonMenuUp : ord("W"),
 			buttonMenuDown : ord("S"),
 			buttonMenuConfirm : ord("J"),
-			buttonMenuDeny : ord("K")
+			buttonMenuDeny : ord("K"),
+			buttonMenuSwitch : ord("L"),
+			buttonMenuSetControls : 186
 		},
 		
 		Controller : 
@@ -51,7 +53,9 @@ function SetPlayerButtons()
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
 			buttonMenuConfirm : gp_face1,
-			buttonMenuDeny : gp_face2
+			buttonMenuDeny : gp_face2,
+			buttonMenuSwitch : gp_face3,
+			buttonMenuSetControls : gp_face4
 		}
 	};
 	
@@ -76,7 +80,9 @@ function SetPlayerButtons()
 			buttonMenuUp : vk_up,
 			buttonMenuDown : vk_down,
 			buttonMenuConfirm : vk_numpad1,
-			buttonMenuDeny : vk_numpad2
+			buttonMenuDeny : vk_numpad2,
+			buttonMenuSwitch : vk_numpad3,
+			buttonMenuSetControls : vk_numpad4
 		},
 		Controller : 
 		{
@@ -102,7 +108,9 @@ function SetPlayerButtons()
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
 			buttonMenuConfirm : gp_face1,
-			buttonMenuDeny : gp_face2
+			buttonMenuDeny : gp_face2,
+			buttonMenuSwitch : gp_face3,
+			buttonMenuSetControls : gp_face4
 		}
 	};
 }

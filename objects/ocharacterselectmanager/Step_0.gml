@@ -13,7 +13,7 @@ var P1menuRowMove = P1menuUp + P1menuDown;
 
 var P1menuConfirm = global.p1ButtonMenuConfirm;
 var P1menuCancel = global.p1ButtonMenuDeny;
-var P1switch = global.p1ButtonHeavy;
+var P1switch = global.p1ButtonMenuSwitch;
 var P1menuConfirmBuffer = false;
 var P1menuAltSelBuffer = false;
 var P1menuMapSelBuffer = false;
