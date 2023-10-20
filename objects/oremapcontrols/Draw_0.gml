@@ -3,7 +3,7 @@ draw_set_color(c_black);
 
 draw_set_halign(fa_center);
 
-draw_text(80, 1, "<  " + playerControlsType + "  >");
+draw_text(80, 1, "<  " + playerSelectedText + "  >");
 
 draw_set_halign(fa_left);
 

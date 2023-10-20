@@ -16,7 +16,15 @@ function SetPlayerButtons()
 			buttonGrab : vk_space,
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : ord("M"),
-			buttonRun : vk_lshift
+			buttonRun : vk_lshift,
+			
+			// Menu Controls
+			buttonMenuLeft : ord("A"),
+			buttonMenuRight : ord("D"),
+			buttonMenuUp : ord("W"),
+			buttonMenuDown : ord("S"),
+			buttonMenuConfirm : ord("J"),
+			buttonMenuDeny : ord("K")
 		},
 		
 		Controller : 
@@ -32,6 +40,14 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			
+			// Menu Controls
+			buttonMenuLeft : gp_axislh,
+			buttonMenuRight : gp_axislh,
+			buttonMenuUp : gp_axislv,
+			buttonMenuDown : gp_axislv,
+			buttonMenuConfirm : gp_face1,
+			buttonMenuDeny : gp_face2
 		}
 	};
 	
@@ -49,6 +65,14 @@ function SetPlayerButtons()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
+			
+			// Menu Controls
+			buttonMenuLeft : vk_left,
+			buttonMenuRight : vk_right,
+			buttonMenuUp : vk_up,
+			buttonMenuDown : vk_down,
+			buttonMenuConfirm : vk_numpad1,
+			buttonMenuDeny : vk_numpad2
 		},
 		Controller : 
 		{
@@ -63,6 +87,14 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			
+			// Menu Controls
+			buttonMenuLeft : gp_axislh,
+			buttonMenuRight : gp_axislh,
+			buttonMenuUp : gp_axislv,
+			buttonMenuDown : gp_axislv,
+			buttonMenuConfirm : gp_face1,
+			buttonMenuDeny : gp_face2
 		}
 	};
 }

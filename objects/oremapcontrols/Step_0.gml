@@ -88,6 +88,11 @@ else if (selectedOption > 15) // pressed right on light, medium, heavy, grab, sp
 	selectedOption -= 16;
 }
 
+if (menuBack && !showMessage)
+{
+	room_goto_previous()
+}
+
 if (menuConfirm && !showMessage && menuCooldown < 1)
 {
 	menuCooldown = 10;
@@ -256,9 +261,4 @@ else if(showMessage)
 		}
 		SaveControls();
 	}
-}
-
-if (menuBack && !showMessage)
-{
-	room_goto_previous()
 }
