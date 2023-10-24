@@ -200,7 +200,8 @@ enum eState {
 	RUSH_CANCEL_AIR,
 	SCREEN_FREEZE,
 	ROUND_WIN,
-	ROUND_LOSE
+	ROUND_LOSE,
+	OBJECT_DESTROYED
 }
 
 enum eAttackType {

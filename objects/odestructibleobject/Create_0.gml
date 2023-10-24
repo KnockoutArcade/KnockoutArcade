@@ -107,3 +107,8 @@ CharacterSprites = {
 }
 
 image_speed = animationSpeed; // Prevent sprite from animating until we tell it to
+
+// Variables for destruction animation
+blinkInterval = 3; // Every x frames, switch from visable to invisible
+despawnTimer = 0; // Timer that handles the object disappearing
+despawnLength = 30; // The amount of time it takes for the object to despawn

@@ -58,7 +58,7 @@ switch (state)
 					instance_destroy(wallCollisionBox);
 				}
 				ds_list_destroy(hitByGroup);
-				instance_destroy();
+				state = eState.OBJECT_DESTROYED;
 				oPlayerController.target = noone;
 			}
 		}
@@ -96,11 +96,7 @@ switch (state)
 			x = xHome;
 			
 			// Show Damage according to health
-			if (hp < (MaxHitPoints * 0.1))
-			{
-				image_index = 3;
-			}
-			else if (hp < (MaxHitPoints * 0.5))
+			if (hp < (MaxHitPoints * 0.45))
 			{
 				image_index = 2;
 			}
@@ -109,6 +105,35 @@ switch (state)
 				image_index = 1;
 			}
 			
+		}
+	}
+	break;
+	
+	case eState.OBJECT_DESTROYED:
+	{
+		// Set sprite to the destroyed sprite
+		image_index = 3;
+		
+		// Increment despawn timer
+		despawnTimer++;
+	
+		// Alternate visibilty (blink while despawning)
+		if (despawnTimer mod blinkInterval == 0)
+		{
+			if (visible)
+			{
+				visible = false;
+			}
+			else
+			{
+				visible = true;
+			}
+		}
+	
+		// Destroy the object
+		if (despawnTimer >= despawnLength)
+		{
+			instance_destroy();
 		}
 	}
 	break;
@@ -229,7 +254,7 @@ if (state != eState.HITSTOP)
 	}
 	
 	// Update Movement
-	if (!global.freezeTimer)
+	if (!global.freezeTimer && state != eState.OBJECT_DESTROYED)
 	{
 		x += hsp;
 		y += vsp;

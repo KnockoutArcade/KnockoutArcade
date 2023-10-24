@@ -100,6 +100,7 @@
     {"id":{"name":"oGunther_JumpingMedium_Projectile","path":"objects/oGunther_JumpingMedium_Projectile/oGunther_JumpingMedium_Projectile.yy",},"order":2,},
     {"id":{"name":"sStageSelect_Portraits1","path":"sprites/sStageSelect_Portraits1/sStageSelect_Portraits1.yy",},"order":2,},
     {"id":{"name":"GroundedAttackScript","path":"scripts/GroundedAttackScript/GroundedAttackScript.yy",},"order":1,},
+    {"id":{"name":"sLevelCompleteNumbers","path":"sprites/sLevelCompleteNumbers/sLevelCompleteNumbers.yy",},"order":5,},
     {"id":{"name":"sCharSel_Buttons","path":"sprites/sCharSel_Buttons/sCharSel_Buttons.yy",},"order":2,},
     {"id":{"name":"sUIBase","path":"sprites/sUIBase/sUIBase.yy",},"order":0,},
     {"id":{"name":"sJay_UpSpecial2_5_mockup_strip5","path":"sprites/sJay_UpSpecial2_5_mockup_strip5/sJay_UpSpecial2_5_mockup_strip5.yy",},"order":8,},
