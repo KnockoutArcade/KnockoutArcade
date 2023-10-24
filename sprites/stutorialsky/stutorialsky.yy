@@ -24,15 +24,15 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"ad6c1771-8f91-4899-91c2-dcc475d49488","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"ad6c1771-8f91-4899-91c2-dcc475d49488","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"LayerId":{"name":"be97801c-c059-4413-aefa-97fe122402a0","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sTutorialBackgroundTest","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"resourceVersion":"1.0","name":"ad6c1771-8f91-4899-91c2-dcc475d49488","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"afe80ed6-6dd8-4443-b93c-78a8d5e0460f","path":"sprites/sTutorialSky/sTutorialSky.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"afe80ed6-6dd8-4443-b93c-78a8d5e0460f","path":"sprites/sTutorialSky/sTutorialSky.yy",},"LayerId":{"name":"133f11e0-2cd8-4ec8-944b-cc4aec664ca3","path":"sprites/sTutorialSky/sTutorialSky.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sTutorialSky","path":"sprites/sTutorialSky/sTutorialSky.yy",},"resourceVersion":"1.0","name":"afe80ed6-6dd8-4443-b93c-78a8d5e0460f","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sTutorialBackgroundTest","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},
+    "spriteId": {"name":"sTutorialSky","path":"sprites/sTutorialSky/sTutorialSky.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 0.0,
+    "playbackSpeed": 30.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"40db3b83-02a8-4b91-af04-3040f881de5e","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"ad6c1771-8f91-4899-91c2-dcc475d49488","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"fb4b3012-3dcb-4095-93c8-7591b034a5e6","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"afe80ed6-6dd8-4443-b93c-78a8d5e0460f","path":"sprites/sTutorialSky/sTutorialSky.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sTutorialBackgroundTest","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},
+    "parent": {"name":"sTutorialSky","path":"sprites/sTutorialSky/sTutorialSky.yy",},
     "resourceVersion": "1.4",
-    "name": "sTutorialBackgroundTest",
+    "name": "sTutorialSky",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"be97801c-c059-4413-aefa-97fe122402a0","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"133f11e0-2cd8-4ec8-944b-cc4aec664ca3","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Stages/Singleplayer Stages/Tutorial.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sTutorialBackgroundTest",
+  "name": "sTutorialSky",
   "tags": [],
   "resourceType": "GMSprite",
 }
