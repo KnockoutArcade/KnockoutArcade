@@ -240,10 +240,57 @@ switch (global.gameMode)
 				p1.state = eState.ROUND_WIN;
 			}
 			
+			// Once we have done the level complete animation
+			if (levelCompleteParticle != noone)
+			{
+				if (levelCompleteParticle.image_index >= 18)
+				{
+					// Stop the sprite from animating on its own
+					levelCompleteParticle.image_speed = 0;
+				}
+			}
+			
+			// Display the results for time
+			if (levelCompleteTimer == 100)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 19;
+				
+				// Create the text object to render how much time has been spent
+				levelCompleteTimeScore = instance_create_layer(global.camObj.x-40, 65, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteTimeScore) 
+				{
+					textToRender = string(other.singleplayerTimer.stringMinutes + ":" + other.singleplayerTimer.stringSeconds + "." + other.singleplayerTimer.stringMilliseconds);
+				}
+			}
+			
+			// Display the results for money
+			if (levelCompleteTimer == 130)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 20;
+				
+				// Create the text object to render how much money the player earned
+				levelCompleteMoneyScore = instance_create_layer(global.camObj.x-32, 74, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteMoneyScore) 
+				{
+					textToRender = string("$" + string(other.singleplayerCoinCount.coinScoreTens) + string(other.singleplayerCoinCount.coinScoreOnes) + string(".") + string(other.singleplayerCoinCount.coinScoreTenths) + string(other.singleplayerCoinCount.coinScoreHundredths));
+				}
+			}
+			
+			// Once enough time has passed, exit singleplayer level
 			if (levelCompleteTimer == 300)
 			{
 				room_goto(global.campaignMapRoom);
 				global.hasCompletedLevel = false;
+				
+				// Reset level Complete vars
+				levelCompleteTimer = 0;
+				levelCompleteParticle = noone; // Pointer to the particle effect responsible for putting the results on the screen
+				levelCompleteTimeScore = noone; // Pointer to the text object that renders the time achieved on the level
+				levelCompleteMoneyScore = noone; // Pointer to text object for the amount of money achieved on this level
+				levelCompleteDamageScore = noone; // Pointer to the text object for the amount of damage recieved
+				levelCompleteKOScore = noone; // Pointer to thet ext object for the number of enemies defeated
 			}
 		}
 		

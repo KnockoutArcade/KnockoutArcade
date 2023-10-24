@@ -27,6 +27,10 @@ global.campaignMapRoom = 0;
 // How long until the level start text appears
 global.campaignStartLevelDelay = 0;
 
+// How much money the player has earned in the most recent level
+global.campaignMoneyScore = 0;
+global.campaignTimeScore = 0;
+
 // List of comleted levels
 global.completedLevels = ds_list_create();
 

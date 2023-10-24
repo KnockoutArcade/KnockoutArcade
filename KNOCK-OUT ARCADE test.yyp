@@ -35,6 +35,7 @@
     {"id":{"name":"Cutscene_SetPlayerState","path":"scripts/Cutscene_SetPlayerState/Cutscene_SetPlayerState.yy",},"order":6,},
     {"id":{"name":"oFallingGirder","path":"objects/oFallingGirder/oFallingGirder.yy",},"order":7,},
     {"id":{"name":"oTutorialTruck","path":"objects/oTutorialTruck/oTutorialTruck.yy",},"order":9,},
+    {"id":{"name":"oSingleplayerResultsText","path":"objects/oSingleplayerResultsText/oSingleplayerResultsText.yy",},"order":9,},
     {"id":{"name":"sfx_UI_Hover","path":"sounds/sfx_UI_Hover/sfx_UI_Hover.yy",},"order":3,},
     {"id":{"name":"oCutsceneEvent","path":"objects/oCutsceneEvent/oCutsceneEvent.yy",},"order":10,},
     {"id":{"name":"sStageSelect_ShadeBox","path":"sprites/sStageSelect_ShadeBox/sStageSelect_ShadeBox.yy",},"order":6,},

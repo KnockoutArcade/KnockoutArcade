@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!global.game_paused)
+if (!global.game_paused && !global.gameHalt)
 {
 	// Increase millisecond count according to framerate
 	levelTimerMilliseconds += (1000 / game_get_speed(gamespeed_fps));

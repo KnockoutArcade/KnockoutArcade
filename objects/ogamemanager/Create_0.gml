@@ -17,6 +17,10 @@ global.currentRound = 0;
 global.hasCompletedIntros = false;
 levelCompleteTimer = 0; // Timer for the level end sequence
 levelCompleteParticle = noone; // Pointer to the particle effect responsible for putting the results on the screen
+levelCompleteTimeScore = noone; // Pointer to the text object that renders the time achieved on the level
+levelCompleteMoneyScore = noone; // Pointer to text object for the amount of money achieved on this level
+levelCompleteDamageScore = noone; // Pointer to the text object for the amount of damage recieved
+levelCompleteKOScore = noone; // Pointer to thet ext object for the number of enemies defeated
 
 p1 = noone;
 p2 = noone;
