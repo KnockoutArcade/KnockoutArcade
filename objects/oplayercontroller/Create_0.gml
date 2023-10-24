@@ -396,8 +396,10 @@ damageBonus = 0; // Add this to all attacks
 speedBonus = 0; // Add this to all instances of walking, running, and jumping
 spiritInstall = false;
 
-// Singleplayer coin score
+// Singleplayer Scores
 coinScore = 0; // How much money the player has
+totalDamageTaken = 0; // For singleplayer levels, records how much damage this player has taken
+totalKOs = 0; // How many opponents this player has knocked out
 
 // Cutscenes
 isInCutscene = false; // Whether the player is currently in a cutscene

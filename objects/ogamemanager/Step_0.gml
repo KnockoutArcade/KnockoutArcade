@@ -278,8 +278,43 @@ switch (global.gameMode)
 				}
 			}
 			
+			// Display the results for damage
+			if (levelCompleteTimer == 160)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 21;
+				
+				// Create the text object to render how much damage the player has taken
+				levelCompleteDamageScore = instance_create_layer(global.camObj.x-24, 83, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteDamageScore) 
+				{
+					textToRender = string(other.p1.totalDamageTaken);
+				}
+			}
+			
+			// Display the results for KOs
+			if (levelCompleteTimer == 190)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 22;
+				
+				// Create the text object to render how many things the player has destroyed
+				levelCompleteKOScore = instance_create_layer(global.camObj.x-45, 92, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteKOScore) 
+				{
+					textToRender = string(other.p1.totalKOs);
+				}
+			}
+			
+			// After displaying all the stats, display rank
+			if (levelCompleteTimer == 230)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 23;
+			}
+			
 			// Once enough time has passed, exit singleplayer level
-			if (levelCompleteTimer == 300)
+			if (levelCompleteTimer == 500)
 			{
 				room_goto(global.campaignMapRoom);
 				global.hasCompletedLevel = false;

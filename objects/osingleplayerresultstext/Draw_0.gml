@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+depth = -100;
 
 // Render text to the screen
 while (currentCharacter <= string_length(textToRender))

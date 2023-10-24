@@ -36,15 +36,28 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
 			{
 				collision_list.owner.hp = 1;
+				// Add the damage to the victim's total damage taken (for singleplayer)
+				collision_list.owner.totalDamageTaken += scaledDamage;
 			}
 			else
 			{
 				collision_list.owner.hp -= scaledDamage;
+				// Add the damage to the victim's total damage taken (for singleplayer)
+				collision_list.owner.totalDamageTaken += scaledDamage;
 			}
 		}
 		else
 		{
 			collision_list.owner.hp -= scaledDamage;
+			// Add the damage to the victim's total damage taken (for singleplayer)
+			collision_list.owner.totalDamageTaken += scaledDamage;
+		}
+		
+		// Death detection
+		if (collision_list.owner.hp <= 0)
+		{
+			// Add 1 to the total KOs of this hitbox's owner
+			owner.totalKOs += 1;
 		}
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
@@ -252,6 +265,16 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				
 		// Apply Damage
 		collision_list.owner.hp -= scaledDamage;
+		// Add the damage to the victim's total damage
+		collision_list.owner.totalDamageTaken -= scaledDamage;
+		
+		// Death detection
+		if (collision_list.owner.hp <= 0)
+		{
+			// Add 1 to the total KOs of this projectile's owner
+			owner.playerowner.totalKOs += 1;
+		}
+		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
