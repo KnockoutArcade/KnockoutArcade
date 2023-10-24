@@ -40,6 +40,20 @@ if (isTriggered)
 		opponent = other.instanceThatTriggeredThis; // Who this AI is targeting
 	}
 	
+	
+	// Set up walls
+	leftWall = instance_create_layer(x + leftWallSpawnXRelative, 0, "Walls", oWall);
+	with (leftWall)
+	{
+		image_yscale = 10;
+	}
+	rightWall = instance_create_layer(x + rightWallSpawnXRelative, 0, "Walls", oWall);
+	with (rightWall)
+	{
+		image_yscale = 10;
+	}
+	
+	
 	isCurrentlyActive = true;
 	
 	global.camObj.isLocked = lockCamera;
@@ -61,6 +75,8 @@ if (isCurrentlyActive)
 		instance_destroy(enemyID);
 		instance_destroy(enemyControllerID);
 		instance_destroy(enemyAIObject);
+		instance_destroy(leftWall);
+		instance_destroy(rightWall);
 		
 		instance_destroy();
 	}
