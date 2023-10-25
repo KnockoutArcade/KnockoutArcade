@@ -272,7 +272,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		if (collision_list.owner.hp <= 0)
 		{
 			// Add 1 to the total KOs of this projectile's owner
-			owner.playerowner.totalKOs += 1;
+			owner.playerOwner.totalKOs += 1;
 		}
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
