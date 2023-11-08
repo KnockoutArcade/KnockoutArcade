@@ -3,33 +3,33 @@
 
 
 // Player 1 cursor vars
-var P1menuLeft = global.p1ButtonLeft;
-var P1menuRight = global.p1ButtonRight;
+var P1menuLeft = global.p1ButtonMenuLeft;
+var P1menuRight = global.p1ButtonMenuRight;
 var P1menuColMove = P1menuLeft + P1menuRight;
 
-var P1menuUp = global.p1ButtonUp;
-var P1menuDown = global.p1ButtonDown;
+var P1menuUp = global.p1ButtonMenuUp;
+var P1menuDown = global.p1ButtonMenuDown;
 var P1menuRowMove = P1menuUp + P1menuDown;
 
-var P1menuConfirm = global.p1ButtonLight;
-var P1menuCancel = global.p1ButtonMedium;
-var P1switch = global.p1ButtonHeavy;
+var P1menuConfirm = global.p1ButtonMenuConfirm;
+var P1menuCancel = global.p1ButtonMenuDeny;
+var P1switch = global.p1ButtonMenuSwitch;
 var P1menuConfirmBuffer = false;
 var P1menuAltSelBuffer = false;
 var P1menuMapSelBuffer = false;
 var P1menuMusicSelBuffer = false;
 
 // Player 2 cursor vars
-var P2menuLeft = global.p2ButtonLeft;
-var P2menuRight = global.p2ButtonRight;
+var P2menuLeft = global.p2ButtonMenuLeft;
+var P2menuRight = global.p2ButtonMenuRight;
 var P2menuColMove = P2menuLeft + P2menuRight;
 
-var P2menuUp = global.p2ButtonUp;
-var P2menuDown = global.p2ButtonDown;
+var P2menuUp = global.p2ButtonMenuUp;
+var P2menuDown = global.p2ButtonMenuDown;
 var P2menuRowMove = P2menuUp + P2menuDown;
 
-var P2menuConfirm = global.p2ButtonLight;
-var P2menuCancel = global.p2ButtonMedium;
+var P2menuConfirm = global.p2ButtonMenuConfirm;
+var P2menuCancel = global.p2ButtonMenuDeny;
 
 var P2menuConfirmBuffer = false;
 

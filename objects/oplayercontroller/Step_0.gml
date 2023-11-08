@@ -24,7 +24,7 @@ if (!global.gameHalt)
 { 
 
 // Handle Inputs
-if (playerID == 1)
+if (playerID == 1 && !isInCutscene) // Player 1
 {
 	//Movement Buttons
 	var moveleft = global.p1ButtonLeft;
@@ -46,7 +46,7 @@ if (playerID == 1)
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
 
 } 
-else 
+else if (playerID == 2 && !isInCutscene) // Player 2
 {
 	var moveleft = global.p2ButtonLeft;
 	var moveright = global.p2ButtonRight;
@@ -65,7 +65,46 @@ else
 	var special = 5 * global.p2ButtonSpecial;
 	var super = 6 * global.p2ButtonSuper;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+}
+else if (controllerID != noone) // AI Controller
+{
+	var moveleft = controllerID.buttonLeft * -1;
+	var moveright = controllerID.buttonRight;
+	movedir = moveleft + moveright;
+	var jumpButton = controllerID.buttonUp;
+	var crouchButton = controllerID.buttonDown * -1;
+	verticalMoveDir = jumpButton + crouchButton;
 
+	var runButton = controllerID.buttonRun;
+
+	// Attack Buttons
+	var lightattack = controllerID.buttonLight;
+	var mediumattack = 2 * controllerID.buttonMedium;
+	var heavyattack = 3 * controllerID.buttonHeavy;
+	var grab = 4 * controllerID.buttonGrab;
+	var special = 5 * controllerID.buttonSpecial;
+	var super = 6 * controllerID.buttonSuper;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+}
+else // Safegaurd in case an empty character is spawned
+{
+	var moveleft = false;
+	var moveright = false;
+	movedir = 0;
+	var jumpButton = false;
+	var crouchButton = false;
+	verticalMoveDir = 0;
+
+	var runButton = false;
+
+	// Attack Buttons
+	var lightattack = false;
+	var mediumattack = false;
+	var heavyattack = false;
+	var grab = false;
+	var special = false;
+	var super = false;
+	var attack = 0;
 }
 
 canBlock = false;
@@ -76,7 +115,7 @@ projectileInvincible = false;
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
 hurtbox.image_yscale = 32;
-hurtboxOffset = -8;
+hurtboxXOffset = -8;
 
 if (special)
 {
@@ -89,63 +128,66 @@ else
 
 
 // Handles running
-if (runButton)
+if (canRun)
 {
-	if (!runButtonPressed)
+	if (runButton)
 	{
-		holdRunButtonTimer = 0;
-		runButtonPressed = true;
-	}
-	if (movedir == image_xscale || movedir == 0)
-	{
-		runningForward = true;
-	}
-	else if (movedir == -image_xscale)
-	{
-		runningBackward = true;
-	}
-	holdRunButtonTimer++;
-}
-else if (movedir == image_xscale) // If moving forward
-{
-	if (holdForwardTimer == 0)
-	{
-		startedMovingForward = true;
-		
-		// Player must press the button again wihin 15 frames to dash
-		if (runForwardTimer < 15)
+		if (!runButtonPressed)
+		{
+			holdRunButtonTimer = 0;
+			runButtonPressed = true;
+		}
+		if (movedir == image_xscale || movedir == 0)
 		{
 			runningForward = true;
 		}
-	}
-	holdForwardTimer++;
-	holdBackwardTimer = 0;
-	runBackwardTimer = 16;
-}
-else if (movedir == -image_xscale) // If moving backward
-{
-	if (holdBackwardTimer == 0)
-	{
-		startedMovingBackward = true;
-		
-		// Player must press the button again wihin 15 frames to dash
-		if (runBackwardTimer < 15)
+		else if (movedir == -image_xscale)
 		{
 			runningBackward = true;
 		}
+		holdRunButtonTimer++;
 	}
-	holdBackwardTimer++;
-	holdForwardTimer = 0;
-	runForwardTimer = 16;
-}
-else if ((!runButton && movedir == 0))
-{
-	runningForward = false;
-	runningBackward = false;
-	holdForwardTimer = 0;
-	holdBackwardTimer = 0;
-	holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
-	runButtonPressed = false;
+	else if (movedir == image_xscale) // If moving forward
+	{
+		if (holdForwardTimer == 0)
+		{
+			startedMovingForward = true;
+		
+			// Player must press the button again wihin 15 frames to dash
+			if (runForwardTimer < 15)
+			{
+				runningForward = true;
+			}
+		}
+		holdForwardTimer++;
+		holdBackwardTimer = 0;
+		runBackwardTimer = 16;
+	}
+	else if (movedir == -image_xscale) // If moving backward
+	{
+		if (holdBackwardTimer == 0)
+		{
+			startedMovingBackward = true;
+		
+			// Player must press the button again wihin 15 frames to dash
+			if (runBackwardTimer < 15)
+			{
+				runningBackward = true;
+			}
+		}
+		holdBackwardTimer++;
+		holdForwardTimer = 0;
+		runForwardTimer = 16;
+	}
+	else if ((!runButton && movedir == 0))
+	{
+		runningForward = false;
+		runningBackward = false;
+		holdForwardTimer = 0;
+		holdBackwardTimer = 0;
+		holdRunButtonTimer = 8; // Keep this variable outside of the Rush Cancel leniency window
+		runButtonPressed = false;
+	}
 }
 
 // Reset all run timers if holding down
@@ -349,6 +391,15 @@ else if (animTimer > inputWindowEnd)
 else
 {
 	PerformMotionInputs(attack);
+}
+
+// If our target ever stops existing, reset our target
+if (target != noone)
+{
+	if (!instance_exists(target))
+	{
+		target = noone;
+	}
 }
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
@@ -1244,7 +1295,7 @@ switch state
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
 		
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		hurtbox.image_xscale = 18;
 		hurtbox.image_yscale = 27;
 		
@@ -1750,7 +1801,7 @@ switch state
 		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		
 		PerformAttack(selectedCharacter.Grab, false);
 		
@@ -1823,7 +1874,7 @@ switch state
 		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
-		hurtboxOffset = -7;
+		hurtboxXOffset = -7;
 		
 		if (grounded)
 		{
@@ -1954,7 +2005,10 @@ switch state
 		
 		if (hitstun < 1)
 		{
+			// Clear the hitByGroups to allow follow-up attacks to connect
 			ds_list_clear(hitByGroup);
+			ds_list_clear(projectileHitByGroup);
+			
 			FAvictim = false;
 			
 			if (grounded)
@@ -2485,7 +2539,7 @@ if (target != noone)
 	
 		combo = 0;
 		comboScaling = 0;
-		meterScaling = 0;
+		meterScaling = 1;
 		comboCounterID = noone;
 		comboDamage = 0;
 		hasUsedMeter = false;
@@ -2532,7 +2586,7 @@ else if (spiritObject != noone)
 	
 	combo = 0;
 	comboScaling = 0;
-	meterScaling = 0;
+	meterScaling = 1;
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
@@ -2549,7 +2603,7 @@ else
 	
 	combo = 0;
 	comboScaling = 0;
-	meterScaling = 0;
+	meterScaling = 1;
 	comboCounterID = noone;
 	comboDamage = 0;
 	hasUsedMeter = false;
@@ -2700,6 +2754,67 @@ if (opponent != noone && !wallHit)
 x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
+// Slope Collision
+
+// Using y + 8 so that if the player is going downhill on a slope, they can stay snapped to the surface
+// Otherwise, the player would jitter as they went down
+if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp) != -1)
+{
+	y = floor(y);
+	
+	// Snap player to Slope's surface
+	// If we are inside a slope, bring us out
+	while (place_meeting(x, y - 1, oSlope))
+	{
+		y -= 1;
+	}
+	// If we are still touching a slope, bring us out
+	if (place_meeting(x, y, oSlope))
+	{
+		y -=1;
+	}
+	
+	// If we are above a slope, bring us down until we are barely touching it
+	while (!place_meeting(x, y + 1, oSlope))
+	{
+		y += 1;
+	}
+	
+	isJumpingForward = false;
+	if (state != eState.HITSTOP)
+	{
+		vsp = 0;
+	}
+	if (hitstop < 1)
+	{
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding) 
+		{
+			state = eState.IDLE;
+			grounded = true;
+			frameAdvantage = true;
+			inAttackState = false;
+			canTurnAround = true;
+			isThrowable = true;
+			
+			audio_play_sound(sfx_Landing, 1, false);
+		}
+		if (!cancelOnLanding) 
+		{
+			grounded = true;
+			isThrowable = true;
+		}
+		if (state == eState.LAUNCHED)
+		{
+			state = eState.KNOCKED_DOWN;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 0;
+			hsp = 0;
+			image_speed = 1;
+		}
+	}
+}
+
+
 // Collisions With Walls
 if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 {
@@ -2769,11 +2884,78 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 }
 
+// Semisolid Platform Collision
+var semiSolidCollisionCheck = place_meeting(x, y+vsp+fallSpeed, oSemiSolid);
+var collisionID = noone;
+
+if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
+{
+	//Determine wether we are rising into a ceiling or falling onto a floor.
+	var fallDirection = sign(vsp);
+	
+	// Creates a list containing all of the semisolids we're colliding with.
+	var semiSolidCollision_list = ds_list_create();
+	collisionID = instance_place_list(x, y+vsp+fallSpeed, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
+	
+	// Iterate through each semisolid
+	for (var i = 0; i < collisionID; i++;)
+	{
+		// Determine if we are above the platform's surface
+		if (y < semiSolidCollision_list[| i].y + 1) && (fallDirection == 1)
+		{
+		
+			while (!place_meeting(x, y + sign(vsp+fallSpeed), semiSolidCollision_list[| i]))
+			{
+				y += sign(vsp);
+			}
+	
+			isJumpingForward = false;
+			if (state != eState.HITSTOP)
+			{
+				vsp = 0;
+			}
+			if (hitstop < 1)
+			{
+				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
+				{
+					state = eState.IDLE;
+					grounded = true;
+					frameAdvantage = true;
+					inAttackState = false;
+					canTurnAround = true;
+					isThrowable = true;
+			
+					audio_play_sound(sfx_Landing, 1, false);
+				}
+				if (!cancelOnLanding) 
+				{
+					grounded = true;
+					isThrowable = true;
+				}
+				if (state == eState.LAUNCHED)
+				{
+					state = eState.KNOCKED_DOWN;
+					sprite_index = CharacterSprites.knockdown_Sprite;
+					image_index = 0;
+					hsp = 0;
+					image_speed = 1;
+				}
+			}
+		}
+	}
+	
+	ds_list_destroy(semiSolidCollision_list);
+}
+
+
 
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
 	x += hsp + environmentDisplacement;
-	x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	if (!isInCutscene && shouldStayOnScreen)
+	{
+		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	}
 	y += vsp;
 }
 
@@ -2783,7 +2965,7 @@ environmentDisplacement = 0;
 floor(y);
 
 // Change the player's direction
-if (!inAttackState && canTurnAround && !rcActivated)
+if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
 {
 	if (opponent != noone)
 	{
@@ -2806,4 +2988,11 @@ else
 {
 	image_speed = 0;
 	if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite; 
+}
+
+// Play Victory animation
+if (state == eState.ROUND_WIN)
+{
+	sprite_index = sRussel_Intro;
+	image_speed = 1;
 }

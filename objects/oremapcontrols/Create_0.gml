@@ -5,6 +5,7 @@ showMessage = false;
 playerSelectedText = "Player 1";
 
 playerControlsToChange = global.player1Controls; // This holds a reference to the set of controls we want to change
+playerControlsType = global.player1ControllerType; // This holds a reference to what kind of controller the player is using 
 
 playerID = 1; // Which player is controlling this menu? 1 for p1, 2 for p2
 

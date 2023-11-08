@@ -1,7 +1,7 @@
 // Destructable objects act as obsticales that the player can collide with and destroy. They rely on the same
 // system that players use for hit detection, which is why a lot of the variables here are shared.
 
-hp = 50;
+hp = MaxHitPoints;
 
 // Prevents crashes from ProcessHit
 spiritObject = noone;
@@ -10,23 +10,31 @@ pendingToggle = false;
 hsp = 0;
 vsp = 0;
 
-knockbackMultiplier = 0; // Multiplier for how much knockback this object takes.
-launchable = false; // Whether this object can be launched or not
 isDestructibleObject = true; // Identify this object as destructable
-isThrowable = false; // whether we can throw this object around or not
 knockbackDirection = 0; // Which way we should be taking knockback
 
-hasWallCollision = true;
-wallXScale = 4; // The wall object has an initial size of 16 px by 16px. These values are mulitplied by the scale values
-wallYScale = 2;
-wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
-with (wallCollisionBox)
-{
-	image_xscale = other.wallXScale;
-	image_yscale = -other.wallYScale;
-}
+isOpened = false; // For chests, determine if they are open
+hasSpawnedCoins = false; // Ensure that a chest that opens only spawns its coins once
 
-sprite_index = sTrashBin;
+// Wall Collision
+if (hasWallCollision)
+{
+	if (collisionIsSemisolid)
+	{
+		wallCollisionBox = instance_create_layer(x, y, "Walls", oSemiSolid);
+	}
+	else
+	{
+		wallCollisionBox = instance_create_layer(x, y, "Walls", oWall);
+	}
+
+	with (wallCollisionBox)
+	{
+		image_xscale = other.wallXScale;
+		image_yscale = other.wallYScale;
+		y = other.y + (16 * -other.wallYScale);
+	}
+}
 
 hitstun = 0;
 hitstop = 0;
@@ -38,10 +46,9 @@ with (hurtbox)
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 64;
-	image_yscale = 32;
+	image_xscale = other.hurtboxXSize;
+	image_yscale = other.hurtboxYSize;
 }
-hurtboxOffset = 0;
 
 // State
 state = eState.IDLE;
@@ -52,6 +59,7 @@ state = eState.IDLE;
 	hitstopBuffer = false;
 	prevSprite = 0;
 	blockstun = 0;
+	isAbleToBlock = false;
 	isCrouchBlocking = false;
 	blockbuffer = false;
 	xHome = x;
@@ -75,7 +83,6 @@ state = eState.IDLE;
 	pushbackVel = 0;
 	
 	grounded = true;
-	fallSpeed = .25; // How fast a character falls
 
 	// Combo Related Variables
 	combo = 0;
@@ -87,6 +94,10 @@ state = eState.IDLE;
 	//Meter Related Variables
 	superMeter = 0; // the amount of meter the player has
 	meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+	
+	// Singleplayer stats
+	totalDamageTaken = 0;
+	totalKOs = 0;
 #endregion
 
 CharacterSprites = {
@@ -98,3 +109,10 @@ CharacterSprites = {
 	knockdown_Sprite : sprite_index,
 	getup_Sprite : sprite_index,
 }
+
+image_speed = animationSpeed; // Prevent sprite from animating until we tell it to
+
+// Variables for destruction animation
+blinkInterval = 3; // Every x frames, switch from visable to invisible
+despawnTimer = 0; // Timer that handles the object disappearing
+despawnLength = 30; // The amount of time it takes for the object to despawn

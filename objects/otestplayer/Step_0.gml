@@ -1,9 +1,9 @@
-moveUp = global.p1ButtonUp;
-moveDown = global.p1ButtonDown;
-moveLeft = global.p1ButtonLeft;
-moveRight = global.p1ButtonRight;
+moveUp = global.p1ButtonMenuUp;
+moveDown = global.p1ButtonMenuDown;
+moveLeft = global.p1ButtonMenuLeft;
+moveRight = global.p1ButtonMenuRight;
 
-var returnToMainMenu = global.p1ButtonMedium;
+var returnToMainMenu = global.p1ButtonMenuDeny;
 
 moveDirection = (moveLeft + moveRight) * moveSpeed;
 verticalMoveDirection = (-moveUp - moveDown) * moveSpeed;

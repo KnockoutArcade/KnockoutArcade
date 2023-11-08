@@ -122,7 +122,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Gunther",
-    "path": "folders/Sprites/Characters/Gunther.yy",
+    "path": "folders/Sprites/Characters/Playable/Gunther.yy",
   },
   "resourceVersion": "1.0",
   "name": "sGunther_UpSpecial_mockup__strip14",

@@ -220,6 +220,122 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
+		// When a player completes a level
+		if (global.hasCompletedLevel)
+		{
+			global.gameHalt = true;
+			
+			levelCompleteTimer++;
+			
+			if (levelCompleteTimer == 10)
+			{
+				levelCompleteParticle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
+				with (levelCompleteParticle) 
+				{
+					sprite_index = sLevelComplete;
+					image_index = true;
+					lifetime = 99999;
+				}
+				
+				p1.state = eState.ROUND_WIN;
+			}
+			
+			// Once we have done the level complete animation
+			if (levelCompleteParticle != noone)
+			{
+				if (levelCompleteParticle.image_index >= 18)
+				{
+					// Stop the sprite from animating on its own
+					levelCompleteParticle.image_speed = 0;
+				}
+			}
+			
+			// Display the results for time
+			if (levelCompleteTimer == 100)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 19;
+				
+				// Create the text object to render how much time has been spent
+				levelCompleteTimeScore = instance_create_layer(global.camObj.x-40, 65, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteTimeScore) 
+				{
+					textToRender = string(other.singleplayerTimer.stringMinutes + ":" + other.singleplayerTimer.stringSeconds + "." + other.singleplayerTimer.stringMilliseconds);
+				}
+			}
+			
+			// Display the results for money
+			if (levelCompleteTimer == 130)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 20;
+				
+				// Create the text object to render how much money the player earned
+				levelCompleteMoneyScore = instance_create_layer(global.camObj.x-32, 74, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteMoneyScore) 
+				{
+					textToRender = string("$" + string(other.singleplayerCoinCount.coinScoreTens) + string(other.singleplayerCoinCount.coinScoreOnes) + string(".") + string(other.singleplayerCoinCount.coinScoreTenths) + string(other.singleplayerCoinCount.coinScoreHundredths));
+				}
+			}
+			
+			// Display the results for damage
+			if (levelCompleteTimer == 160)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 21;
+				
+				// Create the text object to render how much damage the player has taken
+				levelCompleteDamageScore = instance_create_layer(global.camObj.x-24, 83, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteDamageScore) 
+				{
+					textToRender = string(other.p1.totalDamageTaken);
+				}
+			}
+			
+			// Display the results for KOs
+			if (levelCompleteTimer == 190)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 22;
+				
+				// Create the text object to render how many things the player has destroyed
+				levelCompleteKOScore = instance_create_layer(global.camObj.x-45, 92, "Timer", oSingleplayerResultsText); 
+				with (levelCompleteKOScore) 
+				{
+					textToRender = string(other.p1.totalKOs);
+				}
+			}
+			
+			// After displaying all the stats, display rank
+			if (levelCompleteTimer == 230)
+			{
+				// Set the display's image index
+				levelCompleteParticle.image_index = 23;
+			}
+			
+			// Once enough time has passed, exit singleplayer level
+			if (levelCompleteTimer == 500)
+			{
+				room_goto(global.campaignMapRoom);
+				global.hasCompletedLevel = false;
+				
+				// Reset level Complete vars
+				levelCompleteTimer = 0;
+				levelCompleteParticle = noone; // Pointer to the particle effect responsible for putting the results on the screen
+				levelCompleteTimeScore = noone; // Pointer to the text object that renders the time achieved on the level
+				levelCompleteMoneyScore = noone; // Pointer to text object for the amount of money achieved on this level
+				levelCompleteDamageScore = noone; // Pointer to the text object for the amount of damage recieved
+				levelCompleteKOScore = noone; // Pointer to thet ext object for the number of enemies defeated
+			}
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		// handle intros
 		if (p1.hasPerformedIntro && !global.hasCompletedIntros) 
 		{
@@ -229,6 +345,16 @@ switch (global.gameMode)
 			{
 				sprite_index = sRound1Start;
 				lifetime = 110;
+				startDelay = global.campaignStartLevelDelay;
+				
+				// Set invisible so we don't see it flicker for 1 frame if it's supposed to be delayed
+				if (startDelay > 0)
+				{
+					visible = false;
+				}
+				
+				// Reset Start Delay
+				global.campaignStartLevelDelay = 0;
 			}
 		}
 		

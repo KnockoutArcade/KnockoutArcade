@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "Particle Effects",
+    "path": "folders/Sprites/Particle Effects.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBlockEffect",

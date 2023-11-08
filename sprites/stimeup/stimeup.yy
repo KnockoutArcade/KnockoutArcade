@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "UI",
-    "path": "folders/Sprites/UI.yy",
+    "name": "LevelEnd",
+    "path": "folders/Sprites/UI/LevelEnd.yy",
   },
   "resourceVersion": "1.0",
   "name": "sTimeUp",

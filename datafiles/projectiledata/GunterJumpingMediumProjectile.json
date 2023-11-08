@@ -108,97 +108,9 @@
       }
     ]
   },
-  "CopyCharacterPalette": true,
+  "CopyCharacterPalette": false,
   "Character": "Gunther",
-  "Palettes": [
-    {
-      "UID": "1ae4e202-670e-484a-9045-dff617ae9eb5",
-      "Name": "default",
-      "NumberOfReplacableColors": 16,
-      "ColorPalette": [
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        },
-        {
-          "Red": 0.0,
-          "Blue": 0.0,
-          "Green": 0.0
-        }
-      ]
-    }
-  ],
+  "Palettes": [],
   "NumberOfFrames": 4,
   "FrameData": [
     {
@@ -289,6 +201,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2023-08-12T15:21:01.8152835-07:00",
-  "LastModifiedBy": "iansb"
+  "LastModified": "2023-10-19T23:28:51.2218945-07:00",
+  "LastModifiedBy": "creep"
 }

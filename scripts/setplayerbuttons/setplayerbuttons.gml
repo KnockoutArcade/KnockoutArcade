@@ -2,9 +2,10 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetPlayerButtons() 
 {
-	if (global.player1ControllerType == "KEYBOARD") 
+	global.player1Controls = 
 	{
-		global.player1Controls = {
+		Keyboard : 
+		{
 			buttonLeft : ord("A"),
 			buttonRight : ord("D"),
 			buttonUp : ord("W"),
@@ -16,11 +17,20 @@ function SetPlayerButtons()
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : ord("M"),
 			buttonRun : vk_lshift,
-		};
-	} 
-	else 
-	{
-		global.player1Controls = {
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : ord("A"),
+			buttonMenuRight : ord("D"),
+			buttonMenuUp : ord("W"),
+			buttonMenuDown : ord("S"),
+			buttonMenuConfirm : ord("J"),
+			buttonMenuDeny : ord("K"),
+			buttonMenuSwitch : ord("L"),
+			buttonMenuSetControls : 186
+		},
+		
+		Controller : 
+		{
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
 			buttonUp : gp_axislv,
@@ -32,12 +42,26 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
-		};
-	}
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : gp_axislh,
+			buttonMenuRight : gp_axislh,
+			buttonMenuUp : gp_axislv,
+			buttonMenuDown : gp_axislv,
+			buttonMenuLeftDPAD : gp_padl,
+			buttonMenuRightDPAD : gp_padr,
+			buttonMenuUpDPAD : gp_padu,
+			buttonMenuDownDPAD : gp_padd,
+			buttonMenuConfirm : gp_face1,
+			buttonMenuDeny : gp_face2,
+			buttonMenuSwitch : gp_face3,
+			buttonMenuSetControls : gp_face4
+		}
+	};
 	
-	if (global.player2ControllerType == "KEYBOARD")
-	{
-		global.player2Controls = {
+	global.player2Controls = {
+		Keyboard : 
+		{
 			buttonLeft : vk_left,
 			buttonRight : vk_right,
 			buttonUp : vk_up,
@@ -49,11 +73,19 @@ function SetPlayerButtons()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
-		};
-	} 
-	else 
-	{
-		global.player2Controls = {
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : vk_left,
+			buttonMenuRight : vk_right,
+			buttonMenuUp : vk_up,
+			buttonMenuDown : vk_down,
+			buttonMenuConfirm : vk_numpad1,
+			buttonMenuDeny : vk_numpad2,
+			buttonMenuSwitch : vk_numpad3,
+			buttonMenuSetControls : vk_numpad4
+		},
+		Controller : 
+		{
 			buttonLeft : gp_axislh,
 			buttonRight : gp_axislh,
 			buttonUp : gp_axislv,
@@ -65,6 +97,20 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
-		};
-	}
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : gp_axislh,
+			buttonMenuRight : gp_axislh,
+			buttonMenuUp : gp_axislv,
+			buttonMenuDown : gp_axislv,
+			buttonMenuLeftDPAD : gp_padl,
+			buttonMenuRightDPAD : gp_padr,
+			buttonMenuUpDPAD : gp_padu,
+			buttonMenuDownDPAD : gp_padd,
+			buttonMenuConfirm : gp_face1,
+			buttonMenuDeny : gp_face2,
+			buttonMenuSwitch : gp_face3,
+			buttonMenuSetControls : gp_face4
+		}
+	};
 }

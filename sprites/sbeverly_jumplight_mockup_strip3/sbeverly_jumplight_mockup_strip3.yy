@@ -78,7 +78,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Beverly",
-    "path": "folders/Sprites/Characters/Beverly.yy",
+    "path": "folders/Sprites/Characters/Playable/Beverly.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBeverly_JumpLight_Mockup_strip3",
