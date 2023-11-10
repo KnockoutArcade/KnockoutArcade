@@ -3836,7 +3836,7 @@
       "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 6,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
@@ -3848,14 +3848,14 @@
           "ImageIndex": 3
         },
         {
-          "Length": 14,
+          "Length": 16,
           "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 6,
+          "Start": 5,
           "Lifetime": 2,
           "AttackWidth": 17,
           "AttackHeight": 25,
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-11-09T19:53:45.3995866-07:00",
+  "LastModified": "2023-11-10T00:12:32.1738907-07:00",
   "LastModifiedBy": "creep"
 }
