@@ -3836,15 +3836,15 @@
       "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 6,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 11,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
@@ -3855,8 +3855,8 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
-          "Lifetime": 3,
+          "Start": 6,
+          "Lifetime": 2,
           "AttackWidth": 17,
           "AttackHeight": 25,
           "WidthOffset": 5,
@@ -3865,7 +3865,7 @@
           "Damage": 5,
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
-          "AttackHitStop": 6,
+          "AttackHitStop": 8,
           "AttackHitStun": 10,
           "AttackType": 0,
           "BlockStun": 3.0,
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-11-08T19:44:42.3582428-07:00",
+  "LastModified": "2023-11-09T19:53:45.3995866-07:00",
   "LastModifiedBy": "creep"
 }
