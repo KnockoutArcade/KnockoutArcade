@@ -532,14 +532,14 @@
           "Green": 0.0
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
         },
         {
-          "Red": 0.96862745,
-          "Blue": 0.45490196,
-          "Green": 0.6627451
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
         },
         {
           "Red": 0.96862745,
@@ -3836,11 +3836,11 @@
       "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
@@ -3877,8 +3877,8 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": -10,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-11-10T00:12:32.1738907-07:00",
+  "LastModified": "2023-11-10T15:17:08.550034-07:00",
   "LastModifiedBy": "creep"
 }
