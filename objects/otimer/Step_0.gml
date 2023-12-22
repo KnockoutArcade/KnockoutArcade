@@ -1,20 +1,20 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!global.gameHalt && !global.game_paused && !global.freezeTimer)
+if (!global.gameHalt && !global.game_paused && !global.freezeTimer && !oPlayerController.isInCutscene)
 {
 
-if (frameTimer = 0)
-{
-	global.gameTimer--;
-	frameTimer = 60;
-}
+	if (frameTimer = 0)
+	{
+		global.gameTimer--;
+		frameTimer = 60;
+	}
 
-frameTimer--;
+	frameTimer--;
 
-if (global.gameTimer < 0)
-{
-	global.gameTimer = 0;
-}
+	if (global.gameTimer < 0)
+	{
+		global.gameTimer = 0;
+	}
 
 }

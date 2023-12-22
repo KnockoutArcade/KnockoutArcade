@@ -2,16 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ResultsScreen()
 {
-	var P1menuUp = global.p1ButtonUp;
-	var P1menuDown = global.p1ButtonDown;
+	var P1menuUp = global.p1ButtonMenuUp;
+	var P1menuDown = global.p1ButtonMenuDown;
 	var P1menuRowMove = P1menuUp + P1menuDown;
-	var P1menuConfirm = global.p1ButtonLight;
+	var P1menuConfirm = global.p1ButtonMenuConfirm;
 	var P1menuConfirmBuffer = false;
 	
-	var P2menuUp = global.p2ButtonUp;
-	var P2menuDown = global.p2ButtonDown;
+	var P2menuUp = global.p2ButtonMenuUp;
+	var P2menuDown = global.p2ButtonMenuDown;
 	var P2menuRowMove = P2menuUp + P2menuDown;
-	var P2menuConfirm = global.p2ButtonLight;
+	var P2menuConfirm = global.p2ButtonMenuConfirm;
 	var P2menuConfirmBuffer = false;
 	
 	P1cursorCooldown--;

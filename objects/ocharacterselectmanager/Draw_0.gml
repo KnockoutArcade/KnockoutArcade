@@ -604,7 +604,7 @@ else if (state == 1)
     }
 	draw_sprite(sStageSelect_Cursor, 0 + (mapSelBoxAlt * P1hasSelectedMap), 23 + (28 * P1mapSelCol), 68 + (17 * P1mapSelRow));
 	
-	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 85);
+	draw_sprite(sStageSelect_MusicOption_strip4, 2, 13, 85);
 	
 	draw_sprite(sStageSelect_Text_strip2, 0, 12, 56);
 	
@@ -642,7 +642,7 @@ else if (state == 2)
         layer_background_visible(pressStartID, 1);
     }
 	
-	draw_sprite(sStageSelect_MusicOption_strip4, 1, 13, 85);
+	draw_sprite(sStageSelect_MusicOption_strip4, 2, 13, 85);
 	
 	draw_sprite(sStageSelect_Text_strip2, 1, 12, 56);
 	

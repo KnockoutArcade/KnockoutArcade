@@ -27,6 +27,7 @@ RunBackwardFootsteps = selectedCharacter.NonmoveSoundData.RunBackwardFootsteps;
 initialDashSFX = sfx_Jump;
 
 // Running variables
+canRun = true; // Whether the player is allowed to run/backdash or not
 runningForward = false; // Used to tell if the player is running forward or not
 runningBackward = false; // Used to tell if the player is running backward or not
 holdForwardTimer = 8; // Determines the amount of time forward is held
@@ -197,7 +198,10 @@ enum eState {
 	RUSH_CANCEL_FORWARD,
 	RUSH_CANCEL_UP,
 	RUSH_CANCEL_AIR,
-	SCREEN_FREEZE
+	SCREEN_FREEZE,
+	ROUND_WIN,
+	ROUND_LOSE,
+	OBJECT_DESTROYED
 }
 
 enum eAttackType {
@@ -262,13 +266,15 @@ with (hurtbox)
 	image_xscale = 15;
 	image_yscale = 32;
 }
-hurtboxOffset = -9;
+hurtboxXOffset = -9;
+hurtboxYOffset = 0;
 
 hitstun = 0; // How long we are in hitSTUN for
 hitstop = 0; // How long we are in hitSTOP for
 hitstopBuffer = false;
 prevSprite = 0;
 blockstun = 0;
+isAbleToBlock = true; // Whether this character can block or not (yes for all playable characters)
 isCrouchBlocking = false;
 blockbuffer = false;
 xHome = x;
@@ -282,10 +288,17 @@ isGrabbed = false;
 invincible = false;
 projectileInvincible = false;
 
+// This list contains all of the hitboxes that have recently hit us. We keep track of it so that
+// hitboxes that have the same "group" value don't both hit
 hitByGroup = ds_list_create();
 ds_list_clear(hitByGroup);
 // Note to self: any time the player exits the move they are currently doing, the hitByGroup list MUST be cleared!
 
+// This list contanis all of the projectiles that have recently hit us. We keep track of it so that
+// multiple projectiles can hit us at once if their hitboxes share the same "group" value
+projectileHitByGroup = ds_list_create();
+ds_list_clear(projectileHitByGroup);
+// Note: This should be cleared any time the player exits hitstun.
 
 toggleIdleBlock = false;
 cancelable = false;
@@ -382,3 +395,17 @@ installInterval = 0;
 damageBonus = 0; // Add this to all attacks
 speedBonus = 0; // Add this to all instances of walking, running, and jumping
 spiritInstall = false;
+
+// Singleplayer Scores
+coinScore = 0; // How much money the player has
+totalDamageTaken = 0; // For singleplayer levels, records how much damage this player has taken
+totalKOs = 0; // How many opponents this player has knocked out
+
+// Cutscenes
+isInCutscene = false; // Whether the player is currently in a cutscene
+
+// Controller ID
+controllerID = noone; // The ID for the controller object that controls this.
+
+// Stay on Screen
+shouldStayOnScreen = true; // Whether this object will force itself to stay on screen or not

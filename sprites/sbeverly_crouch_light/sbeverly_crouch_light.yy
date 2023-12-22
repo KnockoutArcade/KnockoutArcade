@@ -25,20 +25,20 @@
   "gridY": 0,
   "frames": [
     {"compositeImage":{"FrameId":{"name":"5f3be113-6e00-46dc-b0be-d5b48bcdffbc","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5f3be113-6e00-46dc-b0be-d5b48bcdffbc","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"5f3be113-6e00-46dc-b0be-d5b48bcdffbc","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"ba4e8b7c-4e3e-451d-bc1d-d14e3f396afa","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"5f3be113-6e00-46dc-b0be-d5b48bcdffbc","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"5f3be113-6e00-46dc-b0be-d5b48bcdffbc","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"1b73ba5e-b8f3-4b9e-8ba8-7faab6437784","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"1b73ba5e-b8f3-4b9e-8ba8-7faab6437784","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"1b73ba5e-b8f3-4b9e-8ba8-7faab6437784","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"ba4e8b7c-4e3e-451d-bc1d-d14e3f396afa","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"1b73ba5e-b8f3-4b9e-8ba8-7faab6437784","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"1b73ba5e-b8f3-4b9e-8ba8-7faab6437784","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"2ae63e1b-9c43-418c-bd03-3ed3a2953f10","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"2ae63e1b-9c43-418c-bd03-3ed3a2953f10","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"2ae63e1b-9c43-418c-bd03-3ed3a2953f10","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"ba4e8b7c-4e3e-451d-bc1d-d14e3f396afa","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"2ae63e1b-9c43-418c-bd03-3ed3a2953f10","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"2ae63e1b-9c43-418c-bd03-3ed3a2953f10","tags":[],"resourceType":"GMSpriteFrame",},
     {"compositeImage":{"FrameId":{"name":"77cd5dd7-43c3-458d-aac9-d377f298f421","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"77cd5dd7-43c3-458d-aac9-d377f298f421","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
         {"FrameId":{"name":"77cd5dd7-43c3-458d-aac9-d377f298f421","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"ba4e8b7c-4e3e-451d-bc1d-d14e3f396afa","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"77cd5dd7-43c3-458d-aac9-d377f298f421","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"LayerId":{"name":"330713c0-4463-41e1-848e-c6f02712ed55","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"resourceVersion":"1.0","name":"77cd5dd7-43c3-458d-aac9-d377f298f421","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
@@ -87,7 +87,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Beverly",
-    "path": "folders/Sprites/Characters/Beverly.yy",
+    "path": "folders/Sprites/Characters/Playable/Beverly.yy",
   },
   "resourceVersion": "1.0",
   "name": "sBeverly_Crouch_Light",

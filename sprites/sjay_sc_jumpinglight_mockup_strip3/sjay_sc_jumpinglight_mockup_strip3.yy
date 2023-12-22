@@ -78,7 +78,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Smooth Criminal",
-    "path": "folders/Sprites/Characters/Smooth Criminal.yy",
+    "path": "folders/Sprites/Characters/Playable/Smooth Criminal.yy",
   },
   "resourceVersion": "1.0",
   "name": "sJay_SC_JumpingLight_MOCKUP_strip3",

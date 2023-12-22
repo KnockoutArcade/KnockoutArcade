@@ -1,11 +1,11 @@
 if (!isClosingOptionsMenu)
 {
-	var P1menuUp = global.p1ButtonUp;
-	var P1menuDown = global.p1ButtonDown;
-	P1menuLeft = global.p1ButtonLeft;
-	P1menuRight = global.p1ButtonRight;
-	var P1menuConfirm = global.p1ButtonLight;
-	var P1menuCancel = global.p1ButtonMedium;
+	var P1menuUp = global.p1ButtonMenuUp;
+	var P1menuDown = global.p1ButtonMenuDown;
+	P1menuLeft = global.p1ButtonMenuLeft;
+	P1menuRight = global.p1ButtonMenuRight;
+	var P1menuConfirm = global.p1ButtonMenuConfirm;
+	var P1menuCancel = global.p1ButtonMenuDeny;
 
 	menuCooldown--;
 

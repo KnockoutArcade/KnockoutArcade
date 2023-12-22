@@ -46,14 +46,18 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
-		// Set the camera's target
-		if (p1 != noone)
+		if (!isLocked)
 		{
-			// Camera's target is the midpoint between both players
-			xCameraDestination = (p1.xHome) + (p1.hsp * 2);
-		}
+			// Set the camera's target
+			if (p1 != noone)
+			{
+				// Camera's target is the midpoint between both players
+				xCameraDestination = (p1.xHome) + (p1.hsp * 2);
+			}
 		
-		x = lerp(xCameraDestination, x, cameraSpeed);
+			x = lerp(xCameraDestination, x, cameraSpeed);
+		
+		}
 	
 		camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
 

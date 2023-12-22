@@ -36,12 +36,14 @@ function SetupGame()
 				opponent = other.p1;
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 			with (p1) 
 			{
 				opponent = other.p2;
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
@@ -113,7 +115,24 @@ function SetupGame()
 			}
 			hudObject.p1Reference = p1;
 			hudObject.p2Reference = p2;
-	
+			
+			// Round Counter
+			p1RoundCounter = instance_create_layer(70, 4, "UI", oRoundCounter);
+			with (p1RoundCounter) 
+			{
+				owner = 1;
+				ui_xOffset = 70;
+			}
+
+			p2RoundCounter = instance_create_layer(90, 4, "UI", oRoundCounter);
+			with (p2RoundCounter) 
+			{
+				image_xscale = -1;
+				owner = 2;
+				ui_xOffset = 90;
+			}
+			
+			// Frame Advantage
 			frameAdvantage = 0;
 			calculateFrameData = false;
 	
@@ -142,7 +161,6 @@ function SetupGame()
 					}
 				}
 			}
-			global.game_paused = true;
 		}
 		break;
 		
@@ -156,7 +174,6 @@ function SetupGame()
 			global.camObj.p1 = p1;
 			
 			//Setup Controller
-			ControllerSetup();
 			p1.controller = global.player1ControllerSlot;
 			
 			//Set the player's ID
@@ -168,6 +185,7 @@ function SetupGame()
 				opponent = noone;
 				hasPerformedIntro = true;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
+				isInCutscene = true;
 			}
 			
 			//Setup Health Bar
@@ -178,10 +196,6 @@ function SetupGame()
 				image_xscale = -39;
 				ui_xOffset = 71;
 			}
-			
-			//Setup Timer
-			TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
-			global.gameTimer = 99;
 			
 			// Create Super Meter UI for Player 1
 			p1SuperMeter = instance_create_layer(2, 106, "UI", oSuperMeterUI);
@@ -196,6 +210,26 @@ function SetupGame()
 			with (hudObject)
 			{
 				p1Character = global.p1SelectedCharacter;
+				
+				sprite_index = sUIBaseSingleplayer;
+			}
+			
+			// Coin Count
+			singleplayerCoinCount = instance_create_layer(83, 10, "UI", oSingleplayerCoinCount);
+			with (singleplayerCoinCount)
+			{
+				owner = other.p1;
+				ui_xOffset = x;
+				depth -= 1;
+			}
+			
+			// Timer
+			singleplayerTimer = instance_create_layer(83, 17, "UI", oSingleplayerTimer);
+			with (singleplayerTimer)
+			{
+				owner = other.p1;
+				ui_xOffset = x;
+				depth -= 1;
 			}
 			
 			//Frame Advantage Debug
@@ -212,12 +246,18 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
+					startDelay = global.campaignStartLevelDelay;
 					sprite_index = sRound1Start;
 					lifetime = 110;
+					
+					if (startDelay > 0)
+					{
+						visible = false;
+					}
+					
+					global.campaignStartLevelDelay = 0;
 				}
 			}
-			// Unpauses game
-			global.game_paused = true;
 		}
 		break;
 	}

@@ -13,8 +13,9 @@ global.player2ControllerSlot = -1;
 global.player1ControllerType = "KEYBOARD";
 global.player2ControllerType = "KEYBOARD";
 
+// Set Default Controls
+ControllerSetup();
 
 SetPlayerButtons();
 
-
-ControllerSetup();
+LoadControls();

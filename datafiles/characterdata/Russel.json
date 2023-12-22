@@ -1521,7 +1521,7 @@
           {
             "Frame": 25,
             "RelativeX": -50,
-            "RelativeY": -2,
+            "RelativeY": 0,
             "Sprite": 2,
             "Index": 5,
             "Rotation": 0,
@@ -3375,11 +3375,9 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
-
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -6469,15 +6467,9 @@
           "ParticleYOffset": 40,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
-
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
-
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
-
           "HitSound": "sfx_Heavy_Hit"
         }
       ],
@@ -7603,6 +7595,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2023-08-15T19:35:17.164487-07:00",
+  "LastModified": "2023-09-18T20:01:16.5131996-07:00",
   "LastModifiedBy": "creep"
 }

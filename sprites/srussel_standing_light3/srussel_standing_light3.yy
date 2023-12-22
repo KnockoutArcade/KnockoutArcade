@@ -92,7 +92,7 @@
   "nineSlice": null,
   "parent": {
     "name": "Russel",
-    "path": "folders/Sprites/Characters/Russel.yy",
+    "path": "folders/Sprites/Characters/Playable/Russel.yy",
   },
   "resourceVersion": "1.0",
   "name": "sRussel_Standing_Light3",

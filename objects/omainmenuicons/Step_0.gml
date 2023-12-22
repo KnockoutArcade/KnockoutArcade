@@ -1,6 +1,6 @@
-var P1menuUp = global.p1ButtonUp;
-var P1menuDown = global.p1ButtonDown;
-var P1menuConfirm = global.p1ButtonLight;
+var P1menuUp = global.p1ButtonMenuUp;
+var P1menuDown = global.p1ButtonMenuDown;
+var P1menuConfirm = global.p1ButtonMenuConfirm;
 
 menuCooldown--;
 

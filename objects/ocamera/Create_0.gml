@@ -11,3 +11,5 @@ p2 = noone;
 
 xCameraDestination = x; // Where the camera is targeted to movet towards
 yCameraDestination = y;
+
+isLocked = false; // Whether the camera is locked or not

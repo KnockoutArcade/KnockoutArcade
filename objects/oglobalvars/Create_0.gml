@@ -21,7 +21,21 @@ global.p1StartingPositionY = 104;
 global.campaignMapLocationX = 0;
 global.campaignMapLocationY = 0;
 
+// What room to put the player in after exiting a singleplayer level
+global.campaignMapRoom = 0;
+
+// How long until the level start text appears
+global.campaignStartLevelDelay = 0;
+
+// How much money the player has earned in the most recent level
+global.campaignMoneyScore = 0;
+global.campaignTimeScore = 0;
+
+// List of comleted levels
 global.completedLevels = ds_list_create();
+
+// Trigger for end of level sequence
+global.hasCompletedLevel = false;
 
 // Rush Cancel global variables (both players use them)
 global.rcForwardSpeed = 4;

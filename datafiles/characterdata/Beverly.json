@@ -532,14 +532,14 @@
           "Green": 0.0
         },
         {
-          "Red": 0.92941177,
-          "Blue": 0.6117647,
-          "Green": 0.79607844
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
         },
         {
-          "Red": 0.96862745,
-          "Blue": 0.45490196,
-          "Green": 0.6627451
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
         },
         {
           "Red": 0.96862745,
@@ -3831,38 +3831,42 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_JumpLight_Mockup_strip3",
-      "Duration": 16,
-      "NumberOfFrames": 3,
+      "SpriteName": "sBeverly_Jump_Light",
+      "Duration": 18,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 4,
-          "ImageIndex": 0
-        },
-        {
-          "Length": 6,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 6,
           "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
-          "Lifetime": 3,
-          "AttackWidth": 12,
-          "AttackHeight": 12,
-          "WidthOffset": 6,
-          "HeightOffset": 8,
+          "Start": 5,
+          "Lifetime": 2,
+          "AttackWidth": 20,
+          "AttackHeight": 25,
+          "WidthOffset": 5,
+          "HeightOffset": 10,
           "Group": 1,
           "Damage": 5,
           "MeterGain": 4.0,
           "ComboScaling": 3.0,
-          "AttackHitStop": 6,
-          "AttackHitStun": 7,
+          "AttackHitStop": 8,
+          "AttackHitStun": 10,
           "AttackType": 0,
           "BlockStun": 3.0,
           "KnockBack": 2.0,
@@ -3873,8 +3877,8 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": -10,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
@@ -3891,18 +3895,18 @@
         {
           "CounterHitLevel": 1,
           "Group": 1,
-          "Damage": 20,
-          "MeterGain": 12.0,
-          "ComboScaling": 1.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 14,
+          "Damage": 7,
+          "MeterGain": 7.0,
+          "ComboScaling": 3.0,
+          "AttackHitStop": 12,
+          "AttackHitStun": 10,
           "KnockBack": 5.0,
-          "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
-          "GravityScaling": 0.0,
+          "AirKnockbackVertical": -1.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 1.0,
           "Pushback": 0.0,
           "ParticleXOffset": 18,
           "ParticleYOffset": 10,
@@ -3911,7 +3915,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_light_hit2"
         }
       ],
       "CommandNormalData": {
@@ -3932,11 +3936,11 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 3,
+          "Start": 4,
           "Lifetime": 20,
-          "AttackWidth": 21,
-          "AttackHeight": 11,
-          "WidthOffset": -5,
+          "AttackWidth": 14,
+          "AttackHeight": 28,
+          "WidthOffset": 2,
           "HeightOffset": 6
         }
       ],
@@ -3990,7 +3994,7 @@
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
       "MoveType": 16384,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 4915224,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -7040,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2023-08-18T01:02:29.5011266-07:00",
+  "LastModified": "2023-11-10T15:25:39.2404848-07:00",
   "LastModifiedBy": "creep"
 }
