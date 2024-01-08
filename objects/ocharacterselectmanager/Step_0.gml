@@ -400,12 +400,14 @@ else if (state == 1)
     {
         P1mapSelRow = mapSelRowMax;
     }
-
+	
+	// If we have clicked on a stage
     if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
     {
         P1hasSelectedMap = true;
         P1menuMapSelBuffer = true;
-
+		
+		// Start match on Russel's Stage
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
 			if (selectedMusic == 0) // Auto
@@ -432,7 +434,7 @@ else if (state == 1)
 			room = rRusselStage;
 			global.gameMode = GAMEMODE.VERSUS;
         }
-        else if (P1mapSelCol == 1 && P1mapSelRow == 0)
+        else if (P1mapSelCol == 1 && P1mapSelRow == 0) // Start Match on Beverly's Stage
         {
 			if (selectedMusic == 0) // Auto
 			{
@@ -458,7 +460,7 @@ else if (state == 1)
 			room = rBeverlyStage;
 			global.gameMode = GAMEMODE.VERSUS;
         }
-        else if (P1mapSelCol == 2 && P1mapSelRow == 0)
+        else if (P1mapSelCol == 2 && P1mapSelRow == 0) // Start match on Jay's Stage
         {
 			if (selectedMusic == 0) // Auto
 			{

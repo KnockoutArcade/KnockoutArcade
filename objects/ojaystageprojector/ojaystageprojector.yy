@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sJayScene1",
-    "path": "sprites/sJayScene1/sJayScene1.yy",
+    "name": "sJayScene4",
+    "path": "sprites/sJayScene4/sJayScene4.yy",
   },
   "solid": false,
   "visible": true,

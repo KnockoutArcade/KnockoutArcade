@@ -342,6 +342,7 @@
     {"id":{"name":"sSuperMeterP1","path":"sprites/sSuperMeterP1/sSuperMeterP1.yy",},"order":0,},
     {"id":{"name":"oAIBase","path":"objects/oAIBase/oAIBase.yy",},"order":0,},
     {"id":{"name":"sJay_Jump_mockup_strip2","path":"sprites/sJay_Jump_mockup_strip2/sJay_Jump_mockup_strip2.yy",},"order":16,},
+    {"id":{"name":"sJayScene4","path":"sprites/sJayScene4/sJayScene4.yy",},"order":3,},
     {"id":{"name":"rCharacterSelectScreen","path":"rooms/rCharacterSelectScreen/rCharacterSelectScreen.yy",},"order":2,},
     {"id":{"name":"fntControls","path":"fonts/fntControls/fntControls.yy",},"order":1,},
     {"id":{"name":"sChest","path":"sprites/sChest/sChest.yy",},"order":5,},
