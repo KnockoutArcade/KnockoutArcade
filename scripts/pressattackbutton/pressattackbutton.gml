@@ -6,6 +6,9 @@ function PressAttackButton(attack)
 		switch attack 
 		{
 			case 1:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
@@ -40,6 +43,9 @@ function PressAttackButton(attack)
 			break;
 		
 			case 2:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
@@ -64,6 +70,9 @@ function PressAttackButton(attack)
 			break;
 			
 			case 3:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
@@ -88,6 +97,9 @@ function PressAttackButton(attack)
 			break;
 			
 			case 4:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (state != eState.JUMPING && state != eState.JUMPSQUAT && state != eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.GRAB;
@@ -98,6 +110,9 @@ function PressAttackButton(attack)
 			break;
 			
 			case 5:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0)
 				{
 					state = eState.NEUTRAL_SPECIAL;
@@ -127,6 +142,9 @@ function PressAttackButton(attack)
 			break;
 			
 			case 6:
+				// reset anim timer
+				animTimer = 0;
+				
 				if (superMeter >= 50 && !timeStopActivated && !spiritBroken)
 				{
 					superMeter -= 50;
