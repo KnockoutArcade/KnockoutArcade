@@ -430,6 +430,7 @@ if (state == eState.IDLE)
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
@@ -505,10 +506,11 @@ if (state == eState.CROUCHING)
 		state = eState.WALKING;
 	}
 	
+	// Run
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
-		
+		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
@@ -896,7 +898,7 @@ switch state
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
-			
+			animTimer = 0;
 			audio_play_sound(initialDashSFX, 0, false);
 		}
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
@@ -954,7 +956,6 @@ switch state
 	
 	case eState.RUN_FORWARD: 
 	{
-		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
@@ -1014,11 +1015,21 @@ switch state
 		{
 			state = eState.CROUCHING;
 		}
+
 		
-		// Hitstun
-		if (hitstun > 0)
+		// Handle Spawning Dash Particles
+		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+		if (animTimer == 1 || animTimer mod 5 == 0)
 		{
-			state = eState.HURT;
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		// Handle Running Sound Effects
@@ -1063,6 +1074,17 @@ switch state
 		if (animTimer == backdashStartup)
 		{
 			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
+			// Handle Spawning Dash Particle
+			// spawn a dash particle once the player moves
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		// Handle Running Sound Effects
@@ -2360,7 +2382,6 @@ switch state
 	
 	case eState.RUSH_CANCEL_FORWARD:
 	{
-		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
@@ -2379,14 +2400,24 @@ switch state
 		// Handle Ending
 		if (rcForwardTimer >= global.rcForwardDuration)
 		{
-			state = eState.IDLE;
+			state = eState.IDLE; // set state to idle
+			animTimer = 0; // reset anim timer
 		}
 		rcForwardTimer++;
 		
-		// Hitstun
-		if (hitstun > 0)
+		// Handle Spawning Dash Particles
+		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+		if (animTimer == 1 || animTimer mod 5 == 0)
 		{
-			state = eState.HURT;
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		PressAttackButton(attack);

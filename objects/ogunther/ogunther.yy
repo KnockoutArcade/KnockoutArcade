@@ -33,8 +33,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Characters",
-    "path": "folders/Objects/Characters.yy",
+    "name": "Playable",
+    "path": "folders/Objects/Characters/Playable.yy",
   },
   "resourceVersion": "1.0",
   "name": "oGunther",
