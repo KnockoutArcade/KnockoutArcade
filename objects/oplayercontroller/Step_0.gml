@@ -1126,13 +1126,15 @@ switch state
 		
 		if (animTimer > 4)
 		 {
+			// play sound effect
 			audio_play_sound(sfx_Jump, 1, false);
 			
+			// If the player buffered an attack, transition into the arial that they buffered
 			if (jumpAttackBuffer != 0)
 			{
 				state = jumpAttackBuffer;
 			}
-			else
+			else // otherwise, go to the jumping state
 			{
 				state = eState.JUMPING;
 			}
@@ -1140,6 +1142,7 @@ switch state
 			jumpAttackBuffer = 0;
 			animTimer = 0;
 			
+			// Handle shorthops
 			if (canShortHop)
 			{
 				if (verticalMoveDir == 1) 
@@ -1156,6 +1159,7 @@ switch state
 				}
 			}
 			
+			// Handle super jumps
 			if (canSuperJump)
 			{
 				if (isSuperJumping)
@@ -1170,6 +1174,7 @@ switch state
 				}
 			}
 			
+			// Handle normal jumps
 			if (!canSuperJump && !canShortHop)
 			{
 				vsp = -jumpSpeed;
