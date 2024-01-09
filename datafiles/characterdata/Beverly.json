@@ -1680,10 +1680,10 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 0.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
+          "ParticleXOffset": 15,
+          "ParticleYOffset": 15,
+          "ParticleEffect": "sGrabEffect",
+          "ParticleDuration": 20,
           "HoldXOffset": 20,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-01-09T14:12:44.8320471-07:00",
+  "LastModified": "2024-01-09T16:41:55.9958699-07:00",
   "LastModifiedBy": "creep"
 }
