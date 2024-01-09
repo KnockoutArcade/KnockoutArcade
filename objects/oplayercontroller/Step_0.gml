@@ -1142,6 +1142,19 @@ switch state
 			jumpAttackBuffer = 0;
 			animTimer = 0;
 			
+			// Handle spawning jump particle
+			// Spawn a jump particle once the player leaves the ground
+			var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (jumpParticle) 
+			{
+				sprite_index = sJumpParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 20;
+				depth += 1;
+			}
+			
+			
 			// Handle shorthops
 			if (canShortHop)
 			{
@@ -1219,6 +1232,19 @@ switch state
 		{
 			if (verticalMoveDir == 1 && heldUpFrames <= 1)
 			{
+				// Handle spawning jump particle
+				// Spawn a jump particle once the player leaves the ground
+				var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (jumpParticle) 
+				{
+					sprite_index = sJumpParticle;
+					image_index = 0;
+					image_xscale = -other.image_xscale;
+					lifetime = 20;
+					depth += 1;
+				}
+				
+				// Handle momentum
 				vsp = -jumpSpeed;
 				isShortHopping = false;
 				isSuperJumping = false;
