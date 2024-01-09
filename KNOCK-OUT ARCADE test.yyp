@@ -58,6 +58,7 @@
     {"id":{"name":"sSingleplayerHudNumbers","path":"sprites/sSingleplayerHudNumbers/sSingleplayerHudNumbers.yy",},"order":6,},
     {"id":{"name":"sTestProjectile","path":"sprites/sTestProjectile/sTestProjectile.yy",},"order":0,},
     {"id":{"name":"sRussel_KnockedDown","path":"sprites/sRussel_KnockedDown/sRussel_KnockedDown.yy",},"order":14,},
+    {"id":{"name":"sJumpParticle","path":"sprites/sJumpParticle/sJumpParticle.yy",},"order":1,},
     {"id":{"name":"oSuperFlashBackground","path":"objects/oSuperFlashBackground/oSuperFlashBackground.yy",},"order":8,},
     {"id":{"name":"rCredits","path":"rooms/rCredits/rCredits.yy",},"order":10,},
     {"id":{"name":"sMapLevel","path":"sprites/sMapLevel/sMapLevel.yy",},"order":0,},
