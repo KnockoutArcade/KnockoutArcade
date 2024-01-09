@@ -2956,6 +2956,18 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			
+			// Handle spawning impact particle
+			// Spawn a landing particle once the player hits the ground
+			var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (landingParticle) 
+			{
+				sprite_index = sLandingParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 20;
+				depth -= 1;
+			}
 		}
 	}
 }
@@ -3015,6 +3027,18 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					image_index = 0;
 					hsp = 0;
 					image_speed = 1;
+					
+					// Handle spawning impact particle
+					// Spawn a landing particle once the player hits the ground
+					var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
+					with (landingParticle) 
+					{
+						sprite_index = sLandingParticle;
+						image_index = 0;
+						image_xscale = other.image_xscale;
+						lifetime = 20;
+						depth -= 1;
+					}
 				}
 			}
 		}
