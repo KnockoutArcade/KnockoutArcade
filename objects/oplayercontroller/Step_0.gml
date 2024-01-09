@@ -2462,7 +2462,6 @@ switch state
 	
 	case eState.RUSH_CANCEL_UP:
 	{
-		animTimer = 0;
 		cancelable = false;
 		sprite_index = CharacterSprites.jump_Sprite;
 		image_speed = 1;
@@ -2470,6 +2469,21 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		
+		// Handle spawning jump particle
+		// Spawn a jump particle on the 1st frame of activation
+		if (animTimer == 1)
+		{
+			var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (jumpParticle) 
+			{
+				sprite_index = sJumpParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 20;
+				depth += 1;
+			}
+		}
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
