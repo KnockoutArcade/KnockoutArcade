@@ -144,12 +144,13 @@ function HandleHitboxCollision(ownerType)
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
-
-					var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
+					
+					// Draw grab effect
+					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
 					with(particle)
 					{
-						lifetime = 10;
-						sprite_index = sHitEffect;
+						lifetime = other.attackProperty.ParticleDuration;
+						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = ownerType.image_xscale * -1;
 					}
 
@@ -189,11 +190,12 @@ function HandleHitboxCollision(ownerType)
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
 
-					var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
+					// Draw grab effect
+					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
 					with(particle)
 					{
-						lifetime = 10;
-						sprite_index = sHitEffect;
+						lifetime = other.attackProperty.ParticleDuration;
+						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = ownerType.image_xscale * -1;
 					}
 

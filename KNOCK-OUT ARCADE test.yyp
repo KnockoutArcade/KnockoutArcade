@@ -151,6 +151,7 @@
     {"id":{"name":"sSuperFlashBackground","path":"sprites/sSuperFlashBackground/sSuperFlashBackground.yy",},"order":6,},
     {"id":{"name":"LateCancelIntoMove","path":"scripts/LateCancelIntoMove/LateCancelIntoMove.yy",},"order":2,},
     {"id":{"name":"oSlope","path":"objects/oSlope/oSlope.yy",},"order":6,},
+    {"id":{"name":"sGrabEffect","path":"sprites/sGrabEffect/sGrabEffect.yy",},"order":7,},
     {"id":{"name":"rPlatformingTestStage","path":"rooms/rPlatformingTestStage/rPlatformingTestStage.yy",},"order":0,},
     {"id":{"name":"sRussel_Jumping_Medium","path":"sprites/sRussel_Jumping_Medium/sRussel_Jumping_Medium.yy",},"order":16,},
     {"id":{"name":"sJay_SC_DownSpecial1_MOCKUP_strip3","path":"sprites/sJay_SC_DownSpecial1_MOCKUP_strip3/sJay_SC_DownSpecial1_MOCKUP_strip3.yy",},"order":4,},
