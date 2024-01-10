@@ -87,32 +87,42 @@ function HandleHitboxCollision(ownerType)
 				// Throw Teching
 				if (attackProperty.AttackType == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
 				{
+					// Put both players in a throw tech state
 					ownerType.state = eState.THROW_TECH;
-					ownerType.hsp = -2 * ownerType.image_xscale;
+					ownerType.hsp = -5 * ownerType.image_xscale;
 					ownerType.animTimer = 0;
 					
 					if (spirit != noone)
 					{
 						spirit.state = eState.THROW_TECH;
-						spirit.hsp = -2 * ownerType.image_xscale;
+						spirit.hsp = -5 * ownerType.image_xscale;
 						spirit.animTimer = 0;
 					}
 
 					collision_list[| i].owner.state = eState.THROW_TECH;
-					collision_list[| i].owner.hsp = -2 * collision_list[| i].owner.image_xscale;
+					collision_list[| i].owner.hsp = -5 * collision_list[| i].owner.image_xscale;
 					collision_list[| i].owner.animTimer = 0;
 					
 					if (collision_list[| i].spirit != noone)
 					{
 						collision_list[| i].spirit.state = eState.THROW_TECH;
-						collision_list[| i].spirit.hsp = -2 * collision_list[| i].spirit.image_xscale;
+						collision_list[| i].spirit.hsp = -5 * collision_list[| i].spirit.image_xscale;
 						collision_list[| i].spirit.animTimer = 0;
 					}
 
 					// Meter Build - Both players get some meter
 					collision_list[| i].owner.superMeter += 5;
 					ownerType.superMeter += 5;
-				
+					
+					// Draw tech effect
+					var particle = instance_create_layer((owner.x + collision_list[| i].owner.x) / 2, owner.y - 16, "Particles", oParticles);
+					with(particle)
+					{
+						lifetime = 30;
+						sprite_index = sThrowTechEffect;
+						image_xscale = 1;
+					}
+					
 					ds_list_add(hasHit, collision_list[| i].owner.id);
 				} 
 				else if (attackProperty.AttackType == eAttackType.GRAB && // Grabbing

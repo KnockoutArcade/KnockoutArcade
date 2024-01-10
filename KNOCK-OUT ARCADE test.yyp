@@ -198,6 +198,7 @@
     {"id":{"name":"testBGM","path":"sounds/testBGM/testBGM.yy",},"order":3,},
     {"id":{"name":"sCollectionSparkle","path":"sprites/sCollectionSparkle/sCollectionSparkle.yy",},"order":4,},
     {"id":{"name":"rCampaignTutorial","path":"rooms/rCampaignTutorial/rCampaignTutorial.yy",},"order":3,},
+    {"id":{"name":"sThrowTechEffect","path":"sprites/sThrowTechEffect/sThrowTechEffect.yy",},"order":8,},
     {"id":{"name":"sTutorialTruckStay","path":"sprites/sTutorialTruckStay/sTutorialTruckStay.yy",},"order":2,},
     {"id":{"name":"sTimeStop","path":"sprites/sTimeStop/sTimeStop.yy",},"order":5,},
     {"id":{"name":"SetPlayerButtons","path":"scripts/SetPlayerButtons/SetPlayerButtons.yy",},"order":2,},
