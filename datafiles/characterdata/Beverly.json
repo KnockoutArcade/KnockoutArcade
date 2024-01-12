@@ -32,7 +32,7 @@
     "Hurt": "sBeverly_Hurt",
     "Grab": "sRussel_Grab",
     "Hold": "sRussel_Hold",
-    "Launched": "sRussel_Launched",
+    "Launched": "sBeverly_Launched",
     "Knockdown": "sRussel_KnockedDown",
     "GetUp": "sRussel_Getup",
     "RushCancel": "",
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-01-09T16:41:55.9958699-07:00",
+  "LastModified": "2024-01-12T13:49:04.670286-07:00",
   "LastModifiedBy": "creep"
 }

@@ -180,6 +180,7 @@
     {"id":{"name":"sOptionsPanelOpen","path":"sprites/sOptionsPanelOpen/sOptionsPanelOpen.yy",},"order":6,},
     {"id":{"name":"ResultsScreen","path":"scripts/ResultsScreen/ResultsScreen.yy",},"order":33,},
     {"id":{"name":"sRussel_UpSpecialFinisher","path":"sprites/sRussel_UpSpecialFinisher/sRussel_UpSpecialFinisher.yy",},"order":33,},
+    {"id":{"name":"sBeverly_Launched","path":"sprites/sBeverly_Launched/sBeverly_Launched.yy",},"order":31,},
     {"id":{"name":"sConstructionGuy_Walk_Forwards","path":"sprites/sConstructionGuy_Walk_Forwards/sConstructionGuy_Walk_Forwards.yy",},"order":5,},
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":7,},
     {"id":{"name":"sBlockEffect","path":"sprites/sBlockEffect/sBlockEffect.yy",},"order":0,},
