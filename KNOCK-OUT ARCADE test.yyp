@@ -337,6 +337,7 @@
     {"id":{"name":"oUIHUD","path":"objects/oUIHUD/oUIHUD.yy",},"order":5,},
     {"id":{"name":"sCharSel_Screen","path":"sprites/sCharSel_Screen/sCharSel_Screen.yy",},"order":7,},
     {"id":{"name":"sBeverly_Walk_Backward","path":"sprites/sBeverly_Walk_Backward/sBeverly_Walk_Backward.yy",},"order":22,},
+    {"id":{"name":"sHealthbar_Damage","path":"sprites/sHealthbar_Damage/sHealthbar_Damage.yy",},"order":11,},
     {"id":{"name":"sRussel_Walk_Backward","path":"sprites/sRussel_Walk_Backward/sRussel_Walk_Backward.yy",},"order":3,},
     {"id":{"name":"oTestLobbingProjectile","path":"objects/oTestLobbingProjectile/oTestLobbingProjectile.yy",},"order":1,},
     {"id":{"name":"sMainMenuOld","path":"sprites/sMainMenuOld/sMainMenuOld.yy",},"order":0,},
