@@ -430,6 +430,7 @@ if (state == eState.IDLE)
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
@@ -505,10 +506,11 @@ if (state == eState.CROUCHING)
 		state = eState.WALKING;
 	}
 	
+	// Run
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
-		
+		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
@@ -896,7 +898,7 @@ switch state
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
-			
+			animTimer = 0;
 			audio_play_sound(initialDashSFX, 0, false);
 		}
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
@@ -954,7 +956,6 @@ switch state
 	
 	case eState.RUN_FORWARD: 
 	{
-		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
@@ -1014,11 +1015,21 @@ switch state
 		{
 			state = eState.CROUCHING;
 		}
+
 		
-		// Hitstun
-		if (hitstun > 0)
+		// Handle Spawning Dash Particles
+		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+		if (animTimer == 1 || animTimer mod 5 == 0)
 		{
-			state = eState.HURT;
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		// Handle Running Sound Effects
@@ -1063,6 +1074,17 @@ switch state
 		if (animTimer == backdashStartup)
 		{
 			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
+			// Handle Spawning Dash Particle
+			// spawn a dash particle once the player moves
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		// Handle Running Sound Effects
@@ -1104,13 +1126,15 @@ switch state
 		
 		if (animTimer > 4)
 		 {
+			// play sound effect
 			audio_play_sound(sfx_Jump, 1, false);
 			
+			// If the player buffered an attack, transition into the arial that they buffered
 			if (jumpAttackBuffer != 0)
 			{
 				state = jumpAttackBuffer;
 			}
-			else
+			else // otherwise, go to the jumping state
 			{
 				state = eState.JUMPING;
 			}
@@ -1118,6 +1142,20 @@ switch state
 			jumpAttackBuffer = 0;
 			animTimer = 0;
 			
+			// Handle spawning jump particle
+			// Spawn a jump particle once the player leaves the ground
+			var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (jumpParticle) 
+			{
+				sprite_index = sJumpParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 20;
+				depth += 1;
+			}
+			
+			
+			// Handle shorthops
 			if (canShortHop)
 			{
 				if (verticalMoveDir == 1) 
@@ -1134,6 +1172,7 @@ switch state
 				}
 			}
 			
+			// Handle super jumps
 			if (canSuperJump)
 			{
 				if (isSuperJumping)
@@ -1148,6 +1187,7 @@ switch state
 				}
 			}
 			
+			// Handle normal jumps
 			if (!canSuperJump && !canShortHop)
 			{
 				vsp = -jumpSpeed;
@@ -1192,6 +1232,19 @@ switch state
 		{
 			if (verticalMoveDir == 1 && heldUpFrames <= 1)
 			{
+				// Handle spawning jump particle
+				// Spawn a jump particle once the player leaves the ground
+				var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (jumpParticle) 
+				{
+					sprite_index = sJumpParticle;
+					image_index = 0;
+					image_xscale = -other.image_xscale;
+					lifetime = 20;
+					depth += 1;
+				}
+				
+				// Handle momentum
 				vsp = -jumpSpeed;
 				isShortHopping = false;
 				isSuperJumping = false;
@@ -2360,7 +2413,6 @@ switch state
 	
 	case eState.RUSH_CANCEL_FORWARD:
 	{
-		animTimer = 0;
 		cancelable = false;
 		grounded = true;
 		canTurnAround = false;
@@ -2379,14 +2431,24 @@ switch state
 		// Handle Ending
 		if (rcForwardTimer >= global.rcForwardDuration)
 		{
-			state = eState.IDLE;
+			state = eState.IDLE; // set state to idle
+			animTimer = 0; // reset anim timer
 		}
 		rcForwardTimer++;
 		
-		// Hitstun
-		if (hitstun > 0)
+		// Handle Spawning Dash Particles
+		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+		if (animTimer == 1 || animTimer mod 5 == 0)
 		{
-			state = eState.HURT;
+			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (dashParticle) 
+			{
+				sprite_index = sDashParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 15;
+				depth -= 1;
+			}
 		}
 		
 		PressAttackButton(attack);
@@ -2400,7 +2462,6 @@ switch state
 	
 	case eState.RUSH_CANCEL_UP:
 	{
-		animTimer = 0;
 		cancelable = false;
 		sprite_index = CharacterSprites.jump_Sprite;
 		image_speed = 1;
@@ -2408,6 +2469,21 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		
+		// Handle spawning jump particle
+		// Spawn a jump particle on the 1st frame of activation
+		if (animTimer == 1)
+		{
+			var jumpParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (jumpParticle) 
+			{
+				sprite_index = sJumpParticle;
+				image_index = 0;
+				image_xscale = -other.image_xscale;
+				lifetime = 20;
+				depth += 1;
+			}
+		}
 		
 		vsp += global.rcUpFallSpeed;
 		hsp = walkSpeed * 1.5 * image_xscale;
@@ -2880,6 +2956,18 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			
+			// Handle spawning impact particle
+			// Spawn a landing particle once the player hits the ground
+			var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
+			with (landingParticle) 
+			{
+				sprite_index = sLandingParticle;
+				image_index = 0;
+				image_xscale = other.image_xscale;
+				lifetime = 20;
+				depth -= 1;
+			}
 		}
 	}
 }
@@ -2939,6 +3027,18 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					image_index = 0;
 					hsp = 0;
 					image_speed = 1;
+					
+					// Handle spawning impact particle
+					// Spawn a landing particle once the player hits the ground
+					var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
+					with (landingParticle) 
+					{
+						sprite_index = sLandingParticle;
+						image_index = 0;
+						image_xscale = other.image_xscale;
+						lifetime = 20;
+						depth -= 1;
+					}
 				}
 			}
 		}

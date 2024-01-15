@@ -406,6 +406,22 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
 		}
 		
+		//Draw hit effect
+		var particle = noone;
+		if (spirit != noone)
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * spirit.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(spirit.image_xscale);
+		}
+		else
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(owner.image_xscale);
+		}
+		
+		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
+		particle.lifetime = attackProperty.ParticleDuration;
+		
 		// Play sound effect
 		if (attackProperty.HitSound != "")
 		{
