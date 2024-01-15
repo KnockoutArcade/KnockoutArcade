@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, grounded);
 	draw_text(20, 50, animTimer);
 	draw_text(20, 70, coinScore);
-	draw_text(20, 90, runForwardTimer);
+	draw_text(20, 90, storedComboDamage);
 } 
 else 
 {
