@@ -1218,7 +1218,9 @@ switch state
 			superMeter += meterBuildRate;
 		}
 		
+		// update movement
 		hsp = jumpHsp;
+		
 		if (!isShortHopping)
 		{
 			vsp += fallSpeed;
