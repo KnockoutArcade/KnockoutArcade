@@ -12,7 +12,7 @@ if (!global.togglePresentationMode)
 	
 	// The way damage showing works is that there is a second sprite behind the healthbar that only shows
 	// while the player is taking damage. 
-	if (attatchedTo.hitstun > 0 || attatchedTo.state == eState.LAUNCHED)
+	if (attatchedTo.hitstun > 0 || attatchedTo.state == eState.LAUNCHED || isDecreasingSpriteGradually)
 	{
 		// The base sprite is animating between 2 identical frames, which allows the damage sprite
 		// to animate as well.
