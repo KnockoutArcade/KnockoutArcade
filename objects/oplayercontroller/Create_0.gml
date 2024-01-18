@@ -409,3 +409,11 @@ controllerID = noone; // The ID for the controller object that controls this.
 
 // Stay on Screen
 shouldStayOnScreen = true; // Whether this object will force itself to stay on screen or not
+
+// Landing input buffer
+// If the player is in an aerial state and isn't taking damage, then if they press an attack button
+// within 5 frames of landing, that button will come out on the first possible frame when landing.
+landingBufferAttack = 0; // The attack to be buffered once landing
+landingBufferTimer = 0; // Timer to keep track of the buffer window
+landingBufferWindow = 5; // How long the player has to buffer an attack while landing.
+landingBufferLockout = 20; // How long until the player can attempt to buffer a landing attack again.

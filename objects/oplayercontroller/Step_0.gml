@@ -393,6 +393,41 @@ else
 	PerformMotionInputs(attack);
 }
 
+#region // Landing buffer
+
+// If the player is off the ground and not getting hit...
+if (!grounded && state != eState.HURT && state != eState.LAUNCHED)
+{
+	// If the player inputted any normal attack or a grab AND we are allowed to input a buffer...
+	if (attack > 0 && attack < 5 && landingBufferTimer <= landingBufferWindow)
+	{
+		landingBufferAttack = attack;
+	}
+	
+	// If we have inputted an attack OR if the landing timer is still going up...
+	if (landingBufferAttack != 0 || landingBufferTimer > 0)
+	{
+		landingBufferTimer++;
+		
+		// If we haven't landed before buffering, reset landing buffer attack
+		if (landingBufferTimer > landingBufferWindow)
+		{
+			landingBufferAttack = 0;
+			
+			// If our lockout window has expired, then reset the timer
+			if (landingBufferTimer >= landingBufferLockout)
+			{
+				landingBufferTimer = 0;
+			}
+		}
+		
+		
+	}
+}
+
+#endregion
+
+
 // If our target ever stops existing, reset our target
 if (target != noone)
 {
@@ -2873,6 +2908,9 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			isThrowable = true;
 			
 			audio_play_sound(sfx_Landing, 1, false);
+			
+			// Landing Buffer
+			PerformLandingBuffer();
 		}
 		if (!cancelOnLanding) 
 		{
@@ -2942,6 +2980,9 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			isThrowable = true;
 			
 			audio_play_sound(sfx_Landing, 1, false);
+			
+			// Landing Buffer
+			PerformLandingBuffer();
 		}
 		if (!cancelOnLanding) 
 		{
@@ -3011,6 +3052,9 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					isThrowable = true;
 			
 					audio_play_sound(sfx_Landing, 1, false);
+					
+					// Landing Buffer
+					PerformLandingBuffer();
 				}
 				if (!cancelOnLanding) 
 				{
