@@ -2915,13 +2915,13 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	}
 }
 
-if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
+if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
 	
 	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
-	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
+	while (!place_meeting(x, y + sign(vsp), oWall))
 	{
 		y += sign(vsp);
 	}
@@ -2982,7 +2982,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 	
 	// Creates a list containing all of the semisolids we're colliding with.
 	var semiSolidCollision_list = ds_list_create();
-	collisionID = instance_place_list(x, y+vsp+fallSpeed, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
+	collisionID = instance_place_list(x, y+vsp, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
 	
 	// Iterate through each semisolid
 	for (var i = 0; i < collisionID; i++;)
@@ -2991,7 +2991,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 		if (y < semiSolidCollision_list[| i].y + 1) && (fallDirection == 1)
 		{
 		
-			while (!place_meeting(x, y + sign(vsp+fallSpeed), semiSolidCollision_list[| i]))
+			while (!place_meeting(x, y + sign(vsp), semiSolidCollision_list[| i]))
 			{
 				y += sign(vsp);
 			}
@@ -3045,7 +3045,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 }
 
 
-
+// Update Movement
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
 	x += hsp + environmentDisplacement;
@@ -3058,8 +3058,6 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 
 // Handle Enviornmental Displacement
 environmentDisplacement = 0;
-
-floor(y);
 
 // Change the player's direction
 if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
