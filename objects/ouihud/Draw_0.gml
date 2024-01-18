@@ -4,7 +4,7 @@
 if (!global.togglePresentationMode)
 {
 	x = (global.camObj.x-80);
-	y = 0;
+	y = global.camObj.y;
 	
 	if (p1Character == oRussel)
 	{
