@@ -28,7 +28,8 @@ switch (global.gameMode)
 					// Camera's target is the attacking player
 					xCameraDestination = p2.xHome;
 				}
-			
+				
+				// If the camera is not shaking...
 				if (!isScreenShaking)
 				{
 					x = lerp(xCameraDestination, x, cameraSpeed);
@@ -44,37 +45,12 @@ switch (global.gameMode)
 				}
 				else // Handle screen shake
 				{
-					screenShakeDuration--;
-				
-					// Choose a random number between 0 and the screen shake level
-					// for both x and y. This will be what we offset the camera's
-					// position by to achieve a shaking effect.
-					var randomCamOffsetX = irandom_range((-screenShakeLevel / 2), (screenShakeLevel / 2));
-				
-					var randomCamOffsetY = irandom_range((-screenShakeLevel / 2), (screenShakeLevel / 2));
-				
-					x = xHome + randomCamOffsetX;
-					y = yHome + randomCamOffsetY;
-				
-					// Set the camera's view
-					camera_set_view_pos(view_camera[0], x-(cameraWidth*.5), y);
-				
-					if (screenShakeDuration <= 0)
-					{
-						isScreenShaking = false;
-					
-						// return the camera to its normal position
-						x = xHome;
-						y = yHome;
-						
-						// Set the camera's view
-						camera_set_view_pos(view_camera[0], x-(cameraWidth*.5), y);
-					}
+					ProcessCameraShake();
 				}
-			
 			}
 			else 
 			{
+				// Use a static camera for the beta arcade stage
 				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, 0), 0);
 				x = cameraWidth*.5;
 			}
@@ -84,24 +60,36 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
-		if (!isLocked)
+		if (!isScreenShaking)
 		{
-			// Set the camera's target
-			if (p1 != noone)
+			// If the camera is locked in place, don't update it's movement
+			if (!isLocked)
 			{
-				// Camera's target is the midpoint between both players
-				xCameraDestination = (p1.xHome) + (p1.hsp * 2);
+				// Set the camera's target
+				if (p1 != noone)
+				{
+					// Camera's target is the midpoint between both players
+					xCameraDestination = (p1.xHome) + (p1.hsp * 2);
+				}
+			
+				// Smoothly move the camera to its destination
+				x = lerp(xCameraDestination, x, cameraSpeed);
 			}
 		
-			x = lerp(xCameraDestination, x, cameraSpeed);
+			// Set the camera's position
+			camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
+	
+			// Clamp the camera to the room's bounderies
+			x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
 		
+			// Set the home values
+			xHome = x;
+			yHome = y;
 		}
-	
-		camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
-
-	
-		// Clamp the camera to the room's bounderies
-		x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
+		else // Handle Screen Shake
+		{
+			ProcessCameraShake();
+		}
 	}
 	break;
 }
