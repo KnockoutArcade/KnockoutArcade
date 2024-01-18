@@ -2929,12 +2929,11 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 	}
 	
 	isJumpingForward = false;
+	
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
-	}
-	if (hitstop < 1)
-	{
+		
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
 		{
 			state = eState.IDLE;
