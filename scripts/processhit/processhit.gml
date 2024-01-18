@@ -448,5 +448,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		{
 			audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
 		}
+		
+		// Handle Screen Shake
+		global.camObj.isScreenShaking = true; // Set screen shake to true
+		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
+		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
 }
