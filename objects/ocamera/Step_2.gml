@@ -27,14 +27,45 @@ switch (global.gameMode)
 				xCameraDestination = p2.xHome;
 			}
 			
+			if (!isScreenShaking)
+			{
+				x = lerp(xCameraDestination, x, cameraSpeed);
 	
-			x = lerp(xCameraDestination, x, cameraSpeed);
-	
-			camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, cameraWidth), 0);
+				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, cameraWidth), 0);
 
 	
-			// Clamp the camera to the room's bounderies
-			x = clamp(x, cameraWidth*.5, cameraWidth*1.5);
+				// Clamp the camera to the room's bounderies
+				x = clamp(x, cameraWidth*.5, cameraWidth*1.5);
+				
+				xHome = x;
+				yHome = y;
+			}
+			else // Handle screen shake
+			{
+				screenShakeDuration--;
+				
+				// Choose a random number between 0 and the screen shake level
+				// for both x and y. This will be what we offset the camera's
+				// position by to achieve a shaking effect.
+				var randomCamOffsetX = irandom(screenShakeLevel);
+				var randomCamOffsetY = irandom(screenShakeLevel);
+				
+				x = xHome + randomCamOffsetX;
+				y = yHome + randomCamOffsetY;
+				
+				// Set the camera's view
+				camera_set_view_pos(view_camera[0], x-(cameraWidth*.5), y);
+				
+				if (screenShakeDuration <= 0)
+				{
+					isScreenShaking = false;
+					
+					// return the camera to its normal position
+					x = xHome;
+					y = yHome;
+				}
+			}
+			
 		}
 		else 
 		{

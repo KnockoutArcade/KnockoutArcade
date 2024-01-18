@@ -1,5 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+// attackProperty - The data for this move's hitbox. Only contains either normal hit data OR counter hit data, but not both.
+// collision_list - The object that is getting hit
+// finalBlowSuper - Whether this attack will trigger the final blow effect
+
+// activateTimeStop - Whether this attack will activate time stop
+
 function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTimeStop = false)
 {
 	if (!isProjectile)
@@ -60,6 +67,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			owner.totalKOs += 1;
 		}
 		
+		// Apply knockback
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
@@ -134,7 +142,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		}
 		
-		if (!collision_list.owner.grounded)
+		if (!collision_list.owner.grounded) // On Air hit, set knockback velocity
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			// Horizontal direction of destructible objects are based on the player hitting them
@@ -153,7 +161,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
-		else if (attackProperty.Launches)
+		else if (attackProperty.Launches) // Handle Launches
 		{
 			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
 			// Horizontal direction of destructible objects are based on the player hitting them
@@ -188,19 +196,27 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.spiritObject.vsp = 0;
 			}
 		}
-	
+		
+		// Apply pushback
 		if (owner.grounded)
 		{
 			owner.pushbackVel = attackProperty.Pushback;
 		}
+		
+		// Reset held opponent
 		owner.heldOpponent = noone;
-
+		
+		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
+		
+		// Set hitstun
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
+		
+		// Add the group that this hitbox belongs to to the opponent's hitByGroup
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle time stop
@@ -241,6 +257,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
 		particle.lifetime = attackProperty.ParticleDuration;
+		
+		// Handle Screen Shake
+		global.camObj.isScreenShaking = true; // Set screen shake to true
+		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
+		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
 	else
 	{

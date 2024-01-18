@@ -342,6 +342,7 @@ function HandleHitboxCollision(ownerType)
 				//Hitting	
 				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB)
 				{
+					// Set the opponent's sprite to their hurt sprite (unless being grabbed)
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
@@ -354,7 +355,7 @@ function HandleHitboxCollision(ownerType)
 						collision_list[| i].owner.image_xscale = ownerOnSide;
 					}
 					
-					// Set the correct Sprite
+					// Set the correct prevState
 					if (!collision_list[| i].owner.isDestructibleObject) // Check if the hurbox is attatched to a destructible object
 					{
 						collision_list[| i].owner.prevState = eState.HURT; // Set the victim's previous state to HURT
