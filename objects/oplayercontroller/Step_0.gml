@@ -2862,9 +2862,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
-	}
-	if (hitstop < 1)
-	{
+		
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding) 
 		{
 			state = eState.IDLE;
@@ -3002,9 +3000,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 			if (state != eState.HITSTOP)
 			{
 				vsp = 0;
-			}
-			if (hitstop < 1)
-			{
+				
 				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
 				{
 					state = eState.IDLE;
