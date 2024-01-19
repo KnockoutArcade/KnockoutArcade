@@ -76,21 +76,21 @@ if (!global.game_paused && !global.gameHalt)
 }
 
 // Render Milliseconds
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 1), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 0), y);
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 2), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 1), y);
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 3), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 2), y);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 1), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 0), global.camObj.y + ui_yOffset);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 2), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 1), global.camObj.y + ui_yOffset);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMilliseconds, 3), (global.camObj.x-80) + ui_xOffset + millisecondsPositionOffset + (digitMargin * 2), global.camObj.y + ui_yOffset);
 
 // Render Decimal 2
-draw_sprite(sSingleplayerHudNumbers, 10, (global.camObj.x-80) + ui_xOffset + decimal2Position, y);
+draw_sprite(sSingleplayerHudNumbers, 10, (global.camObj.x-80) + ui_xOffset + decimal2Position, global.camObj.y + ui_yOffset);
 
 // Render Seconds
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringSeconds, 1), (global.camObj.x-80) + ui_xOffset + secondsPositionOffset + (digitMargin * 0), y);
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringSeconds, 2), (global.camObj.x-80) + ui_xOffset + secondsPositionOffset + (digitMargin * 1), y);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringSeconds, 1), (global.camObj.x-80) + ui_xOffset + secondsPositionOffset + (digitMargin * 0), global.camObj.y + ui_yOffset);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringSeconds, 2), (global.camObj.x-80) + ui_xOffset + secondsPositionOffset + (digitMargin * 1), global.camObj.y + ui_yOffset);
 
 // Render Decimal 1 (colon)
-draw_sprite(sSingleplayerHudNumbers, 11, (global.camObj.x-80) + ui_xOffset + decimal1Position, y);
+draw_sprite(sSingleplayerHudNumbers, 11, (global.camObj.x-80) + ui_xOffset + decimal1Position, global.camObj.y + ui_yOffset);
 
 // Render Minutes
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMinutes, 1), (global.camObj.x-80) + ui_xOffset + minutesPositionOffset + (digitMargin * 0), y);
-draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMinutes, 2), (global.camObj.x-80) + ui_xOffset + minutesPositionOffset + (digitMargin * 1), y);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMinutes, 1), (global.camObj.x-80) + ui_xOffset + minutesPositionOffset + (digitMargin * 0), global.camObj.y + ui_yOffset);
+draw_sprite(sSingleplayerHudNumbers, string_char_at(stringMinutes, 2), (global.camObj.x-80) + ui_xOffset + minutesPositionOffset + (digitMargin * 1), global.camObj.y + ui_yOffset);
 

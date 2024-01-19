@@ -4,5 +4,6 @@
 owner = noone;
 
 ui_xOffset = 0;
+ui_yOffset = 0;
 
 

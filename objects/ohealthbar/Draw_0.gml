@@ -9,6 +9,7 @@ if (attatchedTo.hp <= 0)
 if (!global.togglePresentationMode)
 {
 	x = (global.camObj.x-80) + ui_xOffset;
+	y = global.camObj.y + ui_yOffset;
 	
 	// The way damage showing works is that there is a second sprite behind the healthbar that only shows
 	// while the player is taking damage. 
