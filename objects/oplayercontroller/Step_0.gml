@@ -1027,6 +1027,8 @@ switch state
 		{
 			state = eState.JUMPSQUAT;
 			jumpHsp = hsp;
+			animTimer = 0;
+			
 			// Is the player jumping forward?
 			if (movedir != -image_xscale) 
 			{
