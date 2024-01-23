@@ -5,6 +5,7 @@
 if (!global.togglePresentationMode)
 {
 	x = (global.camObj.x-80) + ui_xOffset;
+	y = global.camObj.y + ui_yOffset;
 	
 	// Split up coin score into different parts
 	coinScoreTens = floor(owner.coinScore / 10);

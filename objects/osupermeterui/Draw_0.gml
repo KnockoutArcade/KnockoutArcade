@@ -6,6 +6,7 @@ if (!global.togglePresentationMode)
 	depth = -100;
 	
 	x = (global.camObj.x-80) + ui_xOffset;
+	y = global.camObj.y + ui_yOffset;
 	
 	// Display proper frame when the meter is empty, half-full, and full
 	if (owner.superMeter >= 50)

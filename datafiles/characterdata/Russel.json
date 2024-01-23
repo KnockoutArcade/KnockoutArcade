@@ -4785,7 +4785,7 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 0,
+          "CounterHitLevel": 3,
           "Group": 0,
           "Damage": 0,
           "MeterGain": 0.0,
@@ -4802,7 +4802,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
@@ -7595,6 +7595,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-01-09T16:39:44.7669535-07:00",
+  "LastModified": "2024-01-23T13:34:16.8214656-07:00",
   "LastModifiedBy": "creep"
 }

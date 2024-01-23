@@ -13,3 +13,10 @@ xCameraDestination = x; // Where the camera is targeted to movet towards
 yCameraDestination = y;
 
 isLocked = false; // Whether the camera is locked or not
+
+isScreenShaking = false; // Whether the camera is currently shaking
+screenShakeLevel = 0; // How much the screen should be shaking
+screenShakeDuration = 0; // How long to shake the screen for
+
+xHome = x; // The camera's position without screen shake
+yHome = y; // The camera's position without screen shake

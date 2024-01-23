@@ -51,7 +51,8 @@ function SetupGame()
 			{
 				attatchedTo = other.p1;
 				image_xscale = -39;
-				ui_xOffset = 71;
+				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 	
 			healthbar2 = instance_create_layer(89, 16, "UI", oHealthbar);
@@ -59,7 +60,8 @@ function SetupGame()
 			{
 				attatchedTo = other.p2;
 				image_xscale = 39;
-				ui_xOffset = 89;
+				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 			
 			if (p1.spirit != noone)
@@ -69,7 +71,8 @@ function SetupGame()
 				{
 					attatchedTo = other.p1;
 					image_xscale = -33;
-					ui_xOffset = 68;
+					ui_xOffset = x + 2;
+					ui_yOffset = y;
 				}
 			}
 	
@@ -80,7 +83,8 @@ function SetupGame()
 				{
 					attatchedTo = other.p2;
 					image_xscale = 33;
-					ui_xOffset = 92;
+					ui_xOffset = x - 2;
+					ui_yOffset = y;
 				}
 			}
 	
@@ -94,6 +98,7 @@ function SetupGame()
 			{
 				owner = other.p1;
 				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 				// Player 2
 			p2SuperMeter = instance_create_layer(97, 106, "SuperMeter", oSuperMeterUI);
@@ -101,6 +106,7 @@ function SetupGame()
 			{
 				owner = other.p2;
 				ui_xOffset = x;
+				ui_yOffset = y;
 				meterDir = 1;
 				sprite_index = sSuperMeterP2;
 			}
@@ -121,7 +127,8 @@ function SetupGame()
 			with (p1RoundCounter) 
 			{
 				owner = 1;
-				ui_xOffset = 70;
+				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 
 			p2RoundCounter = instance_create_layer(90, 4, "UI", oRoundCounter);
@@ -129,7 +136,8 @@ function SetupGame()
 			{
 				image_xscale = -1;
 				owner = 2;
-				ui_xOffset = 90;
+				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 			
 			// Frame Advantage
@@ -194,7 +202,8 @@ function SetupGame()
 			{
 				attatchedTo = other.p1;
 				image_xscale = -39;
-				ui_xOffset = 71;
+				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 			
 			// Create Super Meter UI for Player 1
@@ -203,6 +212,7 @@ function SetupGame()
 			{
 				owner = other.p1;
 				ui_xOffset = x;
+				ui_yOffset = y;
 			}
 			
 			// Set up the HUD
@@ -220,6 +230,7 @@ function SetupGame()
 			{
 				owner = other.p1;
 				ui_xOffset = x;
+				ui_yOffset = y;
 				depth -= 1;
 			}
 			
@@ -229,6 +240,7 @@ function SetupGame()
 			{
 				owner = other.p1;
 				ui_xOffset = x;
+				ui_yOffset = y;
 				depth -= 1;
 			}
 			

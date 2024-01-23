@@ -393,6 +393,41 @@ else
 	PerformMotionInputs(attack);
 }
 
+#region // Landing buffer
+
+// If the player is off the ground and not getting hit...
+if (!grounded && state != eState.HURT && state != eState.LAUNCHED)
+{
+	// If the player inputted any normal attack or a grab AND we are allowed to input a buffer...
+	if (attack > 0 && attack < 5 && landingBufferTimer <= landingBufferWindow)
+	{
+		landingBufferAttack = attack;
+	}
+	
+	// If we have inputted an attack OR if the landing timer is still going up...
+	if (landingBufferAttack != 0 || landingBufferTimer > 0)
+	{
+		landingBufferTimer++;
+		
+		// If we haven't landed before buffering, reset landing buffer attack
+		if (landingBufferTimer > landingBufferWindow)
+		{
+			landingBufferAttack = 0;
+			
+			// If our lockout window has expired, then reset the timer
+			if (landingBufferTimer >= landingBufferLockout)
+			{
+				landingBufferTimer = 0;
+			}
+		}
+		
+		
+	}
+}
+
+#endregion
+
+
 // If our target ever stops existing, reset our target
 if (target != noone)
 {
@@ -992,6 +1027,8 @@ switch state
 		{
 			state = eState.JUMPSQUAT;
 			jumpHsp = hsp;
+			animTimer = 0;
+			
 			// Is the player jumping forward?
 			if (movedir != -image_xscale) 
 			{
@@ -1218,7 +1255,9 @@ switch state
 			superMeter += meterBuildRate;
 		}
 		
+		// update movement
 		hsp = jumpHsp;
+		
 		if (!isShortHopping)
 		{
 			vsp += fallSpeed;
@@ -2860,9 +2899,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
-	}
-	if (hitstop < 1)
-	{
+		
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding) 
 		{
 			state = eState.IDLE;
@@ -2873,6 +2910,9 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			isThrowable = true;
 			
 			audio_play_sound(sfx_Landing, 1, false);
+			
+			// Landing Buffer
+			PerformLandingBuffer();
 		}
 		if (!cancelOnLanding) 
 		{
@@ -2915,24 +2955,23 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	}
 }
 
-if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
+if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
 	
 	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
-	while (!place_meeting(x, y + sign(vsp+fallSpeed), oWall))
+	while (!place_meeting(x, y + sign(vsp), oWall))
 	{
 		y += sign(vsp);
 	}
 	
 	isJumpingForward = false;
+	
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
-	}
-	if (hitstop < 1)
-	{
+		
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
 		{
 			state = eState.IDLE;
@@ -2943,6 +2982,9 @@ if (place_meeting(x, y+vsp+fallSpeed, oWall) && state != eState.BEING_GRABBED)
 			isThrowable = true;
 			
 			audio_play_sound(sfx_Landing, 1, false);
+			
+			// Landing Buffer
+			PerformLandingBuffer();
 		}
 		if (!cancelOnLanding) 
 		{
@@ -2983,7 +3025,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 	
 	// Creates a list containing all of the semisolids we're colliding with.
 	var semiSolidCollision_list = ds_list_create();
-	collisionID = instance_place_list(x, y+vsp+fallSpeed, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
+	collisionID = instance_place_list(x, y+vsp, oSemiSolid, semiSolidCollision_list, false); // Tells us how many objects we are colliding with
 	
 	// Iterate through each semisolid
 	for (var i = 0; i < collisionID; i++;)
@@ -2992,7 +3034,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 		if (y < semiSolidCollision_list[| i].y + 1) && (fallDirection == 1)
 		{
 		
-			while (!place_meeting(x, y + sign(vsp+fallSpeed), semiSolidCollision_list[| i]))
+			while (!place_meeting(x, y + sign(vsp), semiSolidCollision_list[| i]))
 			{
 				y += sign(vsp);
 			}
@@ -3001,9 +3043,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 			if (state != eState.HITSTOP)
 			{
 				vsp = 0;
-			}
-			if (hitstop < 1)
-			{
+				
 				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
 				{
 					state = eState.IDLE;
@@ -3014,6 +3054,9 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					isThrowable = true;
 			
 					audio_play_sound(sfx_Landing, 1, false);
+					
+					// Landing Buffer
+					PerformLandingBuffer();
 				}
 				if (!cancelOnLanding) 
 				{
@@ -3048,7 +3091,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 }
 
 
-
+// Update Movement
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
 	x += hsp + environmentDisplacement;
@@ -3061,8 +3104,6 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 
 // Handle Enviornmental Displacement
 environmentDisplacement = 0;
-
-floor(y);
 
 // Change the player's direction
 if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
