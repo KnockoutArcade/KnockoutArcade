@@ -81,6 +81,7 @@
     {"id":{"name":"oLevelGoal","path":"objects/oLevelGoal/oLevelGoal.yy",},"order":3,},
     {"id":{"name":"ProccessCommandGrab","path":"scripts/ProccessCommandGrab/ProccessCommandGrab.yy",},"order":18,},
     {"id":{"name":"sCharSel_CharReady","path":"sprites/sCharSel_CharReady/sCharSel_CharReady.yy",},"order":11,},
+    {"id":{"name":"sCharacterHintSheets","path":"sprites/sCharacterHintSheets/sCharacterHintSheets.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial3Low_MOCKUP","path":"sprites/sBeverly_SideSpecial3Low_MOCKUP/sBeverly_SideSpecial3Low_MOCKUP.yy",},"order":5,},
     {"id":{"name":"sCharSel_NameRussel","path":"sprites/sCharSel_NameRussel/sCharSel_NameRussel.yy",},"order":0,},
     {"id":{"name":"rJayStage","path":"rooms/rJayStage/rJayStage.yy",},"order":2,},

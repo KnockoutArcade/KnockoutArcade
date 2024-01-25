@@ -80,12 +80,25 @@ p2CharacterPortait_EndingPosition = [122, 86]; // The ending position of P2's po
 
 // The names will start and stop moving at the same time as the portaits.
 
-p1PortaitName_x = 0; // The current X position of P1's portait
-p1PortaitName_y = 15; // The current Y position of P1's portait
-p1PortaitName_EndingPosition = [22, 15]; // The ending position of P1's portait [x, y]
+p1PortaitName_x = 0; // The current X position of P1's name
+p1PortaitName_y = 15; // The current Y position of P1's name
+p1PortaitName_EndingPosition = [22, 15]; // The ending position of P1's name [x, y]
 
-p2PortaitName_x = 160; // The current X position of P2's portait
-p2PortaitName_y = 15; // The current Y position of P2's portait
-p2PortaitName_EndingPosition = [102, 15]; // The ending position of P2's portait [x, y]
+p2PortaitName_x = 160; // The current X position of P2's name
+p2PortaitName_y = 15; // The current Y position of P2's name
+p2PortaitName_EndingPosition = [102, 15]; // The ending position of P2's name [x, y]
 
+#endregion
+
+#region Hint Sheets
+
+// The hint sheets will start and stop moving at the same time as the portaits
+
+p1HintSheet_x = 37; // The current X position of P1's hint sheet
+p1HintSheet_y = 120; // The current Y position of P1's hint sheet
+p1HintSheet_EndingPosition = [37, 91]; // The ending position of P1's hint sheet [x, y]
+
+p2HintSheet_x = 122; // The current X position of P2's hint sheet
+p2HintSheet_y = 120; // The current Y position of P2's hint sheet
+p2HintSheet_EndingPosition = [122, 91]; // The ending position of P2's hint sheet [x, y]
 #endregion

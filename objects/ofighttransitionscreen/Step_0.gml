@@ -33,4 +33,7 @@ if (transitionTimer >= portaits_StartMoving && transitionTimer < portaits_EndMov
 	
 	p1PortaitName_x = lerp(p1PortaitName_x, p1PortaitName_EndingPosition[0], 0.1);
 	p2PortaitName_x = lerp(p2PortaitName_x, p2PortaitName_EndingPosition[0], 0.1);
+	
+	p1HintSheet_y = lerp(p1HintSheet_y, p1HintSheet_EndingPosition[1], 0.1);
+	p2HintSheet_y = lerp(p2HintSheet_y, p2HintSheet_EndingPosition[1], 0.1);
 }
