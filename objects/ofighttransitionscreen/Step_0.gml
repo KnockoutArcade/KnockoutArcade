@@ -15,7 +15,7 @@ if (image_index >= image_number - 1)
 	image_index = 14;
 }
 
-// start making the KO layers move in
+// Start making the KO layers move in
 if (transitionTimer > transitionKOText_StartScrolling && transitionTimer < transitionKOText_EndScrolling)
 {
 	// Make the bottom layer move up by 1 pixel per frame
@@ -23,4 +23,11 @@ if (transitionTimer > transitionKOText_StartScrolling && transitionTimer < trans
 	
 	// make the top layer move down by 1 pixel per frame
 	layer_y(transitionKOText_top, layer_get_y(transitionKOText_top) + 1);
+}
+
+// Move the portaits
+if (transitionTimer >= portaits_StartMoving && transitionTimer < portaits_EndMoving)
+{
+	p1CharacterPortait_x = lerp(p1CharacterPortait_x, p1CharacterPortait_EndingPosition[0], 0.1);
+	p2CharacterPortait_x = lerp(p2CharacterPortait_x, p2CharacterPortait_EndingPosition[0], 0.1);
 }
