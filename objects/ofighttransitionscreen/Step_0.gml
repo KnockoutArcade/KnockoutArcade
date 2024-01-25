@@ -25,9 +25,12 @@ if (transitionTimer > transitionKOText_StartScrolling && transitionTimer < trans
 	layer_y(transitionKOText_top, layer_get_y(transitionKOText_top) + 1);
 }
 
-// Move the portaits
+// Move the portaits, names, and hint sheets
 if (transitionTimer >= portaits_StartMoving && transitionTimer < portaits_EndMoving)
 {
 	p1CharacterPortait_x = lerp(p1CharacterPortait_x, p1CharacterPortait_EndingPosition[0], 0.1);
 	p2CharacterPortait_x = lerp(p2CharacterPortait_x, p2CharacterPortait_EndingPosition[0], 0.1);
+	
+	p1PortaitName_x = lerp(p1PortaitName_x, p1PortaitName_EndingPosition[0], 0.1);
+	p2PortaitName_x = lerp(p2PortaitName_x, p2PortaitName_EndingPosition[0], 0.1);
 }
