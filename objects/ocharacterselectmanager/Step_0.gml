@@ -710,6 +710,13 @@ else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 		// Set the transition object's parameters
 		transitionObject.transitionTimer = transitionTimer;
 		transitionObject.transitionLength = transitionLength;
+		transitionObject.transitionFrame = transitionFrame;
+		
+		transitionObject.transitionKOText_StartLeaving = transitionFrame - 20; // The frame to start moving the KO text away on
+		transitionObject.transitionKOText_EndLeaving = transitionFrame - 1; // The frame to stop moving the KO text away on
+		
+		transitionObject.portaits_StartLeaving = transitionFrame - 30; // The frame to start moving the portaits away on
+		transitionObject.portaits_EndLeaving = transitionFrame - 10; // The frame to stop moving the portaits away on
 	}
 	
 	// If the timer has reached the transition frame...
