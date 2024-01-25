@@ -91,6 +91,6 @@ RTF_frameRate = 30;
 RTF_currentFrame = 0;
 
 transitionTimer = 0; // Time to keep track of the transition
-transitionLength = 100; // How long the transition screen should stay up for (in frames)
-transitionFrame = 97; // When the game switches to a new room (in frames)
+transitionLength = 180; // How long the transition screen should stay up for (in frames)
+transitionFrame = 178; // When the game switches to a new room (in frames)
 transitionObject = noone; // The object that handles transition animations

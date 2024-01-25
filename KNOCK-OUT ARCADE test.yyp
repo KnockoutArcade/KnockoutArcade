@@ -561,6 +561,7 @@
     {"folderPath":"folders/Objects/Characters/Playable.yy","order":8,"resourceVersion":"1.0","name":"Playable","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Particle Effects/Hits.yy","order":6,"resourceVersion":"1.0","name":"Hits","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Transition Screens.yy","order":22,"resourceVersion":"1.0","name":"Transition Screens","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Transition Screens/Fight Screen.yy","order":1,"resourceVersion":"1.0","name":"Fight Screen","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

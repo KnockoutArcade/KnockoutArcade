@@ -591,7 +591,7 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         }
     }
 }
-else if (state == eCharacterSelectState.STAGE_SELECT)
+else if (state == eCharacterSelectState.STAGE_SELECT || state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 {
 	
 	draw_sprite(sReadyToFight_strip5, RTF_currentFrame, 0, 0);
