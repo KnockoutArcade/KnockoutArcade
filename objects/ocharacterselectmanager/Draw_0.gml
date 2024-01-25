@@ -4,6 +4,7 @@ var pressStartID = layer_background_get_id("PressStart");
 
 if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
+	// Hide specific background layers
 	layer_background_visible(pressStartID, 0);
 
     if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow)
