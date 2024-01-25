@@ -36,7 +36,7 @@ var P2menuConfirmBuffer = false;
 P1cursorCooldown--;
 P2cursorCooldown--;
 
-if (state == 0)
+if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
     charSelBoxTimer++;
 
@@ -338,7 +338,7 @@ if (state == 0)
         state = 1;
     }
 }
-else if (state == 1)
+else if (state == eCharacterSelectState.STAGE_SELECT)
 {
     // Ready To Fight Animations
     RTF_animTimer++;
@@ -431,8 +431,11 @@ else if (state == 1)
 				}
 			}
 			
-			room = rRusselStage;
-			global.gameMode = GAMEMODE.VERSUS;
+			selectedStage = rRusselStage;
+			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+			
+			//room = rRusselStage;
+			//global.gameMode = GAMEMODE.VERSUS;
         }
         else if (P1mapSelCol == 1 && P1mapSelRow == 0) // Start Match on Beverly's Stage
         {
@@ -457,8 +460,11 @@ else if (state == 1)
 				}
 			}
 			
-			room = rBeverlyStage;
-			global.gameMode = GAMEMODE.VERSUS;
+			selectedStage = rBeverlyStage;
+			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+			
+			//room = rBeverlyStage;
+			//global.gameMode = GAMEMODE.VERSUS;
         }
         else if (P1mapSelCol == 2 && P1mapSelRow == 0) // Start match on Jay's Stage
         {
@@ -483,8 +489,11 @@ else if (state == 1)
 				}
 			}
 			
-			room = rJayStage;
-			global.gameMode = GAMEMODE.VERSUS;
+			selectedStage = rJayStage;
+			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+			
+			//room = rJayStage;
+			//global.gameMode = GAMEMODE.VERSUS;
         }
         else if (P1mapSelCol == 3 && P1mapSelRow == 1) // Random
         {
@@ -517,8 +526,11 @@ else if (state == 1)
 					}
 					
 					validStage = true;
-					room = rRusselStage;
-					global.gameMode = GAMEMODE.VERSUS;
+					
+					selectedStage = rRusselStage;
+					state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+					//room = rRusselStage;
+					//global.gameMode = GAMEMODE.VERSUS;
 			    }
 			    else if (P1mapSelCol == 1 && P1mapSelRow == 0)
 			    {
@@ -544,8 +556,10 @@ else if (state == 1)
 					}
 					
 					validStage = true;
-					room = rBeverlyStage;
-					global.gameMode = GAMEMODE.VERSUS;
+					selectedStage = rBeverlyStage;
+					state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+					//room = rBeverlyStage;
+					//global.gameMode = GAMEMODE.VERSUS;
 			    }
 			    else if (P1mapSelCol == 2 && P1mapSelRow == 0)
 			    {
@@ -571,8 +585,10 @@ else if (state == 1)
 					}
 					
 					validStage = true;
-					room = rJayStage;
-					global.gameMode = GAMEMODE.VERSUS;
+					selectedStage = rJayStage;
+					state = eCharacterSelectState.TRANSITION_TO_FIGHT;
+					//room = rJayStage;
+					//global.gameMode = GAMEMODE.VERSUS;
 			    }
 			}
         }
@@ -613,7 +629,7 @@ else if (state == 1)
 		audio_play_sound(sfx_UI_Exit, 0, false);
     }
 }
-else if (state == 2)
+else if (state == eCharacterSelectState.MUSIC_SELECT)
 {
 	// Ready To Fight Animations
     RTF_animTimer++;
@@ -679,4 +695,29 @@ else if (state == 2)
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
     }
+}
+else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
+{
+	// Increment the transition timer
+	transitionTimer++;
+	
+	// On the first frame of transitioning...
+	if (transitionTimer == 1)
+	{
+		// Spawn the transition object
+		transitionObject = instance_create_depth(0, 0, -1000, oFightTransitionScreen);
+		
+		// Set the transition object's parameters
+		transitionObject.transitionTimer = transitionTimer;
+		transitionObject.transitionLength = transitionLength;
+	}
+	
+	// If the timer has reached the transition frame...
+	if (transitionTimer == transitionFrame)
+	{
+		// Go to the selected stage
+		room_goto(selectedStage);
+		// Update the game into versus mode
+		global.gameMode = GAMEMODE.VERSUS;
+	}
 }
