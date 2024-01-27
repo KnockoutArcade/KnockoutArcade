@@ -433,6 +433,7 @@
     {"id":{"name":"sJay_SC_UpSpecial_MOCKUP_strip8","path":"sprites/sJay_SC_UpSpecial_MOCKUP_strip8/sJay_SC_UpSpecial_MOCKUP_strip8.yy",},"order":3,},
     {"id":{"name":"sJayStandOn_StandHeavy_Posel_mockup_strip5","path":"sprites/sJayStandOn_StandHeavy_Posel_mockup_strip5/sJayStandOn_StandHeavy_Posel_mockup_strip5.yy",},"order":27,},
     {"id":{"name":"sBeverly_KnockedDown","path":"sprites/sBeverly_KnockedDown/sBeverly_KnockedDown.yy",},"order":32,},
+    {"id":{"name":"sBeverly_Getup","path":"sprites/sBeverly_Getup/sBeverly_Getup.yy",},"order":33,},
     {"id":{"name":"sPlayerControls","path":"sprites/sPlayerControls/sPlayerControls.yy",},"order":1,},
     {"id":{"name":"sfx_light_hit2","path":"sounds/sfx_light_hit2/sfx_light_hit2.yy",},"order":2,},
     {"id":{"name":"sRussel_Jumping_Light","path":"sprites/sRussel_Jumping_Light/sRussel_Jumping_Light.yy",},"order":17,},

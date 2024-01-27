@@ -34,7 +34,7 @@
     "Hold": "sRussel_Hold",
     "Launched": "sBeverly_Launched",
     "Knockdown": "sBeverly_KnockedDown",
-    "GetUp": "sRussel_Getup",
+    "GetUp": "sBeverly_Getup",
     "RushCancel": "",
     "WallSplat": ""
   },
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-01-20T13:38:31.9204821-07:00",
+  "LastModified": "2024-01-26T14:38:24.7953194-07:00",
   "LastModifiedBy": "creep"
 }
