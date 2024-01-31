@@ -13,23 +13,47 @@ switch (global.gameMode)
 		{
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
+			
+			// Disable inputs for players
+			p1.isInCutscene = true; 
+			p2.isInCutscene = true;
 			instance_destroy(oTimeStop);
 			audio_resume_sound(testBGM);
 			
-			global.gameHalt = true;
+			
 			gameHaltTimer++;
-	
-			if (gameHaltTimer == 90 && !winConditionMet)
+		
+			if (gameHaltTimer == 300 && !winConditionMet)
 			{
 				ResetGame();
 
 				SetupGame();
 		
 				global.gameHalt = 0;
+				global.game_paused = false;
 				gameHaltTimer = 0;
+			}
+			else if (gameHaltTimer >= 180 && gameHaltTimer < 300)
+			{
+				global.game_paused = false;
+			}
+			else if (gameHaltTimer >= 60 && gameHaltTimer < 180)
+			{
+				// Slowdown the game by pausing and unpausing
+				if (gameHaltTimer mod 3 >= 1)
+				{
+					global.game_paused = true;
+				}
+				else
+				{
+					global.game_paused = false;
+				}
 			}
 			else if (gameHaltTimer == 1)
 			{
+				// Immediately pause the game
+				global.game_paused = true;
+				
 				if (p2.hp <= 0)
 				{
 					global.p1Rounds++;
@@ -47,7 +71,7 @@ switch (global.gameMode)
 					{
 						sprite_index = sDoubleKOText;
 						image_index = true;
-						lifetime = 89;
+						lifetime = 59;
 					}
 				}
 				else
@@ -67,7 +91,7 @@ switch (global.gameMode)
 					{
 						sprite_index = sKOText;
 						image_index = true;
-						lifetime = 89;
+						lifetime = 59;
 					}
 				}
 			}

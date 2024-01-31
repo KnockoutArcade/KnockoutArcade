@@ -1,7 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = 0;
+state = eGameManagerState.DURING_MATCH;
+
+enum eGameManagerState
+{
+	DURING_MATCH,
+	ROUND_WIN,
+	POST_MATCH
+}
 
 global.frameskip = 0;
 global.game_paused = 0;
