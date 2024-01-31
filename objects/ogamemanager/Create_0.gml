@@ -70,3 +70,8 @@ P2hasSelectedresult = false;
 
 P1cursorY = 0;
 P2cursorY = 0;
+
+momentWhenBothPlayersWereStable = 0; // During round win, the frame when both players entered a stable state
+victoryAnimationDelay = 30; // The delay between when players are stable and when the victory animation should play (frames)
+victoryAnimationTime = 0; // The moment when a player entered their victory animation
+victoryAnimationDuration = 100; // The amount of time the victory animation plays for (in frames)

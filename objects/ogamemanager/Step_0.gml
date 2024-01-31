@@ -22,8 +22,49 @@ switch (global.gameMode)
 			
 			global.roundOver = true;
 			gameHaltTimer++;
+			
+			// If we're past the slowdown and both players are stable AND we havent set mWBPWS yet...
+			if (gameHaltTimer >= 180 && p1.isInStableState && p2.isInStableState && momentWhenBothPlayersWereStable == 0)
+			{
+				// Set this frame as the moment both players became stable
+				momentWhenBothPlayersWereStable = gameHaltTimer;
+			}
+			
+			// If we're past the delay after both players became stable...
+			if (gameHaltTimer >= (momentWhenBothPlayersWereStable + victoryAnimationDelay) && !winConditionMet && momentWhenBothPlayersWereStable != 0 && victoryAnimationTime == 0)
+			{
+				if (p1.hp > 0) // If p1 won...
+				{
+					// set state
+					p1.state = eState.ROUND_WIN;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+				else if (p2.hp > 0) // If p2 won...
+				{
+					// set state
+					p2.state = eState.ROUND_WIN;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+				else // if both players are defeated, transition immediately
+				{
+					ResetGame();
+
+					SetupGame();
 		
-			if (gameHaltTimer == 300 && !winConditionMet)
+					global.gameHalt = 0;
+					global.game_paused = false;
+					global.roundOver = false;
+					gameHaltTimer = 0;
+					momentWhenBothPlayersWereStable = 0;
+					victoryAnimationTime = 0;
+				}
+				
+			}
+			else if (gameHaltTimer >= (victoryAnimationTime + victoryAnimationDuration) && victoryAnimationTime != 0) // If the victory animation is complete...
 			{
 				ResetGame();
 
@@ -33,12 +74,14 @@ switch (global.gameMode)
 				global.game_paused = false;
 				global.roundOver = false;
 				gameHaltTimer = 0;
+				momentWhenBothPlayersWereStable = 0;
+				victoryAnimationTime = 0;
 			}
-			else if (gameHaltTimer >= 180 && gameHaltTimer < 300)
+			else if (gameHaltTimer >= 180 && gameHaltTimer < 300) // Post-slowdown
 			{
 				global.game_paused = false;
 			}
-			else if (gameHaltTimer >= 60 && gameHaltTimer < 180)
+			else if (gameHaltTimer >= 60 && gameHaltTimer < 180) // Slowdown
 			{
 				// Slowdown the game by pausing and unpausing
 				if (gameHaltTimer mod 3 >= 1)
@@ -50,7 +93,7 @@ switch (global.gameMode)
 					global.game_paused = false;
 				}
 			}
-			else if (gameHaltTimer == 1)
+			else if (gameHaltTimer == 1) // Initial end
 			{
 				// Immediately pause the game
 				global.game_paused = true;
