@@ -2233,13 +2233,23 @@ switch state
 			hitstun--;
 		}
 		
-		// Get up after 40 frames AND if the round isn't over
-		if (animTimer > 39 && !global.roundOver)
+		// Get up after 40 frame
+		if (animTimer > 39)
 		{
-			state = eState.GETUP;
-			animTimer = 0;
-			sprite_index = CharacterSprites.getup_Sprite;
-			image_index = 0;
+			if (!global.roundOver) // if the round not over, get up
+			{
+				state = eState.GETUP;
+				animTimer = 0;
+				sprite_index = CharacterSprites.getup_Sprite;
+				image_index = 0;
+			}
+			else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
+			{
+				state = eState.GETUP;
+				animTimer = 0;
+				sprite_index = CharacterSprites.getup_Sprite;
+				image_index = 0;
+			}
 		}
 	}
 	break;
@@ -3140,5 +3150,10 @@ else
 if (state == eState.ROUND_WIN)
 {
 	sprite_index = sRussel_Intro;
+	image_speed = 1;
+}
+if (state == eState.ROUND_LOSE)
+{
+	sprite_index = sRussel_Hurt;
 	image_speed = 1;
 }

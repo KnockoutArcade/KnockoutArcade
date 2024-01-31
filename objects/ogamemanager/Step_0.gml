@@ -144,19 +144,69 @@ switch (global.gameMode)
 		// Time runs out
 		if (global.gameTimer == 0)
 		{
-			global.gameHalt = true;
+			p1.isEXFlash = false;
+			p2.isEXFlash = false;
+			
+			// Disable inputs for players
+			p1.isInCutscene = true; 
+			p2.isInCutscene = true;
+			
+			global.roundOver = true;
 			gameHaltTimer++;
-	
-			if (gameHaltTimer == 90 && !winConditionMet)
+			
+			
+			// If we're past the delay and both players are idle AND we havent set mWBPWS yet...
+			if (gameHaltTimer >= 60 && p1.state == eState.IDLE && p2.state == eState.IDLE && momentWhenBothPlayersWereStable == 0)
+			{
+				// Set this frame as the moment both players became stable
+				momentWhenBothPlayersWereStable = gameHaltTimer;
+			}
+			
+			if (gameHaltTimer >= (momentWhenBothPlayersWereStable + victoryAnimationDelay) && !winConditionMet && momentWhenBothPlayersWereStable != 0 && victoryAnimationTime == 0) // After the delay...
+			{
+				// If P1 won...
+				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
+				{
+					// set state
+					p1.state = eState.ROUND_WIN;
+					p2.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+				else if (p2.hp/p2.maxHitPoints > p1.hp/p1.maxHitPoints)
+				{
+					// set state
+					p2.state = eState.ROUND_WIN;
+					p1.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+				else // Both are equal
+				{
+					// Set both players to lose
+					p1.state = eState.ROUND_LOSE;
+					p2.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+			}
+			else if (gameHaltTimer >= (victoryAnimationTime + victoryAnimationDuration) && victoryAnimationTime != 0) // If the victory animation is complete...
 			{
 				ResetGame();
-		
+
 				SetupGame();
 		
 				global.gameHalt = 0;
+				global.game_paused = false;
+				global.roundOver = false;
 				gameHaltTimer = 0;
+				momentWhenBothPlayersWereStable = 0;
+				victoryAnimationTime = 0;
 			}
-			else if (gameHaltTimer == 1)
+			else if (gameHaltTimer == 1) // Initial End
 			{
 				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
@@ -178,7 +228,7 @@ switch (global.gameMode)
 				{
 					sprite_index = sTimeUp;
 					image_index = true;
-					lifetime = 89;
+					lifetime = 59;
 				}
 			}
 		}
