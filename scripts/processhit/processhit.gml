@@ -38,13 +38,22 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.comboScaling += attackProperty.ComboScaling;
 		
 		// Apply Damage
-		if (finalBlowSuper)
+		if (!global.roundOver) // ... but only if the round isn't over
 		{
-			if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+			if (finalBlowSuper)
 			{
-				collision_list.owner.hp = 1;
-				// Add the damage to the victim's total damage taken (for singleplayer)
-				collision_list.owner.totalDamageTaken += scaledDamage;
+				if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+				{
+					collision_list.owner.hp = 1;
+					// Add the damage to the victim's total damage taken (for singleplayer)
+					collision_list.owner.totalDamageTaken += scaledDamage;
+				}
+				else
+				{
+					collision_list.owner.hp -= scaledDamage;
+					// Add the damage to the victim's total damage taken (for singleplayer)
+					collision_list.owner.totalDamageTaken += scaledDamage;
+				}
 			}
 			else
 			{
@@ -52,12 +61,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				// Add the damage to the victim's total damage taken (for singleplayer)
 				collision_list.owner.totalDamageTaken += scaledDamage;
 			}
-		}
-		else
-		{
-			collision_list.owner.hp -= scaledDamage;
-			// Add the damage to the victim's total damage taken (for singleplayer)
-			collision_list.owner.totalDamageTaken += scaledDamage;
 		}
 		
 		// Death detection
@@ -285,9 +288,13 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.playerOwner.comboScaling += attackProperty.ComboScaling;
 				
 		// Apply Damage
-		collision_list.owner.hp -= scaledDamage;
-		// Add the damage to the victim's total damage
-		collision_list.owner.totalDamageTaken -= scaledDamage;
+		if (!global.roundOver) // ... but only if the round isn't over
+		{
+			collision_list.owner.hp -= scaledDamage;
+			// Add the damage to the victim's total damage
+			collision_list.owner.totalDamageTaken -= scaledDamage;
+		}
+		
 		
 		// Death detection
 		if (collision_list.owner.hp <= 0)
