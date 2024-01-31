@@ -20,7 +20,7 @@ switch (global.gameMode)
 			instance_destroy(oTimeStop);
 			audio_resume_sound(testBGM);
 			
-			
+			global.roundOver = true;
 			gameHaltTimer++;
 		
 			if (gameHaltTimer == 300 && !winConditionMet)
@@ -31,6 +31,7 @@ switch (global.gameMode)
 		
 				global.gameHalt = 0;
 				global.game_paused = false;
+				global.roundOver = false;
 				gameHaltTimer = 0;
 			}
 			else if (gameHaltTimer >= 180 && gameHaltTimer < 300)

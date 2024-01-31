@@ -107,10 +107,12 @@ else // Safegaurd in case an empty character is spawned
 	var attack = 0;
 }
 
+// Reset Vars
 canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 projectileInvincible = false;
+isInStableState = false;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -447,6 +449,7 @@ if (state == eState.IDLE)
 	hasSpentDoubleJump = false;
 	canBlock = true;
 	invincible = false;
+	isInStableState = true; // Set stable state to true
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -2212,6 +2215,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		isInStableState = true;
 		
 		cancelCombo = true;
 		
@@ -2229,7 +2233,8 @@ switch state
 			hitstun--;
 		}
 		
-		if (animTimer > 39)
+		// Get up after 40 frames AND if the round isn't over
+		if (animTimer > 39 && !global.roundOver)
 		{
 			state = eState.GETUP;
 			animTimer = 0;

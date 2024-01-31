@@ -20,6 +20,7 @@ global.toggleHitboxVisibility = false;
 global.togglePresentationMode = false;
 
 global.currentRound = 0;
+global.roundOver = false; // Whether the round is currently over
 
 global.hasCompletedIntros = false;
 levelCompleteTimer = 0; // Timer for the level end sequence
