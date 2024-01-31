@@ -64,10 +64,14 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		// Death detection
+		var playerHasDied = false;
+		// If the target's hp hits 0...
 		if (collision_list.owner.hp <= 0)
 		{
 			// Add 1 to the total KOs of this hitbox's owner
 			owner.totalKOs += 1;
+			// Signal that the player has died
+			playerHasDied = true;
 		}
 		
 		// Apply knockback
@@ -191,12 +195,32 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.knockbackVel = 0;
 			}
 		}
-		else 
+		else // Handle grounded hits that don't launch
 		{
-			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone) 
+			if (!playerHasDied) // if the player isn't dead, don't launch them
 			{
-				collision_list.owner.spiritObject.vsp = 0;
+				collision_list.owner.vsp = 0;
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = 0;
+				}
+			}
+			else // if the player has died, launch them a little bit
+			{
+				// This code allows weak hits that end the round to launch the opponent.
+				// We don't currently have a "crumple" or "kneel-fall" animation, so
+				// we are going to launch the opponent a little bit instead.
+				
+				collision_list.owner.vsp = -2;
+				collision_list.owner.grounded = false;
+				collision_list.owner.hsp = 2 * -collision_list.owner.image_xscale; 
+				
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = -2;
+					collision_list.owner.spiritObject.hsp = 2 * -collision_list.owner.spiritObject.image_xscale;
+					collision_list.owner.spiritObject.grounded = false;
+				}
 			}
 		}
 		
@@ -295,12 +319,15 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			collision_list.owner.totalDamageTaken -= scaledDamage;
 		}
 		
-		
 		// Death detection
+		var playerHasDied = false;
+		// If the target's hp hits 0...
 		if (collision_list.owner.hp <= 0)
 		{
 			// Add 1 to the total KOs of this projectile's owner
 			owner.playerOwner.totalKOs += 1;
+			// Signal that the player has died
+			playerHasDied = true;
 		}
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
@@ -407,12 +434,32 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.knockbackVel = 0;
 			}
 		}
-		else 
+		else // Handle ground hits that don't launch
 		{
-			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone) 
+			if (!playerHasDied) // if the player isn't dead, don't launch them
 			{
-				collision_list.owner.spiritObject.vsp = 0;
+				collision_list.owner.vsp = 0;
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = 0;
+				}
+			}
+			else // if the player has died, launch them a little bit
+			{
+				// This code allows weak hits that end the round to launch the opponent.
+				// We don't currently have a "crumple" or "kneel-fall" animation, so
+				// we are going to launch the opponent a little bit instead.
+				
+				collision_list.owner.vsp = -2;
+				collision_list.owner.grounded = false;
+				collision_list.owner.hsp = 2 * -collision_list.owner.image_xscale; 
+				
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = -2;
+					collision_list.owner.spiritObject.hsp = 2 * -collision_list.owner.spiritObject.image_xscale;
+					collision_list.owner.spiritObject.grounded = false;
+				}
 			}
 		}
 
