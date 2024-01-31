@@ -2810,20 +2810,28 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 		timeStopObject.owner = id;
 	}
 	
-	if (spiritObject != noone)
+	// update where the timeStopObject is
+	if (instance_exists(timeStopObject))
 	{
-		timeStopObject.x = spiritObject.x;
-		timeStopObject.y = spiritObject.y;
-	}
-	else
-	{
-		timeStopObject.x = x;
-		timeStopObject.y = y;
+		if (spiritObject != noone)
+		{
+			timeStopObject.x = spiritObject.x;
+			timeStopObject.y = spiritObject.y;
+		}
+		else
+		{
+			timeStopObject.x = x;
+			timeStopObject.y = y;
+		}
 	}
 	
-	if (superMeter <= 0 && timeStopTimer <= 0)
+	// If we've run out of time OR the timeStopObject stop existing, exit time stop
+	if ((superMeter <= 0 && timeStopTimer <= 0) || (!instance_exists(timeStopObject)))
 	{
-		timeStopObject.owner = noone;
+		if (instance_exists(timeStopObject)) 
+		{
+			timeStopObject.owner = noone;
+		}
 		timeStopObject = noone;
 		timeStopTimer = 30;
 		timeStopActivated = false;
