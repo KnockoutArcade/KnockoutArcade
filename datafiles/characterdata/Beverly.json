@@ -21,8 +21,8 @@
   "CharacterSprites": {
     "Idle": "sBeverly_Idle",
     "Crouch": "sBeverly_Crouch",
-    "StandBlock": "sRussel_Block",
-    "CrouchBlock": "sRussel_Crouch_Block",
+    "StandBlock": "sBeverly_Block",
+    "CrouchBlock": "sBeverly_Crouch_Block",
     "WalkForward": "sBeverly_Walk_Forward",
     "WalkBackward": "sBeverly_Walk_Backward",
     "RunForward": "sRussel_Run_Forward",
@@ -7044,6 +7044,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-01-26T14:38:24.7953194-07:00",
+  "LastModified": "2024-01-30T17:08:41.1527738-07:00",
   "LastModifiedBy": "creep"
 }
