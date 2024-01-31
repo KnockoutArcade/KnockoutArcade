@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 23,
-    "yorigin": 66,
+    "yorigin": 68,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sFullPortait_Gunther","path":"sprites/sFullPortait_Gunther/sFullPortait_Gunther.yy",},

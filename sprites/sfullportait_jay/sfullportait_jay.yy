@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 31,
-    "yorigin": 74,
+    "yorigin": 77,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sFullPortait_Jay","path":"sprites/sFullPortait_Jay/sFullPortait_Jay.yy",},

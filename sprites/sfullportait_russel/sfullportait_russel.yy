@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 25,
-    "yorigin": 56,
+    "yorigin": 62,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sFullPortait_Russel","path":"sprites/sFullPortait_Russel/sFullPortait_Russel.yy",},
