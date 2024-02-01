@@ -407,6 +407,7 @@
     {"id":{"name":"sCharSel_Background","path":"sprites/sCharSel_Background/sCharSel_Background.yy",},"order":0,},
     {"id":{"name":"sTutorialTruckArriving","path":"sprites/sTutorialTruckArriving/sTutorialTruckArriving.yy",},"order":1,},
     {"id":{"name":"Cutscene_SetObjectVelocity","path":"scripts/Cutscene_SetObjectVelocity/Cutscene_SetObjectVelocity.yy",},"order":5,},
+    {"id":{"name":"sRushCancelBanner","path":"sprites/sRushCancelBanner/sRushCancelBanner.yy",},"order":41,},
     {"id":{"name":"sCharSel_PressStart","path":"sprites/sCharSel_PressStart/sCharSel_PressStart.yy",},"order":12,},
     {"id":{"name":"sConstructionNPC3a","path":"sprites/sConstructionNPC3a/sConstructionNPC3a.yy",},"order":6,},
     {"id":{"name":"sCharSel_SelectionBox","path":"sprites/sCharSel_SelectionBox/sCharSel_SelectionBox.yy",},"order":6,},
