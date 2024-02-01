@@ -40,6 +40,10 @@ switch (global.gameMode)
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p1;
 				}
 				else if (p2.hp > 0) // If p2 won...
 				{
@@ -48,6 +52,10 @@ switch (global.gameMode)
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p2;
 				}
 				else // if both players are defeated, transition immediately
 				{
@@ -173,6 +181,10 @@ switch (global.gameMode)
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p1;
 				}
 				else if (p2.hp/p2.maxHitPoints > p1.hp/p1.maxHitPoints)
 				{

@@ -20,3 +20,6 @@ screenShakeDuration = 0; // How long to shake the screen for
 
 xHome = x; // The camera's position without screen shake
 yHome = y; // The camera's position without screen shake
+
+isTargetingWinner = false; // Whether the camera should focus on the winner of a round
+roundWinTarget = noone; // The target of the camera during a round win

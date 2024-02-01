@@ -29,6 +29,12 @@ switch (global.gameMode)
 					xCameraDestination = p2.xHome;
 				}
 				
+				// During a victory animation, target the player who's winning
+				if (isTargetingWinner)
+				{
+					xCameraDestination = roundWinTarget.xHome;
+				}
+				
 				// If the camera is not shaking...
 				if (!isScreenShaking)
 				{
