@@ -30,7 +30,7 @@
     "JumpSquat": "sBeverly_Jumpsquat",
     "Jump": "sBeverly_Jump",
     "Hurt": "sBeverly_Hurt",
-    "Grab": "sRussel_Grab",
+    "Grab": "sBeverly_Grab",
     "Hold": "sRussel_Hold",
     "Launched": "sBeverly_Launched",
     "Knockdown": "sBeverly_KnockedDown",
@@ -1630,9 +1630,9 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Grab",
-      "Duration": 24,
-      "NumberOfFrames": 5,
+      "SpriteName": "sBeverly_Grab",
+      "Duration": 32,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 4,
@@ -1643,16 +1643,12 @@
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 16,
           "ImageIndex": 3
         },
         {
-          "Length": 16,
+          "Length": 24,
           "ImageIndex": 4
-        },
-        {
-          "Length": 20,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7044,6 +7040,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-01-30T17:08:41.1527738-07:00",
+  "LastModified": "2024-02-02T14:45:14.910185-07:00",
   "LastModifiedBy": "creep"
 }

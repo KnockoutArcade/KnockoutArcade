@@ -1889,21 +1889,12 @@ switch state
 
 	case eState.GRAB : 
 	{
-		grounded = true;
-		inAttackState = true;
-		
-		sprite_index = CharacterSprites.grab_Sprite;
-		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
 		
-		PerformAttack(selectedCharacter.Grab, false);
+		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
 		
-		if (animTimer > 24)
-		{
-			state = eState.IDLE;
-		}
 	}
 	break;
 	

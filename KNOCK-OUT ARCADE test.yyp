@@ -349,6 +349,7 @@
     {"id":{"name":"sBeverly_Walk_Backward","path":"sprites/sBeverly_Walk_Backward/sBeverly_Walk_Backward.yy",},"order":22,},
     {"id":{"name":"sHealthbar_Damage","path":"sprites/sHealthbar_Damage/sHealthbar_Damage.yy",},"order":11,},
     {"id":{"name":"sRussel_Walk_Backward","path":"sprites/sRussel_Walk_Backward/sRussel_Walk_Backward.yy",},"order":3,},
+    {"id":{"name":"sBeverly_Grab","path":"sprites/sBeverly_Grab/sBeverly_Grab.yy",},"order":36,},
     {"id":{"name":"oTestLobbingProjectile","path":"objects/oTestLobbingProjectile/oTestLobbingProjectile.yy",},"order":1,},
     {"id":{"name":"sMainMenuOld","path":"sprites/sMainMenuOld/sMainMenuOld.yy",},"order":0,},
     {"id":{"name":"sJay_DownSpecial2B_Mockup_strip9","path":"sprites/sJay_DownSpecial2B_Mockup_strip9/sJay_DownSpecial2B_Mockup_strip9.yy",},"order":5,},
