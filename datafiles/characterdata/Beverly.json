@@ -1632,7 +1632,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Grab",
       "Duration": 27,
-      "NumberOfFrames": 5,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 4,
@@ -1647,12 +1647,16 @@
           "ImageIndex": 3
         },
         {
-          "Length": 20,
+          "Length": 16,
           "ImageIndex": 4
         },
         {
-          "Length": 24,
+          "Length": 20,
           "ImageIndex": 5
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7044,6 +7048,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-02T15:26:08.2645761-07:00",
+  "LastModified": "2024-02-02T16:25:34.4965095-07:00",
   "LastModifiedBy": "creep"
 }
