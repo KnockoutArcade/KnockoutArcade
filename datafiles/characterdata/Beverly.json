@@ -2111,7 +2111,7 @@
           "DeactivateSpirit": false
         },
         {
-          "NumpadInput": "4",
+          "NumpadInput": "623",
           "ButtonPressRequired": true,
           "StartingFrame": 0,
           "EndingFrame": 17,
@@ -5502,7 +5502,7 @@
           "DeactivateSpirit": false
         },
         {
-          "NumpadInput": "4",
+          "NumpadInput": "623",
           "ButtonPressRequired": true,
           "StartingFrame": 0,
           "EndingFrame": 15,
@@ -7048,6 +7048,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-02T16:25:34.4965095-07:00",
+  "LastModified": "2024-02-02T22:57:04.8679126-07:00",
   "LastModifiedBy": "creep"
 }
