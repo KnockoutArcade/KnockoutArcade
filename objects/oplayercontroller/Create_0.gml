@@ -417,3 +417,10 @@ landingBufferAttack = 0; // The attack to be buffered once landing
 landingBufferTimer = 0; // Timer to keep track of the buffer window
 landingBufferWindow = 5; // How long the player has to buffer an attack while landing.
 landingBufferLockout = 20; // How long until the player can attempt to buffer a landing attack again.
+
+// Round Win Vars
+isInStableState = false; // Whether the player is in a "stable" state or not
+// When a round ends, the game slows down to emphasize the last hit.
+// After the slowdown, the game will wait until each player enters a "stable"
+// state before playing the victory animation. A "stable" state is one where
+// the player is not moving at all. The stable states are: Idle, KnockedDown

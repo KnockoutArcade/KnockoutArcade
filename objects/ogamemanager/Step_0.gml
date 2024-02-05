@@ -13,23 +13,99 @@ switch (global.gameMode)
 		{
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
+			
+			// Disable inputs for players
+			p1.isInCutscene = true; 
+			p2.isInCutscene = true;
 			instance_destroy(oTimeStop);
 			audio_resume_sound(testBGM);
 			
-			global.gameHalt = true;
+			global.roundOver = true;
 			gameHaltTimer++;
-	
-			if (gameHaltTimer == 90 && !winConditionMet)
+			
+			// If we're past the slowdown and both players are stable AND we havent set mWBPWS yet...
+			if (gameHaltTimer >= 180 && p1.isInStableState && p2.isInStableState && momentWhenBothPlayersWereStable == 0)
+			{
+				// Set this frame as the moment both players became stable
+				momentWhenBothPlayersWereStable = gameHaltTimer;
+			}
+			
+			// If we're past the delay after both players became stable...
+			if (gameHaltTimer >= (momentWhenBothPlayersWereStable + victoryAnimationDelay) && !winConditionMet && momentWhenBothPlayersWereStable != 0 && victoryAnimationTime == 0)
+			{
+				if (p1.hp > 0) // If p1 won...
+				{
+					// set state
+					p1.state = eState.ROUND_WIN;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p1;
+				}
+				else if (p2.hp > 0) // If p2 won...
+				{
+					// set state
+					p2.state = eState.ROUND_WIN;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p2;
+				}
+				else // if both players are defeated, transition immediately
+				{
+					ResetGame();
+
+					SetupGame();
+		
+					global.gameHalt = 0;
+					global.game_paused = false;
+					global.roundOver = false;
+					gameHaltTimer = 0;
+					momentWhenBothPlayersWereStable = 0;
+					victoryAnimationTime = 0;
+				}
+				
+			}
+			else if (gameHaltTimer >= (victoryAnimationTime + victoryAnimationDuration) && victoryAnimationTime != 0) // If the victory animation is complete...
 			{
 				ResetGame();
 
 				SetupGame();
 		
 				global.gameHalt = 0;
+				global.game_paused = false;
+				global.roundOver = false;
 				gameHaltTimer = 0;
+				momentWhenBothPlayersWereStable = 0;
+				victoryAnimationTime = 0;
 			}
-			else if (gameHaltTimer == 1)
+			else if (gameHaltTimer >= 180 && gameHaltTimer < 300) // Post-slowdown
 			{
+				global.game_paused = false;
+			}
+			else if (gameHaltTimer >= 60 && gameHaltTimer < 180) // Slowdown
+			{
+				// Slowdown the game by pausing and unpausing
+				if (gameHaltTimer mod 3 >= 1)
+				{
+					global.game_paused = true;
+				}
+				else
+				{
+					global.game_paused = false;
+				}
+			}
+			else if (gameHaltTimer == 1) // Initial end
+			{
+				// Immediately pause the game
+				global.game_paused = true;
+				
 				if (p2.hp <= 0)
 				{
 					global.p1Rounds++;
@@ -47,7 +123,7 @@ switch (global.gameMode)
 					{
 						sprite_index = sDoubleKOText;
 						image_index = true;
-						lifetime = 89;
+						lifetime = 59;
 					}
 				}
 				else
@@ -67,7 +143,7 @@ switch (global.gameMode)
 					{
 						sprite_index = sKOText;
 						image_index = true;
-						lifetime = 89;
+						lifetime = 59;
 					}
 				}
 			}
@@ -76,19 +152,73 @@ switch (global.gameMode)
 		// Time runs out
 		if (global.gameTimer == 0)
 		{
-			global.gameHalt = true;
+			p1.isEXFlash = false;
+			p2.isEXFlash = false;
+			
+			// Disable inputs for players
+			p1.isInCutscene = true; 
+			p2.isInCutscene = true;
+			
+			global.roundOver = true;
 			gameHaltTimer++;
-	
-			if (gameHaltTimer == 90 && !winConditionMet)
+			
+			
+			// If we're past the delay and both players are idle AND we havent set mWBPWS yet...
+			if (gameHaltTimer >= 60 && p1.state == eState.IDLE && p2.state == eState.IDLE && momentWhenBothPlayersWereStable == 0)
+			{
+				// Set this frame as the moment both players became stable
+				momentWhenBothPlayersWereStable = gameHaltTimer;
+			}
+			
+			if (gameHaltTimer >= (momentWhenBothPlayersWereStable + victoryAnimationDelay) && !winConditionMet && momentWhenBothPlayersWereStable != 0 && victoryAnimationTime == 0) // After the delay...
+			{
+				// If P1 won...
+				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
+				{
+					// set state
+					p1.state = eState.ROUND_WIN;
+					p2.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+					
+					// Set the camera's target
+					global.camObj.isTargetingWinner = true;
+					global.camObj.roundWinTarget = p1;
+				}
+				else if (p2.hp/p2.maxHitPoints > p1.hp/p1.maxHitPoints)
+				{
+					// set state
+					p2.state = eState.ROUND_WIN;
+					p1.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+				else // Both are equal
+				{
+					// Set both players to lose
+					p1.state = eState.ROUND_LOSE;
+					p2.state = eState.ROUND_LOSE;
+					
+					// Set the time when a player entered their victory animation
+					victoryAnimationTime = gameHaltTimer;
+				}
+			}
+			else if (gameHaltTimer >= (victoryAnimationTime + victoryAnimationDuration) && victoryAnimationTime != 0) // If the victory animation is complete...
 			{
 				ResetGame();
-		
+
 				SetupGame();
 		
 				global.gameHalt = 0;
+				global.game_paused = false;
+				global.roundOver = false;
 				gameHaltTimer = 0;
+				momentWhenBothPlayersWereStable = 0;
+				victoryAnimationTime = 0;
 			}
-			else if (gameHaltTimer == 1)
+			else if (gameHaltTimer == 1) // Initial End
 			{
 				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
@@ -110,7 +240,7 @@ switch (global.gameMode)
 				{
 					sprite_index = sTimeUp;
 					image_index = true;
-					lifetime = 89;
+					lifetime = 59;
 				}
 			}
 		}

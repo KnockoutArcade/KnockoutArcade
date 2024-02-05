@@ -1,7 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-state = 0;
+state = eGameManagerState.DURING_MATCH;
+
+enum eGameManagerState
+{
+	DURING_MATCH,
+	ROUND_WIN,
+	POST_MATCH
+}
 
 global.frameskip = 0;
 global.game_paused = 0;
@@ -13,6 +20,7 @@ global.toggleHitboxVisibility = false;
 global.togglePresentationMode = false;
 
 global.currentRound = 0;
+global.roundOver = false; // Whether the round is currently over
 
 global.hasCompletedIntros = false;
 levelCompleteTimer = 0; // Timer for the level end sequence
@@ -62,3 +70,8 @@ P2hasSelectedresult = false;
 
 P1cursorY = 0;
 P2cursorY = 0;
+
+momentWhenBothPlayersWereStable = 0; // During round win, the frame when both players entered a stable state
+victoryAnimationDelay = 30; // The delay between when players are stable and when the victory animation should play (frames)
+victoryAnimationTime = 0; // The moment when a player entered their victory animation
+victoryAnimationDuration = 100; // The amount of time the victory animation plays for (in frames)

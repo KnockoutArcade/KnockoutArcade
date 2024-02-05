@@ -17,8 +17,13 @@ if (!hasPerformedIntro)
 //Pause function, cancel event
 if (global.game_paused)
 {
+	image_speed = 0;
 	exit;
-} 
+}
+else
+{
+	image_speed = 1;
+}
 
 if (!global.gameHalt)
 { 
@@ -107,10 +112,12 @@ else // Safegaurd in case an empty character is spawned
 	var attack = 0;
 }
 
+// Reset Vars
 canBlock = false;
 inAttackState = false;
 canTurnAround = true;
 projectileInvincible = false;
+isInStableState = false;
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -447,6 +454,7 @@ if (state == eState.IDLE)
 	hasSpentDoubleJump = false;
 	canBlock = true;
 	invincible = false;
+	isInStableState = true; // Set stable state to true
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -1886,21 +1894,12 @@ switch state
 
 	case eState.GRAB : 
 	{
-		grounded = true;
-		inAttackState = true;
-		
-		sprite_index = CharacterSprites.grab_Sprite;
-		
 		hurtbox.image_xscale = 15;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
 		
-		PerformAttack(selectedCharacter.Grab, false);
+		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
 		
-		if (animTimer > 24)
-		{
-			state = eState.IDLE;
-		}
 	}
 	break;
 	
@@ -2212,6 +2211,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		isInStableState = true;
 		
 		cancelCombo = true;
 		
@@ -2229,12 +2229,23 @@ switch state
 			hitstun--;
 		}
 		
+		// Get up after 40 frame
 		if (animTimer > 39)
 		{
-			state = eState.GETUP;
-			animTimer = 0;
-			sprite_index = CharacterSprites.getup_Sprite;
-			image_index = 0;
+			if (!global.roundOver) // if the round not over, get up
+			{
+				state = eState.GETUP;
+				animTimer = 0;
+				sprite_index = CharacterSprites.getup_Sprite;
+				image_index = 0;
+			}
+			else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
+			{
+				state = eState.GETUP;
+				animTimer = 0;
+				sprite_index = CharacterSprites.getup_Sprite;
+				image_index = 0;
+			}
 		}
 	}
 	break;
@@ -2795,20 +2806,28 @@ if (timeStopActivated && state != eState.SCREEN_FREEZE)
 		timeStopObject.owner = id;
 	}
 	
-	if (spiritObject != noone)
+	// update where the timeStopObject is
+	if (instance_exists(timeStopObject))
 	{
-		timeStopObject.x = spiritObject.x;
-		timeStopObject.y = spiritObject.y;
-	}
-	else
-	{
-		timeStopObject.x = x;
-		timeStopObject.y = y;
+		if (spiritObject != noone)
+		{
+			timeStopObject.x = spiritObject.x;
+			timeStopObject.y = spiritObject.y;
+		}
+		else
+		{
+			timeStopObject.x = x;
+			timeStopObject.y = y;
+		}
 	}
 	
-	if (superMeter <= 0 && timeStopTimer <= 0)
+	// If we've run out of time OR the timeStopObject stop existing, exit time stop
+	if ((superMeter <= 0 && timeStopTimer <= 0) || (!instance_exists(timeStopObject)))
 	{
-		timeStopObject.owner = noone;
+		if (instance_exists(timeStopObject)) 
+		{
+			timeStopObject.owner = noone;
+		}
 		timeStopObject = noone;
 		timeStopTimer = 30;
 		timeStopActivated = false;
@@ -3135,5 +3154,10 @@ else
 if (state == eState.ROUND_WIN)
 {
 	sprite_index = sRussel_Intro;
+	image_speed = 1;
+}
+if (state == eState.ROUND_LOSE)
+{
+	sprite_index = sRussel_Hurt;
 	image_speed = 1;
 }

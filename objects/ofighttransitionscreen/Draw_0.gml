@@ -7,8 +7,8 @@ draw_self()
 // Draw the character portaits
 if (transitionTimer >= portaits_StartMoving && transitionTimer < portaits_EndLeaving)
 {
-	draw_sprite(p1Portait, 0, p1CharacterPortait_x, p1CharacterPortait_y);
-	draw_sprite(p2Portait, 0, p2CharacterPortait_x, p2CharacterPortait_y);
+	draw_sprite(p1Portait, global.p1PaletteID, p1CharacterPortait_x, p1CharacterPortait_y);
+	draw_sprite(p2Portait, global.p2PaletteID, p2CharacterPortait_x, p2CharacterPortait_y);
 	
 	draw_sprite(sCharacterNames, p1PortaitNameID, p1PortaitName_x, p1PortaitName_y);
 	draw_sprite(sCharacterNames, p2PortaitNameID, p2PortaitName_x, p2PortaitName_y);
