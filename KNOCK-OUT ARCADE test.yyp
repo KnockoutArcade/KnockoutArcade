@@ -21,6 +21,7 @@
     {"id":{"name":"sGunther_JumpingMedium_Projectile_destroy_strip4","path":"sprites/sGunther_JumpingMedium_Projectile_destroy_strip4/sGunther_JumpingMedium_Projectile_destroy_strip4.yy",},"order":2,},
     {"id":{"name":"sConstructionGuy_Hurt","path":"sprites/sConstructionGuy_Hurt/sConstructionGuy_Hurt.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial2_MOCKUP","path":"sprites/sBeverly_SideSpecial2_MOCKUP/sBeverly_SideSpecial2_MOCKUP.yy",},"order":3,},
+    {"id":{"name":"sBeverly_Hold","path":"sprites/sBeverly_Hold/sBeverly_Hold.yy",},"order":37,},
     {"id":{"name":"sDashParticle","path":"sprites/sDashParticle/sDashParticle.yy",},"order":0,},
     {"id":{"name":"oTimeStop","path":"objects/oTimeStop/oTimeStop.yy",},"order":4,},
     {"id":{"name":"sHitbox","path":"sprites/sHitbox/sHitbox.yy",},"order":2,},
