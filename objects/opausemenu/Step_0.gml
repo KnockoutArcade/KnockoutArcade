@@ -1,6 +1,38 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+
+#region Handle Inputs
+
+// Determine which player's inputs to use
+if (playerNumber == 0)
+{
+	var menuUp = global.p1ButtonMenuUp;
+	var menuDown = global.p1ButtonMenuDown;
+	var menuRowMove = menuUp + menuDown;
+	var menuConfirm = global.p1ButtonMenuConfirm;
+	var menuConfirmBuffer = false;
+}
+else
+{
+	var menuUp = global.p2ButtonMenuUp;
+	var menuDown = global.p2ButtonMenuDown;
+	var menuRowMove = menuUp + menuDown;
+	var menuConfirm = global.p2ButtonMenuConfirm;
+	var menuConfirmBuffer = false;
+}
+
+// Decrease the cursor cooldown
+cursorCooldown--;
+
+// If the cursor isn't moving, reset the cooldown
+if (menuRowMove == 0)
+{
+	cursorCooldown = 0;
+}
+
+#endregion
+
 switch (state)
 {
 	case (ePauseMenuState.MAIN) :
@@ -10,6 +42,24 @@ switch (state)
 		{
 			sprite_index = sPauseMenu_MainBackdrop;
 			image_index = playerNumber;
+		}
+		
+		// Handle selections
+		if (menuRowMove != 0 && cursorCooldown <= 0)
+		{
+			currentRow -= menuRowMove;
+			
+			if (currentRow < 0)
+			{
+				currentRow = mainRowMax - 1;
+			}
+			
+			if (currentRow >= mainRowMax)
+			{
+				currentRow = 0;
+			}
+			
+			cursorCooldown = cursorCooldownAmount;
 		}
 	}
 	break;
