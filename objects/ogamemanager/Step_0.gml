@@ -28,16 +28,31 @@ switch (global.gameMode)
 				pauseMenuButtonHeldTimer_P2 = 0; // reset P2's timer
 			}
 			
-			if (pauseMenuButtonHeldTimer_P1 == pauseMenuHoldRequirement)
+			// If a player has reached the hold requirement...
+			if (pauseMenuButtonHeldTimer_P1 == pauseMenuHoldRequirement || pauseMenuButtonHeldTimer_P2 == pauseMenuHoldRequirement)
 			{
 				// Create the Pause menu
-				pauseMenuObj = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				pauseMenuObject = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				
+				// If P2 has been holding for longer, make them the person who paused the game
+				if (pauseMenuButtonHeldTimer_P2 > pauseMenuButtonHeldTimer_P1)
+				{
+					// set Player number to 1, and set the proper opening animation
+					pauseMenuObject.playerNumber = 1;
+					pauseMenuObject.sprite_index = sPauseMenu_Open_P2;
+				}
+				else // otherwise, P1 has paused the game
+				{
+					// set Player number to 0 (animation already set by default)
+					pauseMenuObject.playerNumber = 0;
+				}
 				
 				// Pause the game
 				global.game_paused = true;
 				
-				// reset the pause button timer
+				// reset the pause button timers
 				pauseMenuButtonHeldTimer_P1 = 0;
+				pauseMenuButtonHeldTimer_P2 = 0;
 			}
 		}
 		
