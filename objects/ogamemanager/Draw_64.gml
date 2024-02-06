@@ -13,7 +13,7 @@ if (global.toggleHitboxVisibility)
 }
 
 // Results Screen
-if (state == 1)
+if (state == eGameManagerState.POST_MATCH)
 {
 	// Player 1 buttons
 	draw_sprite(sResults_Options, 0, 30, 400);

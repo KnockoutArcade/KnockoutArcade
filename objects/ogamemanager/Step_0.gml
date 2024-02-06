@@ -11,6 +11,9 @@ switch (global.gameMode)
 		// A player is defeated
 		if (p1.hp <= 0 || p2.hp <= 0)
 		{
+			// Set the game manager's state to round win
+			state = eGameManagerState.ROUND_WIN;
+			
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
 			
@@ -103,6 +106,9 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1) // Initial end
 			{
+				// Set the game manager's state to round win
+				state = eGameManagerState.ROUND_WIN;
+				
 				// Immediately pause the game
 				global.game_paused = true;
 				
@@ -220,6 +226,10 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1) // Initial End
 			{
+				// Set the game manager's state to round win
+				state = eGameManagerState.ROUND_WIN;
+			
+				
 				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
 					global.p1Rounds++;
@@ -260,7 +270,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -279,7 +289,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -298,7 +308,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -316,7 +326,6 @@ switch (global.gameMode)
 				lifetime = 110;
 			}
 		}
-
 
 
 		// Frame-by-frame

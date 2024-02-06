@@ -6,6 +6,9 @@ function SetupGame()
 	{
 		case GAMEMODE.VERSUS:
 		{
+			// Set the current state of the game manager
+			state = eGameManagerState.DURING_MATCH;
+			
 			if (room != rStageArcade)
 			{
 				p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
