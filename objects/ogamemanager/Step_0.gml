@@ -5,6 +5,42 @@ switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
 	{
+		// Handle Pausing
+		if (state == eGameManagerState.DURING_MATCH) // Check to see if we are in the during match state
+		{
+			// If p1 pressed pause and the pause menu isn't up already
+			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P1 = 0; // reset P1's timer
+			}
+			
+			// If p2 pressed pause and the pause menu isn't up already
+			if (global.p2ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P2++; // increment P2's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P2 = 0; // reset P2's timer
+			}
+			
+			if (pauseMenuButtonHeldTimer_P1 == pauseMenuHoldRequirement)
+			{
+				// Create the Pause menu
+				pauseMenuObj = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				
+				// Pause the game
+				global.game_paused = true;
+				
+				// reset the pause button timer
+				pauseMenuButtonHeldTimer_P1 = 0;
+			}
+		}
+		
 		// This will tell us if someone has won, so we can stop any match resetting
 		var winConditionMet = (global.p1Rounds >= 2 || global.p2Rounds >= 2);
 		
