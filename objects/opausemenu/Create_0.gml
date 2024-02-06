@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+owner = noone; // The object that spawned this menu
+
 playerNumber = 0; // Which player is responsible for pausing (0 = player 1, 1 = player 2)
 
 state = ePauseMenuState.MAIN;
@@ -14,7 +16,6 @@ enum ePauseMenuState
 }
 
 cursorCooldown = 0; // The cooldown on the cursor
-
 cursorCooldownAmount = 13; // How long a direction must be held in order to keep moving the cursor
 
 currentRow = 0; // Which row we are on

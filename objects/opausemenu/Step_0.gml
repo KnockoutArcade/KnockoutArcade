@@ -44,7 +44,7 @@ switch (state)
 			image_index = playerNumber;
 		}
 		
-		// Handle selections
+		// Handle Cursor
 		if (menuRowMove != 0 && cursorCooldown <= 0)
 		{
 			currentRow -= menuRowMove;
@@ -60,6 +60,23 @@ switch (state)
 			}
 			
 			cursorCooldown = cursorCooldownAmount;
+		}
+		
+		// Handle Selecting Options
+		if (menuConfirm && !menuConfirmBuffer) // If we pressed confirm
+		{
+			switch (currentRow)
+			{
+				case 0:
+				{
+					owner.pauseMenuObject = noone;
+					
+					global.game_paused = false;
+					
+					instance_destroy();
+				}
+				break;
+			}
 		}
 	}
 	break;

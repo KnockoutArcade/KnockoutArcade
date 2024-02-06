@@ -34,6 +34,9 @@ switch (global.gameMode)
 				// Create the Pause menu
 				pauseMenuObject = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
 				
+				// Set the pause menu's owner
+				pauseMenuObject.owner = id;
+				
 				// If P2 has been holding for longer, make them the person who paused the game
 				if (pauseMenuButtonHeldTimer_P2 > pauseMenuButtonHeldTimer_P1)
 				{
