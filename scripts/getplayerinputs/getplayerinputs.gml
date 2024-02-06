@@ -27,6 +27,7 @@ function GetPlayerInputs()
 		global.p1ButtonMenuDeny = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuDeny);
 		global.p1ButtonMenuSwitch = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSwitch);
 		global.p1ButtonMenuControls = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSetControls);
+		global.p1ButtonMenuPause = keyboard_check(global.player1Controls.Keyboard.buttonMenuPause);
 	} 
 	else
 	{
@@ -79,6 +80,7 @@ function GetPlayerInputs()
 		global.p1ButtonMenuDeny = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDeny);
 		global.p1ButtonMenuSwitch = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSwitch);
 		global.p1ButtonMenuSetControls = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSetControls);
+		global.p1ButtonMenuPause = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuPause);
 	};
 
 	if (global.player2ControllerType = "KEYBOARD") 
@@ -104,6 +106,7 @@ function GetPlayerInputs()
 		global.p2ButtonMenuDeny = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuDeny);
 		global.p2ButtonMenuSwitch = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuSwitch);
 		global.p2ButtonMenuSetControls = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuSetControls);
+		global.p2ButtonMenuPause = keyboard_check(global.player2Controls.Keyboard.buttonMenuPause);
 	} 
 	else 
 	{
@@ -156,5 +159,6 @@ function GetPlayerInputs()
 		global.p2ButtonMenuDeny = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDeny);
 		global.p2ButtonMenuSwitch = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSwitch);
 		global.p2ButtonMenuSetControls = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSetControls);
+		global.p2ButtonMenuPause = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuPause);
 	};
 }

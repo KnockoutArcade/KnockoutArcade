@@ -1,5 +1,8 @@
 {
-  "spriteId": null,
+  "spriteId": {
+    "name": "sPauseMenu_Open_P1",
+    "path": "sprites/sPauseMenu_Open_P1/sPauseMenu_Open_P1.yy",
+  },
   "solid": false,
   "visible": true,
   "managed": true,
