@@ -65,24 +65,52 @@ switch (state)
 		// Handle Selecting Options
 		if (menuConfirm && !menuConfirmBuffer) // If we pressed confirm
 		{
+			menuConfirmBuffer = true;
+			
 			switch (currentRow)
 			{
 				// Resume
 				case 0:
 				{
 					owner.pauseMenuObject = noone;
-					
 					global.game_paused = false;
 					
 					instance_destroy();
 				}
 				break;
 				
+				// Restart
+				case 3:
+				{
+					state = ePauseMenuState.ARE_YOU_SURE; // Set state
+					areYouSureAction = eAreYouSureAction.RESTART; // We want to restart the room after selecting Yes
+					previousRow = currentRow; // Save our current row so we can return to it later
+					currentRow = 1; // reset current row (default on No)
+					cursorCooldown = 0; // refresh cooldown
+				}
+				break;
+				
 				// Character Select
 				case 4:
 				{
-					state = ePauseMenuState.ARE_YOU_SURE;
+					state = ePauseMenuState.ARE_YOU_SURE; // Set state
+					areYouSureAction = eAreYouSureAction.CHARACTER_SELECT; // We want to go to Char Sel after selecting Yes
+					previousRow = currentRow; // Save our current row so we can return to it later
+					currentRow = 1; // reset current row (default on No)
+					cursorCooldown = 0; // refresh cooldown
 				}
+				break;
+				
+				// Main Menu
+				case 5:
+				{
+					state = ePauseMenuState.ARE_YOU_SURE; // Set state
+					areYouSureAction = eAreYouSureAction.MAIN_MENU; // We want to go to Main Menu after selecting Yes
+					previousRow = currentRow; // Save our current row so we can return to it later
+					currentRow = 1; // reset current row (default on No)
+					cursorCooldown = 0; // refresh cooldown
+				}
+				break;
 			}
 		}
 	}
@@ -90,7 +118,60 @@ switch (state)
 	
 	case ePauseMenuState.ARE_YOU_SURE:
 	{
+		// Handle Cursor
+		if (menuRowMove != 0 && cursorCooldown <= 0)
+		{
+			currentRow -= menuRowMove;
+			
+			if (currentRow < 0)
+			{
+				currentRow = areYouSureRowMax - 1;
+			}
+			
+			if (currentRow >= areYouSureRowMax)
+			{
+				currentRow = 0;
+			}
+			
+			cursorCooldown = cursorCooldownAmount;
+		}
 		
+		// Handle selections
+		if (menuConfirm && !menuConfirmBuffer) // If we pressed confirm
+		{
+			menuConfirmBuffer = true;
+			
+			switch (currentRow)
+			{
+				// Yes
+				case 0:
+				{
+					if (areYouSureAction == eAreYouSureAction.CHARACTER_SELECT)
+					{
+						room_goto(rCharacterSelectScreen);
+					}
+					else if (areYouSureAction == eAreYouSureAction.MAIN_MENU)
+					{
+						room_goto(rMainMenu);
+					}
+					else if (areYouSureAction == eAreYouSureAction.RESTART)
+					{
+						room_restart();
+					}
+					
+				}
+				break;
+				
+				// No
+				case 1:
+				{
+					state = ePauseMenuState.MAIN; // Set state
+					currentRow = previousRow; // Restore current row
+					cursorCooldown = 0; // refresh cooldown
+				}
+				break;
+			}
+		}
 	}
 	break;
 }

@@ -16,6 +16,23 @@ switch (state)
 		}
 	}
 	break;
+	
+	case (ePauseMenuState.ARE_YOU_SURE) :
+	{
+		draw_self();
+		
+		draw_sprite(sPauseMenu_SelectionLarge, 0, x + 16, y + 39 + (previousRow * 12));
+			
+		draw_sprite(sPauseMenu_MainOptions, 0, x, y);
+		
+		// Draw Are You Sure?
+		draw_sprite(sPauseMenu_AreYouSure, playerNumber, x, y);
+			
+		draw_sprite(sPauseMenu_SelectionSmall, 0, x + 29, y + 61 + (currentRow * 12));
+			
+		draw_sprite(sPauseMenu_YesNo, 0, x, y);
+	}
+	break;
 }
 
 
