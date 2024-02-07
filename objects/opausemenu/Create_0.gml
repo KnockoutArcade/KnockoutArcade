@@ -44,8 +44,5 @@ commandListCharacter = 0; // Which Character's command list to show
 
 // Options
 audio_group_set_gain(audiogroup_music, global.musicVolume, 0); // Set the volume
-optionsMusicVolume = global.musicVolume; // Store our current volume
 audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
-optionsSFXVolume = global.sfxVolume;
 audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
-optionsVoicesVolume = global.voicesVolume;

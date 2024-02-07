@@ -279,6 +279,97 @@ switch (state)
 			currentRow = previousRow; // Restore current row
 			cursorCooldown = 0; // refresh cooldown
 		}
+		
+		// If the player presses left or right...
+		if (menuCollumnMove != 0 && cursorCooldown <= 0)
+		{
+			switch (currentRow)
+			{
+				// Music
+				case 0:
+				{
+					// Increase or decrease the volume
+					global.musicVolume += 0.1 * menuCollumnMove;
+					
+					// Cap out the volume
+					if (global.musicVolume < 0)
+					{
+						global.musicVolume = 0;
+					}
+					else if (global.musicVolume > 1)
+					{
+						global.musicVolume = 1;
+					}
+					
+					// Update actual volume
+					audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
+				}
+				break;
+				
+				// SFX
+				case 1:
+				{
+					// Increase or decrease the volume
+					global.sfxVolume += 0.1 * menuCollumnMove;
+					
+					// Cap out the volume
+					if (global.sfxVolume < 0)
+					{
+						global.sfxVolume = 0;
+					}
+					else if (global.sfxVolume > 1)
+					{
+						global.sfxVolume = 1;
+					}
+					
+					// Update actual volume
+					audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+				}
+				break;
+				
+				// Voices
+				case 2:
+				{
+					// Increase or decrease the volume
+					global.voicesVolume += 0.1 * menuCollumnMove;
+					
+					// Cap out the volume
+					if (global.voicesVolume < 0)
+					{
+						global.voicesVolume = 0;
+					}
+					else if (global.voicesVolume > 1)
+					{
+						global.voicesVolume = 1;
+					}
+					
+					// Update actual volume
+					audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+				}
+				break;
+			}
+			
+			// Add cooldown to the cursor
+			cursorCooldown = cursorCooldownAmount;
+		}
+		
+		// If the player presses Confirm
+		if (menuConfirm && !menuConfirmBuffer)
+		{
+			menuConfirmBuffer = true;
+			
+			switch (currentRow)
+			{
+				// Back
+				case 5:
+				{
+					state = ePauseMenuState.MAIN; // Set state
+					currentRow = previousRow; // Restore current row
+					cursorCooldown = 0; // refresh cooldown
+				}
+			}
+		}
+		
 	}
 	break;
 	
