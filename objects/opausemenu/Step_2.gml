@@ -76,12 +76,18 @@ switch (state)
 			}
 			
 			cursorCooldown = cursorCooldownAmount;
+			
+			// Play sound
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		
 		// Handle Selecting Options
 		if (menuConfirm && !menuConfirmBuffer) // If we pressed confirm
 		{
 			menuConfirmBuffer = true;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Select, 0, false);
 			
 			switch (currentRow)
 			{
@@ -193,6 +199,9 @@ switch (state)
 		// Handle Pressing Back
 		if (menuDeny && !menuDenyBuffer)
 		{
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
+			
 			// Pressing back is the same as resuming the game
 			owner.pauseMenuObject = noone;
 			global.game_paused = false;
@@ -223,6 +232,9 @@ switch (state)
 			commandListCurrentPage = 0;
 			
 			cursorCooldown = cursorCooldownAmount;
+			
+			// Play Sound
+			audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
 		}
 		
 		if (menuRowMove != 0 && cursorCooldown <= 0) // Up and Down
@@ -236,12 +248,18 @@ switch (state)
 			}
 			
 			cursorCooldown = cursorCooldownAmount;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		
 		// Handle selections
 		if (menuDeny && !menuDenyBuffer) // If we pressed Deny to go back
 		{
 			menuDenyBuffer = true;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
 			
 			state = ePauseMenuState.MAIN; // Set state
 			currentRow = 1; // Restore current row (Command List)
@@ -268,12 +286,18 @@ switch (state)
 			}
 			
 			cursorCooldown = cursorCooldownAmount;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		
 		// Handle Pressing Back
 		if (menuDeny && !menuDenyBuffer)
 		{
 			menuDenyBuffer = true;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
 			
 			state = ePauseMenuState.MAIN; // Set state
 			currentRow = previousRow; // Restore current row
@@ -303,6 +327,9 @@ switch (state)
 					
 					// Update actual volume
 					audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
+					
+					// Play Sound
+					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
 				}
 				break;
 				
@@ -324,6 +351,9 @@ switch (state)
 					
 					// Update actual volume
 					audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+					
+					// Play Sound
+					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
 				}
 				break;
 				
@@ -345,6 +375,9 @@ switch (state)
 					
 					// Update actual volume
 					audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+					
+					// Play Sound
+					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
 				}
 				break;
 			}
@@ -363,6 +396,9 @@ switch (state)
 				// Back
 				case 5:
 				{
+					// Play Sound
+					audio_play_sound(sfx_UI_Exit, 0, false);
+					
 					state = ePauseMenuState.MAIN; // Set state
 					currentRow = previousRow; // Restore current row
 					cursorCooldown = 0; // refresh cooldown
@@ -391,6 +427,22 @@ switch (state)
 			}
 			
 			cursorCooldown = cursorCooldownAmount;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Hover, 0, false);
+		}
+		
+		// Handle Pressing Back
+		if (menuDeny && !menuDenyBuffer)
+		{
+			menuDenyBuffer = true;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
+			
+			state = ePauseMenuState.MAIN; // Set state
+			currentRow = previousRow; // Restore current row
+			cursorCooldown = 0; // refresh cooldown
 		}
 		
 		// Handle selections
@@ -403,17 +455,29 @@ switch (state)
 				// Yes
 				case 0:
 				{
+					// Play Sound
+					audio_play_sound(sfx_UI_Select, 0, false);
+					
 					if (areYouSureAction == eAreYouSureAction.CHARACTER_SELECT)
 					{
 						room_goto(rCharacterSelectScreen);
+						
+						// reset music
+						audio_stop_sound(testBGM);
 					}
 					else if (areYouSureAction == eAreYouSureAction.MAIN_MENU)
 					{
 						room_goto(rMainMenu);
+						
+						// reset music
+						audio_stop_sound(testBGM);
 					}
 					else if (areYouSureAction == eAreYouSureAction.RESTART)
 					{
 						room_restart();
+						
+						// reset music
+						audio_stop_sound(testBGM);
 					}
 					
 				}
@@ -422,6 +486,9 @@ switch (state)
 				// No
 				case 1:
 				{
+					// Play Sound
+					audio_play_sound(sfx_UI_Exit, 0, false);
+					
 					state = ePauseMenuState.MAIN; // Set state
 					currentRow = previousRow; // Restore current row
 					cursorCooldown = 0; // refresh cooldown
