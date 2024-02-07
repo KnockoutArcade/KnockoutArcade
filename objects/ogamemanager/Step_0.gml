@@ -6,7 +6,7 @@ switch (global.gameMode)
 	case GAMEMODE.VERSUS:
 	{
 		// Handle Pausing
-		if (state == eGameManagerState.DURING_MATCH && !global.game_paused) // Check to see if we are in the during match state
+		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene) // Check to see if we are in the during match state
 		{
 			// If p1 pressed pause and the pause menu isn't up already
 			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
