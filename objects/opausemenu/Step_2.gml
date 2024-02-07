@@ -10,23 +10,39 @@ if (playerNumber == 0)
 	var menuUp = global.p1ButtonMenuUp;
 	var menuDown = global.p1ButtonMenuDown;
 	var menuRowMove = menuUp + menuDown;
+	
+	var menuLeft = global.p1ButtonMenuLeft;
+	var menuRight = global.p1ButtonMenuRight;
+	var menuCollumnMove = menuLeft + menuRight;
+	
 	var menuConfirm = global.p1ButtonMenuConfirm;
 	var menuConfirmBuffer = false;
+	
+	var menuDeny = global.p1ButtonMenuDeny;
+	var menuDenyBuffer = false;
 }
 else
 {
 	var menuUp = global.p2ButtonMenuUp;
 	var menuDown = global.p2ButtonMenuDown;
 	var menuRowMove = menuUp + menuDown;
+	
+	var menuLeft = global.p2ButtonMenuLeft;
+	var menuRight = global.p2ButtonMenuRight;
+	var menuCollumnMove = menuLeft + menuRight;
+	
 	var menuConfirm = global.p2ButtonMenuConfirm;
 	var menuConfirmBuffer = false;
+	
+	var menuDeny = global.p2ButtonMenuDeny;
+	var menuDenyBuffer = false;
 }
 
 // Decrease the cursor cooldown
 cursorCooldown--;
 
 // If the cursor isn't moving, reset the cooldown
-if (menuRowMove == 0)
+if (menuRowMove == 0 && menuCollumnMove == 0)
 {
 	cursorCooldown = 0;
 }
@@ -79,6 +95,56 @@ switch (state)
 				}
 				break;
 				
+				// Command lists
+				case 1:
+				{
+					state = ePauseMenuState.COMMAND_LISTS; // Set state
+					commandListCurrentTab = 0; // Make sure to start on the first tab (Command Inputs)
+					commandListCurrentPage = 0; // Reset current page
+					cursorCooldown = 0;
+					
+					// Determine which character to display
+					if (playerNumber == 0) // Player 1
+					{
+						switch (global.p1SelectedCharacter)
+						{
+							// Russel
+							default:
+							{
+								commandListCharacter = 0;
+							}
+							break;
+							
+							// Beverly
+							case oBeverly:
+							{
+								commandListCharacter = 1;
+							}
+							break;
+						}
+					}
+					else // Player 2
+					{
+						switch (global.p2SelectedCharacter)
+						{
+							// Russel
+							default:
+							{
+								commandListCharacter = 0;
+							}
+							break;
+							
+							// Beverly
+							case oBeverly:
+							{
+								commandListCharacter = 1;
+							}
+							break;
+						}
+					}
+				}
+				break;
+				
 				// Restart
 				case 3:
 				{
@@ -112,6 +178,64 @@ switch (state)
 				}
 				break;
 			}
+		}
+		
+		// Handle Pressing Back
+		if (menuDeny && !menuDenyBuffer)
+		{
+			// Pressing back is the same as resuming the game
+			owner.pauseMenuObject = noone;
+			global.game_paused = false;
+					
+			instance_destroy();
+		}
+	}
+	break;
+	
+	case ePauseMenuState.COMMAND_LISTS:
+	{
+		// Handle Cursor
+		if (menuCollumnMove != 0 && cursorCooldown <= 0) // Left and Right
+		{
+			commandListCurrentTab += menuCollumnMove;
+			
+			if (commandListCurrentTab < 0)
+			{
+				commandListCurrentTab = commandListMaxTabs - 1;
+			}
+			
+			if (commandListCurrentTab >= commandListMaxTabs)
+			{
+				commandListCurrentTab = 0;
+			}
+			
+			// Reset what page we are on
+			commandListCurrentPage = 0;
+			
+			cursorCooldown = cursorCooldownAmount;
+		}
+		
+		if (menuRowMove != 0 && cursorCooldown <= 0) // Up and Down
+		{
+			commandListCurrentPage -= menuRowMove;
+			
+			// If we try to scroll up after 0, reset to 0
+			if (commandListCurrentPage < 0)
+			{
+				commandListCurrentPage = 0;
+			}
+			
+			cursorCooldown = cursorCooldownAmount;
+		}
+		
+		// Handle selections
+		if (menuDeny && !menuDenyBuffer) // If we pressed Deny to go back
+		{
+			menuDenyBuffer = true;
+			
+			state = ePauseMenuState.MAIN; // Set state
+			currentRow = 1; // Restore current row (Command List)
+			cursorCooldown = 0; // refresh cooldown
 		}
 	}
 	break;

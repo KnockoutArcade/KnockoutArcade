@@ -33,6 +33,69 @@ switch (state)
 		draw_sprite(sPauseMenu_YesNo, 0, x, y);
 	}
 	break;
+	
+	case (ePauseMenuState.COMMAND_LISTS) :
+	{
+		draw_self();
+		
+		// Draw Base
+		draw_sprite(sPauseMenu_CommandList_Base, (4 * playerNumber) + commandListCurrentTab, x, y);
+			
+		switch (commandListCharacter)
+		{
+			// Russel
+			default:
+			{
+				// Draw name
+				draw_sprite(sCharacterNames, 0, x + 65, y + 4);
+				
+				if (commandListCurrentTab == 0) // Command Inputs
+				{
+					draw_sprite(sCommandLists_Russel_CommandInputs, 0, x, y);
+				}
+				else if (commandListCurrentTab == 1) // Throws
+				{
+					draw_sprite(sCommandLists_Russel_Throws, 0, x, y);
+				}
+				else if (commandListCurrentTab == 2) // Specials
+				{
+					draw_sprite(sCommandLists_Russel_Specials, commandListCurrentPage, x, y);
+				}
+				else if (commandListCurrentTab == 3) // Supers
+				{
+					draw_sprite(sCommandLists_Russel_Supers, 0, x, y);
+				}
+				
+			}
+			break;
+			
+			// Beverly
+			case 1:
+			{
+				// Draw name
+				draw_sprite(sCharacterNames, 1, x + 64, y + 4);
+				
+				if (commandListCurrentTab == 0) // Command Inputs
+				{
+					draw_sprite(sCommandLists_Beverly_CommandInputs, 0, x, y);
+				}
+				else if (commandListCurrentTab == 1) // Throws
+				{
+					draw_sprite(sCommandLists_Beverly_Throws, 0, x, y);
+				}
+				else if (commandListCurrentTab == 2) // Specials
+				{
+					draw_sprite(sCommandLists_Beverly_Specials, commandListCurrentPage, x, y);
+				}
+				else if (commandListCurrentTab == 3) // Supers
+				{
+					draw_sprite(sCommandLists_Beverly_Supers, 0, x, y);
+				}
+			}
+			break;
+		}
+	}
+	break;
 }
 
 
