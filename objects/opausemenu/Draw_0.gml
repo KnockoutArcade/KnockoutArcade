@@ -96,6 +96,23 @@ switch (state)
 		}
 	}
 	break;
+	
+	case (ePauseMenuState.OPTIONS) :
+	{
+		draw_self();
+		
+		// Draw base Options menu
+		draw_sprite(sPauseMenu_OptionsMenu, 0, x, y);
+		draw_sprite(sPauseMenu_SelectionLarge, 0, x + 16, y + 39 + (currentRow * 12));
+		draw_sprite(sPauseMenu_OptionsText, 0, x, y);
+		
+		// Draw Sliders
+		draw_sprite(sPauseMenu_OptionsSlider, OptionsConvertDecimaltoWhole(global.musicVolume), x + 91, y + 40);
+		draw_sprite(sPauseMenu_OptionsSlider, OptionsConvertDecimaltoWhole(global.sfxVolume), x + 91, y + 52);
+		draw_sprite(sPauseMenu_OptionsSlider, OptionsConvertDecimaltoWhole(global.voicesVolume), x + 91, y + 64);
+
+	}
+	break;
 }
 
 

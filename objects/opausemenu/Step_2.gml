@@ -145,6 +145,16 @@ switch (state)
 				}
 				break;
 				
+				// Options
+				case 2:
+				{
+					state = ePauseMenuState.OPTIONS; // Set state
+					previousRow = currentRow; // Save our current row so we can return to it later
+					currentRow = 0; // reset current row (default on No)
+					cursorCooldown = 0; // refresh cooldown
+				}
+				break;
+				
 				// Restart
 				case 3:
 				{
@@ -235,6 +245,38 @@ switch (state)
 			
 			state = ePauseMenuState.MAIN; // Set state
 			currentRow = 1; // Restore current row (Command List)
+			cursorCooldown = 0; // refresh cooldown
+		}
+	}
+	break;
+	
+	case ePauseMenuState.OPTIONS:
+	{
+		// Handle Cursor
+		if (menuRowMove != 0 && cursorCooldown <= 0) // Up and Down
+		{
+			currentRow -= menuRowMove;
+			
+			if (currentRow < 0)
+			{
+				currentRow = optionsRowMax - 1;
+			}
+			
+			if (currentRow >= optionsRowMax)
+			{
+				currentRow = 0;
+			}
+			
+			cursorCooldown = cursorCooldownAmount;
+		}
+		
+		// Handle Pressing Back
+		if (menuDeny && !menuDenyBuffer)
+		{
+			menuDenyBuffer = true;
+			
+			state = ePauseMenuState.MAIN; // Set state
+			currentRow = previousRow; // Restore current row
 			cursorCooldown = 0; // refresh cooldown
 		}
 	}
