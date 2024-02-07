@@ -413,10 +413,44 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
+		// Handle Pausing
+		if (!global.game_paused && !p1.isInCutscene) // Check to see if we are not in a cutscene right now
+		{
+			// If p1 pressed pause and the pause menu isn't up already
+			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P1 = 0; // reset P1's timer
+			}
+			
+			// If a player has reached the hold requirement (in singleplayer, pressing the button is enough)
+			if (pauseMenuButtonHeldTimer_P1 == 1)
+			{
+				// Create the Pause menu
+				pauseMenuObject = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				
+				// Set the pause menu's owner
+				pauseMenuObject.owner = id;
+				
+				// set Player number to 0 (animation already set by default)
+				pauseMenuObject.playerNumber = 0;
+				
+				// Pause the game
+				global.game_paused = true;
+				
+				// reset the pause button timers
+				pauseMenuButtonHeldTimer_P1 = 0;
+			}
+		}
+		
 		// When a player completes a level
 		if (global.hasCompletedLevel)
 		{
-			global.gameHalt = true;
+			// Pause the game
+			global.game_paused = true;
 			
 			levelCompleteTimer++;
 			
@@ -521,12 +555,6 @@ switch (global.gameMode)
 				levelCompleteKOScore = noone; // Pointer to thet ext object for the number of enemies defeated
 			}
 		}
-		
-		
-		
-		
-		
-		
 		
 		
 		// handle intros

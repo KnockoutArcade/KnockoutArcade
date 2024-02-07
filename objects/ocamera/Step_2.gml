@@ -66,35 +66,38 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
-		if (!isScreenShaking)
+		if (!global.game_paused)
 		{
-			// If the camera is locked in place, don't update it's movement
-			if (!isLocked)
+			if (!isScreenShaking)
 			{
-				// Set the camera's target
-				if (p1 != noone)
+				// If the camera is locked in place, don't update it's movement
+				if (!isLocked)
 				{
-					// Camera's target is the midpoint between both players
-					xCameraDestination = (p1.xHome) + (p1.hsp * 2);
-				}
+					// Set the camera's target
+					if (p1 != noone)
+					{
+						// Camera's target is the midpoint between both players
+						xCameraDestination = (p1.xHome) + (p1.hsp * 2);
+					}
 			
-				// Smoothly move the camera to its destination
-				x = lerp(xCameraDestination, x, cameraSpeed);
-			}
+					// Smoothly move the camera to its destination
+					x = lerp(xCameraDestination, x, cameraSpeed);
+				}
 		
-			// Set the camera's position
-			camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
+				// Set the camera's position
+				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
 	
-			// Clamp the camera to the room's bounderies
-			x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
+				// Clamp the camera to the room's bounderies
+				x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
 		
-			// Set the home values
-			xHome = x;
-			yHome = y;
-		}
-		else // Handle Screen Shake
-		{
-			ProcessCameraShake();
+				// Set the home values
+				xHome = x;
+				yHome = y;
+			}
+			else // Handle Screen Shake
+			{
+				ProcessCameraShake();
+			}
 		}
 	}
 	break;
