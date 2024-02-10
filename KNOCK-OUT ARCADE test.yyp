@@ -80,6 +80,7 @@
     {"id":{"name":"sOptionIcons","path":"sprites/sOptionIcons/sOptionIcons.yy",},"order":0,},
     {"id":{"name":"sJay_JumpingHeavy_Mockup_strip6","path":"sprites/sJay_JumpingHeavy_Mockup_strip6/sJay_JumpingHeavy_Mockup_strip6.yy",},"order":15,},
     {"id":{"name":"sfx_Medium_Hit","path":"sounds/sfx_Medium_Hit/sfx_Medium_Hit.yy",},"order":0,},
+    {"id":{"name":"sBeverly_Run_Forward","path":"sprites/sBeverly_Run_Forward/sBeverly_Run_Forward.yy",},"order":38,},
     {"id":{"name":"sCharSel_Portraits","path":"sprites/sCharSel_Portraits/sCharSel_Portraits.yy",},"order":5,},
     {"id":{"name":"oAIBehavior_TutorialConstructionGuy","path":"objects/oAIBehavior_TutorialConstructionGuy/oAIBehavior_TutorialConstructionGuy.yy",},"order":1,},
     {"id":{"name":"oJay","path":"objects/oJay/oJay.yy",},"order":2,},
