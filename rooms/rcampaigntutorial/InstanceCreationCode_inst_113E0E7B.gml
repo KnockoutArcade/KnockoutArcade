@@ -1,10 +1,10 @@
 isIntroCutscene = true;
 
 sceneInfo = [
-	[Cutscene_HideObject, oRussel, true],
+	[Cutscene_HideObject, oBeverly, true],
 	[Cutscene_Wait, 90],
-	[Cutscene_TeleportObject, oRussel, 31, 55],
-	[Cutscene_HideObject, oRussel, false],
-	[Cutscene_SetPlayerState, oRussel, eState.JUMPING],
-	[Cutscene_SetObjectVelocity, oRussel, 1, -3]
+	[Cutscene_TeleportObject, oBeverly, 31, 55],
+	[Cutscene_HideObject, oBeverly, false],
+	[Cutscene_SetPlayerState, oBeverly, eState.JUMPING],
+	[Cutscene_SetObjectVelocity, oBeverly, 1, -3]
 ];
