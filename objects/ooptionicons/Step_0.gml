@@ -106,7 +106,9 @@ if (!isClosingOptionsMenu)
 
 	if (P1menuConfirm && image_index = 3)
 	{	
-		room_goto(rControlsRoom);
+		//room_goto(rControlsRoom);
+		
+		instance_create_depth(0, 0, -10000, oSetControlsMenu);
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}

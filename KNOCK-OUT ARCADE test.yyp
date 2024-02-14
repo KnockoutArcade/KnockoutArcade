@@ -49,6 +49,7 @@
     {"id":{"name":"sConstructionGuy_Idle","path":"sprites/sConstructionGuy_Idle/sConstructionGuy_Idle.yy",},"order":0,},
     {"id":{"name":"sGeyser","path":"sprites/sGeyser/sGeyser.yy",},"order":1,},
     {"id":{"name":"sRussel_WallSplat","path":"sprites/sRussel_WallSplat/sRussel_WallSplat.yy",},"order":38,},
+    {"id":{"name":"oSetControlsMenu","path":"objects/oSetControlsMenu/oSetControlsMenu.yy",},"order":13,},
     {"id":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},"order":1,},
     {"id":{"name":"sDraw","path":"sprites/sDraw/sDraw.yy",},"order":0,},
     {"id":{"name":"oGarbageCan","path":"objects/oGarbageCan/oGarbageCan.yy",},"order":2,},
