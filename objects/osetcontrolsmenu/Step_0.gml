@@ -82,7 +82,39 @@ switch (state)
 		// If we press up or down
 		if (menuRowMove != 0 && cursorCooldown <= 0)
 		{
-			selectedRow -= menuRowMove;
+			// Update our selected option
+			selectedOption -= menuRowMove;
+			
+			// Wrap our selected option to the maximum number of selections
+			if (selectedOption >= maxSelections)
+			{
+				selectedOption = 0;
+			}
+			else if (selectedOption < 0)
+			{
+				selectedOption = maxSelections - 1;
+			}
+			
+			// If we've scrolled past the bottom of the selections...
+			if (selectedOption > topRowOption + (maxOnScreenOptions - 1))
+			{
+				while (selectedOption > topRowOption + (maxOnScreenOptions - 1))
+				{
+					topRowOption += 1;
+				}
+			}
+			else if (selectedOption < topRowOption) // otherwise if we've scrolled past the top...
+			{
+				while (selectedOption < topRowOption)
+				{
+					topRowOption -= 1;
+				}
+			}
+			
+			selectedRow = selectedOption - topRowOption;
+			
+			
+			
 			
 			// set cooldown
 			cursorCooldown = cursorCooldownAmount;

@@ -19,15 +19,16 @@ playerNumber = 0; // Which player is currently controlling this object (0 = P1, 
 
 // Selection Vars
 selectedRow = 0; // Which row we have currently selected
+selectedOption = 0; // Which option we currently have selected
 maxSelections = 13; // How many options the player can select from
-topRowNumber = 0; // Which option is currently at the top of the list
+topRowOption = 0; // Which option is currently at the top of the list
 maxOnScreenOptions = 8; // The maximum number of options allowed to be displayed on screen at a time
 
 cursorCooldown = 0; // How long until the cursor can move again
 cursorCooldownAmount = 13; // How much cooldown to add when the cursor moves
 
 // Options Array
-menuOptions = [
+controlsOptions = [
 	eControlsOptions.UP,
 	eControlsOptions.DOWN,
 	eControlsOptions.LEFT,
