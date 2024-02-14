@@ -104,16 +104,20 @@ if (!isClosingOptionsMenu)
 		menuCooldown = 0;
 	}
 
-	if (P1menuConfirm && image_index = 3)
+	if (P1menuConfirm && image_index = 3 && !instance_exists(oSetControlsMenu))
 	{	
 		//room_goto(rControlsRoom);
 		
-		instance_create_depth(0, 0, -10000, oSetControlsMenu);
+		var p1ControlsMenu = instance_create_depth(0, 0, -10000, oSetControlsMenu);
+		p1ControlsMenu.playerNumber = 0;
+		
+		var p2ControlsMenu = instance_create_depth(80, 0, -10000, oSetControlsMenu);
+		p2ControlsMenu.playerNumber = 1;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 
-	if (P1menuCancel)
+	if (P1menuCancel && !instance_exists(oSetControlsMenu))
 	{
 		isClosingOptionsMenu = true;
 		
