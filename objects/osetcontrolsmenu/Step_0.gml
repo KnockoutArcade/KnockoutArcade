@@ -124,7 +124,38 @@ switch (state)
 		if (menuConfirm && !menuConfirmBuffer && !isCurrentlySettingButton)
 		{
 			menuConfirmBuffer = true;
-			isCurrentlySettingButton = true;
+			
+			if (selectedOption == 11) // Restore defaults
+			{
+				if (playerNumber == 0)
+				{
+					RestorePlayer1DefaultControls();
+					
+					SaveControls();
+					
+					playerControls = global.player1Controls;
+				}
+				else
+				{
+					RestorePlayer2DefaultControls();
+					
+					SaveControls();
+					
+					playerControls = global.player2Controls;
+				}
+			}
+			else if (selectedOption == 12) // Confirm controls
+			{
+				// Switch to the turn away state
+				sprite_index = sControlsMenu_TurnAway
+				image_index = 0;
+			
+				state = eSetControlsState.TURN_AWAY;
+			}
+			else
+			{
+				isCurrentlySettingButton = true;
+			}
 		}
 		
 		// If we press BACK
