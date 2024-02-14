@@ -119,6 +119,42 @@ switch (state)
 			// set cooldown
 			cursorCooldown = cursorCooldownAmount;
 		}
+		
+		// If we press BACK
+		if (menuDeny && !menuDenyBuffer)
+		{
+			menuDenyBuffer = true;
+			
+			// Switch to the turn away state
+			sprite_index = sControlsMenu_TurnAway
+			image_index = 0;
+			
+			state = eSetControlsState.TURN_AWAY;
+		}
+	}
+	break;
+	
+	case eSetControlsState.TURN_AWAY:
+	{
+		// If we have reached the end of this animation, switch to the leave animation
+		if (image_index >= image_number - 1)
+		{
+			sprite_index = sControlsMenu_Opening;
+			image_index = 6;
+			image_speed = -1;
+			
+			state = eSetControlsState.LEAVE;
+		}
+	}
+	break;
+	
+	case eSetControlsState.LEAVE:
+	{
+		// If we have reached the end of this animation, destroy
+		if (image_index <= 1)
+		{
+			instance_destroy();
+		}
 	}
 	break;
 }
