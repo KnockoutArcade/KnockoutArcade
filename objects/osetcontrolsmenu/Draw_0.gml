@@ -28,8 +28,9 @@ switch (state)
 			#endregion
 		}
 		
-		// Draw our Cursor in-between the names and the backdrops
+		#region Draw our Cursor in-between the names and the backdrops
 		draw_sprite(sControlsMenuUI_Selection, playerNumber, x + 6, y + 18 + (selectedRow * 10));
+		#endregion
 		
 		// Draw the option names and inputs
 		for (var i = 0; i < maxOnScreenOptions; i++;) // for each on screen option (there's 8)
@@ -37,293 +38,154 @@ switch (state)
 			//Draw that options' text
 			draw_sprite(sControlsMenuUI_InputNames, controlsOptions[topRowOption + i], x + 9, y + 20 + (i * 10));
 			
+			
 			// Draw that option's input
 			if (controlsOptions[topRowOption + i] < 11) // If the option has an input...
 			{
-				// Player 1
-				if (playerNumber == 0)
+				// If player is using a controller...
+				if (playerControlsType == "PAD")
 				{
-					// If P1 is using a controller...
-					if (global.player1ControllerType == "PAD")
+					// determine which option to look up the input for
+					var lookupOption = 0;
+					switch (controlsOptions[topRowOption + i])
 					{
-						// determine which option to look up the input for
-						var lookupOption = 0;
-						switch (controlsOptions[topRowOption + i])
+						case 0: // up
 						{
-							case 0: // up
-							{
-								lookupOption = global.player1Controls.Controller.buttonUp;
-							}
-							break;
-							case 1: // down
-							{
-								lookupOption = global.player1Controls.Controller.buttonDown;
-							}
-							break;
-							case 2: // left
-							{
-								lookupOption = global.player1Controls.Controller.buttonLeft;
-							}
-							break;
-							case 3: // right
-							{
-								lookupOption = global.player1Controls.Controller.buttonRight;
-							}
-							break;
-							
-							case 4: // light
-							{
-								lookupOption = global.player1Controls.Controller.buttonLight;
-							}
-							break;
-							case 5: // medium
-							{
-								lookupOption = global.player1Controls.Controller.buttonMedium;
-							}
-							break;
-							case 6: // heavy
-							{
-								lookupOption = global.player1Controls.Controller.buttonHeavy;
-							}
-							break;
-							case 7: // special
-							{
-								lookupOption = global.player1Controls.Controller.buttonSpecial;
-							}
-							break;
-							
-							case 8: // grab
-							{
-								lookupOption = global.player1Controls.Controller.buttonGrab;
-							}
-							break;
-							case 9: // run
-							{
-								lookupOption = global.player1Controls.Controller.buttonRun;
-							}
-							break;
-							case 10: // super
-							{
-								lookupOption = global.player1Controls.Controller.buttonSuper;
-							}
-							break;
+							lookupOption = playerControls.Controller.buttonUp;
 						}
-						
-						// draw the input
-						draw_sprite(sButtons_Controller, ConvertButtonIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
-					}
-					else // for P1 on keyboard...
-					{
-						// determine which option to look up the input for
-						var lookupOption = 0;
-						switch (controlsOptions[topRowOption + i])
+						break;
+						case 1: // down
 						{
-							case 0: // up
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonUp;
-							}
-							break;
-							case 1: // down
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonDown;
-							}
-							break;
-							case 2: // left
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonLeft;
-							}
-							break;
-							case 3: // right
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonRight;
-							}
-							break;
-							
-							case 4: // light
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonLight;
-							}
-							break;
-							case 5: // medium
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonMedium;
-							}
-							break;
-							case 6: // heavy
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonHeavy;
-							}
-							break;
-							case 7: // special
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonSpecial;
-							}
-							break;
-							
-							case 8: // grab
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonGrab;
-							}
-							break;
-							case 9: // run
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonRun;
-							}
-							break;
-							case 10: // super
-							{
-								lookupOption = global.player1Controls.Keyboard.buttonSuper;
-							}
-							break;
+							lookupOption = playerControls.Controller.buttonDown;
 						}
+							break;
+						case 2: // left
+						{
+							lookupOption = playerControls.Controller.buttonLeft;
+						}
+						break;
+						case 3: // right
+						{
+							lookupOption = playerControls.Controller.buttonRight;
+						}
+						break;
 						
-						// draw the input
-						draw_sprite(sButtons_Keyboard, ConvertKeyIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
+						case 4: // light
+						{
+							lookupOption = playerControls.Controller.buttonLight;
+						}
+						break;
+						case 5: // medium
+						{
+							lookupOption = playerControls.Controller.buttonMedium;
+						}
+						break;
+						case 6: // heavy
+						{
+							lookupOption = playerControls.Controller.buttonHeavy;
+						}
+						break;
+						case 7: // special
+						{
+							lookupOption = playerControls.Controller.buttonSpecial;
+						}
+						break;
+						
+						case 8: // grab
+						{
+							lookupOption = playerControls.Controller.buttonGrab;
+						}
+						break;
+						case 9: // run
+						{
+							lookupOption = playerControls.Controller.buttonRun;
+						}
+						break;
+						case 10: // super
+						{
+							lookupOption = playerControls.Controller.buttonSuper;
+						}
+						break;
 					}
+						
+					// draw the input
+					draw_sprite(sButtons_Controller, ConvertButtonIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
 				}
-				else // Player 2
+				else // for keyboard...
 				{
-					// If P2 is using a controller...
-					if (global.player2ControllerType == "PAD")
+					// determine which option to look up the input for
+					var lookupOption = 0;
+					switch (controlsOptions[topRowOption + i])
 					{
-						// determine which option to look up the input for
-						var lookupOption = 0;
-						switch (controlsOptions[topRowOption + i])
+						case 0: // up
 						{
-							case 0: // up
-							{
-								lookupOption = global.player2Controls.Controller.buttonUp;
-							}
-							break;
-							case 1: // down
-							{
-								lookupOption = global.player2Controls.Controller.buttonDown;
-							}
-							break;
-							case 2: // left
-							{
-								lookupOption = global.player2Controls.Controller.buttonLeft;
-							}
-							break;
-							case 3: // right
-							{
-								lookupOption = global.player2Controls.Controller.buttonRight;
-							}
-							break;
-							
-							case 4: // light
-							{
-								lookupOption = global.player2Controls.Controller.buttonLight;
-							}
-							break;
-							case 5: // medium
-							{
-								lookupOption = global.player2Controls.Controller.buttonMedium;
-							}
-							break;
-							case 6: // heavy
-							{
-								lookupOption = global.player2Controls.Controller.buttonHeavy;
-							}
-							break;
-							case 7: // special
-							{
-								lookupOption = global.player2Controls.Controller.buttonSpecial;
-							}
-							break;
-							
-							case 8: // grab
-							{
-								lookupOption = global.player2Controls.Controller.buttonGrab;
-							}
-							break;
-							case 9: // run
-							{
-								lookupOption = global.player2Controls.Controller.buttonRun;
-							}
-							break;
-							case 10: // super
-							{
-								lookupOption = global.player2Controls.Controller.buttonSuper;
-							}
-							break;
+							lookupOption = playerControls.Keyboard.buttonUp;
 						}
-						
-						// draw the input
-						draw_sprite(sButtons_Controller, ConvertButtonIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
-					}
-					else // for P2 on keyboard...
-					{
-						// determine which option to look up the input for
-						var lookupOption = 0;
-						switch (controlsOptions[topRowOption + i])
+						break;
+						case 1: // down
 						{
-							case 0: // up
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonUp;
-							}
-							break;
-							case 1: // down
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonDown;
-							}
-							break;
-							case 2: // left
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonLeft;
-							}
-							break;
-							case 3: // right
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonRight;
-							}
-							break;
-							
-							case 4: // light
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonLight;
-							}
-							break;
-							case 5: // medium
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonMedium;
-							}
-							break;
-							case 6: // heavy
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonHeavy;
-							}
-							break;
-							case 7: // special
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonSpecial;
-							}
-							break;
-							
-							case 8: // grab
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonGrab;
-							}
-							break;
-							case 9: // run
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonRun;
-							}
-							break;
-							case 10: // super
-							{
-								lookupOption = global.player2Controls.Keyboard.buttonSuper;
-							}
-							break;
+							lookupOption = playerControls.Keyboard.buttonDown;
 						}
+						break;
+						case 2: // left
+						{
+							lookupOption = playerControls.Keyboard.buttonLeft;
+						}
+						break;
+						case 3: // right
+						{
+							lookupOption = playerControls.Keyboard.buttonRight;
+						}
+						break;
 						
-						// draw the input
-						draw_sprite(sButtons_Keyboard, ConvertKeyIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
+						case 4: // light
+						{
+							lookupOption = playerControls.Keyboard.buttonLight;
+						}
+						break;
+						case 5: // medium
+						{
+							lookupOption = playerControls.Keyboard.buttonMedium;
+						}
+						break;
+						case 6: // heavy
+						{
+							lookupOption = playerControls.Keyboard.buttonHeavy;
+						}
+						break;
+						case 7: // special
+						{
+							lookupOption = playerControls.Keyboard.buttonSpecial;
+						}
+						break;
+						
+						case 8: // grab
+						{
+							lookupOption = playerControls.Keyboard.buttonGrab;
+						}
+						break;
+						case 9: // run
+						{
+							lookupOption = playerControls.Keyboard.buttonRun;
+						}
+						break;
+						case 10: // super
+						{
+							lookupOption = playerControls.Keyboard.buttonSuper;
+						}
+						break;
 					}
+						
+					// draw the input
+					draw_sprite(sButtons_Keyboard, ConvertKeyIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
 				}
-				
-				
 			}
+		}
+	
+		// Draw please press new button
+		if (isCurrentlySettingButton)
+		{
+			draw_sprite(sControlsMenuUI_PressNewButton, 0, x, y);
 		}
 	}
 	break;

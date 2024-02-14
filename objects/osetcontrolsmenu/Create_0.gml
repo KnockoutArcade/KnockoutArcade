@@ -16,6 +16,8 @@ enum eSetControlsState
 animTimer = 0; // The animation timer for this object
 
 playerNumber = 0; // Which player is currently controlling this object (0 = P1, 1 = P2)
+playerControls = global.player1Controls;
+playerControlsType = global.player1ControllerType;
 
 // Selection Vars
 selectedRow = 0; // Which row we have currently selected
@@ -26,6 +28,8 @@ maxOnScreenOptions = 8; // The maximum number of options allowed to be displayed
 
 cursorCooldown = 0; // How long until the cursor can move again
 cursorCooldownAmount = 13; // How much cooldown to add when the cursor moves
+
+isCurrentlySettingButton = false;
 
 // Options Array
 controlsOptions = [

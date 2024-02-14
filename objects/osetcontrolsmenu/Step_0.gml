@@ -80,7 +80,7 @@ switch (state)
 	case eSetControlsState.ACTIVE:
 	{
 		// If we press up or down
-		if (menuRowMove != 0 && cursorCooldown <= 0)
+		if (menuRowMove != 0 && cursorCooldown <= 0 && !isCurrentlySettingButton)
 		{
 			// Update our selected option
 			selectedOption -= menuRowMove;
@@ -120,8 +120,15 @@ switch (state)
 			cursorCooldown = cursorCooldownAmount;
 		}
 		
+		// If we have pressed A to change our current button map...
+		if (menuConfirm && !menuConfirmBuffer && !isCurrentlySettingButton)
+		{
+			menuConfirmBuffer = true;
+			isCurrentlySettingButton = true;
+		}
+		
 		// If we press BACK
-		if (menuDeny && !menuDenyBuffer)
+		if (menuDeny && !menuDenyBuffer && !isCurrentlySettingButton)
 		{
 			menuDenyBuffer = true;
 			
@@ -130,6 +137,176 @@ switch (state)
 			image_index = 0;
 			
 			state = eSetControlsState.TURN_AWAY;
+		}
+		
+		// If we are setting controls
+		if (isCurrentlySettingButton)
+		{
+			// Detect if we are pressing a new key
+			var newKeyPressed = false;
+			var newKey = 0;
+	
+			if (playerNumber == 0)
+			{
+				if (playerControlsType == "KEYBOARD")
+				{
+					newKeyPressed = keyboard_check_pressed(vk_anykey);
+					newKey = keyboard_lastkey;
+				}
+				else
+				{
+					newKeyPressed = GamepadCheck(global.player1ControllerSlot);
+					newKey = global.lastControllerButton;
+				}
+			}
+			else
+			{
+				if (playerControlsType == "KEYBOARD")
+				{
+					newKeyPressed = keyboard_check_pressed(vk_anykey);
+					newKey = keyboard_lastkey;
+				}
+				else
+				{
+					newKeyPressed = GamepadCheck(global.player2ControllerSlot);
+					newKey = global.lastControllerButton;
+				}
+			}
+	
+			// If we have pressed a new button...
+			if (newKeyPressed && !menuConfirmBuffer)
+			{
+				isCurrentlySettingButton = false;
+				
+				// Set the player's new button
+				switch (selectedOption)
+				{
+					case 0: // up
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonUp = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonUp = newKey;
+						}
+					break;
+			
+					case 1: // down
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonDown = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonDown = newKey;
+						}
+					break;
+			
+					case 2: // left
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonLeft = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonLeft = newKey;
+						}
+					break;
+			
+					case 3: // right
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonRight = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonRight = newKey;
+						}
+					break;
+			
+					case 4: // light
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonLight = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonLight = newKey;
+						}
+					break;
+			
+					case 5: // medium
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonMedium = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonMedium = newKey;
+						}
+					break;
+			
+					case 6: // heavy
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonHeavy = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonHeavy = newKey;
+						}
+					break;
+			
+					case 7: //special
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonSpecial = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonSpecial = newKey;
+						}
+					break;
+			
+					
+					case 8: //grab
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonGrab = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonGrab = newKey;
+						}
+					break;
+			
+					case 9: //Run
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonRun = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonRun = newKey;
+						}
+					break;
+					
+					case 10: //Super
+						if (playerControlsType == "KEYBOARD")
+						{
+							playerControls.Keyboard.buttonSuper = newKey;
+						}
+						else
+						{
+							playerControls.Controller.buttonSuper = newKey;
+						}
+					break;
+				}
+				
+				// Save the player's controls
+				SaveControls();
+			}
 		}
 	}
 	break;
