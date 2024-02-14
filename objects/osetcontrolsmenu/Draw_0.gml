@@ -112,6 +112,74 @@ switch (state)
 						// draw the input
 						draw_sprite(sButtons_Controller, ConvertButtonIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
 					}
+					else // for P1 on keyboard...
+					{
+						// determine which option to look up the input for
+						var lookupOption = 0;
+						switch (controlsOptions[topRowOption + i])
+						{
+							case 0: // up
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonUp;
+							}
+							break;
+							case 1: // down
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonDown;
+							}
+							break;
+							case 2: // left
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonLeft;
+							}
+							break;
+							case 3: // right
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonRight;
+							}
+							break;
+							
+							case 4: // light
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonLight;
+							}
+							break;
+							case 5: // medium
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonMedium;
+							}
+							break;
+							case 6: // heavy
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonHeavy;
+							}
+							break;
+							case 7: // special
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonSpecial;
+							}
+							break;
+							
+							case 8: // grab
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonGrab;
+							}
+							break;
+							case 9: // run
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonRun;
+							}
+							break;
+							case 10: // super
+							{
+								lookupOption = global.player1Controls.Keyboard.buttonSuper;
+							}
+							break;
+						}
+						
+						// draw the input
+						draw_sprite(sButtons_Keyboard, ConvertKeyIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
+					}
 				}
 				
 				
