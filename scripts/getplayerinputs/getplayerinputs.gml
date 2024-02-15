@@ -26,7 +26,7 @@ function GetPlayerInputs()
 		global.p1ButtonMenuConfirm = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuConfirm);
 		global.p1ButtonMenuDeny = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuDeny);
 		global.p1ButtonMenuSwitch = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSwitch);
-		global.p1ButtonMenuControls = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSetControls);
+		global.p1ButtonMenuSetControls = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSetControls);
 		global.p1ButtonMenuPause = keyboard_check(global.player1Controls.Keyboard.buttonMenuPause);
 	} 
 	else

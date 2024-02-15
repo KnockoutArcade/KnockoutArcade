@@ -94,3 +94,7 @@ transitionTimer = 0; // Time to keep track of the transition
 transitionLength = 244; // How long the transition screen should stay up for (in frames)
 transitionFrame = 240; // When the game switches to a new room (in frames)
 transitionObject = noone; // The object that handles transition animations
+
+// Controls Menu
+P1ControlsMenuObj = noone;
+P2ControlsMenuObj = noone;

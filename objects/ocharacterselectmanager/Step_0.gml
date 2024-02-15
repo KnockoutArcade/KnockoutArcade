@@ -14,6 +14,7 @@ var P1menuRowMove = P1menuUp + P1menuDown;
 var P1menuConfirm = global.p1ButtonMenuConfirm;
 var P1menuCancel = global.p1ButtonMenuDeny;
 var P1switch = global.p1ButtonMenuSwitch;
+var P1ChangeControls = global.p1ButtonMenuSetControls;
 var P1menuConfirmBuffer = false;
 var P1menuAltSelBuffer = false;
 var P1menuMapSelBuffer = false;
@@ -30,11 +31,29 @@ var P2menuRowMove = P2menuUp + P2menuDown;
 
 var P2menuConfirm = global.p2ButtonMenuConfirm;
 var P2menuCancel = global.p2ButtonMenuDeny;
+var P2ChangeControls = global.p2ButtonMenuSetControls;
 
 var P2menuConfirmBuffer = false;
 
 P1cursorCooldown--;
 P2cursorCooldown--;
+
+// Check if the controls menu objects exist
+if (P1ControlsMenuObj != noone)
+{
+	if (!instance_exists(P1ControlsMenuObj))
+	{
+		P1ControlsMenuObj = noone;
+	}
+}
+if (P2ControlsMenuObj != noone)
+{
+	if (!instance_exists(P2ControlsMenuObj))
+	{
+		P2ControlsMenuObj = noone;
+	}
+}
+
 
 if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
@@ -74,14 +93,14 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
 
     // Handle P1 cursor movement
-    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
+    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar && P1ControlsMenuObj == noone)
     {
         P1charSelCol += P1menuColMove;
         P1cursorCooldown = 10;
 		
 		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
-    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar)
+    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedChar && P1ControlsMenuObj == noone)
     {
         P1charSelRow += P1menuRowMove;
         P1cursorCooldown = 10;
@@ -108,8 +127,21 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
     {
         P1charSelRow = charSelRowMax;
     }
-
-    if (P1menuConfirm && !P1hasSelectedChar)
+	
+	// Handle Controls Menu
+	if (P1ChangeControls && P1ControlsMenuObj == noone)
+	{
+		// Play Sound
+		audio_play_sound(sfx_UI_Select, 0, false);
+					
+		// Spawn the controls object
+		P1ControlsMenuObj = instance_create_depth(0, 0, -20000, oSetControlsMenu);
+		P1ControlsMenuObj.playerNumber = 0;
+		P1ControlsMenuObj.playerControls = global.player1Controls;
+		P1ControlsMenuObj.playerControlsType = global.player1ControllerType;
+	}
+	
+    if (P1menuConfirm && !P1hasSelectedChar && P1ControlsMenuObj == noone)
     {
         P1hasSelectedChar = true;
         P1menuConfirmBuffer = true;
@@ -139,7 +171,7 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         }
     }
 
-    if (P1menuCancel)
+    if (P1menuCancel && P1ControlsMenuObj == noone)
     {
         if (P1hasSelectedAlt)
         {
@@ -163,7 +195,7 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
 
     // Handle Palette Selection
-    if (P1hasSelectedChar)
+    if (P1hasSelectedChar && P1ControlsMenuObj == noone)
     {
         if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedAlt)
         {
@@ -193,14 +225,14 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
 
 
     // Handle P2 cursor movement
-    if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
+    if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar && P2ControlsMenuObj == noone)
     {
         P2charSelCol += P2menuColMove;
         P2cursorCooldown = 10;
 		
 		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
-    if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar)
+    if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedChar && P2ControlsMenuObj == noone)
     {
         P2charSelRow += P2menuRowMove;
         P2cursorCooldown = 10;
@@ -228,8 +260,20 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         P2charSelRow = charSelRowMax;
     }
 
-
-    if (P2menuConfirm && !P2hasSelectedChar)
+	// Handle Controls Menu
+	if (P2ChangeControls && P2ControlsMenuObj == noone)
+	{
+		// Play Sound
+		audio_play_sound(sfx_UI_Select, 0, false);
+					
+		// Spawn the controls object
+		P2ControlsMenuObj = instance_create_depth(80, 0, -20000, oSetControlsMenu);
+		P2ControlsMenuObj.playerNumber = 1;
+		P2ControlsMenuObj.playerControls = global.player2Controls;
+		P2ControlsMenuObj.playerControlsType = global.player2ControllerType;
+	}
+	
+    if (P2menuConfirm && !P2hasSelectedChar && P2ControlsMenuObj == noone)
     {
         P2hasSelectedChar = true;
         P2menuConfirmBuffer = true;
@@ -262,7 +306,7 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         }
     }
 
-    if (P2menuCancel)
+    if (P2menuCancel && P2ControlsMenuObj == noone)
     {
         if (P2hasSelectedAlt)
         {
@@ -281,7 +325,7 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
 
     // Handle Palette Selection
-    if (P2hasSelectedChar)
+    if (P2hasSelectedChar && P2ControlsMenuObj == noone)
     {
         if (P2menuColMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedAlt)
         {
@@ -331,11 +375,12 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         p2charSelAnimTimer = 0;
         P2charSelCurrentFrame++;
     }
-
-    if (P1hasSelectedAlt && P2hasSelectedAlt)
+	
+	// If both player's have selected an alt AND there are no controls menus open
+    if (P1hasSelectedAlt && P2hasSelectedAlt && P1ControlsMenuObj == noone && P2ControlsMenuObj == noone)
     {
         // Go to stage select
-        state = 1;
+        state = eCharacterSelectState.STAGE_SELECT;
     }
 }
 else if (state == eCharacterSelectState.STAGE_SELECT)

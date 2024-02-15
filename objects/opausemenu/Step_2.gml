@@ -270,142 +270,165 @@ switch (state)
 	
 	case ePauseMenuState.OPTIONS:
 	{
-		// Handle Cursor
-		if (menuRowMove != 0 && cursorCooldown <= 0) // Up and Down
+		// As long as a controls menu doesn't exist, process this state
+		if (!instance_exists(oSetControlsMenu))
 		{
-			currentRow -= menuRowMove;
-			
-			if (currentRow < 0)
+			// Handle Cursor
+			if (menuRowMove != 0 && cursorCooldown <= 0) // Up and Down
 			{
-				currentRow = optionsRowMax - 1;
-			}
+				currentRow -= menuRowMove;
 			
-			if (currentRow >= optionsRowMax)
-			{
-				currentRow = 0;
-			}
-			
-			cursorCooldown = cursorCooldownAmount;
-			
-			// Play Sound
-			audio_play_sound(sfx_UI_Hover, 0, false);
-		}
-		
-		// Handle Pressing Back
-		if (menuDeny && !menuDenyBuffer)
-		{
-			menuDenyBuffer = true;
-			
-			// Play Sound
-			audio_play_sound(sfx_UI_Exit, 0, false);
-			
-			state = ePauseMenuState.MAIN; // Set state
-			currentRow = previousRow; // Restore current row
-			cursorCooldown = 0; // refresh cooldown
-		}
-		
-		// If the player presses left or right...
-		if (menuCollumnMove != 0 && cursorCooldown <= 0)
-		{
-			switch (currentRow)
-			{
-				// Music
-				case 0:
+				if (currentRow < 0)
 				{
-					// Increase or decrease the volume
-					global.musicVolume += 0.1 * menuCollumnMove;
-					
-					// Cap out the volume
-					if (global.musicVolume < 0)
-					{
-						global.musicVolume = 0;
-					}
-					else if (global.musicVolume > 1)
-					{
-						global.musicVolume = 1;
-					}
-					
-					// Update actual volume
-					audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
-					
-					// Play Sound
-					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
+					currentRow = optionsRowMax - 1;
 				}
-				break;
+			
+				if (currentRow >= optionsRowMax)
+				{
+					currentRow = 0;
+				}
+			
+				cursorCooldown = cursorCooldownAmount;
+			
+				// Play Sound
+				audio_play_sound(sfx_UI_Hover, 0, false);
+			}
+		
+			// Handle Pressing Back
+			if (menuDeny && !menuDenyBuffer)
+			{
+				menuDenyBuffer = true;
+			
+				// Play Sound
+				audio_play_sound(sfx_UI_Exit, 0, false);
+			
+				state = ePauseMenuState.MAIN; // Set state
+				currentRow = previousRow; // Restore current row
+				cursorCooldown = 0; // refresh cooldown
+			}
+		
+			// If the player presses left or right...
+			if (menuCollumnMove != 0 && cursorCooldown <= 0)
+			{
+				switch (currentRow)
+				{
+					// Music
+					case 0:
+					{
+						// Increase or decrease the volume
+						global.musicVolume += 0.1 * menuCollumnMove;
+					
+						// Cap out the volume
+						if (global.musicVolume < 0)
+						{
+							global.musicVolume = 0;
+						}
+						else if (global.musicVolume > 1)
+						{
+							global.musicVolume = 1;
+						}
+					
+						// Update actual volume
+						audio_group_set_gain(audiogroup_music, global.musicVolume, 0);
+					
+						// Play Sound
+						audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
+					}
+					break;
 				
-				// SFX
-				case 1:
-				{
-					// Increase or decrease the volume
-					global.sfxVolume += 0.1 * menuCollumnMove;
-					
-					// Cap out the volume
-					if (global.sfxVolume < 0)
+					// SFX
+					case 1:
 					{
-						global.sfxVolume = 0;
-					}
-					else if (global.sfxVolume > 1)
-					{
-						global.sfxVolume = 1;
-					}
+						// Increase or decrease the volume
+						global.sfxVolume += 0.1 * menuCollumnMove;
 					
-					// Update actual volume
-					audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+						// Cap out the volume
+						if (global.sfxVolume < 0)
+						{
+							global.sfxVolume = 0;
+						}
+						else if (global.sfxVolume > 1)
+						{
+							global.sfxVolume = 1;
+						}
 					
-					// Play Sound
-					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
-				}
-				break;
+						// Update actual volume
+						audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+					
+						// Play Sound
+						audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
+					}
+					break;
 				
-				// Voices
-				case 2:
-				{
-					// Increase or decrease the volume
-					global.voicesVolume += 0.1 * menuCollumnMove;
-					
-					// Cap out the volume
-					if (global.voicesVolume < 0)
+					// Voices
+					case 2:
 					{
-						global.voicesVolume = 0;
-					}
-					else if (global.voicesVolume > 1)
-					{
-						global.voicesVolume = 1;
-					}
+						// Increase or decrease the volume
+						global.voicesVolume += 0.1 * menuCollumnMove;
 					
-					// Update actual volume
-					audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+						// Cap out the volume
+						if (global.voicesVolume < 0)
+						{
+							global.voicesVolume = 0;
+						}
+						else if (global.voicesVolume > 1)
+						{
+							global.voicesVolume = 1;
+						}
 					
-					// Play Sound
-					audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
+						// Update actual volume
+						audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+					
+						// Play Sound
+						audio_play_sound(sfx_CharSel_SelectAlt, 0, false);
+					}
+					break;
 				}
-				break;
+			
+				// Add cooldown to the cursor
+				cursorCooldown = cursorCooldownAmount;
 			}
-			
-			// Add cooldown to the cursor
-			cursorCooldown = cursorCooldownAmount;
-		}
 		
-		// If the player presses Confirm
-		if (menuConfirm && !menuConfirmBuffer)
-		{
-			menuConfirmBuffer = true;
-			
-			switch (currentRow)
+			// If the player presses Confirm
+			if (menuConfirm && !menuConfirmBuffer)
 			{
-				// Back
-				case 5:
+				menuConfirmBuffer = true;
+			
+				switch (currentRow)
 				{
-					// Play Sound
-					audio_play_sound(sfx_UI_Exit, 0, false);
+					// Set Controls
+					case 4:
+					{
+						// Play Sound
+						audio_play_sound(sfx_UI_Select, 0, false);
 					
-					state = ePauseMenuState.MAIN; // Set state
-					currentRow = previousRow; // Restore current row
-					cursorCooldown = 0; // refresh cooldown
+						// Spawn the controls objects
+						var p1ControlsMenu = instance_create_depth(global.camObj.x - 80, global.camObj.y, -20000, oSetControlsMenu);
+						p1ControlsMenu.playerNumber = 0;
+						p1ControlsMenu.playerControls = global.player1Controls;
+						p1ControlsMenu.playerControlsType = global.player1ControllerType;
+		
+						var p2ControlsMenu = instance_create_depth(global.camObj.x, global.camObj.y, -20000, oSetControlsMenu);
+						p2ControlsMenu.playerNumber = 1;
+						p2ControlsMenu.playerControls = global.player2Controls;
+						p2ControlsMenu.playerControlsType = global.player2ControllerType;
+					}
+					break;
+				
+					// Back
+					case 5:
+					{
+						// Play Sound
+						audio_play_sound(sfx_UI_Exit, 0, false);
+					
+						state = ePauseMenuState.MAIN; // Set state
+						currentRow = previousRow; // Restore current row
+						cursorCooldown = 0; // refresh cooldown
+					}
+					break;
 				}
 			}
 		}
-		
 	}
 	break;
 	

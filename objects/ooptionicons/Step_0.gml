@@ -1,4 +1,4 @@
-if (!isClosingOptionsMenu)
+if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 {
 	var P1menuUp = global.p1ButtonMenuUp;
 	var P1menuDown = global.p1ButtonMenuDown;
@@ -104,10 +104,8 @@ if (!isClosingOptionsMenu)
 		menuCooldown = 0;
 	}
 
-	if (P1menuConfirm && image_index = 3 && !instance_exists(oSetControlsMenu))
-	{	
-		//room_goto(rControlsRoom);
-		
+	if (P1menuConfirm && image_index = 3)
+	{
 		var p1ControlsMenu = instance_create_depth(0, 0, -10000, oSetControlsMenu);
 		p1ControlsMenu.playerNumber = 0;
 		p1ControlsMenu.playerControls = global.player1Controls;
@@ -121,14 +119,14 @@ if (!isClosingOptionsMenu)
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 
-	if (P1menuCancel && !instance_exists(oSetControlsMenu))
+	if (P1menuCancel)
 	{
 		isClosingOptionsMenu = true;
 		
 		audio_play_sound(sfx_UI_Exit, 0, false);
 	}
 }
-else
+else if (!instance_exists(oSetControlsMenu))
 {
 	exitingAnimationTimer++;
 	
