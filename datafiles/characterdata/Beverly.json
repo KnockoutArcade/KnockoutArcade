@@ -25,7 +25,7 @@
     "CrouchBlock": "sBeverly_Crouch_Block",
     "WalkForward": "sBeverly_Walk_Forward",
     "WalkBackward": "sBeverly_Walk_Backward",
-    "RunForward": "sRussel_Run_Forward",
+    "RunForward": "sBeverly_Run_Forward",
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sBeverly_Jumpsquat",
     "Jump": "sBeverly_Jump",
@@ -7048,6 +7048,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-05T14:27:57.4116047-07:00",
+  "LastModified": "2024-02-09T15:23:38.2135755-07:00",
   "LastModifiedBy": "creep"
 }

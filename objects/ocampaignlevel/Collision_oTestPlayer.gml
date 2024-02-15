@@ -9,7 +9,7 @@ if (global.p1ButtonMenuConfirm)
 	
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
-	global.p1SelectedCharacter = oRussel;
+	global.p1SelectedCharacter = oBeverly;
 	global.p1PaletteID = 0;
 	
 	global.campaignStartLevelDelay = startLevelDelay;

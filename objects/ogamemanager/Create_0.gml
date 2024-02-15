@@ -75,3 +75,10 @@ momentWhenBothPlayersWereStable = 0; // During round win, the frame when both pl
 victoryAnimationDelay = 30; // The delay between when players are stable and when the victory animation should play (frames)
 victoryAnimationTime = 0; // The moment when a player entered their victory animation
 victoryAnimationDuration = 100; // The amount of time the victory animation plays for (in frames)
+
+// Pausing
+pauseMenuObject = noone; // The object that is responsible for the pause menu
+shouldBringUpPauseMenu = false; // Whether the pause menu should be brought up or not
+pauseMenuButtonHeldTimer_P1 = 0; // Keeps track of how many frames P1 has held down the pause button
+pauseMenuButtonHeldTimer_P2 = 0; // Keeps track of how many frames P2 has held down the pause button
+pauseMenuHoldRequirement = 30; // How long the player must hold the pause button in order to pause

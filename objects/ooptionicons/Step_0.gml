@@ -1,4 +1,4 @@
-if (!isClosingOptionsMenu)
+if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 {
 	var P1menuUp = global.p1ButtonMenuUp;
 	var P1menuDown = global.p1ButtonMenuDown;
@@ -105,8 +105,16 @@ if (!isClosingOptionsMenu)
 	}
 
 	if (P1menuConfirm && image_index = 3)
-	{	
-		room_goto(rControlsRoom);
+	{
+		var p1ControlsMenu = instance_create_depth(0, 0, -10000, oSetControlsMenu);
+		p1ControlsMenu.playerNumber = 0;
+		p1ControlsMenu.playerControls = global.player1Controls;
+		p1ControlsMenu.playerControlsType = global.player1ControllerType;
+		
+		var p2ControlsMenu = instance_create_depth(80, 0, -10000, oSetControlsMenu);
+		p2ControlsMenu.playerNumber = 1;
+		p2ControlsMenu.playerControls = global.player2Controls;
+		p2ControlsMenu.playerControlsType = global.player2ControllerType;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
@@ -118,7 +126,7 @@ if (!isClosingOptionsMenu)
 		audio_play_sound(sfx_UI_Exit, 0, false);
 	}
 }
-else
+else if (!instance_exists(oSetControlsMenu))
 {
 	exitingAnimationTimer++;
 	

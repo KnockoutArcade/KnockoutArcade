@@ -5,12 +5,69 @@ switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
 	{
+		// Handle Pausing
+		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene) // Check to see if we are in the during match state
+		{
+			// If p1 pressed pause and the pause menu isn't up already
+			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P1 = 0; // reset P1's timer
+			}
+			
+			// If p2 pressed pause and the pause menu isn't up already
+			if (global.p2ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P2++; // increment P2's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P2 = 0; // reset P2's timer
+			}
+			
+			// If a player has reached the hold requirement...
+			if (pauseMenuButtonHeldTimer_P1 == pauseMenuHoldRequirement || pauseMenuButtonHeldTimer_P2 == pauseMenuHoldRequirement)
+			{
+				// Create the Pause menu
+				pauseMenuObject = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				
+				// Set the pause menu's owner
+				pauseMenuObject.owner = id;
+				
+				// If P2 has been holding for longer, make them the person who paused the game
+				if (pauseMenuButtonHeldTimer_P2 > pauseMenuButtonHeldTimer_P1)
+				{
+					// set Player number to 1, and set the proper opening animation
+					pauseMenuObject.playerNumber = 1;
+					pauseMenuObject.sprite_index = sPauseMenu_Open_P2;
+				}
+				else // otherwise, P1 has paused the game
+				{
+					// set Player number to 0 (animation already set by default)
+					pauseMenuObject.playerNumber = 0;
+				}
+				
+				// Pause the game
+				global.game_paused = true;
+				
+				// reset the pause button timers
+				pauseMenuButtonHeldTimer_P1 = 0;
+				pauseMenuButtonHeldTimer_P2 = 0;
+			}
+		}
+		
 		// This will tell us if someone has won, so we can stop any match resetting
 		var winConditionMet = (global.p1Rounds >= 2 || global.p2Rounds >= 2);
 		
 		// A player is defeated
 		if (p1.hp <= 0 || p2.hp <= 0)
 		{
+			// Set the game manager's state to round win
+			state = eGameManagerState.ROUND_WIN;
+			
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
 			
@@ -103,6 +160,9 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1) // Initial end
 			{
+				// Set the game manager's state to round win
+				state = eGameManagerState.ROUND_WIN;
+				
 				// Immediately pause the game
 				global.game_paused = true;
 				
@@ -220,6 +280,10 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1) // Initial End
 			{
+				// Set the game manager's state to round win
+				state = eGameManagerState.ROUND_WIN;
+			
+				
 				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
 					global.p1Rounds++;
@@ -260,7 +324,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -279,7 +343,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -298,7 +362,7 @@ switch (global.gameMode)
 			}
 			else if(gameHaltTimer >= 220)
 			{
-				state = 1;
+				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				ResultsScreen();
 			}
@@ -316,7 +380,6 @@ switch (global.gameMode)
 				lifetime = 110;
 			}
 		}
-
 
 
 		// Frame-by-frame
@@ -350,10 +413,44 @@ switch (global.gameMode)
 	
 	case GAMEMODE.PLATFORMING:
 	{
+		// Handle Pausing
+		if (!global.game_paused && !p1.isInCutscene) // Check to see if we are not in a cutscene right now
+		{
+			// If p1 pressed pause and the pause menu isn't up already
+			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			{
+				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
+			}
+			else
+			{
+				pauseMenuButtonHeldTimer_P1 = 0; // reset P1's timer
+			}
+			
+			// If a player has reached the hold requirement (in singleplayer, pressing the button is enough)
+			if (pauseMenuButtonHeldTimer_P1 == 1)
+			{
+				// Create the Pause menu
+				pauseMenuObject = instance_create_depth(global.camObj.x-80, global.camObj.y, -10000, oPauseMenu);
+				
+				// Set the pause menu's owner
+				pauseMenuObject.owner = id;
+				
+				// set Player number to 0 (animation already set by default)
+				pauseMenuObject.playerNumber = 0;
+				
+				// Pause the game
+				global.game_paused = true;
+				
+				// reset the pause button timers
+				pauseMenuButtonHeldTimer_P1 = 0;
+			}
+		}
+		
 		// When a player completes a level
 		if (global.hasCompletedLevel)
 		{
-			global.gameHalt = true;
+			// Pause the game
+			global.game_paused = true;
 			
 			levelCompleteTimer++;
 			
@@ -458,12 +555,6 @@ switch (global.gameMode)
 				levelCompleteKOScore = noone; // Pointer to thet ext object for the number of enemies defeated
 			}
 		}
-		
-		
-		
-		
-		
-		
 		
 		
 		// handle intros

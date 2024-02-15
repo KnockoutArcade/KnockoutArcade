@@ -260,12 +260,12 @@ function HandleHitboxCollision(ownerType)
 					// Handle if the opponent is Crouch blocking or not
 					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
 					{
-						collision_list[| i].owner.sprite_index = sRussel_Crouch_Block;
+						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.crouchBlock_Sprite;
 						collision_list[| i].owner.isCrouchBlocking = true;
 					}
 					else
 					{
-						collision_list[| i].owner.sprite_index = sRussel_Block;
+						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.standBlock_Sprite;
 						collision_list[| i].owner.isCrouchBlocking = false;
 					}
 
