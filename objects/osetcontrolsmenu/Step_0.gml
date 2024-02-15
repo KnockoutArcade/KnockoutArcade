@@ -113,8 +113,8 @@ switch (state)
 			
 			selectedRow = selectedOption - topRowOption;
 			
-			
-			
+			// Play Sound
+			audio_play_sound(sfx_UI_Hover, 0, false);
 			
 			// set cooldown
 			cursorCooldown = cursorCooldownAmount;
@@ -124,6 +124,9 @@ switch (state)
 		if (menuConfirm && !menuConfirmBuffer && !isCurrentlySettingButton)
 		{
 			menuConfirmBuffer = true;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Select, 0, false);
 			
 			if (selectedOption == 11) // Restore defaults
 			{
@@ -168,6 +171,9 @@ switch (state)
 			image_index = 0;
 			
 			state = eSetControlsState.TURN_AWAY;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
 		}
 		
 		// If we are setting controls
@@ -334,6 +340,9 @@ switch (state)
 						}
 					break;
 				}
+				
+				// Play Sound
+				audio_play_sound(sfx_UI_Select, 0, false);
 				
 				// Save the player's controls
 				SaveControls();
