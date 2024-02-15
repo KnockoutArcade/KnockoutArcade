@@ -3,6 +3,9 @@
 
 draw_self();
 
+// Draw the player number
+draw_sprite(sPlayerNumbers, playerNumber, x + 4 + (playerNumber * 56), y + 3);
+
 switch (state)
 {
 	case eSetControlsState.ACTIVE:
