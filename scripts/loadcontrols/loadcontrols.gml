@@ -9,7 +9,6 @@ function LoadControls()
 		buffer_delete(controlBuffer);
 		
 		var loadedControls = json_parse(controlString);
-		show_debug_message(loadedControls);
 		
 		global.player1Controls = loadedControls;
 	}

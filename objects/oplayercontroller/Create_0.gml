@@ -324,6 +324,13 @@ cancelCombo = false;
 comboDamage = 0; // Records how much damage a combo did
 storedComboDamage = 0; // Used as a debug variable to display combo damage
 
+// Gravity Scaling Related variables
+// Gravity scaling is a mechanic intended to prevent infinites. As a player gets hit in the air
+// repeatedly, their gravityScaling value increases, which influences how high the next
+// hit will send them. The higher the gravityScaling value, the lower each hit will launch
+// until eventually they hit the ground, causing this value to reset.
+gravityScaling = 0; // How high this player's gravity scaling value is
+
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
