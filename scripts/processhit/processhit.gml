@@ -74,7 +74,21 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			playerHasDied = true;
 		}
 		
-		// Apply knockback
+		// Apply Gravity Scaling
+		if (!collision_list.owner.grounded || attackProperty.Launches)
+		{
+			// If the opponent is in the air, or if this attack launches, increase gravity scaling
+			collision_list.owner.gravityScaling += attackProperty.GravityScaling;
+			
+			// Affect any spirit's gravity scaling
+			if (collision_list.owner.spiritObject != noone) 
+			{
+				collision_list.owner.spiritObject.gravityScaling += attackProperty.GravityScaling;
+			}
+		}
+		
+		
+		// Apply grounded knockback
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
@@ -142,8 +156,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.comboDamage += scaledDamage;
 		owner.storedComboDamage = owner.comboDamage;
 		
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		if (!owner.timeStopActivated && !owner.installActivated)
 		{
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
@@ -151,7 +165,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		if (!collision_list.owner.grounded) // On Air hit, set knockback velocity
 		{
-			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			// Upwards velocity (affected by gravity scaling)
+			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / 25));
+			
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -162,15 +178,18 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			}
 			
+			// Affect any spirit's knockback velocities.
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / 25));
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
 		else if (attackProperty.Launches) // Handle Launches
 		{
-			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			// vertical knockback (affected by scaling)
+			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / 25));
+			
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -184,7 +203,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / 25));
 				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 				collision_list.owner.spiritObject.grounded = false;
 			}

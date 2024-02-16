@@ -2930,6 +2930,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			inAttackState = false;
 			canTurnAround = true;
 			isThrowable = true;
+			gravityScaling = 0;
 			
 			audio_play_sound(sfx_Landing, 1, false);
 			
@@ -2948,6 +2949,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			gravityScaling = 0;
 		}
 	}
 }
@@ -3002,6 +3004,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			inAttackState = false;
 			canTurnAround = true;
 			isThrowable = true;
+			gravityScaling = 0;
 			
 			audio_play_sound(sfx_Landing, 1, false);
 			
@@ -3020,6 +3023,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			gravityScaling = 0;
 			
 			// Handle spawning impact particle
 			// Spawn a landing particle once the player hits the ground
@@ -3074,6 +3078,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					inAttackState = false;
 					canTurnAround = true;
 					isThrowable = true;
+					gravityScaling = 0;
 			
 					audio_play_sound(sfx_Landing, 1, false);
 					
@@ -3092,6 +3097,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					image_index = 0;
 					hsp = 0;
 					image_speed = 1;
+					gravityScaling = 0;
 					
 					// Handle spawning impact particle
 					// Spawn a landing particle once the player hits the ground

@@ -2231,6 +2231,7 @@ if (host != noone && hostObject != noone)
 						inAttackState = false;
 						canTurnAround = true;
 						isThrowable = true;
+						gravityScaling = 0;
 					}
 				}
 				if (!cancelOnLanding)
@@ -2248,6 +2249,7 @@ if (host != noone && hostObject != noone)
 					image_index = 0;
 					hsp = 0;
 					image_speed = 1;
+					gravityScaling = 0;
 				}
 			}
 		}
