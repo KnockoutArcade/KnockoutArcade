@@ -6,7 +6,7 @@ if (!global.gameHalt && !global.game_paused && !global.freezeTimer && !oPlayerCo
 
 	if (frameTimer = 0)
 	{
-		global.gameTimer--;
+		//global.gameTimer--;
 		frameTimer = 60;
 	}
 

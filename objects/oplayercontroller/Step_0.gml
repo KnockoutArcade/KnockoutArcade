@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+hp = 100;
+superMeter = 100;
+
 // Handle Player Intros
 if (!hasPerformedIntro) 
 {
