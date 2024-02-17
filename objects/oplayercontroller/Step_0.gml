@@ -1,7 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-hp = 100;
+if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
+{
+	hp = 100;
+}
 superMeter = 100;
 
 // Handle Player Intros
@@ -803,7 +806,7 @@ if (state == eState.SCREEN_FREEZE)
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
-			comboScaling += 3.0;
+			comboScaling += 1;
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;
