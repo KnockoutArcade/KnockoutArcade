@@ -3155,8 +3155,8 @@
         {
           "CounterHitLevel": 2,
           "Group": 1,
-          "Damage": 10,
-          "MeterGain": 12.0,
+          "Damage": 8,
+          "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 21,
           "AttackHitStun": 26,
@@ -3164,8 +3164,8 @@
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 2.0,
           "Launches": false,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 2.0,
           "ParticleXOffset": 10,
@@ -7595,6 +7595,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-16T19:08:59.6751301-07:00",
+  "LastModified": "2024-02-16T19:11:54.0018887-07:00",
   "LastModifiedBy": "creep"
 }
