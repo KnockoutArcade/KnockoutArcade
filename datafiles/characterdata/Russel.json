@@ -4754,8 +4754,8 @@
           "WidthOffset": 0,
           "HeightOffset": 0,
           "Group": 1,
-          "Damage": 13,
-          "MeterGain": 8.0,
+          "Damage": 15,
+          "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
           "AttackHitStun": 18,
@@ -4802,7 +4802,7 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sArcadeBackground",
+          "ParticleEffect": "sGeyser",
           "ParticleDuration": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
@@ -7595,6 +7595,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-16T20:35:11.803829-07:00",
+  "LastModified": "2024-02-16T20:38:30.8049169-07:00",
   "LastModifiedBy": "creep"
 }
