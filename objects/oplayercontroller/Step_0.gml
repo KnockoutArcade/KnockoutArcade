@@ -62,8 +62,8 @@ else if (playerID == 2 && !isInCutscene) // Player 2
 	var moveleft = global.p2ButtonLeft;
 	var moveright = global.p2ButtonRight;
 	movedir = moveleft + moveright;
-	//var jumpButton = global.p2ButtonUp;
-	var jumpButton = true;
+	var jumpButton = global.p2ButtonUp;
+	//var jumpButton = true;
 	var crouchButton = global.p2ButtonDown;
 	verticalMoveDir = jumpButton + crouchButton;
 
