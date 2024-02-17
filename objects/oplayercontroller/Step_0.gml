@@ -2624,13 +2624,7 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0
-		 && state != eState.BEING_GRABBED
-		 && state != eState.GETUP
-		 && state != eState.HITSTOP
-		 && state != eState.HURT
-		 && state != eState.KNOCKED_DOWN
-		 && state != eState.LAUNCHED
+	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
 		 && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
