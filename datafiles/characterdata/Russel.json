@@ -6235,7 +6235,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 5,
@@ -6243,6 +6243,14 @@
           "AttackWidth": 20,
           "AttackHeight": 30,
           "WidthOffset": 5,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 28,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": -4,
           "HeightOffset": 0
         }
       ],
@@ -6474,11 +6482,11 @@
       "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 6,
-          "Lifetime": 5,
-          "AttackWidth": 31,
-          "AttackHeight": 20,
-          "WidthOffset": 0,
+          "Start": 1,
+          "Lifetime": 33,
+          "AttackWidth": 20,
+          "AttackHeight": 28,
+          "WidthOffset": -8,
           "HeightOffset": 2
         }
       ],
@@ -6720,8 +6728,25 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 2,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 13,
+          "AttackWidth": 20,
+          "AttackHeight": 28,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 14,
+          "Lifetime": 50,
+          "AttackWidth": 33,
+          "AttackHeight": 20,
+          "WidthOffset": -6,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -7827,6 +7852,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-18T12:10:36.3041896-07:00",
+  "LastModified": "2024-02-18T12:17:10.7629261-07:00",
   "LastModifiedBy": "creep"
 }
