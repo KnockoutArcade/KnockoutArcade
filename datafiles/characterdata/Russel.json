@@ -4490,7 +4490,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 4,
       "HurtboxData": [
         {
           "Start": 8,
@@ -4499,6 +4499,30 @@
           "AttackHeight": 15,
           "WidthOffset": -6,
           "HeightOffset": 2
+        },
+        {
+          "Start": 1,
+          "Lifetime": 7,
+          "AttackWidth": 18,
+          "AttackHeight": 34,
+          "WidthOffset": -10,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 8,
+          "Lifetime": 13,
+          "AttackWidth": 24,
+          "AttackHeight": 24,
+          "WidthOffset": -18,
+          "HeightOffset": 10
+        },
+        {
+          "Start": 21,
+          "Lifetime": 8,
+          "AttackWidth": 18,
+          "AttackHeight": 35,
+          "WidthOffset": -11,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -4728,7 +4752,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 4,
       "HurtboxData": [
         {
           "Start": 12,
@@ -4737,6 +4761,30 @@
           "AttackHeight": 25,
           "WidthOffset": -6,
           "HeightOffset": -10
+        },
+        {
+          "Start": 1,
+          "Lifetime": 9,
+          "AttackWidth": 16,
+          "AttackHeight": 35,
+          "WidthOffset": -12,
+          "HeightOffset": -3
+        },
+        {
+          "Start": 10,
+          "Lifetime": 2,
+          "AttackWidth": 20,
+          "AttackHeight": 36,
+          "WidthOffset": -10,
+          "HeightOffset": 2
+        },
+        {
+          "Start": 12,
+          "Lifetime": 20,
+          "AttackWidth": 20,
+          "AttackHeight": 15,
+          "WidthOffset": -11,
+          "HeightOffset": 10
         }
       ],
       "NumberOfProjectiles": 0,
@@ -7699,6 +7747,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-18T00:45:27.0413537-07:00",
+  "LastModified": "2024-02-18T01:06:20.7248552-07:00",
   "LastModifiedBy": "creep"
 }
