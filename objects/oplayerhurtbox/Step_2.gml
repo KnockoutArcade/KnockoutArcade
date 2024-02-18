@@ -1,6 +1,14 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if (primary && owner.inAttackState)
+{
+	// Hide if the owner is in an attack state
+	image_xscale = 0;
+	image_yscale = 0;
+
+}
+
 if (primary && owner.state != eState.HITSTOP)
 {
 	if (spirit == noone)
