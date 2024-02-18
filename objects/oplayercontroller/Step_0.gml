@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Debug stuff
 if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
 {
 	hp = 100;

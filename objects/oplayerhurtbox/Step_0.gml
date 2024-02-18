@@ -15,8 +15,6 @@ if (owner != noone)
 		instance_destroy();
 	}
 
-	visible = global.toggleHitboxVisibility;
-
 	if (lifetime < 1 && !primary)
 	{
 		instance_destroy();

@@ -1,7 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (primary && owner.inAttackState)
+visible = global.toggleHitboxVisibility;
+
+if (primary && owner.inAttackState && owner.animTimer > 0)
 {
 	// Hide if the owner is in an attack state
 	image_xscale = 0;
