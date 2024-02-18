@@ -3628,7 +3628,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 4,
@@ -3636,6 +3636,14 @@
           "AttackWidth": 25,
           "AttackHeight": 10,
           "WidthOffset": 4,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 10,
+          "AttackWidth": 20,
+          "AttackHeight": 26,
+          "WidthOffset": -8,
           "HeightOffset": 0
         }
       ],
@@ -3882,14 +3890,38 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 4,
       "HurtboxData": [
         {
-          "Start": 5,
-          "Lifetime": 13,
+          "Start": 7,
+          "Lifetime": 4,
           "AttackWidth": 15,
           "AttackHeight": 20,
           "WidthOffset": 4,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 8,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 9,
+          "Lifetime": 15,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": -2,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 24,
+          "Lifetime": 6,
+          "AttackWidth": 20,
+          "AttackHeight": 25,
+          "WidthOffset": -6,
           "HeightOffset": 0
         }
       ],
@@ -4075,7 +4107,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 2,
+      "NumberOfHurtboxes": 5,
       "HurtboxData": [
         {
           "Start": 9,
@@ -4091,6 +4123,30 @@
           "AttackWidth": 20,
           "AttackHeight": 15,
           "WidthOffset": -1,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 8,
+          "AttackWidth": 18,
+          "AttackHeight": 27,
+          "WidthOffset": -7,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 9,
+          "Lifetime": 23,
+          "AttackWidth": 18,
+          "AttackHeight": 20,
+          "WidthOffset": -7,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 32,
+          "Lifetime": 5,
+          "AttackWidth": 18,
+          "AttackHeight": 27,
+          "WidthOffset": -7,
           "HeightOffset": 0
         }
       ],
@@ -7635,6 +7691,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-18T00:24:32.6328941-07:00",
+  "LastModified": "2024-02-18T00:39:58.7764523-07:00",
   "LastModifiedBy": "creep"
 }
