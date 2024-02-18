@@ -31,6 +31,7 @@ if (primary && owner.state != eState.HITSTOP)
 		y = spirit.y;
 	}
 } 
+
 if (!primary)
 {
 	if (spirit == noone)
@@ -44,7 +45,17 @@ if (!primary)
 		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
 	}
 	
+	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP)
+	{
+		lifetime--;
+	}
+	
 	if (!owner.inAttackState)
+	{
+		instance_destroy();
+	}
+	
+	if (lifetime < 0)
 	{
 		instance_destroy();
 	}
