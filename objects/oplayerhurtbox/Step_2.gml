@@ -45,12 +45,13 @@ if (!primary)
 		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
 	}
 	
-	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP)
+	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP && owner.state != eState.SCREEN_FREEZE)
 	{
 		lifetime--;
 	}
 	
-	if (!owner.inAttackState)
+	// If the owner is ever not in an attack state and also isn't frozen, destroy this.
+	if (!owner.inAttackState && owner.state != eState.SCREEN_FREEZE)
 	{
 		instance_destroy();
 	}
