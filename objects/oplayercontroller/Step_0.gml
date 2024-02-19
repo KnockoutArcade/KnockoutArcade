@@ -4,7 +4,7 @@
 // Debug stuff
 if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
 {
-	hp = 100;
+	//hp = 100;
 }
 superMeter = 100;
 
@@ -125,6 +125,11 @@ canBlock = false;
 canTurnAround = true;
 projectileInvincible = false;
 isInStableState = false;
+// If gravity scaling ever dips below 0, reset it to 0
+if (gravityScaling < 0)
+{
+	gravityScaling = 0;
+}
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
