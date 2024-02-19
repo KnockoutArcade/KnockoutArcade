@@ -40,8 +40,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Apply Damage
 		if (!global.roundOver) // ... but only if the round isn't over
 		{
-			if (finalBlowSuper)
+			// If this attack is a final blow (and the opponent isn't being counter hit, counter hits don't have this property)
+			if (finalBlowSuper && !collision_list.owner.inAttackState)
 			{
+				// TODO: Make sure the character editor includes FinalBlow in the counter hit data
+				
 				if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
 				{
 					collision_list.owner.hp = 1;
