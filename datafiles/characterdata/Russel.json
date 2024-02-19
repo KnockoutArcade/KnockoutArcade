@@ -7581,116 +7581,96 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_NSpecial",
-      "Duration": 75,
-      "NumberOfFrames": 25,
+      "SpriteName": "sRussel_SideSpecial",
+      "Duration": 108,
+      "NumberOfFrames": 20,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 1,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 15,
           "ImageIndex": 1
         },
         {
-          "Length": 10,
+          "Length": 35,
           "ImageIndex": 2
         },
         {
-          "Length": 20,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 35,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 36,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 37,
-          "ImageIndex": 6
-        },
-        {
           "Length": 38,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 39,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 40,
-          "ImageIndex": 9
+          "ImageIndex": 1
         },
         {
           "Length": 41,
-          "ImageIndex": 10
-        },
-        {
-          "Length": 42,
-          "ImageIndex": 11
-        },
-        {
-          "Length": 43,
-          "ImageIndex": 12
+          "ImageIndex": 2
         },
         {
           "Length": 44,
-          "ImageIndex": 13
-        },
-        {
-          "Length": 45,
-          "ImageIndex": 14
-        },
-        {
-          "Length": 46,
-          "ImageIndex": 15
+          "ImageIndex": 1
         },
         {
           "Length": 47,
-          "ImageIndex": 16
-        },
-        {
-          "Length": 48,
-          "ImageIndex": 17
-        },
-        {
-          "Length": 49,
-          "ImageIndex": 18
+          "ImageIndex": 2
         },
         {
           "Length": 50,
-          "ImageIndex": 19
-        },
-        {
-          "Length": 51,
-          "ImageIndex": 20
-        },
-        {
-          "Length": 52,
-          "ImageIndex": 21
+          "ImageIndex": 1
         },
         {
           "Length": 53,
-          "ImageIndex": 22
+          "ImageIndex": 2
         },
         {
           "Length": 56,
-          "ImageIndex": 23
+          "ImageIndex": 1
         },
         {
-          "Length": 58,
-          "ImageIndex": 24
+          "Length": 59,
+          "ImageIndex": 2
         },
         {
-          "Length": 67,
-          "ImageIndex": 25
+          "Length": 62,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 65,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 68,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 72,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 76,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 80,
+          "ImageIndex": 12
+        },
+        {
+          "Length": 92,
+          "ImageIndex": 13
+        },
+        {
+          "Length": 96,
+          "ImageIndex": 14
+        },
+        {
+          "Length": 100,
+          "ImageIndex": 15
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
           "Start": 35,
-          "Lifetime": 1,
+          "Lifetime": 2,
           "AttackWidth": 35,
           "AttackHeight": 20,
           "WidthOffset": 5,
@@ -7725,14 +7705,14 @@
           "ActivateTimeStop": false
         },
         {
-          "Start": 56,
+          "Start": 68,
           "Lifetime": 4,
           "AttackWidth": 35,
           "AttackHeight": 20,
           "WidthOffset": 5,
           "HeightOffset": 2,
           "Group": 2,
-          "Damage": 15,
+          "Damage": 9,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
           "AttackHitStop": 45,
@@ -7843,43 +7823,26 @@
       "ProjectileData": [],
       "RehitData": {
         "HitBox": 1,
-        "NumberOfHits": 8,
+        "NumberOfHits": 4,
         "HitOnFrames": [
-          37,
-          39,
           41,
-          43,
-          45,
           47,
-          49,
-          51
+          53,
+          59
         ]
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
-      },
-      "AirMovementData": {
-        "NumberOfWindows": 3,
+        "NumberOfWindows": 2,
         "Windows": [
           {
             "StartingFrame": 0,
-            "HorizontalSpeed": 0.0,
+            "HorizontalSpeed": 4.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 1,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -2.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
-          },
-          {
-            "StartingFrame": 2,
+            "StartingFrame": 73,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -7887,7 +7850,28 @@
           }
         ],
         "GravityScale": 1.0,
-        "FallScale": 0.5
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 2,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 4.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 0.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -7990,6 +7974,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-18T12:59:59.5437139-07:00",
+  "LastModified": "2024-02-19T14:01:03.9204228-07:00",
   "LastModifiedBy": "creep"
 }
