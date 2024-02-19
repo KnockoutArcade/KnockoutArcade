@@ -7883,47 +7883,31 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 10,
+      "NumberOfSounds": 6,
       "MoveSoundData": [
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 10
+          "SFXPlayFrame": 32
         },
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 12
+          "SFXPlayFrame": 38
         },
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 14
+          "SFXPlayFrame": 44
         },
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 16
+          "SFXPlayFrame": 50
         },
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 18
+          "SFXPlayFrame": 56
         },
         {
           "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 20
-        },
-        {
-          "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 22
-        },
-        {
-          "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 24
-        },
-        {
-          "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 26
-        },
-        {
-          "SoundEffect": "sfx_Jump",
-          "SFXPlayFrame": 30
+          "SFXPlayFrame": 65
         }
       ],
       "SpiritData": {
@@ -7982,6 +7966,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-19T15:18:27.3954466-07:00",
+  "LastModified": "2024-02-19T15:28:38.1828992-07:00",
   "LastModifiedBy": "creep"
 }
