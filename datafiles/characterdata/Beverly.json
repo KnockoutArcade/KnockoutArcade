@@ -3385,14 +3385,22 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 4,
           "Lifetime": 4,
-          "AttackWidth": 22,
-          "AttackHeight": 8,
+          "AttackWidth": 10,
+          "AttackHeight": 20,
           "WidthOffset": 4,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 11,
+          "AttackWidth": 20,
+          "AttackHeight": 25,
+          "WidthOffset": -8,
           "HeightOffset": 0
         }
       ],
@@ -3482,9 +3490,9 @@
         {
           "Start": 9,
           "Lifetime": 2,
-          "AttackWidth": 28,
+          "AttackWidth": 39,
           "AttackHeight": 10,
-          "WidthOffset": 11,
+          "WidthOffset": 0,
           "HeightOffset": 0,
           "Group": 1,
           "Damage": 8,
@@ -3561,16 +3569,16 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 9,
-          "Lifetime": 3,
-          "AttackWidth": 28,
-          "AttackHeight": 11,
-          "WidthOffset": 4,
+          "Start": 1,
+          "Lifetime": 27,
+          "AttackWidth": 18,
+          "AttackHeight": 23,
+          "WidthOffset": -10,
           "HeightOffset": 0
         },
         {
-          "Start": 12,
-          "Lifetime": 15,
+          "Start": 11,
+          "Lifetime": 16,
           "AttackWidth": 20,
           "AttackHeight": 11,
           "WidthOffset": 4,
@@ -3827,11 +3835,11 @@
           "HeightOffset": 0
         },
         {
-          "Start": 0,
-          "Lifetime": 0,
-          "AttackWidth": 0,
-          "AttackHeight": 0,
-          "WidthOffset": 0,
+          "Start": 1,
+          "Lifetime": 32,
+          "AttackWidth": 30,
+          "AttackHeight": 20,
+          "WidthOffset": -14,
           "HeightOffset": 0
         }
       ],
@@ -7104,6 +7112,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-19T16:42:33.3653283-07:00",
+  "LastModified": "2024-02-19T16:52:52.8526261-07:00",
   "LastModifiedBy": "creep"
 }
