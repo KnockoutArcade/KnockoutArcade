@@ -7808,15 +7808,23 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 35,
-          "Lifetime": 16,
+          "Start": 41,
+          "Lifetime": 40,
           "AttackWidth": 30,
           "AttackHeight": 30,
           "WidthOffset": 6,
           "HeightOffset": 2
+        },
+        {
+          "Start": 41,
+          "Lifetime": 80,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -6,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -7974,6 +7982,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-02-19T14:17:20.4883364-07:00",
+  "LastModified": "2024-02-19T14:23:43.513377-07:00",
   "LastModifiedBy": "creep"
 }
