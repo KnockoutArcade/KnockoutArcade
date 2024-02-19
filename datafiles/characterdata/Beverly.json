@@ -1740,14 +1740,22 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 4,
-          "Lifetime": 20,
+          "Lifetime": 26,
           "AttackWidth": 24,
           "AttackHeight": 26,
           "WidthOffset": -6,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 3,
+          "AttackWidth": 16,
+          "AttackHeight": 38,
+          "WidthOffset": -10,
           "HeightOffset": 0
         }
       ],
@@ -7048,6 +7056,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-16T16:42:21.1111202-07:00",
+  "LastModified": "2024-02-19T16:35:22.0396631-07:00",
   "LastModifiedBy": "creep"
 }
