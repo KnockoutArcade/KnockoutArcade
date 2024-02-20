@@ -2912,7 +2912,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -2921,27 +2921,27 @@
         {
           "CounterHitLevel": 2,
           "Group": 1,
-          "Damage": 20,
-          "MeterGain": 12.0,
+          "Damage": 8,
+          "MeterGain": 8.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 30,
-          "AttackHitStun": 14,
-          "KnockBack": 5.0,
+          "AttackHitStop": 21,
+          "AttackHitStun": 23,
+          "KnockBack": -1.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
-          "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
-          "Pushback": 5.0,
-          "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
+          "Pushback": 2.7,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -7325,6 +7325,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-19T18:45:22.2345277-07:00",
+  "LastModified": "2024-02-19T18:50:30.90302-07:00",
   "LastModifiedBy": "creep"
 }
