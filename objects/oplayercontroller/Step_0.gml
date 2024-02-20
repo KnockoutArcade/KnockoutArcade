@@ -6,7 +6,7 @@ if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state !=
 {
 	//hp = 100;
 }
-superMeter = 100;
+//superMeter = 100;
 
 // Handle Player Intros
 if (!hasPerformedIntro) 
