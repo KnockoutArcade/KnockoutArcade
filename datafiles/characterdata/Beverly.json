@@ -4001,7 +4001,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 4,
@@ -4010,6 +4010,14 @@
           "AttackHeight": 28,
           "WidthOffset": 2,
           "HeightOffset": 6
+        },
+        {
+          "Start": 1,
+          "Lifetime": 20,
+          "AttackWidth": 15,
+          "AttackHeight": 30,
+          "WidthOffset": -6,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -4178,7 +4186,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 8,
@@ -4187,6 +4195,14 @@
           "AttackHeight": 12,
           "WidthOffset": -6,
           "HeightOffset": 5
+        },
+        {
+          "Start": 1,
+          "Lifetime": 28,
+          "AttackWidth": 15,
+          "AttackHeight": 32,
+          "WidthOffset": -9,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -4416,7 +4432,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 12,
@@ -4425,6 +4441,14 @@
           "AttackHeight": 10,
           "WidthOffset": -3,
           "HeightOffset": 4
+        },
+        {
+          "Start": 1,
+          "Lifetime": 31,
+          "AttackWidth": 18,
+          "AttackHeight": 32,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -5203,7 +5227,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 12,
@@ -5212,6 +5236,14 @@
           "AttackHeight": 16,
           "WidthOffset": -1,
           "HeightOffset": -2
+        },
+        {
+          "Start": 1,
+          "Lifetime": 74,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": -12,
+          "HeightOffset": 12
         }
       ],
       "NumberOfProjectiles": 0,
@@ -7112,6 +7144,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-19T17:00:11.9505638-07:00",
+  "LastModified": "2024-02-19T17:45:05.2784787-07:00",
   "LastModifiedBy": "creep"
 }
