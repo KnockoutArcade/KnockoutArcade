@@ -2976,22 +2976,22 @@
             "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           },
           {
             "StartingFrame": 4,
             "HorizontalSpeed": 1.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           },
           {
             "StartingFrame": 5,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 0.0,
@@ -7112,6 +7112,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-19T16:52:52.8526261-07:00",
+  "LastModified": "2024-02-19T17:00:11.9505638-07:00",
   "LastModifiedBy": "creep"
 }
