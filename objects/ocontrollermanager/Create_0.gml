@@ -18,4 +18,6 @@ ControllerSetup();
 
 SetPlayerButtons();
 
+SaveControls();
+
 LoadControls();
