@@ -150,6 +150,7 @@
     {"id":{"name":"sFinalRoundStart","path":"sprites/sFinalRoundStart/sFinalRoundStart.yy",},"order":11,},
     {"id":{"name":"sh_SpiritBroken","path":"shaders/sh_SpiritBroken/sh_SpiritBroken.yy",},"order":1,},
     {"id":{"name":"sCharSel_NameBeverly","path":"sprites/sCharSel_NameBeverly/sCharSel_NameBeverly.yy",},"order":1,},
+    {"id":{"name":"sCharSel_Lever","path":"sprites/sCharSel_Lever/sCharSel_Lever.yy",},"order":15,},
     {"id":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"order":11,},
     {"id":{"name":"sJay_DownSpecial2A_Mockup_strip4","path":"sprites/sJay_DownSpecial2A_Mockup_strip4/sJay_DownSpecial2A_Mockup_strip4.yy",},"order":4,},
     {"id":{"name":"sControlsMenu_PressStart","path":"sprites/sControlsMenu_PressStart/sControlsMenu_PressStart.yy",},"order":8,},
