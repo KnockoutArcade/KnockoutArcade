@@ -1,6 +1,13 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Debug stuff
+if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
+{
+	//hp = 100;
+}
+//superMeter = 100;
+
 // Handle Player Intros
 if (!hasPerformedIntro) 
 {
@@ -57,6 +64,7 @@ else if (playerID == 2 && !isInCutscene) // Player 2
 	var moveright = global.p2ButtonRight;
 	movedir = moveleft + moveright;
 	var jumpButton = global.p2ButtonUp;
+	//var jumpButton = true;
 	var crouchButton = global.p2ButtonDown;
 	verticalMoveDir = jumpButton + crouchButton;
 
@@ -114,10 +122,14 @@ else // Safegaurd in case an empty character is spawned
 
 // Reset Vars
 canBlock = false;
-inAttackState = false;
 canTurnAround = true;
 projectileInvincible = false;
 isInStableState = false;
+// If gravity scaling ever dips below 0, reset it to 0
+if (gravityScaling < 0)
+{
+	gravityScaling = 0;
+}
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -455,6 +467,7 @@ if (state == eState.IDLE)
 	canBlock = true;
 	invincible = false;
 	isInStableState = true; // Set stable state to true
+	inAttackState = false;
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -534,6 +547,7 @@ if (state == eState.CROUCHING)
 	hasSpentDoubleJump = false;
 	canBlock = true;
 	invincible = false;
+	inAttackState = false;
 	
 	hurtbox.image_xscale = 15;
 	hurtbox.image_yscale = 27;
@@ -800,7 +814,7 @@ if (state == eState.SCREEN_FREEZE)
 			global.freezeTimer = false;
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
-			comboScaling += 3.0;
+			comboScaling += 1;
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;
@@ -888,6 +902,7 @@ if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.
 	global.freezeTimer = false;
 }
 
+
 // State Machine
 switch state 
 {
@@ -901,6 +916,7 @@ switch state
 		hasSpentDoubleJump = false;
 		canBlock = true;
 		invincible = false;
+		inAttackState = false;
 		
 		if (movedir == image_xscale) 
 		{
@@ -1006,6 +1022,7 @@ switch state
 		isSuperJumping = false;
 		hasSpentDoubleJump = false;
 		invincible = false;
+		inAttackState = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		if (!timeStopActivated && !installActivated)
@@ -1105,6 +1122,7 @@ switch state
 		hasSpentDoubleJump = false;
 		runningBackward = false;
 		invincible = false;
+		inAttackState = false;
 		
 		vsp += fallSpeed;
 		
@@ -1164,6 +1182,7 @@ switch state
 		grounded = true;
 		isShortHopping = false;
 		invincible = false;
+		inAttackState = false;
 
 		hsp = jumpHsp;
 		
@@ -1254,6 +1273,7 @@ switch state
 		grounded = false;
 		canTurnAround = false;
 		invincible = false;
+		inAttackState = false;
 		
 		if image_index > (image_number - 1) image_speed = 0;
 		else image_speed = 1;
@@ -1907,7 +1927,7 @@ switch state
 	{
 		hsp = 0;
 		grounded = true;
-		inAttackState = true;
+		inAttackState = false;
 		
 		
 		sprite_index = CharacterSprites.hold_Sprite;
@@ -2088,6 +2108,7 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		isEXFlash = false;
+		inAttackState = false;
 		
 		if (!global.game_paused)
 		{
@@ -2188,6 +2209,7 @@ switch state
 		cancelable = false;
 		canTurnAround = false;
 		grounded = false;
+		inAttackState = false;
 		
 		FAvictim = false;
 		
@@ -2212,6 +2234,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		isInStableState = true;
+		inAttackState = false;
 		
 		cancelCombo = true;
 		
@@ -2262,6 +2285,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		inAttackState = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2314,6 +2338,7 @@ switch state
 		animTimer = 1;
 		canBlock = true;
 		cancelable = false;
+		inAttackState = false;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -2471,6 +2496,7 @@ switch state
 		hasSpentDoubleJump = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		inAttackState = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -2519,6 +2545,7 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		inAttackState = false;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -2555,6 +2582,7 @@ switch state
 		canTurnAround = false;
 		projectileInvincible = true;
 		hasUsedMeter = true;
+		inAttackState = false;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
@@ -2617,13 +2645,7 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth && hitstop <= 0
-		 && state != eState.BEING_GRABBED
-		 && state != eState.GETUP
-		 && state != eState.HITSTOP
-		 && state != eState.HURT
-		 && state != eState.KNOCKED_DOWN
-		 && state != eState.LAUNCHED
+	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
 		 && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
@@ -2927,6 +2949,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			inAttackState = false;
 			canTurnAround = true;
 			isThrowable = true;
+			gravityScaling = 0;
 			
 			audio_play_sound(sfx_Landing, 1, false);
 			
@@ -2945,6 +2968,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			gravityScaling = 0;
 		}
 	}
 }
@@ -2999,6 +3023,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			inAttackState = false;
 			canTurnAround = true;
 			isThrowable = true;
+			gravityScaling = 0;
 			
 			audio_play_sound(sfx_Landing, 1, false);
 			
@@ -3017,6 +3042,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
+			gravityScaling = 0;
 			
 			// Handle spawning impact particle
 			// Spawn a landing particle once the player hits the ground
@@ -3071,6 +3097,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					inAttackState = false;
 					canTurnAround = true;
 					isThrowable = true;
+					gravityScaling = 0;
 			
 					audio_play_sound(sfx_Landing, 1, false);
 					
@@ -3089,6 +3116,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					image_index = 0;
 					hsp = 0;
 					image_speed = 1;
+					gravityScaling = 0;
 					
 					// Handle spawning impact particle
 					// Spawn a landing particle once the player hits the ground

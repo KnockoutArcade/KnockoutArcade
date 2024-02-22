@@ -5,7 +5,7 @@
 
 function HandleHitboxCollision(ownerType)
 {
-	if (!global.game_paused && ownerType.state != eState.HITSTOP && !isProjectile)
+	if (!global.game_paused && ownerType.state != eState.HITSTOP && !isProjectile && ownerType.state != eState.SCREEN_FREEZE)
 	{
 		lifetime--;
 	}

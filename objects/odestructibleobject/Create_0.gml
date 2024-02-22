@@ -91,6 +91,9 @@ state = eState.IDLE;
 	startCombo = false;
 	cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
 	
+	// Gravity Scaling
+	gravityScaling = 0;
+	
 	//Meter Related Variables
 	superMeter = 0; // the amount of meter the player has
 	meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
