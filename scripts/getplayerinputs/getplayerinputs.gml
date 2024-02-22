@@ -23,10 +23,23 @@ function GetPlayerInputs()
 		global.p1ButtonMenuRight = keyboard_check(global.player1Controls.Keyboard.buttonMenuRight);
 		global.p1ButtonMenuUp = keyboard_check(global.player1Controls.Keyboard.buttonMenuUp);
 		global.p1ButtonMenuDown = keyboard_check(global.player1Controls.Keyboard.buttonMenuDown) * -1;
+		
 		global.p1ButtonMenuConfirm = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuConfirm);
+		global.p1ButtenMenuConfirm_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuConfirm);
+		
 		global.p1ButtonMenuDeny = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuDeny);
+		global.p1ButtonMenuDeny_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuDeny);
+		
 		global.p1ButtonMenuSwitch = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSwitch);
+		global.p1ButtonMenuSwitch_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuSwitch);
+		
 		global.p1ButtonMenuSetControls = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuSetControls);
+		global.p1ButtonMenuSetControls_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuSetControls);
+		
+		// shoulder + trigger buttons
+		global.p1ButtonMenuPageRight_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuPageRight);
+		global.p1ButtonMenuTriggerRight_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuTriggerRight);
+		
 		global.p1ButtonMenuPause = keyboard_check(global.player1Controls.Keyboard.buttonMenuPause);
 	} 
 	else
@@ -76,10 +89,22 @@ function GetPlayerInputs()
 		global.p1ButtonMenuRight = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuRight) > .25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuRightDPAD);
 		global.p1ButtonMenuUp = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUp) < -.4 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUpDPAD);
 		global.p1ButtonMenuDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDown) > .25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDownDPAD)) * -1;
+		
 		global.p1ButtonMenuConfirm = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuConfirm);
+		global.p1ButtonMenuConfirm_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuConfirm);
+		
 		global.p1ButtonMenuDeny = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDeny);
+		global.p1ButtonMenuDeny_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDeny);
+		
 		global.p1ButtonMenuSwitch = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSwitch);
+		global.p1ButtonMenuSwitch_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSwitch);
+		
 		global.p1ButtonMenuSetControls = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSetControls);
+		global.p1ButtonMenuSetControls_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuSetControls);
+		
+		global.p1ButtonMenuPageRight_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuPageRight);
+		global.p1ButtonMenuTriggerRight_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuTriggerRight);
+		
 		global.p1ButtonMenuPause = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuPause);
 	};
 
@@ -102,10 +127,23 @@ function GetPlayerInputs()
 		global.p2ButtonMenuRight = keyboard_check(global.player2Controls.Keyboard.buttonMenuRight);
 		global.p2ButtonMenuUp = keyboard_check(global.player2Controls.Keyboard.buttonMenuUp);
 		global.p2ButtonMenuDown = keyboard_check(global.player2Controls.Keyboard.buttonMenuDown) * -1;
+		
 		global.p2ButtonMenuConfirm = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuConfirm);
+		global.p2ButtenMenuConfirm_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuConfirm);
+		
 		global.p2ButtonMenuDeny = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuDeny);
+		global.p2ButtonMenuDeny_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuDeny);
+		
 		global.p2ButtonMenuSwitch = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuSwitch);
+		global.p2ButtonMenuSwitch_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuSwitch);
+		
 		global.p2ButtonMenuSetControls = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuSetControls);
+		global.p2ButtonMenuSetControls_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuSetControls);
+		
+		// shoulder + trigger buttons
+		global.p2ButtonMenuPageRight_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuPageRight);
+		global.p2ButtonMenuTriggerRight_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuTriggerRight);
+		
 		global.p2ButtonMenuPause = keyboard_check(global.player2Controls.Keyboard.buttonMenuPause);
 	} 
 	else 
@@ -155,10 +193,22 @@ function GetPlayerInputs()
 		global.p2ButtonMenuRight = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRight) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRightDPAD);
 		global.p2ButtonMenuUp = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUp) < -.4 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUpDPAD);
 		global.p2ButtonMenuDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDown) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDownDPAD)) * -1;
+		
 		global.p2ButtonMenuConfirm = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuConfirm);
+		global.p2ButtonMenuConfirm_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuConfirm);
+		
 		global.p2ButtonMenuDeny = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDeny);
+		global.p2ButtonMenuDeny_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDeny);
+		
 		global.p2ButtonMenuSwitch = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSwitch);
+		global.p2ButtonMenuSwitch_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSwitch);
+		
 		global.p2ButtonMenuSetControls = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSetControls);
+		global.p2ButtonMenuSetControls_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuSetControls);
+		
+		global.p2ButtonMenuPageRight_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuPageRight);
+		global.p2ButtonMenuTriggerRight_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuTriggerRight);
+		
 		global.p2ButtonMenuPause = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuPause);
 	};
 }
