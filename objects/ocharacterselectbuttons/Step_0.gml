@@ -12,10 +12,13 @@ if (playerNumber == 0)
 	menuDown = global.p1ButtonMenuDown;
 	menuRowMove = menuUp + menuDown;
 
-	menuConfirmA = global.p1ButtonMenuConfirm;
-	menuCancelB = global.p1ButtonMenuDeny;
-	menuSwitchX = global.p1ButtonMenuSwitch;
-	menuChangeControlsY = global.p1ButtonMenuSetControls;
+	menuConfirmA = global.p1ButtonMenuConfirm_Hold;
+	menuCancelB = global.p1ButtonMenuDeny_Hold;
+	menuSwitchX = global.p1ButtonMenuSwitch_Hold;
+	menuChangeControlsY = global.p1ButtonMenuSetControls_Hold;
+	
+	menuPageRightRB = global.p1ButtonMenuPageRight_Hold;
+	menuTriggerRightRT = global.p1ButtonMenuTriggerRight_Hold;
 }
 else
 {
@@ -28,10 +31,13 @@ else
 	menuDown = global.p2ButtonMenuDown;
 	menuRowMove = menuUp + menuDown;
 
-	menuConfirmA = global.p2ButtonMenuConfirm;
-	menuCancelB = global.p2ButtonMenuDeny;
-	menuSwitchX = global.p2ButtonMenuSwitch;
-	menuChangeControlsY = global.p2ButtonMenuSetControls;
+	menuConfirmA = global.p2ButtonMenuConfirm_Hold;
+	menuCancelB = global.p2ButtonMenuDeny_Hold;
+	menuSwitchX = global.p2ButtonMenuSwitch_Hold;
+	menuChangeControlsY = global.p2ButtonMenuSetControls_Hold;
+	
+	menuPageRightRB = global.p2ButtonMenuPageRight_Hold;
+	menuTriggerRightRT = global.p2ButtonMenuTriggerRight_Hold;
 }
 
 

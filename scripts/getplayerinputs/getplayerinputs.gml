@@ -25,7 +25,7 @@ function GetPlayerInputs()
 		global.p1ButtonMenuDown = keyboard_check(global.player1Controls.Keyboard.buttonMenuDown) * -1;
 		
 		global.p1ButtonMenuConfirm = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuConfirm);
-		global.p1ButtenMenuConfirm_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuConfirm);
+		global.p1ButtonMenuConfirm_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuConfirm);
 		
 		global.p1ButtonMenuDeny = keyboard_check_pressed(global.player1Controls.Keyboard.buttonMenuDeny);
 		global.p1ButtonMenuDeny_Hold = keyboard_check(global.player1Controls.Keyboard.buttonMenuDeny);
@@ -129,7 +129,7 @@ function GetPlayerInputs()
 		global.p2ButtonMenuDown = keyboard_check(global.player2Controls.Keyboard.buttonMenuDown) * -1;
 		
 		global.p2ButtonMenuConfirm = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuConfirm);
-		global.p2ButtenMenuConfirm_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuConfirm);
+		global.p2ButtonMenuConfirm_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuConfirm);
 		
 		global.p2ButtonMenuDeny = keyboard_check_pressed(global.player2Controls.Keyboard.buttonMenuDeny);
 		global.p2ButtonMenuDeny_Hold = keyboard_check(global.player2Controls.Keyboard.buttonMenuDeny);

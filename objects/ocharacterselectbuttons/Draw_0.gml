@@ -63,10 +63,10 @@ draw_sprite(sCharSel_Buttons, 2 + menuSwitchX, x + 21, y + 5); // X
 
 draw_sprite(sCharSel_Buttons, 6 + menuChangeControlsY, x + 35, y + 3); // Y
 
-draw_sprite(sCharSel_Buttons, 6 + menuChangeControlsY, x + 35, y + 3); // RB
+draw_sprite(sCharSel_Buttons, 8 + menuPageRightRB, x + 50, y + 3); // RB
 
 draw_sprite(sCharSel_Buttons, 0 + menuConfirmA, x + 19, y + 12); // A
 
 draw_sprite(sCharSel_Buttons, 4 + menuCancelB, x + 33, y + 10); // B
 
-draw_sprite(sCharSel_Buttons, 6 + menuChangeControlsY, x + 35, y + 3); // RT
+draw_sprite(sCharSel_Buttons, 8 + menuTriggerRightRT, x + 48, y + 10); // RT
