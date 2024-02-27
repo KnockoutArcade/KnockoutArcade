@@ -12,7 +12,7 @@ enum eVictoryScreenState
 }
 
 // Sprite Font
-victoryFont = font_add_sprite_ext();
+victoryFont = font_add_sprite_ext(sVictoryScreenFont, "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ!.,'", true, 1);
 
 #region Portaits
 portaits_StartMoving = 0; // The frame to start moving the portaits on

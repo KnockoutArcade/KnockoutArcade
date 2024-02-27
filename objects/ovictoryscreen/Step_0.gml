@@ -1,6 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+animTimer++;
+
 switch (state)
 {
 	case eVictoryScreenState.OPENING_ANIMATION:
@@ -24,8 +26,11 @@ switch (state)
 	
 	case eVictoryScreenState.DISPLAY_WIN_QUOTE:
 	{
+		image_speed = 0;
+		
 		if (keyboard_check_pressed(vk_escape))
 		{
+			font_delete(victoryFont);
 			room_restart();
 		}
 	}
