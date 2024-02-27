@@ -3,6 +3,6 @@
 
 draw_self();
 
-draw_sprite(p1Portait, global.p1PaletteID, p1CharacterPortait_x, p1CharacterPortait_y);
+draw_sprite(p1Portait, global.p1PaletteID, global.camObj.x - 80 + p1CharacterPortait_x, global.camObj.y + p1CharacterPortait_y);
 
 
