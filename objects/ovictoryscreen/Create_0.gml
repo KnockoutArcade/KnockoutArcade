@@ -22,30 +22,76 @@ portaits_EndMoving = 20; // The frame to stop moving the portaits on
 p1Portait = sFullPortait_Russel; // The sprite to use for P1's portait
 p1PortaitNameID = 0; // Which subimage on sCharacterNames to use
 // Automatically assign the portait based on character
-switch (global.p1SelectedCharacter)
-{
-	case oRussel:
-		p1Portait = sFullPortait_Russel;
-		p1PortaitNameID = 0;
-		break;
-		
-	case oBeverly:
-		p1Portait = sFullPortait_Beverly;
-		p1PortaitNameID = 1;
-		break;
-		
-	case oJay:
-		p1Portait = sFullPortait_Jay;
-		p1PortaitNameID = 2;
-		break;
-		
-	case oGunther:
-		p1Portait = sFullPortait_Gunther;
-		p1PortaitNameID = 3;
-		break;
-}
+
 p1CharacterPortait_x = 160; // The current X position of P1's portait
 p1CharacterPortait_y = 78; // The current Y position of P1's portait
 p1CharacterPortait_StartingPosition = [160, 78]; // The starting position of P1's portait [x, y]
 p1CharacterPortait_EndingPosition = [121, 78]; // The ending position of P1's portait [x, y]
 #endregion
+
+switch (global.p1SelectedCharacter)
+{
+	case oRussel:
+	{
+		p1Portait = sFullPortait_Russel;
+		p1PortaitNameID = 0;
+		
+		// Dislay name
+		var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
+		with (particle)
+		{
+			sprite_index = sRusselWins;
+			lifetime = 1000000000;
+			depth = -11000;
+		}
+	}
+	break;
+		
+	case oBeverly:
+	{
+		p1Portait = sFullPortait_Beverly;
+		p1PortaitNameID = 1;
+		
+		// Dislay name
+		var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
+		with (particle)
+		{
+			sprite_index = sBeverlyWins;
+			lifetime = 1000000000;
+			depth = -11000;
+		}
+	}
+	break;
+		
+	case oJay:
+	{
+		p1Portait = sFullPortait_Jay;
+		p1PortaitNameID = 2;
+		
+		// Dislay name
+		var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
+		with (particle)
+		{
+			sprite_index = sJayWins;
+			lifetime = 1000000000;
+			depth = -11000;
+		}
+	}
+	break;
+		
+	case oGunther:
+	{
+		p1Portait = sFullPortait_Gunther;
+		p1PortaitNameID = 3;
+		
+		// Dislay name
+		var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
+		with (particle)
+		{
+			sprite_index = sGuntherWins;
+			lifetime = 1000000000;
+			depth = -11000;
+		}
+	}
+	break;
+}
