@@ -11,6 +11,9 @@ enum eVictoryScreenState
 	OPTIONS
 }
 
+// Sprite Font
+victoryFont = font_add_sprite_ext();
+
 #region Portaits
 portaits_StartMoving = 0; // The frame to start moving the portaits on
 portaits_EndMoving = 20; // The frame to stop moving the portaits on

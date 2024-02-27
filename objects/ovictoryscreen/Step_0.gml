@@ -24,7 +24,10 @@ switch (state)
 	
 	case eVictoryScreenState.DISPLAY_WIN_QUOTE:
 	{
-		
+		if (keyboard_check_pressed(vk_escape))
+		{
+			room_restart();
+		}
 	}
 	break;
 	

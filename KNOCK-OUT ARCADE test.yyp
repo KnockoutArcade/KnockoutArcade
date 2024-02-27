@@ -309,6 +309,7 @@
     {"id":{"name":"sJay_SC_DownSpecia2A_MOCKUP_strip5","path":"sprites/sJay_SC_DownSpecia2A_MOCKUP_strip5/sJay_SC_DownSpecia2A_MOCKUP_strip5.yy",},"order":5,},
     {"id":{"name":"sStageSelect_Text_strip2","path":"sprites/sStageSelect_Text_strip2/sStageSelect_Text_strip2.yy",},"order":0,},
     {"id":{"name":"sStartText","path":"sprites/sStartText/sStartText.yy",},"order":1,},
+    {"id":{"name":"fntVictoryQuote","path":"fonts/fntVictoryQuote/fntVictoryQuote.yy",},"order":2,},
     {"id":{"name":"sStageSelect_StageNames_strip5","path":"sprites/sStageSelect_StageNames_strip5/sStageSelect_StageNames_strip5.yy",},"order":3,},
     {"id":{"name":"sGuntherWins","path":"sprites/sGuntherWins/sGuntherWins.yy",},"order":3,},
     {"id":{"name":"sRussel_NSpecial","path":"sprites/sRussel_NSpecial/sRussel_NSpecial.yy",},"order":28,},
