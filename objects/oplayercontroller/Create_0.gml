@@ -308,7 +308,7 @@ knockbackVel = 0;
 pushbackVel = 0;
 
 maxHitPoints = selectedCharacter.MaxHP;
-hp = maxHitPoints;
+hp = 1;
 
 frameAdvantage = false;
 FAvictim = false;

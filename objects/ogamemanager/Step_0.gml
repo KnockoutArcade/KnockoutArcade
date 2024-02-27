@@ -347,7 +347,8 @@ switch (global.gameMode)
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				//ResultsScreen();
-				instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter);
 			}
 		}
 		else if (global.p2Rounds >= 2)
@@ -368,7 +369,8 @@ switch (global.gameMode)
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
 				//ResultsScreen();
-				instance_create_depth(global.camObj.x, global.camObj.y, -10000, oVictoryScreen);
+				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter);
 			}
 		}
 		

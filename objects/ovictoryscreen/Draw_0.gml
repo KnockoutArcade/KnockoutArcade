@@ -12,7 +12,7 @@ if (state = eVictoryScreenState.DISPLAY_WIN_QUOTE)
 	draw_set_color(c_white);
 	draw_set_font(victoryFont);
 	
-	draw_text_ext(global.camObj.x - 80 + 15, global.camObj.y + 95, "GO HOME AND BE A FAMILY MAN!", 10, 130);
+	draw_text_ext(global.camObj.x - 80 + 15, global.camObj.y + 95, winQuote, 10, 130);
 	
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_top);
