@@ -83,6 +83,8 @@ function ResultsScreen()
 	{
 		var prioritySelection = max(P1resultSelRow, P2resultSelRow);
 		
+		font_delete(victoryFont);
+		
 		switch (prioritySelection)
 		{
 			case 0:

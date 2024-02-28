@@ -19,7 +19,7 @@ switch (state)
 		
 		if (image_index >= 7 && animTimer >= portaits_EndMoving)
 		{
-			state = eVictoryScreenState.DISPLAY_WIN_QUOTE;
+			state = eVictoryScreenState.OPTIONS;
 		}
 	}
 	break;
@@ -28,17 +28,18 @@ switch (state)
 	{
 		image_speed = 0;
 		
-		if (keyboard_check_pressed(vk_escape))
+		if (keyboard_check_pressed(vk_anykey))
 		{
-			font_delete(victoryFont);
-			room_restart();
+			state = eVictoryScreenState.OPTIONS;
 		}
 	}
 	break;
 	
 	case eVictoryScreenState.OPTIONS:
 	{
+		image_speed = 0;
 		
+		ResultsScreen();
 	}
 	break;
 }

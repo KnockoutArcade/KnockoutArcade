@@ -37,6 +37,24 @@ losingCharacter = global.p2SelectedCharacter;
 
 winQuote = "THIS MESSAGE SHOULD NOT APPEAR";
 
+P1resultSelRow = 0;
+P1resultSelCol = 0;
+P1cursorCooldown = 5;
+
+P1resultSelRowMax = 3;
+
+P2resultSelRow = 0;
+P2resultSelCol = 0;
+P2cursorCooldown = 5;
+
+P2resultSelRowMax = 3;
+
+P1hasSelectedresult = false;
+P2hasSelectedresult = false;
+
+P1cursorY = 0;
+P2cursorY = 0;
+
 // This function will create the "[name] WINS!" text
 function CreateWinnerText(sprite)
 {
