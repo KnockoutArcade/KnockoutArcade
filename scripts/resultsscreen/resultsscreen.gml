@@ -6,12 +6,14 @@ function ResultsScreen()
 	var P1menuDown = global.p1ButtonMenuDown;
 	var P1menuRowMove = P1menuUp + P1menuDown;
 	var P1menuConfirm = global.p1ButtonMenuConfirm;
+	var P1menuDeny = global.p1ButtonMenuDeny;
 	var P1menuConfirmBuffer = false;
 	
 	var P2menuUp = global.p2ButtonMenuUp;
 	var P2menuDown = global.p2ButtonMenuDown;
 	var P2menuRowMove = P2menuUp + P2menuDown;
 	var P2menuConfirm = global.p2ButtonMenuConfirm;
+	var P2menuDeny = global.p2ButtonMenuDeny;
 	var P2menuConfirmBuffer = false;
 	
 	P1cursorCooldown--;
@@ -48,6 +50,13 @@ function ResultsScreen()
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 	
+	if (P1menuDeny)
+	{
+		P1hasSelectedresult = false;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+	}
+	
 	// Handle result selection (Player 2)
     if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedresult)
     {
@@ -77,6 +86,13 @@ function ResultsScreen()
 		P2hasSelectedresult = true;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
+	}
+	
+	if (P2menuDeny)
+	{
+		P2hasSelectedresult = false;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
 	}
 	
 	if (P1hasSelectedresult && P2hasSelectedresult)
