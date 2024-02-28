@@ -40,7 +40,7 @@ switch (state)
 		}
 		
 		// If we press any button
-		if (keyboard_check_pressed(vk_anykey))
+		if (keyboard_check_pressed(vk_anykey) || GamepadCheck(global.player1ControllerSlot) || GamepadCheck(global.player2ControllerSlot))
 		{
 			// If we still printing the quote, instantly complete it.
 			if (quotePrintingLength < quoteLength)

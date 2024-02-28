@@ -1,5 +1,9 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+// This function returns true if a button was pressed on this frame, returns false otherwise.
+// It takes in a controller slot to check for
+
 function GamepadCheck(controllerSlot)
 {
 	if (gamepad_button_check_pressed(controllerSlot, gp_face1))
