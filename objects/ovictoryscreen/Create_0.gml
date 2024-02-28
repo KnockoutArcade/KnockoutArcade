@@ -32,10 +32,13 @@ p1CharacterPortait_StartingPosition = [160, 78]; // The starting position of P1'
 p1CharacterPortait_EndingPosition = [121, 78]; // The ending position of P1's portait [x, y]
 #endregion
 
-winningCharacter = global.p1SelectedCharacter;
-losingCharacter = global.p2SelectedCharacter;
+winningCharacter = global.p1SelectedCharacter; // The character that won the match
+losingCharacter = global.p2SelectedCharacter; // The character that lost the match
 
-winQuote = "THIS MESSAGE SHOULD NOT APPEAR";
+winQuote = "THIS MESSAGE SHOULD NOT APPEAR"; // The win quote to display
+quoteLength = 0; // How long the quote is (in characters)
+displayQuote = ""; // The part of the quote that we are printing.
+quotePrintingLength = 0; // How much of the quote we have currently printed.
 
 P1resultSelRow = 0;
 P1resultSelCol = 0;
@@ -228,6 +231,8 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 		}
 		break;
 	}
+	
+	quoteLength = string_length(winQuote);
 }
 
 

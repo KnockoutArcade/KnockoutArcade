@@ -19,7 +19,7 @@ switch (state)
 		
 		if (image_index >= 7 && animTimer >= portaits_EndMoving)
 		{
-			state = eVictoryScreenState.OPTIONS;
+			state = eVictoryScreenState.DISPLAY_WIN_QUOTE;
 		}
 	}
 	break;
@@ -28,9 +28,31 @@ switch (state)
 	{
 		image_speed = 0;
 		
+		// Print text
+		if (animTimer mod 2 == 0)
+		{
+			if (quotePrintingLength < quoteLength)
+			{
+				quotePrintingLength += 1;
+				
+				displayQuote = string_copy(winQuote, 1, quotePrintingLength);
+			}
+		}
+		
+		// If we press any button
 		if (keyboard_check_pressed(vk_anykey))
 		{
-			state = eVictoryScreenState.OPTIONS;
+			// If we still printing the quote, instantly complete it.
+			if (quotePrintingLength < quoteLength)
+			{
+				displayQuote = winQuote;
+				quotePrintingLength = quoteLength;
+			}
+			else
+			{
+				// Otherwise, transition into the options state.
+				state = eVictoryScreenState.OPTIONS;
+			}
 		}
 	}
 	break;
