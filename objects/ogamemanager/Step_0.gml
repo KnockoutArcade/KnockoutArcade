@@ -336,7 +336,7 @@ switch (global.gameMode)
 		}
 		else if (global.p1Rounds >= 2)
 		{
-			if (gameHaltTimer == 220)
+			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
@@ -347,7 +347,7 @@ switch (global.gameMode)
 		}
 		else if (global.p2Rounds >= 2)
 		{ 
-			if (gameHaltTimer == 220)
+			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
