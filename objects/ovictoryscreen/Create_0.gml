@@ -40,6 +40,9 @@ quoteLength = 0; // How long the quote is (in characters)
 displayQuote = ""; // The part of the quote that we are printing.
 quotePrintingLength = 0; // How much of the quote we have currently printed.
 
+skipIntro = false; // Whether to skip the opening and win quote animations (used for tie games)
+
+// Menu Vars
 P1resultSelRow = 0;
 P1resultSelCol = 0;
 P1cursorCooldown = 5;
@@ -61,13 +64,15 @@ P2cursorY = 0;
 // This function will create the "[name] WINS!" text
 function CreateWinnerText(sprite)
 {
-	// Dislay name
-	var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
-	with (particle)
+	if (!skipIntro)
 	{
-		sprite_index = sprite;
-		lifetime = 1000000000;
-		depth = -11000;
+		var particle = instance_create_depth(global.camObj.x-80, 0, -11000, oParticles);
+		with (particle)
+		{
+			sprite_index = sprite;
+			lifetime = 1000000000;
+			depth = -11000;
+		}
 	}
 }
 
