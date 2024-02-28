@@ -83,13 +83,13 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 				
 				case oJay:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "YOUR SPIRIT IS COOL, BUT IT'S NOTHING I CAN'T HANDLE!";
 				}
 				break;
 				
 				case oGunther:
 				{
-					winQuote = "WHAT STRENGTH! BUT DON'T FORGET THERE ARE GUYS LIKE YOU ALL OVER THE WORLD.";
+					winQuote = "STAY OUT OF MY WAY!";
 				}
 				break;
 			}
@@ -109,7 +109,7 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 			{
 				case oRussel:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "KEEP TRAINING, YOU'VE GOT TONS OF POTENTIAL!";
 				}
 				break;
 				
@@ -121,13 +121,13 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 				
 				case oJay:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "YOU MUST DEFEAT SHENG LONG TO STAND A CHANCE.";
 				}
 				break;
 				
 				case oGunther:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "I LOOK FORWARD TO SEEING YOU AGAIN!";
 				}
 				break;
 			}
@@ -153,19 +153,19 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 				
 				case oBeverly:
 				{
-					winQuote = "BEVY ARE YOU OK? ARE YOU OK BEVY?";
+					winQuote = "BEVY ARE YOU OK? ARE YOU OK, BEVY?";
 				}
 				break;
 				
 				case oJay:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "A CLONE? I GUESS THERE ARE OTHER SPIRITS, TOO.";
 				}
 				break;
 				
 				case oGunther:
 				{
-					winQuote = "WUBBA WUBBA! I'M IN THE PINK TODAY BOY!";
+					winQuote = "LIGHTEN UP! YOU COULD USE A VACATION.";
 				}
 				break;
 			}
