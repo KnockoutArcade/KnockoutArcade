@@ -336,6 +336,7 @@ else
 // Calculate Traction
 if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT && state != eState.HOLD && state != eState.FORWARD_THROW && state != eState.BEING_GRABBED && state != eState.BACKWARD_THROW)
 {
+	// TEMPORARY!!!
 	if (selectedCharacter.Name == "Beverly" && state == eState.RUN_BACKWARD)
 	{
 		traction = 0.1;
@@ -344,7 +345,7 @@ if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state
 	{
 		traction = selectedCharacter.Traction;
 	}
-	
+	// TEMPORARY!!
 	
 	if (abs(hsp) - traction >= 0)
 	{
@@ -1161,7 +1162,7 @@ switch state
 		}
 		
 		// Temporary hard-coding for Beverly's backdash
-		if (selectedCharacter.Name == "Beverly" && animTimer == 20)
+		if (selectedCharacter.Name == "Beverly" && animTimer == 14)
 		{
 			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
 		}
