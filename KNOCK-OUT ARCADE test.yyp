@@ -32,6 +32,7 @@
     {"id":{"name":"sRussel_Launched","path":"sprites/sRussel_Launched/sRussel_Launched.yy",},"order":13,},
     {"id":{"name":"sControlsMenuUI_PressNewButton","path":"sprites/sControlsMenuUI_PressNewButton/sControlsMenuUI_PressNewButton.yy",},"order":9,},
     {"id":{"name":"ProcessHit","path":"scripts/ProcessHit/ProcessHit.yy",},"order":15,},
+    {"id":{"name":"sBeverly_Run_Backward","path":"sprites/sBeverly_Run_Backward/sBeverly_Run_Backward.yy",},"order":41,},
     {"id":{"name":"sCutsceneTrigger","path":"sprites/sCutsceneTrigger/sCutsceneTrigger.yy",},"order":9,},
     {"id":{"name":"sJay_SC_Sidespecia_MOCKUP_strip4","path":"sprites/sJay_SC_Sidespecia_MOCKUP_strip4/sJay_SC_Sidespecia_MOCKUP_strip4.yy",},"order":0,},
     {"id":{"name":"sRussel_Crouch_Block","path":"sprites/sRussel_Crouch_Block/sRussel_Crouch_Block.yy",},"order":26,},
