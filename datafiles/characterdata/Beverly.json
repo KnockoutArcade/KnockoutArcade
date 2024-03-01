@@ -2478,11 +2478,11 @@
       "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 2,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
@@ -2515,7 +2515,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 2.0,
           "Pushback": 2.0,
-          "ParticleXOffset": 3,
+          "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
@@ -2666,16 +2666,16 @@
       "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
           "Length": 6,
           "ImageIndex": 2
-        },
-        {
-          "Length": 12,
-          "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2703,8 +2703,8 @@
           "LaunchKnockbackHorizontal": 3.4999995,
           "GravityScaling": 3.0,
           "Pushback": 1.9999999,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 25,
+          "ParticleYOffset": 11,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 20,
           "HoldXOffset": 0,
@@ -7325,6 +7325,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-02-29T18:05:16.3523717-07:00",
+  "LastModified": "2024-02-29T19:47:04.2395066-07:00",
   "LastModifiedBy": "creep"
 }
