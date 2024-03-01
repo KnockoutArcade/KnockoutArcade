@@ -438,6 +438,7 @@
     {"id":{"name":"sfx_CharSel_Ready","path":"sounds/sfx_CharSel_Ready/sfx_CharSel_Ready.yy",},"order":2,},
     {"id":{"name":"sPauseMenu_SelectionSmall","path":"sprites/sPauseMenu_SelectionSmall/sPauseMenu_SelectionSmall.yy",},"order":8,},
     {"id":{"name":"sOptionsMenuBase","path":"sprites/sOptionsMenuBase/sOptionsMenuBase.yy",},"order":3,},
+    {"id":{"name":"sBeverly_StandLight3","path":"sprites/sBeverly_StandLight3/sBeverly_StandLight3.yy",},"order":40,},
     {"id":{"name":"sCommandLists_Russel_CommandInputs","path":"sprites/sCommandLists_Russel_CommandInputs/sCommandLists_Russel_CommandInputs.yy",},"order":0,},
     {"id":{"name":"sMainMenuPercy","path":"sprites/sMainMenuPercy/sMainMenuPercy.yy",},"order":4,},
     {"id":{"name":"sRussel_SideSpecial","path":"sprites/sRussel_SideSpecial/sRussel_SideSpecial.yy",},"order":29,},
