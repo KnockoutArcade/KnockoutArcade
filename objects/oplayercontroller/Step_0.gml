@@ -2433,6 +2433,15 @@ switch state
 				}
 			}
 			break;
+			
+			case 6 : 
+			{
+				if (superMeter >= 50)
+				{
+					prevState = eState.SUPER;
+				}
+			}
+			break;
 		}
 		
 		if (knockbackVel > 0)
@@ -2458,6 +2467,10 @@ switch state
 			
 			if (blockbuffer)
 			{
+				if (prevState == eState.SUPER)
+				{
+					superMeter -= 50; 
+				}
 				state = prevState;
 				animTimer = 0;
 			} 
