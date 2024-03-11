@@ -53,24 +53,6 @@ global.p2Rounds = 0;
 
 audio_play_sound(testBGM, 0, true);
 
-P1resultSelRow = 0;
-P1resultSelCol = 0;
-P1cursorCooldown = 5;
-
-P1resultSelRowMax = 3;
-
-P2resultSelRow = 0;
-P2resultSelCol = 0;
-P2cursorCooldown = 5;
-
-P2resultSelRowMax = 3;
-
-P1hasSelectedresult = false;
-P2hasSelectedresult = false;
-
-P1cursorY = 0;
-P2cursorY = 0;
-
 momentWhenBothPlayersWereStable = 0; // During round win, the frame when both players entered a stable state
 victoryAnimationDelay = 30; // The delay between when players are stable and when the victory animation should play (frames)
 victoryAnimationTime = 0; // The moment when a player entered their victory animation

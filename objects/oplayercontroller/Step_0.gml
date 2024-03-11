@@ -336,6 +336,17 @@ else
 // Calculate Traction
 if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT && state != eState.HOLD && state != eState.FORWARD_THROW && state != eState.BEING_GRABBED && state != eState.BACKWARD_THROW)
 {
+	// TEMPORARY!!!
+	if (selectedCharacter.Name == "Beverly" && state == eState.RUN_BACKWARD)
+	{
+		traction = 0.1;
+	}
+	else if (selectedCharacter.Name == "Beverly")
+	{
+		traction = selectedCharacter.Traction;
+	}
+	// TEMPORARY!!
+	
 	if (abs(hsp) - traction >= 0)
 	{
 		hsp += traction * -sign(hsp);
@@ -1148,6 +1159,12 @@ switch state
 				lifetime = 15;
 				depth -= 1;
 			}
+		}
+		
+		// Temporary hard-coding for Beverly's backdash
+		if (selectedCharacter.Name == "Beverly" && animTimer == 14)
+		{
+			hsp = (backdashSpeed + (speedBonus / 100 * backdashSpeed)) * -image_xscale;
 		}
 		
 		// Handle Running Sound Effects
@@ -2416,6 +2433,15 @@ switch state
 				}
 			}
 			break;
+			
+			case 6 : 
+			{
+				if (superMeter >= 50)
+				{
+					prevState = eState.SUPER;
+				}
+			}
+			break;
 		}
 		
 		if (knockbackVel > 0)
@@ -2441,6 +2467,10 @@ switch state
 			
 			if (blockbuffer)
 			{
+				if (prevState == eState.SUPER)
+				{
+					superMeter -= 50; 
+				}
 				state = prevState;
 				animTimer = 0;
 			} 

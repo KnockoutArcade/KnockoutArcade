@@ -23,10 +23,17 @@ function SetPlayerButtons()
 			buttonMenuRight : ord("D"),
 			buttonMenuUp : ord("W"),
 			buttonMenuDown : ord("S"),
+			
 			buttonMenuConfirm : ord("J"),
 			buttonMenuDeny : ord("K"),
 			buttonMenuSwitch : ord("L"),
 			buttonMenuSetControls : 186,
+			
+			buttonMenuPageRight : ord("E"),
+			buttonMenuPageLeft : ord("Q"),
+			buttonMenuTriggerRight : ord("E"),
+			buttonMenuTriggerLeft : ord("Q"),
+			
 			buttonMenuPause : vk_escape
 		},
 		
@@ -49,14 +56,22 @@ function SetPlayerButtons()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			
 			buttonMenuLeftDPAD : gp_padl,
 			buttonMenuRightDPAD : gp_padr,
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
+			
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2,
 			buttonMenuSwitch : gp_face3,
 			buttonMenuSetControls : gp_face4,
+			
+			buttonMenuPageRight : gp_shoulderr,
+			buttonMenuPageLeft : gp_shoulderl,
+			buttonMenuTriggerRight : gp_shoulderrb,
+			buttonMenuTriggerLeft : gp_shoulderlb,
+			
 			buttonMenuPause : gp_start
 		}
 	};
@@ -81,10 +96,17 @@ function SetPlayerButtons()
 			buttonMenuRight : vk_right,
 			buttonMenuUp : vk_up,
 			buttonMenuDown : vk_down,
+			
 			buttonMenuConfirm : vk_numpad1,
 			buttonMenuDeny : vk_numpad2,
 			buttonMenuSwitch : vk_numpad3,
 			buttonMenuSetControls : vk_numpad4,
+			
+			buttonMenuPageRight : vk_right,
+			buttonMenuPageLeft : vk_left,
+			buttonMenuTriggerRight : vk_pageup,
+			buttonMenuTriggerLeft : vk_pagedown,
+			
 			buttonMenuPause : vk_backspace
 		},
 		Controller : 
@@ -106,14 +128,22 @@ function SetPlayerButtons()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			
 			buttonMenuLeftDPAD : gp_padl,
 			buttonMenuRightDPAD : gp_padr,
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
+			
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2,
 			buttonMenuSwitch : gp_face3,
 			buttonMenuSetControls : gp_face4,
+			
+			buttonMenuPageRight : gp_shoulderr,
+			buttonMenuPageLeft : gp_shoulderl,
+			buttonMenuTriggerRight : gp_shoulderrb,
+			buttonMenuTriggerLeft : gp_shoulderlb,
+			
 			buttonMenuPause : gp_start
 		}
 	};
@@ -143,10 +173,17 @@ function RestorePlayer1DefaultControls()
 			buttonMenuRight : ord("D"),
 			buttonMenuUp : ord("W"),
 			buttonMenuDown : ord("S"),
+			
 			buttonMenuConfirm : ord("J"),
 			buttonMenuDeny : ord("K"),
 			buttonMenuSwitch : ord("L"),
 			buttonMenuSetControls : 186,
+			
+			buttonMenuPageRight : ord("E"),
+			buttonMenuPageLeft : ord("Q"),
+			buttonMenuTriggerRight : ord("E"),
+			buttonMenuTriggerLeft : ord("Q"),
+			
 			buttonMenuPause : vk_escape
 		},
 		
@@ -169,14 +206,22 @@ function RestorePlayer1DefaultControls()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			
 			buttonMenuLeftDPAD : gp_padl,
 			buttonMenuRightDPAD : gp_padr,
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
+			
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2,
 			buttonMenuSwitch : gp_face3,
 			buttonMenuSetControls : gp_face4,
+			
+			buttonMenuPageRight : gp_shoulderr,
+			buttonMenuPageLeft : gp_shoulderl,
+			buttonMenuTriggerRight : gp_shoulderrb,
+			buttonMenuTriggerLeft : gp_shoulderlb,
+			
 			buttonMenuPause : gp_start
 		}
 	};
@@ -205,10 +250,17 @@ function RestorePlayer2DefaultControls()
 			buttonMenuRight : vk_right,
 			buttonMenuUp : vk_up,
 			buttonMenuDown : vk_down,
+			
 			buttonMenuConfirm : vk_numpad1,
 			buttonMenuDeny : vk_numpad2,
 			buttonMenuSwitch : vk_numpad3,
 			buttonMenuSetControls : vk_numpad4,
+			
+			buttonMenuPageRight : vk_right,
+			buttonMenuPageLeft : vk_left,
+			buttonMenuTriggerRight : vk_pageup,
+			buttonMenuTriggerLeft : vk_pagedown,
+			
 			buttonMenuPause : vk_backspace
 		},
 		Controller : 
@@ -230,14 +282,22 @@ function RestorePlayer2DefaultControls()
 			buttonMenuRight : gp_axislh,
 			buttonMenuUp : gp_axislv,
 			buttonMenuDown : gp_axislv,
+			
 			buttonMenuLeftDPAD : gp_padl,
 			buttonMenuRightDPAD : gp_padr,
 			buttonMenuUpDPAD : gp_padu,
 			buttonMenuDownDPAD : gp_padd,
+			
 			buttonMenuConfirm : gp_face1,
 			buttonMenuDeny : gp_face2,
 			buttonMenuSwitch : gp_face3,
 			buttonMenuSetControls : gp_face4,
+			
+			buttonMenuPageRight : gp_shoulderr,
+			buttonMenuPageLeft : gp_shoulderl,
+			buttonMenuTriggerRight : gp_shoulderrb,
+			buttonMenuTriggerLeft : gp_shoulderlb,
+			
 			buttonMenuPause : gp_start
 		}
 	};

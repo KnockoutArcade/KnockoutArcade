@@ -310,10 +310,11 @@ switch (global.gameMode)
 		}
 		
 		// When a player meets the win requirement for the match return players to the character selection screen
-		if (global.p1Rounds >=2 && global.p2Rounds >= 2)
+		if (global.p1Rounds >= 2 && global.p2Rounds >= 2)
 		{
-			if(gameHaltTimer == 90) // ensure this doesn't play unless the KO animation is completed
-			{				
+			// Once both players have been in a stable state, display the Draw... text
+			if (gameHaltTimer == momentWhenBothPlayersWereStable + 60 && momentWhenBothPlayersWereStable != 0)
+			{
 				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 				with (particle)
 				{
@@ -322,49 +323,37 @@ switch (global.gameMode)
 					lifetime = 1000000000;
 				}
 			}
-			else if(gameHaltTimer >= 220)
+			else if (gameHaltTimer == momentWhenBothPlayersWereStable + 140 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
-				ResultsScreen();
+				
+				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				victoryScreen.skipIntro = true;
+				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter);
+				victoryScreen.state = eVictoryScreenState.OPTIONS;
 			}
 		}
 		else if (global.p1Rounds >= 2)
 		{
-			if(gameHaltTimer == 90) // ensure this doesn't play unless the KO animation is completed
-			{				
-				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
-				with (particle)
-				{
-					sprite_index = sPlayer1Wins;
-					image_index = true;
-					lifetime = 1000000000;
-				}
-			}
-			else if(gameHaltTimer >= 220)
+			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
-				ResultsScreen();
+				
+				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter);
 			}
 		}
 		else if (global.p2Rounds >= 2)
-		{
-			if(gameHaltTimer == 90)
-			{
-				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
-				with (particle)
-				{
-					sprite_index = sPlayer2Wins;
-					image_index = true;
-					lifetime = 1000000000;
-				}
-			}
-			else if(gameHaltTimer >= 220)
+		{ 
+			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
 				audio_stop_sound(testBGM);
-				ResultsScreen();
+				
+				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter);
 			}
 		}
 		
