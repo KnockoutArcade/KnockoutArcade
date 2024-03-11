@@ -4200,33 +4200,21 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_JumpMedium_Mockup_strip6",
+      "SpriteName": "sBeverly_Jump_Medium",
       "Duration": 27,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 3,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 8,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 12,
           "ImageIndex": 2
-        },
-        {
-          "Length": 9,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 21,
-          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7325,6 +7313,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-01T17:33:13.9232734-07:00",
+  "LastModified": "2024-03-11T14:40:54.6869535-07:00",
   "LastModifiedBy": "creep"
 }

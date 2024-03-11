@@ -46,6 +46,7 @@
     {"id":{"name":"sfx_UI_Hover","path":"sounds/sfx_UI_Hover/sfx_UI_Hover.yy",},"order":3,},
     {"id":{"name":"sFullPortait_Gunther","path":"sprites/sFullPortait_Gunther/sFullPortait_Gunther.yy",},"order":3,},
     {"id":{"name":"oCutsceneEvent","path":"objects/oCutsceneEvent/oCutsceneEvent.yy",},"order":10,},
+    {"id":{"name":"sBeverly_Jump_Medium","path":"sprites/sBeverly_Jump_Medium/sBeverly_Jump_Medium.yy",},"order":42,},
     {"id":{"name":"sStageSelect_ShadeBox","path":"sprites/sStageSelect_ShadeBox/sStageSelect_ShadeBox.yy",},"order":6,},
     {"id":{"name":"sConstructionGuy_Idle","path":"sprites/sConstructionGuy_Idle/sConstructionGuy_Idle.yy",},"order":0,},
     {"id":{"name":"sGeyser","path":"sprites/sGeyser/sGeyser.yy",},"order":1,},
