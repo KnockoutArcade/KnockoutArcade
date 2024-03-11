@@ -4224,8 +4224,8 @@
           "Lifetime": 6,
           "AttackWidth": 32,
           "AttackHeight": 12,
-          "WidthOffset": -4,
-          "HeightOffset": 5,
+          "WidthOffset": 0,
+          "HeightOffset": 1,
           "Group": 1,
           "Damage": 8,
           "MeterGain": 6.0,
@@ -4312,9 +4312,9 @@
           "Start": 1,
           "Lifetime": 28,
           "AttackWidth": 15,
-          "AttackHeight": 32,
+          "AttackHeight": 28,
           "WidthOffset": -9,
-          "HeightOffset": 0
+          "HeightOffset": 9
         }
       ],
       "NumberOfProjectiles": 0,
@@ -7313,6 +7313,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-11T14:40:54.6869535-07:00",
+  "LastModified": "2024-03-11T14:53:03.3316044-07:00",
   "LastModifiedBy": "creep"
 }
