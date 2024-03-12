@@ -7,7 +7,7 @@ TEAM LEAD
 Ryland Kealey - Creator, Art Lead, and Project Lead
 John Kidd Jr - Programming Lead
 Ian Sbar - Design Lead
-Zak Habul - Composer / Sound Lead
+Zaki Habul - Composer / Sound Lead
 
 ART
 Andrea Gutierrez - Character Artist (Beverly)
