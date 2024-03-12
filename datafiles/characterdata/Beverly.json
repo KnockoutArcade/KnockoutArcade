@@ -5253,7 +5253,7 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_JumpDownHeavy_Mockup_strip2",
+      "SpriteName": "sBeverly_Jump_Divekick",
       "Duration": 72,
       "NumberOfFrames": 1,
       "FrameData": [
@@ -7301,6 +7301,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-11T16:19:02.8824502-07:00",
+  "LastModified": "2024-03-11T17:20:41.8625684-07:00",
   "LastModifiedBy": "creep"
 }
