@@ -3765,45 +3765,25 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_CrouchHeavy_MOCKUP_strip9",
+      "SpriteName": "sBeverly_Crouch_Heavy",
       "Duration": 31,
-      "NumberOfFrames": 9,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 1,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 5,
-          "ImageIndex": 2
+          "Length": 0,
+          "ImageIndex": 0
         },
         {
           "Length": 7,
-          "ImageIndex": 3
+          "ImageIndex": 1
         },
         {
           "Length": 9,
-          "ImageIndex": 4
+          "ImageIndex": 2
         },
         {
           "Length": 11,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 22,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 26,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 28,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 30,
-          "ImageIndex": 9
+          "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 2,
@@ -3840,7 +3820,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         },
@@ -3876,7 +3856,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -7301,6 +7281,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-11T17:52:25.5409634-07:00",
+  "LastModified": "2024-03-12T11:36:02.8976904-07:00",
   "LastModifiedBy": "creep"
 }

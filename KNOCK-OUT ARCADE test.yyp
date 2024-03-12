@@ -166,6 +166,7 @@
     {"id":{"name":"SpeedTrail","path":"scripts/SpeedTrail/SpeedTrail.yy",},"order":24,},
     {"id":{"name":"sRussel_Hurt","path":"sprites/sRussel_Hurt/sRussel_Hurt.yy",},"order":5,},
     {"id":{"name":"ProcessCameraShake","path":"scripts/ProcessCameraShake/ProcessCameraShake.yy",},"order":42,},
+    {"id":{"name":"sBeverly_Crouch_Heavy","path":"sprites/sBeverly_Crouch_Heavy/sBeverly_Crouch_Heavy.yy",},"order":45,},
     {"id":{"name":"sRussel_SideSpecial_Enhanced","path":"sprites/sRussel_SideSpecial_Enhanced/sRussel_SideSpecial_Enhanced.yy",},"order":36,},
     {"id":{"name":"OverwriteMoveset","path":"scripts/OverwriteMoveset/OverwriteMoveset.yy",},"order":26,},
     {"id":{"name":"rControlsRoom","path":"rooms/rControlsRoom/rControlsRoom.yy",},"order":11,},
