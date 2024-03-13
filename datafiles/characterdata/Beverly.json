@@ -1363,45 +1363,25 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_ForwardThrow",
+      "SpriteName": "sBeverly_ForwardThrow",
       "Duration": 42,
-      "NumberOfFrames": 9,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 5,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 6,
           "ImageIndex": 1
         },
         {
-          "Length": 10,
+          "Length": 14,
           "ImageIndex": 2
         },
         {
-          "Length": 14,
+          "Length": 15,
           "ImageIndex": 3
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 24,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 34,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 36,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 38,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 40,
-          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7222,6 +7202,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-12T17:04:23.9019213-07:00",
+  "LastModified": "2024-03-12T19:23:23.456324-07:00",
   "LastModifiedBy": "creep"
 }

@@ -422,6 +422,7 @@
     {"id":{"name":"sBeverly_Crouch_Medium","path":"sprites/sBeverly_Crouch_Medium/sBeverly_Crouch_Medium.yy",},"order":29,},
     {"id":{"name":"ControllerSetup","path":"scripts/ControllerSetup/ControllerSetup.yy",},"order":0,},
     {"id":{"name":"GetPrintableKeyName","path":"scripts/GetPrintableKeyName/GetPrintableKeyName.yy",},"order":16,},
+    {"id":{"name":"sBeverly_ForwardThrow","path":"sprites/sBeverly_ForwardThrow/sBeverly_ForwardThrow.yy",},"order":47,},
     {"id":{"name":"sCommandLists_Russel_Specials","path":"sprites/sCommandLists_Russel_Specials/sCommandLists_Russel_Specials.yy",},"order":2,},
     {"id":{"name":"sThrowEnvDetection","path":"sprites/sThrowEnvDetection/sThrowEnvDetection.yy",},"order":4,},
     {"id":{"name":"HandleWalkingOffPlatforms","path":"scripts/HandleWalkingOffPlatforms/HandleWalkingOffPlatforms.yy",},"order":16,},
