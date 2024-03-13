@@ -171,6 +171,7 @@
     {"id":{"name":"OverwriteMoveset","path":"scripts/OverwriteMoveset/OverwriteMoveset.yy",},"order":26,},
     {"id":{"name":"rControlsRoom","path":"rooms/rControlsRoom/rControlsRoom.yy",},"order":11,},
     {"id":{"name":"sCOUNTERtext","path":"sprites/sCOUNTERtext/sCOUNTERtext.yy",},"order":0,},
+    {"id":{"name":"sBeverly_SideSpecial_RekkaConnecter","path":"sprites/sBeverly_SideSpecial_RekkaConnecter/sBeverly_SideSpecial_RekkaConnecter.yy",},"order":49,},
     {"id":{"name":"sRussel_NSpecial_Enhanced","path":"sprites/sRussel_NSpecial_Enhanced/sRussel_NSpecial_Enhanced.yy",},"order":35,},
     {"id":{"name":"oCredits","path":"objects/oCredits/oCredits.yy",},"order":9,},
     {"id":{"name":"sSuperMeterBackground","path":"sprites/sSuperMeterBackground/sSuperMeterBackground.yy",},"order":1,},

@@ -5513,7 +5513,7 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_SideSpecial2_MOCKUP",
+      "SpriteName": "sBeverly_SideSpecial_RekkaConnecter",
       "Duration": 26,
       "NumberOfFrames": 3,
       "FrameData": [
@@ -5533,9 +5533,9 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 6,
-          "Lifetime": 4,
-          "AttackWidth": 20,
+          "Start": 9,
+          "Lifetime": 3,
+          "AttackWidth": 35,
           "AttackHeight": 24,
           "WidthOffset": 1,
           "HeightOffset": 0,
@@ -5543,7 +5543,7 @@
           "Damage": 4,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 9,
+          "AttackHitStop": 13,
           "AttackHitStun": 23,
           "AttackType": 1,
           "BlockStun": 12.0,
@@ -5564,7 +5564,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -5607,33 +5607,33 @@
         {
           "NumpadInput": "8",
           "ButtonPressRequired": true,
-          "StartingFrame": 0,
-          "EndingFrame": 15,
+          "StartingFrame": 8,
+          "EndingFrame": 26,
           "EnhancementMove": 4096,
-          "TransitionImmediately": false,
-          "TransitionFrame": 15,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         },
         {
           "NumpadInput": "2",
           "ButtonPressRequired": true,
-          "StartingFrame": 0,
-          "EndingFrame": 15,
+          "StartingFrame": 8,
+          "EndingFrame": 26,
           "EnhancementMove": 2048,
-          "TransitionImmediately": false,
-          "TransitionFrame": 15,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         },
         {
           "NumpadInput": "623",
           "ButtonPressRequired": true,
-          "StartingFrame": 0,
-          "EndingFrame": 15,
+          "StartingFrame": 8,
+          "EndingFrame": 26,
           "EnhancementMove": 256,
-          "TransitionImmediately": false,
-          "TransitionFrame": 15,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         }
@@ -5676,7 +5676,7 @@
         "Windows": [
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 2.0,
+            "HorizontalSpeed": 3.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -5686,7 +5686,7 @@
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 0.5,
@@ -7214,6 +7214,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-13T15:07:46.281906-07:00",
+  "LastModified": "2024-03-13T16:43:53.5165148-07:00",
   "LastModifiedBy": "creep"
 }
