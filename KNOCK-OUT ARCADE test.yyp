@@ -202,6 +202,7 @@
     {"id":{"name":"sButtons_Controller","path":"sprites/sButtons_Controller/sButtons_Controller.yy",},"order":0,},
     {"id":{"name":"sRussel_Walk_Forward","path":"sprites/sRussel_Walk_Forward/sRussel_Walk_Forward.yy",},"order":4,},
     {"id":{"name":"sBeverly_Jump_Heavy","path":"sprites/sBeverly_Jump_Heavy/sBeverly_Jump_Heavy.yy",},"order":43,},
+    {"id":{"name":"sBeverly_BackwardThrow","path":"sprites/sBeverly_BackwardThrow/sBeverly_BackwardThrow.yy",},"order":46,},
     {"id":{"name":"sConstructionGuy_KnockedDown","path":"sprites/sConstructionGuy_KnockedDown/sConstructionGuy_KnockedDown.yy",},"order":3,},
     {"id":{"name":"oCharacterSelectButtons","path":"objects/oCharacterSelectButtons/oCharacterSelectButtons.yy",},"order":14,},
     {"id":{"name":"sJay_JumpingMedium_mockup_strip5","path":"sprites/sJay_JumpingMedium_mockup_strip5/sJay_JumpingMedium_mockup_strip5.yy",},"order":18,},

@@ -1183,65 +1183,33 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_BackwardThrow",
-      "Duration": 58,
-      "NumberOfFrames": 10,
+      "SpriteName": "sBeverly_BackwardThrow",
+      "Duration": 30,
+      "NumberOfFrames": 2,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 12,
           "ImageIndex": 1
-        },
-        {
-          "Length": 7,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 13,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 22,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 25,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 28,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 31,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 43,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 49,
-          "ImageIndex": 9
-        },
-        {
-          "Length": 55,
-          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 28,
+          "Start": 14,
           "Lifetime": 5,
           "AttackWidth": 10,
           "AttackHeight": 20,
-          "WidthOffset": -50,
-          "HeightOffset": 0,
+          "WidthOffset": -20,
+          "HeightOffset": 20,
           "Group": 2,
           "Damage": 10,
           "MeterGain": 10.0,
           "ComboScaling": 4.0,
-          "AttackHitStop": 16,
+          "AttackHitStop": 4,
           "AttackHitStun": 10,
           "AttackType": 1,
           "BlockStun": 5.0,
@@ -1249,8 +1217,8 @@
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -4.0,
-          "LaunchKnockbackHorizontal": -0.2,
+          "LaunchKnockbackVertical": -1.0,
+          "LaunchKnockbackHorizontal": -3.0,
           "GravityScaling": 5.0,
           "Pushback": 0.0,
           "ParticleXOffset": 20,
@@ -1262,7 +1230,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -1306,7 +1274,7 @@
       "OpponentPositionData": {
         "DistanceFromWall": -70.0,
         "ThrowOffset": 0,
-        "NumberOfFrames": 5,
+        "NumberOfFrames": 2,
         "Frames": [
           {
             "Frame": 0,
@@ -1318,39 +1286,12 @@
             "XScale": -1
           },
           {
-            "Frame": 7,
-            "RelativeX": 20,
-            "RelativeY": 1,
-            "Sprite": 0,
-            "Index": 0,
-            "Rotation": 0,
-            "XScale": -1
-          },
-          {
-            "Frame": 13,
-            "RelativeX": 20,
-            "RelativeY": 2,
-            "Sprite": 0,
-            "Index": 0,
-            "Rotation": 0,
-            "XScale": -1
-          },
-          {
-            "Frame": 22,
-            "RelativeX": 10,
-            "RelativeY": -40,
+            "Frame": 12,
+            "RelativeX": -20,
+            "RelativeY": -20,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 90,
-            "XScale": -1
-          },
-          {
-            "Frame": 25,
-            "RelativeX": -50,
-            "RelativeY": -2,
-            "Sprite": 2,
-            "Index": 5,
-            "Rotation": 0,
             "XScale": -1
           }
         ]
@@ -7281,6 +7222,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-12T11:36:02.8976904-07:00",
+  "LastModified": "2024-03-12T17:04:23.9019213-07:00",
   "LastModifiedBy": "creep"
 }
