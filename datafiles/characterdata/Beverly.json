@@ -1969,7 +1969,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 13,
-          "AttackHitStun": 25,
+          "AttackHitStun": 16,
           "AttackType": 1,
           "BlockStun": 15.0,
           "KnockBack": 3.8000007,
@@ -5544,7 +5544,7 @@
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 13,
-          "AttackHitStun": 23,
+          "AttackHitStun": 16,
           "AttackType": 1,
           "BlockStun": 12.0,
           "KnockBack": 2.5,
@@ -5772,21 +5772,29 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_SideSpecial3Overhead_MOCKUP",
+      "SpriteName": "sBeverly_SideSpecial_RekkaOverhead",
       "Duration": 52,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 12,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 9,
           "ImageIndex": 1
         },
         {
-          "Length": 17,
+          "Length": 14,
           "ImageIndex": 2
         },
         {
-          "Length": 22,
+          "Length": 18,
           "ImageIndex": 3
+        },
+        {
+          "Length": 22,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
@@ -5796,7 +5804,7 @@
           "Lifetime": 4,
           "AttackWidth": 27,
           "AttackHeight": 24,
-          "WidthOffset": -7,
+          "WidthOffset": 12,
           "HeightOffset": 5,
           "Group": 0,
           "Damage": 10,
@@ -5877,7 +5885,7 @@
           "Lifetime": 55,
           "AttackWidth": 28,
           "AttackHeight": 32,
-          "WidthOffset": -16,
+          "WidthOffset": 0,
           "HeightOffset": 0
         }
       ],
@@ -7363,6 +7371,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-13T19:59:05.8744099-07:00",
+  "LastModified": "2024-03-13T21:11:17.3542436-07:00",
   "LastModifiedBy": "creep"
 }
