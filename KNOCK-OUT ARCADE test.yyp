@@ -189,6 +189,7 @@
     {"id":{"name":"sCommandLists_Beverly_Specials","path":"sprites/sCommandLists_Beverly_Specials/sCommandLists_Beverly_Specials.yy",},"order":2,},
     {"id":{"name":"sControlsMenuUI_InputNames","path":"sprites/sControlsMenuUI_InputNames/sControlsMenuUI_InputNames.yy",},"order":6,},
     {"id":{"name":"sControlsMenu_Base","path":"sprites/sControlsMenu_Base/sControlsMenu_Base.yy",},"order":0,},
+    {"id":{"name":"sBeverly_SideSpecial_RekkaLow","path":"sprites/sBeverly_SideSpecial_RekkaLow/sBeverly_SideSpecial_RekkaLow.yy",},"order":51,},
     {"id":{"name":"sJay_SC_DownSpecial1_MOCKUP_strip3","path":"sprites/sJay_SC_DownSpecial1_MOCKUP_strip3/sJay_SC_DownSpecial1_MOCKUP_strip3.yy",},"order":4,},
     {"id":{"name":"sJayScene1","path":"sprites/sJayScene1/sJayScene1.yy",},"order":0,},
     {"id":{"name":"oSuperMeterUI","path":"objects/oSuperMeterUI/oSuperMeterUI.yy",},"order":3,},
