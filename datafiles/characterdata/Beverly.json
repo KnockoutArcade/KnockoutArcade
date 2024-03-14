@@ -6159,13 +6159,37 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_SideSpecial3Launch_MOCKUP",
+      "SpriteName": "sBeverly_Run_Backward",
       "Duration": 22,
-      "NumberOfFrames": 1,
+      "NumberOfFrames": 7,
       "FrameData": [
         {
-          "Length": 11,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
@@ -6279,18 +6303,18 @@
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 9,
-            "HorizontalSpeed": -0.75,
+            "StartingFrame": 5,
+            "HorizontalSpeed": 1.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 13,
+            "StartingFrame": 6,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 0.5,
@@ -7371,6 +7395,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-13T21:11:17.3542436-07:00",
+  "LastModified": "2024-03-13T21:20:03.1276894-07:00",
   "LastModifiedBy": "creep"
 }
