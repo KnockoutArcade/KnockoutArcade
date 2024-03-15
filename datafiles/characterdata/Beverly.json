@@ -2062,7 +2062,7 @@
           "EnhancementMove": 2048,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -7405,6 +7405,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-14T19:41:51.5045368-07:00",
+  "LastModified": "2024-03-14T19:47:01.3983362-07:00",
   "LastModifiedBy": "creep"
 }
