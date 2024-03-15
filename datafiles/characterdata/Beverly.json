@@ -6388,7 +6388,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaFinisher",
-      "Duration": 33,
+      "Duration": 40,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -6489,7 +6489,7 @@
       "HurtboxData": [
         {
           "Start": 1,
-          "Lifetime": 34,
+          "Lifetime": 41,
           "AttackWidth": 26,
           "AttackHeight": 25,
           "WidthOffset": -25,
@@ -6525,10 +6525,39 @@
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 7,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": -3.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 0.5,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -7419,6 +7448,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-14T19:57:23.0430988-07:00",
+  "LastModified": "2024-03-14T20:00:59.5117795-07:00",
   "LastModifiedBy": "creep"
 }
