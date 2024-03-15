@@ -5721,11 +5721,11 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.5,
+        "GravityScale": 1.0,
         "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 4,
         "Windows": [
           {
             "StartingFrame": 0,
@@ -5735,14 +5735,28 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 0,
+            "StartingFrame": 6,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -2.2,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 7,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 8,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.5,
+        "GravityScale": 1.0,
         "FallScale": 0.5
       },
       "UseMoveScript": false,
@@ -7405,6 +7419,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-14T19:52:57.5032468-07:00",
+  "LastModified": "2024-03-14T19:57:23.0430988-07:00",
   "LastModifiedBy": "creep"
 }
