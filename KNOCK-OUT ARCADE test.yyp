@@ -185,6 +185,7 @@
     {"id":{"name":"oSlope","path":"objects/oSlope/oSlope.yy",},"order":6,},
     {"id":{"name":"sGrabEffect","path":"sprites/sGrabEffect/sGrabEffect.yy",},"order":7,},
     {"id":{"name":"rPlatformingTestStage","path":"rooms/rPlatformingTestStage/rPlatformingTestStage.yy",},"order":0,},
+    {"id":{"name":"sBeverly_UpSpecial","path":"sprites/sBeverly_UpSpecial/sBeverly_UpSpecial.yy",},"order":54,},
     {"id":{"name":"sRussel_Jumping_Medium","path":"sprites/sRussel_Jumping_Medium/sRussel_Jumping_Medium.yy",},"order":16,},
     {"id":{"name":"sCommandLists_Beverly_Specials","path":"sprites/sCommandLists_Beverly_Specials/sCommandLists_Beverly_Specials.yy",},"order":2,},
     {"id":{"name":"sControlsMenuUI_InputNames","path":"sprites/sControlsMenuUI_InputNames/sControlsMenuUI_InputNames.yy",},"order":6,},

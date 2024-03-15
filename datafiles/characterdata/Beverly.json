@@ -4534,33 +4534,29 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_UpSpecial_MOCKUP_strip5",
-      "Duration": 50,
-      "NumberOfFrames": 6,
+      "SpriteName": "sBeverly_UpSpecial",
+      "Duration": 60,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 8,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 26,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 35,
+          "Length": 16,
           "ImageIndex": 3
         },
         {
-          "Length": 40,
+          "Length": 24,
           "ImageIndex": 4
-        },
-        {
-          "Length": 49,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 2,
@@ -4603,11 +4599,11 @@
         },
         {
           "Start": 16,
-          "Lifetime": 15,
+          "Lifetime": 7,
           "AttackWidth": 35,
           "AttackHeight": 15,
           "WidthOffset": 0,
-          "HeightOffset": 9,
+          "HeightOffset": 30,
           "Group": 1,
           "Damage": 7,
           "MeterGain": 4.0,
@@ -7409,6 +7405,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-14T16:47:30.2408501-07:00",
+  "LastModified": "2024-03-14T19:41:51.5045368-07:00",
   "LastModifiedBy": "creep"
 }
