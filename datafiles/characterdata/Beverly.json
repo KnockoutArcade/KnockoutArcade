@@ -6141,10 +6141,18 @@
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 1,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -7448,6 +7456,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-14T20:08:20.9504148-07:00",
+  "LastModified": "2024-03-15T20:47:01.8701657-07:00",
   "LastModifiedBy": "creep"
 }
