@@ -11,8 +11,19 @@ if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state !=
 // Handle Player Intros
 if (!hasPerformedIntro) 
 {
-	sprite_index = sRussel_Intro;
 	state = eState.INTRO;
+	
+	sprite_index = sRussel_Intro;
+	
+	// TEMPORARY FIX FOR BEV NOT HAVING AN INTRO
+	if (selectedCharacter.Name == "Beverly")
+	{
+		sprite_index = sBeverly_Idle;
+		hasPerformedIntro = true;
+		state = eState.IDLE;
+	}
+	
+	
 	if (image_index > (image_number - 1)) 
 	{
 		sprite_index = CharacterSprites.idle_Sprite;
