@@ -3223,10 +3223,17 @@ else
 if (state == eState.ROUND_WIN)
 {
 	sprite_index = sRussel_Intro;
+	
+	if (selectedCharacter.Name == "Beverly")
+	{
+		sprite_index = sBeverly_SideSpecial_RekkaConnecter;
+		image_index = 3;
+	}
+	
 	image_speed = 1;
 }
 if (state == eState.ROUND_LOSE)
 {
-	sprite_index = sRussel_Hurt;
+	sprite_index = CharacterSprites.hurt_Sprite;
 	image_speed = 1;
 }
