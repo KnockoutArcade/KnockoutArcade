@@ -330,7 +330,7 @@ switch (global.gameMode)
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 				victoryScreen.skipIntro = true;
-				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter);
+				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
 				victoryScreen.state = eVictoryScreenState.OPTIONS;
 			}
 		}
@@ -342,7 +342,7 @@ switch (global.gameMode)
 				audio_stop_sound(testBGM);
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
-				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter);
+				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
 			}
 		}
 		else if (global.p2Rounds >= 2)
@@ -353,7 +353,7 @@ switch (global.gameMode)
 				audio_stop_sound(testBGM);
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
-				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter);
+				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter, global.p2PaletteID);
 			}
 		}
 		

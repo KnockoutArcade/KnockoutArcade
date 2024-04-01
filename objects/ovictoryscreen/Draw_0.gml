@@ -5,7 +5,7 @@ if (!skipIntro)
 {
 	draw_self();
 
-	draw_sprite(p1Portait, global.p1PaletteID, global.camObj.x - 80 + p1CharacterPortait_x, global.camObj.y + p1CharacterPortait_y);
+	draw_sprite(p1Portait, p1PortaitPalette, global.camObj.x - 80 + p1CharacterPortait_x, global.camObj.y + p1CharacterPortait_y);
 
 	if (state != eVictoryScreenState.OPENING_ANIMATION)
 	{

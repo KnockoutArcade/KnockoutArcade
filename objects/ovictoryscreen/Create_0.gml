@@ -23,7 +23,7 @@ portaits_EndMoving = 20; // The frame to stop moving the portaits on
 
 // Player 1
 p1Portait = sFullPortait_Russel; // The sprite to use for P1's portait
-p1PortaitNameID = 0; // Which subimage on sCharacterNames to use
+p1PortaitPalette = 0; // Which palette to use
 // Automatically assign the portait based on character
 
 p1CharacterPortait_x = 160; // The current X position of P1's portait
@@ -77,10 +77,12 @@ function CreateWinnerText(sprite)
 }
 
 // This function will take the character that won and set up all of the sprites, win quotes, etc.
-setupfunction = function EstablishWinningCharacter(characterThatWon, characterThatLost)
+setupfunction = function EstablishWinningCharacter(characterThatWon, characterThatLost, paletteToUse)
 {
 	winningCharacter = characterThatWon;
 	losingCharacter = characterThatLost;
+	
+	p1PortaitPalette = paletteToUse;
 	
 	switch (winningCharacter)
 	{
