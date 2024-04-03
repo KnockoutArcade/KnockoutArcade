@@ -1,5 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+
+// attackProperty - The data for this move's hitbox. Only contains either normal hit data OR counter hit data, but not both.
+// collision_list - The object that is getting hit
+// finalBlowSuper - Whether this attack will trigger the final blow effect
+
+// activateTimeStop - Whether this attack will activate time stop
+
 function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTimeStop = false)
 {
 	if (!isProjectile)
@@ -31,13 +38,25 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.comboScaling += attackProperty.ComboScaling;
 		
 		// Apply Damage
-		if (finalBlowSuper)
+		if (!global.roundOver) // ... but only if the round isn't over
 		{
-			if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+			// If this attack is a final blow (and the opponent isn't being counter hit, counter hits don't have this property)
+			if (finalBlowSuper && !collision_list.owner.inAttackState)
 			{
-				collision_list.owner.hp = 1;
-				// Add the damage to the victim's total damage taken (for singleplayer)
-				collision_list.owner.totalDamageTaken += scaledDamage;
+				// TODO: Make sure the character editor includes FinalBlow in the counter hit data
+				
+				if (collision_list.owner.hp - scaledDamage <= 0 && !attackProperty.FinalBlow)
+				{
+					collision_list.owner.hp = 1;
+					// Add the damage to the victim's total damage taken (for singleplayer)
+					collision_list.owner.totalDamageTaken += scaledDamage;
+				}
+				else
+				{
+					collision_list.owner.hp -= scaledDamage;
+					// Add the damage to the victim's total damage taken (for singleplayer)
+					collision_list.owner.totalDamageTaken += scaledDamage;
+				}
 			}
 			else
 			{
@@ -46,20 +65,33 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.totalDamageTaken += scaledDamage;
 			}
 		}
-		else
-		{
-			collision_list.owner.hp -= scaledDamage;
-			// Add the damage to the victim's total damage taken (for singleplayer)
-			collision_list.owner.totalDamageTaken += scaledDamage;
-		}
 		
 		// Death detection
+		var playerHasDied = false;
+		// If the target's hp hits 0...
 		if (collision_list.owner.hp <= 0)
 		{
 			// Add 1 to the total KOs of this hitbox's owner
 			owner.totalKOs += 1;
+			// Signal that the player has died
+			playerHasDied = true;
 		}
 		
+		// Apply Gravity Scaling
+		if (!collision_list.owner.grounded || attackProperty.Launches)
+		{
+			// If the opponent is in the air, or if this attack launches, increase gravity scaling
+			collision_list.owner.gravityScaling += attackProperty.GravityScaling;
+			
+			// Affect any spirit's gravity scaling
+			if (collision_list.owner.spiritObject != noone) 
+			{
+				collision_list.owner.spiritObject.gravityScaling += attackProperty.GravityScaling;
+			}
+		}
+		
+		
+		// Apply grounded knockback
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
@@ -127,16 +159,18 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.comboDamage += scaledDamage;
 		owner.storedComboDamage = owner.comboDamage;
 		
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
 		if (!owner.timeStopActivated && !owner.installActivated)
 		{
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		}
 		
-		if (!collision_list.owner.grounded)
+		if (!collision_list.owner.grounded) // On Air hit, set knockback velocity
 		{
-			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			// Upwards velocity (affected by gravity scaling)
+			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
+			
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -147,15 +181,18 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.image_xscale;
 			}
 			
+			// Affect any spirit's knockback velocities.
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
-		else if (attackProperty.Launches)
+		else if (attackProperty.Launches) // Handle Launches
 		{
-			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			// vertical knockback (affected by scaling)
+			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
+			
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -169,7 +206,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 				collision_list.owner.spiritObject.grounded = false;
 			}
@@ -180,27 +217,55 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.knockbackVel = 0;
 			}
 		}
-		else 
+		else // Handle grounded hits that don't launch
 		{
-			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone) 
+			if (!playerHasDied) // if the player isn't dead, don't launch them
 			{
-				collision_list.owner.spiritObject.vsp = 0;
+				collision_list.owner.vsp = 0;
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = 0;
+				}
+			}
+			else // if the player has died, launch them a little bit
+			{
+				// This code allows weak hits that end the round to launch the opponent.
+				// We don't currently have a "crumple" or "kneel-fall" animation, so
+				// we are going to launch the opponent a little bit instead.
+				
+				collision_list.owner.vsp = -2;
+				collision_list.owner.grounded = false;
+				collision_list.owner.hsp = 2 * -collision_list.owner.image_xscale; 
+				
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = -2;
+					collision_list.owner.spiritObject.hsp = 2 * -collision_list.owner.spiritObject.image_xscale;
+					collision_list.owner.spiritObject.grounded = false;
+				}
 			}
 		}
-	
+		
+		// Apply pushback
 		if (owner.grounded)
 		{
 			owner.pushbackVel = attackProperty.Pushback;
 		}
+		
+		// Reset held opponent
 		owner.heldOpponent = noone;
-
+		
+		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
+		
+		// Set hitstun
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
+		
+		// Add the group that this hitbox belongs to to the opponent's hitByGroup
 		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle time stop
@@ -241,6 +306,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
 		particle.lifetime = attackProperty.ParticleDuration;
+		
+		// Handle Screen Shake
+		global.camObj.isScreenShaking = true; // Set screen shake to true
+		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
+		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
 	else
 	{
@@ -264,16 +334,37 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.playerOwner.comboScaling += attackProperty.ComboScaling;
 				
 		// Apply Damage
-		collision_list.owner.hp -= scaledDamage;
-		// Add the damage to the victim's total damage
-		collision_list.owner.totalDamageTaken -= scaledDamage;
+		if (!global.roundOver) // ... but only if the round isn't over
+		{
+			collision_list.owner.hp -= scaledDamage;
+			// Add the damage to the victim's total damage
+			collision_list.owner.totalDamageTaken -= scaledDamage;
+		}
 		
 		// Death detection
+		var playerHasDied = false;
+		// If the target's hp hits 0...
 		if (collision_list.owner.hp <= 0)
 		{
 			// Add 1 to the total KOs of this projectile's owner
 			owner.playerOwner.totalKOs += 1;
+			// Signal that the player has died
+			playerHasDied = true;
 		}
+		
+		// Apply Gravity Scaling
+		if (!collision_list.owner.grounded || attackProperty.Launches)
+		{
+			// If the opponent is in the air, or if this attack launches, increase gravity scaling
+			collision_list.owner.gravityScaling += attackProperty.GravityScaling;
+			
+			// Affect any spirit's gravity scaling
+			if (collision_list.owner.spiritObject != noone) 
+			{
+				collision_list.owner.spiritObject.gravityScaling += attackProperty.GravityScaling;
+			}
+		}
+		
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
@@ -335,7 +426,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					
 		if (!collision_list.owner.grounded)
 		{
-			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -348,13 +439,13 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 				collision_list.owner.spiritObject.hsp = attackProperty.AirKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 			}
 		}
 		else if (attackProperty.Launches)
 		{
-			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.vsp = attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 			// Horizontal direction of destructible objects are based on the player hitting them
 			if (collision_list.owner.isDestructibleObject)
 			{
@@ -368,7 +459,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			
 			if (collision_list.owner.spiritObject != noone) 
 			{
-				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier;
+				collision_list.owner.spiritObject.vsp =  attackProperty.LaunchKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
 				collision_list.owner.spiritObject.hsp = attackProperty.LaunchKnockbackHorizontal * collision_list.owner.knockbackMultiplier * -collision_list.owner.spiritObject.image_xscale;
 				collision_list.owner.spiritObject.grounded = false;
 			}
@@ -379,12 +470,32 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				collision_list.owner.knockbackVel = 0;
 			}
 		}
-		else 
+		else // Handle ground hits that don't launch
 		{
-			collision_list.owner.vsp = 0;
-			if (collision_list.owner.spiritObject != noone) 
+			if (!playerHasDied) // if the player isn't dead, don't launch them
 			{
-				collision_list.owner.spiritObject.vsp = 0;
+				collision_list.owner.vsp = 0;
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = 0;
+				}
+			}
+			else // if the player has died, launch them a little bit
+			{
+				// This code allows weak hits that end the round to launch the opponent.
+				// We don't currently have a "crumple" or "kneel-fall" animation, so
+				// we are going to launch the opponent a little bit instead.
+				
+				collision_list.owner.vsp = -2;
+				collision_list.owner.grounded = false;
+				collision_list.owner.hsp = 2 * -collision_list.owner.image_xscale; 
+				
+				if (collision_list.owner.spiritObject != noone) 
+				{
+					collision_list.owner.spiritObject.vsp = -2;
+					collision_list.owner.spiritObject.hsp = 2 * -collision_list.owner.spiritObject.image_xscale;
+					collision_list.owner.spiritObject.grounded = false;
+				}
 			}
 		}
 
@@ -406,10 +517,31 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
 		}
 		
+		//Draw hit effect
+		var particle = noone;
+		if (spirit != noone)
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * spirit.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(spirit.image_xscale);
+		}
+		else
+		{
+			var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * owner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+			particle.image_xscale = sign(owner.image_xscale);
+		}
+		
+		particle.sprite_index = asset_get_index(attackProperty.ParticleEffect);
+		particle.lifetime = attackProperty.ParticleDuration;
+		
 		// Play sound effect
 		if (attackProperty.HitSound != "")
 		{
 			audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
 		}
+		
+		// Handle Screen Shake
+		global.camObj.isScreenShaking = true; // Set screen shake to true
+		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
+		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
 }

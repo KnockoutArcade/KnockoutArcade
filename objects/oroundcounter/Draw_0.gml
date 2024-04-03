@@ -4,6 +4,7 @@
 if (!global.togglePresentationMode)
 {
 	x = (global.camObj.x-80) + ui_xOffset;
+	y = global.camObj.y + ui_yOffset;
 
 	draw_self();
 }

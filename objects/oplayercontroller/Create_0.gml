@@ -324,6 +324,15 @@ cancelCombo = false;
 comboDamage = 0; // Records how much damage a combo did
 storedComboDamage = 0; // Used as a debug variable to display combo damage
 
+// Gravity Scaling Related variables
+/* 
+	Gravity scaling is a mechanic intended to prevent infinites. As a player gets hit in the air
+    repeatedly, their gravityScaling value increases, which influences how high the next
+    hit will send them. The higher the gravityScaling value, the lower each hit will launch
+	until eventually they hit the ground, causing this value to reset.
+*/ 
+gravityScaling = 0; // How high this player's gravity scaling value is
+
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
@@ -409,3 +418,18 @@ controllerID = noone; // The ID for the controller object that controls this.
 
 // Stay on Screen
 shouldStayOnScreen = true; // Whether this object will force itself to stay on screen or not
+
+// Landing input buffer
+// If the player is in an aerial state and isn't taking damage, then if they press an attack button
+// within 5 frames of landing, that button will come out on the first possible frame when landing.
+landingBufferAttack = 0; // The attack to be buffered once landing
+landingBufferTimer = 0; // Timer to keep track of the buffer window
+landingBufferWindow = 5; // How long the player has to buffer an attack while landing.
+landingBufferLockout = 20; // How long until the player can attempt to buffer a landing attack again.
+
+// Round Win Vars
+isInStableState = false; // Whether the player is in a "stable" state or not
+// When a round ends, the game slows down to emphasize the last hit.
+// After the slowdown, the game will wait until each player enters a "stable"
+// state before playing the victory animation. A "stable" state is one where
+// the player is not moving at all. The stable states are: Idle, KnockedDown

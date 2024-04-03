@@ -232,7 +232,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 5,
@@ -240,6 +240,14 @@
           "AttackWidth": 22,
           "AttackHeight": 16,
           "WidthOffset": -1,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
           "HeightOffset": 0
         }
       ],
@@ -445,7 +453,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 12,
@@ -453,6 +461,14 @@
           "AttackWidth": 22,
           "AttackHeight": 16,
           "WidthOffset": -1,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
           "HeightOffset": 0
         }
       ],
@@ -600,12 +616,12 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
+          "GravityScaling": 2.0,
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 2,
+          "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -658,8 +674,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -784,12 +809,12 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
+          "GravityScaling": 1.0,
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
+          "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -842,8 +867,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -948,7 +982,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": 0.2,
           "LaunchKnockbackHorizontal": 2.0,
-          "GravityScaling": 0.0,
+          "GravityScaling": 3.0,
           "Pushback": 0.0,
           "ParticleXOffset": 6,
           "ParticleYOffset": 2,
@@ -1006,8 +1040,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 90,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1091,8 +1134,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1201,8 +1253,8 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 0.0,
+          "GravityScaling": 2.0,
+          "Pushback": 1.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
@@ -1259,8 +1311,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1365,7 +1426,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": 1.0,
           "LaunchKnockbackHorizontal": 3.0,
-          "GravityScaling": 0.5,
+          "GravityScaling": 4.0,
           "Pushback": 0.5,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -1423,8 +1484,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1521,12 +1591,12 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
+          "GravityScaling": 4.0,
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
+          "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -1579,8 +1649,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -1689,7 +1768,7 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
+          "GravityScaling": 4.0,
           "Pushback": 2.0000002,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
@@ -1747,7 +1826,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 2,
+      "NumberOfHurtboxes": 3,
       "HurtboxData": [
         {
           "Start": 4,
@@ -1764,6 +1843,14 @@
           "AttackHeight": 13,
           "WidthOffset": 6,
           "HeightOffset": 8
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -1903,7 +1990,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": -0.25,
-          "GravityScaling": 0.0,
+          "GravityScaling": 4.0,
           "Pushback": 3.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -1961,7 +2048,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 9,
@@ -1970,6 +2057,14 @@
           "AttackHeight": 28,
           "WidthOffset": 4,
           "HeightOffset": 16
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -2073,7 +2168,7 @@
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
+          "ParticleDuration": 20,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -2126,7 +2221,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 4,
@@ -2134,6 +2229,14 @@
           "AttackWidth": 11,
           "AttackHeight": 16,
           "WidthOffset": 8,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
           "HeightOffset": 0
         }
       ],
@@ -2299,7 +2402,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 8,
@@ -2308,6 +2411,14 @@
           "AttackHeight": 16,
           "WidthOffset": 6,
           "HeightOffset": 8
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -2472,7 +2583,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 11,
@@ -2481,6 +2592,14 @@
           "AttackHeight": 15,
           "WidthOffset": 7,
           "HeightOffset": 9
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -2599,7 +2718,7 @@
           "Launches": true,
           "LaunchKnockbackVertical": -5.0,
           "LaunchKnockbackHorizontal": 0.5,
-          "GravityScaling": 1.0,
+          "GravityScaling": 5.0,
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 10,
@@ -2657,7 +2776,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 15,
@@ -2666,6 +2785,14 @@
           "AttackHeight": 35,
           "WidthOffset": 2,
           "HeightOffset": 24
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -2861,8 +2988,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -3062,7 +3198,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 17,
@@ -3070,6 +3206,14 @@
           "AttackWidth": 36,
           "AttackHeight": 16,
           "WidthOffset": 0,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -10,
           "HeightOffset": 0
         }
       ],
@@ -3250,8 +3394,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -3382,8 +3535,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -3509,8 +3671,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
@@ -3613,8 +3784,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
@@ -3796,7 +3976,7 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 55,
@@ -3805,6 +3985,14 @@
           "AttackHeight": 35,
           "WidthOffset": 2,
           "HeightOffset": 24
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -8,
+          "HeightOffset": 0
         }
       ],
       "NumberOfProjectiles": 0,
@@ -3889,6 +4077,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2023-08-16T19:33:44.0611276-07:00",
-  "LastModifiedBy": "iansb"
+  "LastModified": "2024-02-19T23:23:26.0432779-07:00",
+  "LastModifiedBy": "creep"
 }

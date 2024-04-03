@@ -72,3 +72,6 @@ file_find_close();
 
 // This is to ensure that the code for the Json object runs before the code for the global var
 instance_create_layer(0, 0, "StartText", oGlobalVars);
+
+// Print debug info
+//show_debug_message(global.characterData[4].StandLight);

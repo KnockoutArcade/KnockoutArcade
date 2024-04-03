@@ -2,8 +2,9 @@
 // You can write your code in this editor
 var pressStartID = layer_background_get_id("PressStart");
 
-if (state == 0)
+if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
+	// Hide specific background layers
 	layer_background_visible(pressStartID, 0);
 
     if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow)
@@ -591,7 +592,7 @@ if (state == 0)
         }
     }
 }
-else if (state == 1)
+else if (state == eCharacterSelectState.STAGE_SELECT || state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 {
 	
 	draw_sprite(sReadyToFight_strip5, RTF_currentFrame, 0, 0);
@@ -629,7 +630,7 @@ else if (state == 1)
 		draw_sprite(sStageSelect_StageNames_strip5, 3, 53, 58);
 	}
 }
-else if (state == 2)
+else if (state == eCharacterSelectState.MUSIC_SELECT)
 {
 	draw_sprite(sStageSelect_Portraits1, 1, 0, 0);
 	

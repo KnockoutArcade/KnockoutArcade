@@ -10,27 +10,42 @@ function PressAttackButton(attack)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
 					SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
 					SetSpiritMoveData(false, selectedCharacter.StandLight3, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 					state = eState.JUMPING_LIGHT_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (verticalMoveDir = -1)
 				{
 					state = eState.CROUCHING_LIGHT_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.CrouchingLight, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.StandLight, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else
 				{
@@ -44,17 +59,26 @@ function PressAttackButton(attack)
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.JumpingMedium, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_MEDIUM_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.CrouchingMedium, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_MEDIUM_ATTACK;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.StandMedium, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else
 				{
@@ -68,17 +92,26 @@ function PressAttackButton(attack)
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.JumpingHeavy, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_HEAVY_ATTACK;
 					SetSpiritMoveData(false, selectedCharacter.CrouchingHeavy, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_HEAVY_ATTACK;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.StandHeavy, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else
 				{
@@ -94,6 +127,9 @@ function PressAttackButton(attack)
 					sprite_index = sRussel_Grab;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.Grab, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 			break;
 			
@@ -103,12 +139,18 @@ function PressAttackButton(attack)
 					state = eState.NEUTRAL_SPECIAL;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.NeutralSpecial, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0)
 				{
 					state = eState.SIDE_SPECIAL;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.SideSpecial, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (verticalMoveDir == 1)
 				{
@@ -116,6 +158,9 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.UpSpecial, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
 				{
@@ -123,6 +168,9 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 			break;
 			
@@ -133,6 +181,9 @@ function PressAttackButton(attack)
 					state = eState.SUPER;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.Super, attack);
+					
+					// reset anim timer
+					animTimer = 0;
 				}
 			break;
 		}
@@ -188,6 +239,9 @@ function PressAttackButton(attack)
 			{
 				state = eState.COMMAND_NORMAL_1;
 				SetSpiritMoveData(false, selectedCharacter.CommandNormal1, attack);
+					
+				// reset anim timer
+				animTimer = 0;
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal2"))
@@ -196,6 +250,9 @@ function PressAttackButton(attack)
 			{
 				state = eState.COMMAND_NORMAL_2;
 				SetSpiritMoveData(false, selectedCharacter.CommandNormal2, attack);
+					
+				// reset anim timer
+				animTimer = 0;
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal3"))
@@ -204,6 +261,9 @@ function PressAttackButton(attack)
 			{
 				state = eState.COMMAND_NORMAL_3;
 				SetSpiritMoveData(false, selectedCharacter.CommandNormal3, attack);
+					
+				// reset anim timer
+				animTimer = 0;
 			}
 		}
 		

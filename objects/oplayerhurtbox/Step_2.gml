@@ -1,6 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+visible = global.toggleHitboxVisibility;
+
+if (primary && owner.inAttackState && owner.animTimer > 0)
+{
+	// Hide if the owner is in an attack state
+	image_xscale = 0;
+	image_yscale = 0;
+
+}
+
 if (primary && owner.state != eState.HITSTOP)
 {
 	if (spirit == noone)
@@ -21,6 +31,7 @@ if (primary && owner.state != eState.HITSTOP)
 		y = spirit.y;
 	}
 } 
+
 if (!primary)
 {
 	if (spirit == noone)
@@ -34,7 +45,18 @@ if (!primary)
 		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
 	}
 	
-	if (!owner.inAttackState)
+	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP && owner.state != eState.SCREEN_FREEZE)
+	{
+		lifetime--;
+	}
+	
+	// If the owner is ever not in an attack state and also isn't frozen, destroy this.
+	if (!owner.inAttackState && owner.state != eState.SCREEN_FREEZE)
+	{
+		instance_destroy();
+	}
+	
+	if (lifetime < 0)
 	{
 		instance_destroy();
 	}

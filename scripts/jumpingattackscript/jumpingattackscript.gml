@@ -71,6 +71,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.JUMPING;
+		jumpHsp = hsp;
 		frameAdvantage = true;
 		isThrowable = true;
 		isEXFlash = false;

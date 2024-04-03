@@ -4,6 +4,7 @@
 owner = noone;
 
 ui_xOffset = 0;
+ui_yOffset = 0;
 
 // Timer Variables
 levelTimerMilliseconds = 0; // Time in milliseconds that the player has been in the level
