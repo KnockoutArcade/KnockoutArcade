@@ -79,6 +79,7 @@
     {"id":{"name":"sStageSelect_MusicOption_strip4","path":"sprites/sStageSelect_MusicOption_strip4/sStageSelect_MusicOption_strip4.yy",},"order":5,},
     {"id":{"name":"sPauseMenu_AreYouSure","path":"sprites/sPauseMenu_AreYouSure/sPauseMenu_AreYouSure.yy",},"order":6,},
     {"id":{"name":"PaletteSetup","path":"scripts/PaletteSetup/PaletteSetup.yy",},"order":7,},
+    {"id":{"name":"sRussel_TechRoll","path":"sprites/sRussel_TechRoll/sRussel_TechRoll.yy",},"order":39,},
     {"id":{"name":"oSmoothCriminal","path":"objects/oSmoothCriminal/oSmoothCriminal.yy",},"order":4,},
     {"id":{"name":"sJay_SC_JumpingLight_MOCKUP_strip3","path":"sprites/sJay_SC_JumpingLight_MOCKUP_strip3/sJay_SC_JumpingLight_MOCKUP_strip3.yy",},"order":16,},
     {"id":{"name":"sOptionIcons","path":"sprites/sOptionIcons/sOptionIcons.yy",},"order":0,},
