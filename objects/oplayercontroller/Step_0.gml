@@ -2301,6 +2301,44 @@ switch state
 	}
 	break;
 	
+	case eState.TECH_ROLL : 
+	{
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
+		cancelable = false;
+		grounded = true;
+		invincible = true;
+		canTurnAround = false;
+		inAttackState = false;
+		
+		cancelCombo = true;
+		
+		if (image_index > (image_number - 1))
+		{
+			image_speed = 0;
+		}
+		else 
+		{
+			image_speed = 1;
+		}
+		
+		if (animTimer <= 15)
+		{
+			hsp = -3 * image_xscale;
+		}
+		
+		if (animTimer > 20)
+		{
+			state = eState.IDLE;
+			image_index = 0;
+			image_speed = 1;
+			animTimer = 0;
+		}
+	}
+	break;
 	
 	case eState.GETUP : 
 	{
@@ -3078,8 +3116,11 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		}
 		if (state == eState.LAUNCHED)
 		{
-			state = eState.KNOCKED_DOWN;
-			sprite_index = CharacterSprites.knockdown_Sprite;
+			//state = eState.KNOCKED_DOWN;
+			//sprite_index = CharacterSprites.knockdown_Sprite;
+			state = eState.TECH_ROLL;
+			sprite_index = sRussel_TechRoll;
+			
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
