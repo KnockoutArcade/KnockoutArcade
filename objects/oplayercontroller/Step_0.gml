@@ -3121,6 +3121,11 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			state = eState.TECH_ROLL;
 			sprite_index = sRussel_TechRoll;
 			
+			if (movedir != 0)
+			{
+				image_xscale = -movedir;
+			}
+			
 			image_index = 0;
 			hsp = 0;
 			image_speed = 1;
