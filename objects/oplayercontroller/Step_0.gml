@@ -2330,7 +2330,7 @@ switch state
 			hsp = -3 * image_xscale;
 		}
 		
-		if (animTimer > 20)
+		if (animTimer > 24)
 		{
 			state = eState.IDLE;
 			image_index = 0;
@@ -2348,6 +2348,7 @@ switch state
 		}
 		
 		cancelable = false;
+		cancelCombo = true;
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
@@ -2395,6 +2396,66 @@ switch state
 			}
 		}
 		
+	}
+	break;
+	
+	case eState.QUICK_GETUP : 
+	{
+		sprite_index = sRussel_QuickGetup;
+		
+		if (spiritObject != noone)
+		{
+			spiritObject.state = state;
+		}
+		
+		cancelable = false;
+		cancelCombo = true;
+		grounded = true;
+		invincible = true;
+		canTurnAround = false;
+		inAttackState = false;
+
+		image_speed = (image_index > image_number - 1) ? 0 : 1;
+		
+		if (animTimer > 20)
+		{
+			// Turn the player arround immediately
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}	
+			
+			state = eState.IDLE;
+			invincible = false;
+			
+			if (movedir == -image_xscale || toggleIdleBlock) 
+			{
+				canBlock = true;
+			}
+
+			if (verticalMoveDir == 1) 
+			{
+				state = eState.JUMPSQUAT;
+			}
+			
+			if (movedir == -image_xscale && runButton)
+			{
+				canBlock = false;
+				state = eState.RUN_BACKWARD;
+				sprite_index = CharacterSprites.runBackward_Sprite;
+				image_index = 0;
+				
+				invincible = true;
+				animTimer = 0;
+			}
+		}
 	}
 	break;
 	
@@ -3118,11 +3179,15 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		{
 			//state = eState.KNOCKED_DOWN;
 			//sprite_index = CharacterSprites.knockdown_Sprite;
-			state = eState.TECH_ROLL;
-			sprite_index = sRussel_TechRoll;
-			
-			if (movedir != 0)
+			if (movedir == 0)
 			{
+				state = eState.QUICK_GETUP;
+				sprite_index = sRussel_QuickGetup;
+			}
+			else
+			{
+				state = eState.TECH_ROLL;
+				sprite_index = sRussel_TechRoll;
 				image_xscale = -movedir;
 			}
 			
