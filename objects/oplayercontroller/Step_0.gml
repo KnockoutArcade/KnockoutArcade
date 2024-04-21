@@ -2392,8 +2392,9 @@ switch state
 				image_index = 0;
 				
 				invincible = true;
-				animTimer = 0;
 			}
+			
+			animTimer = 0;
 		}
 		
 	}
@@ -2453,8 +2454,9 @@ switch state
 				image_index = 0;
 				
 				invincible = true;
-				animTimer = 0;
 			}
+			
+			animTimer = 0;
 		}
 	}
 	break;
