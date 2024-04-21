@@ -62,7 +62,7 @@ function GetPlayerInputs()
 		}
 		if (GamepadCodeIsAxis(global.player1Controls.Controller.buttonUp))
 		{
-			global.p1ButtonUp = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonUp) < -.4 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUpDPAD);
+			global.p1ButtonUp = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonUp) < -.7 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUpDPAD);
 		}
 		else
 		{
@@ -70,7 +70,7 @@ function GetPlayerInputs()
 		}
 		if (GamepadCodeIsAxis(global.player1Controls.Controller.buttonDown))
 		{
-			global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonDown) > .25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDownDPAD)) * -1;
+			global.p1ButtonDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonDown) > .7 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDownDPAD)) * -1;
 		}
 		else
 		{
@@ -87,8 +87,8 @@ function GetPlayerInputs()
 		// Menu Controls
 		global.p1ButtonMenuLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuLeft) < -.25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuLeftDPAD)) * -1;
 		global.p1ButtonMenuRight = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuRight) > .25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuRightDPAD);
-		global.p1ButtonMenuUp = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUp) < -.4 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUpDPAD);
-		global.p1ButtonMenuDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDown) > .25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDownDPAD)) * -1;
+		global.p1ButtonMenuUp = gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUp) < -.7 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuUpDPAD);
+		global.p1ButtonMenuDown = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDown) > .7 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuDownDPAD)) * -1;
 		
 		global.p1ButtonMenuConfirm = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuConfirm);
 		global.p1ButtonMenuConfirm_Hold = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuConfirm);
@@ -166,7 +166,7 @@ function GetPlayerInputs()
 		}
 		if (GamepadCodeIsAxis(global.player2Controls.Controller.buttonUp))
 		{
-			global.p2ButtonUp = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonUp) < -.4 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUpDPAD);
+			global.p2ButtonUp = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonUp) < -.7 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUpDPAD);
 		}
 		else
 		{
@@ -174,7 +174,7 @@ function GetPlayerInputs()
 		}
 		if (GamepadCodeIsAxis(global.player2Controls.Controller.buttonDown))
 		{
-			global.p2ButtonDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonDown) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDownDPAD)) * -1;
+			global.p2ButtonDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonDown) > .7 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDownDPAD)) * -1;
 		}
 		else
 		{
@@ -191,8 +191,8 @@ function GetPlayerInputs()
 		// Menu Controls
 		global.p2ButtonMenuLeft = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuLeft) < -.25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuLeftDPAD)) * -1;
 		global.p2ButtonMenuRight = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRight) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRightDPAD);
-		global.p2ButtonMenuUp = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUp) < -.4 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUpDPAD);
-		global.p2ButtonMenuDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDown) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDownDPAD)) * -1;
+		global.p2ButtonMenuUp = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUp) < -.7 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuUpDPAD);
+		global.p2ButtonMenuDown = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDown) > .7 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuDownDPAD)) * -1;
 		
 		global.p2ButtonMenuConfirm = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuConfirm);
 		global.p2ButtonMenuConfirm_Hold = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuConfirm);
