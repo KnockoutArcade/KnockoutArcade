@@ -2337,6 +2337,11 @@ switch state
 			hsp = -3 * image_xscale;
 		}
 		
+		if (animTimer > 20)
+		{
+			invincible = false;
+		}
+		
 		if (animTimer > 24)
 		{
 			state = eState.IDLE;
@@ -2384,11 +2389,6 @@ switch state
 			if (movedir == -image_xscale || toggleIdleBlock) 
 			{
 				canBlock = true;
-			}
-
-			if (verticalMoveDir == 1) 
-			{
-				state = eState.JUMPSQUAT;
 			}
 			
 			if (movedir == -image_xscale && runButton)
@@ -2446,11 +2446,6 @@ switch state
 			if (movedir == -image_xscale || toggleIdleBlock) 
 			{
 				canBlock = true;
-			}
-
-			if (verticalMoveDir == 1) 
-			{
-				state = eState.JUMPSQUAT;
 			}
 			
 			if (movedir == -image_xscale && runButton)
