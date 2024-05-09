@@ -263,6 +263,8 @@ if ((((runButton || special) && pressSpecialButtonTimer <= 4 && holdRunButtonTim
 	&& state != eState.LAUNCHED
 	&& state != eState.KNOCKED_DOWN
 	&& state != eState.GETUP
+	&& state != eState.QUICK_GETUP
+	&& state != eState.TECH_ROLL
 	&& state != eState.BLOCKING
 	&& hitstun <= 0 && blockstun <= 0 && !FAvictim // and when the player gets hit...
 	&& superMeter >= 50 // and if the player doesn't have enough meter...
