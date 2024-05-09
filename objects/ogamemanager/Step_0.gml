@@ -94,6 +94,7 @@ switch (global.gameMode)
 				{
 					// set state
 					p1.state = eState.ROUND_WIN;
+					p1.image_index = 0;
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
@@ -106,6 +107,7 @@ switch (global.gameMode)
 				{
 					// set state
 					p2.state = eState.ROUND_WIN;
+					p2.image_index = 0;
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
@@ -237,7 +239,9 @@ switch (global.gameMode)
 				{
 					// set state
 					p1.state = eState.ROUND_WIN;
+					p1.image_index = 0;
 					p2.state = eState.ROUND_LOSE;
+					p2.image_index = 0;
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
@@ -250,7 +254,9 @@ switch (global.gameMode)
 				{
 					// set state
 					p2.state = eState.ROUND_WIN;
+					p2.image_index = 0;
 					p1.state = eState.ROUND_LOSE;
+					p1.image_index = 0;
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
@@ -259,7 +265,9 @@ switch (global.gameMode)
 				{
 					// Set both players to lose
 					p1.state = eState.ROUND_LOSE;
+					p1.image_index = 0;
 					p2.state = eState.ROUND_LOSE;
+					p2.image_index = 0;
 					
 					// Set the time when a player entered their victory animation
 					victoryAnimationTime = gameHaltTimer;
