@@ -141,6 +141,11 @@ if (gravityScaling < 0)
 {
 	gravityScaling = 0;
 }
+// If the player is currently dead, force hard knockdowns
+if (hp <= 0)
+{
+	isExperiencingHardKnockdown = true;
+}
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 15;
@@ -3142,6 +3147,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	}
 }
 
+// Collisions with Floors
 if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
 	
@@ -3181,18 +3187,25 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		}
 		if (state == eState.LAUNCHED)
 		{
-			//state = eState.KNOCKED_DOWN;
-			//sprite_index = CharacterSprites.knockdown_Sprite;
-			if (movedir == 0)
+			// Handle Hard Knockdown
+			if (isExperiencingHardKnockdown)
 			{
-				state = eState.QUICK_GETUP;
-				sprite_index = sRussel_QuickGetup;
+				state = eState.KNOCKED_DOWN;
+				sprite_index = CharacterSprites.knockdown_Sprite;
 			}
-			else
+			else // Handle soft knockdown
 			{
-				state = eState.TECH_ROLL;
-				sprite_index = sRussel_TechRoll;
-				image_xscale = -movedir;
+				if (movedir == 0)
+				{
+					state = eState.QUICK_GETUP;
+					sprite_index = sRussel_QuickGetup;
+				}
+				else
+				{
+					state = eState.TECH_ROLL;
+					sprite_index = sRussel_TechRoll;
+					image_xscale = -movedir;
+				}
 			}
 			
 			image_index = 0;
