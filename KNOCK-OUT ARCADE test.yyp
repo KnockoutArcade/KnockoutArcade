@@ -353,6 +353,7 @@
     {"id":{"name":"oSemiSolid","path":"objects/oSemiSolid/oSemiSolid.yy",},"order":5,},
     {"id":{"name":"sGunther_SideSpecialWalkCycle_mockup_strip4","path":"sprites/sGunther_SideSpecialWalkCycle_mockup_strip4/sGunther_SideSpecialWalkCycle_mockup_strip4.yy",},"order":16,},
     {"id":{"name":"rRusselStage","path":"rooms/rRusselStage/rRusselStage.yy",},"order":1,},
+    {"id":{"name":"HandleKnockdownState","path":"scripts/HandleKnockdownState/HandleKnockdownState.yy",},"order":0,},
     {"id":{"name":"sJay_StandLight1_Mockup_strip4","path":"sprites/sJay_StandLight1_Mockup_strip4/sJay_StandLight1_Mockup_strip4.yy",},"order":12,},
     {"id":{"name":"oHangingGirder","path":"objects/oHangingGirder/oHangingGirder.yy",},"order":5,},
     {"id":{"name":"FindAttackState","path":"scripts/FindAttackState/FindAttackState.yy",},"order":19,},
@@ -657,6 +658,8 @@
     {"folderPath":"folders/Sprites/Victory Screen Assets.yy","order":26,"resourceVersion":"1.0","name":"Victory Screen Assets","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Victory Screen Assets/Character Wins!.yy","order":1,"resourceVersion":"1.0","name":"Character Wins!","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Victory Screen Assets/Options.yy","order":3,"resourceVersion":"1.0","name":"Options","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/PlayerScripts.yy","order":43,"resourceVersion":"1.0","name":"PlayerScripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/PlayerScripts/NonAttack.yy","order":1,"resourceVersion":"1.0","name":"NonAttack","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

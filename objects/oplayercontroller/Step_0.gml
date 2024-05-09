@@ -3112,12 +3112,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 		}
 		if (state == eState.LAUNCHED)
 		{
-			state = eState.KNOCKED_DOWN;
-			sprite_index = CharacterSprites.knockdown_Sprite;
-			image_index = 0;
-			hsp = 0;
-			image_speed = 1;
-			gravityScaling = 0;
+			HandleKnockdownState(isExperiencingHardKnockdown);
 		}
 	}
 }
@@ -3150,7 +3145,6 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 // Collisions with Floors
 if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
-	
 	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
@@ -3187,43 +3181,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		}
 		if (state == eState.LAUNCHED)
 		{
-			// Handle Hard Knockdown
-			if (isExperiencingHardKnockdown)
-			{
-				state = eState.KNOCKED_DOWN;
-				sprite_index = CharacterSprites.knockdown_Sprite;
-			}
-			else // Handle soft knockdown
-			{
-				if (movedir == 0)
-				{
-					state = eState.QUICK_GETUP;
-					sprite_index = sRussel_QuickGetup;
-				}
-				else
-				{
-					state = eState.TECH_ROLL;
-					sprite_index = sRussel_TechRoll;
-					image_xscale = -movedir;
-				}
-			}
-			
-			image_index = 0;
-			hsp = 0;
-			image_speed = 1;
-			gravityScaling = 0;
-			
-			// Handle spawning impact particle
-			// Spawn a landing particle once the player hits the ground
-			var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
-			with (landingParticle) 
-			{
-				sprite_index = sLandingParticle;
-				image_index = 0;
-				image_xscale = other.image_xscale;
-				lifetime = 20;
-				depth -= 1;
-			}
+			HandleKnockdownState(isExperiencingHardKnockdown);
 		}
 	}
 }
@@ -3280,24 +3238,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 				}
 				if (state == eState.LAUNCHED)
 				{
-					state = eState.KNOCKED_DOWN;
-					sprite_index = CharacterSprites.knockdown_Sprite;
-					image_index = 0;
-					hsp = 0;
-					image_speed = 1;
-					gravityScaling = 0;
-					
-					// Handle spawning impact particle
-					// Spawn a landing particle once the player hits the ground
-					var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
-					with (landingParticle) 
-					{
-						sprite_index = sLandingParticle;
-						image_index = 0;
-						image_xscale = other.image_xscale;
-						lifetime = 20;
-						depth -= 1;
-					}
+					HandleKnockdownState(isExperiencingHardKnockdown);
 				}
 			}
 		}
