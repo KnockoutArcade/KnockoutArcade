@@ -374,6 +374,7 @@
     {"id":{"name":"sRussel_Jumpsquat","path":"sprites/sRussel_Jumpsquat/sRussel_Jumpsquat.yy",},"order":8,},
     {"id":{"name":"oTestPlayer","path":"objects/oTestPlayer/oTestPlayer.yy",},"order":4,},
     {"id":{"name":"sJay_crouch_mockup_strip1","path":"sprites/sJay_crouch_mockup_strip1/sJay_crouch_mockup_strip1.yy",},"order":21,},
+    {"id":{"name":"sRussel_Victory","path":"sprites/sRussel_Victory/sRussel_Victory.yy",},"order":41,},
     {"id":{"name":"sGunther_jumpingMedium_mockup_strip6","path":"sprites/sGunther_jumpingMedium_mockup_strip6/sGunther_jumpingMedium_mockup_strip6.yy",},"order":1,},
     {"id":{"name":"oGunther_NSpecial_Bathtub","path":"objects/oGunther_NSpecial_Bathtub/oGunther_NSpecial_Bathtub.yy",},"order":6,},
     {"id":{"name":"sRussel_Crouch","path":"sprites/sRussel_Crouch/sRussel_Crouch.yy",},"order":10,},

@@ -3286,7 +3286,7 @@ else
 // Play Victory animation
 if (state == eState.ROUND_WIN)
 {
-	sprite_index = sRussel_Intro;
+	sprite_index = sRussel_Victory;
 	
 	if (selectedCharacter.Name == "Beverly")
 	{
