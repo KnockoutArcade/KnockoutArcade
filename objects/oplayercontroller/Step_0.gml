@@ -148,7 +148,7 @@ if (hp <= 0)
 }
 
 // Initialize Hurtbox Values
-hurtbox.image_xscale = 15;
+hurtbox.image_xscale = 16;
 hurtbox.image_yscale = 32;
 hurtboxXOffset = -8;
 
@@ -578,7 +578,7 @@ if (state == eState.CROUCHING)
 	invincible = false;
 	inAttackState = false;
 	
-	hurtbox.image_xscale = 15;
+	hurtbox.image_xscale = 16;
 	hurtbox.image_yscale = 27;
 	
 	if (movedir == 0 && verticalMoveDir != -1) 
@@ -1949,7 +1949,7 @@ switch state
 
 	case eState.GRAB : 
 	{
-		hurtbox.image_xscale = 15;
+		hurtbox.image_xscale = 16;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
 		
@@ -2018,7 +2018,7 @@ switch state
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		
-		hurtbox.image_xscale = 15;
+		hurtbox.image_xscale = 16;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
 		
@@ -3036,7 +3036,8 @@ if (opponent != noone && !wallHit)
 		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
 		{
 			// Move the players away from each other
-			if x > opponent.x {
+			if (x > opponent.x)
+			{
 				environmentDisplacement += .5;
 				opponent.x -= .5;
 			}

@@ -260,12 +260,12 @@ opponent = noone;
 target = noone;
 
 // Hurtbox Variables
-hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
+hurtbox = instance_create_layer(x - 9, y, "hitboxes", oPlayerHurtbox);
 with (hurtbox) 
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 15;
+	image_xscale = 16;
 	image_yscale = 32;
 }
 hurtboxXOffset = -9;

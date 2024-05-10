@@ -55,7 +55,13 @@ for (var i = 0; i < 100; i++;)
 }
 
 // Draw Debug Origin
-if (global.toggleHitboxVisibility) draw_circle(x,y, .5, true)
+if (global.toggleHitboxVisibility) 
+{
+	draw_circle(x,y, .5, true);
+	
+	// Draw the collision box
+	draw_rectangle_color(bbox_left, bbox_bottom, bbox_right, bbox_top, c_green, c_green, c_green, c_green, true);
+}
 
 if (isEXFlash)
 {
