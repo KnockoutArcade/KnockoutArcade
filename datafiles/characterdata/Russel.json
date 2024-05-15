@@ -7581,16 +7581,16 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_SideSpecial",
+      "SpriteName": "sRussel_Super",
       "Duration": 108,
-      "NumberOfFrames": 20,
+      "NumberOfFrames": 18,
       "FrameData": [
         {
           "Length": 1,
           "ImageIndex": 0
         },
         {
-          "Length": 15,
+          "Length": 30,
           "ImageIndex": 1
         },
         {
@@ -7598,72 +7598,64 @@
           "ImageIndex": 2
         },
         {
-          "Length": 38,
-          "ImageIndex": 1
+          "Length": 37,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 39,
+          "ImageIndex": 4
         },
         {
           "Length": 41,
           "ImageIndex": 2
         },
         {
-          "Length": 44,
-          "ImageIndex": 1
+          "Length": 43,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 45,
+          "ImageIndex": 4
         },
         {
           "Length": 47,
           "ImageIndex": 2
         },
         {
-          "Length": 50,
-          "ImageIndex": 1
+          "Length": 49,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 51,
+          "ImageIndex": 4
         },
         {
           "Length": 53,
           "ImageIndex": 2
         },
         {
-          "Length": 56,
-          "ImageIndex": 1
+          "Length": 55,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 57,
+          "ImageIndex": 4
         },
         {
           "Length": 59,
           "ImageIndex": 2
         },
         {
-          "Length": 62,
+          "Length": 63,
           "ImageIndex": 3
         },
         {
-          "Length": 65,
-          "ImageIndex": 8
+          "Length": 66,
+          "ImageIndex": 4
         },
         {
           "Length": 68,
-          "ImageIndex": 9
-        },
-        {
-          "Length": 72,
-          "ImageIndex": 10
-        },
-        {
-          "Length": 76,
-          "ImageIndex": 11
-        },
-        {
-          "Length": 80,
-          "ImageIndex": 12
-        },
-        {
-          "Length": 92,
-          "ImageIndex": 13
-        },
-        {
-          "Length": 96,
-          "ImageIndex": 14
-        },
-        {
-          "Length": 100,
-          "ImageIndex": 15
+          "ImageIndex": 2
         }
       ],
       "NumberOfHitboxes": 2,
@@ -7679,7 +7671,7 @@
           "Damage": 5,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
-          "AttackHitStop": 10,
+          "AttackHitStop": 5,
           "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 4.0,
@@ -7966,6 +7958,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-15T12:12:36.9145942-07:00",
+  "LastModified": "2024-05-15T16:24:44.5227415-07:00",
   "LastModifiedBy": "creep"
 }

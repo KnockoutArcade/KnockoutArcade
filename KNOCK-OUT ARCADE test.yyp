@@ -247,6 +247,7 @@
     {"id":{"name":"sResults_Cursor_strip2","path":"sprites/sResults_Cursor_strip2/sResults_Cursor_strip2.yy",},"order":8,},
     {"id":{"name":"sReadyToFight_strip5","path":"sprites/sReadyToFight_strip5/sReadyToFight_strip5.yy",},"order":9,},
     {"id":{"name":"sFullPortait_Russel","path":"sprites/sFullPortait_Russel/sFullPortait_Russel.yy",},"order":0,},
+    {"id":{"name":"sRussel_Super","path":"sprites/sRussel_Super/sRussel_Super.yy",},"order":43,},
     {"id":{"name":"testBGM","path":"sounds/testBGM/testBGM.yy",},"order":3,},
     {"id":{"name":"sCollectionSparkle","path":"sprites/sCollectionSparkle/sCollectionSparkle.yy",},"order":4,},
     {"id":{"name":"rCampaignTutorial","path":"rooms/rCampaignTutorial/rCampaignTutorial.yy",},"order":3,},

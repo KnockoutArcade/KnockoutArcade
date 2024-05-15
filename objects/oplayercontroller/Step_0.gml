@@ -1879,7 +1879,7 @@ switch state
 		}
 		
 		// Create speed trail
-		SpeedTrail(0.3, 0.08, 1);
+		//SpeedTrail(0.3, 0.08, 1);
 		
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
