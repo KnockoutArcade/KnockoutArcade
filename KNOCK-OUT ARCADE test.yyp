@@ -122,6 +122,7 @@
     {"id":{"name":"Cutscene_HideObject","path":"scripts/Cutscene_HideObject/Cutscene_HideObject.yy",},"order":4,},
     {"id":{"name":"sRussel_Standing_Medium","path":"sprites/sRussel_Standing_Medium/sRussel_Standing_Medium.yy",},"order":2,},
     {"id":{"name":"sndTestMusic","path":"sounds/sndTestMusic/sndTestMusic.yy",},"order":0,},
+    {"id":{"name":"sRussel_Lose","path":"sprites/sRussel_Lose/sRussel_Lose.yy",},"order":42,},
     {"id":{"name":"sJayStandON_Pose_StandMedium_Mockup_strip3","path":"sprites/sJayStandON_Pose_StandMedium_Mockup_strip3/sJayStandON_Pose_StandMedium_Mockup_strip3.yy",},"order":24,},
     {"id":{"name":"sBeverly_DownSpecial","path":"sprites/sBeverly_DownSpecial/sBeverly_DownSpecial.yy",},"order":55,},
     {"id":{"name":"ConvertKeyIntoImageIndex","path":"scripts/ConvertKeyIntoImageIndex/ConvertKeyIntoImageIndex.yy",},"order":7,},

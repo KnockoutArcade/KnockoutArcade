@@ -3306,6 +3306,15 @@ if (state == eState.ROUND_WIN)
 }
 if (state == eState.ROUND_LOSE)
 {
-	sprite_index = CharacterSprites.hurt_Sprite;
+	sprite_index = sRussel_Lose;
 	image_speed = 1;
+	
+	if image_index > (image_number - 1) 
+	{
+		image_speed = 0;
+	}
+	else 
+	{
+		image_speed = 1;
+	}
 }
