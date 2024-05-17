@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // Debug stuff
-if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
+if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE) 
 {
 	hp = 100;
 }
