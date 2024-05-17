@@ -4,7 +4,7 @@
 // Debug stuff
 if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED) 
 {
-	//hp = 100;
+	hp = 100;
 }
 superMeter = 100;
 

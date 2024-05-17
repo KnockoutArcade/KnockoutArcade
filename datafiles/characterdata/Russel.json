@@ -7732,11 +7732,11 @@
           "AttackType": 1,
           "BlockStun": 10.0,
           "KnockBack": 4.0,
-          "AirKnockbackVertical": -3.0,
-          "AirKnockbackHorizontal": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 4.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
-          "LaunchKnockbackHorizontal": 5.0,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": 4.0,
           "GravityScaling": 5.0,
           "Pushback": 3.0,
           "ParticleXOffset": 20,
@@ -7857,7 +7857,7 @@
           {
             "StartingFrame": 35,
             "HorizontalSpeed": 0.25,
-            "VerticalSpeed": -3.0,
+            "VerticalSpeed": -2.4,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -7883,18 +7883,18 @@
         "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 35,
-            "HorizontalSpeed": 0.25,
+            "StartingFrame": 33,
+            "HorizontalSpeed": 1.0,
             "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 36,
-            "HorizontalSpeed": 0.25,
+            "StartingFrame": 34,
+            "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           },
           {
             "StartingFrame": 72,
@@ -7992,6 +7992,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-17T10:56:38.5373474-07:00",
+  "LastModified": "2024-05-17T11:08:53.0590485-07:00",
   "LastModifiedBy": "creep"
 }
