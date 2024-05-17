@@ -7583,7 +7583,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Super",
       "Duration": 108,
-      "NumberOfFrames": 18,
+      "NumberOfFrames": 23,
       "FrameData": [
         {
           "Length": 1,
@@ -7646,16 +7646,36 @@
           "ImageIndex": 2
         },
         {
-          "Length": 63,
-          "ImageIndex": 3
+          "Length": 60,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 62,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 64,
+          "ImageIndex": 7
         },
         {
           "Length": 66,
-          "ImageIndex": 4
+          "ImageIndex": 8
         },
         {
           "Length": 68,
-          "ImageIndex": 2
+          "ImageIndex": 9
+        },
+        {
+          "Length": 72,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 76,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 80,
+          "ImageIndex": 12
         }
       ],
       "NumberOfHitboxes": 2,
@@ -7832,13 +7852,20 @@
         ]
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 4.0,
-            "VerticalSpeed": 0.0,
+            "StartingFrame": 35,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": -3.0,
             "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 36,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
@@ -7849,17 +7876,24 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.0,
+        "GravityScale": 0.25,
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 4.0,
-            "VerticalSpeed": 0.0,
+            "StartingFrame": 35,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 36,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
@@ -7870,7 +7904,7 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.0,
+        "GravityScale": 0.25,
         "FallScale": 1.0
       },
       "UseMoveScript": false,
@@ -7958,6 +7992,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-15T16:24:44.5227415-07:00",
+  "LastModified": "2024-05-17T10:43:09.2034765-07:00",
   "LastModifiedBy": "creep"
 }
