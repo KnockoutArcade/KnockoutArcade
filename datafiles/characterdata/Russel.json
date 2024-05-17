@@ -7863,7 +7863,7 @@
           },
           {
             "StartingFrame": 35,
-            "HorizontalSpeed": 0.25,
+            "HorizontalSpeed": 0.4,
             "VerticalSpeed": -2.4,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
@@ -8006,6 +8006,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-17T11:34:23.8045008-07:00",
+  "LastModified": "2024-05-17T11:40:26.480873-07:00",
   "LastModifiedBy": "creep"
 }
