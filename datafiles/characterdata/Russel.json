@@ -7688,7 +7688,7 @@
           "WidthOffset": 5,
           "HeightOffset": 2,
           "Group": 1,
-          "Damage": 5,
+          "Damage": 4,
           "MeterGain": 0.0,
           "ComboScaling": 0.0,
           "AttackHitStop": 5,
@@ -7724,7 +7724,7 @@
           "WidthOffset": -20,
           "HeightOffset": 15,
           "Group": 2,
-          "Damage": 9,
+          "Damage": 10,
           "MeterGain": 0.0,
           "ComboScaling": 6.0,
           "AttackHitStop": 45,
@@ -8006,6 +8006,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-17T12:26:51.0556613-07:00",
+  "LastModified": "2024-05-17T12:38:52.5480316-07:00",
   "LastModifiedBy": "creep"
 }
