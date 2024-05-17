@@ -7683,8 +7683,8 @@
         {
           "Start": 35,
           "Lifetime": 6,
-          "AttackWidth": 20,
-          "AttackHeight": 24,
+          "AttackWidth": 23,
+          "AttackHeight": 36,
           "WidthOffset": 5,
           "HeightOffset": 2,
           "Group": 1,
@@ -7719,10 +7719,10 @@
         {
           "Start": 68,
           "Lifetime": 4,
-          "AttackWidth": 35,
+          "AttackWidth": 55,
           "AttackHeight": 24,
-          "WidthOffset": 5,
-          "HeightOffset": 2,
+          "WidthOffset": -20,
+          "HeightOffset": 15,
           "Group": 2,
           "Damage": 9,
           "MeterGain": 0.0,
@@ -8006,6 +8006,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-17T11:40:26.480873-07:00",
+  "LastModified": "2024-05-17T12:00:54.2193178-07:00",
   "LastModifiedBy": "creep"
 }
