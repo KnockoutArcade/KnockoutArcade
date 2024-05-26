@@ -7582,100 +7582,140 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Super",
-      "Duration": 108,
-      "NumberOfFrames": 23,
+      "Duration": 100,
+      "NumberOfFrames": 33,
       "FrameData": [
         {
           "Length": 1,
           "ImageIndex": 0
         },
         {
-          "Length": 30,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 35,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 37,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 39,
+          "Length": 15,
           "ImageIndex": 4
         },
         {
-          "Length": 41,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 43,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 45,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 47,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 49,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 51,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 53,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 55,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 57,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 59,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 60,
+          "Length": 18,
           "ImageIndex": 5
         },
         {
-          "Length": 62,
+          "Length": 21,
           "ImageIndex": 6
         },
         {
-          "Length": 64,
+          "Length": 29,
           "ImageIndex": 7
         },
         {
-          "Length": 66,
+          "Length": 32,
           "ImageIndex": 8
         },
         {
-          "Length": 68,
+          "Length": 35,
           "ImageIndex": 9
         },
         {
-          "Length": 72,
+          "Length": 37,
           "ImageIndex": 10
         },
         {
-          "Length": 76,
+          "Length": 39,
           "ImageIndex": 11
         },
         {
-          "Length": 80,
+          "Length": 41,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 43,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 45,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 47,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 49,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 51,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 53,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 55,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 57,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 59,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 61,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 62,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 63,
           "ImageIndex": 12
+        },
+        {
+          "Length": 64,
+          "ImageIndex": 13
+        },
+        {
+          "Length": 65,
+          "ImageIndex": 14
+        },
+        {
+          "Length": 66,
+          "ImageIndex": 15
+        },
+        {
+          "Length": 68,
+          "ImageIndex": 16
+        },
+        {
+          "Length": 74,
+          "ImageIndex": 17
+        },
+        {
+          "Length": 78,
+          "ImageIndex": 18
+        },
+        {
+          "Length": 82,
+          "ImageIndex": 19
+        },
+        {
+          "Length": 92,
+          "ImageIndex": 20
         }
       ],
       "NumberOfHitboxes": 2,
@@ -8006,6 +8046,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-17T12:38:52.5480316-07:00",
+  "LastModified": "2024-05-26T14:43:19.5591476-07:00",
   "LastModifiedBy": "creep"
 }
