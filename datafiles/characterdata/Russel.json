@@ -7686,19 +7686,19 @@
           "ImageIndex": 12
         },
         {
-          "Length": 64,
+          "Length": 65,
           "ImageIndex": 13
         },
         {
-          "Length": 65,
+          "Length": 68,
           "ImageIndex": 14
         },
         {
-          "Length": 66,
+          "Length": 70,
           "ImageIndex": 15
         },
         {
-          "Length": 68,
+          "Length": 72,
           "ImageIndex": 16
         },
         {
@@ -7757,7 +7757,7 @@
           "ActivateTimeStop": false
         },
         {
-          "Start": 68,
+          "Start": 72,
           "Lifetime": 4,
           "AttackWidth": 55,
           "AttackHeight": 24,
@@ -8046,6 +8046,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-26T14:43:19.5591476-07:00",
+  "LastModified": "2024-05-27T15:54:10.5437988-07:00",
   "LastModifiedBy": "creep"
 }
