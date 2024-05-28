@@ -7927,7 +7927,7 @@
         "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 4,
+        "NumberOfWindows": 5,
         "Windows": [
           {
             "StartingFrame": 0,
@@ -7951,7 +7951,14 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 72,
+            "StartingFrame": 63,
+            "HorizontalSpeed": 0.6,
+            "VerticalSpeed": -0.4,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 64,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -8046,6 +8053,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-27T15:54:10.5437988-07:00",
+  "LastModified": "2024-05-27T19:05:21.1789151-07:00",
   "LastModifiedBy": "creep"
 }
