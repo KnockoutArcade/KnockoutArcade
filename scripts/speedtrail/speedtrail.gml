@@ -2,48 +2,30 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 {
+	// For each interval of the speed timer.
 	if (speedTrailTimer >= interval)
 	{
 		speedTrailTimer = 0;
 		object_set_sprite(oSpeedTrail, sprite_index);
-		var instance = instance_create_layer(x, y, "Instances", oSpeedTrail);
-		var this = object_index;
-		var thisCharacter = selectedCharacter;
-		var opponentCharacter = noone;
-		if (opponent != noone)
+		var speedTrailInstance = instance_create_layer(x, y, "Instances", oSpeedTrail);
+		
+		with (speedTrailInstance)
 		{
-			opponentCharacter = opponent.selectedCharacter;
-		}
-		with (instance)
-		{
-			image_index = this.image_index;
-			if (opponentCharacter != noone)
-			{
-				// For some reason, the player 2 sprite is flipped during mirror matches
-				if (thisCharacter == opponentCharacter && this.playerID == 2)
-				{
-					image_xscale = -this.image_xscale;
-				}
-				else
-				{
-					image_xscale = this.image_xscale;
-				}
-			}
-			else
-			{
-				image_xscale = this.image_xscale;
-			}
+			image_index = other.image_index;
 			
-			if (array_length(this.selectedCharacter.BasePalette) > 0)
+			image_xscale = other.image_xscale;
+			
+			// Set up the palette data for the speed trail
+			if (array_length(other.selectedCharacter.BasePalette) > 0)
 			{
 				hasColorPalettes = true;
-				if (this.playerID == 1)
+				if (other.playerID == 1)
 				{
-					PaletteSetup(global.p1PaletteID, this.selectedCharacter);
+					PaletteSetup(global.p1PaletteID, other.selectedCharacter);
 				}
 				else
 				{
-					PaletteSetup(global.p2PaletteID, this.selectedCharacter);
+					PaletteSetup(global.p2PaletteID, other.selectedCharacter);
 				}
 			}
 			else
@@ -51,10 +33,13 @@ function SpeedTrail(setStartingOpacity, setFadeSpeed, interval)
 				hasColorPalettes = false;
 			}
 			
+			// Initialize variables
 			startingOpacity = setStartingOpacity;
 			fadeSpeed = setFadeSpeed;
 			initialized = true;
 		}
 	}
+	
+	// Increment the speed trail timer
 	speedTrailTimer++;
 }

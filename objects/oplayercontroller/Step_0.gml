@@ -4,7 +4,7 @@
 // Debug stuff
 if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE) 
 {
-	hp = 100;
+	//hp = maxHitPoints;
 }
 superMeter = 100;
 
@@ -1879,7 +1879,7 @@ switch state
 		}
 		
 		// Create speed trail
-		//SpeedTrail(0.3, 0.08, 1);
+		SpeedTrail(0.6, 0.08, 3);
 		
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
