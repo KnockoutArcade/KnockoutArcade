@@ -40,7 +40,7 @@ global.hasCompletedLevel = false;
 // Rush Cancel global variables (both players use them)
 global.rcForwardSpeed = 4;
 global.rcForwardDuration = 12;
-global.rcUpSpeed = 5;
+global.rcUpSpeed = 6.5;
 global.rcUpForwardSpeed = 2;
 global.rcUpFallSpeed = 0.4;
 global.rcAirSpeed = 10;
