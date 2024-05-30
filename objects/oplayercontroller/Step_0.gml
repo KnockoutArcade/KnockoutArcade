@@ -829,9 +829,25 @@ if (state == eState.SCREEN_FREEZE)
 	if (rcActivated)
 	{
 		isEXFlash = true;
+		image_speed = 1;
+		
+		// Prevent animation from looping
+		if (image_index > (image_number - 1))
+		{
+			image_speed = 0;
+		}
+		else 
+		{
+			image_speed = 1;
+		}
+		
+		
 		if (rcFreezeTimer == 1)
 		{
 			audio_play_sound(sfx_spend50Meter, 0, false);
+			
+			sprite_index = sRussel_RushCancel;
+			image_index = 0;
 		}
 		// Screen freeze for Rush Cancel lasts for 30 frames
 		if (rcFreezeTimer >= 30)

@@ -201,6 +201,7 @@
     {"id":{"name":"oSuperMeterUI","path":"objects/oSuperMeterUI/oSuperMeterUI.yy",},"order":3,},
     {"id":{"name":"sSmallShadow","path":"sprites/sSmallShadow/sSmallShadow.yy",},"order":1,},
     {"id":{"name":"sGunther_Idle_mockup_strip1","path":"sprites/sGunther_Idle_mockup_strip1/sGunther_Idle_mockup_strip1.yy",},"order":12,},
+    {"id":{"name":"sRussel_RushCancel","path":"sprites/sRussel_RushCancel/sRussel_RushCancel.yy",},"order":44,},
     {"id":{"name":"sJay_StandHeavy_Mockup_strip8","path":"sprites/sJay_StandHeavy_Mockup_strip8/sJay_StandHeavy_Mockup_strip8.yy",},"order":13,},
     {"id":{"name":"sConstructionNPC3b","path":"sprites/sConstructionNPC3b/sConstructionNPC3b.yy",},"order":7,},
     {"id":{"name":"rBeverlyStage","path":"rooms/rBeverlyStage/rBeverlyStage.yy",},"order":0,},
