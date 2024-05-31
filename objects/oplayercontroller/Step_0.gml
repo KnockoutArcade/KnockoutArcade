@@ -829,7 +829,6 @@ if (state == eState.SCREEN_FREEZE)
 	if (rcActivated)
 	{
 		isEXFlash = true;
-		image_speed = 1;
 		
 		// Prevent animation from looping
 		if (image_index > (image_number - 1))
