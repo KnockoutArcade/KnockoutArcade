@@ -828,8 +828,6 @@ if (state == eState.SCREEN_FREEZE)
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
-		isEXFlash = true;
-		
 		// Prevent animation from looping
 		if (image_index > (image_number - 1))
 		{
@@ -841,7 +839,7 @@ if (state == eState.SCREEN_FREEZE)
 		}
 		
 		
-		if (rcFreezeTimer == 1)
+		if (rcFreezeTimer == 0)
 		{
 			audio_play_sound(sfx_spend50Meter, 0, false);
 			
@@ -2656,6 +2654,7 @@ switch state
 		projectileInvincible = true;
 		hasUsedMeter = true;
 		inAttackState = false;
+		isEXFlash = true;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -2705,6 +2704,7 @@ switch state
 		projectileInvincible = true;
 		hasUsedMeter = true;
 		inAttackState = false;
+		isEXFlash = true;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -2742,6 +2742,7 @@ switch state
 		projectileInvincible = true;
 		hasUsedMeter = true;
 		inAttackState = false;
+		isEXFlash = true;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
