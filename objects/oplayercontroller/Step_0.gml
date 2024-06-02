@@ -828,6 +828,8 @@ if (state == eState.SCREEN_FREEZE)
 	// If player is performing Rush Cancel
 	if (rcActivated)
 	{
+		isEXFlash = true;
+		
 		// Prevent animation from looping
 		if (image_index > (image_number - 1))
 		{
