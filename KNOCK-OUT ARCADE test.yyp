@@ -457,6 +457,7 @@
     {"id":{"name":"sSuperMeterBar","path":"sprites/sSuperMeterBar/sSuperMeterBar.yy",},"order":2,},
     {"id":{"name":"oSingleplayerTimer","path":"objects/oSingleplayerTimer/oSingleplayerTimer.yy",},"order":8,},
     {"id":{"name":"ResetGame","path":"scripts/ResetGame/ResetGame.yy",},"order":11,},
+    {"id":{"name":"TestSuppleScript","path":"scripts/TestSuppleScript/TestSuppleScript.yy",},"order":0,},
     {"id":{"name":"ConvertButtonIntoImageIndex","path":"scripts/ConvertButtonIntoImageIndex/ConvertButtonIntoImageIndex.yy",},"order":6,},
     {"id":{"name":"oSpiritFire","path":"objects/oSpiritFire/oSpiritFire.yy",},"order":2,},
     {"id":{"name":"sJay_SC_JumpingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_JumpingHeavy_MOCKUP_strip5/sJay_SC_JumpingHeavy_MOCKUP_strip5.yy",},"order":15,},
@@ -666,6 +667,8 @@
     {"folderPath":"folders/Sprites/Victory Screen Assets/Options.yy","order":3,"resourceVersion":"1.0","name":"Options","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/PlayerScripts.yy","order":43,"resourceVersion":"1.0","name":"PlayerScripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/PlayerScripts/NonAttack.yy","order":1,"resourceVersion":"1.0","name":"NonAttack","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/SupplementaryAttackScripts.yy","order":44,"resourceVersion":"1.0","name":"SupplementaryAttackScripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/SupplementaryAttackScripts/Beverly.yy","order":1,"resourceVersion":"1.0","name":"Beverly","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
