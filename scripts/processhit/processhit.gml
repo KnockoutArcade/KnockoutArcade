@@ -15,7 +15,19 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.combo++; // Add 1 to our combo length
 		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
-		scaleAmount = max(scaleAmount, ScalingMinimum);
+		
+		// If the attack is a super, use the minimum super scaling. Otherwise, do normal damage scaling.
+		if (finalBlowSuper)
+		{
+			scaleAmount = max(scaleAmount, SuperScalingMinimum);
+			show_debug_message("super scaling");
+		}
+		else
+		{
+			scaleAmount = max(scaleAmount, ScalingMinimum);
+			show_debug_message("normal scaling");
+		}
+		
 		
 		if (owner.combo > 2) 
 		{

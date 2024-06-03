@@ -16,10 +16,10 @@ if (playerID == 1)
 	draw_set_color(c_white);
 	
 	draw_text(20, 10, state);
-	draw_text(20, 30, inAttackState);
-	draw_text(20, 50, animTimer);
-	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, gravityScaling);
+	draw_text(20, 30, animTimer);
+	draw_text(20, 50, hsp);
+	draw_text(20, 70, comboScaling);
+	draw_text(20, 90, storedComboDamage);
 } 
 else 
 {
@@ -33,7 +33,7 @@ else
 	draw_text(750, 30, inAttackState);
 	draw_text(750, 50, animTimer);
 	draw_text(750, 70, storedComboDamage);
-	draw_text(750, 90, gravityScaling);
+	draw_text(750, 90, comboScaling);
 	
 	
 }

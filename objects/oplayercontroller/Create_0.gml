@@ -192,7 +192,9 @@ enum eState {
 	HURT,
 	LAUNCHED,
 	KNOCKED_DOWN,
+	TECH_ROLL,
 	GETUP,
+	QUICK_GETUP,
 	HITSTOP,
 	BLOCKING,
 	RUSH_CANCEL_FORWARD,
@@ -258,12 +260,12 @@ opponent = noone;
 target = noone;
 
 // Hurtbox Variables
-hurtbox = instance_create_layer(x - 7, y, "hitboxes", oPlayerHurtbox);
+hurtbox = instance_create_layer(x - 9, y, "hitboxes", oPlayerHurtbox);
 with (hurtbox) 
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 15;
+	image_xscale = 16;
 	image_yscale = 32;
 }
 hurtboxXOffset = -9;
@@ -282,6 +284,7 @@ yHome = y;
 hitstunShuffleTimer = 0;
 shuffle = 0;
 framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
+isExperiencingHardKnockdown = false; // What kind of knockdown we are experiencing (false - soft, true - hard)
 
 isGrabbed = false;
 
