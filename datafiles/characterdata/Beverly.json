@@ -2073,7 +2073,7 @@
           "EnhancementMove": 256,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -5621,7 +5621,7 @@
           "EnhancementMove": 2048,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -5632,7 +5632,7 @@
           "EnhancementMove": 256,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -7444,6 +7444,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-03T13:28:10.231915-07:00",
+  "LastModified": "2024-06-03T15:25:06.4812236-07:00",
   "LastModifiedBy": "creep"
 }
