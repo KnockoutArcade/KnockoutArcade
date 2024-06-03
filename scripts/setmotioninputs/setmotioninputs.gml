@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 
-function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindowEnd, setChangeFrame, setChangeImmediately, specialButtonRequired)
+function SetMotionInputs(motionInputs, numberOfMotions, Special) //, setWindowStart, setWindowEnd, setChangeFrame, setChangeImmediately, specialButtonRequired)
 {
 	if (!inputSet) 
 	{
@@ -72,11 +72,12 @@ function SetMotionInputs(motionInputs, numberOfMotions, setWindowStart, setWindo
 			enhanced[i] = false;
 			progressInInputs[i] = -1;
 			ds_list_add(listOfInputs, directions);
-			inputWindowStart = setWindowStart;
-			inputWindowEnd = setWindowEnd;
-			changeFrame = setChangeFrame;
-			changeImmediately = setChangeImmediately;
-			requireSpecialButton = specialButtonRequired;
+			inputWindowStart = Special.SpecialData[0].StartingFrame;
+			inputWindowEnd = Special.SpecialData[0].EndingFrame;
+			changeFrame = Special.SpecialData[0].TransitionFrame;
+			changeImmediately = Special.SpecialData[0].TransitionImmediately;
+			requireSpecialButton = Special.SpecialData[0].ButtonPressRequired;
+			requiredPosition[i] = Special.SpecialData[i].RequiredPosition;
 		}
 		
 		inputSet = true;

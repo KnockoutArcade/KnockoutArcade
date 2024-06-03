@@ -17,9 +17,14 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, hsp);
-	draw_text(20, 70, comboScaling);
-	draw_text(20, 90, storedComboDamage);
+	//draw_text(20, 50, enhanced[0]);
+	//draw_text(20, 70, enhanced[1]);
+	//draw_text(20, 90, enhanced[2]);
+	
+	for (var i = 0; i < array_length(requiredPosition); i++)
+	{
+		draw_text(20, 50 + (i*20), requiredPosition[i]);
+	}
 } 
 else 
 {

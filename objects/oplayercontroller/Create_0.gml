@@ -103,6 +103,7 @@ changeImmediately = false; // If true, changes special move as soon as the input
 inputWindowStart = 0;
 inputWindowEnd = 0;
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
+requiredPosition = []; // The position that the player must be in in order to use an enhancer
 
 // Variables for Rush Cancel
 rcActivated = false;

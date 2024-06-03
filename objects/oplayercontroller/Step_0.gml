@@ -412,6 +412,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	changeFrame = 999;
 	changeImmediately = false;
 	requireSpecialButton = false;
+	requiredPosition = [];
 }
 else if (animTimer > inputWindowEnd)
 {
@@ -421,6 +422,7 @@ else if (animTimer > inputWindowEnd)
 	inputWindowStart = 0;
 	inputWindowEnd = 0;
 	requireSpecialButton = false;
+	requiredPosition = [];
 	
 	var changeSet = false;
 	for (i = 0; i < array_length(enhanced); i++)
