@@ -845,7 +845,7 @@ if (state == eState.SCREEN_FREEZE)
 		{
 			audio_play_sound(sfx_spend50Meter, 0, false);
 			
-			sprite_index = sRussel_RushCancel;
+			sprite_index = CharacterSprites.rushCancel_Sprite;
 			image_index = 0;
 		}
 		// Screen freeze for Rush Cancel lasts for 30 frames
@@ -3145,7 +3145,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		wallHit = true;
 		hitstop = 20;
 		state = eState.LAUNCHED;
-		sprite_index = sRussel_WallSplat;
+		sprite_index = CharacterSprites.wallSplat_Sprite;
 		hsp = -(hsp * .5);
 		vsp = -2;
 	}

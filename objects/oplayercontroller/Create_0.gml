@@ -237,6 +237,8 @@ CharacterSprites = {
 	launched_Sprite : selectedCharacter.Sprites.Launched,
 	knockdown_Sprite : selectedCharacter.Sprites.Knockdown,
 	getup_Sprite : selectedCharacter.Sprites.GetUp,
+	rushCancel_Sprite : selectedCharacter.Sprites.RushCancel,
+	wallSplat_Sprite : selectedCharacter.Sprites.WallSplat,
 }
 
 // State-related Variables

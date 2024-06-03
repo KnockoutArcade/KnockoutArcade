@@ -35,8 +35,8 @@
     "Launched": "sBeverly_Launched",
     "Knockdown": "sBeverly_KnockedDown",
     "GetUp": "sBeverly_Getup",
-    "RushCancel": "",
-    "WallSplat": ""
+    "RushCancel": "sRussel_RushCancel",
+    "WallSplat": "sBeverly_WallSplat"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -7444,6 +7444,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-16T10:54:43.5845838-07:00",
+  "LastModified": "2024-06-03T13:28:10.231915-07:00",
   "LastModifiedBy": "creep"
 }

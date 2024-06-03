@@ -35,8 +35,8 @@
     "Launched": "sRussel_Launched",
     "Knockdown": "sRussel_KnockedDown",
     "GetUp": "sRussel_Getup",
-    "RushCancel": "",
-    "WallSplat": ""
+    "RushCancel": "sRussel_RushCancel",
+    "WallSplat": "sRussel_WallSplat"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -8053,6 +8053,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-27T19:05:21.1789151-07:00",
+  "LastModified": "2024-06-03T13:15:20.8774905-07:00",
   "LastModifiedBy": "creep"
 }
