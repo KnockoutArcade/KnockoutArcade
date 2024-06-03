@@ -74,4 +74,4 @@ file_find_close();
 instance_create_layer(0, 0, "StartText", oGlobalVars);
 
 // Print debug info
-show_debug_message(global.characterData[0].SideSpecial);
+show_debug_message(global.characterData[4].UpSpecial);

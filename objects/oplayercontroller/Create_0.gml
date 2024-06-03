@@ -212,7 +212,8 @@ enum eAttackType {
 	MID = 1, // Block high or low
 	LOW = 2, // Must Block Crouching
 	GRAB = 3, // Basic grab
-	COMMAND_GRAB = 4 // Advanced type of grab with special properties
+	COMMAND_GRAB = 4, // Advanced type of grab with special properties
+	HITGRAB = 5 // A grab that can be blocked
 }
 
 enum eSpritesToUse {

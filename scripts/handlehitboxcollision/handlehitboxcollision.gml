@@ -239,6 +239,7 @@ function HandleHitboxCollision(ownerType)
 					(collision_list[| i].owner.isAbleToBlock) &&
 					(((attackProperty.AttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) ||
 						attackProperty.AttackType == eAttackType.MID ||
+						attackProperty.AttackType == eAttackType.HITGRAB ||
 						(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
 					(collision_list[| i].owner.movedir == blockingDirection || collision_list[| i].owner.toggleIdleBlock)// Check if the opponent is holding back
 				{
@@ -339,8 +340,76 @@ function HandleHitboxCollision(ownerType)
 						instance_destroy(owner);
 					}
 				}
-				//Hitting	
-				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB)
+				else if (attackProperty.AttackType == eAttackType.HITGRAB && // Hit Grabs
+					collision_list[| i].owner.state != eState.THROW_TECH &&
+					collision_list[| i].owner.isThrowable)
+				{
+					// Set the correct states for the attacker and victim
+					ownerType.prevState = eState.COMMAND_GRAB;
+					ownerType.animTimer = 0;
+
+					collision_list[| i].owner.prevState = eState.BEING_GRABBED;
+					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
+					collision_list[| i].owner.animTimer = 0;
+					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
+					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
+					ownerType.heldOpponent = collision_list[| i].owner;
+					ownerType.target = collision_list[| i].owner;
+				
+					ownerType.hitstop = attackProperty.AttackHitStop;
+					if (spirit != noone) 
+					{
+						spirit.hitstop = attackProperty.AttackHitStop;
+					}
+					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
+				
+					// Multiple hitboxes
+					ds_list_add(hasHit, collision_list[| i].owner.id);
+					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+
+					// Depth Sorting
+					ownerType.depth = -1;
+					collision_list[| i].owner.depth = 0;
+
+					// Reset Frame Advantage Counter
+					oGameManager.frameAdvantage = 0;
+
+					// Draw grab effect
+					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+					with(particle)
+					{
+						lifetime = other.attackProperty.ParticleDuration;
+						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
+						image_xscale = ownerType.image_xscale * -1;
+					}
+
+					// Cancel into the command grab move
+					ds_list_clear(ownerType.hitByGroup);
+					if (spirit != noone)
+					{
+						ds_list_clear(spirit.hitByGroup);
+					}
+					if (ownerType.target != noone)
+					{
+						ds_list_clear(ownerType.target.hitByGroup);
+					}
+					ownerType.animOffset = 0;
+
+					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
+					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+					{
+						var hurtbox = instance_find(oPlayerHurtbox, i);
+
+						if (!hurtbox.primary && hurtbox.owner == id)
+						{
+							instance_destroy(hurtbox);
+						}
+					}
+
+					instance_destroy(oHitbox);
+
+				}
+				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB && attackProperty.AttackType != eAttackType.HITGRAB) // Hitting
 				{
 					// Set the opponent's sprite to their hurt sprite (unless being grabbed)
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED)
