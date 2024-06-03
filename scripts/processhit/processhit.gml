@@ -11,6 +11,14 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 {
 	if (!isProjectile)
 	{
+		// Attack hit script
+		if (attackProperty.UseHitScript)
+		{
+			var scriptToExecute = asset_get_index(attackProperty.SupplementaryHitScript);
+			
+			scriptToExecute();
+		}
+		
 		// Combo Scaling
 		owner.combo++; // Add 1 to our combo length
 		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
@@ -326,6 +334,14 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 	}
 	else
 	{
+		// Attack hit script
+		if (attackProperty.UseHitScript)
+		{
+			var scriptToExecute = asset_get_index(attackProperty.SupplementaryHitScript);
+			
+			scriptToExecute();
+		}
+		
 		// Combo Scaling
 		owner.playerOwner.combo++; // Add 1 to our combo length
 		var scaledDamage = attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
