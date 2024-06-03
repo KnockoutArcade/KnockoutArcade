@@ -19,6 +19,14 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	startedMovingForward = false;
 	runningBackward = false;
 	
+	// Supplementary Scripts
+	if (moveToDo.UseMoveScript)
+	{
+		var scriptToExecute = asset_get_index(moveToDo.SupplementaryMoveScript);
+		
+		scriptToExecute();
+	}
+	
 	if (selectedCharacter.UniqueData.SpiritData == 2)
 	{
 		// Hackey way of preventing a crash where a move gets interrupted as soon as a hitbox is created
