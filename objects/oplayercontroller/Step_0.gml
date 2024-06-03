@@ -1539,6 +1539,46 @@ switch state
 		}
 	}
 	break;
+	
+	
+	case eState.COMMAND_NORMAL_2:
+	{
+		cancelOnLanding = selectedCharacter.CommandNormal2.CommandNormalData.CancelWhenLanding;
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal2, true, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale, false, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal2, false, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal2, attack, true);
+		}
+	}
+	break;
+	
+	
+	case eState.COMMAND_NORMAL_3:
+	{
+		cancelOnLanding = selectedCharacter.CommandNormal3.CommandNormalData.CancelWhenLanding;
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal3, true, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale, false, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal3, false, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal3, attack, true);
+		}
+	}
+	break;
 
 
 
