@@ -19,6 +19,7 @@ function ProcessEnhancers(Special) {
 				if (enhanced[i])
 				{
 					pendingToggle = false;
+					isEXFlash = true;
 					// Which move should we switch to?
 					switch (Special.SpecialData[i].EnhancementMove)
 					{
@@ -261,6 +262,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -288,6 +291,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -315,6 +320,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -342,13 +349,15 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
 					}
 					animTimer = 0;
 					image_index = 0;
-					isEXFlash = true;
+					
 				}
 			}
 		}
