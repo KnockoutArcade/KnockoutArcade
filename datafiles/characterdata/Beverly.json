@@ -3540,15 +3540,15 @@
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 15,
+          "Length": 13,
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 20,
           "ImageIndex": 4
         },
         {
@@ -3559,7 +3559,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 9,
+          "Start": 7,
           "Lifetime": 2,
           "AttackWidth": 39,
           "AttackHeight": 10,
@@ -3572,8 +3572,8 @@
           "AttackHitStop": 11,
           "AttackHitStun": 18,
           "AttackType": 2,
-          "BlockStun": 10.0,
-          "KnockBack": 3.0,
+          "BlockStun": 13.0,
+          "KnockBack": 4.0,
           "AirKnockbackVertical": 1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
@@ -3648,8 +3648,8 @@
           "HeightOffset": 0
         },
         {
-          "Start": 11,
-          "Lifetime": 16,
+          "Start": 9,
+          "Lifetime": 18,
           "AttackWidth": 20,
           "AttackHeight": 11,
           "WidthOffset": 4,
@@ -7664,6 +7664,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-04T13:34:43.7176802-07:00",
+  "LastModified": "2024-06-04T13:49:13.3755269-07:00",
   "LastModifiedBy": "creep"
 }
