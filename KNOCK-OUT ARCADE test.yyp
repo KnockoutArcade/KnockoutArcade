@@ -6,6 +6,7 @@
     {"id":{"name":"oJayStageProjector","path":"objects/oJayStageProjector/oJayStageProjector.yy",},"order":7,},
     {"id":{"name":"sTimer9","path":"sprites/sTimer9/sTimer9.yy",},"order":10,},
     {"id":{"name":"oSuperKOFirst","path":"objects/oSuperKOFirst/oSuperKOFirst.yy",},"order":6,},
+    {"id":{"name":"sBeverly_TechRoll","path":"sprites/sBeverly_TechRoll/sBeverly_TechRoll.yy",},"order":57,},
     {"id":{"name":"sCam","path":"sprites/sCam/sCam.yy",},"order":4,},
     {"id":{"name":"sGunther_DownSpecial_mockup_strip13","path":"sprites/sGunther_DownSpecial_mockup_strip13/sGunther_DownSpecial_mockup_strip13.yy",},"order":18,},
     {"id":{"name":"GetPlayerInputs","path":"scripts/GetPlayerInputs/GetPlayerInputs.yy",},"order":1,},

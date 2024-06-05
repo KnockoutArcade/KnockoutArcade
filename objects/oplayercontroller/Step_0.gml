@@ -2403,6 +2403,7 @@ switch state
 		{
 			state = eState.IDLE;
 			image_index = 0;
+			sprite_index = CharacterSprites.idle_Sprite;
 			image_speed = 1;
 			animTimer = 0;
 		}
