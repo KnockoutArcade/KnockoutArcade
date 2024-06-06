@@ -4328,8 +4328,8 @@
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 6,
-          "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "MeterGain": 6.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -4365,7 +4365,7 @@
           "Group": 2,
           "Damage": 7,
           "MeterGain": 6.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -4421,7 +4421,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 2,
-          "Damage": 12,
+          "Damage": 10,
           "MeterGain": 9.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 30,
@@ -7664,6 +7664,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-04T13:49:13.3755269-07:00",
+  "LastModified": "2024-06-05T19:07:09.1931074-07:00",
   "LastModifiedBy": "creep"
 }
