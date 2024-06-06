@@ -1737,7 +1737,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_NeutralSpecial",
-      "Duration": 36,
+      "Duration": 40,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -1846,7 +1846,7 @@
         },
         {
           "Start": 1,
-          "Lifetime": 31,
+          "Lifetime": 41,
           "AttackWidth": 20,
           "AttackHeight": 35,
           "WidthOffset": -9,
@@ -7664,6 +7664,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-05T19:07:09.1931074-07:00",
+  "LastModified": "2024-06-05T19:18:41.3572195-07:00",
   "LastModifiedBy": "creep"
 }
