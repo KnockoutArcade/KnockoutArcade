@@ -1,0 +1,181 @@
+{
+  "Name": "EnhancedProjectile",
+  "HasLifetime": true,
+  "Lifetime": 30,
+  "AnimationSpeed": 0,
+  "HorizontalSpeed": 5.0,
+  "VerticalSpeed": 0.0,
+  "EnvironmentalDisplacement": 0,
+  "FallSpeed": 0.0,
+  "GroundTraction": 0.0,
+  "AirTraction": 0.0,
+  "DestroyOnFloor": true,
+  "DestroyOnWall": true,
+  "BounceOnFloor": false,
+  "BounceOnWall": false,
+  "NumberOfBounces": 0,
+  "Bounciness": 0.0,
+  "Transcendent": false,
+  "Health": 2,
+  "ProjectileSprites": {
+    "Sprite": "sEnhancedProjectile",
+    "Destroy": ""
+  },
+  "BaseColor": {
+    "UID": "03582463-88d1-4606-a7b2-c1b36ddfffb1",
+    "Name": "",
+    "NumberOfReplacableColors": 0,
+    "ColorPalette": []
+  },
+  "CopyCharacterPalette": true,
+  "Character": "Beverly",
+  "Palettes": [
+    {
+      "UID": "eb455420-888d-4015-adb4-be08f764c1ff",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "27c7036d-845f-4b8b-8e37-6cbb78a0362d",
+      "Name": "Blue - Arina",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "da0f7f03-63ae-486a-ab59-29e360e61a4d",
+      "Name": "Yellow",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "e7d0ab41-e27a-4654-aa97-be4363c72774",
+      "Name": "Green",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "7bfcf75b-c87b-4131-8322-1464f5f13652",
+      "Name": "Black",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "696c90d1-aeaa-49d5-b3c7-ed5b0564c1a4",
+      "Name": "White - Wii Fit",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "1eaed55b-fd2c-495b-aeb3-e53819135361",
+      "Name": "Purple",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "fcf9751a-fbca-452e-8824-05e800b4fc52",
+      "Name": "Orange",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "91404610-78bb-47dc-8b39-97456b30ba48",
+      "Name": "Ariel",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "b59012e7-e935-4c7c-9383-13e2c326c7c6",
+      "Name": "Blue Hair",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "dd658aa1-2804-4853-b6f4-b439cc360d18",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    },
+    {
+      "UID": "ad6482ff-9af5-4e42-9586-07e54800598b",
+      "Name": "Default",
+      "NumberOfReplacableColors": 0,
+      "ColorPalette": []
+    }
+  ],
+  "NumberOfFrames": 0,
+  "FrameData": [],
+  "NumberOfHitboxes": 1,
+  "AttackData": [
+    {
+      "Start": 1,
+      "Lifetime": 20,
+      "AttackWidth": 10,
+      "AttackHeight": 10,
+      "WidthOffset": -5,
+      "HeightOffset": -10,
+      "Group": 0,
+      "Damage": 10,
+      "MeterGain": 6.0,
+      "ComboScaling": 1.0,
+      "AttackHitStop": 14,
+      "AttackHitStun": 14,
+      "AttackType": 1,
+      "BlockStun": 12.0,
+      "KnockBack": 3.0,
+      "AirKnockbackVertical": -2.0,
+      "AirKnockbackHorizontal": 3.0,
+      "Launches": false,
+      "LaunchKnockbackVertical": 0.0,
+      "LaunchKnockbackHorizontal": 0.0,
+      "GravityScaling": 2.0,
+      "Pushback": 2.0,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 0,
+      "ParticleEffect": "sHitEffect",
+      "ParticleDuration": 10,
+      "HoldXOffset": 0,
+      "HoldYOffset": 0,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_Heavy_Hit"
+    }
+  ],
+  "CounterData": [
+    {
+      "CounterHitLevel": 2,
+      "Group": 0,
+      "Damage": 12,
+      "MeterGain": 8.0,
+      "ComboScaling": 1.0,
+      "AttackHitStop": 16,
+      "AttackHitStun": 16,
+      "KnockBack": 3.0,
+      "AirKnockbackVertical": -2.0,
+      "AirKnockbackHorizontal": 3.0,
+      "Launches": true,
+      "LaunchKnockbackVertical": -2.0,
+      "LaunchKnockbackHorizontal": 3.0,
+      "GravityScaling": 2.0,
+      "Pushback": 1.0,
+      "ParticleXOffset": 0,
+      "ParticleYOffset": 0,
+      "ParticleEffect": "sSparkEffect",
+      "ParticleDuration": 23,
+      "UseHitScript": false,
+      "SupplementaryHitScript": "",
+      "CausesWallbounce": false,
+      "HitSound": "sfx_Heavy_Hit"
+    }
+  ],
+  "RehitData": {
+    "HitBox": 0,
+    "NumberOfHits": 0,
+    "HitOnFrames": []
+  },
+  "Version": "Ver1.2.2",
+  "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
+  "LastModified": "2024-06-06T20:37:50.9965489-07:00",
+  "LastModifiedBy": "creep"
+}

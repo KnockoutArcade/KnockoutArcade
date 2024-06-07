@@ -1832,7 +1832,7 @@
           "ButtonPressRequired": false,
           "StartingFrame": 1,
           "EndingFrame": 16,
-          "EnhancementMove": 256,
+          "EnhancementMove": 1,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
           "RequiredPosition": 0,
@@ -6819,15 +6819,28 @@
       "UID": "86651c9d-185f-433a-9613-a9bc2c126ad9",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 1,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
+      "SpriteName": "sBeverly_NeutralSpecial",
+      "Duration": 30,
+      "NumberOfFrames": 3,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 2
+        }
+      ],
       "NumberOfHitboxes": 0,
       "AttackData": [],
       "CounterData": [],
@@ -6848,8 +6861,15 @@
       },
       "NumberOfHurtboxes": 0,
       "HurtboxData": [],
-      "NumberOfProjectiles": 0,
-      "ProjectileData": [],
+      "NumberOfProjectiles": 1,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 8,
+          "SpawnXOffset": 5,
+          "SpawnYOffset": -20,
+          "ProjectileObject": "EnhancedProjectile"
+        }
+      ],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
@@ -7676,6 +7696,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-06T20:02:09.6131566-07:00",
+  "LastModified": "2024-06-06T20:38:07.7995116-07:00",
   "LastModifiedBy": "creep"
 }

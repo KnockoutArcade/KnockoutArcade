@@ -261,6 +261,10 @@ function PerformAttack(Action, createdBySpirit)
 				{
 					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oGunther_JumpingMedium_Projectile);
 				}
+				else if (Action.ProjectileData[i].ProjectileObject == "EnhancedProjectile")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oEnhancedProjectile);
+				}
 				Projectile.depth = depth - 5;
 				with (Projectile)
 				{
