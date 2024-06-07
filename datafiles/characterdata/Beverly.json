@@ -1825,8 +1825,20 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
+      "NumberOfEnhancements": 1,
+      "SpecialData": [
+        {
+          "NumpadInput": "236",
+          "ButtonPressRequired": false,
+          "StartingFrame": 1,
+          "EndingFrame": 16,
+          "EnhancementMove": 256,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -7664,6 +7676,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-05T19:18:41.3572195-07:00",
+  "LastModified": "2024-06-06T20:02:09.6131566-07:00",
   "LastModifiedBy": "creep"
 }
