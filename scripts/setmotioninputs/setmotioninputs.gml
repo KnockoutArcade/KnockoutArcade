@@ -72,8 +72,8 @@ function SetMotionInputs(motionInputs, numberOfMotions, Special) //, setWindowSt
 			enhanced[i] = false;
 			progressInInputs[i] = -1;
 			ds_list_add(listOfInputs, directions);
-			inputWindowStart = Special.SpecialData[0].StartingFrame;
-			inputWindowEnd = Special.SpecialData[0].EndingFrame;
+			inputWindowStart[i] = Special.SpecialData[i].StartingFrame;
+			inputWindowEnd[i] = Special.SpecialData[i].EndingFrame;
 			changeFrame = Special.SpecialData[0].TransitionFrame;
 			changeImmediately = Special.SpecialData[0].TransitionImmediately;
 			requireSpecialButton = Special.SpecialData[0].ButtonPressRequired;

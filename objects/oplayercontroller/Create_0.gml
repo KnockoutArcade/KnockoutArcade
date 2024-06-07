@@ -92,6 +92,7 @@ verticalMoveDir = 0;
 grounded = true;
 
 // Variables for motion inputs
+// A lot of these values are arrays, since a move may have multiple enhancers with different values for each one
 inputSet = false;
 motionInput = []; // Determines the inputs to perform during each special move
 listOfInputs = ds_list_create();
@@ -100,8 +101,8 @@ enhanced = []; // Enhances the special move if the motion input is performed
 changeFrame = 999; // Frame when the move changes if you perform the motion input if changeImmediately is false
 changeImmediately = false; // If true, changes special move as soon as the input is performed
 // How long the player has to perform the special move
-inputWindowStart = 0;
-inputWindowEnd = 0;
+inputWindowStart = [];
+inputWindowEnd = [];
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
 requiredPosition = []; // The position that the player must be in in order to use an enhancer
 

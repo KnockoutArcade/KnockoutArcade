@@ -84,7 +84,7 @@ function PerformMotionInputs(attack)
 				if (progressInInputs[i] == array_length(currentMotionInput) - 1 && !inputPerformed)
 				{
 					// Reset the input if it is performed outside of the input window
-					if (animTimer < inputWindowStart || animTimer > inputWindowEnd)
+					if (animTimer < inputWindowStart[i] || animTimer > inputWindowEnd[i])
 					{
 						progressInInputs[i] = -1;
 					}

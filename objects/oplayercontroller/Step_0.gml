@@ -407,8 +407,8 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	ds_list_clear(listOfInputs);
 	progressInInputs = [];
 	enhanced = [];
-	inputWindowStart = 0;
-	inputWindowEnd = 0;
+	inputWindowStart = [];
+	inputWindowEnd = [];
 	changeFrame = 999;
 	changeImmediately = false;
 	requireSpecialButton = false;
@@ -419,8 +419,8 @@ else if (animTimer > inputWindowEnd)
 	motionInput = [];
 	ds_list_clear(listOfInputs);
 	progressInInputs = [];
-	inputWindowStart = 0;
-	inputWindowEnd = 0;
+	inputWindowStart = [];
+	inputWindowEnd = [];
 	requireSpecialButton = false;
 	requiredPosition = [];
 	

@@ -31,8 +31,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -58,8 +58,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial, 0);
 							if (spiritObject != noone)
@@ -81,8 +81,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial, 0);
 							if (spiritObject != noone)
@@ -104,8 +104,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial, 0);
 							if (spiritObject != noone)
@@ -127,8 +127,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedNeutralSpecial2, 0);
 							if (spiritObject != noone)
@@ -150,8 +150,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial2, 0);
 							if (spiritObject != noone)
@@ -173,8 +173,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial2, 0);
 							if (spiritObject != noone)
@@ -196,8 +196,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial2, 0);
 							if (spiritObject != noone)
@@ -219,8 +219,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -246,8 +246,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -275,8 +275,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -304,8 +304,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -333,8 +333,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
