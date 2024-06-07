@@ -441,3 +441,6 @@ isInStableState = false; // Whether the player is in a "stable" state or not
 // After the slowdown, the game will wait until each player enters a "stable"
 // state before playing the victory animation. A "stable" state is one where
 // the player is not moving at all. The stable states are: Idle, KnockedDown
+
+// Special Charge
+hasSpecialCharge = false; // For Beverly - Whether she has her down special charged or not

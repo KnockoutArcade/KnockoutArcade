@@ -4849,7 +4849,7 @@
           "ImageIndex": 0
         },
         {
-          "Length": 20,
+          "Length": 24,
           "ImageIndex": 1
         },
         {
@@ -4996,7 +4996,7 @@
           "NumpadInput": "5",
           "ButtonPressRequired": true,
           "StartingFrame": 1,
-          "EndingFrame": 20,
+          "EndingFrame": 24,
           "EnhancementMove": 2,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
@@ -5006,7 +5006,7 @@
         {
           "NumpadInput": "5",
           "ButtonPressRequired": true,
-          "StartingFrame": 20,
+          "StartingFrame": 25,
           "EndingFrame": 30,
           "EnhancementMove": 128,
           "TransitionImmediately": true,
@@ -5074,8 +5074,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "DeepBreathingScript",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -7217,8 +7217,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "DeepBreathingActivate",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -7875,6 +7875,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-07T13:35:06.5471365-07:00",
+  "LastModified": "2024-06-07T14:36:18.9289329-07:00",
   "LastModifiedBy": "creep"
 }
