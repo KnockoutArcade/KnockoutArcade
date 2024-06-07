@@ -414,30 +414,6 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	requireSpecialButton = false;
 	requiredPosition = [];
 }
-else if (animTimer > inputWindowEnd)
-{
-	motionInput = [];
-	ds_list_clear(listOfInputs);
-	progressInInputs = [];
-	inputWindowStart = [];
-	inputWindowEnd = [];
-	requireSpecialButton = false;
-	requiredPosition = [];
-	
-	var changeSet = false;
-	for (i = 0; i < array_length(enhanced); i++)
-	{
-		if (enhanced[i])
-		{
-			changeSet = true;
-		}
-	}
-	if (!changeSet)
-	{
-		changeFrame = 999;
-		changeImmediately = false;
-	}
-}
 else
 {
 	PerformMotionInputs(attack);
