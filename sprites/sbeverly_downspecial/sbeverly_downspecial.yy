@@ -63,7 +63,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 23,
-    "yorigin": 45,
+    "yorigin": 46,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBeverly_DownSpecial","path":"sprites/sBeverly_DownSpecial/sBeverly_DownSpecial.yy",},

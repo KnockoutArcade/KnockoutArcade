@@ -4990,8 +4990,31 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
+      "NumberOfEnhancements": 2,
+      "SpecialData": [
+        {
+          "NumpadInput": "5",
+          "ButtonPressRequired": true,
+          "StartingFrame": 1,
+          "EndingFrame": 20,
+          "EnhancementMove": 2,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        },
+        {
+          "NumpadInput": "5",
+          "ButtonPressRequired": true,
+          "StartingFrame": 20,
+          "EndingFrame": 30,
+          "EnhancementMove": 128,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -7137,13 +7160,13 @@
       "UID": "abb40bd0-4f3d-463f-aafc-e28ba7b5573c",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 128,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
+      "SpriteName": "sBeverly_DownSpecial_Success",
+      "Duration": 23,
       "NumberOfFrames": 0,
       "FrameData": [],
       "NumberOfHitboxes": 0,
@@ -7164,8 +7187,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 24,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -7217,13 +7249,13 @@
       "UID": "76a09866-bb08-4470-8175-9b79ff4c4aa8",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 2,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
+      "SpriteName": "sBeverly_DownSpecial_Fail",
+      "Duration": 30,
       "NumberOfFrames": 0,
       "FrameData": [],
       "NumberOfHitboxes": 0,
@@ -7244,8 +7276,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 31,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -7834,6 +7875,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-07T13:25:24.8097259-07:00",
+  "LastModified": "2024-06-07T13:35:06.5471365-07:00",
   "LastModifiedBy": "creep"
 }

@@ -55,7 +55,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 22,
-    "yorigin": 45,
+    "yorigin": 46,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sBeverly_DownSpecial_Success","path":"sprites/sBeverly_DownSpecial_Success/sBeverly_DownSpecial_Success.yy",},
