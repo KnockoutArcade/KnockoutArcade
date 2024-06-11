@@ -439,6 +439,7 @@
     {"id":{"name":"sChest","path":"sprites/sChest/sChest.yy",},"order":5,},
     {"id":{"name":"sJay_SC_CrouchingHeavy_MOCKUP_strip6","path":"sprites/sJay_SC_CrouchingHeavy_MOCKUP_strip6/sJay_SC_CrouchingHeavy_MOCKUP_strip6.yy",},"order":7,},
     {"id":{"name":"Cutscene_Wait","path":"scripts/Cutscene_Wait/Cutscene_Wait.yy",},"order":0,},
+    {"id":{"name":"UpSpecialDeepBreathing","path":"scripts/UpSpecialDeepBreathing/UpSpecialDeepBreathing.yy",},"order":5,},
     {"id":{"name":"sGunther_CrouchLight_mockup_strip7","path":"sprites/sGunther_CrouchLight_mockup_strip7/sGunther_CrouchLight_mockup_strip7.yy",},"order":7,},
     {"id":{"name":"sBottomlessPit","path":"sprites/sBottomlessPit/sBottomlessPit.yy",},"order":0,},
     {"id":{"name":"oRussel","path":"objects/oRussel/oRussel.yy",},"order":3,},
