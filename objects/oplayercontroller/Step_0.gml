@@ -335,7 +335,20 @@ if (verticalMoveDir == -1)
 {
 	storedSuperJump = true;
 	superJumpTimer = 6;
+	
+	// Handle Down-Up Charge
+	downUpChargeTimer++;
+	chargePartitionTimer = chargePartitionAmount;
 }
+else
+{
+	chargePartitionTimer--;
+	if (chargePartitionTimer <= 0 && !bufferCharge)
+	{
+		downUpChargeTimer = 0;
+	}
+}
+
 if (target != noone)
 {
 	framesSinceHitstun++;
@@ -1046,6 +1059,10 @@ switch state
 		invincible = false;
 		inAttackState = false;
 		
+		// Reset charge values
+		downUpChargeTimer = 0;
+		chargePartitionTimer = 0;
+		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		if (!timeStopActivated && !installActivated)
 		{
@@ -1145,6 +1162,10 @@ switch state
 		runningBackward = false;
 		invincible = false;
 		inAttackState = false;
+		
+		// Reset charge values
+		downUpChargeTimer = 0;
+		chargePartitionTimer = 0;
 		
 		vsp += fallSpeed;
 		
