@@ -2,12 +2,23 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function UpSpecialDeepBreathing()
 {
-	if (animTimer <= 1 && hasSpecialCharge)
+	if (animTimer <= 1) && ((hasSpecialCharge) || (downUpChargeTimer >= timeToCharge && superMeter >= 25))
 	{
-		hasSpecialCharge = false;
+		// If we inputted this move via charge motion
+		if (downUpChargeTimer >= timeToCharge)
+		{
+			superMeter -= 25;
+		}
+		else
+		{
+			hasSpecialCharge = false;
+		}
+		
 		isEXFlash = true;
 		
 		invincible = true;
+		
+		bufferCharge = false;
 		
 		state = eState.ENHANCED_UP_SPECIAL;
 		sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId;

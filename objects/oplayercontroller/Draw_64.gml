@@ -17,7 +17,7 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, hsp);
+	draw_text(20, 50, storedComboDamage);
 	draw_text(20, 70, downUpChargeTimer);
 	draw_text(20, 90, chargePartitionTimer);
 	

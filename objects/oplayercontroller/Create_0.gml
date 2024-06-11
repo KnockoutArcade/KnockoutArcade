@@ -447,6 +447,7 @@ hasSpecialCharge = false; // For Beverly - Whether she has her down special char
 
 // Charge Motion Vars
 downUpChargeTimer = 0; // Timer that dictates how long we have down charge for
+timeToCharge = 45; // The amount of time (in frames) it takes in order to aquire charge
 bufferCharge = false; // Whether the charge should be buffered through an action
 chargePartitionTimer = 0; // Timer that determines how long the charge is stored for
-chargePartitionAmount = 10; // The amount of time (in Frames) that charge is stored for
+chargePartitionAmount = 7; // The amount of time (in Frames) that charge is stored for
