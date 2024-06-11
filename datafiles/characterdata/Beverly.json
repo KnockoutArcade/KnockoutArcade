@@ -1927,8 +1927,8 @@
         "GravityScale": 1.0,
         "FallScale": 1.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "NeutralSpecialDeepBreathing",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -7907,6 +7907,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-11T12:26:24.7929193-07:00",
+  "LastModified": "2024-06-11T12:31:56.3249248-07:00",
   "LastModifiedBy": "creep"
 }
