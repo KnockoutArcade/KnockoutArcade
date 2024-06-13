@@ -119,6 +119,7 @@
     {"id":{"name":"sPlayer1Wins","path":"sprites/sPlayer1Wins/sPlayer1Wins.yy",},"order":1,},
     {"id":{"name":"sCharacterNames","path":"sprites/sCharacterNames/sCharacterNames.yy",},"order":1,},
     {"id":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"order":28,},
+    {"id":{"name":"sBeverly_RushCancel","path":"sprites/sBeverly_RushCancel/sBeverly_RushCancel.yy",},"order":62,},
     {"id":{"name":"oTimer","path":"objects/oTimer/oTimer.yy",},"order":4,},
     {"id":{"name":"oPlayerController","path":"objects/oPlayerController/oPlayerController.yy",},"order":0,},
     {"id":{"name":"sRussel_Crouching_Heavy","path":"sprites/sRussel_Crouching_Heavy/sRussel_Crouching_Heavy.yy",},"order":15,},
