@@ -18,7 +18,7 @@
   "Transcendent": false,
   "Health": 2,
   "ProjectileSprites": {
-    "Sprite": "sEnhancedProjectile",
+    "Sprite": "sBeverly_EnhancedFireball",
     "Destroy": ""
   },
   "BaseColor": {
@@ -121,7 +121,7 @@
       "AttackHitStop": 14,
       "AttackHitStun": 14,
       "AttackType": 1,
-      "BlockStun": 12.0,
+      "BlockStun": 7.0,
       "KnockBack": 3.0,
       "AirKnockbackVertical": -2.0,
       "AirKnockbackHorizontal": 3.0,
@@ -176,6 +176,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
-  "LastModified": "2024-06-06T20:37:50.9965489-07:00",
+  "LastModified": "2024-06-18T15:00:35.7636575-07:00",
   "LastModifiedBy": "creep"
 }

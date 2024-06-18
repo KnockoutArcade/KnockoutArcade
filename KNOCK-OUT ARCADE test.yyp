@@ -130,6 +130,7 @@
     {"id":{"name":"sndTestMusic","path":"sounds/sndTestMusic/sndTestMusic.yy",},"order":0,},
     {"id":{"name":"sRussel_Lose","path":"sprites/sRussel_Lose/sRussel_Lose.yy",},"order":42,},
     {"id":{"name":"sJayStandON_Pose_StandMedium_Mockup_strip3","path":"sprites/sJayStandON_Pose_StandMedium_Mockup_strip3/sJayStandON_Pose_StandMedium_Mockup_strip3.yy",},"order":24,},
+    {"id":{"name":"sBeverly_EnhancedFireball","path":"sprites/sBeverly_EnhancedFireball/sBeverly_EnhancedFireball.yy",},"order":5,},
     {"id":{"name":"sBeverly_DownSpecial","path":"sprites/sBeverly_DownSpecial/sBeverly_DownSpecial.yy",},"order":55,},
     {"id":{"name":"ConvertKeyIntoImageIndex","path":"scripts/ConvertKeyIntoImageIndex/ConvertKeyIntoImageIndex.yy",},"order":7,},
     {"id":{"name":"oGunther_JumpingMedium_Projectile","path":"objects/oGunther_JumpingMedium_Projectile/oGunther_JumpingMedium_Projectile.yy",},"order":2,},

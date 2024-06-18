@@ -1,12 +1,15 @@
 {
   "spriteId": {
-    "name": "sEnhancedProjectile",
-    "path": "sprites/sEnhancedProjectile/sEnhancedProjectile.yy",
+    "name": "sBeverly_EnhancedFireball",
+    "path": "sprites/sBeverly_EnhancedFireball/sBeverly_EnhancedFireball.yy",
   },
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sBeverly_EnhancedFireball",
+    "path": "sprites/sBeverly_EnhancedFireball/sBeverly_EnhancedFireball.yy",
+  },
   "persistent": false,
   "parentObjectId": {
     "name": "oProjectileBase",
