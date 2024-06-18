@@ -14,6 +14,12 @@ function HandleKnockdownState( _hardKnockdown)
 		{
 			state = eState.QUICK_GETUP;
 			sprite_index = sRussel_QuickGetup;
+			
+			// TEMPORARY
+			if (selectedCharacter.Name == "Beverly")
+			{
+				sprite_index = sBeverly_QuickGetup;
+			}
 		}
 		else
 		{

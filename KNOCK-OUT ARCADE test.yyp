@@ -115,6 +115,7 @@
     {"id":{"name":"SetMotionInputs","path":"scripts/SetMotionInputs/SetMotionInputs.yy",},"order":2,},
     {"id":{"name":"sfx_CharSel_Hover","path":"sounds/sfx_CharSel_Hover/sfx_CharSel_Hover.yy",},"order":1,},
     {"id":{"name":"sCommandLists_Russel_Supers","path":"sprites/sCommandLists_Russel_Supers/sCommandLists_Russel_Supers.yy",},"order":3,},
+    {"id":{"name":"sBeverly_QuickGetup","path":"sprites/sBeverly_QuickGetup/sBeverly_QuickGetup.yy",},"order":63,},
     {"id":{"name":"sRussel_Run_Backward","path":"sprites/sRussel_Run_Backward/sRussel_Run_Backward.yy",},"order":31,},
     {"id":{"name":"sPlayer1Wins","path":"sprites/sPlayer1Wins/sPlayer1Wins.yy",},"order":1,},
     {"id":{"name":"sCharacterNames","path":"sprites/sCharacterNames/sCharacterNames.yy",},"order":1,},

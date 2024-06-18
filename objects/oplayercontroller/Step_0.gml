@@ -2464,7 +2464,7 @@ switch state
 	
 	case eState.QUICK_GETUP : 
 	{
-		sprite_index = sRussel_QuickGetup;
+		//sprite_index = sRussel_QuickGetup;
 		
 		if (spiritObject != noone)
 		{
