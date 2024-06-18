@@ -46,6 +46,9 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	#region // Handle Destroy
 	
+	var previousAngle = image_angle;
+	image_angle = 0;
+	
 	// Slopes
 	if (place_meeting(x, y + vsp, oSlope) && sign(vsp) != -1)
 	{
@@ -245,6 +248,8 @@ if (!global.gameHalt && !global.freezeTimer)
 		}
 		instance_destroy();
 	}
+	
+	image_angle = previousAngle;
 	
 	#endregion
 	

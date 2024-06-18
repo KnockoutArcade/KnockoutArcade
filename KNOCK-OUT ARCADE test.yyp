@@ -304,6 +304,7 @@
     {"id":{"name":"sGunther_SideSpecial_mockup_strip8","path":"sprites/sGunther_SideSpecial_mockup_strip8/sGunther_SideSpecial_mockup_strip8.yy",},"order":15,},
     {"id":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"order":0,},
     {"id":{"name":"sVictoryScreen_OptionsSelection","path":"sprites/sVictoryScreen_OptionsSelection/sVictoryScreen_OptionsSelection.yy",},"order":2,},
+    {"id":{"name":"sBeverly_Fireball","path":"sprites/sBeverly_Fireball/sBeverly_Fireball.yy",},"order":4,},
     {"id":{"name":"oMainMenuIcons","path":"objects/oMainMenuIcons/oMainMenuIcons.yy",},"order":6,},
     {"id":{"name":"sfx_TestHeavyWhiff","path":"sounds/sfx_TestHeavyWhiff/sfx_TestHeavyWhiff.yy",},"order":14,},
     {"id":{"name":"sStageSelect_MusicNames_strip5","path":"sprites/sStageSelect_MusicNames_strip5/sStageSelect_MusicNames_strip5.yy",},"order":4,},

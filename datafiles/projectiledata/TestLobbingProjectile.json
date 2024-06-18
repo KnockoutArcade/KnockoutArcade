@@ -18,7 +18,7 @@
   "Transcendent": false,
   "Health": 1,
   "ProjectileSprites": {
-    "Sprite": "sTestProjectile",
+    "Sprite": "sBeverly_Fireball",
     "Destroy": ""
   },
   "BaseColor": {
@@ -108,6 +108,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2024-02-16T16:48:56.3809852-07:00",
+  "LastModified": "2024-06-18T11:13:52.3193909-07:00",
   "LastModifiedBy": "creep"
 }
