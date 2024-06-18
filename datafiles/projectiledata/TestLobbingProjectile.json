@@ -30,11 +30,31 @@
   "CopyCharacterPalette": false,
   "Character": "Beverly",
   "Palettes": [],
-  "NumberOfFrames": 1,
+  "NumberOfFrames": 6,
   "FrameData": [
     {
       "Length": 0,
       "ImageIndex": 0
+    },
+    {
+      "Length": 4,
+      "ImageIndex": 1
+    },
+    {
+      "Length": 7,
+      "ImageIndex": 2
+    },
+    {
+      "Length": 10,
+      "ImageIndex": 3
+    },
+    {
+      "Length": 13,
+      "ImageIndex": 4
+    },
+    {
+      "Length": 16,
+      "ImageIndex": 5
     }
   ],
   "NumberOfHitboxes": 1,
@@ -108,6 +128,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2024-06-18T11:13:52.3193909-07:00",
+  "LastModified": "2024-06-18T12:08:20.4803953-07:00",
   "LastModifiedBy": "creep"
 }

@@ -9,7 +9,8 @@ function PerformProjectile(playerOwner, spiritOwner)
 	var hitbox = 0;
 	if (hasLifetime)
 	{
-		// Animations
+		// Cutting this out since it's pretty unnessesary. We can just use the sprite's natural data.
+		/* Animations
 		for (var i = 0; i < selectedProjectile.NumberOfWindows; i++)
 		{
 			if (animTimer >= selectedProjectile.Window[i].Length)
@@ -17,6 +18,7 @@ function PerformProjectile(playerOwner, spiritOwner)
 				image_index = selectedProjectile.Window[i].ImageIndex;
 			}
 		}
+		*/
 
 		// Hitboxes
 		for (var i = 0; i < hitboxPropertiesCopy.NumberOfHitboxes; i++;)
