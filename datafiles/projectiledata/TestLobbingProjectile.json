@@ -19,7 +19,7 @@
   "Health": 1,
   "ProjectileSprites": {
     "Sprite": "sBeverly_Fireball",
-    "Destroy": ""
+    "Destroy": "sBeverly_FireballDissipate"
   },
   "BaseColor": {
     "UID": "098bdd54-18a9-474f-b613-487d125c4c37",
@@ -128,6 +128,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2024-06-19T13:18:33.0676223-07:00",
+  "LastModified": "2024-06-19T14:46:29.5002797-07:00",
   "LastModifiedBy": "creep"
 }

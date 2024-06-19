@@ -71,6 +71,16 @@ destroyScript = function ProjectileDestroyScript()
 		ds_list_clear(target.hitByGroup);
 	}
 	instance_destroy();
+	
+	// Create destroy sprite
+	var particle = instance_create_layer(x, y, "Particles", oParticles);
+	with (particle)
+	{
+		lifetime = 30;
+		sprite_index = other.selectedProjectile.Sprites.Destroy;
+		image_xscale = other.image_xscale;
+		image_angle = other.image_angle;
+	}
 }
 
 // When two projectiles meet, each one needs to run this script at the moment of impact

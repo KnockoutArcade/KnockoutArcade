@@ -550,6 +550,7 @@
     {"id":{"name":"sJay_UpSpecial2_Mockup_strip6","path":"sprites/sJay_UpSpecial2_Mockup_strip6/sJay_UpSpecial2_Mockup_strip6.yy",},"order":9,},
     {"id":{"name":"CancelIntoMove","path":"scripts/CancelIntoMove/CancelIntoMove.yy",},"order":1,},
     {"id":{"name":"sRussel_ForwardThrow","path":"sprites/sRussel_ForwardThrow/sRussel_ForwardThrow.yy",},"order":21,},
+    {"id":{"name":"sBeverly_FireballDissipate","path":"sprites/sBeverly_FireballDissipate/sBeverly_FireballDissipate.yy",},"order":0,},
     {"id":{"name":"sVictoryScreen_OptionsBase","path":"sprites/sVictoryScreen_OptionsBase/sVictoryScreen_OptionsBase.yy",},"order":0,},
     {"id":{"name":"NeutralSpecialDeepBreathing","path":"scripts/NeutralSpecialDeepBreathing/NeutralSpecialDeepBreathing.yy",},"order":4,},
     {"id":{"name":"BevEnhancedUpSpecial","path":"scripts/BevEnhancedUpSpecial/BevEnhancedUpSpecial.yy",},"order":6,},
@@ -686,6 +687,7 @@
     {"folderPath":"folders/Scripts/PlayerScripts/NonAttack.yy","order":1,"resourceVersion":"1.0","name":"NonAttack","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts.yy","order":44,"resourceVersion":"1.0","name":"SupplementaryAttackScripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts/Beverly.yy","order":1,"resourceVersion":"1.0","name":"Beverly","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Particle Effects/Projectiles.yy","order":9,"resourceVersion":"1.0","name":"Projectiles","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
