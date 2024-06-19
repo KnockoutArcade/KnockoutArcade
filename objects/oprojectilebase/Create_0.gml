@@ -73,7 +73,7 @@ destroyScript = function ProjectileDestroyScript()
 	instance_destroy();
 	
 	// Create destroy sprite
-	var particle = instance_create_layer(x, y, "Particles", oParticles);
+	var particle = instance_create_layer(x + hsp, y + vsp, "Particles", oParticles);
 	with (particle)
 	{
 		lifetime = 30;
