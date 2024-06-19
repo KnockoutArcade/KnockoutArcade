@@ -8,41 +8,9 @@ if (global.game_paused)
 
 if (!global.gameHalt && !global.freezeTimer)
 {
-	animTimer++;
-	
-	if (hasLifetime)
-	{
-		lifetime--;
-	}
 	
 	PerformProjectile(playerOwner, spiritOwner);
 	
-	// Calculate Traction
-	if (grounded)
-	{
-		if (abs(hsp) - groundTraction >= 0)
-		{
-			hsp += groundTraction * -sign(hsp);
-		}
-		else
-		{
-			hsp = 0;
-		}
-	}
-	else
-	{
-		if (abs(hsp) - airTraction >= 0)
-		{
-			hsp += airTraction * -sign(hsp);
-		}
-		else
-		{
-			hsp = 0;
-		}
-	}
-	
-	// Calculate Gravity
-	vsp += fallSpeed;
 	
 	#region // Handle Destroy
 	
@@ -54,19 +22,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		if (destroyOnFloor && numberOfBounces <= 0)
 		{
-			for (var i = 0; i < ds_list_size(hitboxID); i++)
-			{
-				with (ds_list_find_value(hitboxID, i))
-				{
-					lifetime = 0;
-				}
-			}
-			ds_list_clear(hitboxID);
-			if (target != noone)
-			{
-				ds_list_clear(target.hitByGroup);
-			}
-			instance_destroy();
+			destroyScript();
 		}
 		else if (bounceOnFloor)
 		{
@@ -81,19 +37,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		if (destroyOnWall && numberOfBounces <= 0)
 		{
-			for (var i = 0; i < ds_list_size(hitboxID); i++)
-			{
-				with (ds_list_find_value(hitboxID, i))
-				{
-					lifetime = 0;
-				}
-			}
-			ds_list_clear(hitboxID);
-			if (target != noone)
-			{
-				ds_list_clear(target.hitByGroup);
-			}
-			instance_destroy();
+			destroyScript();
 		}
 		else if (bounceOnWall)
 		{
@@ -115,19 +59,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	{
 		if (destroyOnFloor && numberOfBounces <= 0)
 		{
-			for (var i = 0; i < ds_list_size(hitboxID); i++)
-			{
-				with (ds_list_find_value(hitboxID, i))
-				{
-					lifetime = 0;
-				}
-			}
-			ds_list_clear(hitboxID);
-			if (target != noone)
-			{
-				ds_list_clear(target.hitByGroup);
-			}
-			instance_destroy();
+			destroyScript();
 		}
 		else if (bounceOnFloor)
 		{
@@ -146,19 +78,7 @@ if (!global.gameHalt && !global.freezeTimer)
 		{
 			if (destroyOnFloor && numberOfBounces <= 0)
 			{
-				for (var i = 0; i < ds_list_size(hitboxID); i++)
-				{
-					with (ds_list_find_value(hitboxID, i))
-					{
-						lifetime = 0;
-					}
-				}
-				ds_list_clear(hitboxID);
-				if (target != noone)
-				{
-					ds_list_clear(target.hitByGroup);
-				}
-				instance_destroy();
+				destroyScript();
 			}
 			else if (bounceOnFloor)
 			{
@@ -169,24 +89,7 @@ if (!global.gameHalt && !global.freezeTimer)
 		}
 	}
 	
-	
-	if (projectileHealth <= 0)
-	{
-		for (var i = 0; i < ds_list_size(hitboxID); i++)
-		{
-			with (ds_list_find_value(hitboxID, i))
-			{
-				lifetime = 0;
-			}
-		}
-		ds_list_clear(hitboxID);
-		if (target != noone)
-		{
-			ds_list_clear(target.hitByGroup);
-		}
-		instance_destroy();
-	}
-	
+	// Collision with other projectiles
 	if (place_meeting(x + (hsp * image_xscale), y, oProjectileBase) && !transcendent)
 	{
 		var collisionID = instance_place(x + (hsp * image_xscale), y, oProjectileBase);
@@ -198,61 +101,37 @@ if (!global.gameHalt && !global.freezeTimer)
 			{
 				with (collisionID)
 				{
-					collidedWithProjectile = true;
+					projectileMeetingScript(other.id);
 				}
 			
-				collidedWithProjectile = true;
+				projectileMeetingScript(collisionID);
 			}
 		}
 		else if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
 		{
 			with (collisionID)
 			{
-				collidedWithProjectile = true;
+				projectileMeetingScript(other.id);
 			}
 			
-			collidedWithProjectile = true;
+			projectileMeetingScript(collisionID);
 		}
 	}
 	
-	if (collidedWithProjectile)
-	{
-		for (var i = 0; i < ds_list_size(hitboxID); i++)
-		{
-			with (ds_list_find_value(hitboxID, i))
-			{
-				lifetime = 0;
-			}
-		}
-		ds_list_clear(hitboxID);
-		if (target != noone)
-		{
-			ds_list_clear(target.hitByGroup);
-		}
-		instance_destroy();
-	}
-	
+	// Lifetime Runs out
 	if (lifetime == 0 && hasLifetime)
 	{
-		for (var i = 0; i < ds_list_size(hitboxID); i++)
-		{
-			with (ds_list_find_value(hitboxID, i))
-			{
-				lifetime = 0;
-			}
-		}
-		ds_list_clear(hitboxID);
-		if (target != noone)
-		{
-			ds_list_clear(target.hitByGroup);
-		}
-		instance_destroy();
+		destroyScript();
 	}
 	
 	image_angle = previousAngle;
 	
 	#endregion
 	
-	x += hsp * image_xscale;
-	y += vsp;
+	if (hitstopTimer <= 0)
+	{
+		x += hsp * image_xscale;
+		y += vsp;
+	}
+	
 }

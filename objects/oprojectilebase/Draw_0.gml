@@ -218,6 +218,10 @@ if (copyCharacterPalette)
 
 draw_self();
 
+draw_text(x, y, projectileHealth);
+draw_text(x, y - 20, collidedWithProjectile);
+draw_text(x, y - 40, hitstopTimer);
+
 if (copyCharacterPalette)
 {
 	//shader_reset();
