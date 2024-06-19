@@ -501,6 +501,14 @@ function HandleHitboxCollision(ownerType)
 					//Allow Cancelling
 					ownerType.cancelable = true;
 					if (spirit != noone) spirit.cancelable = true;
+					
+					// Handle Projectile Multi-hits
+					if (isProjectile)
+					{
+						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
+						
+						owner.projectileMeetingScript(collision_list[| i].owner);
+					}
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -514,13 +522,6 @@ function HandleHitboxCollision(ownerType)
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
-					
-					// Handle Destroying Projectile
-					if (isProjectile)
-					{
-						instance_destroy();
-						instance_destroy(owner);
-					}
 				}
 			}
 		}
