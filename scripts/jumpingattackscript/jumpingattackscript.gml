@@ -8,6 +8,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	canBlock = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;

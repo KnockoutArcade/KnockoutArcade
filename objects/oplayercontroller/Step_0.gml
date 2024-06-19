@@ -132,7 +132,6 @@ else // Safegaurd in case an empty character is spawned
 }
 
 // Reset Vars
-canBlock = false;
 canTurnAround = true;
 projectileInvincible = false;
 isInStableState = false;
@@ -1058,6 +1057,7 @@ switch state
 		hasSpentDoubleJump = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		// Reset charge values
 		downUpChargeTimer = 0;
@@ -1162,6 +1162,7 @@ switch state
 		runningBackward = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		// Reset charge values
 		downUpChargeTimer = 0;
@@ -1223,6 +1224,7 @@ switch state
 	}
 	break;
 	
+	
 	case eState.JUMPSQUAT: 
 	{
 		cancelable = false;
@@ -1232,6 +1234,7 @@ switch state
 		isShortHopping = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 
 		hsp = jumpHsp;
 		
@@ -1312,7 +1315,6 @@ switch state
 	}
 	break;
 	
-	
 	case eState.JUMPING: 
 	{
 		animTimer = 0;
@@ -1323,6 +1325,7 @@ switch state
 		canTurnAround = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		if image_index > (image_number - 1) image_speed = 0;
 		else image_speed = 1;
@@ -2017,7 +2020,7 @@ switch state
 		hsp = 0;
 		grounded = true;
 		inAttackState = false;
-		
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.hold_Sprite;
 		
@@ -2069,6 +2072,7 @@ switch state
 	{
 		inAttackState = true;
 		cancelOnLanding = false;
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		
@@ -2106,6 +2110,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		canBlock = false;
 		
 		isGrabbed = true;
 	}
@@ -2115,6 +2120,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = true;
+		canBlock = false;
 		
 		sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 		image_index = 0;
@@ -2141,6 +2147,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = true;
+		canBlock = false;
 		
 		sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 		image_index = 0;
@@ -2174,6 +2181,7 @@ switch state
 		
 		grounded = true;
 		inAttackState = false;
+		canBlock = true;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -2198,6 +2206,7 @@ switch state
 		canTurnAround = false;
 		isEXFlash = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		if (!global.game_paused)
 		{
@@ -2299,6 +2308,7 @@ switch state
 		canTurnAround = false;
 		grounded = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		FAvictim = false;
 		
@@ -2324,6 +2334,7 @@ switch state
 		canTurnAround = false;
 		isInStableState = true;
 		inAttackState = false;
+		canBlock = false;
 		
 		cancelCombo = true;
 		
@@ -2374,6 +2385,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		cancelCombo = true;
 		
@@ -2420,6 +2432,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = true;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2464,8 +2477,6 @@ switch state
 	
 	case eState.QUICK_GETUP : 
 	{
-		//sprite_index = sRussel_QuickGetup;
-		
 		if (spiritObject != noone)
 		{
 			spiritObject.state = state;
@@ -2477,6 +2488,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = true;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2525,6 +2537,7 @@ switch state
 		canBlock = true;
 		cancelable = false;
 		inAttackState = false;
+		canBlock = true;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -2697,6 +2710,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -2747,6 +2761,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -2785,6 +2800,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;

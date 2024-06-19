@@ -275,6 +275,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Reset held opponent
 		owner.heldOpponent = noone;
 		
+		// Prevent the victim from blocking
+		collision_list.owner.canBlock = false;
+		
 		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
 		

@@ -8,6 +8,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	canBlock = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
