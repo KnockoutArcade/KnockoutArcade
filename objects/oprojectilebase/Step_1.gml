@@ -58,7 +58,7 @@ if (!global.game_paused && !global.gameHalt && !global.freezeTimer)
 		{
 			with (ds_list_find_value(hitboxID, i))
 			{
-				ds_list_clear(hasHit)
+				ds_list_clear(hasHit);
 			}
 		}
 		

@@ -9,7 +9,10 @@ if (global.game_paused)
 if (!global.gameHalt && !global.freezeTimer)
 {
 	
-	PerformProjectile(playerOwner, spiritOwner);
+	if (hitstopTimer <= 0)
+	{
+		PerformProjectile(playerOwner, spiritOwner);
+	}
 	
 	
 	#region // Handle Destroy
