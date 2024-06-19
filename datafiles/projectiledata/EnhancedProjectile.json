@@ -115,7 +115,7 @@
       "WidthOffset": -5,
       "HeightOffset": -10,
       "Group": 0,
-      "Damage": 10,
+      "Damage": 5,
       "MeterGain": 6.0,
       "ComboScaling": 1.0,
       "AttackHitStop": 9,
@@ -125,9 +125,9 @@
       "KnockBack": 3.0,
       "AirKnockbackVertical": -2.0,
       "AirKnockbackHorizontal": 3.0,
-      "Launches": false,
-      "LaunchKnockbackVertical": 0.0,
-      "LaunchKnockbackHorizontal": 0.0,
+      "Launches": true,
+      "LaunchKnockbackVertical": -2.0,
+      "LaunchKnockbackHorizontal": 1.0,
       "GravityScaling": 2.0,
       "Pushback": 2.0,
       "ParticleXOffset": 0,
@@ -139,15 +139,15 @@
       "UseHitScript": false,
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
-      "HitSound": "sfx_Heavy_Hit"
+      "HitSound": "sfx_Medium_Hit"
     }
   ],
   "CounterData": [
     {
       "CounterHitLevel": 2,
       "Group": 0,
-      "Damage": 12,
-      "MeterGain": 8.0,
+      "Damage": 6,
+      "MeterGain": 6.0,
       "ComboScaling": 1.0,
       "AttackHitStop": 16,
       "AttackHitStun": 16,
@@ -156,8 +156,8 @@
       "AirKnockbackHorizontal": 3.0,
       "Launches": true,
       "LaunchKnockbackVertical": -2.0,
-      "LaunchKnockbackHorizontal": 3.0,
-      "GravityScaling": 2.0,
+      "LaunchKnockbackHorizontal": 1.0,
+      "GravityScaling": 0.0,
       "Pushback": 1.0,
       "ParticleXOffset": 0,
       "ParticleYOffset": 0,
@@ -176,6 +176,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
-  "LastModified": "2024-06-19T12:12:06.8915064-07:00",
+  "LastModified": "2024-06-19T13:16:55.7803787-07:00",
   "LastModifiedBy": "creep"
 }
