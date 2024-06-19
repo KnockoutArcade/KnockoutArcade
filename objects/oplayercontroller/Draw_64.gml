@@ -34,7 +34,7 @@ else
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, hsp);
 	draw_text(750, 70, comboScaling);
-	draw_text(750, 90, storedComboDamage);
+	draw_text(750, 90, ds_list_size(projectileHitByGroup));
 	
 	
 }

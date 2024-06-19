@@ -49,9 +49,10 @@ hitboxProperties.RehitData = selectedProjectile.RehitData;
 
 hitboxID = ds_list_create(); // The IDs of this projectile's hitboxes
 
-collidedWithProjectile = false; // Whether this projectile has collided with another
 collidedWithProjectileList = ds_list_create(); // The list of projectiles this has recently hit
 processedWithProjectileList = ds_list_create(); // The list of projectiles we have processed collisions for
+//collidedWithPlayerList = ds_list_create(); // The list of players/objects this has hit
+
 
 hitstopTimer = 0; // How long this projectile is in hitstop for
 

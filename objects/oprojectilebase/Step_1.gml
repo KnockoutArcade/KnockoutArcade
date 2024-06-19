@@ -42,9 +42,31 @@ if (!global.game_paused && !global.gameHalt && !global.freezeTimer)
 		// Calculate Gravity
 		vsp += fallSpeed;
 		
+		// With each of the things we've collided with, clear it's projectileHitBy list
+		for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)
+		{
+			var objectToSearchFor = ds_list_find_value(collidedWithProjectileList, i);
+			
+			if (variable_instance_exists(objectToSearchFor, "projectileHitByGroup"))
+			{
+				ds_list_clear(objectToSearchFor.projectileHitByGroup);
+			}
+		}
+		
+		// With all our hitboxes, clear out their hasHit lists
+		for (var i = 0; i < ds_list_size(hitboxID); i++)
+		{
+			with (ds_list_find_value(hitboxID, i))
+			{
+				ds_list_clear(hasHit)
+			}
+		}
+		
 		// reset collision Lists
 		ds_list_clear(collidedWithProjectileList);
 		ds_list_clear(processedWithProjectileList);
+		
+		
 		
 		image_speed = 1;
 		

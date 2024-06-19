@@ -312,6 +312,8 @@ function HandleHitboxCollision(ownerType)
 					if (isProjectile)
 					{
 						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
+						
+						owner.projectileMeetingScript(collision_list[| i].owner);
 					}
 
 					// Depth Sorting
@@ -331,14 +333,6 @@ function HandleHitboxCollision(ownerType)
 
 					//Play sound effect
 					audio_play_sound(sfx_blocking, 1, false);
-					
-					
-					// Handle Destroying Projectile
-					if (isProjectile)
-					{
-						instance_destroy();
-						instance_destroy(owner);
-					}
 				}
 				else if (attackProperty.AttackType == eAttackType.HITGRAB && // Hit Grabs
 					collision_list[| i].owner.state != eState.THROW_TECH &&
