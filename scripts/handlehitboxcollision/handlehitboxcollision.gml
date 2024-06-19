@@ -430,6 +430,7 @@ function HandleHitboxCollision(ownerType)
 					if (collision_list[| i].spirit != noone) 
 					{
 						collision_list[| i].spirit.state = eState.HITSTOP;
+						
 					}
 
 					

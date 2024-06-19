@@ -303,9 +303,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.inAttackState = false;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+			collision_list.owner.spiritObject.inAttackState = false;
 		}
 		
 		// Play sound effect
@@ -543,9 +545,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.inAttackState = false;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+			collision_list.owner.spiritObject.inAttackState = false;
 		}
 		
 		//Draw hit effect
