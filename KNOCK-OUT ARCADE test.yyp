@@ -303,6 +303,7 @@
     {"id":{"name":"sFightTrigger","path":"sprites/sFightTrigger/sFightTrigger.yy",},"order":8,},
     {"id":{"name":"SummonInSpiritOff","path":"scripts/SummonInSpiritOff/SummonInSpiritOff.yy",},"order":2,},
     {"id":{"name":"sGunther_SideSpecial_mockup_strip8","path":"sprites/sGunther_SideSpecial_mockup_strip8/sGunther_SideSpecial_mockup_strip8.yy",},"order":15,},
+    {"id":{"name":"sFireballCollision","path":"sprites/sFireballCollision/sFireballCollision.yy",},"order":1,},
     {"id":{"name":"oParticles","path":"objects/oParticles/oParticles.yy",},"order":0,},
     {"id":{"name":"sVictoryScreen_OptionsSelection","path":"sprites/sVictoryScreen_OptionsSelection/sVictoryScreen_OptionsSelection.yy",},"order":2,},
     {"id":{"name":"sBeverly_Fireball","path":"sprites/sBeverly_Fireball/sBeverly_Fireball.yy",},"order":4,},

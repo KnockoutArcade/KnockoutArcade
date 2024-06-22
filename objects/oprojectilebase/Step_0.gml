@@ -107,7 +107,7 @@ if (!global.gameHalt && !global.freezeTimer)
 					projectileMeetingScript(other.id);
 				}
 			
-				projectileMeetingScript(collisionID);
+				projectileMeetingScript(collisionID, true);
 			}
 		}
 		else if (playerOwner != collisionID.playerOwner && spiritOwner != collisionID.spiritOwner)
@@ -117,7 +117,7 @@ if (!global.gameHalt && !global.freezeTimer)
 				projectileMeetingScript(other.id);
 			}
 			
-			projectileMeetingScript(collisionID);
+			projectileMeetingScript(collisionID, true);
 		}
 	}
 	

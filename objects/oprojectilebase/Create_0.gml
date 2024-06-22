@@ -84,7 +84,7 @@ destroyScript = function ProjectileDestroyScript()
 }
 
 // When two projectiles meet, each one needs to run this script at the moment of impact
-projectileMeetingScript = function ProjectileMeetingScript(collisionID)
+projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCollisionParticle = false)
 {
 	// If we've already processed this object, exit
 	if (ds_list_find_index(processedWithProjectileList, collisionID) != -1)
@@ -123,6 +123,18 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID)
 	
 	// Decrease projectile health
 	projectileHealth -= 1;
+	
+	// If we need to create a collision particle, do so
+	if (createCollisionParticle)
+	{
+		var particle = instance_create_layer((x + collisionID.x) / 2, (y + collisionID.y) / 2, "Particles", oParticles);
+		with (particle)
+		{
+			lifetime = 30;
+			sprite_index = sFireballCollision;
+		}
+	}
+	
 	
 	if (projectileHealth <= 0)
 	{
