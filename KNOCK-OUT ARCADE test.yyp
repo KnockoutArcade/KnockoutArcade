@@ -251,6 +251,7 @@
     {"id":{"name":"sJay_SideSpecial_mockup_strip5","path":"sprites/sJay_SideSpecial_mockup_strip5/sJay_SideSpecial_mockup_strip5.yy",},"order":7,},
     {"id":{"name":"Cutscene_ENDSCENE","path":"scripts/Cutscene_ENDSCENE/Cutscene_ENDSCENE.yy",},"order":3,},
     {"id":{"name":"sFightTransitionScreenKOText","path":"sprites/sFightTransitionScreenKOText/sFightTransitionScreenKOText.yy",},"order":1,},
+    {"id":{"name":"sBeverly_Super","path":"sprites/sBeverly_Super/sBeverly_Super.yy",},"order":64,},
     {"id":{"name":"oPlayerHurtbox","path":"objects/oPlayerHurtbox/oPlayerHurtbox.yy",},"order":1,},
     {"id":{"name":"sRussel_Run_Forward","path":"sprites/sRussel_Run_Forward/sRussel_Run_Forward.yy",},"order":30,},
     {"id":{"name":"sBeverly_JumpLight_Mockup_strip3","path":"sprites/sBeverly_JumpLight_Mockup_strip3/sBeverly_JumpLight_Mockup_strip3.yy",},"order":16,},

@@ -7946,53 +7946,53 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_NSpecial_MOCKUP",
+      "SpriteName": "sBeverly_Super",
       "Duration": 90,
       "NumberOfFrames": 11,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 35,
+          "Length": 3,
           "ImageIndex": 1
+        },
+        {
+          "Length": 6,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 9,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 33,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 6
         },
         {
           "Length": 39,
-          "ImageIndex": 2
+          "ImageIndex": 7
         },
         {
-          "Length": 43,
-          "ImageIndex": 1
+          "Length": 42,
+          "ImageIndex": 8
         },
         {
-          "Length": 47,
-          "ImageIndex": 2
+          "Length": 46,
+          "ImageIndex": 9
         },
         {
-          "Length": 51,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 55,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 59,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 63,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 67,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 71,
-          "ImageIndex": 2
+          "Length": 52,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 0,
@@ -8158,6 +8158,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-18T14:57:33.5913664-07:00",
+  "LastModified": "2024-06-23T14:45:12.8009682-07:00",
   "LastModifiedBy": "creep"
 }
