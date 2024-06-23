@@ -7947,8 +7947,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Super",
-      "Duration": 80,
-      "NumberOfFrames": 14,
+      "Duration": 85,
+      "NumberOfFrames": 19,
       "FrameData": [
         {
           "Length": 0,
@@ -7963,48 +7963,68 @@
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 9,
           "ImageIndex": 3
         },
         {
-          "Length": 30,
+          "Length": 15,
           "ImageIndex": 4
         },
         {
-          "Length": 33,
+          "Length": 21,
           "ImageIndex": 5
         },
         {
-          "Length": 36,
+          "Length": 30,
           "ImageIndex": 6
         },
         {
-          "Length": 39,
+          "Length": 33,
           "ImageIndex": 7
         },
         {
-          "Length": 42,
+          "Length": 36,
           "ImageIndex": 8
         },
         {
-          "Length": 45,
+          "Length": 39,
           "ImageIndex": 9
         },
         {
-          "Length": 50,
+          "Length": 42,
           "ImageIndex": 10
         },
         {
-          "Length": 57,
+          "Length": 46,
           "ImageIndex": 11
         },
         {
-          "Length": 60,
+          "Length": 50,
           "ImageIndex": 12
         },
         {
-          "Length": 65,
+          "Length": 56,
           "ImageIndex": 13
+        },
+        {
+          "Length": 60,
+          "ImageIndex": 14
+        },
+        {
+          "Length": 64,
+          "ImageIndex": 15
+        },
+        {
+          "Length": 68,
+          "ImageIndex": 16
+        },
+        {
+          "Length": 72,
+          "ImageIndex": 17
+        },
+        {
+          "Length": 76,
+          "ImageIndex": 18
         }
       ],
       "NumberOfHitboxes": 0,
@@ -8146,6 +8166,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-23T15:48:40.0238991-07:00",
+  "LastModified": "2024-06-23T16:25:38.5919041-07:00",
   "LastModifiedBy": "creep"
 }
