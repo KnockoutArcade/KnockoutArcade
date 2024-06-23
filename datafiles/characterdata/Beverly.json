@@ -7947,8 +7947,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Super",
-      "Duration": 90,
-      "NumberOfFrames": 11,
+      "Duration": 80,
+      "NumberOfFrames": 14,
       "FrameData": [
         {
           "Length": 0,
@@ -7963,7 +7963,7 @@
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
@@ -7987,12 +7987,24 @@
           "ImageIndex": 8
         },
         {
-          "Length": 46,
+          "Length": 45,
           "ImageIndex": 9
         },
         {
-          "Length": 52,
+          "Length": 50,
           "ImageIndex": 10
+        },
+        {
+          "Length": 57,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 60,
+          "ImageIndex": 12
+        },
+        {
+          "Length": 65,
+          "ImageIndex": 13
         }
       ],
       "NumberOfHitboxes": 0,
@@ -8032,34 +8044,10 @@
           "HeightOffset": 0
         }
       ],
-      "NumberOfProjectiles": 5,
+      "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
           "SpawnFrame": 35,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 43,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 51,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 59,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 67,
           "SpawnXOffset": 10,
           "SpawnYOffset": -10,
           "ProjectileObject": "TestLobbingProjectile"
@@ -8158,6 +8146,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-23T14:45:12.8009682-07:00",
+  "LastModified": "2024-06-23T15:48:40.0238991-07:00",
   "LastModifiedBy": "creep"
 }
