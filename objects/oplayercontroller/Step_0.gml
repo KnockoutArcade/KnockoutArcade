@@ -1925,6 +1925,14 @@ switch state
 			}
 		}
 		
+		
+		// Create speed trail
+		if (!instance_exists(oSuperFlashBackground))
+		{
+			SpeedTrail(0.6, 0.06, 5);
+		}
+		
+		
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1935,8 +1943,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
 		}
 		
-		// Create speed trail
-		SpeedTrail(0.6, 0.06, 5);
+		
 		
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
