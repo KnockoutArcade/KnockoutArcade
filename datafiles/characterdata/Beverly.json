@@ -7948,7 +7948,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Super",
       "Duration": 85,
-      "NumberOfFrames": 19,
+      "NumberOfFrames": 22,
       "FrameData": [
         {
           "Length": 0,
@@ -7967,64 +7967,76 @@
           "ImageIndex": 3
         },
         {
-          "Length": 15,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 21,
+          "Length": 15,
           "ImageIndex": 5
         },
         {
-          "Length": 30,
+          "Length": 18,
           "ImageIndex": 6
         },
         {
-          "Length": 33,
+          "Length": 21,
           "ImageIndex": 7
         },
         {
-          "Length": 36,
+          "Length": 24,
           "ImageIndex": 8
         },
         {
-          "Length": 39,
+          "Length": 30,
           "ImageIndex": 9
         },
         {
-          "Length": 42,
+          "Length": 33,
           "ImageIndex": 10
         },
         {
-          "Length": 46,
+          "Length": 36,
           "ImageIndex": 11
         },
         {
-          "Length": 50,
+          "Length": 39,
           "ImageIndex": 12
         },
         {
-          "Length": 56,
+          "Length": 42,
           "ImageIndex": 13
         },
         {
-          "Length": 60,
+          "Length": 45,
           "ImageIndex": 14
         },
         {
-          "Length": 64,
+          "Length": 49,
           "ImageIndex": 15
         },
         {
-          "Length": 68,
+          "Length": 55,
           "ImageIndex": 16
         },
         {
-          "Length": 72,
+          "Length": 59,
           "ImageIndex": 17
         },
         {
-          "Length": 76,
+          "Length": 63,
           "ImageIndex": 18
+        },
+        {
+          "Length": 67,
+          "ImageIndex": 19
+        },
+        {
+          "Length": 71,
+          "ImageIndex": 20
+        },
+        {
+          "Length": 75,
+          "ImageIndex": 21
         }
       ],
       "NumberOfHitboxes": 0,
@@ -8166,6 +8178,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-23T16:25:38.5919041-07:00",
+  "LastModified": "2024-06-24T12:00:05.8227832-07:00",
   "LastModifiedBy": "creep"
 }
