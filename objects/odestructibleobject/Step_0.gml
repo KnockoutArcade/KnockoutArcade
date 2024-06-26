@@ -37,6 +37,10 @@ switch (state)
 					knockbackVel = 0;
 				}
 			} 
+			else
+			{
+				knockbackVel = 0;
+			}
 			
 			if (hitstun > 0)
 			{

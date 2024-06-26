@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, storedComboDamage);
 	draw_text(20, 70, canBlock);
-	draw_text(20, 90, hitstop);
+	draw_text(20, 90, comboScaling);
 	
 } 
 else 
@@ -34,7 +34,7 @@ else
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, canBlock);
 	draw_text(750, 70, hitstop);
-	draw_text(750, 90, ds_list_size(projectileHitByGroup));
+	draw_text(750, 90, comboScaling);
 	
 	
 }
