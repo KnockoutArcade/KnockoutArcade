@@ -137,6 +137,7 @@
     {"id":{"name":"sPauseMenu_OptionsMenu","path":"sprites/sPauseMenu_OptionsMenu/sPauseMenu_OptionsMenu.yy",},"order":10,},
     {"id":{"name":"sStageSelect_Portraits1","path":"sprites/sStageSelect_Portraits1/sStageSelect_Portraits1.yy",},"order":2,},
     {"id":{"name":"sFightTransitionScreenBase","path":"sprites/sFightTransitionScreenBase/sFightTransitionScreenBase.yy",},"order":0,},
+    {"id":{"name":"sBeverly_SuperBall","path":"sprites/sBeverly_SuperBall/sBeverly_SuperBall.yy",},"order":6,},
     {"id":{"name":"GroundedAttackScript","path":"scripts/GroundedAttackScript/GroundedAttackScript.yy",},"order":1,},
     {"id":{"name":"sLevelCompleteNumbers","path":"sprites/sLevelCompleteNumbers/sLevelCompleteNumbers.yy",},"order":5,},
     {"id":{"name":"sCharSel_Buttons","path":"sprites/sCharSel_Buttons/sCharSel_Buttons.yy",},"order":2,},
@@ -351,6 +352,7 @@
     {"id":{"name":"sGuntherWins","path":"sprites/sGuntherWins/sGuntherWins.yy",},"order":3,},
     {"id":{"name":"sRussel_NSpecial","path":"sprites/sRussel_NSpecial/sRussel_NSpecial.yy",},"order":28,},
     {"id":{"name":"sRussel_Standing_Light","path":"sprites/sRussel_Standing_Light/sRussel_Standing_Light.yy",},"order":1,},
+    {"id":{"name":"oSuperExerciseBall","path":"objects/oSuperExerciseBall/oSuperExerciseBall.yy",},"order":4,},
     {"id":{"name":"oRoundCounter","path":"objects/oRoundCounter/oRoundCounter.yy",},"order":2,},
     {"id":{"name":"sConstructionNPC1c","path":"sprites/sConstructionNPC1c/sConstructionNPC1c.yy",},"order":2,},
     {"id":{"name":"sCharSel_BackgroundText","path":"sprites/sCharSel_BackgroundText/sCharSel_BackgroundText.yy",},"order":1,},
@@ -711,6 +713,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"ConstructionGuy.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":".json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"EnhancedProjectile.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"BeverlySuperBall.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",

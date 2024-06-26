@@ -265,6 +265,10 @@ function PerformAttack(Action, createdBySpirit)
 				{
 					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oEnhancedProjectile);
 				}
+				else if (Action.ProjectileData[i].ProjectileObject == "BeverlySuperBall")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oSuperExerciseBall);
+				}
 				Projectile.depth = depth - 5;
 				with (Projectile)
 				{
