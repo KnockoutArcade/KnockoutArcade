@@ -7,10 +7,10 @@ draw_rectangle(740, 0, 800, 100, false);
 draw_set_alpha(1);
 draw_set_color(c_white);
 	
-draw_text(750, 10, state);
-draw_text(750, 30, knockbackVel);
-//draw_text(750, 50, canBlock);
-//draw_text(750, 70, hitstop);
+//draw_text(750, 10, duration);
+draw_text(750, 30, hsp);
+draw_text(750, 50, vsp);
+draw_text(750, 70, grounded);
 //draw_text(750, 90, comboScaling);
 
 

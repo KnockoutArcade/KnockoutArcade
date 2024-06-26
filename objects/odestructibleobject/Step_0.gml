@@ -33,7 +33,19 @@ switch (state)
 				}
 				else
 				{
-					hsp = 0;
+					if (!doesBounceOnTerrain) 
+					{
+						hsp = 0;
+					}
+					else
+					{
+						hsp = hsp * bounceDampeningFactor;
+						
+						if (abs(hsp) <= 0.1)
+						{
+							hsp = 0;
+						}
+					}
 					knockbackVel = 0;
 				}
 			} 
@@ -180,10 +192,24 @@ if (state != eState.HITSTOP)
 	
 		if (state != eState.HITSTOP)
 		{
-			vsp = 0;
+			// Handle bouncing off of terrain
+			if (!doesBounceOnTerrain)
+			{
+				vsp = 0;
+			}
+			else
+			{
+				vsp = -vsp * bounceDampeningFactor;
+				
+				if (abs(vsp) <= 0.5)
+				{
+					vsp = 0;
+				}
+			}
+			
 		}
 		
-		if (!grounded) 
+		if (!grounded && vsp == 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -198,7 +224,21 @@ if (state != eState.HITSTOP)
 		{
 			x += sign(hsp);
 		}
-		hsp = 0;
+		
+		// Handle bouncing off of terrain
+		if (!doesBounceOnTerrain)
+		{
+			hsp = 0;
+		}
+		else
+		{
+			hsp = -hsp * bounceDampeningFactor;
+		
+			if (abs(hsp) <= 0.1)
+			{
+				hsp = 0;
+			}
+		}
 	}
 	
 	if (place_meeting(x, y+vsp+fallSpeed, oWall))
@@ -211,8 +251,22 @@ if (state != eState.HITSTOP)
 			y += sign(vsp);
 		}
 		
-		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+		// Handle bouncing off of terrain
+		if (!doesBounceOnTerrain)
+		{
+			vsp = 0;
+		}
+		else
+		{
+			vsp = -vsp * bounceDampeningFactor;
+			
+			if (abs(vsp) <= 0.5)
+			{
+				vsp = 0;
+			}
+		}
+			
+		if (!grounded && vsp == 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -244,8 +298,22 @@ if (state != eState.HITSTOP)
 					y += sign(vsp);
 				}
 		
-				vsp = 0;
-				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+				// Handle bouncing off of terrain
+				if (!doesBounceOnTerrain)
+				{
+					vsp = 0;
+				}
+				else
+				{
+					vsp = -vsp * bounceDampeningFactor;
+				
+					if (abs(vsp) <= 0.5)
+					{
+						vsp = 0;
+					}
+				}
+				
+				if (!grounded && vsp == 0) 
 				{
 					state = eState.IDLE;
 					grounded = true;
