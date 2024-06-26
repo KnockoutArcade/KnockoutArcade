@@ -186,6 +186,15 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		}
 		
+		// If an object is set to always get launched, set it as being airborne.
+		if (collision_list.owner.isDestructibleObject)
+		{
+			if (collision_list.owner.alwaysLaunchAirborne)
+			{
+				collision_list.owner.grounded = false;
+			}
+		}
+		
 		if (!collision_list.owner.grounded) // On Air hit, set knockback velocity
 		{
 			// Upwards velocity (affected by gravity scaling)
@@ -456,7 +465,16 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		{
 			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
 		}
-					
+		
+		// If an object is set to always get launched, set it as being airborne.
+		if (collision_list.owner.isDestructibleObject)
+		{
+			if (collision_list.owner.alwaysLaunchAirborne)
+			{
+				collision_list.owner.grounded = false;
+			}
+		}
+		
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));

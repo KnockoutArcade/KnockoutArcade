@@ -3,6 +3,12 @@
 
 event_inherited();
 
+gravityScaling = 0;
 
+duration--;
 
-
+if (duration <= 0)
+{
+	instance_destroy(hurtbox);
+	instance_destroy();
+}

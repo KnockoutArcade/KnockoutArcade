@@ -18,3 +18,5 @@ for (var i = 0; i < global.numberOfProjectiles; i++;)
 event_inherited();
 
 copyCharacterPalette = false;
+
+duration = 60 * 11; // The amount of time (in frames) that this object exists for
