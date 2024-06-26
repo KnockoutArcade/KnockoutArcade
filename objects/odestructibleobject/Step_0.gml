@@ -165,6 +165,23 @@ if (state != eState.HITSTOP)
 		pushbackVel--;
 	}
 	
+	// Collision with Sides of the screen
+	if (remainOnScreen)
+	{
+		if (!doesBounceOnTerrain)
+		{
+			// Clamp to the screen (with some buffer room)
+			x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		}
+		else if (x > global.camObj.x+75 || x < global.camObj.x-75)
+		{
+			hsp = -hsp * bounceDampeningFactor;
+			
+			// Clamp to the screen (with some buffer room)
+			x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		}
+	}
+	
 	
 	// Using y + 2 so that if this object is going downhill on a slope, they can stay snapped to the surface
 	// Otherwise, this object would jitter as they went down
