@@ -17,6 +17,4 @@ for (var i = 0; i < global.numberOfProjectiles; i++;)
 
 event_inherited();
 
-
-
-
+copyCharacterPalette = false;
