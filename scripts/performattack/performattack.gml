@@ -227,9 +227,9 @@ function PerformAttack(Action, createdBySpirit)
 					{
 						ds_list_clear(hostObject.target.hitByGroup);
 					}
-					else if (target != noone)
+					else 
 					{
-						ds_list_clear(target.hitByGroup);
+						ClearVictimHitByGroups();
 					}
 				}
 			}

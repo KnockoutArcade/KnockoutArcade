@@ -82,10 +82,14 @@ function HandleHitboxCollision(ownerType)
 			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && gotHitBy == -1 && hasThisProjectileAlreadyHitTarget == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
-				// If we're hitting a destructable object, then
+				// If we're hitting a destructable object, then add that to its own list
 				if (!collision_list[| i].owner.isDestructibleObject)
 				{
 					ownerType.target = collision_list[| i].owner.id;
+				}
+				else
+				{
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner.id);
 				}
 
 				// Throw Teching

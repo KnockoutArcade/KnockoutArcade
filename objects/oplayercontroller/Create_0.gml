@@ -308,6 +308,16 @@ projectileHitByGroup = ds_list_create();
 ds_list_clear(projectileHitByGroup);
 // Note: This should be cleared any time the player exits hitstun.
 
+// This list contains all of the destructible objects we've hit recently
+objectsHitList = ds_list_create();
+ds_list_clear(objectsHitList);
+// Note: scripts that clear hitByGroup:
+// - Step 
+// - CancelIntoMove
+// - PressAttackButton
+// - PerformAttack
+// probably more?
+
 toggleIdleBlock = false;
 cancelable = false;
 canBlock = false;

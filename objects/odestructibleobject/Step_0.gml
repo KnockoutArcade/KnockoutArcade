@@ -73,7 +73,6 @@ switch (state)
 				{
 					instance_destroy(wallCollisionBox);
 				}
-				ds_list_destroy(hitByGroup);
 				state = eState.OBJECT_DESTROYED;
 				oPlayerController.target = noone;
 			}

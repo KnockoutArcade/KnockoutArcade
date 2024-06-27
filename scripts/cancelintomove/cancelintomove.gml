@@ -15,10 +15,7 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	}
 	
 	ds_list_clear(hitByGroup);
-	if (target != noone)
-	{
-		ds_list_clear(target.hitByGroup);
-	}
+	ClearVictimHitByGroups();
 	
 	// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
 	var allHurtboxes = [];

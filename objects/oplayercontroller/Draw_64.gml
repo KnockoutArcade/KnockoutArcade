@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, combo);
 	draw_text(20, 50, storedComboDamage);
 	draw_text(20, 70, target);
-	draw_text(20, 90, comboScaling);
+	draw_text(20, 90, ds_list_size(objectsHitList));
 	
 } 
 else 

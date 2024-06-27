@@ -552,6 +552,7 @@
     {"id":{"name":"SetupGame","path":"scripts/SetupGame/SetupGame.yy",},"order":2,},
     {"id":{"name":"sBeverly_Hurt","path":"sprites/sBeverly_Hurt/sBeverly_Hurt.yy",},"order":23,},
     {"id":{"name":"sJay_UpSpecial2_Mockup_strip6","path":"sprites/sJay_UpSpecial2_Mockup_strip6/sJay_UpSpecial2_Mockup_strip6.yy",},"order":9,},
+    {"id":{"name":"ClearVictimHitByGroups","path":"scripts/ClearVictimHitByGroups/ClearVictimHitByGroups.yy",},"order":1,},
     {"id":{"name":"CancelIntoMove","path":"scripts/CancelIntoMove/CancelIntoMove.yy",},"order":1,},
     {"id":{"name":"sRussel_ForwardThrow","path":"sprites/sRussel_ForwardThrow/sRussel_ForwardThrow.yy",},"order":21,},
     {"id":{"name":"sBeverly_FireballDissipate","path":"sprites/sBeverly_FireballDissipate/sBeverly_FireballDissipate.yy",},"order":0,},
