@@ -360,7 +360,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		// Combo Scaling
-		owner.playerOwner.combo++; // Add 1 to our combo length
+		if (!collision_list.owner.isDestructibleObject)
+		{
+			owner.playerOwner.combo++; // Add 1 to our combo length
+		}
 		var scaledDamage = attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.playerOwner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
@@ -371,7 +374,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
 		} // increase the level of scaling for the combo
-		else if (owner.playerOwner.combo == 2)
+		else if (owner.playerOwner.combo == 2 && !collision_list.owner.isDestructibleObject)
 		{
 			owner.playerOwner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
@@ -564,7 +567,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		ds_list_add(collision_list.owner.projectileHitByGroup, id);
 		
 		// Handle Hitstop
-		owner.hitstop = attackProperty.AttackHitStop;
+		//owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.inAttackState = false;
 		if (collision_list.owner.spiritObject != noone) 

@@ -321,7 +321,7 @@ function HandleHitboxCollision(ownerType)
 					{
 						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
 						
-						owner.projectileMeetingScript(collision_list[| i].owner);
+						if (owner.projectileHealth > 0) owner.projectileMeetingScript(collision_list[| i].owner);
 					}
 
 					// Depth Sorting
@@ -514,7 +514,7 @@ function HandleHitboxCollision(ownerType)
 					{
 						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
 						
-						owner.projectileMeetingScript(collision_list[| i].owner);
+						if (owner.projectileHealth > 0) owner.projectileMeetingScript(collision_list[| i].owner);
 					}
 
 					// Depth Sorting

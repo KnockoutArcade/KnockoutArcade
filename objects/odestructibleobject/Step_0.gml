@@ -61,6 +61,7 @@ switch (state)
 			else
 			{
 				ds_list_clear(hitByGroup);
+				ds_list_clear(projectileHitByGroup);
 			}
 			
 			// Destroy this object if at 0 hp and this object has no unique death properties
