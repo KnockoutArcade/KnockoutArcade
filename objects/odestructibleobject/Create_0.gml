@@ -89,7 +89,7 @@ state = eState.IDLE;
 	comboCounterID = noone;
 	comboScaling = 0; // How much the next hit will be scaled
 	startCombo = false;
-	cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
+	cancelCombo = false; // Combo Counter shouldn't show up on Destructable Objects
 	
 	// Gravity Scaling
 	gravityScaling = 0;

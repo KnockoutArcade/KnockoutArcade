@@ -82,7 +82,11 @@ function HandleHitboxCollision(ownerType)
 			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && gotHitBy == -1 && hasThisProjectileAlreadyHitTarget == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
-				ownerType.target = collision_list[| i].owner.id;
+				// If we're hitting a destructable object, then
+				if (!collision_list[| i].owner.isDestructibleObject)
+				{
+					ownerType.target = collision_list[| i].owner.id;
+				}
 
 				// Throw Teching
 				if (attackProperty.AttackType == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
@@ -433,8 +437,6 @@ function HandleHitboxCollision(ownerType)
 						
 					}
 
-					
-					
 					// Properties on Counter Hit
 					if (collision_list[| i].owner.inAttackState)
 					{

@@ -16,9 +16,9 @@ if (playerID == 1)
 	draw_set_color(c_white);
 	
 	draw_text(20, 10, state);
-	draw_text(20, 30, animTimer);
+	draw_text(20, 30, combo);
 	draw_text(20, 50, storedComboDamage);
-	draw_text(20, 70, canBlock);
+	draw_text(20, 70, target);
 	draw_text(20, 90, comboScaling);
 	
 } 

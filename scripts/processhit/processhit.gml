@@ -20,7 +20,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		// Combo Scaling
-		owner.combo++; // Add 1 to our combo length
+		if (!collision_list.owner.isDestructibleObject)
+		{
+			owner.combo++; // Add 1 to our combo length
+		}
 		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		
@@ -50,7 +53,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				scaledDamage = max(scaledDamage, 0.1); // The lowest amount of damage possible must be 0.1 HP
 			}
 		} // increase the level of scaling for the combo
-		else if (owner.combo == 2)
+		else if (owner.combo == 2 && !collision_list.owner.isDestructibleObject)
 		{
 			owner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long

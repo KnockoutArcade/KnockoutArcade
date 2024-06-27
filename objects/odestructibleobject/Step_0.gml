@@ -5,7 +5,7 @@ switch (state)
 {
 	case eState.IDLE:
 	{
-		cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
+		//cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
 		
 		if (!global.freezeTimer)
 		{
