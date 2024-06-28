@@ -14,7 +14,7 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 		spiritObject.hitstopBuffer = true;
 	}
 	
-	ds_list_clear(hitByGroup);
+	//ds_list_clear(hitByGroup);
 	ClearVictimHitByGroups();
 	
 	// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox

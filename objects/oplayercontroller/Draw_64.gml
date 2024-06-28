@@ -21,6 +21,13 @@ if (playerID == 1)
 	draw_text(20, 70, target);
 	draw_text(20, 90, ds_list_size(objectsHitList));
 	
+	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
+			
+	for (var j = 0; j < array_length(hitByIDs); j++)
+	{
+	    draw_text(20, 110 + (20 * j), hasBeenHitByIds[$ hitByIDs[j]]);
+	}
+	
 } 
 else 
 {

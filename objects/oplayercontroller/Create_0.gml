@@ -296,6 +296,22 @@ isGrabbed = false;
 invincible = false;
 projectileInvincible = false;
 
+// This contains a list of all the objects we have hit recently
+objectsHitList = ds_list_create();
+
+// This is a struct which contains the IDs of every object that has recently hit us
+hasBeenHitByIds = {};
+
+/*
+	Each entry in this struct is an ID, and then each ID has a DS_List associated with it
+	These lists contain the group IDs of the hitboxes that the object has used to hit this.
+	
+	Multiple objects may be hitting this at the same time, so we need to keep track of all
+	of their hitbox groups seperately.
+*/
+
+
+/*
 // This list contains all of the hitbox group values that have recently hit us. We keep track of it so that
 // hitboxes that have the same "group" value don't both hit
 hitByGroup = ds_list_create();
@@ -317,6 +333,7 @@ ds_list_clear(objectsHitList);
 // - PressAttackButton
 // - PerformAttack
 // probably more?
+*/
 
 toggleIdleBlock = false;
 cancelable = false;

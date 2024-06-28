@@ -293,15 +293,18 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
 		
+		variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), attackProperty.Group);
+		
+		ds_list_add(owner.objectsHitList, collision_list.owner);
+		// Add the group that this hitbox belongs to to the opponent's hitByGroup
+		//ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
+		
 		// Set hitstun
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
-		
-		// Add the group that this hitbox belongs to to the opponent's hitByGroup
-		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle time stop
 		if (activateTimeStop)
@@ -562,9 +565,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
-		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
+		
+		variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id), attackProperty.Group);
+		ds_list_add(owner.playerOwner.objectsHitList, collision_list.owner);
+		//ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		// Since this is a projectile, add its ID to the target's projectileHitBy list
-		ds_list_add(collision_list.owner.projectileHitByGroup, id);
+		//ds_list_add(collision_list.owner.projectileHitByGroup, id);
 		
 		// Handle Hitstop
 		//owner.hitstop = attackProperty.AttackHitStop;

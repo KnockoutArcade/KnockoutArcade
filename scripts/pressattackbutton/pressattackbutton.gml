@@ -269,7 +269,7 @@ function PressAttackButton(attack)
 		
 		
 	// Clears the hitBy data to allow attacks to connect properly
-	ds_list_clear(hitByGroup);
+	//ds_list_clear(hitByGroup);
 	if (hostObject != noone)
 	{
 		if (hostObject.target != noone)

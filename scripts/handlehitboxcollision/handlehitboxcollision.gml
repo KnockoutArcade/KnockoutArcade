@@ -53,7 +53,29 @@ function HandleHitboxCollision(ownerType)
 			{
 				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
 			}
-
+			
+			// Handle Mutliple hitboxes
+			
+			// Search the hasHit list for objects that this hitbox has hit
+			var hasHitThis = ds_list_find_index(hasHit, collision_list[| i].owner.id); 
+			var hasGroupAlreadyHit = -1; // This value deterimines if the group value for this hitbox has already hit the target
+			
+			// Create an array full of the IDs that the object has been hit by (stored as strings)
+			var hitByIDs = variable_struct_get_names(collision_list[| i].owner.hasBeenHitByIds);
+			
+			for (var j = 0; j < array_length(hitByIDs); j++)
+			{
+			    // Get the name of the current index
+				var _ID = hitByIDs[j];
+				
+				// Does the ID match this hitbox's owner?
+			    if (_ID == string(ownerType)) 
+				{
+					hasGroupAlreadyHit = ds_list_find_index(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+				}
+			}
+			
+			/*
 			// This code handles multiple hitboxes being used
 			// It checks to see if the ID of this hitbox is contained within the hitByGroup list of the victim.
 			// Whenever a hitbox connects, it adds its ID to the hitByGroup list to the victim
@@ -79,7 +101,8 @@ function HandleHitboxCollision(ownerType)
 				var hasThisProjectileAlreadyHitTarget = -1;
 			}
 			
-			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && gotHitBy == -1 && hasThisProjectileAlreadyHitTarget == -1 && !collision_list[| i].owner.invincible) 
+			*/
+			if (collision_list[| i].owner != ownerType && hasHitThis == -1 && hasGroupAlreadyHit == -1 && !collision_list[| i].owner.invincible) 
 			{
 				//Set who the player is currently targeting
 				// If we're hitting a destructable object, then add that to its own list
@@ -315,15 +338,21 @@ function HandleHitboxCollision(ownerType)
 					
 					// Multiple hitboxes
 					ds_list_add(hasHit, collision_list[| i].owner.id);
+					
+					variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(ownerType.id), attackProperty.Group);
+					
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
+					/*
 					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
 					// If this is a projectile, add its ID to the target's projectileHitBy list
+					*/
 					if (isProjectile)
 					{
-						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
+						//ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
 						
 						if (owner.projectileHealth > 0) owner.projectileMeetingScript(collision_list[| i].owner);
 					}
-
+					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
@@ -512,7 +541,7 @@ function HandleHitboxCollision(ownerType)
 					// Handle Projectile Multi-hits
 					if (isProjectile)
 					{
-						ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
+						//ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
 						
 						if (owner.projectileHealth > 0) owner.projectileMeetingScript(collision_list[| i].owner);
 					}

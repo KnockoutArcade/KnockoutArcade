@@ -2,17 +2,31 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ClearVictimHitByGroups()
 {
-	if (target != noone)
-	{
-		ds_list_clear(target.hitByGroup);
-	}
+	//if (target != noone)
+	//{
+	//	ds_list_clear(target.hitByGroup);
+	//}
 	
-	// For each object we hit, clear it's hitByGroup
+	// For each object we hit, clear it's hasBeenHitByIds
 	for (var i = 0; i < ds_list_size(objectsHitList); i++;)
 	{
 		if (instance_exists(objectsHitList[| i]))
 		{
-			ds_list_clear(objectsHitList[| i].hitByGroup);
+			// Create an array full of the IDs that the object has been hit by (stored as strings)
+			var hitByIDs = variable_struct_get_names(objectsHitList[| i].hasBeenHitByIds);
+			
+			for (var j = 0; j < array_length(hitByIDs); j++)
+			{
+			    // Get the name of the current index
+				var _ID = hitByIDs[j];
+				
+				// Does the ID match this hitbox's owner?
+			    if (_ID == string(id)) 
+				{
+					variable_struct_remove(objectsHitList[| i].hasBeenHitByIds, _ID);
+					//hasGroupAlreadyHit = ds_list_find_index(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+				}
+			}
 		}
 	}
 	
