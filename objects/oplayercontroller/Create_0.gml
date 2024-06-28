@@ -296,7 +296,7 @@ isGrabbed = false;
 invincible = false;
 projectileInvincible = false;
 
-// This list contains all of the hitboxes that have recently hit us. We keep track of it so that
+// This list contains all of the hitbox group values that have recently hit us. We keep track of it so that
 // hitboxes that have the same "group" value don't both hit
 hitByGroup = ds_list_create();
 ds_list_clear(hitByGroup);

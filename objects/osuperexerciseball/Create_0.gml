@@ -37,7 +37,7 @@ copyCharacterPalette = false;
 hasLifetime = false;
 projectileHealth = 999;
 
-duration = 60 * 10; // The amount of time (in frames) that this object exists for
+duration = 60 * 99; // The amount of time (in frames) that this object exists for
 
 collidedWithProjectileList = ds_list_create(); // The list of projectiles this has recently hit
 processedWithProjectileList = ds_list_create(); // The list of projectiles we have processed collisions for

@@ -37,6 +37,7 @@ if (lifetime < 1)
 		}
 	}
 	instance_destroy();
+	exit;
 }
 
 // Handle non-projectiles
