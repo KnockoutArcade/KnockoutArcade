@@ -110,10 +110,6 @@ function HandleHitboxCollision(ownerType)
 				{
 					ownerType.target = collision_list[| i].owner.id;
 				}
-				else
-				{
-					//ds_list_add(ownerType.objectsHitList, collision_list[| i].owner.id);
-				}
 
 				// Throw Teching
 				if (attackProperty.AttackType == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)

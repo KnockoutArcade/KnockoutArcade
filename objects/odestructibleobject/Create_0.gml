@@ -70,15 +70,11 @@ state = eState.IDLE;
 
 	invincible = false;
 
-	hitByGroup = ds_list_create();
-	ds_list_clear(hitByGroup);
-	// Note to self: any time the player exits the move they are currently doing, the hitByGroup list MUST be cleared!
+	// This contains a list of all the objects we have hit recently
+	objectsHitList = ds_list_create();
 
-	// This list contanis all of the projectiles that have recently hit us. We keep track of it so that
-	// multiple projectiles can hit us at once if their hitboxes share the same "group" value
-	projectileHitByGroup = ds_list_create();
-	ds_list_clear(projectileHitByGroup);
-	// Note: This should be cleared any time the player exits hitstun.
+	// This is a struct which contains the IDs of every object that has recently hit us
+	hasBeenHitByIds = {};
 
 
 	toggleIdleBlock = false;

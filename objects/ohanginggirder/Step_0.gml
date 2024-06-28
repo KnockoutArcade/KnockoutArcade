@@ -12,7 +12,6 @@ if (hp <= 0 && state == eState.IDLE)
 	{
 		instance_destroy(wallCollisionBox);
 	}
-	ds_list_destroy(hitByGroup);
 	instance_destroy();
 	oPlayerController.target = noone;
 }
