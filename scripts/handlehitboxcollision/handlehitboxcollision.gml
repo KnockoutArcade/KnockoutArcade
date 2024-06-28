@@ -112,7 +112,7 @@ function HandleHitboxCollision(ownerType)
 				}
 				else
 				{
-					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner.id);
+					//ds_list_add(ownerType.objectsHitList, collision_list[| i].owner.id);
 				}
 
 				// Throw Teching
@@ -176,8 +176,29 @@ function HandleHitboxCollision(ownerType)
 					ownerType.heldOpponent = collision_list[| i].owner;
 
 					// Multiple hitboxes
+					// Add this victim to the list of things this hitbox has already hit
 					ds_list_add(hasHit, collision_list[| i].owner.id);
-					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+		
+					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
+					{
+						variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+					}
+		
+					var hitByIDs = variable_struct_get_names(collision_list[| i].owner.hasBeenHitByIds);
+		
+					for (var k = 0; k < array_length(hitByIDs); k++)
+					{
+					    // Get the name of the current index
+						var _ID = hitByIDs[k];
+			
+						// Does the ID match this hitbox's owner?
+					    if (_ID == string(owner.id)) 
+						{
+							ds_list_add(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+						}
+					}
+		
+					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -221,8 +242,29 @@ function HandleHitboxCollision(ownerType)
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
-					ds_list_add(hasHit, collision_list[| i].owner.id);
-					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+					// Add this victim to the list of things this hitbox has already hit
+					ds_list_add(hasHit, collision_list.owner.id);
+		
+					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
+					{
+						variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+					}
+		
+					var hitByIDs = variable_struct_get_names(collision_list[| i].owner.hasBeenHitByIds);
+		
+					for (var k = 0; k < array_length(hitByIDs); k++)
+					{
+					    // Get the name of the current index
+						var _ID = hitByIDs[k];
+			
+						// Does the ID match this hitbox's owner?
+					    if (_ID == string(owner.id)) 
+						{
+							ds_list_add(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+						}
+					}
+		
+					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -241,6 +283,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Cancel into the command grab move
+					/*
 					ds_list_clear(ownerType.hitByGroup);
 					if (spirit != noone)
 					{
@@ -251,6 +294,7 @@ function HandleHitboxCollision(ownerType)
 						ds_list_clear(ownerType.target.hitByGroup);
 					}
 					ownerType.animOffset = 0;
+					*/
 
 					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
 					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
@@ -337,19 +381,32 @@ function HandleHitboxCollision(ownerType)
 					}
 					
 					// Multiple hitboxes
+					// Add this victim to the list of things this hitbox has already hit
 					ds_list_add(hasHit, collision_list[| i].owner.id);
+		
+					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
+					{
+						variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+					}
+		
+					var hitByIDs = variable_struct_get_names(collision_list[| i].owner.hasBeenHitByIds);
+		
+					for (var k = 0; k < array_length(hitByIDs); k++)
+					{
+					    // Get the name of the current index
+						var _ID = hitByIDs[k];
+			
+						// Does the ID match this hitbox's owner?
+					    if (_ID == string(owner.id)) 
+						{
+							ds_list_add(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+						}
+					}
+		
+					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
 					
-					variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(ownerType.id), attackProperty.Group);
-					
-					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
-					/*
-					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
-					// If this is a projectile, add its ID to the target's projectileHitBy list
-					*/
 					if (isProjectile)
 					{
-						//ds_list_add(collision_list[| i].owner.projectileHitByGroup, id);
-						
 						if (owner.projectileHealth > 0) owner.projectileMeetingScript(collision_list[| i].owner);
 					}
 					
@@ -395,8 +452,29 @@ function HandleHitboxCollision(ownerType)
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
 				
 					// Multiple hitboxes
+					// Add this victim to the list of things this hitbox has already hit
 					ds_list_add(hasHit, collision_list[| i].owner.id);
-					ds_list_add(collision_list[| i].owner.hitByGroup, attackProperty.Group);
+		
+					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
+					{
+						variable_struct_set(collision_list[| i].owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+					}
+		
+					var hitByIDs = variable_struct_get_names(collision_list[| i].owner.hasBeenHitByIds);
+		
+					for (var k = 0; k < array_length(hitByIDs); k++)
+					{
+					    // Get the name of the current index
+						var _ID = hitByIDs[k];
+			
+						// Does the ID match this hitbox's owner?
+					    if (_ID == string(owner.id)) 
+						{
+							ds_list_add(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+						}
+					}
+		
+					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -415,6 +493,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Cancel into the command grab move
+					/*
 					ds_list_clear(ownerType.hitByGroup);
 					if (spirit != noone)
 					{
@@ -425,6 +504,7 @@ function HandleHitboxCollision(ownerType)
 						ds_list_clear(ownerType.target.hitByGroup);
 					}
 					ownerType.animOffset = 0;
+					*/
 
 					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
 					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)

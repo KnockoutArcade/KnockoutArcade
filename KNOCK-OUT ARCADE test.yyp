@@ -366,6 +366,7 @@
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":0,},
     {"id":{"name":"sGrabBox","path":"sprites/sGrabBox/sGrabBox.yy",},"order":1,},
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
+    {"id":{"name":"ClearOwnerHitByGroups","path":"scripts/ClearOwnerHitByGroups/ClearOwnerHitByGroups.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial_RekkaFinisher","path":"sprites/sBeverly_SideSpecial_RekkaFinisher/sBeverly_SideSpecial_RekkaFinisher.yy",},"order":50,},
     {"id":{"name":"PerformProjectile","path":"scripts/PerformProjectile/PerformProjectile.yy",},"order":35,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
