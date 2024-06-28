@@ -40,7 +40,13 @@ if (hitstop <= 0 && hasHitSomething)
 
 event_inherited();
 
-PerformProjectile(id, spiritOwner);
+// If we have been hit by the player who spawned this, create a hitbox
+if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0)
+{
+	hasSpawnedHitboxes = false;
+	
+	PerformProjectile(id, spiritOwner);
+}
 
 gravityScaling = 0;
 
