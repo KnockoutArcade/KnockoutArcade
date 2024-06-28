@@ -194,7 +194,7 @@ function HandleHitboxCollision(ownerType)
 						}
 					}
 		
-					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -260,7 +260,7 @@ function HandleHitboxCollision(ownerType)
 						}
 					}
 		
-					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
@@ -399,7 +399,7 @@ function HandleHitboxCollision(ownerType)
 						}
 					}
 		
-					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 					
 					if (isProjectile)
 					{
@@ -470,7 +470,7 @@ function HandleHitboxCollision(ownerType)
 						}
 					}
 		
-					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
+					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 
 					// Depth Sorting
 					ownerType.depth = -1;
