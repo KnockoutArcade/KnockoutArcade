@@ -25,9 +25,11 @@ if (playerID == 1)
 			
 	for (var j = 0; j < array_length(hitByIDs); j++)
 	{
-	    draw_text(20, 110 + (20 * j), hasBeenHitByIds[$ hitByIDs[j]]);
+	   for (var k = 0; k < ds_list_size(hasBeenHitByIds[$ hitByIDs[j]]); k++;)
+	   {
+			draw_text(20 + (20 * k), 110 + (20 * j), hasBeenHitByIds[$ hitByIDs[j]][| k]);
+	   }
 	}
-	
 } 
 else 
 {

@@ -293,7 +293,24 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
 		
-		variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), attackProperty.Group);
+		if (!variable_struct_exists(collision_list.owner.hasBeenHitByIds, string(owner.id)))
+		{
+			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+		}
+		
+		var hitByIDs = variable_struct_get_names(collision_list.owner.hasBeenHitByIds);
+		
+		for (var k = 0; k < array_length(hitByIDs); k++)
+		{
+		    // Get the name of the current index
+			var _ID = hitByIDs[k];
+			
+			// Does the ID match this hitbox's owner?
+		    if (_ID == string(owner.id)) 
+			{
+				ds_list_add(collision_list.owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+			}
+		}
 		
 		ds_list_add(owner.objectsHitList, collision_list.owner);
 		// Add the group that this hitbox belongs to to the opponent's hitByGroup
@@ -560,17 +577,36 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 
 		ds_list_add(hasHit, collision_list.owner.id);
+		
+		if (!variable_struct_exists(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id)))
+		{
+			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id), ds_list_create());
+		}
+		
+		var hitByIDs = variable_struct_get_names(collision_list.owner.hasBeenHitByIds);
+		
+		for (var k = 0; k < array_length(hitByIDs); k++)
+		{
+		    // Get the name of the current index
+			var _ID = hitByIDs[k];
+			
+			// Does the ID match this hitbox's owner?
+		    if (_ID == string(owner.id)) 
+			{
+				ds_list_add(collision_list.owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+			}
+		}
+		
+		ds_list_add(owner.playerOwner.objectsHitList, collision_list.owner);
+		
+		// Since this is a projectile, add its ID to the target's projectileHitBy list
+		//ds_list_add(collision_list.owner.projectileHitByGroup, id);
+		
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
-		
-		variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id), attackProperty.Group);
-		ds_list_add(owner.playerOwner.objectsHitList, collision_list.owner);
-		//ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
-		// Since this is a projectile, add its ID to the target's projectileHitBy list
-		//ds_list_add(collision_list.owner.projectileHitByGroup, id);
 		
 		// Handle Hitstop
 		//owner.hitstop = attackProperty.AttackHitStop;

@@ -23,6 +23,8 @@ function ClearVictimHitByGroups()
 				// Does the ID match this hitbox's owner?
 			    if (_ID == string(id)) 
 				{
+					ds_list_destroy(objectsHitList[| i].hasBeenHitByIds[$ _ID]);
+					
 					variable_struct_remove(objectsHitList[| i].hasBeenHitByIds, _ID);
 					//hasGroupAlreadyHit = ds_list_find_index(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
 				}
