@@ -82,5 +82,7 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	ds_list_add(processedWithProjectileList, collisionID);
 	
 	hasHitSomething = true;
+	
+	
 
 }

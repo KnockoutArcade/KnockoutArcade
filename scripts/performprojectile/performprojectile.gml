@@ -92,6 +92,7 @@ function PerformProjectile(playerOwner, spiritOwner)
 				owner = other.id;
 
 				isProjectile = true;
+				projectileOwner = other.id;
 
 				// Pass through attack data
 				attackProperty = hitboxPropertiesCopy.AttackProperty[i];

@@ -10,4 +10,7 @@ processedWithProjectileList = -1;
 ds_list_destroy(hitboxID);
 hitboxID = -1;
 
+ClearOwnerHitByGroups();
 
+ds_list_destroy(objectsHitList);
+objectsHitList = -1;

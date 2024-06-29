@@ -6,7 +6,19 @@ if (global.game_paused)
 	exit;
 }
 
-if (hitstop <= 0 && hasHitSomething)
+event_inherited();
+
+// If we have been hit by the player who spawned this, create a hitbox
+if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0)
+{
+	hasSpawnedHitboxes = false;
+	
+	PerformProjectile(id, spiritOwner);
+	
+	show_debug_message("Spawned a hitbox");
+}
+
+if (hasHitSomething)
 {
 	// With each of the things we've collided with, clear it's projectileHitBy list
 	for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)
@@ -35,17 +47,9 @@ if (hitstop <= 0 && hasHitSomething)
 	ds_list_clear(collidedWithProjectileList);
 	ds_list_clear(processedWithProjectileList);
 	
-	hasHitSomething = false;
-}
-
-event_inherited();
-
-// If we have been hit by the player who spawned this, create a hitbox
-if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0)
-{
-	hasSpawnedHitboxes = false;
+	ClearOwnerHitByGroups();
 	
-	PerformProjectile(id, spiritOwner);
+	hasHitSomething = false;
 }
 
 gravityScaling = 0;

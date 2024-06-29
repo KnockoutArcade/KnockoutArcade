@@ -31,12 +31,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		if (finalBlowSuper)
 		{
 			scaleAmount = max(scaleAmount, SuperScalingMinimum);
-			show_debug_message("super scaling");
 		}
 		else
 		{
 			scaleAmount = max(scaleAmount, ScalingMinimum);
-			show_debug_message("normal scaling");
 		}
 		
 		
@@ -580,7 +578,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		if (!variable_struct_exists(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id)))
 		{
-			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id), ds_list_create());
+			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), ds_list_create());
 		}
 		
 		var hitByIDs = variable_struct_get_names(collision_list.owner.hasBeenHitByIds);

@@ -4,6 +4,7 @@
 lifetime = 1;
 owner = noone;
 spirit = noone;
+projectileOwner = noone;
 
 hasHit = ds_list_create();
 
