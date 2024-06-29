@@ -52,6 +52,7 @@ hitboxID = ds_list_create(); // The IDs of this projectile's hitboxes
 collidedWithProjectileList = ds_list_create(); // The list of projectiles this has recently hit
 processedWithProjectileList = ds_list_create(); // The list of projectiles we have processed collisions for
 
+objectsHitList = ds_list_create();
 
 hitstopTimer = 0; // How long this projectile is in hitstop for
 
@@ -120,6 +121,8 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	
 	// Say that we've processed this object
 	ds_list_add(processedWithProjectileList, collisionID);
+	
+	ClearVictimHitByGroups();
 	
 	// Decrease projectile health
 	projectileHealth -= 1;

@@ -69,7 +69,7 @@ function HandleHitboxCollision(ownerType)
 				var _ID = hitByIDs[j];
 				
 				// Does the ID match this hitbox's owner?
-			    if (_ID == string(ownerType)) 
+			    if (_ID == string(owner.id)) 
 				{
 					hasGroupAlreadyHit = ds_list_find_index(collision_list[| i].owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
 				}
@@ -373,7 +373,7 @@ function HandleHitboxCollision(ownerType)
 						}
 					}
 		
-					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
+					ds_list_add(owner.objectsHitList, collision_list[| i].owner);
 					
 					if (isProjectile)
 					{

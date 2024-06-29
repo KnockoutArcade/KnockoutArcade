@@ -2218,7 +2218,6 @@ switch state
 		if (hitstun < 1)
 		{
 			// Clear the hitByGroups to allow follow-up attacks to connect
-			ClearOwnerHitByGroups();
 			
 			FAvictim = false;
 			
@@ -2233,15 +2232,18 @@ switch state
 			}
 			else if (movedir == 0)
 			{
+				ClearOwnerHitByGroups();
 				state = eState.IDLE;
 			}
 			else if (movedir != image_xscale)
 			{
+				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 				canBlock = true;
 			} 
 			else 
 			{
+				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 			}
 		}
@@ -2647,6 +2649,7 @@ switch state
 		{
 			FAvictim = false;
 			isCrouchBlocking = false;
+			ClearOwnerHitByGroups();
 			
 			if (blockbuffer)
 			{

@@ -49,6 +49,12 @@ if (hasHitSomething)
 	
 	ClearOwnerHitByGroups();
 	
+	hsp = -hsp;
+	if (vsp > 0)
+	{
+		vsp = -vsp;
+	}
+	
 	hasHitSomething = false;
 }
 

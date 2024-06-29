@@ -595,7 +595,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			}
 		}
 		
-		ds_list_add(owner.playerOwner.objectsHitList, collision_list.owner);
+		ds_list_add(owner.objectsHitList, collision_list.owner);
 		
 		// Since this is a projectile, add its ID to the target's projectileHitBy list
 		//ds_list_add(collision_list.owner.projectileHitByGroup, id);

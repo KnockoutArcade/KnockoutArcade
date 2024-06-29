@@ -40,6 +40,7 @@ function HandleKnockdownState( _hardKnockdown)
 	hsp = 0;
 	image_speed = 1;
 	gravityScaling = 0;
+	ClearOwnerHitByGroups();
 	
 	// Handle spawning impact particle
 	// Spawn a landing particle once the player hits the ground
