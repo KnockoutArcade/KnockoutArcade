@@ -4001,7 +4001,7 @@
           "AttackType": 0,
           "BlockStun": 3.0,
           "KnockBack": 2.0,
-          "AirKnockbackVertical": 0.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -8241,6 +8241,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-28T20:34:55.0512399-07:00",
+  "LastModified": "2024-06-28T20:36:30.317807-07:00",
   "LastModifiedBy": "creep"
 }
