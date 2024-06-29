@@ -7947,7 +7947,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Super",
-      "Duration": 85,
+      "Duration": 78,
       "NumberOfFrames": 22,
       "FrameData": [
         {
@@ -8143,7 +8143,7 @@
       "ProjectileData": [
         {
           "SpawnFrame": 35,
-          "SpawnXOffset": 10,
+          "SpawnXOffset": 18,
           "SpawnYOffset": -20,
           "ProjectileObject": "BeverlySuperBall"
         }
@@ -8241,6 +8241,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-06-28T20:29:52.6535585-07:00",
+  "LastModified": "2024-06-28T20:34:55.0512399-07:00",
   "LastModifiedBy": "creep"
 }
