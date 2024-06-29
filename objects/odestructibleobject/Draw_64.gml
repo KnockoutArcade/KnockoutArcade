@@ -9,8 +9,8 @@ draw_set_alpha(1);
 draw_set_color(c_white);
 	
 //draw_text(750, 10, duration);
-draw_text(750, 30, ds_list_size(objectsHitList));
-draw_text(750, 50, hitstop);
+//draw_text(750, 30, canSpawnHitboxes);
+draw_text(750, 50, hitstun);
 
 var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			

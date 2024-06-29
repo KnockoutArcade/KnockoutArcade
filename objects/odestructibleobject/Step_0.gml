@@ -60,7 +60,7 @@ switch (state)
 			}
 			else
 			{
-				ClearOwnerHitByGroups();
+				//ClearOwnerHitByGroups();
 			}
 			
 			// Destroy this object if at 0 hp and this object has no unique death properties

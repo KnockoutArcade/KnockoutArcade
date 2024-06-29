@@ -31,6 +31,7 @@ hitboxProperties.RehitData = selectedProjectile.RehitData;
 hitboxID = ds_list_create(); // The IDs of this projectile's hitboxes
 
 hasSpawnedHitboxes = false; // Whether this objects has spawned it's hitboxes yet or not.
+canSpawnHitboxes = true; // Whether this object is allowed to spawn its hitboxes or not
 hasHitSomething = false; // Whether this object has hit something recently
 
 copyCharacterPalette = false;
@@ -69,11 +70,6 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 		}
 	}
 	
-	if (target != noone)
-	{
-		ds_list_clear(target.hitByGroup);
-	}
-	
 	// Enter hitstop
 	hitstop = 10;
 	state = eState.HITSTOP;
@@ -83,6 +79,20 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	
 	hasHitSomething = true;
 	
+	// Determine which side to send the object
+	if (x > collisionID.x)
+	{
+		var bounceDirection = 1;
+	}
+	else
+	{
+		var bounceDirection = -1;
+	}
 	
-
+	hsp = abs(hsp) * bounceDirection * bounceDampeningFactor;
+	if (vsp > 0)
+	{
+		vsp = -vsp * bounceDampeningFactor;
+	}
+	
 }

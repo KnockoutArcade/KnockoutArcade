@@ -8,8 +8,13 @@ if (global.game_paused)
 
 event_inherited();
 
+if (hitstun != 0)
+{
+	canSpawnHitboxes = true;
+}
+
 // If we have been hit by the player who spawned this, create a hitbox
-if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0)
+if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0 && canSpawnHitboxes)
 {
 	hasSpawnedHitboxes = false;
 	
@@ -47,15 +52,11 @@ if (hasHitSomething)
 	ds_list_clear(collidedWithProjectileList);
 	ds_list_clear(processedWithProjectileList);
 	
-	ClearOwnerHitByGroups();
-	
-	hsp = -hsp;
-	if (vsp > 0)
-	{
-		vsp = -vsp;
-	}
+	//ClearOwnerHitByGroups();
 	
 	hasHitSomething = false;
+	canSpawnHitboxes = false;
+	hitstun = 0;
 }
 
 gravityScaling = 0;
