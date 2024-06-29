@@ -23,7 +23,7 @@ if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_s
 	show_debug_message("Spawned a hitbox");
 }
 
-if (hasHitSomething)
+if (hasHitSomething || (hsp == 0 && vsp == 0))
 {
 	// With each of the things we've collided with, clear it's projectileHitBy list
 	for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)

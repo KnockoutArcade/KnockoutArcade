@@ -77,6 +77,11 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	// Say that we've processed this object
 	ds_list_add(processedWithProjectileList, collisionID);
 	
+	with (collisionID)
+	{
+		ClearOwnerHitByGroups();
+	}
+	
 	hasHitSomething = true;
 	
 	// Determine which side to send the object
