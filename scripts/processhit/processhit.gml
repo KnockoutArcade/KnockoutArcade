@@ -11,11 +11,32 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 {
 	if (!isProjectile)
 	{
+		// Attack hit script
+		if (attackProperty.UseHitScript)
+		{
+			var scriptToExecute = asset_get_index(attackProperty.SupplementaryHitScript);
+			
+			scriptToExecute();
+		}
+		
 		// Combo Scaling
-		owner.combo++; // Add 1 to our combo length
+		if (!collision_list.owner.isDestructibleObject)
+		{
+			owner.combo++; // Add 1 to our combo length
+		}
 		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
-		scaleAmount = max(scaleAmount, ScalingMinimum);
+		
+		// If the attack is a super, use the minimum super scaling. Otherwise, do normal damage scaling.
+		if (finalBlowSuper)
+		{
+			scaleAmount = max(scaleAmount, SuperScalingMinimum);
+		}
+		else
+		{
+			scaleAmount = max(scaleAmount, ScalingMinimum);
+		}
+		
 		
 		if (owner.combo > 2) 
 		{
@@ -30,7 +51,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				scaledDamage = max(scaledDamage, 0.1); // The lowest amount of damage possible must be 0.1 HP
 			}
 		} // increase the level of scaling for the combo
-		else if (owner.combo == 2)
+		else if (owner.combo == 2 && !collision_list.owner.isDestructibleObject)
 		{
 			owner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
@@ -166,6 +187,15 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
 		}
 		
+		// If an object is set to always get launched, set it as being airborne.
+		if (collision_list.owner.isDestructibleObject)
+		{
+			if (collision_list.owner.alwaysLaunchAirborne)
+			{
+				collision_list.owner.grounded = false;
+			}
+		}
+		
 		if (!collision_list.owner.grounded) // On Air hit, set knockback velocity
 		{
 			// Upwards velocity (affected by gravity scaling)
@@ -255,8 +285,34 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Reset held opponent
 		owner.heldOpponent = noone;
 		
+		// Prevent the victim from blocking
+		collision_list.owner.canBlock = false;
+		
 		// Add this victim to the list of things this hitbox has already hit
 		ds_list_add(hasHit, collision_list.owner.id);
+		
+		if (!variable_struct_exists(collision_list.owner.hasBeenHitByIds, string(owner.id)))
+		{
+			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+		}
+		
+		var hitByIDs = variable_struct_get_names(collision_list.owner.hasBeenHitByIds);
+		
+		for (var k = 0; k < array_length(hitByIDs); k++)
+		{
+		    // Get the name of the current index
+			var _ID = hitByIDs[k];
+			
+			// Does the ID match this hitbox's owner?
+		    if (_ID == string(owner.id)) 
+			{
+				ds_list_add(collision_list.owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+			}
+		}
+		
+		ds_list_add(owner.objectsHitList, collision_list.owner);
+		// Add the group that this hitbox belongs to to the opponent's hitByGroup
+		//ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Set hitstun
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
@@ -264,9 +320,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
-		
-		// Add the group that this hitbox belongs to to the opponent's hitByGroup
-		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
 		// Handle time stop
 		if (activateTimeStop)
@@ -280,9 +333,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Handle Hitstop
 		owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.inAttackState = false;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+			collision_list.owner.spiritObject.inAttackState = false;
 		}
 		
 		// Play sound effect
@@ -312,10 +367,21 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
 		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
-	else
+	else if (!collision_list.owner.projectileInvincible)
 	{
+		// Attack hit script
+		if (attackProperty.UseHitScript)
+		{
+			var scriptToExecute = asset_get_index(attackProperty.SupplementaryHitScript);
+			
+			scriptToExecute();
+		}
+		
 		// Combo Scaling
-		owner.playerOwner.combo++; // Add 1 to our combo length
+		if (!collision_list.owner.isDestructibleObject)
+		{
+			owner.playerOwner.combo++; // Add 1 to our combo length
+		}
 		var scaledDamage = attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.playerOwner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
@@ -326,7 +392,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			scaledDamage = round(scaledDamage); // Round the damage to the nearest whole number
 			scaledDamage = max(scaledDamage, 1); // The lowest amount of damage a move can do must be 1 HP
 		} // increase the level of scaling for the combo
-		else if (owner.playerOwner.combo == 2)
+		else if (owner.playerOwner.combo == 2 && !collision_list.owner.isDestructibleObject)
 		{
 			owner.playerOwner.startCombo = true;
 		} // Tells the game to display the combo counter when the combo is at least 2 hits long
@@ -423,7 +489,16 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		{
 			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
 		}
-					
+		
+		// If an object is set to always get launched, set it as being airborne.
+		if (collision_list.owner.isDestructibleObject)
+		{
+			if (collision_list.owner.alwaysLaunchAirborne)
+			{
+				collision_list.owner.grounded = false;
+			}
+		}
+		
 		if (!collision_list.owner.grounded)
 		{
 			collision_list.owner.vsp = attackProperty.AirKnockbackVertical * collision_list.owner.knockbackMultiplier * (1 - (max((collision_list.owner.gravityScaling - 5), 0) / GravityScalingMaximum));
@@ -500,21 +575,42 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 
 		ds_list_add(hasHit, collision_list.owner.id);
+		
+		if (!variable_struct_exists(collision_list.owner.hasBeenHitByIds, string(owner.playerOwner.id)))
+		{
+			variable_struct_set(collision_list.owner.hasBeenHitByIds, string(owner.id), ds_list_create());
+		}
+		
+		var hitByIDs = variable_struct_get_names(collision_list.owner.hasBeenHitByIds);
+		
+		for (var k = 0; k < array_length(hitByIDs); k++)
+		{
+		    // Get the name of the current index
+			var _ID = hitByIDs[k];
+			
+			// Does the ID match this hitbox's owner?
+		    if (_ID == string(owner.id)) 
+			{
+				ds_list_add(collision_list.owner.hasBeenHitByIds[$ _ID], attackProperty.Group);
+			}
+		}
+		
+		ds_list_add(owner.objectsHitList, collision_list.owner);
+		
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstun = attackProperty.AttackHitStun;
 		}
-		ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
-		// Since this is a projectile, add its ID to the target's projectileHitBy list
-		ds_list_add(collision_list.owner.projectileHitByGroup, id);
 		
 		// Handle Hitstop
-		owner.hitstop = attackProperty.AttackHitStop;
+		//owner.hitstop = attackProperty.AttackHitStop;
 		collision_list.owner.hitstop = attackProperty.AttackHitStop;
+		collision_list.owner.inAttackState = false;
 		if (collision_list.owner.spiritObject != noone) 
 		{
 			collision_list.owner.spiritObject.hitstop = attackProperty.AttackHitStop;
+			collision_list.owner.spiritObject.inAttackState = false;
 		}
 		
 		//Draw hit effect

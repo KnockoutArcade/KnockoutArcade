@@ -9,6 +9,9 @@ function ResetGame()
 	instance_destroy(oSmoothCriminal);
 	instance_destroy(oGunther);
 	
+	instance_destroy(oProjectileBase);
+	instance_destroy(oDestructibleObject);
+	
 	instance_destroy(oHitbox);
 	instance_destroy(oThrowEnvDetection);
 	instance_destroy(oPlayerHurtbox);

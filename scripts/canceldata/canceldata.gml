@@ -204,6 +204,12 @@ function CancelData(_array, _attack, _late)
 	// Up Special
 	else if ((_array.MoveCanCancelInto & 65536 == 65536) && (_attack == 5 && movedir == 0 && verticalMoveDir == 1))
 	{
+		// Handle Charge inputs
+		if (downUpChargeTimer >= timeToCharge)
+		{
+			bufferCharge = true;
+		}
+		
 		if (_late)
 		{
 			LateCancelIntoMove(eState.UP_SPECIAL, selectedCharacter.UpSpecial, _attack);

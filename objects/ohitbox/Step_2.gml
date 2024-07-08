@@ -5,6 +5,7 @@
 if (!instance_exists(owner))
 {
 	instance_destroy();
+	exit;
 }
 
 visible = global.toggleHitboxVisibility;
@@ -36,6 +37,7 @@ if (lifetime < 1)
 		}
 	}
 	instance_destroy();
+	exit;
 }
 
 // Handle non-projectiles

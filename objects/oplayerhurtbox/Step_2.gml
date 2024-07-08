@@ -3,6 +3,13 @@
 
 visible = global.toggleHitboxVisibility;
 
+// If the thing that spawned this hurtbox stops existing, destroy this
+if (!instance_exists(owner))
+{
+	instance_destroy()
+	exit;
+}
+
 if (primary && owner.inAttackState && owner.animTimer > 0)
 {
 	// Hide if the owner is in an attack state

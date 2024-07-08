@@ -1718,7 +1718,10 @@ if (host != noone && hostObject != noone)
 
 			if (hitstun < 1)
 			{
-				ds_list_clear(hostObject.hitByGroup);
+				with (hostObject)
+				{
+					ClearOwnerHitByGroups();
+				}
 				FAvictim = false;
 
 				if (!hostObject.grounded)

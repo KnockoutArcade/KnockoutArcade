@@ -35,8 +35,8 @@
     "Launched": "sConstructionGuy_Hurt",
     "Knockdown": "sConstructionGuy_KnockedDown",
     "GetUp": "sConstructionGuy_Getup",
-    "RushCancel": "sConstructionGuy_Idle",
-    "WallSplat": "sConstructionGuy_Idle"
+    "RushCancel": "sRussel_RushCancel",
+    "WallSplat": "sConstructionGuy_WallSplat"
   },
   "SuperMeterBuildRate": 1.0,
   "BaseColor": {
@@ -439,6 +439,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2024-02-19T23:42:57.9355738-07:00",
+  "LastModified": "2024-06-03T13:32:25.6730353-07:00",
   "LastModifiedBy": "creep"
 }

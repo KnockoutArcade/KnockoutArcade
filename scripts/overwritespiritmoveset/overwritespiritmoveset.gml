@@ -36,6 +36,8 @@ function OverwriteSpiritMoveset(spiritOff)
 			nextMove.NumberOfSounds = selectedCharacter.MoveData[i].NumberOfSounds;
 			nextMove.MoveSoundData = selectedCharacter.MoveData[i].MoveSoundData;
 			nextMove.SuperData = selectedCharacter.MoveData[i].SuperData;
+			nextMove.UseMoveScript = selectedCharacter.MoveData[i].UseMoveScript;
+			nextMove.SupplementaryMoveScript = selectedCharacter.MoveData[i].SupplementaryMoveScript;
 
 			if (selectedCharacter.MoveData[i].IsThrow)
 			{

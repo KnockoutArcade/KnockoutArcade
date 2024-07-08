@@ -222,14 +222,18 @@ function PerformAttack(Action, createdBySpirit)
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
-					ds_list_clear(hitByGroup);
+					//ds_list_clear(hitByGroup);
 					if (createdBySpirit && hostObject.target != noone)
 					{
-						ds_list_clear(hostObject.target.hitByGroup);
+						with (hostObject)
+						{
+							ClearVictimHitByGroups();
+						}
+						
 					}
-					else if (target != noone)
+					else 
 					{
-						ds_list_clear(target.hitByGroup);
+						ClearVictimHitByGroups();
 					}
 				}
 			}
@@ -260,6 +264,14 @@ function PerformAttack(Action, createdBySpirit)
 				else if (Action.ProjectileData[i].ProjectileObject == "GunterJumpingMediumProjectile")
 				{
 					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oGunther_JumpingMedium_Projectile);
+				}
+				else if (Action.ProjectileData[i].ProjectileObject == "EnhancedProjectile")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oEnhancedProjectile);
+				}
+				else if (Action.ProjectileData[i].ProjectileObject == "BeverlySuperBall")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oSuperExerciseBall);
 				}
 				Projectile.depth = depth - 5;
 				with (Projectile)
