@@ -10,7 +10,7 @@ function HandleHitboxCollision(ownerType)
 		lifetime--;
 	}
 
-	if (!ownerType.inAttackState && !isProjectile)
+	if (!ownerType.inAttackState && !isProjectile && owner.hitstop < 0)
 	{
 		instance_destroy();
 	}
