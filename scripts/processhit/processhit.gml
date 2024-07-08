@@ -367,7 +367,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
 		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
 	}
-	else
+	else if (!collision_list.owner.projectileInvincible)
 	{
 		// Attack hit script
 		if (attackProperty.UseHitScript)

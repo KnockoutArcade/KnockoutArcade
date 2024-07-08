@@ -133,7 +133,6 @@ else // Safegaurd in case an empty character is spawned
 
 // Reset Vars
 canTurnAround = true;
-projectileInvincible = false;
 isInStableState = false;
 // If gravity scaling ever dips below 0, reset it to 0
 if (gravityScaling < 0)
@@ -145,6 +144,21 @@ if (hp <= 0)
 {
 	isExperiencingHardKnockdown = true;
 }
+// Reduce RC projectile invulnerability
+if (!global.freezeTimer && rcProjectileInvulTimer > 0)
+{
+	rcProjectileInvulTimer--;
+}
+// Reset Projectile Invulnerability
+if (rcProjectileInvulTimer > 0)
+{
+	projectileInvincible = true;
+}
+else
+{
+	projectileInvincible = false;
+}
+
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 16;
@@ -849,6 +863,7 @@ if (state == eState.SCREEN_FREEZE)
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
 			comboScaling += 1;
+			rcProjectileInvulTimer = rcProjectileInvulAmount;
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;

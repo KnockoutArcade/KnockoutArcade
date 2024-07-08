@@ -288,6 +288,11 @@ function HandleHitboxCollision(ownerType)
 						(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
 					((collision_list[| i].owner.movedir == blockingDirection || collision_list[| i].owner.toggleIdleBlock) || ((attackProperty.AttackType == eAttackType.MID || attackProperty.AttackType == eAttackType.HITGRAB) && collision_list[| i].owner.blockstun > 0))// Check if the opponent is holding back
 				{
+					if (isProjectile && collision_list[| i].owner.projectileInvincible)
+					{
+						exit;
+					}
+					
 					collision_list[| i].owner.prevState = eState.BLOCKING;
 					collision_list[| i].owner.state = eState.HITSTOP; // Set the player's state to hitstop
 					
@@ -492,6 +497,11 @@ function HandleHitboxCollision(ownerType)
 				}
 				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB && attackProperty.AttackType != eAttackType.HITGRAB) // Hitting
 				{
+					if (isProjectile && collision_list[| i].owner.projectileInvincible)
+					{
+						exit;
+					}
+					
 					// Set the opponent's sprite to their hurt sprite (unless being grabbed)
 					if (collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{

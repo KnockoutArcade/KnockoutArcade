@@ -116,6 +116,8 @@ rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
 runButtonPressed = false; // Triggers when the run button is pressed
 holdRunButtonTimer = 8; // Determines the amount of frames the run button is held
 pressSpecialButtonTimer = 8; // Determines the amount of frames since the special button was pressed
+rcProjectileInvulTimer = 0; // The timer that keeps track of proj invul during RC
+rcProjectileInvulAmount = 30; // How much time (in frames) a player is proj ivul for during RC
 
 // Screen Freeze variables
 activateFreeze = false; // Determines if opponent activated screen freeze
