@@ -225,7 +225,11 @@ function PerformAttack(Action, createdBySpirit)
 					//ds_list_clear(hitByGroup);
 					if (createdBySpirit && hostObject.target != noone)
 					{
-						ds_list_clear(hostObject.target.hitByGroup);
+						with (hostObject)
+						{
+							ClearVictimHitByGroups();
+						}
+						
 					}
 					else 
 					{
