@@ -14,11 +14,24 @@ function HandleKnockdownState( _hardKnockdown)
 		{
 			state = eState.QUICK_GETUP;
 			sprite_index = sRussel_QuickGetup;
+			
+			// TEMPORARY
+			if (selectedCharacter.Name == "Beverly")
+			{
+				sprite_index = sBeverly_QuickGetup;
+			}
 		}
 		else
 		{
 			state = eState.TECH_ROLL;
 			sprite_index = sRussel_TechRoll;
+			
+			// TEMPORARY
+			if (selectedCharacter.Name == "Beverly")
+			{
+				sprite_index = sBeverly_TechRoll;
+			}
+			
 			image_xscale = -movedir;
 		}
 	}
@@ -27,6 +40,8 @@ function HandleKnockdownState( _hardKnockdown)
 	hsp = 0;
 	image_speed = 1;
 	gravityScaling = 0;
+	ClearOwnerHitByGroups();
+	invincible = true;
 	
 	// Handle spawning impact particle
 	// Spawn a landing particle once the player hits the ground

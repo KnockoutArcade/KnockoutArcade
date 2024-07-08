@@ -5,7 +5,7 @@ switch (state)
 {
 	case eState.IDLE:
 	{
-		cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
+		//cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
 		
 		if (!global.freezeTimer)
 		{
@@ -33,10 +33,26 @@ switch (state)
 				}
 				else
 				{
-					hsp = 0;
+					if (!doesBounceOnTerrain) 
+					{
+						hsp = 0;
+					}
+					else
+					{
+						hsp = hsp * bounceDampeningFactor;
+						
+						if (abs(hsp) <= 0.1)
+						{
+							hsp = 0;
+						}
+					}
 					knockbackVel = 0;
 				}
 			} 
+			else
+			{
+				knockbackVel = 0;
+			}
 			
 			if (hitstun > 0)
 			{
@@ -44,7 +60,7 @@ switch (state)
 			}
 			else
 			{
-				ds_list_clear(hitByGroup);
+				//ClearOwnerHitByGroups();
 			}
 			
 			// Destroy this object if at 0 hp and this object has no unique death properties
@@ -57,7 +73,6 @@ switch (state)
 				{
 					instance_destroy(wallCollisionBox);
 				}
-				ds_list_destroy(hitByGroup);
 				state = eState.OBJECT_DESTROYED;
 				oPlayerController.target = noone;
 			}
@@ -149,6 +164,23 @@ if (state != eState.HITSTOP)
 		pushbackVel--;
 	}
 	
+	// Collision with Sides of the screen
+	if (remainOnScreen)
+	{
+		if (!doesBounceOnTerrain)
+		{
+			// Clamp to the screen (with some buffer room)
+			x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		}
+		else if (x > global.camObj.x+75 || x < global.camObj.x-75)
+		{
+			hsp = -hsp * bounceDampeningFactor;
+			
+			// Clamp to the screen (with some buffer room)
+			x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		}
+	}
+	
 	
 	// Using y + 2 so that if this object is going downhill on a slope, they can stay snapped to the surface
 	// Otherwise, this object would jitter as they went down
@@ -176,10 +208,24 @@ if (state != eState.HITSTOP)
 	
 		if (state != eState.HITSTOP)
 		{
-			vsp = 0;
+			// Handle bouncing off of terrain
+			if (!doesBounceOnTerrain)
+			{
+				vsp = 0;
+			}
+			else
+			{
+				vsp = -vsp * bounceDampeningFactor;
+				
+				if (abs(vsp) <= 0.5)
+				{
+					vsp = 0;
+				}
+			}
+			
 		}
 		
-		if (!grounded) 
+		if (!grounded && vsp == 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -194,7 +240,21 @@ if (state != eState.HITSTOP)
 		{
 			x += sign(hsp);
 		}
-		hsp = 0;
+		
+		// Handle bouncing off of terrain
+		if (!doesBounceOnTerrain)
+		{
+			hsp = 0;
+		}
+		else
+		{
+			hsp = -hsp * bounceDampeningFactor;
+		
+			if (abs(hsp) <= 0.1)
+			{
+				hsp = 0;
+			}
+		}
 	}
 	
 	if (place_meeting(x, y+vsp+fallSpeed, oWall))
@@ -207,8 +267,22 @@ if (state != eState.HITSTOP)
 			y += sign(vsp);
 		}
 		
-		vsp = 0;
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+		// Handle bouncing off of terrain
+		if (!doesBounceOnTerrain)
+		{
+			vsp = 0;
+		}
+		else
+		{
+			vsp = -vsp * bounceDampeningFactor;
+			
+			if (abs(vsp) <= 0.5)
+			{
+				vsp = 0;
+			}
+		}
+			
+		if (!grounded && vsp == 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -240,8 +314,22 @@ if (state != eState.HITSTOP)
 					y += sign(vsp);
 				}
 		
-				vsp = 0;
-				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && fallDirection == 1) 
+				// Handle bouncing off of terrain
+				if (!doesBounceOnTerrain)
+				{
+					vsp = 0;
+				}
+				else
+				{
+					vsp = -vsp * bounceDampeningFactor;
+				
+					if (abs(vsp) <= 0.5)
+					{
+						vsp = 0;
+					}
+				}
+				
+				if (!grounded && vsp == 0) 
 				{
 					state = eState.IDLE;
 					grounded = true;

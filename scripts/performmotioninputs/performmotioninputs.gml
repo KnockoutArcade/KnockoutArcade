@@ -84,7 +84,7 @@ function PerformMotionInputs(attack)
 				if (progressInInputs[i] == array_length(currentMotionInput) - 1 && !inputPerformed)
 				{
 					// Reset the input if it is performed outside of the input window
-					if (animTimer < inputWindowStart || animTimer > inputWindowEnd)
+					if (animTimer < inputWindowStart[i] || animTimer > inputWindowEnd[i])
 					{
 						progressInInputs[i] = -1;
 					}
@@ -98,8 +98,9 @@ function PerformMotionInputs(attack)
 			}
 			
 			// Enhances input
-			if (longerIndex != -1) && ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) ) && (superMeter >= 25 || array_length(currentMotionInput) <= 1)
+			if (longerIndex != -1)
 			{
+				// Save the input that we are checking
 				var currentMotionInput = ds_list_find_value(listOfInputs, longerIndex);
 				var inputString = "";
 				for (i = 0; i < array_length(currentMotionInput); i++)
@@ -107,20 +108,22 @@ function PerformMotionInputs(attack)
 					inputString = inputString + string(currentMotionInput[i]);
 				}
 				
-				enhanced[longerIndex] = true;
-				if (array_length(currentMotionInput) > 1) // hackey way of detecting if the motion is a Rekka by assuming that all motions done with 1 input are Rekkas
+				// Requirements for a valid input
+				if ( (attack == 5 && requireSpecialButton) || (!requireSpecialButton) ) && (superMeter >= 25 || string_length(inputString) <= 1) && (requiredPosition[longerIndex] == 0 || (requiredPosition[longerIndex] == 1 && grounded = true) || (requiredPosition[longerIndex] == 2 && grounded = false))
 				{
-					superMeter -= 25;
-					hasUsedMeter = true
-				}
+					enhanced[longerIndex] = true;
+					if (string_length(inputString) > 1) // hackey way of detecting if the motion is a Rekka by assuming that all motions done with 1 input are Rekkas
+					{
+						superMeter -= 25;
+						hasUsedMeter = true
+					}
 				
-				if (changeImmediately)
-				{
-					changeFrame = animTimer;
+					if (changeImmediately)
+					{
+						changeFrame = animTimer;
+					}
 				}
 			}
-			
 		}
 	}
-	
 }

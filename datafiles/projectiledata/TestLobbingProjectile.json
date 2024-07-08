@@ -18,8 +18,8 @@
   "Transcendent": false,
   "Health": 1,
   "ProjectileSprites": {
-    "Sprite": "sTestProjectile",
-    "Destroy": ""
+    "Sprite": "sBeverly_Fireball",
+    "Destroy": "sBeverly_FireballDissipate"
   },
   "BaseColor": {
     "UID": "098bdd54-18a9-474f-b613-487d125c4c37",
@@ -30,11 +30,31 @@
   "CopyCharacterPalette": false,
   "Character": "Beverly",
   "Palettes": [],
-  "NumberOfFrames": 1,
+  "NumberOfFrames": 6,
   "FrameData": [
     {
       "Length": 0,
       "ImageIndex": 0
+    },
+    {
+      "Length": 4,
+      "ImageIndex": 1
+    },
+    {
+      "Length": 7,
+      "ImageIndex": 2
+    },
+    {
+      "Length": 10,
+      "ImageIndex": 3
+    },
+    {
+      "Length": 13,
+      "ImageIndex": 4
+    },
+    {
+      "Length": 16,
+      "ImageIndex": 5
     }
   ],
   "NumberOfHitboxes": 1,
@@ -47,7 +67,7 @@
       "WidthOffset": -5,
       "HeightOffset": -2,
       "Group": 99,
-      "Damage": 10,
+      "Damage": 7,
       "MeterGain": 4.0,
       "ComboScaling": 2.0,
       "AttackHitStop": 6,
@@ -78,7 +98,7 @@
     {
       "CounterHitLevel": 1,
       "Group": 1,
-      "Damage": 12,
+      "Damage": 9,
       "MeterGain": 4.0,
       "ComboScaling": 2.0,
       "AttackHitStop": 6,
@@ -89,7 +109,7 @@
       "Launches": false,
       "LaunchKnockbackVertical": 0.0,
       "LaunchKnockbackHorizontal": 0.0,
-      "GravityScaling": 0.3,
+      "GravityScaling": 0.0,
       "Pushback": 1.0,
       "ParticleXOffset": 0,
       "ParticleYOffset": 0,
@@ -108,6 +128,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2024-02-16T16:48:56.3809852-07:00",
+  "LastModified": "2024-06-19T14:46:29.5002797-07:00",
   "LastModifiedBy": "creep"
 }

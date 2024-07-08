@@ -70,9 +70,11 @@ state = eState.IDLE;
 
 	invincible = false;
 
-	hitByGroup = ds_list_create();
-	ds_list_clear(hitByGroup);
-	// Note to self: any time the player exits the move they are currently doing, the hitByGroup list MUST be cleared!
+	// This contains a list of all the objects we have hit recently
+	objectsHitList = ds_list_create();
+
+	// This is a struct which contains the IDs of every object that has recently hit us
+	hasBeenHitByIds = {};
 
 
 	toggleIdleBlock = false;
@@ -89,7 +91,7 @@ state = eState.IDLE;
 	comboCounterID = noone;
 	comboScaling = 0; // How much the next hit will be scaled
 	startCombo = false;
-	cancelCombo = true; // Combo Counter shouldn't show up on Destructable Objects
+	cancelCombo = false; // Combo Counter shouldn't show up on Destructable Objects
 	
 	// Gravity Scaling
 	gravityScaling = 0;

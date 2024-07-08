@@ -92,6 +92,7 @@ verticalMoveDir = 0;
 grounded = true;
 
 // Variables for motion inputs
+// A lot of these values are arrays, since a move may have multiple enhancers with different values for each one
 inputSet = false;
 motionInput = []; // Determines the inputs to perform during each special move
 listOfInputs = ds_list_create();
@@ -100,9 +101,10 @@ enhanced = []; // Enhances the special move if the motion input is performed
 changeFrame = 999; // Frame when the move changes if you perform the motion input if changeImmediately is false
 changeImmediately = false; // If true, changes special move as soon as the input is performed
 // How long the player has to perform the special move
-inputWindowStart = 0;
-inputWindowEnd = 0;
+inputWindowStart = [];
+inputWindowEnd = [];
 requireSpecialButton = false; // Check to see if the enhancer requires the special button to be pressed
+requiredPosition = []; // The position that the player must be in in order to use an enhancer
 
 // Variables for Rush Cancel
 rcActivated = false;
@@ -114,6 +116,8 @@ rcForwardTimer = 0; // Handles duration of Rush Cancel Forward run
 runButtonPressed = false; // Triggers when the run button is pressed
 holdRunButtonTimer = 8; // Determines the amount of frames the run button is held
 pressSpecialButtonTimer = 8; // Determines the amount of frames since the special button was pressed
+rcProjectileInvulTimer = 0; // The timer that keeps track of proj invul during RC
+rcProjectileInvulAmount = 30; // How much time (in frames) a player is proj ivul for during RC
 
 // Screen Freeze variables
 activateFreeze = false; // Determines if opponent activated screen freeze
@@ -211,7 +215,8 @@ enum eAttackType {
 	MID = 1, // Block high or low
 	LOW = 2, // Must Block Crouching
 	GRAB = 3, // Basic grab
-	COMMAND_GRAB = 4 // Advanced type of grab with special properties
+	COMMAND_GRAB = 4, // Advanced type of grab with special properties
+	HITGRAB = 5 // A grab that can be blocked
 }
 
 enum eSpritesToUse {
@@ -237,6 +242,8 @@ CharacterSprites = {
 	launched_Sprite : selectedCharacter.Sprites.Launched,
 	knockdown_Sprite : selectedCharacter.Sprites.Knockdown,
 	getup_Sprite : selectedCharacter.Sprites.GetUp,
+	rushCancel_Sprite : selectedCharacter.Sprites.RushCancel,
+	wallSplat_Sprite : selectedCharacter.Sprites.WallSplat,
 }
 
 // State-related Variables
@@ -291,17 +298,19 @@ isGrabbed = false;
 invincible = false;
 projectileInvincible = false;
 
-// This list contains all of the hitboxes that have recently hit us. We keep track of it so that
-// hitboxes that have the same "group" value don't both hit
-hitByGroup = ds_list_create();
-ds_list_clear(hitByGroup);
-// Note to self: any time the player exits the move they are currently doing, the hitByGroup list MUST be cleared!
+// This contains a list of all the objects we have hit recently
+objectsHitList = ds_list_create();
 
-// This list contanis all of the projectiles that have recently hit us. We keep track of it so that
-// multiple projectiles can hit us at once if their hitboxes share the same "group" value
-projectileHitByGroup = ds_list_create();
-ds_list_clear(projectileHitByGroup);
-// Note: This should be cleared any time the player exits hitstun.
+// This is a struct which contains the IDs of every object that has recently hit us
+hasBeenHitByIds = {};
+
+/*
+	Each entry in this struct is an ID, and then each ID has a DS_List associated with it
+	These lists contain the group IDs of the hitboxes that the object has used to hit this.
+	
+	Multiple objects may be hitting this at the same time, so we need to keep track of all
+	of their hitbox groups seperately.
+*/
 
 toggleIdleBlock = false;
 cancelable = false;
@@ -436,3 +445,13 @@ isInStableState = false; // Whether the player is in a "stable" state or not
 // After the slowdown, the game will wait until each player enters a "stable"
 // state before playing the victory animation. A "stable" state is one where
 // the player is not moving at all. The stable states are: Idle, KnockedDown
+
+// Special Charge
+hasSpecialCharge = false; // For Beverly - Whether she has her down special charged or not
+
+// Charge Motion Vars
+downUpChargeTimer = 0; // Timer that dictates how long we have down charge for
+timeToCharge = 45; // The amount of time (in frames) it takes in order to aquire charge
+bufferCharge = false; // Whether the charge should be buffered through an action
+chargePartitionTimer = 0; // Timer that determines how long the charge is stored for
+chargePartitionAmount = 7; // The amount of time (in Frames) that charge is stored for

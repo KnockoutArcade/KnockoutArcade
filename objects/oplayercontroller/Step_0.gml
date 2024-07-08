@@ -132,9 +132,7 @@ else // Safegaurd in case an empty character is spawned
 }
 
 // Reset Vars
-canBlock = false;
 canTurnAround = true;
-projectileInvincible = false;
 isInStableState = false;
 // If gravity scaling ever dips below 0, reset it to 0
 if (gravityScaling < 0)
@@ -146,6 +144,21 @@ if (hp <= 0)
 {
 	isExperiencingHardKnockdown = true;
 }
+// Reduce RC projectile invulnerability
+if (!global.freezeTimer && rcProjectileInvulTimer > 0)
+{
+	rcProjectileInvulTimer--;
+}
+// Reset Projectile Invulnerability
+if (rcProjectileInvulTimer > 0)
+{
+	projectileInvincible = true;
+}
+else
+{
+	projectileInvincible = false;
+}
+
 
 // Initialize Hurtbox Values
 hurtbox.image_xscale = 16;
@@ -335,7 +348,20 @@ if (verticalMoveDir == -1)
 {
 	storedSuperJump = true;
 	superJumpTimer = 6;
+	
+	// Handle Down-Up Charge
+	downUpChargeTimer++;
+	chargePartitionTimer = chargePartitionAmount;
 }
+else
+{
+	chargePartitionTimer--;
+	if (chargePartitionTimer <= 0 && !bufferCharge)
+	{
+		downUpChargeTimer = 0;
+	}
+}
+
 if (target != noone)
 {
 	framesSinceHitstun++;
@@ -407,34 +433,12 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	ds_list_clear(listOfInputs);
 	progressInInputs = [];
 	enhanced = [];
-	inputWindowStart = 0;
-	inputWindowEnd = 0;
+	inputWindowStart = [];
+	inputWindowEnd = [];
 	changeFrame = 999;
 	changeImmediately = false;
 	requireSpecialButton = false;
-}
-else if (animTimer > inputWindowEnd)
-{
-	motionInput = [];
-	ds_list_clear(listOfInputs);
-	progressInInputs = [];
-	inputWindowStart = 0;
-	inputWindowEnd = 0;
-	requireSpecialButton = false;
-	
-	var changeSet = false;
-	for (i = 0; i < array_length(enhanced); i++)
-	{
-		if (enhanced[i])
-		{
-			changeSet = true;
-		}
-	}
-	if (!changeSet)
-	{
-		changeFrame = 999;
-		changeImmediately = false;
-	}
+	requiredPosition = [];
 }
 else
 {
@@ -845,7 +849,7 @@ if (state == eState.SCREEN_FREEZE)
 		{
 			audio_play_sound(sfx_spend50Meter, 0, false);
 			
-			sprite_index = sRussel_RushCancel;
+			sprite_index = CharacterSprites.rushCancel_Sprite;
 			image_index = 0;
 		}
 		// Screen freeze for Rush Cancel lasts for 30 frames
@@ -859,6 +863,7 @@ if (state == eState.SCREEN_FREEZE)
 			animTimer = 0; // Reset the animation timer when entering Rush Cancel state
 			speedTrailTimer = 0;
 			comboScaling += 1;
+			rcProjectileInvulTimer = rcProjectileInvulAmount;
 			if (!grounded)
 			{
 				state = eState.RUSH_CANCEL_AIR;
@@ -1067,6 +1072,11 @@ switch state
 		hasSpentDoubleJump = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
+		
+		// Reset charge values
+		downUpChargeTimer = 0;
+		chargePartitionTimer = 0;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		if (!timeStopActivated && !installActivated)
@@ -1167,6 +1177,11 @@ switch state
 		runningBackward = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
+		
+		// Reset charge values
+		downUpChargeTimer = 0;
+		chargePartitionTimer = 0;
 		
 		vsp += fallSpeed;
 		
@@ -1224,6 +1239,7 @@ switch state
 	}
 	break;
 	
+	
 	case eState.JUMPSQUAT: 
 	{
 		cancelable = false;
@@ -1233,6 +1249,7 @@ switch state
 		isShortHopping = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 
 		hsp = jumpHsp;
 		
@@ -1313,7 +1330,6 @@ switch state
 	}
 	break;
 	
-	
 	case eState.JUMPING: 
 	{
 		animTimer = 0;
@@ -1324,6 +1340,7 @@ switch state
 		canTurnAround = false;
 		invincible = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		if image_index > (image_number - 1) image_speed = 0;
 		else image_speed = 1;
@@ -1534,6 +1551,46 @@ switch state
 		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.CommandNormal1, attack, true);
+		}
+	}
+	break;
+	
+	
+	case eState.COMMAND_NORMAL_2:
+	{
+		cancelOnLanding = selectedCharacter.CommandNormal2.CommandNormalData.CancelWhenLanding;
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal2, true, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale, false, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal2, false, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal2, attack, true);
+		}
+	}
+	break;
+	
+	
+	case eState.COMMAND_NORMAL_3:
+	{
+		cancelOnLanding = selectedCharacter.CommandNormal3.CommandNormalData.CancelWhenLanding;
+		if (grounded)
+		{	
+			GroundedAttackScript(selectedCharacter.CommandNormal3, true, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale, false, true);
+		} 
+		else 
+		{
+			JumpingAttackScript(selectedCharacter.CommandNormal3, false, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale);
+		}
+		
+		if (cancelable && hitstop < 1)
+		{
+			CancelData(selectedCharacter.CommandNormal3, attack, true);
 		}
 	}
 	break;
@@ -1883,6 +1940,14 @@ switch state
 			}
 		}
 		
+		
+		// Create speed trail
+		if (!instance_exists(oSuperFlashBackground))
+		{
+			SpeedTrail(0.6, 0.06, 5);
+		}
+		
+		
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1893,8 +1958,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
 		}
 		
-		// Create speed trail
-		SpeedTrail(0.6, 0.06, 5);
+		
 		
 		// Install Super
 		if (selectedCharacter.Super.SuperData.Type == 1 && superActivated)
@@ -1978,7 +2042,7 @@ switch state
 		hsp = 0;
 		grounded = true;
 		inAttackState = false;
-		
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.hold_Sprite;
 		
@@ -1990,10 +2054,7 @@ switch state
 				state = eState.FORWARD_THROW;
 				animTimer = 0;
 				
-				if (target != noone)
-				{
-					ds_list_clear(target.hitByGroup);
-				}
+				ClearVictimHitByGroups();
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -2008,10 +2069,8 @@ switch state
 			{
 				state = eState.BACKWARD_THROW;
 				animTimer = 0;
-				if (target != noone)
-				{
-					ds_list_clear(target.hitByGroup);
-				}
+				
+				ClearVictimHitByGroups();
 			
 				// Handle moving the player away from the wall
 				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
@@ -2030,6 +2089,7 @@ switch state
 	{
 		inAttackState = true;
 		cancelOnLanding = false;
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		
@@ -2067,6 +2127,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		canBlock = false;
 		
 		isGrabbed = true;
 	}
@@ -2076,6 +2137,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = true;
+		canBlock = false;
 		
 		sprite_index = selectedCharacter.ForwardThrow.SpriteId;
 		image_index = 0;
@@ -2102,6 +2164,7 @@ switch state
 	{
 		grounded = true;
 		inAttackState = true;
+		canBlock = false;
 		
 		sprite_index = selectedCharacter.BackwardThrow.SpriteId;
 		image_index = 0;
@@ -2135,6 +2198,7 @@ switch state
 		
 		grounded = true;
 		inAttackState = false;
+		canBlock = true;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		image_index = 0;
@@ -2159,6 +2223,7 @@ switch state
 		canTurnAround = false;
 		isEXFlash = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		if (!global.game_paused)
 		{
@@ -2168,8 +2233,6 @@ switch state
 		if (hitstun < 1)
 		{
 			// Clear the hitByGroups to allow follow-up attacks to connect
-			ds_list_clear(hitByGroup);
-			ds_list_clear(projectileHitByGroup);
 			
 			FAvictim = false;
 			
@@ -2184,15 +2247,18 @@ switch state
 			}
 			else if (movedir == 0)
 			{
+				ClearOwnerHitByGroups();
 				state = eState.IDLE;
 			}
 			else if (movedir != image_xscale)
 			{
+				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 				canBlock = true;
 			} 
 			else 
 			{
+				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 			}
 		}
@@ -2260,6 +2326,7 @@ switch state
 		canTurnAround = false;
 		grounded = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		FAvictim = false;
 		
@@ -2285,6 +2352,7 @@ switch state
 		canTurnAround = false;
 		isInStableState = true;
 		inAttackState = false;
+		canBlock = false;
 		
 		cancelCombo = true;
 		
@@ -2335,6 +2403,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = false;
 		
 		cancelCombo = true;
 		
@@ -2361,6 +2430,7 @@ switch state
 		{
 			state = eState.IDLE;
 			image_index = 0;
+			sprite_index = CharacterSprites.idle_Sprite;
 			image_speed = 1;
 			animTimer = 0;
 		}
@@ -2380,6 +2450,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = true;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2424,8 +2495,6 @@ switch state
 	
 	case eState.QUICK_GETUP : 
 	{
-		sprite_index = sRussel_QuickGetup;
-		
 		if (spiritObject != noone)
 		{
 			spiritObject.state = state;
@@ -2437,6 +2506,7 @@ switch state
 		invincible = true;
 		canTurnAround = false;
 		inAttackState = false;
+		canBlock = true;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2485,6 +2555,7 @@ switch state
 		canBlock = true;
 		cancelable = false;
 		inAttackState = false;
+		canBlock = true;
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
@@ -2593,6 +2664,7 @@ switch state
 		{
 			FAvictim = false;
 			isCrouchBlocking = false;
+			ClearOwnerHitByGroups();
 			
 			if (blockbuffer)
 			{
@@ -2657,6 +2729,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -2707,6 +2780,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -2745,6 +2819,7 @@ switch state
 		hasUsedMeter = true;
 		inAttackState = false;
 		isEXFlash = true;
+		canBlock = false;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
@@ -3145,7 +3220,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		wallHit = true;
 		hitstop = 20;
 		state = eState.LAUNCHED;
-		sprite_index = sRussel_WallSplat;
+		sprite_index = CharacterSprites.wallSplat_Sprite;
 		hsp = -(hsp * .5);
 		vsp = -2;
 	}

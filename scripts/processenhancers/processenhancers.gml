@@ -8,7 +8,7 @@ function ProcessEnhancers(Special) {
 			motionInput[i] = Special.SpecialData[i].NumpadInput;
 		}
 	
-		SetMotionInputs(motionInput, array_length(motionInput), Special.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately, Special.SpecialData[0].ButtonPressRequired);
+		SetMotionInputs(motionInput, array_length(motionInput), Special); //.SpecialData[0].StartingFrame, Special.SpecialData[0].EndingFrame, Special.SpecialData[0].TransitionFrame, Special.SpecialData[0].TransitionImmediately, Special.SpecialData[0].ButtonPressRequired);
 	
 		// Checks to see if the special move can be changed
 		if (CheckChange(Special) && inputSet)
@@ -19,6 +19,7 @@ function ProcessEnhancers(Special) {
 				if (enhanced[i])
 				{
 					pendingToggle = false;
+					isEXFlash = true;
 					// Which move should we switch to?
 					switch (Special.SpecialData[i].EnhancementMove)
 					{
@@ -30,8 +31,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -57,8 +58,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial, 0);
 							if (spiritObject != noone)
@@ -80,8 +81,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial, 0);
 							if (spiritObject != noone)
@@ -103,8 +104,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial, 0);
 							if (spiritObject != noone)
@@ -126,8 +127,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedNeutralSpecial2, 0);
 							if (spiritObject != noone)
@@ -149,8 +150,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial2, 0);
 							if (spiritObject != noone)
@@ -172,8 +173,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial2, 0);
 							if (spiritObject != noone)
@@ -195,8 +196,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial2, 0);
 							if (spiritObject != noone)
@@ -218,8 +219,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -245,8 +246,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -261,6 +262,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -272,8 +275,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -288,6 +291,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -299,8 +304,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -315,6 +320,8 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
@@ -326,8 +333,8 @@ function ProcessEnhancers(Special) {
 							inputSet = false;
 							ds_list_clear(listOfInputs);
 							progressInInputs = [];
-							inputWindowStart = 0;
-							inputWindowEnd = 0;
+							inputWindowStart = [];
+							inputWindowEnd = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -342,13 +349,15 @@ function ProcessEnhancers(Special) {
 									CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
 								}
 							}
+							
+							isEXFlash = false;
 						}
 						break;
 						
 					}
 					animTimer = 0;
 					image_index = 0;
-					isEXFlash = true;
+					
 				}
 			}
 		}

@@ -8,6 +8,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	canBlock = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
@@ -18,6 +19,14 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 	runForwardTimer = 16;
 	startedMovingForward = false;
 	runningBackward = false;
+	
+	// Supplementary Scripts
+	if (moveToDo.UseMoveScript)
+	{
+		var scriptToExecute = asset_get_index(moveToDo.SupplementaryMoveScript);
+		
+		scriptToExecute();
+	}
 	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;

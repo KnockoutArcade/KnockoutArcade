@@ -35,8 +35,8 @@
     "Launched": "sBeverly_Launched",
     "Knockdown": "sBeverly_KnockedDown",
     "GetUp": "sBeverly_Getup",
-    "RushCancel": "",
-    "WallSplat": ""
+    "RushCancel": "sBeverly_RushCancel",
+    "WallSplat": "sBeverly_WallSplat"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -1737,7 +1737,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_NeutralSpecial",
-      "Duration": 36,
+      "Duration": 40,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -1745,11 +1745,11 @@
           "ImageIndex": 0
         },
         {
-          "Length": 13,
+          "Length": 15,
           "ImageIndex": 1
         },
         {
-          "Length": 18,
+          "Length": 20,
           "ImageIndex": 2
         }
       ],
@@ -1825,8 +1825,20 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
+      "NumberOfEnhancements": 1,
+      "SpecialData": [
+        {
+          "NumpadInput": "236",
+          "ButtonPressRequired": false,
+          "StartingFrame": 1,
+          "EndingFrame": 14,
+          "EnhancementMove": 1,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -1846,7 +1858,7 @@
         },
         {
           "Start": 1,
-          "Lifetime": 31,
+          "Lifetime": 41,
           "AttackWidth": 20,
           "AttackHeight": 35,
           "WidthOffset": -9,
@@ -1856,7 +1868,7 @@
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
-          "SpawnFrame": 14,
+          "SpawnFrame": 16,
           "SpawnXOffset": 10,
           "SpawnYOffset": -10,
           "ProjectileObject": "TestLobbingProjectile"
@@ -1915,8 +1927,8 @@
         "GravityScale": 1.0,
         "FallScale": 1.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "NeutralSpecialDeepBreathing",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -2073,7 +2085,7 @@
           "EnhancementMove": 256,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -2276,13 +2288,13 @@
           "Group": 1,
           "Damage": 3,
           "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 6,
           "AttackHitStun": 9,
           "AttackType": 1,
           "BlockStun": 3.0,
           "KnockBack": 2.5,
-          "AirKnockbackVertical": 0.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -2309,7 +2321,7 @@
           "Group": 1,
           "Damage": 5,
           "MeterGain": 5.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 8,
           "AttackHitStun": 11,
           "KnockBack": 1.0,
@@ -2449,13 +2461,13 @@
           "Group": 1,
           "Damage": 3,
           "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 9,
           "AttackHitStun": 11,
           "AttackType": 1,
           "BlockStun": 10.0,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -2482,11 +2494,11 @@
           "Group": 1,
           "Damage": 5,
           "MeterGain": 5.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 12,
           "AttackHitStun": 14,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
+          "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -2637,14 +2649,14 @@
           "Group": 1,
           "Damage": 3,
           "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 14,
           "AttackHitStun": 14,
           "AttackType": 1,
           "BlockStun": 11.0,
           "KnockBack": 0.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackVertical": -1.0,
+          "AirKnockbackHorizontal": 1.5,
           "Launches": true,
           "LaunchKnockbackVertical": -1.0,
           "LaunchKnockbackHorizontal": 3.4999995,
@@ -2670,7 +2682,7 @@
           "Group": 1,
           "Damage": 5,
           "MeterGain": 5.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 14,
           "AttackHitStun": 14,
           "KnockBack": 0.0,
@@ -2790,7 +2802,7 @@
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
       "MoveType": 256,
-      "MoveCanCancelInto": 4395544,
+      "MoveCanCancelInto": 7541272,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3387,7 +3399,7 @@
           "Group": 1,
           "Damage": 4,
           "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 6,
           "AttackHitStun": 11,
           "AttackType": 2,
@@ -3420,7 +3432,7 @@
           "Group": 1,
           "Damage": 6,
           "MeterGain": 6.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "KnockBack": 2.0,
@@ -3525,7 +3537,7 @@
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
       "MoveType": 2048,
-      "MoveCanCancelInto": 4395544,
+      "MoveCanCancelInto": 7541272,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3540,15 +3552,15 @@
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 15,
+          "Length": 13,
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 20,
           "ImageIndex": 4
         },
         {
@@ -3559,7 +3571,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 9,
+          "Start": 7,
           "Lifetime": 2,
           "AttackWidth": 39,
           "AttackHeight": 10,
@@ -3572,10 +3584,10 @@
           "AttackHitStop": 11,
           "AttackHitStun": 18,
           "AttackType": 2,
-          "BlockStun": 10.0,
-          "KnockBack": 3.0,
-          "AirKnockbackVertical": 1.0,
-          "AirKnockbackHorizontal": 1.0,
+          "BlockStun": 13.0,
+          "KnockBack": 4.0,
+          "AirKnockbackVertical": -1.0,
+          "AirKnockbackHorizontal": 1.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -3648,8 +3660,8 @@
           "HeightOffset": 0
         },
         {
-          "Start": 11,
-          "Lifetime": 16,
+          "Start": 9,
+          "Lifetime": 18,
           "AttackWidth": 20,
           "AttackHeight": 11,
           "WidthOffset": 4,
@@ -3743,9 +3755,9 @@
           "WidthOffset": 8,
           "HeightOffset": 0,
           "Group": 1,
-          "Damage": 3,
+          "Damage": 6,
           "MeterGain": 4.0,
-          "ComboScaling": 0.5,
+          "ComboScaling": 1.0,
           "AttackHitStop": 14,
           "AttackHitStun": 11,
           "AttackType": 2,
@@ -3779,9 +3791,9 @@
           "WidthOffset": 8,
           "HeightOffset": 0,
           "Group": 2,
-          "Damage": 9,
+          "Damage": 6,
           "MeterGain": 6.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 14,
           "AttackHitStun": 11,
           "AttackType": 2,
@@ -3812,7 +3824,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 6,
+          "Damage": 9,
           "MeterGain": 7.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
@@ -3837,7 +3849,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 2,
-          "Damage": 11,
+          "Damage": 9,
           "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
@@ -3983,13 +3995,13 @@
           "Group": 1,
           "Damage": 5,
           "MeterGain": 4.0,
-          "ComboScaling": 3.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 8,
           "AttackHitStun": 10,
           "AttackType": 0,
           "BlockStun": 3.0,
           "KnockBack": 2.0,
-          "AirKnockbackVertical": 0.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -4016,7 +4028,7 @@
           "Group": 1,
           "Damage": 7,
           "MeterGain": 7.0,
-          "ComboScaling": 3.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 12,
           "AttackHitStun": 10,
           "KnockBack": 5.0,
@@ -4162,7 +4174,7 @@
           "AttackType": 0,
           "BlockStun": 6.0,
           "KnockBack": 4.0,
-          "AirKnockbackVertical": -2.0,
+          "AirKnockbackVertical": 0.25,
           "AirKnockbackHorizontal": 2.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
@@ -4328,8 +4340,8 @@
           "HeightOffset": 5,
           "Group": 1,
           "Damage": 6,
-          "MeterGain": 4.0,
-          "ComboScaling": 2.0,
+          "MeterGain": 6.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -4365,7 +4377,7 @@
           "Group": 2,
           "Damage": 7,
           "MeterGain": 6.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "AttackType": 0,
@@ -4421,7 +4433,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 2,
-          "Damage": 12,
+          "Damage": 10,
           "MeterGain": 9.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 30,
@@ -4748,7 +4760,7 @@
           {
             "StartingFrame": 10,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -6.0,
+            "VerticalSpeed": -4.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -4776,7 +4788,7 @@
           {
             "StartingFrame": 10,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -6.0,
+            "VerticalSpeed": -3.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
@@ -4791,8 +4803,8 @@
         "GravityScale": 1.5,
         "FallScale": 0.5000001
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "UpSpecialDeepBreathing",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4829,7 +4841,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial",
-      "Duration": 30,
+      "Duration": 48,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -4837,18 +4849,18 @@
           "ImageIndex": 0
         },
         {
-          "Length": 8,
+          "Length": 24,
           "ImageIndex": 1
         },
         {
-          "Length": 12,
+          "Length": 30,
           "ImageIndex": 2
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 8,
+          "Start": 99,
           "Lifetime": 4,
           "AttackWidth": 28,
           "AttackHeight": 20,
@@ -4884,7 +4896,7 @@
           "ActivateTimeStop": false
         },
         {
-          "Start": 8,
+          "Start": 99,
           "Lifetime": 4,
           "AttackWidth": 23,
           "AttackHeight": 20,
@@ -4939,7 +4951,7 @@
           "Pushback": 1.0,
           "ParticleXOffset": 18,
           "ParticleYOffset": 10,
-          "ParticleEffect": "sHitbox",
+          "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
@@ -4978,8 +4990,31 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 0,
-      "SpecialData": [],
+      "NumberOfEnhancements": 2,
+      "SpecialData": [
+        {
+          "NumpadInput": "5",
+          "ButtonPressRequired": true,
+          "StartingFrame": 1,
+          "EndingFrame": 24,
+          "EnhancementMove": 2,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        },
+        {
+          "NumpadInput": "5",
+          "ButtonPressRequired": true,
+          "StartingFrame": 25,
+          "EndingFrame": 30,
+          "EnhancementMove": 128,
+          "TransitionImmediately": true,
+          "TransitionFrame": 0,
+          "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        }
+      ],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -4987,22 +5022,14 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 2,
+      "NumberOfHurtboxes": 1,
       "HurtboxData": [
         {
-          "Start": 10,
-          "Lifetime": 16,
-          "AttackWidth": 30,
-          "AttackHeight": 15,
-          "WidthOffset": -15,
-          "HeightOffset": 2
-        },
-        {
           "Start": 1,
-          "Lifetime": 32,
-          "AttackWidth": 20,
+          "Lifetime": 49,
+          "AttackWidth": 14,
           "AttackHeight": 34,
-          "WidthOffset": -10,
+          "WidthOffset": -9,
           "HeightOffset": 0
         }
       ],
@@ -5047,8 +5074,8 @@
         "GravityScale": 1.0000001,
         "FallScale": 0.5
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "DeepBreathingScript",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -5345,22 +5372,102 @@
     {
       "UID": "002b23a6-d787-4a25-a6ad-1682ace2b41d",
       "MoveType": 1048576,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "SpriteName": "sBeverly_CommandNormal",
+      "Duration": 26,
+      "NumberOfFrames": 4,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 10,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 3
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 10,
+          "Lifetime": 6,
+          "AttackWidth": 40,
+          "AttackHeight": 10,
+          "WidthOffset": -5,
+          "HeightOffset": 11,
+          "Group": 0,
+          "Damage": 6,
+          "MeterGain": 6.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 12,
+          "AttackHitStun": 18,
+          "AttackType": 1,
+          "BlockStun": 8.0,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 2.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 35,
+          "ParticleYOffset": 1,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": true,
+          "SupplementaryHitScript": "TestSuppleScript",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 2,
+          "Group": 0,
+          "Damage": 8,
+          "MeterGain": 8.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 16,
+          "AttackHitStun": 20,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 2.0,
+          "Pushback": 1.0,
+          "ParticleXOffset": 35,
+          "ParticleYOffset": 1,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "UseHitScript": true,
+          "SupplementaryHitScript": "TestSuppleScript",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        }
+      ],
       "CommandNormalData": {
-        "NumpadDirection": 0,
-        "Button": 1,
+        "NumpadDirection": 6,
+        "Button": 2,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -5373,8 +5480,25 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 2,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 15,
+          "AttackWidth": 40,
+          "AttackHeight": 28,
+          "WidthOffset": -10,
+          "HeightOffset": 10
+        },
+        {
+          "Start": 16,
+          "Lifetime": 20,
+          "AttackWidth": 16,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 6
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5383,10 +5507,39 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 1.5,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 12,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
@@ -5425,22 +5578,102 @@
     {
       "UID": "fb5341fd-20f9-47f4-829d-6e88de427deb",
       "MoveType": 2097152,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "SpriteName": "sBeverly_CommandNormal",
+      "Duration": 26,
+      "NumberOfFrames": 4,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 10,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 3
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 10,
+          "Lifetime": 6,
+          "AttackWidth": 40,
+          "AttackHeight": 10,
+          "WidthOffset": -5,
+          "HeightOffset": 11,
+          "Group": 0,
+          "Damage": 6,
+          "MeterGain": 6.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 12,
+          "AttackHitStun": 18,
+          "AttackType": 1,
+          "BlockStun": 8.0,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 2.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 35,
+          "ParticleYOffset": 1,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 2,
+          "Group": 0,
+          "Damage": 8,
+          "MeterGain": 8.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 16,
+          "AttackHitStun": 20,
+          "KnockBack": 5.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 2.0,
+          "Pushback": 1.0,
+          "ParticleXOffset": 35,
+          "ParticleYOffset": 1,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        }
+      ],
       "CommandNormalData": {
-        "NumpadDirection": 0,
-        "Button": 1,
+        "NumpadDirection": 4,
+        "Button": 2,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -5453,8 +5686,25 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 2,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 15,
+          "AttackWidth": 40,
+          "AttackHeight": 28,
+          "WidthOffset": -10,
+          "HeightOffset": 10
+        },
+        {
+          "Start": 16,
+          "Lifetime": 20,
+          "AttackWidth": 16,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 6
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5463,10 +5713,39 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": -1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": -0.75,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 12,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
@@ -5621,7 +5900,7 @@
           "EnhancementMove": 2048,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -5632,7 +5911,7 @@
           "EnhancementMove": 256,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
-          "RequiredPosition": 0,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         },
         {
@@ -6555,8 +6834,8 @@
         "GravityScale": 1.0,
         "FallScale": 1.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "SideSpecialDeepBreathing",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6587,15 +6866,28 @@
       "UID": "86651c9d-185f-433a-9613-a9bc2c126ad9",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 1,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
+      "SpriteName": "sBeverly_Jump_Heavy",
+      "Duration": 36,
+      "NumberOfFrames": 3,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 2
+        }
+      ],
       "NumberOfHitboxes": 0,
       "AttackData": [],
       "CounterData": [],
@@ -6614,26 +6906,86 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
-      "NumberOfProjectiles": 0,
-      "ProjectileData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 36,
+          "AttackWidth": 20,
+          "AttackHeight": 38,
+          "WidthOffset": -10,
+          "HeightOffset": 0
+        }
+      ],
+      "NumberOfProjectiles": 1,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 8,
+          "SpawnXOffset": 10,
+          "SpawnYOffset": -20,
+          "ProjectileObject": "EnhancedProjectile"
+        }
+      ],
       "RehitData": {
         "HitBox": 0,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 7,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -1.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -6667,18 +7019,155 @@
       "UID": "210d5096-39f7-49a5-b57d-f5079fe5db45",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 8,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "SpriteName": "sBeverly_DownSpecial_Enhanced",
+      "Duration": 30,
+      "NumberOfFrames": 3,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 2
+        }
+      ],
+      "NumberOfHitboxes": 2,
+      "AttackData": [
+        {
+          "Start": 8,
+          "Lifetime": 4,
+          "AttackWidth": 28,
+          "AttackHeight": 20,
+          "WidthOffset": 0,
+          "HeightOffset": 2,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 18.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 10,
+          "AttackHitStun": 19,
+          "AttackType": 1,
+          "BlockStun": 10.0,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 1.0,
+          "GravityScaling": 3.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        },
+        {
+          "Start": 8,
+          "Lifetime": 4,
+          "AttackWidth": 23,
+          "AttackHeight": 20,
+          "WidthOffset": -28,
+          "HeightOffset": 2,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 18.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 10,
+          "AttackHitStun": 19,
+          "AttackType": 1,
+          "BlockStun": 10.0,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": -1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": -2.0,
+          "GravityScaling": 3.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 3,
+          "Group": 1,
+          "Damage": 20,
+          "MeterGain": 12.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 30,
+          "AttackHitStun": 25,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 4.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 1.0,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        },
+        {
+          "CounterHitLevel": 3,
+          "Group": 1,
+          "Damage": 20,
+          "MeterGain": 12.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 30,
+          "AttackHitStun": 25,
+          "KnockBack": 1.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": -4.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        }
+      ],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -6694,8 +7183,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 31,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -6747,13 +7245,13 @@
       "UID": "abb40bd0-4f3d-463f-aafc-e28ba7b5573c",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 128,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
+      "SpriteName": "sBeverly_DownSpecial_Success",
+      "Duration": 23,
       "NumberOfFrames": 0,
       "FrameData": [],
       "NumberOfHitboxes": 0,
@@ -6774,8 +7272,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 24,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -6795,8 +7302,8 @@
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "DeepBreathingActivate",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -6827,13 +7334,13 @@
       "UID": "76a09866-bb08-4470-8175-9b79ff4c4aa8",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 2,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
+      "SpriteName": "sBeverly_DownSpecial_Fail",
+      "Duration": 30,
       "NumberOfFrames": 0,
       "FrameData": [],
       "NumberOfHitboxes": 0,
@@ -6854,8 +7361,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 31,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -6907,18 +7423,163 @@
       "UID": "909150ce-8b93-4712-ae48-4214dd925904",
       "MoveType": 0,
       "MoveCanCancelInto": 0,
-      "EnhanceMoveType": 0,
+      "EnhanceMoveType": 4,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "SpriteName": "sBeverly_UpSpecial",
+      "Duration": 60,
+      "NumberOfFrames": 5,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 4
+        }
+      ],
+      "NumberOfHitboxes": 2,
+      "AttackData": [
+        {
+          "Start": 8,
+          "Lifetime": 7,
+          "AttackWidth": 30,
+          "AttackHeight": 30,
+          "WidthOffset": 0,
+          "HeightOffset": 2,
+          "Group": 1,
+          "Damage": 8,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 9,
+          "AttackHitStun": 24,
+          "AttackType": 1,
+          "BlockStun": 16.0,
+          "KnockBack": 6.0,
+          "AirKnockbackVertical": -5.0,
+          "AirKnockbackHorizontal": 0.3,
+          "Launches": true,
+          "LaunchKnockbackVertical": -6.0,
+          "LaunchKnockbackHorizontal": 0.3,
+          "GravityScaling": 2.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 5,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Medium_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        },
+        {
+          "Start": 16,
+          "Lifetime": 7,
+          "AttackWidth": 35,
+          "AttackHeight": 25,
+          "WidthOffset": 0,
+          "HeightOffset": 20,
+          "Group": 2,
+          "Damage": 8,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 16,
+          "AttackHitStun": 15,
+          "AttackType": 1,
+          "BlockStun": 12.0,
+          "KnockBack": 6.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 3.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": 3.0,
+          "GravityScaling": 2.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 25,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 3,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 24,
+          "AttackHitStun": 14,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 0.3,
+          "Launches": true,
+          "LaunchKnockbackVertical": -6.0,
+          "LaunchKnockbackHorizontal": 0.3,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 25,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        },
+        {
+          "CounterHitLevel": 3,
+          "Group": 2,
+          "Damage": 10,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 25,
+          "AttackHitStun": 12,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 3.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": 3.0,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 25,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        }
+      ],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -6934,8 +7595,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 18,
+          "Lifetime": 50,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": -10,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -6944,19 +7614,63 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -6.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          }
+        ],
+        "GravityScale": 1.5,
+        "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -4.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          }
+        ],
+        "GravityScale": 1.5,
+        "FallScale": 0.5
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "BevEnhancedUpSpecial",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -7232,58 +7946,165 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_NSpecial_MOCKUP",
-      "Duration": 90,
-      "NumberOfFrames": 11,
+      "SpriteName": "sBeverly_Super",
+      "Duration": 78,
+      "NumberOfFrames": 22,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 35,
+          "Length": 3,
           "ImageIndex": 1
+        },
+        {
+          "Length": 6,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 9,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 33,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 11
         },
         {
           "Length": 39,
-          "ImageIndex": 2
+          "ImageIndex": 12
         },
         {
-          "Length": 43,
-          "ImageIndex": 1
+          "Length": 42,
+          "ImageIndex": 13
         },
         {
-          "Length": 47,
-          "ImageIndex": 2
+          "Length": 45,
+          "ImageIndex": 14
         },
         {
-          "Length": 51,
-          "ImageIndex": 1
+          "Length": 49,
+          "ImageIndex": 15
         },
         {
           "Length": 55,
-          "ImageIndex": 2
+          "ImageIndex": 16
         },
         {
           "Length": 59,
-          "ImageIndex": 1
+          "ImageIndex": 17
         },
         {
           "Length": 63,
-          "ImageIndex": 2
+          "ImageIndex": 18
         },
         {
           "Length": 67,
-          "ImageIndex": 1
+          "ImageIndex": 19
         },
         {
           "Length": 71,
-          "ImageIndex": 2
+          "ImageIndex": 20
+        },
+        {
+          "Length": 75,
+          "ImageIndex": 21
         }
       ],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 37,
+          "Lifetime": 4,
+          "AttackWidth": 20,
+          "AttackHeight": 40,
+          "WidthOffset": 10,
+          "HeightOffset": 10,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 5,
+          "AttackHitStun": 10,
+          "AttackType": 1,
+          "BlockStun": 14.0,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": 4.0,
+          "AirKnockbackHorizontal": 0.5,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 1.0,
+          "GravityScaling": 3.0,
+          "Pushback": 2.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 3,
+          "Group": 1,
+          "Damage": 14,
+          "MeterGain": 0.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 20,
+          "AttackHitStun": 15,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": 8.0,
+          "AirKnockbackHorizontal": 2.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 2.0,
+          "GravityScaling": 0.0,
+          "Pushback": 3.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit"
+        }
+      ],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -7318,37 +8139,13 @@
           "HeightOffset": 0
         }
       ],
-      "NumberOfProjectiles": 5,
+      "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
           "SpawnFrame": 35,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 43,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 51,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 59,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
-        },
-        {
-          "SpawnFrame": 67,
-          "SpawnXOffset": 10,
-          "SpawnYOffset": -10,
-          "ProjectileObject": "TestLobbingProjectile"
+          "SpawnXOffset": 18,
+          "SpawnYOffset": -20,
+          "ProjectileObject": "BeverlySuperBall"
         }
       ],
       "RehitData": {
@@ -7444,6 +8241,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2024-03-16T10:54:43.5845838-07:00",
+  "LastModified": "2024-07-01T22:35:24.2323598-07:00",
   "LastModifiedBy": "creep"
 }

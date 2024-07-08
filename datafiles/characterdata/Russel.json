@@ -35,8 +35,8 @@
     "Launched": "sRussel_Launched",
     "Knockdown": "sRussel_KnockedDown",
     "GetUp": "sRussel_Getup",
-    "RushCancel": "",
-    "WallSplat": ""
+    "RushCancel": "sRussel_RushCancel",
+    "WallSplat": "sRussel_WallSplat"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -5260,9 +5260,9 @@
           "ComboScaling": 0.0,
           "AttackHitStop": 9,
           "AttackHitStun": 24,
-          "AttackType": 4,
-          "BlockStun": 1.0,
-          "KnockBack": 0.0,
+          "AttackType": 5,
+          "BlockStun": 15.0,
+          "KnockBack": 3.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 0.0,
           "Launches": false,
@@ -5372,7 +5372,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -8053,6 +8053,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-05-27T19:05:21.1789151-07:00",
+  "LastModified": "2024-06-03T16:09:59.3373567-07:00",
   "LastModifiedBy": "creep"
 }

@@ -17,9 +17,19 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, hsp);
-	draw_text(20, 70, comboScaling);
-	draw_text(20, 90, storedComboDamage);
+	draw_text(20, 50, storedComboDamage);
+	draw_text(20, 70, projectileInvincible);
+	draw_text(20, 90, ds_list_size(objectsHitList));
+	
+	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
+			
+	for (var j = 0; j < array_length(hitByIDs); j++)
+	{
+	   for (var k = 0; k < ds_list_size(hasBeenHitByIds[$ hitByIDs[j]]); k++;)
+	   {
+			draw_text(20 + (20 * k), 110 + (20 * j), hasBeenHitByIds[$ hitByIDs[j]][| k]);
+	   }
+	}
 } 
 else 
 {
@@ -30,10 +40,10 @@ else
 	draw_set_color(c_white);
 	
 	draw_text(750, 10, state);
-	draw_text(750, 30, inAttackState);
-	draw_text(750, 50, animTimer);
-	draw_text(750, 70, storedComboDamage);
-	draw_text(750, 90, comboScaling);
+	draw_text(750, 30, animTimer);
+	draw_text(750, 50, canBlock);
+	draw_text(750, 70, hitstop);
+	draw_text(750, 90, projectileInvincible);
 	
 	
 }

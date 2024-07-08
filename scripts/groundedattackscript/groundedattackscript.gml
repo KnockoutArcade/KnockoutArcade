@@ -8,6 +8,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	grounded = onGround;
 	image_index = 0;
 	inAttackState = true;
+	canBlock = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
@@ -18,6 +19,14 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	runForwardTimer = 16;
 	startedMovingForward = false;
 	runningBackward = false;
+	
+	// Supplementary Scripts
+	if (moveToDo.UseMoveScript)
+	{
+		var scriptToExecute = asset_get_index(moveToDo.SupplementaryMoveScript);
+		
+		scriptToExecute();
+	}
 	
 	if vsp > 0 vsp += fallSpeed * fallingMult; // If we are falling, apply a gravity modifier
 	else vsp += fallSpeed * gravityMult;
@@ -68,6 +77,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		}
 	}
 	
+	// If the animation has expired
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.IDLE;
