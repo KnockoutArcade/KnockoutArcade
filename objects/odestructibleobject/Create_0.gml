@@ -81,6 +81,8 @@ state = eState.IDLE;
 	cancelable = false;
 	canBlock = false;
 
+	projectileInvincible = false;
+
 	knockbackVel = 0;
 	pushbackVel = 0;
 	
