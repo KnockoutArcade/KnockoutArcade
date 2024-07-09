@@ -23,7 +23,18 @@ if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_s
 	show_debug_message("Spawned a hitbox");
 }
 
-if (hasHitSomething || (hsp == 0 && vsp == 0))
+// If the opponent has hit this object, prompt the removal of hitboxes
+var _hasBeenHitBy = variable_struct_get_names(hasBeenHitByIds);
+if (array_length(_hasBeenHitBy) > 0)
+{
+	if (!variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)))
+	{
+		isHitByOpponent = true;
+	}
+}
+
+
+if (hasHitSomething || (hsp == 0 && vsp == 0) || isHitByOpponent)
 {
 	// With each of the things we've collided with, clear it's projectileHitBy list
 	for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)
@@ -56,6 +67,7 @@ if (hasHitSomething || (hsp == 0 && vsp == 0))
 	
 	hasHitSomething = false;
 	canSpawnHitboxes = false;
+	isHitByOpponent = false;
 	hitstun = 0;
 }
 

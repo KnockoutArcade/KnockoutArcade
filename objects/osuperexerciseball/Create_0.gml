@@ -33,6 +33,7 @@ hitboxID = ds_list_create(); // The IDs of this projectile's hitboxes
 hasSpawnedHitboxes = false; // Whether this objects has spawned it's hitboxes yet or not.
 canSpawnHitboxes = true; // Whether this object is allowed to spawn its hitboxes or not
 hasHitSomething = false; // Whether this object has hit something recently
+isHitByOpponent = false; // Whether the opponent has hit this object recently
 
 copyCharacterPalette = false;
 hasLifetime = false;
