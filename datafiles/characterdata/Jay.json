@@ -6,7 +6,7 @@
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
-  "WalkSpeed": 1.25,
+  "WalkSpeed": 1.1,
   "RunSpeed": 2.5,
   "Traction": 0.25,
   "JumpSpeed": 4.0,
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-07-10T15:05:05.3523429-07:00",
+  "LastModified": "2024-07-10T17:10:27.0093813-07:00",
   "LastModifiedBy": "creep"
 }

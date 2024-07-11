@@ -509,11 +509,13 @@ if (state == eState.IDLE)
 	if (movedir == image_xscale && !runningForward) 
 	{
 		state = eState.WALKING;
+		image_index = 0;
 	} 
 	else if (movedir == -image_xscale)
 	{
 		state = eState.WALKING;
 		canBlock = true;
+		image_index = 0;
 	}
 	
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
