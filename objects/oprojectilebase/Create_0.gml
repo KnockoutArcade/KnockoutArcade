@@ -59,18 +59,18 @@ hitstopTimer = 0; // How long this projectile is in hitstop for
 // The script to run when a projectile destroys itself
 destroyScript = function ProjectileDestroyScript()
 {
-	for (var i = 0; i < ds_list_size(hitboxID); i++)
+	if (hitboxID != -1)
 	{
-		with (ds_list_find_value(hitboxID, i))
+		for (var i = 0; i < ds_list_size(hitboxID); i++)
 		{
-			lifetime = 0;
+			with (ds_list_find_value(hitboxID, i))
+			{
+				lifetime = 0;
+			}
 		}
+		ds_list_clear(hitboxID);
 	}
-	ds_list_clear(hitboxID);
-	if (target != noone)
-	{
-		ds_list_clear(target.hitByGroup);
-	}
+	
 	instance_destroy();
 	
 	// Create destroy sprite
