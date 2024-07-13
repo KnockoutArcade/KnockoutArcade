@@ -20,7 +20,7 @@
   "JumpHorizontalSpeed": 0.0,
   "CharacterSprites": {
     "Idle": "sJay_Idle",
-    "Crouch": "sJay_crouch_mockup_strip1",
+    "Crouch": "sJay_Crouch",
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sJay_Walk_Forward",
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-07-11T14:54:33.1303839-07:00",
+  "LastModified": "2024-07-13T12:20:05.0863206-07:00",
   "LastModifiedBy": "creep"
 }

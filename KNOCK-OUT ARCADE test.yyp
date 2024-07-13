@@ -312,6 +312,7 @@
     {"id":{"name":"oMainMenuIcons","path":"objects/oMainMenuIcons/oMainMenuIcons.yy",},"order":6,},
     {"id":{"name":"sfx_TestHeavyWhiff","path":"sounds/sfx_TestHeavyWhiff/sfx_TestHeavyWhiff.yy",},"order":14,},
     {"id":{"name":"sStageSelect_MusicNames_strip5","path":"sprites/sStageSelect_MusicNames_strip5/sStageSelect_MusicNames_strip5.yy",},"order":4,},
+    {"id":{"name":"sJay_Crouch","path":"sprites/sJay_Crouch/sJay_Crouch.yy",},"order":28,},
     {"id":{"name":"sSemisolidPlatform","path":"sprites/sSemisolidPlatform/sSemisolidPlatform.yy",},"order":6,},
     {"id":{"name":"sHitEffect","path":"sprites/sHitEffect/sHitEffect.yy",},"order":0,},
     {"id":{"name":"sJay_SC_CrouchingMedium_MOCKUP_strip6","path":"sprites/sJay_SC_CrouchingMedium_MOCKUP_strip6/sJay_SC_CrouchingMedium_MOCKUP_strip6.yy",},"order":10,},
