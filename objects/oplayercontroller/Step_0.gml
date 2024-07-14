@@ -1274,6 +1274,7 @@ switch state
 			grounded = false;
 			jumpAttackBuffer = 0;
 			animTimer = 0;
+			image_index = 0;
 			
 			// Handle spawning jump particle
 			// Spawn a jump particle once the player leaves the ground
