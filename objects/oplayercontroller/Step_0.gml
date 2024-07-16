@@ -521,6 +521,7 @@ if (state == eState.IDLE)
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		image_index = 0;
 		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
@@ -602,6 +603,7 @@ if (state == eState.CROUCHING)
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
+		image_index = 0;
 		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
@@ -1008,6 +1010,7 @@ switch state
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
+			image_index = 0;
 			animTimer = 0;
 			audio_play_sound(initialDashSFX, 0, false);
 		}
@@ -1066,104 +1069,206 @@ switch state
 	
 	case eState.RUN_FORWARD: 
 	{
-		cancelable = false;
-		grounded = true;
-		canTurnAround = false;
-		isShortHopping = false;
-		isSuperJumping = false;
-		hasSpentDoubleJump = false;
-		invincible = false;
-		inAttackState = false;
-		canBlock = false;
-		
-		// Reset charge values
-		downUpChargeTimer = 0;
-		chargePartitionTimer = 0;
-		
-		sprite_index = CharacterSprites.runForward_Sprite;
-		if (!timeStopActivated && !installActivated)
+		if (selectedCharacter.Name != "Jay")
 		{
-			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
-		}
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			invincible = false;
+			inAttackState = false;
+			canBlock = false;
 		
-		if (movedir == -image_xscale) // if we press back, then go back to walking state
-		{
-			state = eState.WALKING;
-			sprite_index = CharacterSprites.walkBackward_Sprite;
-			canBlock = true;
-		}
-
-		image_speed = 1;
+			// Reset charge values
+			downUpChargeTimer = 0;
+			chargePartitionTimer = 0;
 		
-		hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
-		vsp += fallSpeed;
-
-		if (!runningForward) 
-		{
-			state = eState.IDLE;
-		}
-		
-		// Handle Jumping And Crouching
-		if verticalMoveDir == 1 
-		{
-			state = eState.JUMPSQUAT;
-			jumpHsp = hsp;
-			animTimer = 0;
-			
-			// Is the player jumping forward?
-			if (movedir != -image_xscale) 
+			sprite_index = CharacterSprites.runForward_Sprite;
+			if (!timeStopActivated && !installActivated)
 			{
-				isJumpingForward = true;
+				superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
 			}
-			else 
+		
+			if (movedir == -image_xscale) // if we press back, then go back to walking state
 			{
-				isJumpingForward = false;
-				hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+				state = eState.WALKING;
+				sprite_index = CharacterSprites.walkBackward_Sprite;
+				canBlock = true;
+			}
+
+			image_speed = 1;
+		
+			hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
+			vsp += fallSpeed;
+
+			if (!runningForward) 
+			{
+				state = eState.IDLE;
+			}
+		
+			// Handle Jumping And Crouching
+			if verticalMoveDir == 1 
+			{
+				state = eState.JUMPSQUAT;
 				jumpHsp = hsp;
-			}
+				animTimer = 0;
 			
-			// handle Super Jumping
-			if (storedSuperJump)
+				// Is the player jumping forward?
+				if (movedir != -image_xscale) 
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+					hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+					jumpHsp = hsp;
+				}
+			
+				// handle Super Jumping
+				if (storedSuperJump)
+				{
+					isSuperJumping = true;
+					storedSuperJump = false;
+				}
+			} 
+			else if (verticalMoveDir == -1)
 			{
-				isSuperJumping = true;
-				storedSuperJump = false;
+				state = eState.CROUCHING;
 			}
-		} 
-		else if (verticalMoveDir == -1)
-		{
-			state = eState.CROUCHING;
-		}
 
 		
-		// Handle Spawning Dash Particles
-		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
-		if (animTimer == 1 || animTimer mod 5 == 0)
-		{
-			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
-			with (dashParticle) 
+			// Handle Spawning Dash Particles
+			// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+			if (animTimer == 1 || animTimer mod 5 == 0)
 			{
-				sprite_index = sDashParticle;
-				image_index = 0;
-				image_xscale = other.image_xscale;
-				lifetime = 15;
-				depth -= 1;
+				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (dashParticle) 
+				{
+					sprite_index = sDashParticle;
+					image_index = 0;
+					image_xscale = other.image_xscale;
+					lifetime = 15;
+					depth -= 1;
+				}
 			}
+		
+			// Handle Running Sound Effects
+			for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
+			{
+				if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+				{
+					audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+				}
+			}
+		
+			previousWalkFrame = floor(image_index);
+		
+			PressAttackButton(attack);
+		
+			HandleWalkingOffPlatforms(false);
+		}
+		else
+		{
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			invincible = false;
+			inAttackState = false;
+			canBlock = false;
+		
+			// Reset charge values
+			downUpChargeTimer = 0;
+			chargePartitionTimer = 0;
+			
+			sprite_index = CharacterSprites.runForward_Sprite;
+			if (!timeStopActivated && !installActivated)
+			{
+				superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+			}
+
+			image_speed = 1;
+			
+			// Set the dash momentum
+			if (animTimer == 5)
+			{
+				var JayDashMomentum = 5;
+				
+				hsp = (JayDashMomentum + (speedBonus / 100 * JayDashMomentum)) * image_xscale;
+			}
+			
+			if (animTimer >= 25) 
+			{
+				if (!runningForward)
+				{
+					state = eState.IDLE;
+				}
+				else
+				{
+					animTimer = 0;
+					image_index = 0;
+				}
+			}
+			
+			vsp += fallSpeed;
+			
+			// Handle Jumping And Crouching
+			if verticalMoveDir == 1 
+			{
+				state = eState.JUMPSQUAT;
+				jumpHsp = hsp;
+				animTimer = 0;
+			
+				// Is the player jumping forward?
+				if (movedir != -image_xscale) 
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+					hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+					jumpHsp = hsp;
+				}
+			
+				// handle Super Jumping
+				if (storedSuperJump)
+				{
+					isSuperJumping = true;
+					storedSuperJump = false;
+				}
+			} 
+			else if (verticalMoveDir == -1)
+			{
+				state = eState.CROUCHING;
+			}
+			
+			// Handle Spawning Dash Particles
+			// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+			if (animTimer == 1)
+			{
+				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (dashParticle) 
+				{
+					sprite_index = sDashParticle;
+					image_index = 0;
+					image_xscale = other.image_xscale;
+					lifetime = 15;
+					depth -= 1;
+				}
+			}
+			
+			PressAttackButton(attack);
+		
+			HandleWalkingOffPlatforms(false);
+			
 		}
 		
-		// Handle Running Sound Effects
-		for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
-		{
-			if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
-			{
-				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
-			}
-		}
-		
-		previousWalkFrame = floor(image_index);
-		
-		PressAttackButton(attack);
-		
-		HandleWalkingOffPlatforms(false);
 	}
 	break;
 	
