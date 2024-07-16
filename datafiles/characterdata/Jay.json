@@ -24,7 +24,7 @@
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sJay_Walk_Forward",
-    "WalkBackward": "sJay_Walk_Forward",
+    "WalkBackward": "sJay_Walk_Backward",
     "RunForward": "sRussel_Run_Forward",
     "RunBackward": "sRussel_Run_Backward",
     "JumpSquat": "sJay_Jumpsquat",
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-07-13T14:44:02.4862108-07:00",
+  "LastModified": "2024-07-16T11:26:29.543374-07:00",
   "LastModifiedBy": "creep"
 }
