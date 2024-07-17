@@ -1221,6 +1221,17 @@ switch state
 			if verticalMoveDir == 1 
 			{
 				state = eState.JUMPSQUAT;
+				
+				// Speed Cap + jumping during startup
+				if (animTimer < 5)
+				{
+					hsp = runSpeed * image_xscale;
+				}
+				if (abs(hsp) > runSpeed)
+				{
+					hsp = sign(hsp) * runSpeed;
+				}
+				
 				jumpHsp = hsp;
 				animTimer = 0;
 			
