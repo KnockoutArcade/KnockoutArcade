@@ -1246,11 +1246,12 @@ switch state
 			else if (verticalMoveDir == -1)
 			{
 				state = eState.CROUCHING;
+				hsp = hsp * 0.8;
 			}
 			
 			// Handle Spawning Dash Particles
-			// spawn a dash particle every 5 frames, and on the 1st frame of dashing
-			if (animTimer == 1)
+			// spawn a dash particle on the 5th frame of dashing
+			if (animTimer == 5)
 			{
 				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
 				with (dashParticle) 
