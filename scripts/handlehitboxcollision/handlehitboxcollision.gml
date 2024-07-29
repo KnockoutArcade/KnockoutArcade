@@ -213,7 +213,7 @@ function HandleHitboxCollision(ownerType)
 				
 					// Multiple hitboxes
 					// Add this victim to the list of things this hitbox has already hit
-					ds_list_add(hasHit, collision_list.owner.id);
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 		
 					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
 					{

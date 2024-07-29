@@ -16,7 +16,7 @@
   "NumberOfBounces": 0,
   "Bounciness": 0.0,
   "Transcendent": false,
-  "Health": 10,
+  "Health": 1,
   "ProjectileSprites": {
     "Sprite": "sGunther_JumpingMedium_Projectile",
     "Destroy": "sGunther_JumpingMedium_Projectile_destroy_strip4"
@@ -201,6 +201,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2023-10-19T23:28:51.2218945-07:00",
+  "LastModified": "2024-07-28T17:55:28.2648828-07:00",
   "LastModifiedBy": "creep"
 }
