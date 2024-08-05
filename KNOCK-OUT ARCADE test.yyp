@@ -518,6 +518,7 @@
     {"id":{"name":"sJay_SC_StandMedium_MOCKUP_strip6","path":"sprites/sJay_SC_StandMedium_MOCKUP_strip6/sJay_SC_StandMedium_MOCKUP_strip6.yy",},"order":12,},
     {"id":{"name":"CheckChange","path":"scripts/CheckChange/CheckChange.yy",},"order":3,},
     {"id":{"name":"sRussel_Crouching_Medium","path":"sprites/sRussel_Crouching_Medium/sRussel_Crouching_Medium.yy",},"order":12,},
+    {"id":{"name":"sJay_Run_Backwards","path":"sprites/sJay_Run_Backwards/sJay_Run_Backwards.yy",},"order":33,},
     {"id":{"name":"sControlsMenuUI_InputBackgrounds","path":"sprites/sControlsMenuUI_InputBackgrounds/sControlsMenuUI_InputBackgrounds.yy",},"order":5,},
     {"id":{"name":"Cutscene_DestroyObject","path":"scripts/Cutscene_DestroyObject/Cutscene_DestroyObject.yy",},"order":8,},
     {"id":{"name":"sControlsMenu_TurnAway","path":"sprites/sControlsMenu_TurnAway/sControlsMenu_TurnAway.yy",},"order":3,},
