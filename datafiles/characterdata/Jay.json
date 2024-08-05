@@ -13,7 +13,7 @@
   "FallSpeed": 0.25,
   "BackDashDuration": 14,
   "BackDashInvincibility": 5,
-  "BackDashSpeed": 3.4,
+  "BackDashSpeed": 4.0,
   "BackDashStartup": 1.0,
   "FastFallSpeed": 0.35,
   "JumpType": 0,
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-05T14:51:37.7548376-07:00",
+  "LastModified": "2024-08-05T15:46:40.9513308-07:00",
   "LastModifiedBy": "creep"
 }

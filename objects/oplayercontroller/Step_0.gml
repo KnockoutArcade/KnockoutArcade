@@ -528,6 +528,7 @@ if (state == eState.IDLE)
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
+		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
@@ -610,6 +611,7 @@ if (state == eState.CROUCHING)
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
+		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
@@ -1017,6 +1019,7 @@ switch state
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
+			animTimer = 0;
 			sprite_index = CharacterSprites.runBackward_Sprite;
 			image_index = 0;
 		}
@@ -2601,6 +2604,7 @@ switch state
 			{
 				canBlock = false;
 				state = eState.RUN_BACKWARD;
+				animTimer = 0;
 				sprite_index = CharacterSprites.runBackward_Sprite;
 				image_index = 0;
 				
@@ -2657,6 +2661,7 @@ switch state
 			{
 				canBlock = false;
 				state = eState.RUN_BACKWARD;
+				animTimer = 0;
 				sprite_index = CharacterSprites.runBackward_Sprite;
 				image_index = 0;
 				
