@@ -105,6 +105,7 @@
     {"id":{"name":"sCharacterHintSheets","path":"sprites/sCharacterHintSheets/sCharacterHintSheets.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial3Low_MOCKUP","path":"sprites/sBeverly_SideSpecial3Low_MOCKUP/sBeverly_SideSpecial3Low_MOCKUP.yy",},"order":5,},
     {"id":{"name":"sCharSel_NameRussel","path":"sprites/sCharSel_NameRussel/sCharSel_NameRussel.yy",},"order":0,},
+    {"id":{"name":"sJay_Launched","path":"sprites/sJay_Launched/sJay_Launched.yy",},"order":34,},
     {"id":{"name":"rJayStage","path":"rooms/rJayStage/rJayStage.yy",},"order":2,},
     {"id":{"name":"SideSpecialDeepBreathing","path":"scripts/SideSpecialDeepBreathing/SideSpecialDeepBreathing.yy",},"order":3,},
     {"id":{"name":"sfx_Landing","path":"sounds/sfx_Landing/sfx_Landing.yy",},"order":11,},

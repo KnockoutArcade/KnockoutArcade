@@ -32,7 +32,7 @@
     "Hurt": "sJay_Hurt",
     "Grab": "sRussel_Grab",
     "Hold": "sRussel_Hold",
-    "Launched": "sRussel_Launched",
+    "Launched": "sJay_Launched",
     "Knockdown": "sRussel_KnockedDown",
     "GetUp": "sRussel_Getup",
     "RushCancel": "sRussel_RushCancel",
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-05T15:46:40.9513308-07:00",
+  "LastModified": "2024-08-06T16:32:42.4695331-07:00",
   "LastModifiedBy": "creep"
 }
