@@ -21,7 +21,7 @@
   "CharacterSprites": {
     "Idle": "sJay_Idle",
     "Crouch": "sJay_Crouch",
-    "StandBlock": "sRussel_Block",
+    "StandBlock": "sJay_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sJay_Walk_Forward",
     "WalkBackward": "sJay_Walk_Backward",
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-06T16:32:42.4695331-07:00",
+  "LastModified": "2024-08-08T11:33:24.1886362-07:00",
   "LastModifiedBy": "creep"
 }
