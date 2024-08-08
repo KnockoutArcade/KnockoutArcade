@@ -22,7 +22,7 @@
     "Idle": "sJay_Idle",
     "Crouch": "sJay_Crouch",
     "StandBlock": "sJay_Block",
-    "CrouchBlock": "sRussel_Crouch_Block",
+    "CrouchBlock": "sJay_Crouch_Block",
     "WalkForward": "sJay_Walk_Forward",
     "WalkBackward": "sJay_Walk_Backward",
     "RunForward": "sJay_Run_Forward",
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-08T11:33:24.1886362-07:00",
+  "LastModified": "2024-08-08T11:57:58.8563279-07:00",
   "LastModifiedBy": "creep"
 }

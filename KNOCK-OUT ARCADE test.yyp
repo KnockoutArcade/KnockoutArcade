@@ -370,6 +370,7 @@
     {"id":{"name":"sRound2Start","path":"sprites/sRound2Start/sRound2Start.yy",},"order":5,},
     {"id":{"name":"sJay_SC_JUMP_MOCKUP_strip2","path":"sprites/sJay_SC_JUMP_MOCKUP_strip2/sJay_SC_JUMP_MOCKUP_strip2.yy",},"order":14,},
     {"id":{"name":"oGameManager","path":"objects/oGameManager/oGameManager.yy",},"order":0,},
+    {"id":{"name":"sJay_Crouch_Block","path":"sprites/sJay_Crouch_Block/sJay_Crouch_Block.yy",},"order":36,},
     {"id":{"name":"sGrabBox","path":"sprites/sGrabBox/sGrabBox.yy",},"order":1,},
     {"id":{"name":"sRussel_Jump","path":"sprites/sRussel_Jump/sRussel_Jump.yy",},"order":9,},
     {"id":{"name":"ClearOwnerHitByGroups","path":"scripts/ClearOwnerHitByGroups/ClearOwnerHitByGroups.yy",},"order":2,},
