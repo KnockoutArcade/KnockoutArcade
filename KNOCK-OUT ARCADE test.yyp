@@ -228,6 +228,7 @@
     {"id":{"name":"sBeverly_Jump_Heavy","path":"sprites/sBeverly_Jump_Heavy/sBeverly_Jump_Heavy.yy",},"order":43,},
     {"id":{"name":"sBeverly_NeutralSpecial","path":"sprites/sBeverly_NeutralSpecial/sBeverly_NeutralSpecial.yy",},"order":53,},
     {"id":{"name":"sBeverly_BackwardThrow","path":"sprites/sBeverly_BackwardThrow/sBeverly_BackwardThrow.yy",},"order":46,},
+    {"id":{"name":"sJay_KnockedDown","path":"sprites/sJay_KnockedDown/sJay_KnockedDown.yy",},"order":37,},
     {"id":{"name":"sConstructionGuy_KnockedDown","path":"sprites/sConstructionGuy_KnockedDown/sConstructionGuy_KnockedDown.yy",},"order":3,},
     {"id":{"name":"oCharacterSelectButtons","path":"objects/oCharacterSelectButtons/oCharacterSelectButtons.yy",},"order":14,},
     {"id":{"name":"sJay_JumpingMedium_mockup_strip5","path":"sprites/sJay_JumpingMedium_mockup_strip5/sJay_JumpingMedium_mockup_strip5.yy",},"order":18,},
