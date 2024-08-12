@@ -2435,24 +2435,28 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SideSpecial_mockup_strip5",
+      "SpriteName": "sJay_Standing_Light3",
       "Duration": 23,
-      "NumberOfFrames": 5,
+      "NumberOfFrames": 6,
       "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
         {
           "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 17,
+          "Length": 11,
           "ImageIndex": 3
         },
         {
-          "Length": 20,
+          "Length": 15,
           "ImageIndex": 4
         },
         {
@@ -8494,6 +8498,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-12T14:42:12.5490073-07:00",
+  "LastModified": "2024-08-12T16:40:09.3197792-07:00",
   "LastModifiedBy": "creep"
 }

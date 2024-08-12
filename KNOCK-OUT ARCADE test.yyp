@@ -80,6 +80,7 @@
     {"id":{"name":"sJumpParticle","path":"sprites/sJumpParticle/sJumpParticle.yy",},"order":1,},
     {"id":{"name":"oSuperFlashBackground","path":"objects/oSuperFlashBackground/oSuperFlashBackground.yy",},"order":8,},
     {"id":{"name":"rCredits","path":"rooms/rCredits/rCredits.yy",},"order":10,},
+    {"id":{"name":"sJay_Standing_Light3","path":"sprites/sJay_Standing_Light3/sJay_Standing_Light3.yy",},"order":40,},
     {"id":{"name":"sMapLevel","path":"sprites/sMapLevel/sMapLevel.yy",},"order":0,},
     {"id":{"name":"sJayScene3","path":"sprites/sJayScene3/sJayScene3.yy",},"order":2,},
     {"id":{"name":"sStageSelect_MusicOption_strip4","path":"sprites/sStageSelect_MusicOption_strip4/sStageSelect_MusicOption_strip4.yy",},"order":5,},
