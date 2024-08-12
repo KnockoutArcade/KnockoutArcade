@@ -177,6 +177,7 @@
     {"id":{"name":"sBeverly_DownSpecial_Fail","path":"sprites/sBeverly_DownSpecial_Fail/sBeverly_DownSpecial_Fail.yy",},"order":60,},
     {"id":{"name":"sCharSel_Lever","path":"sprites/sCharSel_Lever/sCharSel_Lever.yy",},"order":15,},
     {"id":{"name":"sRussel_Crouching_Light","path":"sprites/sRussel_Crouching_Light/sRussel_Crouching_Light.yy",},"order":11,},
+    {"id":{"name":"sJay_Standing_Light2","path":"sprites/sJay_Standing_Light2/sJay_Standing_Light2.yy",},"order":39,},
     {"id":{"name":"sJay_DownSpecial2A_Mockup_strip4","path":"sprites/sJay_DownSpecial2A_Mockup_strip4/sJay_DownSpecial2A_Mockup_strip4.yy",},"order":4,},
     {"id":{"name":"sControlsMenu_PressStart","path":"sprites/sControlsMenu_PressStart/sControlsMenu_PressStart.yy",},"order":8,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":2,},

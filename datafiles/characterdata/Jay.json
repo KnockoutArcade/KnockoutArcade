@@ -1198,11 +1198,11 @@
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 12,
           "ImageIndex": 3
         }
       ],
@@ -2298,28 +2298,44 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_Nspecial_mockup_strip5",
+      "SpriteName": "sJay_Standing_Light2",
       "Duration": 28,
-      "NumberOfFrames": 5,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
-          "Length": 2,
-          "ImageIndex": 1
+          "Length": 0,
+          "ImageIndex": 0
         },
         {
           "Length": 5,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 20,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 23,
+          "Length": 15,
           "ImageIndex": 4
         },
         {
-          "Length": 25,
+          "Length": 18,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 26,
           "ImageIndex": 5
         }
       ],
@@ -8478,6 +8494,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-12T12:16:31.9788991-07:00",
+  "LastModified": "2024-08-12T14:42:12.5490073-07:00",
   "LastModifiedBy": "creep"
 }
