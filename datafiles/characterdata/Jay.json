@@ -1185,20 +1185,20 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_StandLight1_Mockup_strip4",
+      "SpriteName": "sJay_Standing_Light",
       "Duration": 10,
       "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
@@ -1209,12 +1209,12 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 4,
           "Lifetime": 4,
-          "AttackWidth": 12,
+          "AttackWidth": 17,
           "AttackHeight": 10,
-          "WidthOffset": 12,
-          "HeightOffset": 15,
+          "WidthOffset": 7,
+          "HeightOffset": 12,
           "Group": 1,
           "Damage": 3,
           "MeterGain": 4.0,
@@ -1231,8 +1231,8 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": 5,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
           "HoldXOffset": 0,
@@ -1262,8 +1262,8 @@
           "LaunchKnockbackHorizontal": 0.1,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": 5,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "UseHitScript": false,
@@ -8478,6 +8478,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-09T12:54:34.7999176-07:00",
+  "LastModified": "2024-08-12T12:16:31.9788991-07:00",
   "LastModifiedBy": "creep"
 }

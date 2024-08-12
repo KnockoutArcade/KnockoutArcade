@@ -364,6 +364,7 @@
     {"id":{"name":"sConstructionNPC1c","path":"sprites/sConstructionNPC1c/sConstructionNPC1c.yy",},"order":2,},
     {"id":{"name":"sCharSel_BackgroundText","path":"sprites/sCharSel_BackgroundText/sCharSel_BackgroundText.yy",},"order":1,},
     {"id":{"name":"sfx_Footstep_H","path":"sounds/sfx_Footstep_H/sfx_Footstep_H.yy",},"order":12,},
+    {"id":{"name":"sJay_Standing_Light","path":"sprites/sJay_Standing_Light/sJay_Standing_Light.yy",},"order":38,},
     {"id":{"name":"sCharSel_NameJay","path":"sprites/sCharSel_NameJay/sCharSel_NameJay.yy",},"order":2,},
     {"id":{"name":"sBeverly_Crouch","path":"sprites/sBeverly_Crouch/sBeverly_Crouch.yy",},"order":12,},
     {"id":{"name":"oProjectileBase","path":"objects/oProjectileBase/oProjectileBase.yy",},"order":0,},
