@@ -2560,7 +2560,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Standing_Medium",
-      "Duration": 25,
+      "Duration": 28,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -2588,7 +2588,7 @@
           "ImageIndex": 5
         },
         {
-          "Length": 24,
+          "Length": 25,
           "ImageIndex": 6
         }
       ],
@@ -2598,7 +2598,7 @@
           "Start": 9,
           "Lifetime": 5,
           "AttackWidth": 30,
-          "AttackHeight": 5,
+          "AttackHeight": 10,
           "WidthOffset": 5,
           "HeightOffset": 28,
           "Group": 1,
@@ -2676,8 +2676,8 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 8,
-          "Lifetime": 5,
+          "Start": 9,
+          "Lifetime": 16,
           "AttackWidth": 20,
           "AttackHeight": 15,
           "WidthOffset": 4,
@@ -8498,6 +8498,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-14T11:11:59.7374768-07:00",
+  "LastModified": "2024-08-14T13:11:27.9661822-07:00",
   "LastModifiedBy": "creep"
 }
