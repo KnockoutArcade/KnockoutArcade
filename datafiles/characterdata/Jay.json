@@ -2559,20 +2559,24 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_StandMedium_Mockup_strip7",
+      "SpriteName": "sJay_Standing_Medium",
       "Duration": 25,
       "NumberOfFrames": 7,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 11,
           "ImageIndex": 3
         },
         {
@@ -2584,23 +2588,19 @@
           "ImageIndex": 5
         },
         {
-          "Length": 20,
-          "ImageIndex": 6
-        },
-        {
           "Length": 24,
-          "ImageIndex": 7
+          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 8,
+          "Start": 9,
           "Lifetime": 5,
-          "AttackWidth": 20,
-          "AttackHeight": 23,
-          "WidthOffset": 13,
-          "HeightOffset": 12,
+          "AttackWidth": 30,
+          "AttackHeight": 5,
+          "WidthOffset": 5,
+          "HeightOffset": 28,
           "Group": 1,
           "Damage": 6,
           "MeterGain": 6.0,
@@ -8498,6 +8498,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-12T16:40:09.3197792-07:00",
+  "LastModified": "2024-08-14T11:11:59.7374768-07:00",
   "LastModifiedBy": "creep"
 }
