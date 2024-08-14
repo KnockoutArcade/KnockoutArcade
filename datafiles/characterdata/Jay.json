@@ -1220,7 +1220,7 @@
           "MeterGain": 4.0,
           "ComboScaling": 2.0,
           "AttackHitStop": 6,
-          "AttackHitStun": 10,
+          "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 3.0,
           "KnockBack": 1.5,
@@ -2561,7 +2561,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Standing_Medium",
       "Duration": 28,
-      "NumberOfFrames": 7,
+      "NumberOfFrames": 8,
       "FrameData": [
         {
           "Length": 0,
@@ -2584,12 +2584,16 @@
           "ImageIndex": 4
         },
         {
-          "Length": 18,
+          "Length": 15,
           "ImageIndex": 5
         },
         {
-          "Length": 25,
+          "Length": 18,
           "ImageIndex": 6
+        },
+        {
+          "Length": 25,
+          "ImageIndex": 7
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2609,7 +2613,7 @@
           "AttackHitStun": 21,
           "AttackType": 1,
           "BlockStun": 18.0,
-          "KnockBack": -2.0,
+          "KnockBack": 3.0,
           "AirKnockbackVertical": -1.4999999,
           "AirKnockbackHorizontal": 0.49999967,
           "Launches": false,
@@ -2644,8 +2648,8 @@
           "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": -1.0,
           "Launches": false,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 5.0,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 2.0,
           "ParticleXOffset": 10,
@@ -8498,6 +8502,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-14T13:11:27.9661822-07:00",
+  "LastModified": "2024-08-14T13:24:01.0985887-07:00",
   "LastModifiedBy": "creep"
 }
