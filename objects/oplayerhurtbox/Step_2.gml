@@ -6,7 +6,14 @@ visible = global.toggleHitboxVisibility;
 // If the thing that spawned this hurtbox stops existing, destroy this
 if (!instance_exists(owner))
 {
-	instance_destroy()
+	instance_destroy();
+	exit;
+}
+
+// If we're part of a spirit, then make sure to destroy this when the spirit disappears
+if (spirit != noone && !instance_exists(spirit))
+{
+	instance_destroy();
 	exit;
 }
 
