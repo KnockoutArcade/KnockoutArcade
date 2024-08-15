@@ -3032,29 +3032,29 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_crouchingLight_mockup_strip5",
+      "SpriteName": "sJay_Crouching_Light",
       "Duration": 13,
       "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 5,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 7,
+          "Length": 8,
           "ImageIndex": 3
         },
         {
           "Length": 11,
           "ImageIndex": 4
-        },
-        {
-          "Length": 13,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
@@ -3070,7 +3070,7 @@
           "Damage": 4,
           "MeterGain": 4.2999997,
           "ComboScaling": 1.8,
-          "AttackHitStop": 7,
+          "AttackHitStop": 6,
           "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 11.0,
@@ -3082,8 +3082,8 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.3000001,
-          "ParticleXOffset": 5,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 12,
+          "ParticleYOffset": 5,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
           "HoldXOffset": 0,
@@ -3142,17 +3142,17 @@
       "HurtboxData": [
         {
           "Start": 4,
-          "Lifetime": 7,
-          "AttackWidth": 18,
+          "Lifetime": 4,
+          "AttackWidth": 24,
           "AttackHeight": 10,
           "WidthOffset": 4,
           "HeightOffset": 13
         },
         {
           "Start": 1,
-          "Lifetime": 99,
+          "Lifetime": 15,
           "AttackWidth": 20,
-          "AttackHeight": 25,
+          "AttackHeight": 23,
           "WidthOffset": -8,
           "HeightOffset": 0
         }
@@ -8541,6 +8541,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-14T17:00:40.2525876-07:00",
+  "LastModified": "2024-08-15T11:03:19.8856783-07:00",
   "LastModifiedBy": "creep"
 }
