@@ -401,6 +401,7 @@
     {"id":{"name":"sScrollStageTest","path":"sprites/sScrollStageTest/sScrollStageTest.yy",},"order":0,},
     {"id":{"name":"oMenuManager","path":"objects/oMenuManager/oMenuManager.yy",},"order":1,},
     {"id":{"name":"sHangingGirder","path":"sprites/sHangingGirder/sHangingGirder.yy",},"order":4,},
+    {"id":{"name":"sJay_Crouching_Medium","path":"sprites/sJay_Crouching_Medium/sJay_Crouching_Medium.yy",},"order":44,},
     {"id":{"name":"sfx_Jump","path":"sounds/sfx_Jump/sfx_Jump.yy",},"order":10,},
     {"id":{"name":"sJay_crouchingHeavy_mockup_strip7","path":"sprites/sJay_crouchingHeavy_mockup_strip7/sJay_crouchingHeavy_mockup_strip7.yy",},"order":23,},
     {"id":{"name":"sLargeDumpster","path":"sprites/sLargeDumpster/sLargeDumpster.yy",},"order":3,},
