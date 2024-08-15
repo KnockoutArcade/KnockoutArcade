@@ -5,6 +5,7 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	prevState = _prevState;
 	hitstopBuffer = true;
 	sprite_index = moveToCancel.SpriteId;
+	image_index = 0;
 	animTimer = 0;
 	PressAttackButton(attackID);
 	isThrowable = true;
