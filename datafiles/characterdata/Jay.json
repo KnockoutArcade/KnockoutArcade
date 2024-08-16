@@ -3436,43 +3436,47 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_crouchingHeavy_mockup_strip7",
+      "SpriteName": "sJay_Crouching_Heavy",
       "Duration": 36,
-      "NumberOfFrames": 7,
+      "NumberOfFrames": 8,
       "FrameData": [
         {
-          "Length": 5,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 12,
+          "Length": 15,
           "ImageIndex": 4
         },
         {
-          "Length": 16,
+          "Length": 18,
           "ImageIndex": 5
         },
         {
-          "Length": 30,
+          "Length": 22,
           "ImageIndex": 6
         },
         {
-          "Length": 36,
+          "Length": 26,
           "ImageIndex": 7
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 10,
+          "Start": 8,
           "Lifetime": 5,
           "AttackWidth": 24,
           "AttackHeight": 5,
@@ -3508,7 +3512,7 @@
           "ActivateTimeStop": false
         },
         {
-          "Start": 10,
+          "Start": 8,
           "Lifetime": 5,
           "AttackWidth": 24,
           "AttackHeight": 5,
@@ -8557,6 +8561,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-15T16:45:18.655139-07:00",
+  "LastModified": "2024-08-15T20:50:50.6341177-07:00",
   "LastModifiedBy": "creep"
 }
