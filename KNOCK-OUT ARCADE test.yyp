@@ -69,6 +69,7 @@
     {"id":{"name":"sRussel_DownSpecial","path":"sprites/sRussel_DownSpecial/sRussel_DownSpecial.yy",},"order":34,},
     {"id":{"name":"sTutorialSky","path":"sprites/sTutorialSky/sTutorialSky.yy",},"order":3,},
     {"id":{"name":"sGunther_StandHeavy_mockup_strip11","path":"sprites/sGunther_StandHeavy_mockup_strip11/sGunther_StandHeavy_mockup_strip11.yy",},"order":8,},
+    {"id":{"name":"sJay_Jumping_Light","path":"sprites/sJay_Jumping_Light/sJay_Jumping_Light.yy",},"order":46,},
     {"id":{"name":"oSuperKOOrange","path":"objects/oSuperKOOrange/oSuperKOOrange.yy",},"order":7,},
     {"id":{"name":"sBeverly_Walk_Forward","path":"sprites/sBeverly_Walk_Forward/sBeverly_Walk_Forward.yy",},"order":21,},
     {"id":{"name":"sButtons_Keyboard","path":"sprites/sButtons_Keyboard/sButtons_Keyboard.yy",},"order":1,},
