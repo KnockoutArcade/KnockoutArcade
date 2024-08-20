@@ -128,6 +128,7 @@
     {"id":{"name":"sBeverly_Crouch_Light","path":"sprites/sBeverly_Crouch_Light/sBeverly_Crouch_Light.yy",},"order":28,},
     {"id":{"name":"sBeverly_RushCancel","path":"sprites/sBeverly_RushCancel/sBeverly_RushCancel.yy",},"order":62,},
     {"id":{"name":"oTimer","path":"objects/oTimer/oTimer.yy",},"order":4,},
+    {"id":{"name":"sJay_Jumping_Medium","path":"sprites/sJay_Jumping_Medium/sJay_Jumping_Medium.yy",},"order":47,},
     {"id":{"name":"oPlayerController","path":"objects/oPlayerController/oPlayerController.yy",},"order":0,},
     {"id":{"name":"sRussel_Crouching_Heavy","path":"sprites/sRussel_Crouching_Heavy/sRussel_Crouching_Heavy.yy",},"order":15,},
     {"id":{"name":"sGunther_NSpecialWhiff_mockup_strip6","path":"sprites/sGunther_NSpecialWhiff_mockup_strip6/sGunther_NSpecialWhiff_mockup_strip6.yy",},"order":13,},
