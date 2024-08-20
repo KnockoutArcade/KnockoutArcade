@@ -3924,11 +3924,11 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Jumping_Medium",
-      "Duration": 30,
-      "NumberOfFrames": 5,
+      "Duration": 45,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
-          "Length": 6,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
@@ -3936,16 +3936,36 @@
           "ImageIndex": 2
         },
         {
-          "Length": 14,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 16,
           "ImageIndex": 4
         },
         {
-          "Length": 30,
+          "Length": 20,
           "ImageIndex": 5
+        },
+        {
+          "Length": 25,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 35,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 40,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 45,
+          "ImageIndex": 7
         }
       ],
       "NumberOfHitboxes": 1,
@@ -8597,6 +8617,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-19T17:44:19.5933173-07:00",
+  "LastModified": "2024-08-19T19:31:31.7419474-07:00",
   "LastModifiedBy": "creep"
 }
