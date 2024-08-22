@@ -4126,33 +4126,29 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_JumpingHeavy_Mockup_strip6",
+      "SpriteName": "sJay_Jumping_Heavy",
       "Duration": 30,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 6,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 13,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 17,
+          "Length": 13,
           "ImageIndex": 3
         },
         {
-          "Length": 19,
+          "Length": 17,
           "ImageIndex": 4
-        },
-        {
-          "Length": 21,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 31,
-          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4163,7 +4159,7 @@
           "AttackWidth": 16,
           "AttackHeight": 26,
           "WidthOffset": 7,
-          "HeightOffset": 3,
+          "HeightOffset": -8,
           "Group": 1,
           "Damage": 14,
           "MeterGain": 8.0,
@@ -8617,6 +8613,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-19T19:31:31.7419474-07:00",
+  "LastModified": "2024-08-22T13:32:07.4762282-07:00",
   "LastModifiedBy": "creep"
 }

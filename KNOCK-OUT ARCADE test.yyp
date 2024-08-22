@@ -487,6 +487,7 @@
     {"id":{"name":"sCommandLists_Russel_Throws","path":"sprites/sCommandLists_Russel_Throws/sCommandLists_Russel_Throws.yy",},"order":1,},
     {"id":{"name":"sVictoryScreenBase","path":"sprites/sVictoryScreenBase/sVictoryScreenBase.yy",},"order":0,},
     {"id":{"name":"sRussel_Standing_Light3","path":"sprites/sRussel_Standing_Light3/sRussel_Standing_Light3.yy",},"order":23,},
+    {"id":{"name":"sJay_Jumping_Heavy","path":"sprites/sJay_Jumping_Heavy/sJay_Jumping_Heavy.yy",},"order":48,},
     {"id":{"name":"sfx_UI_Exit","path":"sounds/sfx_UI_Exit/sfx_UI_Exit.yy",},"order":1,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":4,},
     {"id":{"name":"sCommandLists_Beverly_Throws","path":"sprites/sCommandLists_Beverly_Throws/sCommandLists_Beverly_Throws.yy",},"order":1,},
