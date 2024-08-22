@@ -4127,8 +4127,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Jumping_Heavy",
-      "Duration": 30,
-      "NumberOfFrames": 5,
+      "Duration": 40,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 0,
@@ -4147,8 +4147,12 @@
           "ImageIndex": 3
         },
         {
-          "Length": 17,
+          "Length": 15,
           "ImageIndex": 4
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
@@ -4156,15 +4160,15 @@
         {
           "Start": 13,
           "Lifetime": 6,
-          "AttackWidth": 16,
+          "AttackWidth": 12,
           "AttackHeight": 26,
           "WidthOffset": 7,
           "HeightOffset": -8,
           "Group": 1,
-          "Damage": 14,
+          "Damage": 9,
           "MeterGain": 8.0,
-          "ComboScaling": 1.4,
-          "AttackHitStop": 11,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 15,
           "AttackHitStun": 14,
           "AttackType": 0,
           "BlockStun": 3.0,
@@ -4174,12 +4178,12 @@
           "Launches": true,
           "LaunchKnockbackVertical": -2.2,
           "LaunchKnockbackHorizontal": 1.5,
-          "GravityScaling": 0.0,
-          "Pushback": 0.4,
+          "GravityScaling": 3.0,
+          "Pushback": 0.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -4194,8 +4198,8 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 16,
-          "MeterGain": 14.599979,
+          "Damage": 10,
+          "MeterGain": 10.0,
           "ComboScaling": 0.99999976,
           "AttackHitStop": 30,
           "AttackHitStun": 14,
@@ -4209,8 +4213,8 @@
           "Pushback": 1.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 5,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
@@ -4236,11 +4240,11 @@
       "HurtboxData": [
         {
           "Start": 13,
-          "Lifetime": 20,
-          "AttackWidth": 20,
+          "Lifetime": 30,
+          "AttackWidth": 15,
           "AttackHeight": 27,
           "WidthOffset": 2,
-          "HeightOffset": 1
+          "HeightOffset": -6
         },
         {
           "Start": 1,
@@ -8613,6 +8617,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-22T13:32:07.4762282-07:00",
+  "LastModified": "2024-08-22T15:03:11.5072601-07:00",
   "LastModifiedBy": "creep"
 }
