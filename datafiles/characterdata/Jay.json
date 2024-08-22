@@ -2777,7 +2777,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Standing_Heavy",
-      "Duration": 36,
+      "Duration": 38,
       "NumberOfFrames": 10,
       "FrameData": [
         {
@@ -2785,50 +2785,50 @@
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 11,
           "ImageIndex": 3
         },
         {
-          "Length": 14,
+          "Length": 16,
           "ImageIndex": 4
         },
         {
-          "Length": 16,
+          "Length": 18,
           "ImageIndex": 5
         },
         {
-          "Length": 20,
+          "Length": 22,
           "ImageIndex": 6
         },
         {
-          "Length": 24,
+          "Length": 26,
           "ImageIndex": 7
         },
         {
-          "Length": 30,
+          "Length": 32,
           "ImageIndex": 8
         },
         {
-          "Length": 34,
+          "Length": 36,
           "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 14,
+          "Start": 16,
           "Lifetime": 7,
           "AttackWidth": 23,
           "AttackHeight": 15,
-          "WidthOffset": 8,
+          "WidthOffset": 4,
           "HeightOffset": 10,
           "Group": 1,
           "Damage": 10,
@@ -2837,7 +2837,7 @@
           "AttackHitStop": 18,
           "AttackHitStun": 14,
           "AttackType": 1,
-          "BlockStun": 19.0,
+          "BlockStun": 11.0,
           "KnockBack": 7.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 3.0,
@@ -2905,7 +2905,7 @@
       "NumberOfHurtboxes": 5,
       "HurtboxData": [
         {
-          "Start": 14,
+          "Start": 16,
           "Lifetime": 16,
           "AttackWidth": 48,
           "AttackHeight": 16,
@@ -2922,14 +2922,14 @@
         },
         {
           "Start": 3,
-          "Lifetime": 11,
+          "Lifetime": 13,
           "AttackWidth": 15,
           "AttackHeight": 28,
           "WidthOffset": -6,
           "HeightOffset": 10
         },
         {
-          "Start": 14,
+          "Start": 16,
           "Lifetime": 16,
           "AttackWidth": 10,
           "AttackHeight": 10,
@@ -2937,7 +2937,7 @@
           "HeightOffset": 0
         },
         {
-          "Start": 30,
+          "Start": 32,
           "Lifetime": 20,
           "AttackWidth": 20,
           "AttackHeight": 35,
@@ -8617,6 +8617,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-22T15:10:54.0482063-07:00",
+  "LastModified": "2024-08-22T15:25:18.8377405-07:00",
   "LastModifiedBy": "creep"
 }
