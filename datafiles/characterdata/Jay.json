@@ -3064,7 +3064,7 @@
           "Lifetime": 3,
           "AttackWidth": 20,
           "AttackHeight": 11,
-          "WidthOffset": 9,
+          "WidthOffset": 7,
           "HeightOffset": 8,
           "Group": 1,
           "Damage": 4,
@@ -8617,6 +8617,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-08-22T15:25:18.8377405-07:00",
+  "LastModified": "2024-08-22T15:31:39.4413231-07:00",
   "LastModifiedBy": "creep"
 }
