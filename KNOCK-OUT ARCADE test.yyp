@@ -430,6 +430,7 @@
     {"id":{"name":"sfx_StartFowardRun","path":"sounds/sfx_StartFowardRun/sfx_StartFowardRun.yy",},"order":13,},
     {"id":{"name":"oRemapControls","path":"objects/oRemapControls/oRemapControls.yy",},"order":1,},
     {"id":{"name":"sRushCancel","path":"sprites/sRushCancel/sRushCancel.yy",},"order":39,},
+    {"id":{"name":"sJay_UpSpecial","path":"sprites/sJay_UpSpecial/sJay_UpSpecial.yy",},"order":49,},
     {"id":{"name":"sControlsMenu_TurnFace","path":"sprites/sControlsMenu_TurnFace/sControlsMenu_TurnFace.yy",},"order":2,},
     {"id":{"name":"sGunther_NSpecial_mockup_strip11","path":"sprites/sGunther_NSpecial_mockup_strip11/sGunther_NSpecial_mockup_strip11.yy",},"order":14,},
     {"id":{"name":"sGunther_JumpingMedium_Projectile","path":"sprites/sGunther_JumpingMedium_Projectile/sGunther_JumpingMedium_Projectile.yy",},"order":1,},
