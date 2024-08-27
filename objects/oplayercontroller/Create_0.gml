@@ -346,10 +346,11 @@ storedComboDamage = 0; // Used as a debug variable to display combo damage
 gravityScaling = 0; // How high this player's gravity scaling value is
 
 //Meter Related Variables
-superMeter = 0; // the amount of meter the player has
+superMeter = 50; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 meterScaling = 1; // How much meter gain will be scaled (multiplier)
 hasUsedMeter = false; // Whether the player has used a move that requires meter or not
+meterPenalty = 1; // Certain moves cause the amount of meter you build to be reduced
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);

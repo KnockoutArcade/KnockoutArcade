@@ -1091,7 +1091,7 @@ switch state
 			sprite_index = CharacterSprites.runForward_Sprite;
 			if (!timeStopActivated && !installActivated)
 			{
-				superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+				superMeter += meterBuildRate * 1.5 * meterPenalty; // Running forwards builds more meter
 			}
 		
 			if (movedir == -image_xscale) // if we press back, then go back to walking state
@@ -1470,7 +1470,7 @@ switch state
 		
 		if (isJumpingForward)
 		{
-			superMeter += meterBuildRate;
+			superMeter += meterBuildRate * meterPenalty;
 		}
 		
 		// update movement

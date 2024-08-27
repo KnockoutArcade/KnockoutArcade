@@ -18,7 +18,7 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, storedComboDamage);
-	draw_text(20, 70, hasUsedMeter);
+	draw_text(20, 70, meterPenalty);
 	draw_text(20, 90, ds_list_size(objectsHitList));
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
@@ -43,7 +43,7 @@ else
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, canBlock);
 	draw_text(750, 70, hitstop);
-	draw_text(750, 90, hasUsedMeter);
+	draw_text(750, 90, meterPenalty);
 	
 	
 }

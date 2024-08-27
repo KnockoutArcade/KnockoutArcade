@@ -112,8 +112,8 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Meter Build - Both players get some meter
-					collision_list[| i].owner.superMeter += 5;
-					ownerType.superMeter += 5;
+					collision_list[| i].owner.superMeter += 5 * collision_list[| i].owner.meterPenalty;
+					ownerType.superMeter += 5 * ownerType.meterPenalty;
 					
 					// Draw tech effect
 					var particle = instance_create_layer((owner.x + collision_list[| i].owner.x) / 2, owner.y - 16, "Particles", oParticles);
@@ -252,20 +252,6 @@ function HandleHitboxCollision(ownerType)
 						image_xscale = ownerType.image_xscale * -1;
 					}
 
-					// Cancel into the command grab move
-					/*
-					ds_list_clear(ownerType.hitByGroup);
-					if (spirit != noone)
-					{
-						ds_list_clear(spirit.hitByGroup);
-					}
-					if (ownerType.target != noone)
-					{
-						ds_list_clear(ownerType.target.hitByGroup);
-					}
-					ownerType.animOffset = 0;
-					*/
-
 					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
 					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
 					{
@@ -321,10 +307,10 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
-					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
+					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5 * collision_list[| i].owner.meterPenalty);
 					if (ownerType.state != eState.SUPER && !ownerType.installActivated && !ownerType.timeStopActivated)
 					{
-						ownerType.superMeter += floor(attackProperty.MeterGain * 0.75);
+						ownerType.superMeter += floor(attackProperty.MeterGain * 0.75 * ownerType.meterPenalty);
 					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
