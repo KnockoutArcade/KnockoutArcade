@@ -2555,18 +2555,50 @@ switch state
 			hsp = -3 * image_xscale;
 		}
 		
+		// End i-frames
 		if (animTimer > 20)
 		{
 			invincible = false;
 		}
 		
+		// Buffer a player's inputs
+		if (animTimer >= (24 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
+		// Transition into other state
 		if (animTimer > 24)
 		{
-			state = eState.IDLE;
-			image_index = 0;
-			sprite_index = CharacterSprites.idle_Sprite;
 			image_speed = 1;
+			image_index = 0;
 			animTimer = 0;
+			
+			// Turn the player arround immediately
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered " + string(getupBufferAttack));
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+				sprite_index = CharacterSprites.idle_Sprite;
+			}
 		}
 	}
 	break;
@@ -2615,7 +2647,7 @@ switch state
 			if (getupBufferAttack != 0)
 			{
 				PressAttackButton(getupBufferAttack);
-				show_debug_message("attack buffered");
+				show_debug_message("attack buffered " + string(getupBufferAttack));
 				getupBufferAttack = 0;
 			}
 			else
@@ -2660,6 +2692,12 @@ switch state
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
+		// Buffer a player's inputs
+		if (animTimer >= (20 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
 		if (animTimer > 20)
 		{
 			// Turn the player arround immediately
@@ -2675,26 +2713,35 @@ switch state
 				}
 			}	
 			
-			state = eState.IDLE;
-			invincible = false;
-			
-			if (movedir == -image_xscale || toggleIdleBlock) 
-			{
-				canBlock = true;
-			}
-			
-			if (movedir == -image_xscale && runButton)
-			{
-				canBlock = false;
-				state = eState.RUN_BACKWARD;
-				animTimer = 0;
-				sprite_index = CharacterSprites.runBackward_Sprite;
-				image_index = 0;
-				
-				invincible = true;
-			}
-			
 			animTimer = 0;
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered " + string(getupBufferAttack));
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+				
+				if (movedir == -image_xscale || toggleIdleBlock) 
+				{
+					canBlock = true;
+				}
+			
+				if (movedir == -image_xscale && runButton)
+				{
+					canBlock = false;
+					state = eState.RUN_BACKWARD;
+					animTimer = 0;
+					sprite_index = CharacterSprites.runBackward_Sprite;
+					image_index = 0;
+				
+					invincible = true;
+				}
+			}
 		}
 	}
 	break;
