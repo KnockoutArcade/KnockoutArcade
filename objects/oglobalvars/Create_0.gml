@@ -50,3 +50,6 @@ global.rcAirHorizontalSpeed = 2;
 global.musicVolume = 0.5;
 global.sfxVolume = 0.5;
 global.voicesVolume = 0.5;
+
+// Temporary No Numpad Mode
+global.noNumpadMode = false;

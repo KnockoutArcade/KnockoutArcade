@@ -15,3 +15,11 @@ else
 
 draw_sprite(sMainMenuPercy, isPercyEyesClosed, 0, 0)
 
+if (global.noNumpadMode)
+{
+	draw_sprite(sMainMenuNoNumpad, 1, 0, 0);
+}
+else
+{
+	draw_sprite(sMainMenuNoNumpad, 0, 0, 0);
+}
