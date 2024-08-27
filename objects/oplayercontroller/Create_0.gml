@@ -440,6 +440,10 @@ landingBufferTimer = 0; // Timer to keep track of the buffer window
 landingBufferWindow = 5; // How long the player has to buffer an attack while landing.
 landingBufferLockout = 20; // How long until the player can attempt to buffer a landing attack again.
 
+// Getup Input Buffer
+getupBufferAmount = 7; // The amount of time (in frames) that the player has to input a move to be buffered
+getupBufferAttack = 0; // The attack value that is buffered
+
 // Round Win Vars
 isInStableState = false; // Whether the player is in a "stable" state or not
 // When a round ends, the game slows down to emphasize the last hit.

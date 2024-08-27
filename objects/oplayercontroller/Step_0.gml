@@ -1883,6 +1883,7 @@ switch state
 	
 	case eState.ENHANCED_NEUTRAL_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
@@ -1898,6 +1899,7 @@ switch state
 	
 	case eState.ENHANCED_SIDE_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
@@ -1913,6 +1915,7 @@ switch state
 	
 	case eState.ENHANCED_UP_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
@@ -1928,6 +1931,7 @@ switch state
 	
 	case eState.ENHANCED_DOWN_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
@@ -1943,6 +1947,7 @@ switch state
 
 	case eState.REKKA_LAUNCHER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1959,6 +1964,7 @@ switch state
 	
 	case eState.REKKA_FINISHER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1975,6 +1981,7 @@ switch state
 	
 	case eState.REKKA_CONNECTER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1991,6 +1998,7 @@ switch state
 	
 	case eState.REKKA_LOW: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -2007,6 +2015,7 @@ switch state
 	
 	case eState.REKKA_HIGH: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -2154,6 +2163,7 @@ switch state
 		hurtbox.image_xscale = 16;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
+		invincible = false;
 		
 		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
 		
@@ -2166,6 +2176,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canBlock = false;
+		invincible = true;
 		
 		sprite_index = CharacterSprites.hold_Sprite;
 		
@@ -2577,6 +2588,12 @@ switch state
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
+		// Buffer a player's inputs
+		if (animTimer >= (30 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
 		if (animTimer > 30)
 		{
 			// Turn the player arround immediately
@@ -2592,26 +2609,35 @@ switch state
 				}
 			}	
 			
-			state = eState.IDLE;
-			invincible = false;
-			
-			if (movedir == -image_xscale || toggleIdleBlock) 
-			{
-				canBlock = true;
-			}
-			
-			if (movedir == -image_xscale && runButton)
-			{
-				canBlock = false;
-				state = eState.RUN_BACKWARD;
-				animTimer = 0;
-				sprite_index = CharacterSprites.runBackward_Sprite;
-				image_index = 0;
-				
-				invincible = true;
-			}
-			
 			animTimer = 0;
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered");
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+			
+				if (movedir == -image_xscale || toggleIdleBlock) 
+				{
+					canBlock = true;
+				}
+			
+				if (movedir == -image_xscale && runButton)
+				{
+					canBlock = false;
+					state = eState.RUN_BACKWARD;
+					animTimer = 0;
+					sprite_index = CharacterSprites.runBackward_Sprite;
+					image_index = 0;
+				
+					invincible = true;
+				}
+			}
 		}
 		
 	}

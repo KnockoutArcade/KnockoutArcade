@@ -9,6 +9,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	image_index = 0;
 	inAttackState = true;
 	canBlock = false;
+	invincible = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;

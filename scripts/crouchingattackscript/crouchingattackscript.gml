@@ -9,6 +9,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	image_index = 0;
 	inAttackState = true;
 	canBlock = false;
+	invincible = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
