@@ -2070,7 +2070,7 @@ switch state
 			SpeedTrail(0.6, 0.06, 5);
 		}
 		
-		
+		hasUsedMeter = true;
 		cancelOnLanding = false;
 		if (grounded)
 		{
