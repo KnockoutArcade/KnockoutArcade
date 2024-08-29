@@ -1,10 +1,22 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// If our host is missing, exit
+if (host == noone || hostObject == noone)
+{
+	exit;
+}
+
+// Pause function, cancel event
+if (global.game_paused)
+{
+	exit;
+}
+
+
 // A number of things will function similarly to a regular character, but 
 // a lot will be cut out since this isn't its own character
-if (host != noone && hostObject != noone)
-{
+
 	if (!hurtboxSet)
 	{
 		var hostID = hostObject.id;
@@ -19,12 +31,7 @@ if (host != noone && hostObject != noone)
 
 	depth = hostObject.depth + 2;
 
-	//Pause function, cancel event
-	if (global.game_paused)
-	{
-		exit;
-	}
-
+	
 	if (!global.gameHalt)
 	{
 
@@ -2368,4 +2375,3 @@ if (host != noone && hostObject != noone)
 		OverwriteSpiritMoveset(false);
 		inSpiritOff = false;
 	}
-}

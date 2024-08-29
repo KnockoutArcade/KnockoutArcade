@@ -37,9 +37,22 @@ if (image_index == 0 && P1menuConfirm)
 
 if (image_index == 1 && P1menuConfirm)
 {
+	
+	// TEMPORARY DEBUG STUFF
+	global.p1SelectedCharacter = oJay;
+	global.p2SelectedCharacter = oJay;
+	
+	global.gameMode = GAMEMODE.VERSUS;
+	
+	room_goto(rJayStage);
+	
+	
+	// ORIGINAL CODE - GO BACK TO THIS AFTER TESTING
+	/*
 	room_goto(rCharacterSelectScreen);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
+	*/
 }
 
 if (image_index == 3 && P1menuConfirm)

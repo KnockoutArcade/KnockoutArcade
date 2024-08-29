@@ -402,8 +402,8 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 pendingToggle = false;
 
 // Data used by spirits, but kept here to avoid errors
-host = noone;
-hostObject = noone;
+host = noone; // The character data which contains the moveset for the host
+hostObject = noone; // The actual host object itself
 
 // Super Data
 superActivated = false;

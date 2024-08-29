@@ -12,25 +12,29 @@ function SetupGame()
 			if (room != rStageArcade)
 			{
 				p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
+				p1.playerID = 1;
+				p1.controller = global.player1ControllerSlot;
+				
 				p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
+				p2.playerID = 2;
+				p2.controller = global.player2ControllerSlot;
 			} 
 			else
 			{
 				p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
+				p1.playerID = 1;
+				p1.controller = global.player1ControllerSlot;
+				
 				p2 = instance_create_layer(128, 104, "Instances", global.p2SelectedCharacter);
+				p2.playerID = 2;
+				p2.controller = global.player2ControllerSlot;
 			}
 	
 			// Setup Camera
 			global.camObj = instance_create_layer(80, 0, "Instances", oCamera);
 			global.camObj.p1 = p1;
 			global.camObj.p2 = p2;
-	
-			p1.controller = global.player1ControllerSlot;
-			p2.controller = global.player2ControllerSlot;
 
-			p1.playerID = 1;
-			p2.playerID = 2;
-	
 			global.currentRound++;
 	
 			with (p2) 

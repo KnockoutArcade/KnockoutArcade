@@ -7,10 +7,14 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 {
 	if (global.characterData[i].Name == "Jay")
 	{
-		selectedCharacter = StructCopy(global.characterData[i]) // This is to make sure that each player has a seperate copy of their move data
+		selectedCharacter = StructCopy(global.characterData[i]); // This is to make sure that each player has a seperate copy of their move data
 		break;
 	}
 }
 
 event_inherited();
 
+SummonSpirit();
+
+currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+OverwriteMoveset();

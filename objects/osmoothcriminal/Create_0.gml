@@ -12,6 +12,19 @@ creatingHitbox = false;
 inSpiritOff = false;
 startingMove = 0;
 
+// Spirit exclusive State Variables
+// Spirits operate in a unique way from characters. They have unique higher level functionality.
+//spiritState = 0;
+enum eSpiritState {
+	DEACTIVATED,
+	ACTIVE,
+	ATTACK,
+	HURT,
+	LAUNCHED,
+	ON_THE_GROUND
+	
+}
+
 selectedCharacter = -1;
 for (var i = 0; i < global.numberOfCharacters; i++;)
 {
