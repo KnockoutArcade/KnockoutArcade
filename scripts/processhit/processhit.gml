@@ -115,12 +115,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Apply grounded knockback
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
-		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
-				if (!collision_list.owner.spiritState)
+				if (!collision_list.owner.spiritON)
 				{
 					with (collision_list.owner)
 					{
@@ -434,12 +434,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
-		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
-				if (!collision_list.owner.spiritState)
+				if (!collision_list.owner.spiritON)
 				{
 					with (collision_list.owner)
 					{
