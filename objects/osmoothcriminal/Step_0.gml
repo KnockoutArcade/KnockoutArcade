@@ -13,13 +13,13 @@ if (global.game_paused)
 	exit;
 }
 
-
 // A number of things will function similarly to a regular character, but 
 // a lot will be cut out since this isn't its own character
-/*
+
+// This sets the hurtbox data properly
 if (!hurtboxSet)
 {
-	var hostID = hostObject.id;
+	var hostID = hostObject;
 	with(hurtbox)
 	{
 		owner = hostID;
@@ -28,8 +28,11 @@ if (!hurtboxSet)
 	}
 	hurtboxSet = true;
 }
-*/
+
+
 depth = hostObject.depth + 2;
+
+
 
 switch (spiritState)
 {
@@ -46,14 +49,20 @@ switch (spiritState)
 	// The spirit is currently active
 	case eSpiritState.ACTIVE:
 	{
-		x = hostObject.x + (spiritOffsetDistance * hostObject.image_xscale);
+		x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
 		y = hostObject.y;
+		
+		image_xscale = hostObject.image_xscale;
 		
 		if (shouldCreateSpiritFire)
 		{
 			createSpiritFire();
 			shouldCreateSpiritFire = false;
 		}
+		
+		// Set hurtbox width and height
+		hurtbox.image_xscale = 16;
+		hurtbox.image_yscale = 38;
 	}
 	break;
 }

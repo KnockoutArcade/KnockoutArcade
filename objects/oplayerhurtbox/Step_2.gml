@@ -7,6 +7,7 @@ visible = global.toggleHitboxVisibility;
 if (!instance_exists(owner))
 {
 	instance_destroy();
+	show_debug_message("Destroyed");
 	exit;
 }
 
@@ -22,7 +23,6 @@ if (primary && owner.inAttackState && owner.animTimer > 0)
 	// Hide if the owner is in an attack state
 	image_xscale = 0;
 	image_yscale = 0;
-
 }
 
 if (primary && owner.state != eState.HITSTOP)
@@ -36,11 +36,11 @@ if (primary && owner.state != eState.HITSTOP)
 	{
 		if (sign(owner.image_xscale) == sign(spirit.image_xscale))
 		{
-			x = spirit.x + (spirit.hurtboxOffset * sign(spirit.image_xscale));
+			x = spirit.x + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
 		}
 		else
 		{
-			x = spirit.x + (spirit.hurtboxOffset * sign(-spirit.image_xscale));
+			x = spirit.x + (spirit.hurtboxXOffset * sign(-spirit.image_xscale));
 		}
 		y = spirit.y;
 	}

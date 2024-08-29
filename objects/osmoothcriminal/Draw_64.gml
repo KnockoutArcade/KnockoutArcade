@@ -11,9 +11,9 @@ draw_set_color(c_white);
 	
 draw_text(75, 10, spiritState);
 draw_text(75, 30, animTimer);
-draw_text(75, 50, hostObject.id);
-draw_text(75, 70, x);
-draw_text(75, 90, y);
+draw_text(75, 50, hostObject);
+draw_text(75, 70, hurtbox.image_xscale);
+//draw_text(75, 90, y);
 }
 
 

@@ -28,10 +28,7 @@ function DeactivateSpirit(executedBySpirit)
 		//instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 		spiritObject.spiritState = eSpiritState.DEACTIVATED;
 		spiritObject.createSpiritFire();
-			
-		//instance_destroy(spiritObject.hurtbox);
-		//instance_destroy(spiritObject);
-		//spiritObject = noone;
+		
 		spiritSummoned = false;
 		spiritON = false;
 		pendingToggle = false;
@@ -85,7 +82,7 @@ function DeactivateSpirit(executedBySpirit)
 		{
 			instance_create_layer(x, y, "Instances", oSpiritFire);
 		}
-		instance_destroy(hurtbox);
+		//instance_destroy(hurtbox);
 		instance_destroy();
 	}
 }

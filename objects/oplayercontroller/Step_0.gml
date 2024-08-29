@@ -3080,8 +3080,7 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritON && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
-		 && state != eState.SCREEN_FREEZE)
+	if (!spiritON && spiritCurrentHealth < spiritMaxHealth && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
 		{
