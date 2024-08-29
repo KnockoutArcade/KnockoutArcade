@@ -21,7 +21,7 @@ if (!global.togglePresentationMode)
 		draw_sprite(sHUDPortraits, 2, x+15, y+2); 
 		draw_sprite(sCharacterNames, 2, x+33, y+18);
 		draw_sprite(sUISpirit, 2, x+32, y+26);
-		if (p1Reference.spiritState)
+		if (p1Reference.spiritON)
 		{
 			draw_sprite(sSpiritText, 2, x+12, y+26);
 		}
@@ -47,7 +47,7 @@ if (!global.togglePresentationMode)
 		draw_sprite_ext(sHUDPortraits, 2, x+143, y+2, -1, 1, 0, c_white, 1);
 		draw_sprite(sCharacterNames, 2, x+113, y+18);
 		draw_sprite(sUISpirit, 2, x+89, y+26);
-		if (p2Reference.spiritState)
+		if (p2Reference.spiritON)
 		{
 			draw_sprite(sSpiritText, 2, x+129, y+26);
 		}

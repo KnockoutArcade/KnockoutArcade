@@ -60,13 +60,13 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	}
 	
 	// If this move temporarily summons the spirit to attack in Spirit OFF
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritON && moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
 		SummonInSpiritOff(moveToDo);
 	}
 	
 	// If the current move doesn't have the spirit perform a move in Spirit OFF and it's around, destroy it
-	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritState && spiritObject != noone && 
+	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritON && spiritObject != noone && 
 		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
 		if (!spiritObject.creatingHitbox)
@@ -90,7 +90,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			{
 				if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits && !spiritBroken && !spiritInstall)
 				{
-					if (!spiritState)
+					if (!spiritON)
 					{
 						currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
 					}
@@ -111,7 +111,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		// If this move switched Spirit state
 		if (selectedCharacter.UniqueData.SpiritData == 1 && moveToDo.SpiritData.ToggleState && !spiritBroken && !spiritInstall)
 		{
-			if (!spiritState)
+			if (!spiritON)
 			{
 				SummonSpirit();
 			}

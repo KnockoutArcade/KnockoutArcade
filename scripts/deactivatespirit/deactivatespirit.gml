@@ -31,7 +31,7 @@ function DeactivateSpirit(executedBySpirit)
 			spiritObject = noone;
 			spiritSummoned = false;
 		}
-		spiritState = false;
+		spiritON = false;
 		pendingToggle = false;
 		if ((selectedCharacter.JumpType & 1) != 1)
 		{

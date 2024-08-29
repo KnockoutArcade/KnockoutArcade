@@ -16,25 +16,43 @@ if (global.game_paused)
 
 // A number of things will function similarly to a regular character, but 
 // a lot will be cut out since this isn't its own character
-
-	if (!hurtboxSet)
+/*
+if (!hurtboxSet)
+{
+	var hostID = hostObject.id;
+	with(hurtbox)
 	{
-		var hostID = hostObject.id;
-		with(hurtbox)
-		{
-			owner = hostID;
-			calledBySpirit = true;
-			spirit = other.id;
-		}
-		hurtboxSet = true;
+		owner = hostID;
+		calledBySpirit = true;
+		spirit = other.id;
 	}
+	hurtboxSet = true;
+}
+*/
+depth = hostObject.depth + 2;
 
-	depth = hostObject.depth + 2;
-
-	
-	if (!global.gameHalt)
+switch (spiritState)
+{
+	// while deactivated, hide this object off screen
+	case eSpiritState.DEACTIVATED:
 	{
+		x = hostObject.x;
+		y = hostObject.y + 10000;
+	}
+	break;
+	
+	// The spirit is currently active
+	case eSpiritState.ACTIVE:
+	{
+		x = hostObject.x + (spiritOffsetDistance * hostObject.image_xscale);
+		y = hostObject.y;
+	}
+	break;
+}
 
+
+
+/*
 		// Handle Inputs
 		if (playerID == 1)
 		{
@@ -2303,13 +2321,6 @@ if (global.game_paused)
 				image_xscale = hostObject.image_xscale;
 			}
 		}
-	}
-
-	else
-	{
-		image_speed = 0;
-		if hitstun > 0 sprite_index = CharacterSprites.hurt_Sprite;
-	}
 
 
 	// Instantly delete the spirit when spirit health is reduced to zero

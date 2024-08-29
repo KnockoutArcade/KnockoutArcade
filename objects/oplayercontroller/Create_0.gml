@@ -374,7 +374,7 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 }
 
 // Spirit Data
-spiritState = false; // false = Spirit OFF, false = Spirit ON
+spiritON = false; // false = Spirit OFF, false = Spirit ON
 spirit = noone;
 spiritObject = noone;
 spiritSummoned = false;

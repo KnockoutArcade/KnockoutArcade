@@ -297,6 +297,7 @@
     {"id":{"name":"sJay_StandMedium_Mockup_strip7","path":"sprites/sJay_StandMedium_Mockup_strip7/sJay_StandMedium_Mockup_strip7.yy",},"order":14,},
     {"id":{"name":"oSingleplayerCoinCount","path":"objects/oSingleplayerCoinCount/oSingleplayerCoinCount.yy",},"order":7,},
     {"id":{"name":"sJay_jumpsquat_mockup_strip1","path":"sprites/sJay_jumpsquat_mockup_strip1/sJay_jumpsquat_mockup_strip1.yy",},"order":19,},
+    {"id":{"name":"SetupSpirit","path":"scripts/SetupSpirit/SetupSpirit.yy",},"order":5,},
     {"id":{"name":"sJayWins","path":"sprites/sJayWins/sJayWins.yy",},"order":2,},
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"order":0,},
     {"id":{"name":"sSpiritText","path":"sprites/sSpiritText/sSpiritText.yy",},"order":3,},

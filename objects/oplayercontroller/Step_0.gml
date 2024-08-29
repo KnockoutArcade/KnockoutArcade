@@ -3080,7 +3080,7 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
+	if (!spiritON && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
 		 && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
@@ -3237,7 +3237,7 @@ if (installActivated && state != eState.SCREEN_FREEZE)
 		if (spiritInstall)
 		{
 			spiritInstall = false;
-			spiritState = false;
+			spiritON = false;
 		}
 	}
 	else

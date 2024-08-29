@@ -29,7 +29,7 @@ function SummonSpirit()
 		var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 		spiritFire.depth = depth + 1;
 	}
-	spiritState = true;
+	spiritON = true;
 	pendingToggle = false;
 	if (selectedCharacter.UniqueData.DoubleJump)
 	{

@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 // Draw Debug Origin
-if (global.toggleHitboxVisibility) draw_circle(xHome,y, 1, true)
+if (global.toggleHitboxVisibility) draw_circle(x, y, 1, true);
 
 if (isEXFlash)
 {
