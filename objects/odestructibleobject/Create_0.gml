@@ -65,6 +65,7 @@ state = eState.IDLE;
 	xHome = x;
 	hitstunShuffleTimer = 0;
 	shuffle = 0;
+	spiritON = false;
 
 	isGrabbed = false;
 
