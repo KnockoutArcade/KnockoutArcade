@@ -38,6 +38,8 @@ switch (spiritState)
 	{
 		x = hostObject.x;
 		y = hostObject.y + 10000;
+		
+		shouldCreateSpiritFire = true;
 	}
 	break;
 	
@@ -46,6 +48,12 @@ switch (spiritState)
 	{
 		x = hostObject.x + (spiritOffsetDistance * hostObject.image_xscale);
 		y = hostObject.y;
+		
+		if (shouldCreateSpiritFire)
+		{
+			createSpiritFire();
+			shouldCreateSpiritFire = false;
+		}
 	}
 	break;
 }

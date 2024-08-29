@@ -2,5 +2,26 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SetupSpirit()
 {
+	if (spirit.Name == "SmoothCriminal")
+	{
+		spiritObject = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSmoothCriminal);
+	}
+	spiritObject.host = selectedCharacter;
+	spiritObject.hostObject = id;
+	spiritObject.playerID = playerID;
+	spiritObject.opponent = opponent;
+	spiritSummoned = true;
+	with (spiritObject)
+	{
+		if (hostObject.playerID == 1)
+		{
+			PaletteSetup(global.p1PaletteID, selectedCharacter);
+		}
+		else
+		{
+			PaletteSetup(global.p2PaletteID, selectedCharacter);
+		}
+	}
 	
+	spiritObject.image_xscale = image_xscale;
 }

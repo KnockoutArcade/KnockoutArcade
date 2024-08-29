@@ -4,8 +4,7 @@ function DeactivateSpirit(executedBySpirit)
 {
 	if (!executedBySpirit)
 	{
-		if (spiritSummoned) 
-		{
+			/*
 			with (spiritObject)
 			{
 				// Destroy all hitboxes that belong to this player
@@ -24,13 +23,16 @@ function DeactivateSpirit(executedBySpirit)
 					}
 				}
 			}
+			*/
 			
-			instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-			instance_destroy(spiritObject.hurtbox);
-			instance_destroy(spiritObject);
-			spiritObject = noone;
-			spiritSummoned = false;
-		}
+		//instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
+		spiritObject.spiritState = eSpiritState.DEACTIVATED;
+		spiritObject.createSpiritFire();
+			
+		//instance_destroy(spiritObject.hurtbox);
+		//instance_destroy(spiritObject);
+		//spiritObject = noone;
+		spiritSummoned = false;
 		spiritON = false;
 		pendingToggle = false;
 		if ((selectedCharacter.JumpType & 1) != 1)

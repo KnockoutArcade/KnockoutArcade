@@ -14,7 +14,7 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 
 event_inherited();
 
-SummonSpirit();
+SetupSpirit();
 
-currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
-OverwriteMoveset();
+//currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
+//OverwriteMoveset();

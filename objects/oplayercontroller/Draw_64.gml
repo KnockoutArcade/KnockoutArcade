@@ -18,7 +18,7 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, currentMovesetID);
-	draw_text(20, 70, spiritON);
+	draw_text(20, 70, spiritSummoned);
 	draw_text(20, 90, spiritObject);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

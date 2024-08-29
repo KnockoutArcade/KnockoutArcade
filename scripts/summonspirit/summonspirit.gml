@@ -2,33 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SummonSpirit()
 {
-	if (!spiritSummoned) 
-	{
-		if (spirit.Name == "SmoothCriminal")
-		{
-			spiritObject = instance_create_layer(x + (10 * image_xscale), y, "Instances", oSmoothCriminal);
-		}
-		spiritObject.host = selectedCharacter;
-		spiritObject.hostObject = self;
-		spiritObject.playerID = playerID;
-		spiritObject.opponent = opponent;
-		spiritSummoned = true;
-		with (spiritObject)
-		{
-			if (hostObject.playerID == 1)
-			{
-				PaletteSetup(global.p1PaletteID, selectedCharacter);
-			}
-			else
-			{
-				PaletteSetup(global.p2PaletteID, selectedCharacter);
-			}
-		}
-		
-		spiritObject.image_xscale = image_xscale;
-		var spiritFire = instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
-		spiritFire.depth = depth + 1;
-	}
+	spiritObject.spiritState = eSpiritState.ACTIVE;
+	spiritObject.createSpiritFire();
+
 	spiritON = true;
 	pendingToggle = false;
 	if (selectedCharacter.UniqueData.DoubleJump)
