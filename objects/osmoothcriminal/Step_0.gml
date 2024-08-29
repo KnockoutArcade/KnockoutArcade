@@ -69,6 +69,12 @@ switch (spiritState)
 		hurtbox.image_yscale = 38;
 	}
 	break;
+	
+	// Spirit attack
+	case eSpiritState.ATTACK:
+	{
+		
+	}
 }
 
 #region Spirit Break

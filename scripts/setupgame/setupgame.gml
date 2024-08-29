@@ -222,11 +222,25 @@ function SetupGame()
 				ui_yOffset = y;
 			}
 			
+			// Create spirit bar if the character has one
+			if (p1.spirit != noone)
+			{
+				spiritbar1 = instance_create_layer(66, 30, "UI", oSpiritBar);
+				with (spiritbar1) 
+				{
+					attatchedTo = other.p1;
+					image_xscale = -33;
+					ui_xOffset = x + 2;
+					ui_yOffset = y;
+				}
+			}
+			
 			// Set up the HUD
 			hudObject = instance_create_layer(0, 0, "UI", oUIHUD);
 			with (hudObject)
 			{
 				p1Character = global.p1SelectedCharacter;
+				p1Reference = other.p1;
 				
 				sprite_index = sUIBaseSingleplayer;
 			}

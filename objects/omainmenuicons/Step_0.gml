@@ -72,12 +72,12 @@ if (image_index == 4 && P1menuConfirm)
 // Testing out Single-Player Mechanics. This takes you to the test level
 if (image_index == 2 && P1menuConfirm)
 {
-	room_goto(rPlatformingTestStage);
-	
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
-	global.p1SelectedCharacter = oRussel;
+	global.p1SelectedCharacter = oJay;
 	global.p1PaletteID = 0;
+	
+	room_goto(rPlatformingTestStage);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
