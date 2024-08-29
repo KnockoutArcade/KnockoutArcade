@@ -256,6 +256,7 @@ cancelOnLanding = true; // whether or not the character should cancel their curr
 // Wall bounce Variables
 wallBouncing = false;
 wallHit = false; // this is to dectect when the player hits the wall
+hasUsedWallBounce = false; // Has this player already been wallbounced in a combo?
 
 // Intro
 hasPerformedIntro = true;

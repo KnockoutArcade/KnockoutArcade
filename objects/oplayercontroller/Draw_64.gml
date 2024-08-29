@@ -43,7 +43,7 @@ else
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, canBlock);
 	draw_text(750, 70, hitstop);
-	draw_text(750, 90, invincible);
+	draw_text(750, 90, hasUsedWallBounce);
 	
 	
 }

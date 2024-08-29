@@ -3413,9 +3413,10 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		x += sign(hsp+environmentDisplacement);
 	}
 	
-	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing && !hasUsedWallBounce)
 	{
 		wallHit = true;
+		hasUsedWallBounce = true;
 		hitstop = 20;
 		state = eState.LAUNCHED;
 		sprite_index = CharacterSprites.wallSplat_Sprite;
