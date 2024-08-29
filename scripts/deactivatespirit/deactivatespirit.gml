@@ -55,9 +55,9 @@ function DeactivateSpirit(executedBySpirit)
 			}
 		}
 		
-		hostObject.spiritObject = noone;
-		hostObject.spiritSummoned = false;
-		hostObject.spiritState = false;
+		//hostObject.spiritObject = noone;
+		//hostObject.spiritSummoned = false;
+		hostObject.spiritON = false;
 		if ((host.JumpType & 1) != 1)
 		{
 			hostObject.canDoubleJump = false;
@@ -70,10 +70,7 @@ function DeactivateSpirit(executedBySpirit)
 				OverwriteMoveset();
 			}
 		}
-		with(hostObject.hurtbox)
-		{
-			spiritOwner = noone;
-		}
+		
 		if (hostObject.spiritCurrentHealth <= 0)
 		{
 			instance_create_layer(x, y, "Instances", oSpiritDeath);
@@ -82,7 +79,7 @@ function DeactivateSpirit(executedBySpirit)
 		{
 			instance_create_layer(x, y, "Instances", oSpiritFire);
 		}
-		//instance_destroy(hurtbox);
-		instance_destroy();
+		
+		spiritState = eSpiritState.DEACTIVATED;
 	}
 }

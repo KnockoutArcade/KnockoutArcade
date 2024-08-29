@@ -43,6 +43,10 @@ switch (spiritState)
 		y = hostObject.y + 10000;
 		
 		shouldCreateSpiritFire = true;
+		
+		// Set hurtbox width and height
+		hurtbox.image_xscale = 0;
+		hurtbox.image_yscale = 0;
 	}
 	break;
 	
@@ -66,6 +70,20 @@ switch (spiritState)
 	}
 	break;
 }
+
+#region Spirit Break
+if (hostObject.spiritCurrentHealth <= 0)
+{
+	hostObject.spiritBroken = true;
+	hostObject.hitstop = 60;
+	hostObject.state = eState.LAUNCHED;
+	hostObject.grounded = false;
+	hostObject.vsp = -4; // Launches the player up
+	hostObject.hsp = 0;
+
+	DeactivateSpirit(true);
+}
+#endregion
 
 
 
