@@ -1,5 +1,5 @@
 /// @function                   GroundedAttackScript(moveToDo, onGround);
-/// @param {moveToDo}  message  The message to show
+/// @param {moveToDo}  moveToDo  The message to show
 
 // maintainState is a boolean. If false, go into a jumping state after leaving the ground
 function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff, maintainState) 
@@ -78,6 +78,17 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		}
 	}
 	
+	// If we are in Spirit ON, make our Spirit Perform the corresponding attack
+	if (spiritON && spiritObject != noone)
+	{
+		with (spiritObject)
+		{
+			animTimer = other.animTimer;
+			spiritState = eSpiritState.ATTACK;
+			GroundedAttackScript(selectedCharacter.StandLight, other.grounded, 1, 1, false, false);
+		}
+	}
+	
 	// If the animation has expired
 	if (animTimer > moveToDo.Duration) 
 	{
@@ -86,6 +97,14 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		hsp = 0;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// If this performed by a spirit, update their state
+		if (selectedCharacter.UniqueData.SpiritData == 2)
+		{
+			spiritState = eSpiritState.ACTIVE;
+			moveToPerform = 0;
+			sprite_index = CharacterSprites.idle_Sprite;
+		}
 		
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...

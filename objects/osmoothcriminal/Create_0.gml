@@ -16,6 +16,9 @@ startingMove = 0;
 spiritOffsetDistance = 15; // How far away the spirit should be from the host laterally
 shouldCreateSpiritFire = false; // Whether we should create a spiritFire
 
+// Attack state vars
+moveToPerform = 0; // The attack that needs to be done.
+
 selectedCharacter = -1;
 for (var i = 0; i < global.numberOfCharacters; i++;)
 {

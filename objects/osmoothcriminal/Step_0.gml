@@ -33,7 +33,6 @@ if (!hurtboxSet)
 depth = hostObject.depth + 2;
 
 
-
 switch (spiritState)
 {
 	// while deactivated, hide this object off screen
@@ -73,6 +72,14 @@ switch (spiritState)
 	// Spirit attack
 	case eSpiritState.ATTACK:
 	{
+		/*
+		if (moveToPerform != 0)
+		{
+			// We're going to assume that the Spirit's Set event occurs first
+			animTimer = hostObject.animTimer;
+			GroundedAttackScript(moveToPerform, hostObject.grounded, moveToPerform.AirMovementData.GravityScale, moveToPerform.AirMovementData.FallScale, false, false);
+		}
+		*/
 		
 	}
 }
