@@ -85,7 +85,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			GroundedAttackScript(selectedCharacter.StandLight, other.grounded, 1, 1, false, false);
+			GroundedAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, ignoreWalkoff, maintainState);
 		}
 	}
 	

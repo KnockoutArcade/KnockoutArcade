@@ -6794,7 +6794,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJayStandOn_StandHeavy_Posel_mockup_strip5",
-      "Duration": 27,
+      "Duration": 30,
       "NumberOfFrames": 5,
       "FrameData": [
         {
@@ -8644,6 +8644,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-09-03T14:21:31.4868342-07:00",
+  "LastModified": "2024-09-03T16:00:13.7216363-07:00",
   "LastModifiedBy": "creep"
 }

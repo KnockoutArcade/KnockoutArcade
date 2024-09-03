@@ -2,8 +2,95 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 
 // Update the spirit's move whenever the host performs an attack
-function SetSpiritMoveData(enhancement, move, attack)
+function SetSpiritMoveData(moveState)
 {
+	/*
+	switch (moveState)
+	{
+		#region Lights
+		case eState.STANDING_LIGHT_ATTACK:
+		{
+			moveToPerform = selectedCharacter.StandLight;
+		}
+		break;
+		case eState.STANDING_LIGHT_ATTACK_2:
+		{
+			moveToPerform = selectedCharacter.StandLight2;
+		}
+		break;
+		case eState.STANDING_LIGHT_ATTACK_3:
+		{
+			moveToPerform = selectedCharacter.StandLight3;
+		}
+		break;
+		case eState.JUMPING_LIGHT_ATTACK:
+		{
+			moveToPerform = selectedCharacter.JumpingLight;
+		}
+		break;
+		case eState.CROUCHING_LIGHT_ATTACK:
+		{
+			moveToPerform = selectedCharacter.CrouchingLight;
+		}
+		break;
+		#endregion
+		
+		#region Mediums
+		case eState.STANDING_MEDIUM_ATTACK:
+		{
+			moveToPerform = selectedCharacter.StandMedium;
+		}
+		break;
+		case eState.JUMPING_MEDIUM_ATTACK:
+		{
+			moveToPerform = selectedCharacter.JumpingMedium;
+		}
+		break;
+		case eState.CROUCHING_MEDIUM_ATTACK:
+		{
+			moveToPerform = selectedCharacter.CrouchingMedium;
+		}
+		break;
+		#endregion
+		
+		#region Heavies
+		case eState.STANDING_HEAVY_ATTACK:
+		{
+			moveToPerform = selectedCharacter.StandHeavy;
+		}
+		break;
+		case eState.JUMPING_HEAVY_ATTACK:
+		{
+			moveToPerform = selectedCharacter.JumpingHeavy;
+		}
+		break;
+		case eState.CROUCHING_HEAVY_ATTACK:
+		{
+			moveToPerform = selectedCharacter.CrouchingHeavy;
+		}
+		break;
+		#endregion
+		
+		#region Specials
+		case eState.NEUTRAL_SPECIAL:
+		{
+			moveToPerform = selectedCharacter.StandHeavy;
+		}
+		break;
+		case eState.ENHANCED_NEUTRAL_SPECIAL:
+		{
+			moveToPerform = selectedCharacter.StandHeavy;
+		}
+		break;
+		case eState.ENHANCED_NEUTRAL_SPECIAL_2:
+		{
+			moveToPerform = selectedCharacter.StandHeavy;
+		}
+		break;
+		#endregion
+	}
+	*/
+	
 	/*
 	if (spirit != noone && spiritON && move.SpiritData.PerformAttack)
 	{
