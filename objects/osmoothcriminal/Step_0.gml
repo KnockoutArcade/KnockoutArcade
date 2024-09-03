@@ -56,6 +56,7 @@ switch (spiritState)
 		y = hostObject.y;
 		
 		image_xscale = hostObject.image_xscale;
+		sprite_index = CharacterSprites.idle_Sprite;
 		
 		if (shouldCreateSpiritFire)
 		{
@@ -72,14 +73,24 @@ switch (spiritState)
 	// Spirit attack
 	case eSpiritState.ATTACK:
 	{
-		/*
-		if (moveToPerform != 0)
+		// Freeze when in hitstop
+		if (hostObject.state != eState.HITSTOP)
 		{
-			// We're going to assume that the Spirit's Set event occurs first
-			animTimer = hostObject.animTimer;
-			GroundedAttackScript(moveToPerform, hostObject.grounded, moveToPerform.AirMovementData.GravityScale, moveToPerform.AirMovementData.FallScale, false, false);
+			//x += hsp;
+			//y = hostObject.y;
+			
+			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
+			y = hostObject.y;
+			
+			image_xscale = hostObject.image_xscale;
 		}
-		*/
+		
+		// If the host leaves the attack state, cancel
+		if (!hostObject.inAttackState)
+		{
+			spiritState = eSpiritState.ACTIVE;
+			inAttackState = false;
+		}
 		
 	}
 }

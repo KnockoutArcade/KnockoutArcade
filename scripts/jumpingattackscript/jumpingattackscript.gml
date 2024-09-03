@@ -78,6 +78,25 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		}
 	}
 	
+	// If we are in Spirit ON, make our Spirit Perform the corresponding attack
+	if (spiritON && spiritObject != noone)
+	{
+		// Transfer momentum
+		if (animTimer <= 1)
+		{
+			spiritObject.hsp = hsp;
+			spiritObject.vsp = vsp;
+		}
+		
+		with (spiritObject)
+		{
+			animTimer = other.animTimer;
+			spiritState = eSpiritState.ATTACK;
+			JumpingAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult);
+		}
+	}
+	
+	
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.JUMPING;
@@ -85,6 +104,14 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		frameAdvantage = true;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// If this performed by a spirit, update their state
+		if (selectedCharacter.UniqueData.SpiritData == 2)
+		{
+			spiritState = eSpiritState.ACTIVE;
+			moveToPerform = 0;
+			sprite_index = CharacterSprites.idle_Sprite;
+		}
 		
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...

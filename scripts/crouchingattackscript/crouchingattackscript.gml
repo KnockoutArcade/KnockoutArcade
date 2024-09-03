@@ -75,6 +75,26 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		}
 	}
 	
+	
+	// If we are in Spirit ON, make our Spirit Perform the corresponding attack
+	if (spiritON && spiritObject != noone)
+	{
+		// Transfer momentum
+		if (animTimer <= 1)
+		{
+			spiritObject.hsp = hsp;
+			spiritObject.vsp = vsp;
+		}
+		
+		with (spiritObject)
+		{
+			animTimer = other.animTimer;
+			spiritState = eSpiritState.ATTACK;
+			CrouchingAttackScript(FindAttackState(other.state), onGround, maintainState);
+		}
+	}
+	
+	
 	if (animTimer > moveToDo.Duration) 
 	{
 		state = eState.CROUCHING;
@@ -82,6 +102,14 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		hsp = 0;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// If this performed by a spirit, update their state
+		if (selectedCharacter.UniqueData.SpiritData == 2)
+		{
+			spiritState = eSpiritState.ACTIVE;
+			moveToPerform = 0;
+			sprite_index = CharacterSprites.idle_Sprite;
+		}
 		
 		// If this move updates the moveset, switch the moveset
 		if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character has multiple movesets...

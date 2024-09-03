@@ -81,6 +81,13 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	// If we are in Spirit ON, make our Spirit Perform the corresponding attack
 	if (spiritON && spiritObject != noone)
 	{
+		// Transfer momentum
+		if (animTimer <= 1)
+		{
+			spiritObject.hsp = hsp;
+			spiritObject.vsp = vsp;
+		}
+		
 		with (spiritObject)
 		{
 			animTimer = other.animTimer;
