@@ -4,6 +4,7 @@ function SummonSpirit()
 {
 	spiritObject.spiritState = eSpiritState.ACTIVE;
 	spiritObject.createSpiritFire();
+	spiritObject.inSpiritOff = false;
 
 	spiritON = true;
 	pendingToggle = false;

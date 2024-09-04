@@ -2,6 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PressAttackButton(attack)
 {	
+		// Debug
+		//if (attack != 0) show_debug_message("Pressed " + string(attack));
+		
 		// Input Normal attacks first
 		switch attack 
 		{
@@ -9,7 +12,7 @@ function PressAttackButton(attack)
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
-					SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
+					//SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
 					
 					// reset anim timer
 					animTimer = 0;

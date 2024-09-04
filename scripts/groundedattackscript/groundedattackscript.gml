@@ -72,14 +72,11 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	if (selectedCharacter.UniqueData.SpiritData == 1 && !spiritON && spiritObject != noone && 
 		 !moveToDo.SpiritData.PerformInSpiritOff && !pendingToggle && !spiritInstall)
 	{
-		if (!spiritObject.creatingHitbox)
-		{
-			DeactivateSpirit(false);
-		}
+		DeactivateSpirit(false);
 	}
 	
 	// If we are in Spirit ON, make our Spirit Perform the corresponding attack
-	if (spiritON && spiritObject != noone)
+	if (spiritON && spiritObject != noone) || (moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
 		// Transfer momentum
 		if (animTimer <= 1)
@@ -108,9 +105,16 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		// If this performed by a spirit, update their state
 		if (selectedCharacter.UniqueData.SpiritData == 2)
 		{
-			spiritState = eSpiritState.ACTIVE;
-			moveToPerform = 0;
-			sprite_index = CharacterSprites.idle_Sprite;
+			if (inSpiritOff)
+			{
+				spiritState = eSpiritState.DEACTIVATED;
+			}
+			else
+			{
+				spiritState = eSpiritState.ACTIVE;
+				moveToPerform = 0;
+				sprite_index = CharacterSprites.idle_Sprite;
+			}
 		}
 		
 		// If this move updates the moveset, switch the moveset

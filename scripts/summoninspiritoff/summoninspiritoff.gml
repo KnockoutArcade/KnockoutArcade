@@ -2,12 +2,13 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SummonInSpiritOff(moveToDo)
 {
-	SummonSpirit();
+	spiritObject.spiritState = eSpiritState.ATTACK;
+	
 	spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
 	spiritObject.y += moveToDo.SpiritData.StartYOffset;
 	if (!moveToDo.SpiritData.SummonSpirit)
 	{
-		spiritState = false;
+		spiritON = false;
 		if ((selectedCharacter.JumpType & 1) != 1)
 		{
 			canDoubleJump = false;
@@ -27,7 +28,5 @@ function SummonInSpiritOff(moveToDo)
 		OverwriteSpiritMoveset(true);
 	}
 	spiritObject.inSpiritOff = true;
-	spiritObject.state = state;
-	spiritObject.startingMove = state;
 	pendingToggle = false;
 }
