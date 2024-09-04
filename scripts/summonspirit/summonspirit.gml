@@ -5,6 +5,12 @@ function SummonSpirit()
 	spiritObject.spiritState = eSpiritState.ACTIVE;
 	spiritObject.createSpiritFire();
 	spiritObject.inSpiritOff = false;
+	
+	// Make sure the spirit uses the Spirit ON versions of moves
+	with (spiritObject)
+	{
+		OverwriteSpiritMoveset(false);
+	}
 
 	spiritON = true;
 	pendingToggle = false;
