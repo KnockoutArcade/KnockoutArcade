@@ -3091,7 +3091,7 @@ if (spirit != noone)
 			spiritCurrentHealth += spiritKORegenSpeed;
 		}
 	}
-	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth)
+	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth && !inAttackState)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 		spiritBroken = false;
