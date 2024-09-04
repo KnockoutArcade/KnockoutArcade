@@ -32,6 +32,11 @@ function SummonInSpiritOff(moveToDo)
 		spiritObject.inSpiritOff = false;
 		spiritON = true;
 		
+		if (selectedCharacter.UniqueData.DoubleJump)
+		{
+			canDoubleJump = true;
+		}
+		
 		with (spiritObject)
 		{
 			OverwriteSpiritMoveset(false);
