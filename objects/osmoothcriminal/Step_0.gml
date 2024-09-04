@@ -160,8 +160,11 @@ if (hostObject.spiritCurrentHealth <= 0)
 }
 #endregion
 
-#region Handle getting Hit
-
+#region Handle getting Hit while in spirit OFF
+if (hostObject.hitstun > 0 && spiritState != eSpiritState.DEACTIVATED && inSpiritOff)
+{
+	DeactivateSpirit(true);
+}
 
 #endregion
 
