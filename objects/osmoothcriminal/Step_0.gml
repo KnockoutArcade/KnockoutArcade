@@ -58,15 +58,66 @@ switch (spiritState)
 		image_xscale = hostObject.image_xscale;
 		sprite_index = CharacterSprites.idle_Sprite;
 		
+		// Set hurtbox width and height
+		hurtbox.image_xscale = 16;
+		hurtbox.image_yscale = 38;
+		
 		if (shouldCreateSpiritFire)
 		{
 			createSpiritFire();
 			shouldCreateSpiritFire = false;
 		}
 		
-		// Set hurtbox width and height
-		hurtbox.image_xscale = 16;
-		hurtbox.image_yscale = 38;
+		#region Set the sprite for each state (specifically hurt states)
+		if (hostObject.prevState == eState.CROUCHING)
+		{
+			sprite_index = CharacterSprites.crouch_Sprite;
+			// Set hurtbox width and height
+			hurtbox.image_xscale = 16;
+			hurtbox.image_yscale = 28;
+		}
+		else if (hostObject.prevState == eState.HURT)
+		{
+			// Extra check to see if we're using the launched sprite in this state
+			if (hostObject.sprite_index == hostObject.CharacterSprites.launched_Sprite)
+			{
+				sprite_index = CharacterSprites.launched_Sprite;
+				image_index = hostObject.image_index;
+			}
+			else
+			{
+				sprite_index = CharacterSprites.hurt_Sprite;
+			}
+		}
+		else if (hostObject.prevState == eState.LAUNCHED)
+		{
+			sprite_index = CharacterSprites.launched_Sprite;
+			image_index = hostObject.image_index;
+		}
+		else if (hostObject.prevState == eState.KNOCKED_DOWN)
+		{
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = hostObject.image_index;
+		}
+		else if (hostObject.prevState == eState.GETUP)
+		{
+			sprite_index = CharacterSprites.getup_Sprite;
+			image_index = hostObject.image_index;
+		}
+		else if (hostObject.prevState == eState.QUICK_GETUP)
+		{
+			sprite_index = sRussel_QuickGetup;
+			image_index = hostObject.image_index;
+		}
+		else if (hostObject.prevState == eState.TECH_ROLL)
+		{
+			sprite_index = sRussel_TechRoll;
+			image_index = hostObject.image_index;
+		}
+		#endregion
+		
+		
+		
 	}
 	break;
 	
@@ -109,7 +160,10 @@ if (hostObject.spiritCurrentHealth <= 0)
 }
 #endregion
 
+#region Handle getting Hit
 
+
+#endregion
 
 /*
 		// Handle Inputs
