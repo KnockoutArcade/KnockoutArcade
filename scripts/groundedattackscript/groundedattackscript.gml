@@ -107,7 +107,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			if (inSpiritOff)
 			{
-				spiritState = eSpiritState.DEACTIVATED;
+				DeactivateSpirit(true);
 			}
 			else
 			{

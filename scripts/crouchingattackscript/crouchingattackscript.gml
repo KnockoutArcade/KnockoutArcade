@@ -105,7 +105,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		{
 			if (inSpiritOff)
 			{
-				spiritState = eSpiritState.DEACTIVATED;
+				DeactivateSpirit(true);
 			}
 			else
 			{

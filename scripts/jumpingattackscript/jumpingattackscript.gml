@@ -107,7 +107,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		{
 			if (inSpiritOff)
 			{
-				spiritState = eSpiritState.DEACTIVATED;
+				DeactivateSpirit(true);
 			}
 			else
 			{

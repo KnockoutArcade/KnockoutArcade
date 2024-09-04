@@ -16,6 +16,11 @@ function SummonInSpiritOff(moveToDo)
 		{
 			canDoubleJump = false;
 		}
+		
+		with (spiritObject)
+		{
+			OverwriteSpiritMoveset(true);
+		}
 	}
 	else // If it does put you in spirit ON...
 	{
@@ -26,11 +31,12 @@ function SummonInSpiritOff(moveToDo)
 		}
 		spiritObject.inSpiritOff = false;
 		spiritON = true;
+		
+		with (spiritObject)
+		{
+			OverwriteSpiritMoveset(false);
+		}
 	}
 	
-	with (spiritObject)
-	{
-		OverwriteSpiritMoveset(true);
-	}
 	pendingToggle = false;
 }

@@ -143,6 +143,13 @@ switch (spiritState)
 			inAttackState = false;
 		}
 		
+		// If a spirit Fire is buffered, create one
+		if (shouldCreateSpiritFire)
+		{
+			createSpiritFire();
+			shouldCreateSpiritFire = false;
+		}
+		
 	}
 }
 
