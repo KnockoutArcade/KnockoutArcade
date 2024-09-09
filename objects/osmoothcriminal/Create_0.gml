@@ -11,6 +11,7 @@ creatingHitbox = false;
 // Variables for when spirit is summoned in Spirit OFF
 inSpiritOff = false;
 startingMove = 0;
+remoteOffset = 0; // how far to offset SC from Jay during remote mode
 
 // Active state vars
 spiritOffsetDistance = 15; // How far away the spirit should be from the host laterally

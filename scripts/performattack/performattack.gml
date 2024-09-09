@@ -337,4 +337,20 @@ function PerformAttack(Action, createdBySpirit)
 			}
 		}
 	}
+	
+	// Spirits - Remote Mode
+	if (createdBySpirit)
+	{
+		if (Action.SpiritData.MaintainPosition)
+		{
+			nextToPlayer = false;
+		}
+	}
+	else
+	{
+		if (Action.SpiritData.ReturnToPlayer && spiritObject != noone)
+		{
+			spiritObject.nextToPlayer = true;
+		}
+	}
 }

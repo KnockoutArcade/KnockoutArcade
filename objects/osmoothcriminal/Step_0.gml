@@ -59,8 +59,17 @@ switch (spiritState)
 	// The spirit is currently active
 	case eSpiritState.ACTIVE:
 	{
-		x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
-		y = hostObject.y;
+		if (nextToPlayer)
+		{
+			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
+			y = hostObject.y;
+		}
+		else
+		{
+			x = lerp(x, hostObject.x + remoteOffset, 0.5);
+			y = hostObject.y;
+		}
+		
 		
 		image_xscale = hostObject.image_xscale;
 		sprite_index = CharacterSprites.idle_Sprite;
@@ -133,12 +142,15 @@ switch (spiritState)
 		if (hostObject.state != eState.HITSTOP)
 		{
 			x += hsp;
-			//y = hostObject.y;
-			
-			//x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
 			y = hostObject.y;
 			
 			image_xscale = hostObject.image_xscale;
+		}
+		
+		// Handle Remote Mode
+		if (!nextToPlayer)
+		{
+			remoteOffset = x - hostObject.x;
 		}
 		
 		// If the host leaves the attack state, cancel
