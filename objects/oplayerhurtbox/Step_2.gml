@@ -25,6 +25,7 @@ if (primary && owner.inAttackState && owner.animTimer > 0)
 	image_yscale = 0;
 }
 
+// Position the hurtbox 
 if (primary && owner.state != eState.HITSTOP)
 {
 	if (spirit == noone)
@@ -34,14 +35,8 @@ if (primary && owner.state != eState.HITSTOP)
 	}
 	else
 	{
-		if (sign(owner.image_xscale) == sign(spirit.image_xscale))
-		{
-			x = spirit.x + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
-		}
-		else
-		{
-			x = spirit.x + (spirit.hurtboxXOffset * sign(-spirit.image_xscale));
-		}
+		x = spirit.x + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
+		
 		y = spirit.y;
 	}
 } 
@@ -55,8 +50,8 @@ if (!primary)
 	}
 	else
 	{
-		x = spirit.x + hurtboxProperty.WidthOffset * sign(spirit.image_xscale);
-		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
+		x = spirit.x + (hurtboxProperty.WidthOffset * sign(spirit.image_xscale));
+		y = spirit.y - (hurtboxProperty.HeightOffset * sign(spirit.image_yscale));
 	}
 	
 	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP && owner.state != eState.SCREEN_FREEZE)
@@ -75,6 +70,14 @@ if (!primary)
 		instance_destroy();
 	}
 }
-image_xscale = abs(image_xscale) * sign(owner.image_xscale);
+
+if (spirit == noone)
+{
+	image_xscale = abs(image_xscale) * sign(owner.image_xscale);
+}
+else
+{
+	image_xscale = abs(image_xscale) * sign(spirit.image_xscale);
+}
 
 
