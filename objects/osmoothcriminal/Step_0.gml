@@ -46,6 +46,10 @@ switch (spiritState)
 	{
 		x = hostObject.x;
 		y = hostObject.y + 10000;
+		environmentDisplacement = 0;
+		
+		xHome = x;
+		yHome = y;
 		
 		shouldCreateSpiritFire = true;
 		nextToPlayer = true;
@@ -62,16 +66,51 @@ switch (spiritState)
 		if (nextToPlayer)
 		{
 			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
+			x += environmentDisplacement;
+			
+			environmentDisplacement = 0;
+			
 			y = hostObject.y;
 		}
 		else
 		{
+			remoteOffset += environmentDisplacement;
+			
 			x = lerp(x, hostObject.x + remoteOffset, 0.5);
+			x += environmentDisplacement;
+			
+			environmentDisplacement = 0;
+			
 			y = hostObject.y;
 		}
 		
+		xHome = x;
+		yHome = y;
 		
-		image_xscale = hostObject.image_xscale;
+		// Set the direction this spirit is looking
+		if (nextToPlayer)
+		{
+			image_xscale = hostObject.image_xscale;
+		}
+		else
+		{
+			if (hostObject.opponent != noone)
+			{
+				if (x < hostObject.opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != hostObject.opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}
+			else
+			{
+				image_xscale = hostObject.image_xscale;
+			}
+		}
+		
 		sprite_index = CharacterSprites.idle_Sprite;
 		
 		// Set hurtbox width and height
@@ -82,6 +121,12 @@ switch (spiritState)
 		{
 			createSpiritFire();
 			shouldCreateSpiritFire = false;
+		}
+		
+		// If we are too close to our host, exit remote mode
+		if (!nextToPlayer && x < (hostObject.x + remoteModeThreshold) && x > (hostObject.x - remoteModeThreshold))
+		{
+			nextToPlayer = true;
 		}
 		
 		#region Set the sprite for each state (specifically hurt states)
@@ -141,10 +186,13 @@ switch (spiritState)
 		// Freeze when in hitstop
 		if (hostObject.state != eState.HITSTOP)
 		{
-			x += hsp;
+			x += hsp + environmentDisplacement;
 			y = hostObject.y;
 			
-			image_xscale = hostObject.image_xscale;
+			environmentDisplacement = 0;
+			
+			xHome = x;
+			yHome = y;
 		}
 		
 		// Handle Remote Mode
@@ -191,6 +239,80 @@ if (hostObject.hitstun > 0 && spiritState != eSpiritState.DEACTIVATED && inSpiri
 }
 
 #endregion
+
+#region Handle Player Collisions
+// Collision
+// When a player gets hit, they ossilate back and forth, which will move the player's collision box around.
+// We're storing the actual x Position so we can restore it later.
+// We need a consistent X position to do accurate collision calculations, so we'll use xHome, which is the
+// player's position without ossilating.
+var actualXPos = x;
+var actualYPos = y;
+x = xHome;
+y = yHome;
+
+// Collisions With Players
+if (hostObject.opponent != noone)
+{
+	// Check to see if players are about to be touching
+	if (place_meeting(x+hsp+environmentDisplacement, y, hostObject.opponent) && hostObject.state != eState.BEING_GRABBED && hostObject.opponent.state != eState.BEING_GRABBED && hostObject.state != eState.TECH_ROLL && hostObject.opponent.state != eState.TECH_ROLL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	{
+		if (hostObject.state != eState.HITSTOP)
+		{
+			hsp *= .75; // Reduce player speed
+		}
+		var origanalX = hostObject.opponent.x; // Keep track of the opponent's x position before calculations
+		// Simulate the opponent moving forwards
+		if (hostObject.opponent.state != eState.HITSTOP) 
+		{
+			hostObject.opponent.x += (hostObject.opponent.hsp*.75) + hostObject.opponent.environmentDisplacement;
+		}
+		// While the players are still touching
+		while(place_meeting(x+hsp+environmentDisplacement, y , hostObject.opponent))
+		{
+			// This logic is different depending on if the spirit is next to its host or not
+			if (nextToPlayer)
+			{
+				if (hostObject.x > hostObject.opponent.x)
+				{
+					environmentDisplacement += .5;
+					hostObject.environmentDisplacement += .5;
+					hostObject.opponent.x -= .5;
+				}
+				else 
+				{
+					environmentDisplacement -= .5;
+					hostObject.environmentDisplacement -= .5;
+					hostObject.opponent.x += .5;
+				}
+			}
+			else
+			{
+				// Move the players away from each other
+				if (x > hostObject.opponent.x)
+				{
+					environmentDisplacement += .5;
+					hostObject.opponent.x -= .5;
+				}
+				else 
+				{
+					environmentDisplacement -= .5;
+					hostObject.opponent.x += .5;
+				}
+			}
+		}
+		hostObject.opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
+		hostObject.opponent.x = origanalX; // Return oponent to original position
+	}
+}
+
+x = actualXPos; // Restore the player's actual x position
+y = actualYPos; // Restore the player's actual y position
+
+#endregion
+
+
+
 
 /*
 		// Handle Inputs
