@@ -18,8 +18,8 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, prevState);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, grounded);
-	draw_text(20, 90, spiritObject);
+	draw_text(20, 70, hsp);
+	draw_text(20, 90, environmentDisplacement);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -42,8 +42,8 @@ else
 	draw_text(750, 10, state);
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, canBlock);
-	draw_text(750, 70, hitstop);
-	draw_text(750, 90, hasUsedWallBounce);
+	draw_text(750, 70, hsp);
+	draw_text(750, 90, environmentDisplacement);
 	
 	
 }

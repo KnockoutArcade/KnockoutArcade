@@ -3300,10 +3300,16 @@ if (opponent != noone && !wallHit)
 	// Check to see if players are about to be touching
 	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && state != eState.TECH_ROLL && opponent.state != eState.TECH_ROLL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
-		hsp *= .75; // Reduce player speed
+		if (state != eState.HITSTOP)
+		{
+			hsp *= .75; // Reduce player speed
+		}
 		var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
 		// Simulate the opponent moving forwards
-		opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		if (opponent.state != eState.HITSTOP) 
+		{
+			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		}
 		// While the players are still touching
 		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
 		{
