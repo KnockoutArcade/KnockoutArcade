@@ -32,6 +32,12 @@ if (!hurtboxSet)
 
 depth = hostObject.depth + 2;
 
+// Handle Traction
+if (hostObject.grounded)
+{
+	HandleTraction();
+}
+
 
 switch (spiritState)
 {
@@ -42,6 +48,7 @@ switch (spiritState)
 		y = hostObject.y + 10000;
 		
 		shouldCreateSpiritFire = true;
+		nextToPlayer = true;
 		
 		// Set hurtbox width and height
 		hurtbox.image_xscale = 0;
@@ -116,8 +123,6 @@ switch (spiritState)
 		}
 		#endregion
 		
-		
-		
 	}
 	break;
 	
@@ -127,10 +132,10 @@ switch (spiritState)
 		// Freeze when in hitstop
 		if (hostObject.state != eState.HITSTOP)
 		{
-			//x += hsp;
+			x += hsp;
 			//y = hostObject.y;
 			
-			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
+			//x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
 			y = hostObject.y;
 			
 			image_xscale = hostObject.image_xscale;
