@@ -47,6 +47,7 @@ switch (spiritState)
 		x = hostObject.x;
 		y = hostObject.y + 10000;
 		environmentDisplacement = 0;
+		image_xscale = hostObject.image_xscale;
 		
 		xHome = x;
 		yHome = y;
