@@ -63,6 +63,7 @@ state = eState.IDLE;
 	isCrouchBlocking = false;
 	blockbuffer = false;
 	xHome = x;
+	yHome = y;
 	hitstunShuffleTimer = 0;
 	shuffle = 0;
 	spiritON = false;

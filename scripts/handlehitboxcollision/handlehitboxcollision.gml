@@ -49,10 +49,12 @@ function HandleHitboxCollision(ownerType)
 			var blockingDirection = -ownerOnSide;
 
 			// Turns the target around if the spirit is attacking from behind
-			if (collision_list[| i].owner != owner && spirit != noone)
+			/*
+			if (collision_list[| i].owner != owner && spirit != noone && !collision_list[| i].owner.isDestructibleObject)
 			{
 				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
 			}
+			*/
 			
 			// Handle Mutliple hitboxes
 			

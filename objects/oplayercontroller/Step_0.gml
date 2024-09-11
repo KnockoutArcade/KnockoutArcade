@@ -3031,8 +3031,7 @@ else
 	{
 		prevState = state;
 	}
-	xHome = x;
-	yHome = y;
+	
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
@@ -3532,6 +3531,9 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
 	}
 	y += vsp;
+	
+	xHome = x;
+	yHome = y;
 }
 
 // Handle Enviornmental Displacement

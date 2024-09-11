@@ -26,18 +26,18 @@ if (primary && owner.inAttackState && owner.animTimer > 0)
 }
 
 // Position the hurtbox 
-if (primary && owner.state != eState.HITSTOP)
+if (primary)
 {
 	if (spirit == noone)
 	{
-		x = owner.x + (owner.hurtboxXOffset * sign(owner.image_xscale));
-		y = owner.y + owner.hurtboxYOffset;
+		x = owner.xHome + (owner.hurtboxXOffset * sign(owner.image_xscale));
+		y = owner.yHome + owner.hurtboxYOffset;
 	}
 	else
 	{
-		x = spirit.x + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
+		x = spirit.xHome + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
 		
-		y = spirit.y;
+		y = spirit.yHome;
 	}
 } 
 
