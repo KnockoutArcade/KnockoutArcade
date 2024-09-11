@@ -500,7 +500,33 @@ function HandleHitboxCollision(ownerType)
 					// Face opponent towards the source of damage;
 					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{
-						collision_list[| i].owner.image_xscale = ownerOnSide;
+						var victimFacingDirection = 1;
+						
+						// Face towards spirits
+						if (spirit != noone)
+						{
+							if (collision_list[| i].owner.x > spirit.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						else
+						{
+							if (collision_list[| i].owner.x > owner.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						
+						collision_list[| i].owner.image_xscale = victimFacingDirection;
 					}
 					
 					// Set the correct prevState
