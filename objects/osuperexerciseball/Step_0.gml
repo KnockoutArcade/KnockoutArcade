@@ -25,8 +25,6 @@ if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_s
 	hasSpawnedHitboxes = false;
 	
 	PerformProjectile(id, spiritOwner);
-	
-	show_debug_message("Spawned a hitbox");
 }
 
 // If the opponent has hit this object, prompt the removal of hitboxes

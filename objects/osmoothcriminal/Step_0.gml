@@ -310,9 +310,22 @@ if (hostObject.opponent != noone)
 x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
+// Handle going off screen
+if (!nextToPlayer)
+{
+	if (x < global.camObj.x-75 || x > global.camObj.x+75)
+	{
+		// Clamp to the screen (with some buffer room)
+		x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		
+		remoteOffset = (x - hostObject.x);
+	}
+	
+	xHome = x;
+	yHome = y;
+}
+
 #endregion
-
-
 
 
 /*
