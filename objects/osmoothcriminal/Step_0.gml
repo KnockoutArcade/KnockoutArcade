@@ -75,6 +75,8 @@ switch (spiritState)
 		}
 		else
 		{
+			#region Handle moving when the host's movement is blocked in some way
+			
 			// Handle moving the spirit when the host is walking up against a wall
 			if (place_meeting(hostObject.x + hostObject.movedir, hostObject.y, oWall))
 			{
@@ -91,13 +93,36 @@ switch (spiritState)
 			// Handle if the host is backdashing into a wall
 			if (hostObject.state == eState.RUN_BACKWARD)
 			{
-				if (place_meeting(hostObject.x + (1 * sign(hostObject.image_xscale)), hostObject.y, oWall))
+				// If the host is supposed to backdash, then set our hsp to the backdash speed.
+				if (hostObject.animTimer == hostObject.backdashStartup)
 				{
-					
+					hsp = hostObject.backdashSpeed * -sign(hostObject.image_xscale);
+				}
+				
+				// If the host moves into a wall, transfer the hsp to the remote offset
+				if (place_meeting(hostObject.x + (-sign(hostObject.image_xscale)), hostObject.y, oWall))
+				{
+					remoteOffset += hsp;
 				}
 			}
 			
+			// Handle if the host is forward dashing into a wall
+			if (hostObject.state == eState.RUN_FORWARD)
+			{
+				// If the host is supposed to dash, then set our hsp to the dash speed.
+				if (hostObject.animTimer == 5)
+				{
+					hsp = 5 * sign(hostObject.image_xscale);
+				}
+				
+				// If the host moves into a wall, transfer the hsp to the remote offset
+				if (place_meeting(hostObject.x + sign(hostObject.image_xscale), hostObject.y, oWall))
+				{
+					remoteOffset += hsp;
+				}
+			}
 			
+			#endregion
 			
 			remoteOffset += environmentDisplacement;
 			
