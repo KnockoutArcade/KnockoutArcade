@@ -1338,6 +1338,8 @@ switch state
 			invincible = false;
 		}
 		
+		// Store the running HSP for use in spirits
+		storedRunningHsp = hsp;
 
 		HandleWalkingOffPlatforms(false);
 	}

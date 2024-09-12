@@ -36,6 +36,7 @@ startedMovingForward = false; // Used to reset the runForwardTimer
 startedMovingBackward = false; // Used to reset the runBackwardTimer
 runForwardTimer = 16; // Used for running by double tapping forward
 runBackwardTimer = 16; // Used for backdashing by double tapping backward
+storedRunningHsp = 0; // Used for spirits - allows them to move if the host is running into a wall
 
 //Backdash Vars (The state is refered to as Run back for consistency)
 backdashDuration = selectedCharacter.BackDashDuration; // The total duration of a character's backdash

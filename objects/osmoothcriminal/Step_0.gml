@@ -75,6 +75,30 @@ switch (spiritState)
 		}
 		else
 		{
+			// Handle moving the spirit when the host is walking up against a wall
+			if (place_meeting(hostObject.x + hostObject.movedir, hostObject.y, oWall))
+			{
+				if (hostObject.state == eState.WALKING)
+				{
+					remoteOffset += walkSpeed * hostObject.movedir;
+				}
+				else if (hostObject.state == eState.JUMPING)
+				{
+					remoteOffset += hostObject.jumpHsp;
+				}
+			}
+			
+			// Handle if the host is backdashing into a wall
+			if (hostObject.state == eState.RUN_BACKWARD)
+			{
+				if (place_meeting(hostObject.x + (1 * sign(hostObject.image_xscale)), hostObject.y, oWall))
+				{
+					
+				}
+			}
+			
+			
+			
 			remoteOffset += environmentDisplacement;
 			
 			x = lerp(x, hostObject.x + remoteOffset, 0.5);

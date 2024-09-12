@@ -82,6 +82,12 @@ function FindAttackState(stateToSearch){
 			return selectedCharacter.ForwardThrow;
 		}
 		break;
+		
+		case eState.GRAB : 
+		{
+			return selectedCharacter.Grab;
+		}
+		break;
 
 		case eState.BACKWARD_THROW : 
 		{
