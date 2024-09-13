@@ -2274,6 +2274,11 @@ switch state
 		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
+			
+			if (spiritON && spiritObject != noone)
+			{
+				spiritObject.hsp = 0;
+			}
 		}
 
 		if (animTimer > 42)
@@ -2316,6 +2321,11 @@ switch state
 		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
+			
+			if (spiritON && spiritObject != noone)
+			{
+				spiritObject.hsp = 0;
+			}
 		}
 		
 		if (animTimer > 58)

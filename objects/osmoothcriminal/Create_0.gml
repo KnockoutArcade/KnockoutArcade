@@ -20,6 +20,7 @@ shouldCreateSpiritFire = false; // Whether we should create a spiritFire
 
 // Attack state vars
 moveToPerform = 0; // The attack that needs to be done.
+isPerformingThrow = false; // Whether the attack we're doing is a throw or not
 
 selectedCharacter = -1;
 for (var i = 0; i < global.numberOfCharacters; i++;)

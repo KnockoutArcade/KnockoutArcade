@@ -33,7 +33,7 @@ if (!hurtboxSet)
 depth = hostObject.depth + 2;
 
 // Handle Traction
-if (hostObject.grounded)
+if (hostObject.grounded && !isPerformingThrow)
 {
 	HandleTraction();
 }
@@ -49,6 +49,7 @@ switch (spiritState)
 		y = hostObject.y + 10000;
 		environmentDisplacement = 0;
 		image_xscale = hostObject.image_xscale;
+		isPerformingThrow = false;
 		
 		xHome = x;
 		yHome = y;
@@ -65,6 +66,8 @@ switch (spiritState)
 	// The spirit is currently active
 	case eSpiritState.ACTIVE:
 	{
+		isPerformingThrow = false;
+		
 		if (nextToPlayer)
 		{
 			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
@@ -250,6 +253,19 @@ switch (spiritState)
 			remoteOffset = x - hostObject.x;
 		}
 		
+		// Handle moving while doing a throw
+		if (isPerformingThrow)
+		{
+			if (!nextToPlayer && x < (hostObject.x + remoteModeThreshold) && x > (hostObject.x - remoteModeThreshold))
+			{
+				nextToPlayer = true;
+			}
+			else if (nextToPlayer)
+			{
+				hostObject.hsp = hsp;
+			}
+		}
+		
 		// If the host leaves the attack state, cancel
 		if (!hostObject.inAttackState)
 		{
@@ -281,9 +297,11 @@ switch (spiritState)
 			{
 				hostObject.state = eState.FORWARD_THROW;
 				hostObject.animTimer = 0;
+				animTimer = 0;
 				
 				spiritState = eSpiritState.ATTACK;
 				sprite_index = selectedCharacter.ForwardThrow.SpriteId;
+				isPerformingThrow = true;
 				
 				with (hostObject)
 				{
@@ -303,9 +321,11 @@ switch (spiritState)
 			{
 				hostObject.state = eState.BACKWARD_THROW;
 				hostObject.animTimer = 0;
+				animTimer = 0;
 				
 				spiritState = eSpiritState.ATTACK;
 				sprite_index = selectedCharacter.BackwardThrow.SpriteId;
+				isPerformingThrow = true;
 				
 				with (hostObject)
 				{

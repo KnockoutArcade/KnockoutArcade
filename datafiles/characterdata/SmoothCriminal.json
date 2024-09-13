@@ -4606,7 +4606,7 @@
       "SpecialData": [],
       "IsThrow": true,
       "OpponentPositionData": {
-        "DistanceFromWall": 80.0,
+        "DistanceFromWall": -40.0,
         "ThrowOffset": 0,
         "NumberOfFrames": 1,
         "Frames": [
@@ -4690,6 +4690,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2024-09-13T15:02:10.4403304-07:00",
+  "LastModified": "2024-09-13T15:31:00.5208407-07:00",
   "LastModifiedBy": "creep"
 }

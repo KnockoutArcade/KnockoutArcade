@@ -8770,7 +8770,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 12,
           "Lifetime": 1,
           "AttackWidth": 0,
           "AttackHeight": 0,
@@ -9077,6 +9077,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-09-13T15:01:30.0960062-07:00",
+  "LastModified": "2024-09-13T15:25:21.5949993-07:00",
   "LastModifiedBy": "creep"
 }
