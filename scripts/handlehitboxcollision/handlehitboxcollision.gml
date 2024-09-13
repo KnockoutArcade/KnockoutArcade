@@ -89,20 +89,58 @@ function HandleHitboxCollision(ownerType)
 					
 					if (spirit != noone)
 					{
-						spirit.state = eState.THROW_TECH;
-						spirit.hsp = -5 * ownerType.image_xscale;
-						spirit.animTimer = 0;
+						if (spirit.spiritState != eSpiritState.DEACTIVATED)
+						{
+							spirit.spiritState = eSpiritState.ACTIVE;
+							spirit.hsp = -5 * spirit.image_xscale;
+							spirit.animTimer = 0;
+						}
+					}
+					
+					// Face opponent towards the source of damage;
+					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
+					{
+						var victimFacingDirection = 1;
+						
+						// Face towards spirits
+						if (spirit != noone)
+						{
+							if (collision_list[| i].owner.x > spirit.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						else
+						{
+							if (collision_list[| i].owner.x > owner.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						
+						collision_list[| i].owner.image_xscale = victimFacingDirection;
 					}
 
 					collision_list[| i].owner.state = eState.THROW_TECH;
 					collision_list[| i].owner.hsp = -5 * collision_list[| i].owner.image_xscale;
 					collision_list[| i].owner.animTimer = 0;
 					
-					if (collision_list[| i].spirit != noone)
+					if (collision_list[| i].owner.spiritObject != noone)
 					{
-						collision_list[| i].spirit.state = eState.THROW_TECH;
-						collision_list[| i].spirit.hsp = -5 * collision_list[| i].spirit.image_xscale;
-						collision_list[| i].spirit.animTimer = 0;
+						if (collision_list[| i].owner.spiritObject.spiritState != eSpiritState.DEACTIVATED)
+						{
+							collision_list[| i].owner.spiritObject.spiritState = eSpiritState.ACTIVE;
+							collision_list[| i].owner.spiritObject.hsp = -5 * collision_list[| i].owner.spiritObject.image_xscale;
+							collision_list[| i].owner.spiritObject.animTimer = 0;
+						}
 					}
 
 					// Meter Build - Both players get some meter
@@ -110,8 +148,15 @@ function HandleHitboxCollision(ownerType)
 					ownerType.superMeter += 5 * ownerType.meterPenalty;
 					
 					// Draw tech effect
-					var particle = instance_create_layer((owner.x + collision_list[| i].owner.x) / 2, owner.y - 16, "Particles", oParticles);
-					with(particle)
+					var particleSpawner = ownerType;
+					
+					if (spirit != noone)
+					{
+						particleSpawner = spirit;
+					}
+					
+					var particle = instance_create_layer((particleSpawner.x + collision_list[| i].owner.x) / 2, particleSpawner.y - 16, "Particles", oParticles);
+					with (particle)
 					{
 						lifetime = 30;
 						sprite_index = sThrowTechEffect;
@@ -182,12 +227,19 @@ function HandleHitboxCollision(ownerType)
 					oGameManager.frameAdvantage = 0;
 					
 					// Draw grab effect
-					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
-					with(particle)
+					var particleSpawner = ownerType;
+					
+					if (spirit != noone)
+					{
+						particleSpawner = spirit;
+					}
+					
+					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * particleSpawner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+					with (particle)
 					{
 						lifetime = other.attackProperty.ParticleDuration;
 						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
-						image_xscale = ownerType.image_xscale * -1;
+						image_xscale = particleSpawner.image_xscale * -1;
 					}
 
 				}

@@ -2353,6 +2353,7 @@ switch state
 		
 		grounded = true;
 		inAttackState = false;
+		canTurnAround = false;
 		canBlock = true;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
@@ -2362,6 +2363,7 @@ switch state
 		{
 			state = eState.IDLE;
 			hsp = 0;
+			canTurnAround = true;
 		}
 	}
 	break;

@@ -126,10 +126,10 @@ switch (spiritState)
 			
 			#endregion
 			
-			remoteOffset += environmentDisplacement;
+			remoteOffset += hsp + environmentDisplacement;
 			
 			x = lerp(x, hostObject.x + remoteOffset, 0.5);
-			x += environmentDisplacement;
+			x += hsp + environmentDisplacement;
 			
 			environmentDisplacement = 0;
 			
@@ -225,6 +225,11 @@ switch (spiritState)
 		else if (hostObject.prevState == eState.TECH_ROLL)
 		{
 			sprite_index = sRussel_TechRoll;
+			image_index = hostObject.image_index;
+		}
+		else if (hostObject.prevState == eState.THROW_TECH)
+		{
+			sprite_index = sRussel_Grab;
 			image_index = hostObject.image_index;
 		}
 		#endregion
