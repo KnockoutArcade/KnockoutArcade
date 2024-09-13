@@ -26,10 +26,10 @@ function PerformAttack(Action, createdBySpirit)
 	// Animations
 	for (var i = 0; i < Action.NumberOfWindows; i++) 
 	{
-			if (animTimer >= Action.Window[i].Length)
-			{
-				image_index = Action.Window[i].ImageIndex;
-			}
+		if (animTimer >= Action.Window[i].Length)
+		{
+			image_index = Action.Window[i].ImageIndex;
+		}
 	}
 	
 	

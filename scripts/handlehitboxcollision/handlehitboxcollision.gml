@@ -47,14 +47,6 @@ function HandleHitboxCollision(ownerType)
 			}
 
 			var blockingDirection = -ownerOnSide;
-
-			// Turns the target around if the spirit is attacking from behind
-			/*
-			if (collision_list[| i].owner != owner && spirit != noone && !collision_list[| i].owner.isDestructibleObject)
-			{
-				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
-			}
-			*/
 			
 			// Handle Mutliple hitboxes
 			
@@ -137,15 +129,25 @@ function HandleHitboxCollision(ownerType)
 					collision_list[| i].owner.isThrowable)
 				{
 					// Set the correct states for the attacker and victim
+					
 					ownerType.state = eState.HOLD;
 					ownerType.animTimer = 0;
-
+					ownerType.heldOpponent = collision_list[| i].owner;
+					
 					collision_list[| i].owner.state = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 					collision_list[| i].owner.animTimer = 0;
-					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
 					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
-					ownerType.heldOpponent = collision_list[| i].owner;
+					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
+					
+					// If a spirit is the one that grabbed something...
+					if (spirit != noone)
+					{
+						spirit.spiritState = eSpiritState.HOLD;
+						spirit.heldOpponent = collision_list[| i].owner;
+						collision_list[| i].owner.x = spirit.x + (attackProperty.HoldXOffset * spirit.image_xscale);
+					}
+					
 
 					// Multiple hitboxes
 					// Add this victim to the list of things this hitbox has already hit

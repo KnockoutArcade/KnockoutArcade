@@ -38,6 +38,7 @@ if (hostObject.grounded)
 	HandleTraction();
 }
 
+heldOpponent = hostObject.heldOpponent;
 
 switch (spiritState)
 {
@@ -262,8 +263,67 @@ switch (spiritState)
 			createSpiritFire();
 			shouldCreateSpiritFire = false;
 		}
-		
 	}
+	break;
+	
+	// Hold (grabs)
+	case eSpiritState.HOLD:
+	{
+		// TEMPORARY!!!!
+		sprite_index = sJay_SC_StandLight_MOCKUP_strip3;
+		image_index = 1;
+		// TEMPORARY!!!!
+		
+		// Transition to a throw
+		if (hostObject.animTimer > 4)
+		{
+			if (hostObject.movedir != -image_xscale)
+			{
+				hostObject.state = eState.FORWARD_THROW;
+				hostObject.animTimer = 0;
+				
+				spiritState = eSpiritState.ATTACK;
+				sprite_index = selectedCharacter.ForwardThrow.SpriteId;
+				
+				with (hostObject)
+				{
+					ClearVictimHitByGroups();
+				}
+				
+				// Handle moving the player away from the wall
+				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
+				with (ThrowDistance)
+				{
+					owner = other.id;
+					image_xscale = other.selectedCharacter.ForwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.ForwardThrow;
+				}
+			} 
+			else 
+			{
+				hostObject.state = eState.BACKWARD_THROW;
+				hostObject.animTimer = 0;
+				
+				spiritState = eSpiritState.ATTACK;
+				sprite_index = selectedCharacter.BackwardThrow.SpriteId;
+				
+				with (hostObject)
+				{
+					ClearVictimHitByGroups();
+				}
+			
+				// Handle moving the player away from the wall
+				var ThrowDistance = instance_create_layer(x, y-15, "hitboxes", oThrowEnvDetection);
+				with (ThrowDistance) 
+				{
+					owner = other.id;
+					image_xscale = other.selectedCharacter.BackwardThrow.OpponentPositionData.DistanceFromWall * other.image_xscale;
+					throwToCheck = other.selectedCharacter.BackwardThrow;
+				}
+			}
+		}
+	}
+	break;
 }
 
 #region Spirit Break

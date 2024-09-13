@@ -2162,7 +2162,7 @@ switch state
 		sprite_index = CharacterSprites.hold_Sprite;
 		
 		// Transition to a throw
-		if (animTimer > 4)
+		if (animTimer > 4 && !spiritON)
 		{
 			if (movedir != -image_xscale)
 			{
@@ -2259,6 +2259,17 @@ switch state
 		
 		PerformAttack(selectedCharacter.ForwardThrow, false);
 		
+		// If the spirit is active, make the spirit perform the move
+		if (spiritON && spiritObject != noone)
+		{
+			with (spiritObject)
+			{
+				animTimer = other.animTimer;
+				
+				PerformAttack(selectedCharacter.ForwardThrow, true);
+			}
+		}
+		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 		{
@@ -2270,7 +2281,11 @@ switch state
 			state = eState.IDLE;
 			frameAdvantage = true;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			
+			if (!spiritON)
+			{
+				x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			}
 		}
 	}
 	break;
@@ -2286,6 +2301,17 @@ switch state
 		
 		PerformAttack(selectedCharacter.BackwardThrow, false);
 		
+		// If the spirit is active, make the spirit perform the move
+		if (spiritON && spiritObject != noone)
+		{
+			with (spiritObject)
+			{
+				animTimer = other.animTimer;
+				
+				PerformAttack(selectedCharacter.BackwardThrow, true);
+			}
+		}
+		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
 		{
@@ -2299,7 +2325,11 @@ switch state
 			canTurnAround = true;
 			inAttackState = false;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			
+			if (!spiritON)
+			{
+				x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			}
 		}
 	}
 	break;

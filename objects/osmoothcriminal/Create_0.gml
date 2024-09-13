@@ -40,11 +40,8 @@ enum eSpiritState {
 	DEACTIVATED,
 	ACTIVE,
 	ATTACK,
-	HITSTOP,
-	SCREEN_FREEZE,
-	HURT,
-	LAUNCHED,
-	ON_THE_GROUND
+	HOLD,
+	THROW
 }
 
 createSpiritFire = function CreateSpiritFire() 
