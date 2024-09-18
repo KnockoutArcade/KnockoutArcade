@@ -486,21 +486,21 @@ switch (state)
 						room_goto(rCharacterSelectScreen);
 						
 						// reset music
-						audio_stop_sound(testBGM);
+						audio_stop_sound(bgm_Russel_Stage);
 					}
 					else if (areYouSureAction == eAreYouSureAction.MAIN_MENU)
 					{
 						room_goto(rMainMenu);
 						
 						// reset music
-						audio_stop_sound(testBGM);
+						audio_stop_sound(bgm_Russel_Stage);
 					}
 					else if (areYouSureAction == eAreYouSureAction.RESTART)
 					{
 						room_restart();
 						
 						// reset music
-						audio_stop_sound(testBGM);
+						audio_stop_sound(bgm_Russel_Stage);
 					}
 					
 				}

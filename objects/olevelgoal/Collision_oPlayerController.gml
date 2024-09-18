@@ -3,7 +3,7 @@
 
 if (!global.gameHalt)
 {
-	audio_stop_sound(testBGM);
+	audio_stop_sound(bgm_Russel_Stage);
 
 	global.campaignMapRoom = levelDestination;
 

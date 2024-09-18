@@ -47,6 +47,7 @@
     {"id":{"name":"oFallingGirder","path":"objects/oFallingGirder/oFallingGirder.yy",},"order":7,},
     {"id":{"name":"sRussel_QuickGetup","path":"sprites/sRussel_QuickGetup/sRussel_QuickGetup.yy",},"order":40,},
     {"id":{"name":"oTutorialTruck","path":"objects/oTutorialTruck/oTutorialTruck.yy",},"order":9,},
+    {"id":{"name":"bgm_Russel_Stage","path":"sounds/bgm_Russel_Stage/bgm_Russel_Stage.yy",},"order":0,},
     {"id":{"name":"oSingleplayerResultsText","path":"objects/oSingleplayerResultsText/oSingleplayerResultsText.yy",},"order":9,},
     {"id":{"name":"sfx_UI_Hover","path":"sounds/sfx_UI_Hover/sfx_UI_Hover.yy",},"order":3,},
     {"id":{"name":"sFullPortait_Gunther","path":"sprites/sFullPortait_Gunther/sFullPortait_Gunther.yy",},"order":3,},
@@ -720,6 +721,7 @@
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts.yy","order":44,"resourceVersion":"1.0","name":"SupplementaryAttackScripts","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts/Beverly.yy","order":1,"resourceVersion":"1.0","name":"Beverly","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Particle Effects/Projectiles.yy","order":9,"resourceVersion":"1.0","name":"Projectiles","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sounds/Music.yy","order":17,"resourceVersion":"1.0","name":"Music","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
