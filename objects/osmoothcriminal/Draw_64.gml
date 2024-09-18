@@ -11,7 +11,7 @@ draw_set_color(c_white);
 	
 draw_text(75, 10, spiritState);
 draw_text(75, 30, animTimer);
-draw_text(75, 50, isPerformingThrow);
+draw_text(75, 50, hasRecentlyRushCanceled);
 draw_text(75, 70, hsp);
 //draw_text(75, 90, y);
 }

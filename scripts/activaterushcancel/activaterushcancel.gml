@@ -26,6 +26,7 @@ function ActivateRushCancel()
 	if (!spiritON && spiritObject != noone && !pendingToggle && !spiritInstall)
 	{
 		DeactivateSpirit(false);
+		spiritObject.hasRecentlyRushCanceled = true;
 	}
 	
 	pendingToggle = false;

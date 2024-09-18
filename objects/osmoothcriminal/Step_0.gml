@@ -50,6 +50,7 @@ switch (spiritState)
 		environmentDisplacement = 0;
 		image_xscale = hostObject.image_xscale;
 		isPerformingThrow = false;
+		hasRecentlyRushCanceled = false;
 		
 		xHome = x;
 		yHome = y;
@@ -118,6 +119,20 @@ switch (spiritState)
 						hsp = 5 * sign(hostObject.image_xscale);
 					}
 				}
+			}
+			else if (hostObject.state == eState.RUSH_CANCEL_FORWARD || hostObject.state == eState.RUSH_CANCEL_AIR || hostObject.state == eState.RUSH_CANCEL_UP) // Handle Rush Canceling
+			{
+				hasRecentlyRushCanceled = true;
+				
+				if (image_xscale != hostObject.image_xscale)
+				{
+					hsp = abs(hostObject.hsp) * image_xscale * 2;
+				}
+			}
+			else if (!hostObject.inAttackState)
+			{
+				hasRecentlyRushCanceled = false;
+				show_debug_message(string(hostObject.state));
 			}
 			
 			#endregion
@@ -236,8 +251,8 @@ switch (spiritState)
 	// Spirit attack
 	case eSpiritState.ATTACK:
 	{
-		// Freeze when in hitstop
-		if (hostObject.state != eState.HITSTOP)
+		// Freeze when in hitstop or screen freeze
+		if (hostObject.state != eState.HITSTOP && hostObject.state != eState.SCREEN_FREEZE)
 		{
 			x += hsp + environmentDisplacement;
 			y = hostObject.y;
@@ -272,6 +287,7 @@ switch (spiritState)
 		{
 			spiritState = eSpiritState.ACTIVE;
 			inAttackState = false;
+			//hasRecentlyRushCanceled = false;
 		}
 		
 		// If a spirit Fire is buffered, create one
@@ -290,6 +306,8 @@ switch (spiritState)
 		sprite_index = sJay_SC_StandLight_MOCKUP_strip3;
 		image_index = 1;
 		// TEMPORARY!!!!
+		
+		hasRecentlyRushCanceled = false;
 		
 		// Transition to a throw
 		if (hostObject.animTimer > 4)

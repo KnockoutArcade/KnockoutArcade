@@ -28,6 +28,7 @@ function DeactivateSpirit(executedBySpirit)
 		//instance_create_layer(spiritObject.x, spiritObject.y, "Instances", oSpiritFire);
 		spiritObject.spiritState = eSpiritState.DEACTIVATED;
 		spiritObject.createSpiritFire();
+		spiritObject.hasRecentlyRushCanceled = false;
 		
 		spiritSummoned = false;
 		spiritON = false;
@@ -81,5 +82,6 @@ function DeactivateSpirit(executedBySpirit)
 		}
 		
 		spiritState = eSpiritState.DEACTIVATED;
+		hasRecentlyRushCanceled = false;
 	}
 }

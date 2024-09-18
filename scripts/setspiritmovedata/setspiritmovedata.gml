@@ -4,7 +4,7 @@
 // Update the spirit's move whenever the host performs an attack
 function SetSpiritMoveData(moveState)
 {
-	/*
+	/* DEPRECIATED
 	switch (moveState)
 	{
 		#region Lights

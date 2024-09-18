@@ -77,7 +77,12 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 	if (spiritON && spiritObject != noone) || (moveToDo.SpiritData.PerformInSpiritOff && !spiritBroken)
 	{
 		// Transfer momentum
-		if (animTimer <= 1)
+		if (animTimer <= 1 && !spiritObject.hasRecentlyRushCanceled) // If we are not RC'ing, always transfer
+		{
+			spiritObject.hsp = hsp;
+			spiritObject.vsp = vsp;
+		}
+		else if (animTimer <= 1 && spiritObject.hasRecentlyRushCanceled && image_xscale == spiritObject.image_xscale) // If we are RC'ing, only transfer if we're facing the same direction
 		{
 			spiritObject.hsp = hsp;
 			spiritObject.vsp = vsp;
@@ -111,7 +116,8 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 			{
 				spiritState = eSpiritState.ACTIVE;
 				moveToPerform = 0;
-				sprite_index = CharacterSprites.idle_Sprite;
+				sprite_index = CharacterSprites.crouch_Sprite;
+				hasRecentlyRushCanceled = false;
 			}
 		}
 		
