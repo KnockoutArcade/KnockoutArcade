@@ -3259,6 +3259,8 @@ if (installActivated && state != eState.SCREEN_FREEZE)
 		{
 			spiritInstall = false;
 			spiritON = false;
+			
+			DeactivateSpirit(false);
 		}
 	}
 	else
