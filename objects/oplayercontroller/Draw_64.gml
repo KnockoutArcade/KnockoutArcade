@@ -18,7 +18,7 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, prevState);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, installTimer);
+	draw_text(20, 70, storedComboDamage);
 	draw_text(20, 90, installInterval);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

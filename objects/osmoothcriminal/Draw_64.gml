@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (hostObject.playerID == 1)
+if (hostObject.playerID == 1 && global.toggleHitboxVisibility)
 {
 draw_set_alpha(.5);
 draw_set_color(c_black);
