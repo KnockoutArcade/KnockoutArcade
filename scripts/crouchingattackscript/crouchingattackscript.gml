@@ -92,7 +92,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			CrouchingAttackScript(FindAttackState(other.state), onGround, maintainState);
+			CrouchingAttackScript(FindAttackState(other.state), onGround, true);
 		}
 	}
 	
