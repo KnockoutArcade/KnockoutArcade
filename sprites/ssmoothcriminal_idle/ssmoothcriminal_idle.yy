@@ -9,8 +9,8 @@
   "swfPrecision": 2.525,
   "bbox_left": 11,
   "bbox_right": 54,
-  "bbox_top": 13,
-  "bbox_bottom": 56,
+  "bbox_top": 11,
+  "bbox_bottom": 57,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"6224c994-7bb9-4537-81a6-88d520d4de8d","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"6224c994-7bb9-4537-81a6-88d520d4de8d","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"LayerId":{"name":"340ce957-b19d-4eb9-9390-f3dce6dd1e50","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sSmoothCriminal_Idle","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","name":"6224c994-7bb9-4537-81a6-88d520d4de8d","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"43dc94f7-eb11-49b1-a50c-9f501140e250","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"43dc94f7-eb11-49b1-a50c-9f501140e250","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"LayerId":{"name":"6a45f247-4b99-4fc6-ab9c-330eb4099d33","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sSmoothCriminal_Idle","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","name":"43dc94f7-eb11-49b1-a50c-9f501140e250","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sSmoothCriminal_Idle","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"2bf8dce4-e78f-4203-ae3e-fe2a5d30ce35","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"6224c994-7bb9-4537-81a6-88d520d4de8d","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"356547f0-b2b3-43e1-8464-d9cd79de765a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"43dc94f7-eb11-49b1-a50c-9f501140e250","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"340ce957-b19d-4eb9-9390-f3dce6dd1e50","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6a45f247-4b99-4fc6-ab9c-330eb4099d33","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
