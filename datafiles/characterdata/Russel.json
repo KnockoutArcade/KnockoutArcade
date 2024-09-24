@@ -5079,7 +5079,7 @@
           {
             "Frame": 99,
             "RelativeX": 28,
-            "RelativeY": 0,
+            "RelativeY": -1,
             "Sprite": 2,
             "Index": 5,
             "Rotation": 0,
@@ -8053,6 +8053,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-08-27T13:33:34.1348587-07:00",
+  "LastModified": "2024-09-24T15:59:04.2764233-07:00",
   "LastModifiedBy": "creep"
 }
