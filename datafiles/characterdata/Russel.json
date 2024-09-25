@@ -3430,10 +3430,10 @@
           "BlockStun": 19.0,
           "KnockBack": 5.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 2.5,
+          "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 2.5,
+          "LaunchKnockbackVertical": -1.8,
+          "LaunchKnockbackHorizontal": 2.0,
           "GravityScaling": 2.0,
           "Pushback": 3.0,
           "ParticleXOffset": 18,
@@ -8053,6 +8053,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-09-24T15:59:04.2764233-07:00",
+  "LastModified": "2024-09-24T19:43:00.4553179-07:00",
   "LastModifiedBy": "creep"
 }
