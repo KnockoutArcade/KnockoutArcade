@@ -27,6 +27,17 @@ if (!hurtboxSet)
 		spirit = other.id;
 	}
 	hurtboxSet = true;
+	
+	// Set up the proper palette data
+	if (hostObject.playerID == 2)
+	{
+		PaletteSetup(global.p2PaletteID, selectedCharacter);
+	}
+	else
+	{
+		PaletteSetup(global.p1PaletteID, selectedCharacter);
+	}
+
 }
 
 

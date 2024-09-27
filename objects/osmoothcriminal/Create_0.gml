@@ -37,6 +37,7 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 
 event_inherited();
 
+
 // Spirit exclusive State Variables
 // Spirits operate in a unique way from characters. They have unique higher level functionality.
 spiritState = eSpiritState.DEACTIVATED;
