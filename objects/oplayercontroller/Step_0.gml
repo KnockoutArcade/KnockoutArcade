@@ -192,6 +192,7 @@ if (canRun)
 		else if (movedir == -image_xscale)
 		{
 			runningBackward = true;
+			runningForward = false;
 		}
 		holdRunButtonTimer++;
 	}
@@ -221,11 +222,13 @@ if (canRun)
 			if (runBackwardTimer < 15)
 			{
 				runningBackward = true;
+				runningForward = false;
 			}
 		}
 		holdBackwardTimer++;
 		holdForwardTimer = 0;
 		runForwardTimer = 16;
+		runningForward = false;
 	}
 	else if ((!runButton && movedir == 0))
 	{
