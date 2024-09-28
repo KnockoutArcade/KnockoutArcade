@@ -31,5 +31,5 @@ function ResetGame()
 	instance_destroy(global.camObj);
 	
 	global.freezeTimer = false;
-	audio_resume_sound(testBGM);
+	audio_resume_sound(bgm_Russel_Stage);
 }

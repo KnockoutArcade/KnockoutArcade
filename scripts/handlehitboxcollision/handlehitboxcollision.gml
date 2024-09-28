@@ -47,12 +47,6 @@ function HandleHitboxCollision(ownerType)
 			}
 
 			var blockingDirection = -ownerOnSide;
-
-			// Turns the target around if the spirit is attacking from behind
-			if (collision_list[| i].owner != owner && spirit != noone)
-			{
-				collision_list[| i].owner.image_xscale = spirit.image_xscale * -1;
-			}
 			
 			// Handle Mutliple hitboxes
 			
@@ -95,29 +89,74 @@ function HandleHitboxCollision(ownerType)
 					
 					if (spirit != noone)
 					{
-						spirit.state = eState.THROW_TECH;
-						spirit.hsp = -5 * ownerType.image_xscale;
-						spirit.animTimer = 0;
+						if (spirit.spiritState != eSpiritState.DEACTIVATED)
+						{
+							spirit.spiritState = eSpiritState.ACTIVE;
+							spirit.hsp = -5 * spirit.image_xscale;
+							spirit.animTimer = 0;
+						}
+					}
+					
+					// Face opponent towards the source of damage;
+					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
+					{
+						var victimFacingDirection = 1;
+						
+						// Face towards spirits
+						if (spirit != noone)
+						{
+							if (collision_list[| i].owner.x > spirit.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						else
+						{
+							if (collision_list[| i].owner.x > owner.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						
+						collision_list[| i].owner.image_xscale = victimFacingDirection;
 					}
 
 					collision_list[| i].owner.state = eState.THROW_TECH;
 					collision_list[| i].owner.hsp = -5 * collision_list[| i].owner.image_xscale;
 					collision_list[| i].owner.animTimer = 0;
 					
-					if (collision_list[| i].spirit != noone)
+					if (collision_list[| i].owner.spiritObject != noone)
 					{
-						collision_list[| i].spirit.state = eState.THROW_TECH;
-						collision_list[| i].spirit.hsp = -5 * collision_list[| i].spirit.image_xscale;
-						collision_list[| i].spirit.animTimer = 0;
+						if (collision_list[| i].owner.spiritObject.spiritState != eSpiritState.DEACTIVATED)
+						{
+							collision_list[| i].owner.spiritObject.spiritState = eSpiritState.ACTIVE;
+							collision_list[| i].owner.spiritObject.hsp = -5 * collision_list[| i].owner.spiritObject.image_xscale;
+							collision_list[| i].owner.spiritObject.animTimer = 0;
+						}
 					}
 
 					// Meter Build - Both players get some meter
-					collision_list[| i].owner.superMeter += 5;
-					ownerType.superMeter += 5;
+					collision_list[| i].owner.superMeter += 5 * collision_list[| i].owner.meterPenalty;
+					ownerType.superMeter += 5 * ownerType.meterPenalty;
 					
 					// Draw tech effect
-					var particle = instance_create_layer((owner.x + collision_list[| i].owner.x) / 2, owner.y - 16, "Particles", oParticles);
-					with(particle)
+					var particleSpawner = ownerType;
+					
+					if (spirit != noone)
+					{
+						particleSpawner = spirit;
+					}
+					
+					var particle = instance_create_layer((particleSpawner.x + collision_list[| i].owner.x) / 2, particleSpawner.y - 16, "Particles", oParticles);
+					with (particle)
 					{
 						lifetime = 30;
 						sprite_index = sThrowTechEffect;
@@ -135,15 +174,25 @@ function HandleHitboxCollision(ownerType)
 					collision_list[| i].owner.isThrowable)
 				{
 					// Set the correct states for the attacker and victim
+					
 					ownerType.state = eState.HOLD;
 					ownerType.animTimer = 0;
-
+					ownerType.heldOpponent = collision_list[| i].owner;
+					
 					collision_list[| i].owner.state = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 					collision_list[| i].owner.animTimer = 0;
-					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
 					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
-					ownerType.heldOpponent = collision_list[| i].owner;
+					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
+					
+					// If a spirit is the one that grabbed something...
+					if (spirit != noone)
+					{
+						spirit.spiritState = eSpiritState.HOLD;
+						spirit.heldOpponent = collision_list[| i].owner;
+						collision_list[| i].owner.x = spirit.x + (attackProperty.HoldXOffset * spirit.image_xscale);
+					}
+					
 
 					// Multiple hitboxes
 					// Add this victim to the list of things this hitbox has already hit
@@ -178,12 +227,19 @@ function HandleHitboxCollision(ownerType)
 					oGameManager.frameAdvantage = 0;
 					
 					// Draw grab effect
-					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
-					with(particle)
+					var particleSpawner = ownerType;
+					
+					if (spirit != noone)
+					{
+						particleSpawner = spirit;
+					}
+					
+					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * particleSpawner.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
+					with (particle)
 					{
 						lifetime = other.attackProperty.ParticleDuration;
 						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
-						image_xscale = ownerType.image_xscale * -1;
+						image_xscale = particleSpawner.image_xscale * -1;
 					}
 
 				}
@@ -213,7 +269,7 @@ function HandleHitboxCollision(ownerType)
 				
 					// Multiple hitboxes
 					// Add this victim to the list of things this hitbox has already hit
-					ds_list_add(hasHit, collision_list.owner.id);
+					ds_list_add(hasHit, collision_list[| i].owner.id);
 		
 					if (!variable_struct_exists(collision_list[| i].owner.hasBeenHitByIds, string(owner.id)))
 					{
@@ -251,20 +307,6 @@ function HandleHitboxCollision(ownerType)
 						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = ownerType.image_xscale * -1;
 					}
-
-					// Cancel into the command grab move
-					/*
-					ds_list_clear(ownerType.hitByGroup);
-					if (spirit != noone)
-					{
-						ds_list_clear(spirit.hitByGroup);
-					}
-					if (ownerType.target != noone)
-					{
-						ds_list_clear(ownerType.target.hitByGroup);
-					}
-					ownerType.animOffset = 0;
-					*/
 
 					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
 					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
@@ -305,7 +347,33 @@ function HandleHitboxCollision(ownerType)
 					// Face opponent towards the source of damage;
 					if (!collision_list[| i].owner.isDestructibleObject)
 					{
-						collision_list[| i].owner.image_xscale = ownerOnSide;
+						var victimFacingDirection = 1;
+						
+						// Face towards spirits
+						if (spirit != noone)
+						{
+							if (collision_list[| i].owner.x > spirit.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						else
+						{
+							if (collision_list[| i].owner.x > owner.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						
+						collision_list[| i].owner.image_xscale = victimFacingDirection;
 					}
 
 					// Handle if the opponent is Crouch blocking or not
@@ -321,10 +389,10 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Meter Build - P1 gets 75% meter, P2 gets 50%
-					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5);
+					collision_list[| i].owner.superMeter += floor(attackProperty.MeterGain * 0.5 * collision_list[| i].owner.meterPenalty);
 					if (ownerType.state != eState.SUPER && !ownerType.installActivated && !ownerType.timeStopActivated)
 					{
-						ownerType.superMeter += floor(attackProperty.MeterGain * 0.75);
+						ownerType.superMeter += floor(attackProperty.MeterGain * 0.75 * ownerType.meterPenalty);
 					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
@@ -512,7 +580,33 @@ function HandleHitboxCollision(ownerType)
 					// Face opponent towards the source of damage;
 					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{
-						collision_list[| i].owner.image_xscale = ownerOnSide;
+						var victimFacingDirection = 1;
+						
+						// Face towards spirits
+						if (spirit != noone)
+						{
+							if (collision_list[| i].owner.x > spirit.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						else
+						{
+							if (collision_list[| i].owner.x > owner.x)
+							{
+								victimFacingDirection = -1;
+							}
+							else
+							{
+								victimFacingDirection = 1;
+							}
+						}
+						
+						collision_list[| i].owner.image_xscale = victimFacingDirection;
 					}
 					
 					// Set the correct prevState

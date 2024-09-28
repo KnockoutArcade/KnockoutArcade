@@ -51,7 +51,7 @@ SetupGame();
 global.p1Rounds = 0;
 global.p2Rounds = 0;
 
-audio_play_sound(testBGM, 0, true);
+audio_play_sound(bgm_Russel_Stage, 0, true);
 
 momentWhenBothPlayersWereStable = 0; // During round win, the frame when both players entered a stable state
 victoryAnimationDelay = 30; // The delay between when players are stable and when the victory animation should play (frames)

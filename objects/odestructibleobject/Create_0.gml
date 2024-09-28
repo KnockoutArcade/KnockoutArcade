@@ -63,8 +63,10 @@ state = eState.IDLE;
 	isCrouchBlocking = false;
 	blockbuffer = false;
 	xHome = x;
+	yHome = y;
 	hitstunShuffleTimer = 0;
 	shuffle = 0;
+	spiritON = false;
 
 	isGrabbed = false;
 
@@ -101,6 +103,7 @@ state = eState.IDLE;
 	//Meter Related Variables
 	superMeter = 0; // the amount of meter the player has
 	meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+	meterPenalty = 0;
 	
 	// Singleplayer stats
 	totalDamageTaken = 0;

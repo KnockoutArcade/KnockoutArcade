@@ -40,6 +40,7 @@ commandListCurrentPage = 0; // Which "page" of a tab we are currently on
 commandListCharacter = 0; // Which Character's command list to show
 // 0 = Russel
 // 1 = Beverly
+// 2 = Jay
 // anything else = TBD page;
 
 // Options

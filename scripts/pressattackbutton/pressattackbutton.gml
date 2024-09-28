@@ -2,6 +2,9 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function PressAttackButton(attack)
 {	
+		// Debug
+		//if (attack != 0) show_debug_message("Pressed " + string(attack));
+		
 		// Input Normal attacks first
 		switch attack 
 		{
@@ -9,48 +12,58 @@ function PressAttackButton(attack)
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
-					SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
+					//SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
-					SetSpiritMoveData(false, selectedCharacter.StandLight3, attack);
+					//SetSpiritMoveData(false, selectedCharacter.StandLight3, attack);
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 					state = eState.JUMPING_LIGHT_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
+					//SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (verticalMoveDir = -1)
 				{
 					state = eState.CROUCHING_LIGHT_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.CrouchingLight, attack);
+					//SetSpiritMoveData(false, selectedCharacter.CrouchingLight, attack);
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.StandLight, attack);
+					//SetSpiritMoveData(false, selectedCharacter.StandLight, attack);
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_LIGHT_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
+					//SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
 				}
 			break;
 		
@@ -62,6 +75,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (verticalMoveDir == -1)
 				{
@@ -70,6 +85,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
@@ -79,6 +96,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else
 				{
@@ -95,6 +114,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (verticalMoveDir == -1)
 				{
@@ -103,6 +124,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
@@ -112,6 +135,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else
 				{
@@ -130,6 +155,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 			break;
 			
@@ -142,6 +169,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0)
 				{
@@ -151,6 +180,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (verticalMoveDir == 1)
 				{
@@ -161,6 +192,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
 				{
@@ -171,6 +204,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 			break;
 			
@@ -184,6 +219,8 @@ function PressAttackButton(attack)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					inAttackState = true;
 				}
 			break;
 		}
@@ -242,6 +279,8 @@ function PressAttackButton(attack)
 					
 				// reset anim timer
 				animTimer = 0;
+					
+				inAttackState = true;
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal2"))
@@ -253,6 +292,8 @@ function PressAttackButton(attack)
 					
 				// reset anim timer
 				animTimer = 0;
+					
+				inAttackState = true;
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal3"))
@@ -264,6 +305,8 @@ function PressAttackButton(attack)
 					
 				// reset anim timer
 				animTimer = 0;
+					
+				inAttackState = true;
 			}
 		}
 		

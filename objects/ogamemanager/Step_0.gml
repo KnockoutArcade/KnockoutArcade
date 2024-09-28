@@ -75,7 +75,7 @@ switch (global.gameMode)
 			p1.isInCutscene = true; 
 			p2.isInCutscene = true;
 			instance_destroy(oTimeStop);
-			audio_resume_sound(testBGM);
+			audio_resume_sound(bgm_Russel_Stage);
 			
 			global.roundOver = true;
 			gameHaltTimer++;
@@ -334,7 +334,7 @@ switch (global.gameMode)
 			else if (gameHaltTimer == momentWhenBothPlayersWereStable + 140 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(testBGM);
+				audio_stop_sound(bgm_Russel_Stage);
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 				victoryScreen.skipIntro = true;
@@ -347,7 +347,7 @@ switch (global.gameMode)
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(testBGM);
+				audio_stop_sound(bgm_Russel_Stage);
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
@@ -358,7 +358,7 @@ switch (global.gameMode)
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(testBGM);
+				audio_stop_sound(bgm_Russel_Stage);
 				
 				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter, global.p2PaletteID);

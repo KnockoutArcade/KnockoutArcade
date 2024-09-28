@@ -157,7 +157,6 @@ switch (state)
 if (state != eState.HITSTOP)
 {
 	// Animating pushback
-	xHome = x;
 	if (pushbackVel >= 0)
 	{
 		hsp = pushbackVel * -image_xscale;
@@ -349,6 +348,9 @@ if (state != eState.HITSTOP)
 		
 		floor(y);
 	}
+	
+	xHome = x;
+	yHome = y;
 }
 
 

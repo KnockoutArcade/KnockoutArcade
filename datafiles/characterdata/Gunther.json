@@ -3793,7 +3793,7 @@
           "AttackHeight": 40,
           "WidthOffset": 0,
           "HeightOffset": 0,
-          "Group": 1,
+          "Group": 2,
           "Damage": 20,
           "MeterGain": 4.0,
           "ComboScaling": 0.0,
@@ -5941,7 +5941,7 @@
           "AttackHeight": 10,
           "WidthOffset": 11,
           "HeightOffset": 0,
-          "Group": 2,
+          "Group": 4,
           "Damage": 10,
           "MeterGain": 6.0,
           "ComboScaling": 1.0,
@@ -6137,7 +6137,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -6216,6 +6216,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-06-03T13:33:18.5970172-07:00",
+  "LastModified": "2024-08-27T10:32:50.4441554-07:00",
   "LastModifiedBy": "creep"
 }

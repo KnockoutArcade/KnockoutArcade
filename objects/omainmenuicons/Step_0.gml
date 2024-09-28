@@ -37,6 +37,19 @@ if (image_index == 0 && P1menuConfirm)
 
 if (image_index == 1 && P1menuConfirm)
 {
+	
+	// TEMPORARY DEBUG STUFF
+	/*
+	global.p1SelectedCharacter = oJay;
+	global.p2SelectedCharacter = oJay;
+	
+	global.gameMode = GAMEMODE.VERSUS;
+	
+	room_goto(rJayStage);
+	*/
+	
+	// ORIGINAL CODE - GO BACK TO THIS AFTER TESTING
+	
 	room_goto(rCharacterSelectScreen);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
@@ -59,12 +72,12 @@ if (image_index == 4 && P1menuConfirm)
 // Testing out Single-Player Mechanics. This takes you to the test level
 if (image_index == 2 && P1menuConfirm)
 {
-	room_goto(rPlatformingTestStage);
-	
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
-	global.p1SelectedCharacter = oRussel;
+	global.p1SelectedCharacter = oJay;
 	global.p1PaletteID = 0;
+	
+	room_goto(rPlatformingTestStage);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
@@ -80,4 +93,21 @@ else if (percyBlinkTimer >= percyEyesClosedTimerCap) && (isPercyEyesClosed)
 {
 	percyBlinkTimer = 0;
 	isPercyEyesClosed = false;
+}
+
+// Enable no-Numpad mode
+if (keyboard_check_pressed(vk_backspace))
+{
+	if (global.noNumpadMode)
+	{
+		RestorePlayer2DefaultControls();
+		global.noNumpadMode = false;
+	}
+	else
+	{
+		SetNoNumpadButtons();
+		global.noNumpadMode = true;
+	}
+	
+	audio_play_sound(sfx_UI_Select, 0, false);
 }

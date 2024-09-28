@@ -219,7 +219,7 @@ if (copyCharacterPalette)
 draw_self();
 
 // Debug text
-//draw_text(x, y, animTimer);
+//draw_text(x, y, playerOwner);
 //draw_text(x, y - 20, hitstopTimer);
 //draw_text(x, y - 40, ds_list_size(collidedWithProjectileList));
 

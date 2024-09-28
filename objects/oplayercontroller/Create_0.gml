@@ -256,6 +256,7 @@ cancelOnLanding = true; // whether or not the character should cancel their curr
 // Wall bounce Variables
 wallBouncing = false;
 wallHit = false; // this is to dectect when the player hits the wall
+hasUsedWallBounce = false; // Has this player already been wallbounced in a combo?
 
 // Intro
 hasPerformedIntro = true;
@@ -350,6 +351,7 @@ superMeter = 0; // the amount of meter the player has
 meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
 meterScaling = 1; // How much meter gain will be scaled (multiplier)
 hasUsedMeter = false; // Whether the player has used a move that requires meter or not
+meterPenalty = 1; // Certain moves cause the amount of meter you build to be reduced
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
@@ -372,7 +374,7 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 }
 
 // Spirit Data
-spiritState = false; // false = Spirit OFF, false = Spirit ON
+spiritON = false; // false = Spirit OFF, false = Spirit ON
 spirit = noone;
 spiritObject = noone;
 spiritSummoned = false;
@@ -400,8 +402,8 @@ if (selectedCharacter.UniqueData.SpiritData == 1)
 pendingToggle = false;
 
 // Data used by spirits, but kept here to avoid errors
-host = noone;
-hostObject = noone;
+host = noone; // The character data which contains the moveset for the host
+hostObject = noone; // The actual host object itself
 
 // Super Data
 superActivated = false;
@@ -438,6 +440,10 @@ landingBufferAttack = 0; // The attack to be buffered once landing
 landingBufferTimer = 0; // Timer to keep track of the buffer window
 landingBufferWindow = 5; // How long the player has to buffer an attack while landing.
 landingBufferLockout = 20; // How long until the player can attempt to buffer a landing attack again.
+
+// Getup Input Buffer
+getupBufferAmount = 7; // The amount of time (in frames) that the player has to input a move to be buffered
+getupBufferAttack = 0; // The attack value that is buffered
 
 // Round Win Vars
 isInStableState = false; // Whether the player is in a "stable" state or not

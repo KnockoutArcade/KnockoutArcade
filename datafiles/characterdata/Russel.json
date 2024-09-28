@@ -3430,10 +3430,10 @@
           "BlockStun": 19.0,
           "KnockBack": 5.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 2.5,
+          "AirKnockbackHorizontal": 2.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -1.0,
-          "LaunchKnockbackHorizontal": 2.5,
+          "LaunchKnockbackVertical": -1.8,
+          "LaunchKnockbackHorizontal": 2.0,
           "GravityScaling": 2.0,
           "Pushback": 3.0,
           "ParticleXOffset": 18,
@@ -5079,7 +5079,7 @@
           {
             "Frame": 99,
             "RelativeX": 28,
-            "RelativeY": 0,
+            "RelativeY": -1,
             "Sprite": 2,
             "Index": 5,
             "Rotation": 0,
@@ -6729,7 +6729,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_DownSpecial",
-      "Duration": 57,
+      "Duration": 43,
       "NumberOfFrames": 13,
       "FrameData": [
         {
@@ -6765,23 +6765,23 @@
           "ImageIndex": 8
         },
         {
-          "Length": 29,
+          "Length": 24,
           "ImageIndex": 9
         },
         {
-          "Length": 34,
+          "Length": 26,
           "ImageIndex": 10
         },
         {
-          "Length": 42,
+          "Length": 35,
           "ImageIndex": 11
         },
         {
-          "Length": 49,
+          "Length": 39,
           "ImageIndex": 12
         },
         {
-          "Length": 51,
+          "Length": 42,
           "ImageIndex": 13
         }
       ],
@@ -6801,7 +6801,7 @@
           "AttackHitStop": 20,
           "AttackHitStun": 20,
           "AttackType": 0,
-          "BlockStun": 23.0,
+          "BlockStun": 33.0,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": 2.0,
@@ -6893,8 +6893,23 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 2,
+        "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
@@ -8053,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2024-06-03T16:09:59.3373567-07:00",
+  "LastModified": "2024-09-24T19:59:42.3064089-07:00",
   "LastModifiedBy": "creep"
 }

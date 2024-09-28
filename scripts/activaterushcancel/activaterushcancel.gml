@@ -22,6 +22,15 @@ function ActivateRushCancel()
 		image_xscale *= -1;
 	}
 	
+	// If this character is in spirit off and the spirit is active, deactivate the spirit
+	if (!spiritON && spiritObject != noone && !pendingToggle && !spiritInstall)
+	{
+		DeactivateSpirit(false);
+		spiritObject.hasRecentlyRushCanceled = true;
+	}
+	
+	pendingToggle = false;
+	
 	rcActivated = true;
 	rcFreezeTimer = 0;
 	superMeter -= 50;

@@ -8,6 +8,12 @@ if (global.game_paused)
 
 event_inherited();
 
+// Reduce the meter build of the owner
+if (instance_exists(playerOwner))
+{
+	playerOwner.meterPenalty = 0.25;
+}
+
 if (hitstun != 0)
 {
 	canSpawnHitboxes = true;
@@ -19,8 +25,6 @@ if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_s
 	hasSpawnedHitboxes = false;
 	
 	PerformProjectile(id, spiritOwner);
-	
-	show_debug_message("Spawned a hitbox");
 }
 
 // If the opponent has hit this object, prompt the removal of hitboxes

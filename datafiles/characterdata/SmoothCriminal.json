@@ -19,7 +19,7 @@
   "JumpType": 1,
   "JumpHorizontalSpeed": 0.0,
   "CharacterSprites": {
-    "Idle": "sJay_SC_Idle_MOCKUP_strip8",
+    "Idle": "sSmoothCriminal_Idle",
     "Crouch": "sJay_SC_CrouchingIdle_mockup_strip1",
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
@@ -42,82 +42,1135 @@
   "BaseColor": {
     "UID": "930db45a-20ad-41c3-a127-bf670207c52d",
     "Name": "",
-    "NumberOfReplacableColors": 0,
-    "ColorPalette": []
+    "NumberOfReplacableColors": 16,
+    "ColorPalette": [
+      {
+        "Red": 0.9411765,
+        "Blue": 0.96862745,
+        "Green": 0.96862745
+      },
+      {
+        "Red": 0.72156864,
+        "Blue": 0.8784314,
+        "Green": 0.7882353
+      },
+      {
+        "Red": 0.49803922,
+        "Blue": 0.7294118,
+        "Green": 0.5764706
+      },
+      {
+        "Red": 0.3137255,
+        "Blue": 0.41960785,
+        "Green": 0.30588236
+      },
+      {
+        "Red": 0.14509805,
+        "Blue": 0.72156864,
+        "Green": 0.5019608
+      },
+      {
+        "Red": 0.07450981,
+        "Blue": 0.62352943,
+        "Green": 0.3372549
+      },
+      {
+        "Red": 0.21176471,
+        "Blue": 0.1882353,
+        "Green": 0.19607843
+      },
+      {
+        "Red": 0.101960786,
+        "Blue": 0.08627451,
+        "Green": 0.08627451
+      },
+      {
+        "Red": 0.43137255,
+        "Blue": 0.4392157,
+        "Green": 0.43529412
+      },
+      {
+        "Red": 0.32156864,
+        "Blue": 0.36078432,
+        "Green": 0.32156864
+      },
+      {
+        "Red": 0.1882353,
+        "Blue": 0.21176471,
+        "Green": 0.18039216
+      },
+      {
+        "Red": 0.92156863,
+        "Blue": 0.05882353,
+        "Green": 0.92156863
+      },
+      {
+        "Red": 1.0,
+        "Blue": 0.003921569,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 1.0,
+        "Green": 1.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 1.0
+      },
+      {
+        "Red": 1.0,
+        "Blue": 1.0,
+        "Green": 0.0
+      }
+    ]
   },
   "NumberOfPalettes": 12,
   "Palettes": [
     {
       "UID": "0000e62b-e5c1-4f2c-ae66-4991c0c5b7f7",
       "Name": "Default",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.49803922,
+          "Blue": 0.7294118,
+          "Green": 0.5764706
+        },
+        {
+          "Red": 0.3137255,
+          "Blue": 0.41960785,
+          "Green": 0.30588236
+        },
+        {
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.62352943,
+          "Green": 0.3372549
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.43137255,
+          "Blue": 0.4392157,
+          "Green": 0.43529412
+        },
+        {
+          "Red": 0.32156864,
+          "Blue": 0.36078432,
+          "Green": 0.32156864
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.21176471,
+          "Green": 0.18039216
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.62352943,
+          "Green": 0.3372549
+        }
+      ]
     },
     {
       "UID": "5b43dad0-97b6-482d-a414-0a22ca62735e",
-      "Name": "Blue",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "Zoot Suit Riot",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.105882354,
+          "Blue": 0.5647059,
+          "Green": 0.5882353
+        },
+        {
+          "Red": 0.050980393,
+          "Blue": 0.4117647,
+          "Green": 0.36078432
+        },
+        {
+          "Red": 0.019607844,
+          "Blue": 0.2784314,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.007843138,
+          "Blue": 0.23137255,
+          "Green": 0.09019608
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.43137255,
+          "Blue": 0.4392157,
+          "Green": 0.43529412
+        },
+        {
+          "Red": 0.32156864,
+          "Blue": 0.36078432,
+          "Green": 0.32156864
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.21176471,
+          "Green": 0.18039216
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.105882354,
+          "Blue": 0.5647059,
+          "Green": 0.5882353
+        },
+        {
+          "Red": 0.050980393,
+          "Blue": 0.4117647,
+          "Green": 0.36078432
+        },
+        {
+          "Red": 0.23921569,
+          "Blue": 0.28627452,
+          "Green": 0.6313726
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
+        }
+      ]
     },
     {
       "UID": "5104fd8c-fb22-4ddc-add2-01b8f646e55a",
-      "Name": "Perry",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "Agent P",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.12156863,
+          "Blue": 0.62352943,
+          "Green": 0.6431373
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.5882353,
+          "Green": 0.5058824
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.5019608,
+          "Green": 0.34509805
+        },
+        {
+          "Red": 0.15294118,
+          "Blue": 0.4509804,
+          "Green": 0.23137255
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
+        },
+        {
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.015686275,
+          "Green": 0.6117647
+        },
+        {
+          "Red": 0.74509805,
+          "Blue": 0.09803922,
+          "Green": 0.30588236
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.015686275,
+          "Green": 0.6117647
+        },
+        {
+          "Red": 0.74509805,
+          "Blue": 0.09803922,
+          "Green": 0.30588236
+        },
+        {
+          "Red": 0.61960787,
+          "Blue": 0.019607844,
+          "Green": 0.20784314
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.36078432,
+          "Blue": 0.20392157,
+          "Green": 0.16862746
+        },
+        {
+          "Red": 0.14901961,
+          "Blue": 0.011764706,
+          "Green": 0.06666667
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
     },
     {
       "UID": "f879e898-6977-46ab-9a38-e4a986d5fa6b",
       "Name": "Hazama",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.23137255,
+          "Blue": 0.19607843,
+          "Green": 0.1882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.05882353,
+          "Blue": 0.011764706,
+          "Green": 0.011764706
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
+        },
+        {
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.54509807,
+          "Blue": 0.7058824,
+          "Green": 0.60784316
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.43137255,
+          "Blue": 0.4392157,
+          "Green": 0.43529412
+        },
+        {
+          "Red": 0.32156864,
+          "Blue": 0.36078432,
+          "Green": 0.32156864
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.21176471,
+          "Green": 0.18039216
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.19607843,
+          "Green": 0.1882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
     },
     {
       "UID": "dd4efd5c-96df-46d7-b29d-865a06e2d9f1",
-      "Name": "Red",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "The Mask",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.92941177,
+          "Blue": 0.14117648,
+          "Green": 0.8509804
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
+        },
+        {
+          "Red": 0.3372549,
+          "Blue": 0.16078432,
+          "Green": 0.24313726
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.54901963,
+          "Blue": 0.29803923,
+          "Green": 0.7294118
+        },
+        {
+          "Red": 0.29411766,
+          "Blue": 0.2,
+          "Green": 0.6392157
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.101960786,
+          "Green": 0.47843137
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.14117648,
+          "Green": 0.8509804
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
     },
     {
       "UID": "40e27178-4e55-4420-8394-1df4afd4cf6f",
-      "Name": "Green",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "Inspector Gadget",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.48235294,
+          "Blue": 0.49019608,
+          "Green": 0.48235294
+        },
+        {
+          "Red": 0.38039216,
+          "Blue": 0.40392157,
+          "Green": 0.3529412
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.23529412,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.11372549,
+          "Blue": 0.09411765,
+          "Green": 0.105882354
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.6117647,
+          "Green": 0.79607844
+        },
+        {
+          "Red": 1.0,
+          "Blue": 0.39215687,
+          "Green": 0.5372549
+        },
+        {
+          "Red": 0.67058825,
+          "Blue": 0.3137255,
+          "Green": 0.4862745
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.48235294,
+          "Blue": 0.49019608,
+          "Green": 0.48235294
+        },
+        {
+          "Red": 0.38039216,
+          "Blue": 0.40392157,
+          "Green": 0.3529412
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        }
+      ]
     },
     {
       "UID": "a720851a-985e-46c9-9023-397ff43405f5",
       "Name": "Star Platinum",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.5176471,
+          "Blue": 0.69803923,
+          "Green": 0.3529412
+        },
+        {
+          "Red": 0.36862746,
+          "Blue": 0.6039216,
+          "Green": 0.26666668
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.5568628,
+          "Green": 0.13725491
+        },
+        {
+          "Red": 0.08235294,
+          "Blue": 0.41960785,
+          "Green": 0.05882353
+        },
+        {
+          "Red": 0.8901961,
+          "Blue": 0.8901961,
+          "Green": 0.41960785
+        },
+        {
+          "Red": 0.6862745,
+          "Blue": 0.7294118,
+          "Green": 0.29803923
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.5176471,
+          "Blue": 0.69803923,
+          "Green": 0.3529412
+        },
+        {
+          "Red": 0.36862746,
+          "Blue": 0.6039216,
+          "Green": 0.26666668
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.5568628,
+          "Green": 0.13725491
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.5176471,
+          "Blue": 0.69803923,
+          "Green": 0.3529412
+        },
+        {
+          "Red": 0.36862746,
+          "Blue": 0.6039216,
+          "Green": 0.26666668
+        },
+        {
+          "Red": 0.8901961,
+          "Blue": 0.8901961,
+          "Green": 0.41960785
+        },
+        {
+          "Red": 0.6862745,
+          "Blue": 0.7294118,
+          "Green": 0.29803923
+        }
+      ]
     },
     {
       "UID": "c467f04b-65d0-4fe0-9618-ff6251dd6f78",
       "Name": "Fedora Vergil",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.14117648,
+          "Blue": 0.54901963,
+          "Green": 0.3882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.3254902,
+          "Green": 0.20784314
+        },
+        {
+          "Red": 0.019607844,
+          "Blue": 0.06666667,
+          "Green": 0.003921569
+        },
+        {
+          "Red": 0.039215688,
+          "Blue": 0.05490196,
+          "Green": 0.02745098
+        },
+        {
+          "Red": 0.10980392,
+          "Blue": 0.19215687,
+          "Green": 0.105882354
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.12941177,
+          "Green": 0.078431375
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.43137255,
+          "Blue": 0.4392157,
+          "Green": 0.43529412
+        },
+        {
+          "Red": 0.32156864,
+          "Blue": 0.36078432,
+          "Green": 0.32156864
+        },
+        {
+          "Red": 0.1882353,
+          "Blue": 0.21176471,
+          "Green": 0.18039216
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.14117648,
+          "Blue": 0.54901963,
+          "Green": 0.3882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.3254902,
+          "Green": 0.20784314
+        },
+        {
+          "Red": 0.10980392,
+          "Blue": 0.19215687,
+          "Green": 0.105882354
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.12941177,
+          "Green": 0.078431375
+        }
+      ]
     },
     {
       "UID": "936590dd-fe76-490c-9bd1-b90f7d7bec8d",
-      "Name": "Doppelganger",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "Q",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.9529412,
+          "Blue": 0.654902,
+          "Green": 0.827451
+        },
+        {
+          "Red": 0.76862746,
+          "Blue": 0.5254902,
+          "Green": 0.627451
+        },
+        {
+          "Red": 0.654902,
+          "Blue": 0.40784314,
+          "Green": 0.47843137
+        },
+        {
+          "Red": 0.5019608,
+          "Blue": 0.18431373,
+          "Green": 0.24313726
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.5686275,
+          "Blue": 0.5803922,
+          "Green": 0.57254905
+        },
+        {
+          "Red": 0.43529412,
+          "Blue": 0.49019608,
+          "Green": 0.43529412
+        },
+        {
+          "Red": 0.24705882,
+          "Blue": 0.2784314,
+          "Green": 0.23921569
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.9529412,
+          "Blue": 0.654902,
+          "Green": 0.827451
+        },
+        {
+          "Red": 0.76862746,
+          "Blue": 0.5254902,
+          "Green": 0.627451
+        },
+        {
+          "Red": 0.8666667,
+          "Blue": 0.23529412,
+          "Green": 0.21568628
+        },
+        {
+          "Red": 0.6901961,
+          "Blue": 0.20784314,
+          "Green": 0.1254902
+        }
+      ]
     },
     {
       "UID": "2a9b0394-03ed-4c2c-a423-2496fc2ff1d6",
       "Name": "Gold Experience",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.8509804,
+          "Blue": 0.1882353,
+          "Green": 0.6745098
+        },
+        {
+          "Red": 0.6392157,
+          "Blue": 0.09411765,
+          "Green": 0.34901962
+        },
+        {
+          "Red": 0.56078434,
+          "Blue": 0.039215688,
+          "Green": 0.20392157
+        },
+        {
+          "Red": 0.49019608,
+          "Blue": 0.015686275,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.23921569,
+          "Blue": 0.28627452,
+          "Green": 0.6313726
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
+        },
+        {
+          "Red": 0.8509804,
+          "Blue": 0.1882353,
+          "Green": 0.6745098
+        },
+        {
+          "Red": 0.6392157,
+          "Blue": 0.09411765,
+          "Green": 0.34901962
+        },
+        {
+          "Red": 0.8509804,
+          "Blue": 0.1882353,
+          "Green": 0.6745098
+        },
+        {
+          "Red": 0.69803923,
+          "Blue": 0.8352941,
+          "Green": 0.77254903
+        },
+        {
+          "Red": 0.56078434,
+          "Blue": 0.039215688,
+          "Green": 0.20392157
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.05882353,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.8509804,
+          "Blue": 0.1882353,
+          "Green": 0.6745098
+        },
+        {
+          "Red": 0.6392157,
+          "Blue": 0.09411765,
+          "Green": 0.34901962
+        },
+        {
+          "Red": 0.23921569,
+          "Blue": 0.28627452,
+          "Green": 0.6313726
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
+        }
+      ]
     },
     {
       "UID": "e83c9b05-d279-4a5a-8bb4-7ab9eac3b7ac",
       "Name": "Blue Eyes White Dragon",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.49803922,
+          "Blue": 0.7294118,
+          "Green": 0.5764706
+        },
+        {
+          "Red": 0.3137255,
+          "Blue": 0.41960785,
+          "Green": 0.30588236
+        },
+        {
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.62352943,
+          "Green": 0.3372549
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.49803922,
+          "Blue": 0.7294118,
+          "Green": 0.5764706
+        },
+        {
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
+        },
+        {
+          "Red": 0.9411765,
+          "Blue": 0.96862745,
+          "Green": 0.96862745
+        },
+        {
+          "Red": 0.72156864,
+          "Blue": 0.8784314,
+          "Green": 0.7882353
+        },
+        {
+          "Red": 0.14509805,
+          "Blue": 0.72156864,
+          "Green": 0.5019608
+        },
+        {
+          "Red": 0.07450981,
+          "Blue": 0.62352943,
+          "Green": 0.3372549
+        }
+      ]
     },
     {
       "UID": "105e6cd8-f692-4d34-b1f9-4842a3f6fae0",
-      "Name": "Pikachu",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "Name": "Fernandez",
+      "NumberOfReplacableColors": 16,
+      "ColorPalette": [
+        {
+          "Red": 0.23137255,
+          "Blue": 0.19607843,
+          "Green": 0.1882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.85490197,
+          "Blue": 0.92941177,
+          "Green": 0.16862746
+        },
+        {
+          "Red": 0.8666667,
+          "Blue": 0.23529412,
+          "Green": 0.21568628
+        },
+        {
+          "Red": 0.6901961,
+          "Blue": 0.20784314,
+          "Green": 0.1254902
+        },
+        {
+          "Red": 0.21176471,
+          "Blue": 0.1882353,
+          "Green": 0.19607843
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.19607843,
+          "Green": 0.1882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 1.0,
+          "Green": 1.0
+        },
+        {
+          "Red": 0.23137255,
+          "Blue": 0.19607843,
+          "Green": 0.1882353
+        },
+        {
+          "Red": 0.101960786,
+          "Blue": 0.08627451,
+          "Green": 0.08627451
+        },
+        {
+          "Red": 0.8666667,
+          "Blue": 0.23529412,
+          "Green": 0.21568628
+        },
+        {
+          "Red": 0.6901961,
+          "Blue": 0.20784314,
+          "Green": 0.1254902
+        }
+      ]
     }
   ],
   "MoveData": [
@@ -4056,6 +5109,619 @@
         "JumpType": 0,
         "SpiritInstall": false
       }
+    },
+    {
+      "UID": "535e3ba8-0b9d-458a-bda4-2802ba975c12",
+      "MoveType": 524288,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_SC_StandMedium_MOCKUP_strip6",
+      "Duration": 12,
+      "NumberOfFrames": 0,
+      "FrameData": [],
+      "NumberOfHitboxes": 0,
+      "AttackData": [],
+      "CounterData": [],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
+      }
+    },
+    {
+      "UID": "43c688e7-6aaf-44b5-a821-e6494b2adcca",
+      "MoveType": 4,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sRussel_Grab",
+      "Duration": 24,
+      "NumberOfFrames": 6,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 5
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 5,
+          "Lifetime": 4,
+          "AttackWidth": 18,
+          "AttackHeight": 20,
+          "WidthOffset": 0,
+          "HeightOffset": 0,
+          "Group": 1,
+          "Damage": 0,
+          "MeterGain": 0.0,
+          "ComboScaling": 0.0,
+          "AttackHitStop": 0,
+          "AttackHitStun": 0,
+          "AttackType": 3,
+          "BlockStun": 0.0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": 0.0,
+          "AirKnockbackHorizontal": 0.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 10,
+          "ParticleEffect": "sGrabEffect",
+          "ParticleDuration": 15,
+          "HoldXOffset": 20,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 0,
+          "Group": 0,
+          "Damage": 0,
+          "MeterGain": 0.0,
+          "ComboScaling": 0.0,
+          "AttackHitStop": 0,
+          "AttackHitStun": 0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": 0.0,
+          "AirKnockbackHorizontal": 0.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "",
+          "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": ""
+        }
+      ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": false,
+      "OpponentPositionData": {
+        "DistanceFromWall": 0.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 0,
+        "Frames": []
+      },
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 26,
+          "AttackWidth": 20,
+          "AttackHeight": 30,
+          "WidthOffset": -8,
+          "HeightOffset": 0
+        }
+      ],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
+      }
+    },
+    {
+      "UID": "0da1d110-3749-414a-8ace-97b7c2d7dd2e",
+      "MoveType": 2,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_SC_CrouchingHeavy_MOCKUP_strip6",
+      "Duration": 30,
+      "NumberOfFrames": 6,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 6,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 5
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 12,
+          "Lifetime": 4,
+          "AttackWidth": 20,
+          "AttackHeight": 45,
+          "WidthOffset": 0,
+          "HeightOffset": 0,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 8.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 18,
+          "AttackHitStun": 10,
+          "AttackType": 1,
+          "BlockStun": 5.0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": -4.0,
+          "AirKnockbackHorizontal": 1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -4.0,
+          "LaunchKnockbackHorizontal": 1.0,
+          "GravityScaling": 3.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 30,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 0,
+          "Group": 0,
+          "Damage": 0,
+          "MeterGain": 0.0,
+          "ComboScaling": 0.0,
+          "AttackHitStop": 0,
+          "AttackHitStun": 0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": 0.0,
+          "AirKnockbackHorizontal": 0.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "",
+          "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": ""
+        }
+      ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": true,
+      "OpponentPositionData": {
+        "DistanceFromWall": 50.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 1,
+        "Frames": [
+          {
+            "Frame": 1,
+            "RelativeX": 20,
+            "RelativeY": 0,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 0,
+            "XScale": -1
+          }
+        ]
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
+      }
+    },
+    {
+      "UID": "5d481e1f-a02b-4ba5-bb7d-c04495a6338c",
+      "MoveType": 1,
+      "MoveCanCancelInto": 0,
+      "EnhanceMoveType": 0,
+      "EnhanceMoveCanCancelInto": 0,
+      "InMovesets": [],
+      "SwitchMoveset": false,
+      "SwitchToMoveset": 0,
+      "SpriteName": "sJay_SC_DownSpecial1_MOCKUP_strip3",
+      "Duration": 58,
+      "NumberOfFrames": 6,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 2
+        }
+      ],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 20,
+          "Lifetime": 4,
+          "AttackWidth": 20,
+          "AttackHeight": 20,
+          "WidthOffset": 0,
+          "HeightOffset": 30,
+          "Group": 1,
+          "Damage": 10,
+          "MeterGain": 8.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 20,
+          "AttackHitStun": 10,
+          "AttackType": 1,
+          "BlockStun": 2.0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": -3.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -2.0,
+          "LaunchKnockbackHorizontal": -3.0,
+          "GravityScaling": 3.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 30,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 0,
+          "Group": 0,
+          "Damage": 0,
+          "MeterGain": 0.0,
+          "ComboScaling": 0.0,
+          "AttackHitStop": 0,
+          "AttackHitStun": 0,
+          "KnockBack": 0.0,
+          "AirKnockbackVertical": 0.0,
+          "AirKnockbackHorizontal": 0.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
+          "GravityScaling": 0.0,
+          "Pushback": 0.0,
+          "ParticleXOffset": 0,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "",
+          "ParticleDuration": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": ""
+        }
+      ],
+      "CommandNormalData": {
+        "NumpadDirection": 0,
+        "Button": 1,
+        "GroundOrAir": false,
+        "CancelWhenLanding": false
+      },
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
+      "IsThrow": true,
+      "OpponentPositionData": {
+        "DistanceFromWall": -40.0,
+        "ThrowOffset": 0,
+        "NumberOfFrames": 1,
+        "Frames": [
+          {
+            "Frame": 1,
+            "RelativeX": 20,
+            "RelativeY": -30,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 0,
+            "XScale": -1
+          }
+        ]
+      },
+      "NumberOfHurtboxes": 0,
+      "HurtboxData": [],
+      "NumberOfProjectiles": 0,
+      "ProjectileData": [],
+      "RehitData": {
+        "HitBox": 0,
+        "NumberOfHits": 0,
+        "HitOnFrames": []
+      },
+      "GroundMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "AirMovementData": {
+        "NumberOfWindows": 0,
+        "Windows": [],
+        "GravityScale": 0.0,
+        "FallScale": 0.0
+      },
+      "UseMoveScript": false,
+      "SupplementaryMoveScript": "",
+      "NumberOfSounds": 0,
+      "MoveSoundData": [],
+      "SpiritData": {
+        "ToggleState": false,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
+        "StartYOffset": 0,
+        "SummonSpirit": false,
+        "ReturnToPlayer": false,
+        "MaintainPosition": false,
+        "Vulnerable": false,
+        "OnlyInSpiritOff": false
+      },
+      "SuperData": {
+        "Type": 0,
+        "ScreenFreezeTime": 0,
+        "InvincibilityFrames": 0,
+        "FinalBlowKO": false,
+        "Duration": 0,
+        "IncreaseAttackBy": 0.0,
+        "IncreaseSpeedBy": 0.0,
+        "JumpType": 0,
+        "SpiritInstall": false
+      }
     }
   ],
   "UniqueData": {
@@ -4077,6 +5743,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2024-06-03T13:34:23.1389612-07:00",
+  "LastModified": "2024-09-26T18:59:44.8518101-07:00",
   "LastModifiedBy": "creep"
 }

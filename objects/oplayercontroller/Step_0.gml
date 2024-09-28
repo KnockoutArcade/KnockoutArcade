@@ -192,6 +192,7 @@ if (canRun)
 		else if (movedir == -image_xscale)
 		{
 			runningBackward = true;
+			runningForward = false;
 		}
 		holdRunButtonTimer++;
 	}
@@ -221,11 +222,13 @@ if (canRun)
 			if (runBackwardTimer < 15)
 			{
 				runningBackward = true;
+				runningForward = false;
 			}
 		}
 		holdBackwardTimer++;
 		holdForwardTimer = 0;
 		runForwardTimer = 16;
+		runningForward = false;
 	}
 	else if ((!runButton && movedir == 0))
 	{
@@ -380,25 +383,7 @@ else
 // Calculate Traction
 if (hitstun < 1 && blockstun < 1 && state != eState.HITSTOP && grounded && state != eState.JUMPSQUAT && state != eState.HOLD && state != eState.FORWARD_THROW && state != eState.BEING_GRABBED && state != eState.BACKWARD_THROW)
 {
-	// TEMPORARY!!!
-	if (selectedCharacter.Name == "Beverly" && state == eState.RUN_BACKWARD)
-	{
-		traction = 0.1;
-	}
-	else if (selectedCharacter.Name == "Beverly")
-	{
-		traction = selectedCharacter.Traction;
-	}
-	// TEMPORARY!!
-	
-	if (abs(hsp) - traction >= 0)
-	{
-		hsp += traction * -sign(hsp);
-	}
-	else
-	{
-		hsp = 0;
-	}
+	HandleTraction();
 }
 
 // Calculate Meter Gain
@@ -509,22 +494,26 @@ if (state == eState.IDLE)
 	if (movedir == image_xscale && !runningForward) 
 	{
 		state = eState.WALKING;
+		image_index = 0;
 	} 
 	else if (movedir == -image_xscale)
 	{
 		state = eState.WALKING;
 		canBlock = true;
+		image_index = 0;
 	}
 	
 	if ((movedir == image_xscale || movedir == 0) && runningForward)
 	{
 		state = eState.RUN_FORWARD;
+		image_index = 0;
 		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
+		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
@@ -600,12 +589,14 @@ if (state == eState.CROUCHING)
 	if ((movedir == image_xscale || movedir == 0) && runningForward && verticalMoveDir != -1)
 	{
 		state = eState.RUN_FORWARD;
+		image_index = 0;
 		animTimer = 0;
 		audio_play_sound(initialDashSFX, 0, false);
 	}
 	else if (movedir == -image_xscale && runningBackward && verticalMoveDir != -1 && opponent != noone)
 	{
 		state = eState.RUN_BACKWARD;
+		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
 	}
@@ -1006,12 +997,14 @@ switch state
 		if ((movedir == image_xscale || movedir == 0) && runningForward)
 		{
 			state = eState.RUN_FORWARD;
+			image_index = 0;
 			animTimer = 0;
 			audio_play_sound(initialDashSFX, 0, false);
 		}
 		else if (movedir == -image_xscale && runningBackward && opponent != noone) // Disable dashback if we aren't in a 1v1
 		{
 			state = eState.RUN_BACKWARD;
+			animTimer = 0;
 			sprite_index = CharacterSprites.runBackward_Sprite;
 			image_index = 0;
 		}
@@ -1064,104 +1057,218 @@ switch state
 	
 	case eState.RUN_FORWARD: 
 	{
-		cancelable = false;
-		grounded = true;
-		canTurnAround = false;
-		isShortHopping = false;
-		isSuperJumping = false;
-		hasSpentDoubleJump = false;
-		invincible = false;
-		inAttackState = false;
-		canBlock = false;
-		
-		// Reset charge values
-		downUpChargeTimer = 0;
-		chargePartitionTimer = 0;
-		
-		sprite_index = CharacterSprites.runForward_Sprite;
-		if (!timeStopActivated && !installActivated)
+		if (selectedCharacter.Name != "Jay")
 		{
-			superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
-		}
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			invincible = false;
+			inAttackState = false;
+			canBlock = false;
 		
-		if (movedir == -image_xscale) // if we press back, then go back to walking state
-		{
-			state = eState.WALKING;
-			sprite_index = CharacterSprites.walkBackward_Sprite;
-			canBlock = true;
-		}
-
-		image_speed = 1;
+			// Reset charge values
+			downUpChargeTimer = 0;
+			chargePartitionTimer = 0;
 		
-		hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
-		vsp += fallSpeed;
-
-		if (!runningForward) 
-		{
-			state = eState.IDLE;
-		}
-		
-		// Handle Jumping And Crouching
-		if verticalMoveDir == 1 
-		{
-			state = eState.JUMPSQUAT;
-			jumpHsp = hsp;
-			animTimer = 0;
-			
-			// Is the player jumping forward?
-			if (movedir != -image_xscale) 
+			sprite_index = CharacterSprites.runForward_Sprite;
+			if (!timeStopActivated && !installActivated)
 			{
-				isJumpingForward = true;
+				superMeter += meterBuildRate * 1.5 * meterPenalty; // Running forwards builds more meter
 			}
-			else 
+		
+			if (movedir == -image_xscale) // if we press back, then go back to walking state
 			{
-				isJumpingForward = false;
-				hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+				state = eState.WALKING;
+				sprite_index = CharacterSprites.walkBackward_Sprite;
+				canBlock = true;
+			}
+
+			image_speed = 1;
+		
+			hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
+			vsp += fallSpeed;
+
+			if (!runningForward) 
+			{
+				state = eState.IDLE;
+			}
+		
+			// Handle Jumping And Crouching
+			if verticalMoveDir == 1 
+			{
+				state = eState.JUMPSQUAT;
 				jumpHsp = hsp;
-			}
+				animTimer = 0;
 			
-			// handle Super Jumping
-			if (storedSuperJump)
+				// Is the player jumping forward?
+				if (movedir != -image_xscale) 
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+					hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+					jumpHsp = hsp;
+				}
+			
+				// handle Super Jumping
+				if (storedSuperJump)
+				{
+					isSuperJumping = true;
+					storedSuperJump = false;
+				}
+			} 
+			else if (verticalMoveDir == -1)
 			{
-				isSuperJumping = true;
-				storedSuperJump = false;
+				state = eState.CROUCHING;
 			}
-		} 
-		else if (verticalMoveDir == -1)
-		{
-			state = eState.CROUCHING;
-		}
 
 		
-		// Handle Spawning Dash Particles
-		// spawn a dash particle every 5 frames, and on the 1st frame of dashing
-		if (animTimer == 1 || animTimer mod 5 == 0)
-		{
-			var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
-			with (dashParticle) 
+			// Handle Spawning Dash Particles
+			// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+			if (animTimer == 1 || animTimer mod 5 == 0)
 			{
-				sprite_index = sDashParticle;
-				image_index = 0;
-				image_xscale = other.image_xscale;
-				lifetime = 15;
-				depth -= 1;
+				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (dashParticle) 
+				{
+					sprite_index = sDashParticle;
+					image_index = 0;
+					image_xscale = other.image_xscale;
+					lifetime = 15;
+					depth -= 1;
+				}
 			}
+		
+			// Handle Running Sound Effects
+			for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
+			{
+				if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
+				{
+					audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
+				}
+			}
+		
+			previousWalkFrame = floor(image_index);
+		
+			PressAttackButton(attack);
+		
+			HandleWalkingOffPlatforms(false);
+		}
+		else
+		{
+			cancelable = false;
+			grounded = true;
+			canTurnAround = false;
+			isShortHopping = false;
+			isSuperJumping = false;
+			hasSpentDoubleJump = false;
+			invincible = false;
+			inAttackState = false;
+			canBlock = false;
+		
+			// Reset charge values
+			downUpChargeTimer = 0;
+			chargePartitionTimer = 0;
+			
+			sprite_index = CharacterSprites.runForward_Sprite;
+			if (!timeStopActivated && !installActivated)
+			{
+				superMeter += meterBuildRate * 1.5; // Running forwards builds more meter
+			}
+
+			image_speed = 1;
+			
+			// Set the dash momentum
+			if (animTimer == 5)
+			{
+				var JayDashMomentum = 5;
+				
+				hsp = (JayDashMomentum + (speedBonus / 100 * JayDashMomentum)) * image_xscale;
+			}
+			
+			if (animTimer >= 25) 
+			{
+				if (!runningForward)
+				{
+					state = eState.IDLE;
+				}
+				else
+				{
+					animTimer = 0;
+					image_index = 0;
+				}
+			}
+			
+			vsp += fallSpeed;
+			
+			// Handle Jumping And Crouching
+			if verticalMoveDir == 1 
+			{
+				state = eState.JUMPSQUAT;
+				
+				// Speed Cap + jumping during startup
+				if (animTimer < 5)
+				{
+					hsp = runSpeed * image_xscale;
+				}
+				if (abs(hsp) > runSpeed)
+				{
+					hsp = sign(hsp) * runSpeed;
+				}
+				
+				jumpHsp = hsp;
+				animTimer = 0;
+			
+				// Is the player jumping forward?
+				if (movedir != -image_xscale) 
+				{
+					isJumpingForward = true;
+				}
+				else 
+				{
+					isJumpingForward = false;
+					hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
+					jumpHsp = hsp;
+				}
+			
+				// handle Super Jumping
+				if (storedSuperJump)
+				{
+					isSuperJumping = true;
+					storedSuperJump = false;
+				}
+			} 
+			else if (verticalMoveDir == -1)
+			{
+				state = eState.CROUCHING;
+				hsp = hsp * 0.8;
+			}
+			
+			// Handle Spawning Dash Particles
+			// spawn a dash particle on the 5th frame of dashing
+			if (animTimer == 5)
+			{
+				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
+				with (dashParticle) 
+				{
+					sprite_index = sDashParticle;
+					image_index = 0;
+					image_xscale = other.image_xscale;
+					lifetime = 15;
+					depth -= 1;
+				}
+			}
+			
+			PressAttackButton(attack);
+		
+			HandleWalkingOffPlatforms(false);
+			
 		}
 		
-		// Handle Running Sound Effects
-		for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
-		{
-			if (floor(image_index) == (RunForwardFootsteps[i] - 1) && previousWalkFrame != floor(image_index))
-			{
-				audio_play_sound(asset_get_index(RunningSoundEffect), 1, false);
-			}
-		}
-		
-		previousWalkFrame = floor(image_index);
-		
-		PressAttackButton(attack);
-		
-		HandleWalkingOffPlatforms(false);
 	}
 	break;
 	
@@ -1234,7 +1341,6 @@ switch state
 			invincible = false;
 		}
 		
-
 		HandleWalkingOffPlatforms(false);
 	}
 	break;
@@ -1272,6 +1378,7 @@ switch state
 			grounded = false;
 			jumpAttackBuffer = 0;
 			animTimer = 0;
+			image_index = 0;
 			
 			// Handle spawning jump particle
 			// Spawn a jump particle once the player leaves the ground
@@ -1347,7 +1454,7 @@ switch state
 		
 		if (isJumpingForward)
 		{
-			superMeter += meterBuildRate;
+			superMeter += meterBuildRate * meterPenalty;
 		}
 		
 		// update movement
@@ -1760,6 +1867,7 @@ switch state
 	
 	case eState.ENHANCED_NEUTRAL_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
@@ -1775,6 +1883,7 @@ switch state
 	
 	case eState.ENHANCED_SIDE_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
@@ -1790,6 +1899,7 @@ switch state
 	
 	case eState.ENHANCED_UP_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
@@ -1805,6 +1915,7 @@ switch state
 	
 	case eState.ENHANCED_DOWN_SPECIAL_2: 
 	{
+		invincible = false;
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
@@ -1820,6 +1931,7 @@ switch state
 
 	case eState.REKKA_LAUNCHER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1836,6 +1948,7 @@ switch state
 	
 	case eState.REKKA_FINISHER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1852,6 +1965,7 @@ switch state
 	
 	case eState.REKKA_CONNECTER: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1868,6 +1982,7 @@ switch state
 	
 	case eState.REKKA_LOW: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1884,6 +1999,7 @@ switch state
 	
 	case eState.REKKA_HIGH: 
 	{
+		invincible = false;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -1947,7 +2063,7 @@ switch state
 			SpeedTrail(0.6, 0.06, 5);
 		}
 		
-		
+		hasUsedMeter = true;
 		cancelOnLanding = false;
 		if (grounded)
 		{
@@ -2031,6 +2147,7 @@ switch state
 		hurtbox.image_xscale = 16;
 		hurtbox.image_yscale = 25;
 		hurtboxXOffset = -7;
+		invincible = false;
 		
 		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
 		
@@ -2043,11 +2160,12 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canBlock = false;
+		invincible = true;
 		
 		sprite_index = CharacterSprites.hold_Sprite;
 		
 		// Transition to a throw
-		if (animTimer > 4)
+		if (animTimer > 4 && !spiritON)
 		{
 			if (movedir != -image_xscale)
 			{
@@ -2144,10 +2262,26 @@ switch state
 		
 		PerformAttack(selectedCharacter.ForwardThrow, false);
 		
+		// If the spirit is active, make the spirit perform the move
+		if (spiritON && spiritObject != noone)
+		{
+			with (spiritObject)
+			{
+				animTimer = other.animTimer;
+				
+				PerformAttack(selectedCharacter.ForwardThrow, true);
+			}
+		}
+		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
+			
+			if (spiritON && spiritObject != noone)
+			{
+				spiritObject.hsp = 0;
+			}
 		}
 
 		if (animTimer > 42)
@@ -2155,7 +2289,11 @@ switch state
 			state = eState.IDLE;
 			frameAdvantage = true;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			
+			if (!spiritON)
+			{
+				x += selectedCharacter.ForwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			}
 		}
 	}
 	break;
@@ -2171,10 +2309,26 @@ switch state
 		
 		PerformAttack(selectedCharacter.BackwardThrow, false);
 		
+		// If the spirit is active, make the spirit perform the move
+		if (spiritON && spiritObject != noone)
+		{
+			with (spiritObject)
+			{
+				animTimer = other.animTimer;
+				
+				PerformAttack(selectedCharacter.BackwardThrow, true);
+			}
+		}
+		
 		// Set our hsp to 0 if we are on the first active frame of the move
 		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
+			
+			if (spiritON && spiritObject != noone)
+			{
+				spiritObject.hsp = 0;
+			}
 		}
 		
 		if (animTimer > 58)
@@ -2184,7 +2338,11 @@ switch state
 			canTurnAround = true;
 			inAttackState = false;
 			sprite_index = CharacterSprites.idle_Sprite;
-			x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			
+			if (!spiritON)
+			{
+				x += selectedCharacter.BackwardThrow.OpponentPositionData.ThrowOffset * image_xscale;
+			}
 		}
 	}
 	break;
@@ -2198,6 +2356,7 @@ switch state
 		
 		grounded = true;
 		inAttackState = false;
+		canTurnAround = false;
 		canBlock = true;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
@@ -2207,6 +2366,7 @@ switch state
 		{
 			state = eState.IDLE;
 			hsp = 0;
+			canTurnAround = true;
 		}
 	}
 	break;
@@ -2421,18 +2581,50 @@ switch state
 			hsp = -3 * image_xscale;
 		}
 		
+		// End i-frames
 		if (animTimer > 20)
 		{
 			invincible = false;
 		}
 		
+		// Buffer a player's inputs
+		if (animTimer >= (24 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
+		// Transition into other state
 		if (animTimer > 24)
 		{
-			state = eState.IDLE;
-			image_index = 0;
-			sprite_index = CharacterSprites.idle_Sprite;
 			image_speed = 1;
+			image_index = 0;
 			animTimer = 0;
+			
+			// Turn the player arround immediately
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered " + string(getupBufferAttack));
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+				sprite_index = CharacterSprites.idle_Sprite;
+			}
 		}
 	}
 	break;
@@ -2454,6 +2646,12 @@ switch state
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
+		// Buffer a player's inputs
+		if (animTimer >= (30 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
 		if (animTimer > 30)
 		{
 			// Turn the player arround immediately
@@ -2469,25 +2667,35 @@ switch state
 				}
 			}	
 			
-			state = eState.IDLE;
-			invincible = false;
-			
-			if (movedir == -image_xscale || toggleIdleBlock) 
-			{
-				canBlock = true;
-			}
-			
-			if (movedir == -image_xscale && runButton)
-			{
-				canBlock = false;
-				state = eState.RUN_BACKWARD;
-				sprite_index = CharacterSprites.runBackward_Sprite;
-				image_index = 0;
-				
-				invincible = true;
-			}
-			
 			animTimer = 0;
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered " + string(getupBufferAttack));
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+			
+				if (movedir == -image_xscale || toggleIdleBlock) 
+				{
+					canBlock = true;
+				}
+			
+				if (movedir == -image_xscale && runButton)
+				{
+					canBlock = false;
+					state = eState.RUN_BACKWARD;
+					animTimer = 0;
+					sprite_index = CharacterSprites.runBackward_Sprite;
+					image_index = 0;
+				
+					invincible = true;
+				}
+			}
 		}
 		
 	}
@@ -2510,6 +2718,12 @@ switch state
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
+		// Buffer a player's inputs
+		if (animTimer >= (20 - getupBufferAmount) && attack != 0)
+		{
+			getupBufferAttack = attack;
+		}
+		
 		if (animTimer > 20)
 		{
 			// Turn the player arround immediately
@@ -2525,25 +2739,35 @@ switch state
 				}
 			}	
 			
-			state = eState.IDLE;
-			invincible = false;
-			
-			if (movedir == -image_xscale || toggleIdleBlock) 
-			{
-				canBlock = true;
-			}
-			
-			if (movedir == -image_xscale && runButton)
-			{
-				canBlock = false;
-				state = eState.RUN_BACKWARD;
-				sprite_index = CharacterSprites.runBackward_Sprite;
-				image_index = 0;
-				
-				invincible = true;
-			}
-			
 			animTimer = 0;
+			
+			// Execute buffered attack
+			if (getupBufferAttack != 0)
+			{
+				PressAttackButton(getupBufferAttack);
+				show_debug_message("attack buffered " + string(getupBufferAttack));
+				getupBufferAttack = 0;
+			}
+			else
+			{
+				state = eState.IDLE;
+				
+				if (movedir == -image_xscale || toggleIdleBlock) 
+				{
+					canBlock = true;
+				}
+			
+				if (movedir == -image_xscale && runButton)
+				{
+					canBlock = false;
+					state = eState.RUN_BACKWARD;
+					animTimer = 0;
+					sprite_index = CharacterSprites.runBackward_Sprite;
+					image_index = 0;
+				
+					invincible = true;
+				}
+			}
 		}
 	}
 	break;
@@ -2851,8 +3075,7 @@ else
 	{
 		prevState = state;
 	}
-	xHome = x;
-	yHome = y;
+	
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
@@ -2882,8 +3105,7 @@ if (spirit != noone)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 	}
-	if (!spiritState && spiritObject == noone && spiritCurrentHealth < spiritMaxHealth
-		 && state != eState.SCREEN_FREEZE)
+	if (!spiritON && spiritCurrentHealth < spiritMaxHealth && state != eState.SCREEN_FREEZE)
 	{
 		if (!spiritBroken)
 		{
@@ -2894,7 +3116,7 @@ if (spirit != noone)
 			spiritCurrentHealth += spiritKORegenSpeed;
 		}
 	}
-	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth)
+	if (spiritBroken && spiritCurrentHealth >= spiritMaxHealth && !inAttackState)
 	{
 		spiritCurrentHealth = spiritMaxHealth;
 		spiritBroken = false;
@@ -3039,7 +3261,9 @@ if (installActivated && state != eState.SCREEN_FREEZE)
 		if (spiritInstall)
 		{
 			spiritInstall = false;
-			spiritState = false;
+			spiritON = false;
+			
+			DeactivateSpirit(false);
 		}
 	}
 	else
@@ -3121,10 +3345,16 @@ if (opponent != noone && !wallHit)
 	// Check to see if players are about to be touching
 	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && state != eState.TECH_ROLL && opponent.state != eState.TECH_ROLL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
-		hsp *= .75; // Reduce player speed
+		if (state != eState.HITSTOP)
+		{
+			hsp *= .75; // Reduce player speed
+		}
 		var origanalX = opponent.x; // Keep track of the opponent's x position before calculations
 		// Simulate the opponent moving forwards
-		opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		if (opponent.state != eState.HITSTOP) 
+		{
+			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
+		}
 		// While the players are still touching
 		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
 		{
@@ -3215,9 +3445,10 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		x += sign(hsp+environmentDisplacement);
 	}
 	
-	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing)
+	if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && wallBouncing && !hasUsedWallBounce)
 	{
 		wallHit = true;
+		hasUsedWallBounce = true;
 		hitstop = 20;
 		state = eState.LAUNCHED;
 		sprite_index = CharacterSprites.wallSplat_Sprite;
@@ -3346,6 +3577,9 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
 	}
 	y += vsp;
+	
+	xHome = x;
+	yHome = y;
 }
 
 // Handle Enviornmental Displacement

@@ -6,7 +6,15 @@ visible = global.toggleHitboxVisibility;
 // If the thing that spawned this hurtbox stops existing, destroy this
 if (!instance_exists(owner))
 {
-	instance_destroy()
+	instance_destroy();
+	show_debug_message("Destroyed");
+	exit;
+}
+
+// If we're part of a spirit, then make sure to destroy this when the spirit disappears
+if (spirit != noone && !instance_exists(spirit))
+{
+	instance_destroy();
 	exit;
 }
 
@@ -15,27 +23,21 @@ if (primary && owner.inAttackState && owner.animTimer > 0)
 	// Hide if the owner is in an attack state
 	image_xscale = 0;
 	image_yscale = 0;
-
 }
 
-if (primary && owner.state != eState.HITSTOP)
+// Position the hurtbox 
+if (primary)
 {
 	if (spirit == noone)
 	{
-		x = owner.x + (owner.hurtboxXOffset * sign(owner.image_xscale));
-		y = owner.y + owner.hurtboxYOffset;
+		x = owner.xHome + (owner.hurtboxXOffset * sign(owner.image_xscale));
+		y = owner.yHome + owner.hurtboxYOffset;
 	}
 	else
 	{
-		if (sign(owner.image_xscale) == sign(spirit.image_xscale))
-		{
-			x = spirit.x + (spirit.hurtboxOffset * sign(spirit.image_xscale));
-		}
-		else
-		{
-			x = spirit.x + (spirit.hurtboxOffset * sign(-spirit.image_xscale));
-		}
-		y = spirit.y;
+		x = spirit.xHome + (spirit.hurtboxXOffset * sign(spirit.image_xscale));
+		
+		y = spirit.yHome;
 	}
 } 
 
@@ -48,8 +50,8 @@ if (!primary)
 	}
 	else
 	{
-		x = spirit.x + hurtboxProperty.WidthOffset * sign(spirit.image_xscale);
-		y = spirit.y - hurtboxProperty.HeightOffset * sign(spirit.image_yscale);
+		x = spirit.x + (hurtboxProperty.WidthOffset * sign(spirit.image_xscale));
+		y = spirit.y - (hurtboxProperty.HeightOffset * sign(spirit.image_yscale));
 	}
 	
 	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP && owner.state != eState.SCREEN_FREEZE)
@@ -68,6 +70,14 @@ if (!primary)
 		instance_destroy();
 	}
 }
-image_xscale = abs(image_xscale) * sign(owner.image_xscale);
+
+if (spirit == noone)
+{
+	image_xscale = abs(image_xscale) * sign(owner.image_xscale);
+}
+else
+{
+	image_xscale = abs(image_xscale) * sign(spirit.image_xscale);
+}
 
 

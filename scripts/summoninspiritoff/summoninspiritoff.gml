@@ -2,32 +2,50 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function SummonInSpiritOff(moveToDo)
 {
-	SummonSpirit();
-	spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
-	spiritObject.y += moveToDo.SpiritData.StartYOffset;
+	spiritObject.spiritState = eSpiritState.ATTACK;
+	
+	// Add an offset to the summoning position
+	if (animTimer == 1)
+	{
+		spiritObject.x += moveToDo.SpiritData.StartXOffset * image_xscale;
+		spiritObject.y += moveToDo.SpiritData.StartYOffset;
+	}
+	
+	// If this move doesn't summon the spirit afterwards...
 	if (!moveToDo.SpiritData.SummonSpirit)
 	{
-		spiritState = false;
+		spiritON = false;
+		spiritObject.inSpiritOff = true;
 		if ((selectedCharacter.JumpType & 1) != 1)
 		{
 			canDoubleJump = false;
 		}
+		
+		with (spiritObject)
+		{
+			OverwriteSpiritMoveset(true);
+		}
 	}
-	else
+	else // If it does put you in spirit ON...
 	{
 		if (selectedCharacter.UniqueData.LinkMovesetsWithSpirits)
 		{
 			currentMovesetID = selectedCharacter.UniqueData.SpiritOnMoveset;
 			OverwriteMoveset();
 		}
+		spiritObject.inSpiritOff = false;
+		spiritON = true;
+		
+		if (selectedCharacter.UniqueData.DoubleJump)
+		{
+			canDoubleJump = true;
+		}
+		
+		with (spiritObject)
+		{
+			OverwriteSpiritMoveset(false);
+		}
 	}
 	
-	with (spiritObject)
-	{
-		OverwriteSpiritMoveset(true);
-	}
-	spiritObject.inSpiritOff = true;
-	spiritObject.state = state;
-	spiritObject.startingMove = state;
 	pendingToggle = false;
 }

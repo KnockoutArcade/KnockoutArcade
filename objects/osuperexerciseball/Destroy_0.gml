@@ -14,3 +14,8 @@ ClearOwnerHitByGroups();
 
 ds_list_destroy(objectsHitList);
 objectsHitList = -1;
+
+if (instance_exists(playerOwner))
+{
+	playerOwner.meterPenalty = 1;
+}

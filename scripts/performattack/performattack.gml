@@ -26,10 +26,10 @@ function PerformAttack(Action, createdBySpirit)
 	// Animations
 	for (var i = 0; i < Action.NumberOfWindows; i++) 
 	{
-			if (animTimer >= Action.Window[i].Length)
-			{
-				image_index = Action.Window[i].ImageIndex;
-			}
+		if (animTimer >= Action.Window[i].Length)
+		{
+			image_index = Action.Window[i].ImageIndex;
+		}
 	}
 	
 	
@@ -223,13 +223,12 @@ function PerformAttack(Action, createdBySpirit)
 					
 					// Clears the hitBy data to allow attacks to connect properly
 					//ds_list_clear(hitByGroup);
-					if (createdBySpirit && hostObject.target != noone)
+					if (createdBySpirit)
 					{
 						with (hostObject)
 						{
 							ClearVictimHitByGroups();
 						}
-						
 					}
 					else 
 					{
@@ -335,6 +334,22 @@ function PerformAttack(Action, createdBySpirit)
 				
 				hurtboxProperty = Action.HurtboxProperty[i];
 			}
+		}
+	}
+	
+	// Spirits - Remote Mode
+	if (createdBySpirit)
+	{
+		if (Action.SpiritData.MaintainPosition)
+		{
+			nextToPlayer = false;
+		}
+	}
+	else
+	{
+		if (Action.SpiritData.ReturnToPlayer && spiritObject != noone)
+		{
+			spiritObject.nextToPlayer = true;
 		}
 	}
 }

@@ -115,12 +115,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Apply grounded knockback
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
-		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
-				if (!collision_list.owner.spiritState)
+				if (!collision_list.owner.spiritON)
 				{
 					with (collision_list.owner)
 					{
@@ -181,10 +181,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.storedComboDamage = owner.comboDamage;
 		
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
 		if (!owner.timeStopActivated && !owner.installActivated)
 		{
-			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling);
+			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling * owner.meterPenalty);
 		}
 		
 		// If an object is set to always get launched, set it as being airborne.
@@ -434,12 +434,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
-		if (collision_list.owner.spiritObject != noone || collision_list.owner.pendingToggle) 
+		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
 			if (collision_list.owner.pendingToggle)
 			{
 				collision_list.owner.spiritCurrentHealth -= scaledDamage;
-				if (!collision_list.owner.spiritState)
+				if (!collision_list.owner.spiritON)
 				{
 					with (collision_list.owner)
 					{
@@ -472,22 +472,22 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
-				else if (!collision_list.owner.spiritInstall)
-				{
+				//else if (!collision_list.owner.spiritInstall)
+				//{
 					// Instantly kills the spirit if its current move makes it vulnerable
-					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
-				}
+					//collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				//}
 			}
 		}
 					
 		owner.playerOwner.comboDamage += scaledDamage;
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
 		
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25);
+		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		if (!owner.playerOwner.timeStopActivated && !owner.playerOwner.installActivated)
 		{
-			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling);
+			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling * owner.playerOwner.meterPenalty);
 		}
 		
 		// If an object is set to always get launched, set it as being airborne.
