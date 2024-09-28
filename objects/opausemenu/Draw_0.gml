@@ -93,6 +93,31 @@ switch (state)
 				}
 			}
 			break;
+			
+			// Jay
+			case 2:
+			{
+				// Draw name
+				draw_sprite(sCharacterNames, 2, x + 72, y + 4);
+				
+				if (commandListCurrentTab == 0) // Command Inputs
+				{
+					draw_sprite(sCommandLists_Jay_CommandInputs, 0, x, y);
+				}
+				else if (commandListCurrentTab == 1) // Throws
+				{
+					draw_sprite(sCommandLists_Jay_Throws, 0, x, y);
+				}
+				else if (commandListCurrentTab == 2) // Specials
+				{
+					draw_sprite(sCommandLists_Jay_Specials, commandListCurrentPage, x, y);
+				}
+				else if (commandListCurrentTab == 3) // Supers
+				{
+					draw_sprite(sCommandLists_Jay_Supers, 0, x, y);
+				}
+			}
+			break;
 		}
 	}
 	break;

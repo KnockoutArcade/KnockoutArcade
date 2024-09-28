@@ -127,6 +127,13 @@ switch (state)
 								commandListCharacter = 1;
 							}
 							break;
+							
+							// Jay
+							case oJay:
+							{
+								commandListCharacter = 2;
+							}
+							break;
 						}
 					}
 					else // Player 2
@@ -144,6 +151,13 @@ switch (state)
 							case oBeverly:
 							{
 								commandListCharacter = 1;
+							}
+							break;
+							
+							// Jay
+							case oJay:
+							{
+								commandListCharacter = 2;
 							}
 							break;
 						}
