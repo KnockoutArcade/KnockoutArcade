@@ -472,11 +472,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
 					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
-				else if (!collision_list.owner.spiritInstall)
-				{
+				//else if (!collision_list.owner.spiritInstall)
+				//{
 					// Instantly kills the spirit if its current move makes it vulnerable
-					collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
-				}
+					//collision_list.owner.spiritCurrentHealth -= collision_list.owner.spiritMaxHealth;
+				//}
 			}
 		}
 					
