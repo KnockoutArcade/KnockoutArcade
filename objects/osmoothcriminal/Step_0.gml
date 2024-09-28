@@ -10,7 +10,12 @@ if (host == noone || hostObject == noone)
 // Pause function, cancel event
 if (global.game_paused)
 {
+	image_speed = 0;
 	exit;
+}
+else
+{
+	image_speed = 1;
 }
 
 // A number of things will function similarly to a regular character, but 
@@ -189,7 +194,7 @@ switch (spiritState)
 		
 		// Set hurtbox width and height
 		hurtbox.image_xscale = 16;
-		hurtbox.image_yscale = 38;
+		hurtbox.image_yscale = 43;
 		
 		if (shouldCreateSpiritFire)
 		{
