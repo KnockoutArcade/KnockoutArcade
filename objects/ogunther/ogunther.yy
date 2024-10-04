@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sGunther_Idle_mockup_strip1",
-    "path": "sprites/sGunther_Idle_mockup_strip1/sGunther_Idle_mockup_strip1.yy",
+    "name": "sGunther_Idle",
+    "path": "sprites/sGunther_Idle/sGunther_Idle.yy",
   },
   "solid": false,
   "visible": true,

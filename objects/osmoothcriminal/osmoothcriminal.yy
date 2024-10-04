@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sJay_SC_Idle_MOCKUP_strip8",
-    "path": "sprites/sJay_SC_Idle_MOCKUP_strip8/sJay_SC_Idle_MOCKUP_strip8.yy",
+    "name": "sSmoothCriminal_Idle",
+    "path": "sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",
   },
   "solid": false,
   "visible": true,

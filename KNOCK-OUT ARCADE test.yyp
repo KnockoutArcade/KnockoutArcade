@@ -562,6 +562,7 @@
     {"id":{"name":"sRussel_Hold","path":"sprites/sRussel_Hold/sRussel_Hold.yy",},"order":20,},
     {"id":{"name":"sControlsMenu_AllSet","path":"sprites/sControlsMenu_AllSet/sControlsMenu_AllSet.yy",},"order":7,},
     {"id":{"name":"sBeverly_JumpDownHeavy_Mockup_strip2","path":"sprites/sBeverly_JumpDownHeavy_Mockup_strip2/sBeverly_JumpDownHeavy_Mockup_strip2.yy",},"order":18,},
+    {"id":{"name":"sGunther_Idle","path":"sprites/sGunther_Idle/sGunther_Idle.yy",},"order":21,},
     {"id":{"name":"sBeverly_JumpHeavy_Mockup_strip6","path":"sprites/sBeverly_JumpHeavy_Mockup_strip6/sBeverly_JumpHeavy_Mockup_strip6.yy",},"order":19,},
     {"id":{"name":"SetupProjectile","path":"scripts/SetupProjectile/SetupProjectile.yy",},"order":3,},
     {"id":{"name":"sJay_SC_UpSpecial_MOCKUP_strip8","path":"sprites/sJay_SC_UpSpecial_MOCKUP_strip8/sJay_SC_UpSpecial_MOCKUP_strip8.yy",},"order":3,},
