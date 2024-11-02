@@ -71,7 +71,7 @@
     "spriteId": {"name":"sGunther_Idle","path":"sprites/sGunther_Idle/sGunther_Idle.yy",},
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 10.0,
+    "playbackSpeed": 12.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
