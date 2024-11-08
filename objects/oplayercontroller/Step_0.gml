@@ -1130,6 +1130,7 @@ switch state
 		
 			// Handle Spawning Dash Particles
 			// spawn a dash particle every 5 frames, and on the 1st frame of dashing
+			/*
 			if (animTimer == 1 || animTimer mod 5 == 0)
 			{
 				var dashParticle = instance_create_layer(x, y, "Instances", oParticles);
@@ -1142,6 +1143,7 @@ switch state
 					depth -= 1;
 				}
 			}
+			*/
 		
 			// Handle Running Sound Effects
 			for (var i = 0; i < array_length(RunForwardFootsteps); i++;)
