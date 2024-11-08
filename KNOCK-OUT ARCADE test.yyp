@@ -401,6 +401,7 @@
     {"id":{"name":"rRusselStage","path":"rooms/rRusselStage/rRusselStage.yy",},"order":1,},
     {"id":{"name":"HandleKnockdownState","path":"scripts/HandleKnockdownState/HandleKnockdownState.yy",},"order":0,},
     {"id":{"name":"sJay_StandLight1_Mockup_strip4","path":"sprites/sJay_StandLight1_Mockup_strip4/sJay_StandLight1_Mockup_strip4.yy",},"order":12,},
+    {"id":{"name":"sGunther_Run_Forward","path":"sprites/sGunther_Run_Forward/sGunther_Run_Forward.yy",},"order":23,},
     {"id":{"name":"oHangingGirder","path":"objects/oHangingGirder/oHangingGirder.yy",},"order":5,},
     {"id":{"name":"FindAttackState","path":"scripts/FindAttackState/FindAttackState.yy",},"order":19,},
     {"id":{"name":"sBeverly_SideSpecial","path":"sprites/sBeverly_SideSpecial/sBeverly_SideSpecial.yy",},"order":48,},
