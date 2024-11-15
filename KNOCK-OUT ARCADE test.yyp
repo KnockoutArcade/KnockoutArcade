@@ -337,6 +337,7 @@
     {"id":{"name":"sJay_SC_CrouchingMedium_MOCKUP_strip6","path":"sprites/sJay_SC_CrouchingMedium_MOCKUP_strip6/sJay_SC_CrouchingMedium_MOCKUP_strip6.yy",},"order":10,},
     {"id":{"name":"oEnhancedProjectile","path":"objects/oEnhancedProjectile/oEnhancedProjectile.yy",},"order":3,},
     {"id":{"name":"oBeverly","path":"objects/oBeverly/oBeverly.yy",},"order":0,},
+    {"id":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"order":24,},
     {"id":{"name":"sfx_UI_Select","path":"sounds/sfx_UI_Select/sfx_UI_Select.yy",},"order":0,},
     {"id":{"name":"sPauseMenu_OptionsSlider","path":"sprites/sPauseMenu_OptionsSlider/sPauseMenu_OptionsSlider.yy",},"order":13,},
     {"id":{"name":"sJay_Crouching_Light","path":"sprites/sJay_Crouching_Light/sJay_Crouching_Light.yy",},"order":43,},

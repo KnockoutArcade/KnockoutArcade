@@ -1183,12 +1183,16 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sGunther_StandLight_mockup_strip5",
-      "Duration": 15,
-      "NumberOfFrames": 5,
+      "SpriteName": "sGunther_Standing_Light",
+      "Duration": 17,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 3,
           "ImageIndex": 1
         },
         {
@@ -1196,27 +1200,19 @@
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 10,
           "ImageIndex": 3
-        },
-        {
-          "Length": 12,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
+          "Start": 6,
           "Lifetime": 4,
-          "AttackWidth": 26,
+          "AttackWidth": 32,
           "AttackHeight": 13,
           "WidthOffset": 10,
-          "HeightOffset": 21,
+          "HeightOffset": 24,
           "Group": 2,
           "Damage": 4,
           "MeterGain": 3.0,
@@ -1292,9 +1288,9 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 4,
-          "Lifetime": 4,
-          "AttackWidth": 18,
+          "Start": 3,
+          "Lifetime": 18,
+          "AttackWidth": 30,
           "AttackHeight": 18,
           "WidthOffset": 7,
           "HeightOffset": 15
@@ -6216,6 +6212,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-08T15:17:08.5769061-07:00",
+  "LastModified": "2024-11-15T16:26:30.4860483-07:00",
   "LastModifiedBy": "creep"
 }
