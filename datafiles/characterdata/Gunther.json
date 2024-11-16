@@ -1226,7 +1226,7 @@
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 6,
-          "AttackHitStun": 11,
+          "AttackHitStun": 13,
           "AttackType": 1,
           "BlockStun": 9.0,
           "KnockBack": 2.0,
@@ -1259,7 +1259,7 @@
           "MeterGain": 5.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 9,
-          "AttackHitStun": 13,
+          "AttackHitStun": 15,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
@@ -1362,16 +1362,20 @@
     {
       "UID": "31198614-fbfc-4c43-b363-0049a2842b51",
       "MoveType": 64,
-      "MoveCanCancelInto": 203544,
+      "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sGunther_StandLight2_mockup_strip9",
-      "Duration": 19,
-      "NumberOfFrames": 9,
+      "SpriteName": "sGunther_Standing_Light2",
+      "Duration": 30,
+      "NumberOfFrames": 5,
       "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
         {
           "Length": 4,
           "ImageIndex": 1
@@ -1381,40 +1385,20 @@
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 11,
           "ImageIndex": 3
         },
         {
-          "Length": 10,
+          "Length": 13,
           "ImageIndex": 4
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 16,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 16,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 19,
-          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
+          "Start": 11,
           "Lifetime": 4,
-          "AttackWidth": 17,
+          "AttackWidth": 30,
           "AttackHeight": 16,
           "WidthOffset": 13,
           "HeightOffset": 22,
@@ -1422,22 +1406,22 @@
           "Damage": 4,
           "MeterGain": 3.0,
           "ComboScaling": 2.0,
-          "AttackHitStop": 6,
+          "AttackHitStop": 10,
           "AttackHitStun": 11,
           "AttackType": 1,
           "BlockStun": 13.0,
           "KnockBack": 1.5,
           "AirKnockbackVertical": -1.0000001,
           "AirKnockbackHorizontal": 0.5,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 1.2,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 20,
-          "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 20,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -1455,7 +1439,7 @@
           "Damage": 6,
           "MeterGain": 3.5,
           "ComboScaling": 1.5,
-          "AttackHitStop": 9,
+          "AttackHitStop": 13,
           "AttackHitStun": 15,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -2.0,
@@ -6220,6 +6204,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-15T17:58:37.87407-07:00",
+  "LastModified": "2024-11-16T13:27:42.9694259-07:00",
   "LastModifiedBy": "creep"
 }
