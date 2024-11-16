@@ -1377,11 +1377,11 @@
           "ImageIndex": 0
         },
         {
-          "Length": 4,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
@@ -1409,18 +1409,18 @@
           "Group": 1,
           "Damage": 4,
           "MeterGain": 3.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 10,
           "AttackHitStun": 11,
           "AttackType": 1,
           "BlockStun": 13.0,
           "KnockBack": 1.5,
-          "AirKnockbackVertical": -1.0000001,
-          "AirKnockbackHorizontal": 0.5,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 1.2,
           "Launches": true,
           "LaunchKnockbackVertical": -3.0,
           "LaunchKnockbackHorizontal": 1.2,
-          "GravityScaling": 0.0,
+          "GravityScaling": 2.0,
           "Pushback": 1.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 0,
@@ -1442,25 +1442,25 @@
           "Group": 1,
           "Damage": 6,
           "MeterGain": 3.5,
-          "ComboScaling": 1.5,
+          "ComboScaling": 1.0,
           "AttackHitStop": 13,
           "AttackHitStun": 15,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackHorizontal": 1.2,
           "GravityScaling": 0.0,
-          "Pushback": 0.0,
+          "Pushback": 1.0,
           "ParticleXOffset": 10,
-          "ParticleYOffset": 20,
-          "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
+          "ParticleYOffset": 0,
+          "ParticleEffect": "sHitEffect",
+          "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2"
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -6208,6 +6208,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-16T14:38:00.8975035-07:00",
+  "LastModified": "2024-11-16T15:13:57.444867-07:00",
   "LastModifiedBy": "creep"
 }
