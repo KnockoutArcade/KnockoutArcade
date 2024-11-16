@@ -7,8 +7,8 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 16,
-  "bbox_right": 75,
+  "bbox_left": 13,
+  "bbox_right": 82,
   "bbox_top": 6,
   "bbox_bottom": 57,
   "HTile": false,
@@ -24,18 +24,24 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"8e26ddc6-2d0e-420f-866a-8342295d1ba2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"8e26ddc6-2d0e-420f-866a-8342295d1ba2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"e85a4f3b-e079-4123-91d2-d2e4a4d3adaf","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"8e26ddc6-2d0e-420f-866a-8342295d1ba2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"cf1c5ee2-a0c1-477c-b561-86bf29b6d8c4","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"cf1c5ee2-a0c1-477c-b561-86bf29b6d8c4","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"e85a4f3b-e079-4123-91d2-d2e4a4d3adaf","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"cf1c5ee2-a0c1-477c-b561-86bf29b6d8c4","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"deb73f96-1cab-4843-8882-ccba42adbf4d","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"deb73f96-1cab-4843-8882-ccba42adbf4d","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"e85a4f3b-e079-4123-91d2-d2e4a4d3adaf","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"deb73f96-1cab-4843-8882-ccba42adbf4d","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"96919b58-bb6e-4528-b29b-5f5f15a9a879","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"96919b58-bb6e-4528-b29b-5f5f15a9a879","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"e85a4f3b-e079-4123-91d2-d2e4a4d3adaf","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"96919b58-bb6e-4528-b29b-5f5f15a9a879","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"e1e00c0a-717b-494d-bf12-fb244ba281a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"e1e00c0a-717b-494d-bf12-fb244ba281a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"e1e00c0a-717b-494d-bf12-fb244ba281a2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"55ce3d66-6f35-4aac-bc79-6b37555a8515","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"55ce3d66-6f35-4aac-bc79-6b37555a8515","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"55ce3d66-6f35-4aac-bc79-6b37555a8515","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"38b7f37d-40cd-44a1-b7d1-115e153479a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"38b7f37d-40cd-44a1-b7d1-115e153479a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"38b7f37d-40cd-44a1-b7d1-115e153479a2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"558eaa95-dbfc-4334-b714-f93926b00aa2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"558eaa95-dbfc-4334-b714-f93926b00aa2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"558eaa95-dbfc-4334-b714-f93926b00aa2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"895f84b3-7c93-4bc0-b6da-89612dd65230","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"895f84b3-7c93-4bc0-b6da-89612dd65230","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"895f84b3-7c93-4bc0-b6da-89612dd65230","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"77354945-fdc2-4b77-81b7-24fa8aeb1dee","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"77354945-fdc2-4b77-81b7-24fa8aeb1dee","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"LayerId":{"name":"ff342e0e-9368-4ca5-a066-51b574383fc0","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","name":"77354945-fdc2-4b77-81b7-24fa8aeb1dee","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},
@@ -45,15 +51,17 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 4.0,
+    "length": 6.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"4ccbc445-26d4-4fcb-9439-a932c84c78e8","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"8e26ddc6-2d0e-420f-866a-8342295d1ba2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5d9dbe0c-79ae-4cb5-8724-ff3185c6071a","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"cf1c5ee2-a0c1-477c-b561-86bf29b6d8c4","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"5833c6bc-8795-4bcb-8eeb-3dad430460b5","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"deb73f96-1cab-4843-8882-ccba42adbf4d","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"dd7f59b0-a32b-440a-b125-4e21befc37ee","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"96919b58-bb6e-4528-b29b-5f5f15a9a879","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"6383fc04-92bf-406f-bb11-c9365a0f0324","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e1e00c0a-717b-494d-bf12-fb244ba281a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"cb26939f-8a16-4187-b2f7-afc25565035e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"55ce3d66-6f35-4aac-bc79-6b37555a8515","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"81bb8120-e317-43af-baae-a986d9c6769e","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"38b7f37d-40cd-44a1-b7d1-115e153479a2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"33e7e9a1-ec64-4df7-b4f8-848e7c944fce","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"558eaa95-dbfc-4334-b714-f93926b00aa2","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"0493c73c-8639-4dc4-8428-da5d85bd2d13","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"895f84b3-7c93-4bc0-b6da-89612dd65230","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"ae2dbb91-21bb-4ec8-b5fc-050847b844b4","Key":5.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"77354945-fdc2-4b77-81b7-24fa8aeb1dee","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -77,7 +85,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"e85a4f3b-e079-4123-91d2-d2e4a4d3adaf","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"ff342e0e-9368-4ca5-a066-51b574383fc0","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {

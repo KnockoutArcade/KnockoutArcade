@@ -1177,7 +1177,7 @@
     {
       "UID": "42a2e15c-f7e2-4c0b-af95-b8f39b46c9e7",
       "MoveType": 32,
-      "MoveCanCancelInto": 203608,
+      "MoveCanCancelInto": 4194368,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -1185,14 +1185,14 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Standing_Light",
       "Duration": 17,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
@@ -1202,6 +1202,14 @@
         {
           "Length": 10,
           "ImageIndex": 3
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
@@ -1213,26 +1221,26 @@
           "AttackHeight": 13,
           "WidthOffset": 10,
           "HeightOffset": 24,
-          "Group": 2,
+          "Group": 1,
           "Damage": 4,
           "MeterGain": 3.0,
-          "ComboScaling": 2.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 6,
-          "AttackHitStun": 9,
+          "AttackHitStun": 11,
           "AttackType": 1,
-          "BlockStun": 13.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": 0.0,
+          "BlockStun": 9.0,
+          "KnockBack": 2.0,
+          "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 2.5,
+          "GravityScaling": 2.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 20,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 10,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 20,
+          "ParticleDuration": 15,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
           "UseHitScript": false,
@@ -1247,12 +1255,12 @@
         {
           "CounterHitLevel": 1,
           "Group": 1,
-          "Damage": 4,
+          "Damage": 6,
           "MeterGain": 5.0,
-          "ComboScaling": 1.5,
+          "ComboScaling": 1.0,
           "AttackHitStop": 9,
-          "AttackHitStun": 12,
-          "KnockBack": 1.0,
+          "AttackHitStun": 13,
+          "KnockBack": 2.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
@@ -1260,10 +1268,10 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 2.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 18,
+          "ParticleYOffset": 10,
           "ParticleEffect": "sSmallHitspark",
-          "ParticleDuration": 5,
+          "ParticleDuration": 11,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
@@ -6212,6 +6220,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-15T16:26:30.4860483-07:00",
+  "LastModified": "2024-11-15T17:58:37.87407-07:00",
   "LastModifiedBy": "creep"
 }
