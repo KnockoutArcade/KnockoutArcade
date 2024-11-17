@@ -1377,8 +1377,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Standing_Light2",
-      "Duration": 33,
-      "NumberOfFrames": 8,
+      "Duration": 36,
+      "NumberOfFrames": 11,
       "FrameData": [
         {
           "Length": 0,
@@ -1405,12 +1405,24 @@
           "ImageIndex": 5
         },
         {
-          "Length": 27,
+          "Length": 19,
           "ImageIndex": 6
         },
         {
-          "Length": 30,
+          "Length": 22,
           "ImageIndex": 7
+        },
+        {
+          "Length": 25,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 33,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -1429,7 +1441,7 @@
           "AttackHitStop": 10,
           "AttackHitStun": 11,
           "AttackType": 1,
-          "BlockStun": 16.0,
+          "BlockStun": 19.0,
           "KnockBack": 1.5,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.2,
@@ -6238,6 +6250,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-16T20:42:38.7260484-07:00",
+  "LastModified": "2024-11-16T21:05:04.6012205-07:00",
   "LastModifiedBy": "creep"
 }
