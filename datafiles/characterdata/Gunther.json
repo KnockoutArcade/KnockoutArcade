@@ -1884,36 +1884,60 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Standing_Heavy",
-      "Duration": 45,
-      "NumberOfFrames": 7,
+      "Duration": 54,
+      "NumberOfFrames": 13,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 6,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 12,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 16,
+          "Length": 9,
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 20,
+          "Length": 16,
           "ImageIndex": 5
         },
         {
-          "Length": 22,
+          "Length": 18,
           "ImageIndex": 6
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 40,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 44,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 48,
+          "ImageIndex": 12
         }
       ],
       "NumberOfHitboxes": 2,
@@ -6231,6 +6255,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-19T12:54:18.1796743-07:00",
+  "LastModified": "2024-11-19T15:04:02.6636-07:00",
   "LastModifiedBy": "creep"
 }
