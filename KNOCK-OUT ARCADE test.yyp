@@ -379,6 +379,7 @@
     {"id":{"name":"oRoundCounter","path":"objects/oRoundCounter/oRoundCounter.yy",},"order":2,},
     {"id":{"name":"sConstructionNPC1c","path":"sprites/sConstructionNPC1c/sConstructionNPC1c.yy",},"order":2,},
     {"id":{"name":"sCharSel_BackgroundText","path":"sprites/sCharSel_BackgroundText/sCharSel_BackgroundText.yy",},"order":1,},
+    {"id":{"name":"sGunther_Standing_Heavy","path":"sprites/sGunther_Standing_Heavy/sGunther_Standing_Heavy.yy",},"order":26,},
     {"id":{"name":"sfx_Footstep_H","path":"sounds/sfx_Footstep_H/sfx_Footstep_H.yy",},"order":12,},
     {"id":{"name":"sJay_Standing_Light","path":"sprites/sJay_Standing_Light/sJay_Standing_Light.yy",},"order":38,},
     {"id":{"name":"sCharSel_NameJay","path":"sprites/sCharSel_NameJay/sCharSel_NameJay.yy",},"order":2,},
