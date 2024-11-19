@@ -18,3 +18,22 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 event_inherited();
 
 isAbleToBlock = false;
+
+// TODO: Put these things in the character editor so we don't have to implement them like this
+// Primary hurtbox data
+hurtboxStandingWidth = 34;
+hurtboxStandingHeight = 40;
+hurtboxCrouchingWidth = 18;
+hurtboxCrouchingHeight = 20;
+hurtboxXOffsetStanding = -17;
+hurtboxXOffsetCrouching = -9;
+hurtboxXOffset = hurtboxXOffsetStanding;
+hurtboxYOffset = 0;
+
+with (hurtbox) 
+{
+	primary = true;
+	owner = other.id;
+	image_xscale = other.hurtboxStandingWidth;
+	image_yscale = other.hurtboxStandingHeight;
+}

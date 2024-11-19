@@ -271,9 +271,9 @@ target = noone;
 hurtboxStandingWidth = 16;
 hurtboxStandingHeight = 32;
 hurtboxCrouchingWidth = 16;
-hurtboxCrouchingHeight = 27;
-hurtboxXOffsetStanding = -9;
-hurtboxXOffsetCrouching = -9;
+hurtboxCrouchingHeight = 23;
+hurtboxXOffsetStanding = -8;
+hurtboxXOffsetCrouching = -8;
 hurtboxXOffset = hurtboxXOffsetStanding;
 hurtboxYOffset = 0;
 
