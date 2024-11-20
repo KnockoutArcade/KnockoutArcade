@@ -1885,7 +1885,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Standing_Heavy",
       "Duration": 54,
-      "NumberOfFrames": 13,
+      "NumberOfFrames": 15,
       "FrameData": [
         {
           "Length": 0,
@@ -1920,24 +1920,32 @@
           "ImageIndex": 7
         },
         {
-          "Length": 24,
+          "Length": 22,
           "ImageIndex": 8
         },
         {
-          "Length": 36,
+          "Length": 24,
           "ImageIndex": 9
         },
         {
-          "Length": 40,
+          "Length": 26,
           "ImageIndex": 10
         },
         {
-          "Length": 44,
+          "Length": 36,
           "ImageIndex": 11
         },
         {
-          "Length": 48,
+          "Length": 40,
           "ImageIndex": 12
+        },
+        {
+          "Length": 44,
+          "ImageIndex": 13
+        },
+        {
+          "Length": 48,
+          "ImageIndex": 14
         }
       ],
       "NumberOfHitboxes": 2,
@@ -1957,7 +1965,7 @@
           "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 20.0,
-          "KnockBack": 3.0,
+          "KnockBack": 7.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 3.0,
           "Launches": false,
@@ -1993,7 +2001,7 @@
           "AttackHitStun": 20,
           "AttackType": 1,
           "BlockStun": 20.0,
-          "KnockBack": 3.0,
+          "KnockBack": 7.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 3.0,
           "Launches": false,
@@ -6255,6 +6263,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-19T15:04:02.6636-07:00",
+  "LastModified": "2024-11-19T17:19:15.5509247-07:00",
   "LastModifiedBy": "creep"
 }
