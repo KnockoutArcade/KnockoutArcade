@@ -1177,7 +1177,7 @@
     {
       "UID": "42a2e15c-f7e2-4c0b-af95-b8f39b46c9e7",
       "MoveType": 32,
-      "MoveCanCancelInto": 4194368,
+      "MoveCanCancelInto": 4391000,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2206,7 +2206,7 @@
     {
       "UID": "154c9546-fb73-4dc6-bc9f-fea77a2f4cfe",
       "MoveType": 1024,
-      "MoveCanCancelInto": 203544,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2403,7 +2403,7 @@
     {
       "UID": "1b2b4858-ece3-480a-adcb-70070b610a18",
       "MoveType": 2048,
-      "MoveCanCancelInto": 201240,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2612,7 +2612,7 @@
     {
       "UID": "03a049dc-847d-48fd-a7fe-0668e5840e11",
       "MoveType": 4096,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -2951,7 +2951,7 @@
     {
       "UID": "36e96769-47d7-4f15-9024-1b03fb0a854b",
       "MoveType": 8192,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3148,7 +3148,7 @@
     {
       "UID": "37aefb73-5acd-44b6-9b4d-11850d5c9fb1",
       "MoveType": 16384,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -3332,7 +3332,7 @@
     {
       "UID": "288ae3b8-ad31-49f8-b275-78606326c5b8",
       "MoveType": 32768,
-      "MoveCanCancelInto": 196632,
+      "MoveCanCancelInto": 0,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4170,7 +4170,7 @@
     {
       "UID": "fcc27725-d1ac-4730-a941-4cb4af34b128",
       "MoveType": 65536,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4395,7 +4395,7 @@
     {
       "UID": "4e514a15-4112-49f9-89e1-0347b555e39e",
       "MoveType": 8,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -4798,7 +4798,7 @@
     {
       "UID": "778e729f-5d2c-4a9c-b95c-265379837eed",
       "MoveType": 131072,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],
@@ -6270,6 +6270,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-20T16:44:41.0172351-07:00",
+  "LastModified": "2024-11-20T16:49:12.9641616-07:00",
   "LastModifiedBy": "creep"
 }
