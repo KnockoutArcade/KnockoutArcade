@@ -39,18 +39,18 @@ if (image_index == 1 && P1menuConfirm)
 {
 	
 	// TEMPORARY DEBUG STUFF
-	
+	/*
 	global.p1SelectedCharacter = oGunther;
 	global.p2SelectedCharacter = oGunther;
 	
 	global.gameMode = GAMEMODE.VERSUS;
 	
 	room_goto(rJayStage);
-	
+	*/
 	
 	// ORIGINAL CODE - GO BACK TO THIS AFTER TESTING
 	
-	//room_goto(rCharacterSelectScreen);
+	room_goto(rCharacterSelectScreen);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
