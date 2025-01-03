@@ -181,10 +181,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.storedComboDamage = owner.comboDamage;
 		
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
+		collision_list.owner.superMeter += (attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
 		if (!owner.timeStopActivated && !owner.installActivated)
 		{
-			owner.superMeter += floor(attackProperty.MeterGain * owner.meterScaling * owner.meterPenalty);
+			owner.superMeter += (attackProperty.MeterGain * owner.meterScaling * owner.meterPenalty);
 		}
 		
 		// If an object is set to always get launched, set it as being airborne.
@@ -483,11 +483,11 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		owner.playerOwner.comboDamage += scaledDamage;
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
 		
-		collision_list.owner.superMeter += floor(attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
+		collision_list.owner.superMeter += (attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		if (!owner.playerOwner.timeStopActivated && !owner.playerOwner.installActivated)
 		{
-			owner.playerOwner.superMeter += floor(attackProperty.MeterGain * owner.playerOwner.meterScaling * owner.playerOwner.meterPenalty);
+			owner.playerOwner.superMeter += (attackProperty.MeterGain * owner.playerOwner.meterScaling * owner.playerOwner.meterPenalty);
 		}
 		
 		// If an object is set to always get launched, set it as being airborne.

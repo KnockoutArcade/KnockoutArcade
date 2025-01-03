@@ -358,15 +358,17 @@ superMeter = 0; // the amount of meter the player has
 if (global.gameMode = GAMEMODE.VERSUS)
 {
 	meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+	meterPenalty = 1; // Certain moves cause the amount of meter you build to be reduced
 }
 else
 {
 	meterBuildRate = 0; // The rate at which the player builds meter by approaching
+	meterPenalty = 0.25; // Certain moves cause the amount of meter you build to be reduced
 }
 
 meterScaling = 1; // How much meter gain will be scaled (multiplier)
 hasUsedMeter = false; // Whether the player has used a move that requires meter or not
-meterPenalty = 1; // Certain moves cause the amount of meter you build to be reduced
+
 
 // Palette Init
 PaletteSetup(0, selectedCharacter);
