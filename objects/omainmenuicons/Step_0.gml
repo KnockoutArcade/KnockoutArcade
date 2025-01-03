@@ -40,8 +40,8 @@ if (image_index == 1 && P1menuConfirm)
 	
 	// TEMPORARY DEBUG STUFF
 	/*
-	global.p1SelectedCharacter = oJay;
-	global.p2SelectedCharacter = oJay;
+	global.p1SelectedCharacter = oGunther;
+	global.p2SelectedCharacter = oGunther;
 	
 	global.gameMode = GAMEMODE.VERSUS;
 	
@@ -74,7 +74,7 @@ if (image_index == 2 && P1menuConfirm)
 {
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
-	global.p1SelectedCharacter = oJay;
+	global.p1SelectedCharacter = oGunther;
 	global.p1PaletteID = 0;
 	
 	room_goto(rPlatformingTestStage);

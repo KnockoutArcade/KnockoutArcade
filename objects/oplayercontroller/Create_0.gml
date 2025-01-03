@@ -268,16 +268,23 @@ opponent = noone;
 target = noone;
 
 // Hurtbox Variables
+hurtboxStandingWidth = 16;
+hurtboxStandingHeight = 32;
+hurtboxCrouchingWidth = 16;
+hurtboxCrouchingHeight = 23;
+hurtboxXOffsetStanding = -8;
+hurtboxXOffsetCrouching = -8;
+hurtboxXOffset = hurtboxXOffsetStanding;
+hurtboxYOffset = 0;
+
 hurtbox = instance_create_layer(x - 9, y, "hitboxes", oPlayerHurtbox);
 with (hurtbox) 
 {
 	primary = true;
 	owner = other.id;
-	image_xscale = 16;
-	image_yscale = 32;
+	image_xscale = other.hurtboxStandingWidth;
+	image_yscale = other.hurtboxStandingHeight;
 }
-hurtboxXOffset = -9;
-hurtboxYOffset = 0;
 
 hitstun = 0; // How long we are in hitSTUN for
 hitstop = 0; // How long we are in hitSTOP for

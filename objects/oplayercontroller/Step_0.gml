@@ -161,9 +161,9 @@ else
 
 
 // Initialize Hurtbox Values
-hurtbox.image_xscale = 16;
-hurtbox.image_yscale = 32;
-hurtboxXOffset = -8;
+hurtbox.image_xscale = hurtboxStandingWidth;
+hurtbox.image_yscale = hurtboxStandingHeight;
+hurtboxXOffset = hurtboxXOffsetStanding;
 
 if (special)
 {
@@ -571,8 +571,9 @@ if (state == eState.CROUCHING)
 	invincible = false;
 	inAttackState = false;
 	
-	hurtbox.image_xscale = 16;
-	hurtbox.image_yscale = 27;
+	hurtbox.image_xscale = hurtboxCrouchingWidth;
+	hurtbox.image_yscale = hurtboxCrouchingHeight;
+	hurtboxXOffset = hurtboxXOffsetCrouching;
 	
 	if (movedir == 0 && verticalMoveDir != -1) 
 	{
@@ -1588,15 +1589,6 @@ switch state
 	case eState.CROUCHING_HEAVY_ATTACK: 
 	{
 		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
-		
-		hurtboxXOffset = -7;
-		hurtbox.image_xscale = 18;
-		hurtbox.image_yscale = 27;
-		
-		if (animTimer > 8)
-		{
-			hurtbox.image_yscale = 20;
-		}
 	
 		if (cancelable && hitstop < 1)
 		{
@@ -2144,9 +2136,6 @@ switch state
 
 	case eState.GRAB : 
 	{
-		hurtbox.image_xscale = 16;
-		hurtbox.image_yscale = 25;
-		hurtboxXOffset = -7;
 		invincible = false;
 		
 		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
@@ -2210,10 +2199,6 @@ switch state
 		canBlock = false;
 		
 		sprite_index = CharacterSprites.grab_Sprite;
-		
-		hurtbox.image_xscale = 16;
-		hurtbox.image_yscale = 25;
-		hurtboxXOffset = -7;
 		
 		if (grounded)
 		{

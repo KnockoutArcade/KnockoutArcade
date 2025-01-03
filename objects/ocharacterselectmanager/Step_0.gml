@@ -75,6 +75,11 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
         p1charSelFrameRate = 6;
         p1LocalPalette = JayPaletteData;
     }
+	else if (P1charSelCol == 0 && P1charSelRow == 1)
+    {
+        p1charSelFrameRate = 10;
+        p1LocalPalette = GuntherPaletteData;
+    }
 
     if (P2charSelCol == 0 && P2charSelRow == 0)
     {
@@ -90,6 +95,11 @@ if (state == eCharacterSelectState.CHARACTER_SELECT)
     {
         p2charSelFrameRate = 6;
         p2LocalPalette = JayPaletteData;
+    }
+	else if (P2charSelCol == 0 && P2charSelRow == 1)
+    {
+        p2charSelFrameRate = 10;
+        p2LocalPalette = GuntherPaletteData;
     }
 
     // Handle P1 cursor movement
