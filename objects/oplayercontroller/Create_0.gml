@@ -355,7 +355,15 @@ gravityScaling = 0; // How high this player's gravity scaling value is
 
 //Meter Related Variables
 superMeter = 0; // the amount of meter the player has
-meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+if (global.gameMode = GAMEMODE.VERSUS)
+{
+	meterBuildRate = 0.05; // The rate at which the player builds meter by approaching
+}
+else
+{
+	meterBuildRate = 0; // The rate at which the player builds meter by approaching
+}
+
 meterScaling = 1; // How much meter gain will be scaled (multiplier)
 hasUsedMeter = false; // Whether the player has used a move that requires meter or not
 meterPenalty = 1; // Certain moves cause the amount of meter you build to be reduced
