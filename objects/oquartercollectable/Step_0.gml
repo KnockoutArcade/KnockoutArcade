@@ -1,19 +1,28 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-var collidingPlayer = instance_place(x, y, oPlayerController);
+var collidingPlayer = instance_place(x, y, oPlayerHurtbox);
 if (collidingPlayer != noone)
 {
-	collidingPlayer.coinScore += coinValue;
-	
-	var particle = instance_create_layer(x, y, "Particles", oParticles);
-	with(particle)
+	if (collidingPlayer.owner != noone)
 	{
-		lifetime = 25;
-		sprite_index = sCollectionSparkle;
-	}
+		if (variable_instance_exists(collidingPlayer.owner, "playerID"))
+		{
+			if (collidingPlayer.owner.playerID < 3)
+			{
+				collidingPlayer.owner.coinScore += coinValue;
 	
-	instance_destroy();
+				var particle = instance_create_layer(x, y, "Particles", oParticles);
+				with(particle)
+				{
+					lifetime = 25;
+					sprite_index = sCollectionSparkle;
+				}
+	
+				instance_destroy();
+			}
+		}
+	}
 }
 
 
