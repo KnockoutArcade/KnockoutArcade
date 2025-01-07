@@ -436,7 +436,7 @@ else
 if (!grounded && state != eState.HURT && state != eState.LAUNCHED)
 {
 	// If the player inputted any normal attack or a grab AND we are allowed to input a buffer...
-	if (attack > 0 && attack < 5 && landingBufferTimer <= landingBufferWindow)
+	if (attack > 0 && landingBufferTimer <= landingBufferWindow)
 	{
 		landingBufferAttack = attack;
 	}

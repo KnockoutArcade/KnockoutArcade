@@ -89,7 +89,7 @@ switch (global.gameMode)
 						// The camera's panning speed is tied to the player's movement speed.
 						// If the player starts sprinting, the camera will pan much quicker.
 						
-						if (p1.movedir > 0) // Player is moving to the right
+						if (p1.movedir > 0 && !p1.inAttackState && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the right
 						{
 							cameraPanDelayTimer -= 2;
 							
@@ -106,7 +106,7 @@ switch (global.gameMode)
 								cameraPanDirection = 1;
 							}
 						}
-						else if (p1.movedir < 0) // Player is moving to the left
+						else if (p1.movedir < 0 && !p1.inAttackState && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the left
 						{
 							cameraPanDelayTimer -= 1;
 							
