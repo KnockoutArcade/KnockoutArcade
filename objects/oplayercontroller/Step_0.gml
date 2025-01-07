@@ -1405,7 +1405,7 @@ switch state
 				}
 				else 
 				{
-					vsp = -(jumpSpeed * 0.75);
+					vsp = -(jumpSpeed * 0.88);
 					isShortHopping = true;
 					jumpHsp = hsp;
 				}

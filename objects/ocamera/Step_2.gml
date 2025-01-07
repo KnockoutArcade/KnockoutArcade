@@ -76,8 +76,8 @@ switch (global.gameMode)
 					// Set the camera's target
 					if (p1 != noone)
 					{
-						// Camera's target is the midpoint between both players
-						xCameraDestination = (p1.xHome) + (p1.hsp * 2);
+						// Camera's target is set to be slightly in front of the player
+						xCameraDestination = (p1.xHome) + (45 * p1.image_xscale);
 					}
 			
 					// Smoothly move the camera to its destination

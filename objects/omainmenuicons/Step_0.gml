@@ -74,10 +74,10 @@ if (image_index == 2 && P1menuConfirm)
 {
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
-	global.p1SelectedCharacter = oGunther;
+	global.p1SelectedCharacter = oRussel;
 	global.p1PaletteID = 0;
 	
-	room_goto(rPlatformingTestStage);
+	room_goto(rPlatformingStage_Russel1);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
