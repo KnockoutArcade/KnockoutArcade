@@ -7,7 +7,7 @@ cameraHeight = 120;
 cameraSpeed = .75; // How fast the camera lerps between it's target position and its current position. Must be a decimal between 0 and 1
 cameraPanDelay = 3; // How many frames to wait until the camera starts panning again.
 cameraPanDelayTimer = 0; // The timer used to handle the camera's delay before panning.
-cameraRightSidePanAmount = 45; // How far to pan the camera to the right in singlplayer.
+cameraRightSidePanAmount = 35; // How far to pan the camera to the right in singlplayer.
 cameraLeftSidePanAmount = -5; // How far to pan the camera to the left in singleplayer.
 cameraPanDirection = 1; // Which way to pan the camera ( 1 = right, -1 = left )
 
