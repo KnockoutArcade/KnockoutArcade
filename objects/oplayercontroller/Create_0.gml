@@ -289,6 +289,7 @@ with (hurtbox)
 hitstun = 0; // How long we are in hitSTUN for
 hitstop = 0; // How long we are in hitSTOP for
 hitstopBuffer = false;
+bufferedTurnAroundDirection = 1; // For side specials in platforming mode: which direction to be inputted in after hitstop
 prevSprite = 0;
 blockstun = 0;
 isAbleToBlock = true; // Whether this character can block or not (yes for all playable characters)

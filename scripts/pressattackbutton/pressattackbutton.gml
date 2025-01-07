@@ -181,6 +181,12 @@ function PressAttackButton(attack)
 					// reset anim timer
 					animTimer = 0;
 					
+					// Special rule for singleplayer: Turn around to face the inputted direction
+					if (global.gameMode == GAMEMODE.PLATFORMING)
+					{
+						image_xscale = movedir;
+					}
+					
 					inAttackState = true;
 				}
 				else if (verticalMoveDir == 1)

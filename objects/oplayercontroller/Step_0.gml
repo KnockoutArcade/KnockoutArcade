@@ -769,6 +769,12 @@ if (state == eState.HITSTOP)
 			animOffset = 0;
 			animTimer = animOffset;
 			hitstopBuffer = false;
+			
+			// Allow side specials to be turned around in platforming mode
+			if (global.gameMode == GAMEMODE.PLATFORMING && state == eState.SIDE_SPECIAL)
+			{
+				image_xscale = bufferedTurnAroundDirection;
+			}
 		}
 		
 		if (wallHit)

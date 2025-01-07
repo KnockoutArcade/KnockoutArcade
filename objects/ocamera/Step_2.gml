@@ -96,11 +96,11 @@ switch (global.gameMode)
 							if (cameraPanDelayTimer <= 0)
 							{
 								cameraPanDelayTimer = 0;
-								cameraSpeed = 0.85;
+								cameraSpeed = 0.9;
 								
 								if (p1.runningForward)
 								{
-									cameraSpeed = 0.7;
+									cameraSpeed = 0.75;
 								}
 								
 								cameraPanDirection = 1;
@@ -113,11 +113,11 @@ switch (global.gameMode)
 							if (cameraPanDelayTimer <= 0)
 							{
 								cameraPanDelayTimer = 0;
-								cameraSpeed = 0.95;
+								cameraSpeed = 0.9;
 								
 								if (p1.runningForward)
 								{
-									cameraSpeed = 0.7;
+									cameraSpeed = 0.75;
 								}
 								
 								cameraPanDirection = -1;

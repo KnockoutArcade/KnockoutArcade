@@ -14,6 +14,12 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 		spiritObject.hitstopBuffer = true;
 	}
 	
+	// Special exception for side specials in platforming mode
+	if (global.gameMode == GAMEMODE.PLATFORMING && _prevState == eState.SIDE_SPECIAL)
+	{
+		bufferedTurnAroundDirection = movedir;
+	}
+	
 	//ds_list_clear(hitByGroup);
 	ClearVictimHitByGroups();
 	
