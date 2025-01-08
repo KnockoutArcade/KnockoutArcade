@@ -69,6 +69,9 @@ function SetupGame()
 				image_xscale = 39;
 				ui_xOffset = x;
 				ui_yOffset = y;
+				
+				sprite_index = sHealthbar_Blue;
+				healthbarDamageSprite = sHealthbar_Damage_Blue;
 			}
 			
 			if (p1.spirit != noone)
@@ -77,7 +80,7 @@ function SetupGame()
 				with (spiritbar1) 
 				{
 					attatchedTo = other.p1;
-					image_xscale = -33;
+					image_xscale = -44;
 					ui_xOffset = x + 2;
 					ui_yOffset = y;
 				}
@@ -89,7 +92,7 @@ function SetupGame()
 				with (spiritbar2) 
 				{
 					attatchedTo = other.p2;
-					image_xscale = 33;
+					image_xscale = 44;
 					ui_xOffset = x - 2;
 					ui_yOffset = y;
 				}
@@ -204,11 +207,13 @@ function SetupGame()
 			}
 			
 			//Setup Health Bar
-			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
+			healthbar1 = instance_create_layer(63, 16, "UI", oHealthbar);
 			with (healthbar1) 
 			{
 				attatchedTo = other.p1;
-				image_xscale = -39;
+				image_xscale = -38;
+				MaxLength = 38;
+				initialHealthXscale = -38;
 				ui_xOffset = x;
 				ui_yOffset = y;
 			}
@@ -225,7 +230,7 @@ function SetupGame()
 			// Create spirit bar if the character has one
 			if (p1.spirit != noone)
 			{
-				spiritbar1 = instance_create_layer(66, 30, "UI", oSpiritBar);
+				spiritbar1 = instance_create_layer(21, 26, "UI", oSpiritBar);
 				with (spiritbar1) 
 				{
 					attatchedTo = other.p1;

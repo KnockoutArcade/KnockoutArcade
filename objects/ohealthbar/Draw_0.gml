@@ -17,7 +17,7 @@ if (!global.togglePresentationMode)
 	{
 		// The base sprite is animating between 2 identical frames, which allows the damage sprite
 		// to animate as well.
-		draw_sprite_ext(sHealthbar_Damage, image_index, x, y, initialHealthXscale, 1, 0, c_white, 1);
+		draw_sprite_ext(healthbarDamageSprite, image_index, x, y, initialHealthXscale, 1, 0, c_white, 1);
 		
 	}
 	
