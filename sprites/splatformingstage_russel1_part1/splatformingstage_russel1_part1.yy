@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 4799,
+  "bbox_right": 1599,
   "bbox_top": 0,
   "bbox_bottom": 119,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 4800,
+  "width": 1600,
   "height": 120,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"22697d52-7a76-4a7e-8a18-1a1837445b44","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"22697d52-7a76-4a7e-8a18-1a1837445b44","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},"LayerId":{"name":"09185977-d8af-4dcd-9dad-603cce527f71","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlatformingStage_Russel1","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},"resourceVersion":"1.0","name":"22697d52-7a76-4a7e-8a18-1a1837445b44","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"3f150cdf-c597-4e30-b280-3c25d322a24b","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"3f150cdf-c597-4e30-b280-3c25d322a24b","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"LayerId":{"name":"1e2451c1-5717-434c-99ca-15b0081c0951","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlatformingStage_Russel1_part1","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"resourceVersion":"1.0","name":"3f150cdf-c597-4e30-b280-3c25d322a24b","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPlatformingStage_Russel1","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},
+    "spriteId": {"name":"sPlatformingStage_Russel1_part1","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"13d5bf42-9b86-44cd-bc9b-80ed02d016cd","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"22697d52-7a76-4a7e-8a18-1a1837445b44","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"6b6e928e-c0ae-47ce-9638-92036a285e5a","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3f150cdf-c597-4e30-b280-3c25d322a24b","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPlatformingStage_Russel1","path":"sprites/sPlatformingStage_Russel1/sPlatformingStage_Russel1.yy",},
+    "parent": {"name":"sPlatformingStage_Russel1_part1","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},
     "resourceVersion": "1.4",
-    "name": "sPlatformingStage_Russel1",
+    "name": "sPlatformingStage_Russel1_part1",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"09185977-d8af-4dcd-9dad-603cce527f71","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"1e2451c1-5717-434c-99ca-15b0081c0951","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Stages/Singleplayer Stages/Russels Stages.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sPlatformingStage_Russel1",
+  "name": "sPlatformingStage_Russel1_part1",
   "tags": [],
   "resourceType": "GMSprite",
 }
