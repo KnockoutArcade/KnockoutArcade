@@ -11,6 +11,15 @@ verticalMoveDirection = (-moveUp - moveDown) * moveSpeed;
 xSpeed = moveDirection;
 ySpeed =  verticalMoveDirection;
 
+if (sign(verticalMoveDirection) == 1)
+{
+	image_speed = 1;
+}
+else
+{
+	image_speed = 0;
+}
+
 x += xSpeed;
 y += ySpeed;
 

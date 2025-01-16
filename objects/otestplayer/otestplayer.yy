@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sTestSprite",
-    "path": "sprites/sTestSprite/sTestSprite.yy",
+    "name": "sOverworldRussel_Down",
+    "path": "sprites/sOverworldRussel_Down/sOverworldRussel_Down.yy",
   },
   "solid": false,
   "visible": true,
