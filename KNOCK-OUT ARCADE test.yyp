@@ -442,6 +442,7 @@
     {"id":{"name":"sRussel_Standing_Light2","path":"sprites/sRussel_Standing_Light2/sRussel_Standing_Light2.yy",},"order":22,},
     {"id":{"name":"rCameraTestStage","path":"rooms/rCameraTestStage/rCameraTestStage.yy",},"order":4,},
     {"id":{"name":"DropCoins","path":"scripts/DropCoins/DropCoins.yy",},"order":38,},
+    {"id":{"name":"sOverworldRussel_Side","path":"sprites/sOverworldRussel_Side/sOverworldRussel_Side.yy",},"order":1,},
     {"id":{"name":"sJayScene2","path":"sprites/sJayScene2/sJayScene2.yy",},"order":1,},
     {"id":{"name":"oThrowEnvDetection","path":"objects/oThrowEnvDetection/oThrowEnvDetection.yy",},"order":3,},
     {"id":{"name":"sMainMenuIcons","path":"sprites/sMainMenuIcons/sMainMenuIcons.yy",},"order":1,},

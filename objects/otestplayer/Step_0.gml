@@ -11,13 +11,25 @@ verticalMoveDirection = (-moveUp - moveDown) * moveSpeed;
 xSpeed = moveDirection;
 ySpeed =  verticalMoveDirection;
 
-if (sign(verticalMoveDirection) == 1)
+if (sign(verticalMoveDirection) != 0 || sign(xSpeed) != 0)
 {
 	image_speed = 1;
 }
 else
 {
 	image_speed = 0;
+	image_index = 0;
+}
+
+
+if (sign (ySpeed) != 0)
+{
+	sprite_index = sOverworldRussel_Down;
+} 
+else if (sign(xSpeed) != 0)
+{
+	sprite_index = sOverworldRussel_Side;
+	image_xscale = sign(xSpeed);
 }
 
 x += xSpeed;
