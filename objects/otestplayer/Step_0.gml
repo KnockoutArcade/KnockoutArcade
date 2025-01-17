@@ -22,10 +22,14 @@ else
 }
 
 
-if (sign (ySpeed) != 0)
+if (sign(ySpeed) == 1)
 {
 	sprite_index = sOverworldRussel_Down;
 } 
+else if (sign(ySpeed) == -1)
+{
+	sprite_index = sOverworldRussel_Up;
+}
 else if (sign(xSpeed) != 0)
 {
 	sprite_index = sOverworldRussel_Side;

@@ -87,6 +87,7 @@
     {"id":{"name":"sJay_Standing_Light3","path":"sprites/sJay_Standing_Light3/sJay_Standing_Light3.yy",},"order":40,},
     {"id":{"name":"sMapLevel","path":"sprites/sMapLevel/sMapLevel.yy",},"order":0,},
     {"id":{"name":"sJayScene3","path":"sprites/sJayScene3/sJayScene3.yy",},"order":2,},
+    {"id":{"name":"sOverworldRussel_Up","path":"sprites/sOverworldRussel_Up/sOverworldRussel_Up.yy",},"order":2,},
     {"id":{"name":"sStageSelect_MusicOption_strip4","path":"sprites/sStageSelect_MusicOption_strip4/sStageSelect_MusicOption_strip4.yy",},"order":5,},
     {"id":{"name":"sPauseMenu_AreYouSure","path":"sprites/sPauseMenu_AreYouSure/sPauseMenu_AreYouSure.yy",},"order":6,},
     {"id":{"name":"PaletteSetup","path":"scripts/PaletteSetup/PaletteSetup.yy",},"order":7,},
