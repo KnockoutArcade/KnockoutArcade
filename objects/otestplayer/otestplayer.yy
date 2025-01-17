@@ -6,7 +6,10 @@
   "solid": false,
   "visible": true,
   "managed": true,
-  "spriteMaskId": null,
+  "spriteMaskId": {
+    "name": "sOverworldRussel_Down",
+    "path": "sprites/sOverworldRussel_Down/sOverworldRussel_Down.yy",
+  },
   "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,

@@ -25,10 +25,22 @@ else
 if (sign(ySpeed) == 1)
 {
 	sprite_index = sOverworldRussel_Down;
+	
+	if (sign(xSpeed) != 0)
+	{
+		sprite_index = sOverworldRussel_DownDiagonal;
+		image_xscale = sign(xSpeed);
+	}
 } 
 else if (sign(ySpeed) == -1)
 {
 	sprite_index = sOverworldRussel_Up;
+	
+	if (sign(xSpeed) != 0)
+	{
+		sprite_index = sOverworldRussel_UpDiagonal;
+		image_xscale = sign(xSpeed);
+	}
 }
 else if (sign(xSpeed) != 0)
 {
