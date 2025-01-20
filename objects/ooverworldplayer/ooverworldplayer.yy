@@ -31,11 +31,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Depreciated",
-    "path": "folders/Objects/Depreciated.yy",
+    "name": "Campaign Overworld Objects",
+    "path": "folders/Objects/Campaign Overworld Objects.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oTestPlayer",
+  "name": "oOverworldPlayer",
   "tags": [],
   "resourceType": "GMObject",
 }
