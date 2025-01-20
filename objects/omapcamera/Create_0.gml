@@ -1,7 +1,7 @@
 cameraWidth = 160;
 cameraHeight = 120;
 
-followTarget = oTestPlayer;
+followTarget = oOverworldPlayer;
 
 x = followTarget.x;
 y = followTarget.y;

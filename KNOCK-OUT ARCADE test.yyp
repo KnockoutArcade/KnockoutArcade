@@ -158,7 +158,7 @@
     {"id":{"name":"sUIBase","path":"sprites/sUIBase/sUIBase.yy",},"order":0,},
     {"id":{"name":"sBeverly_DownSpecial_Success","path":"sprites/sBeverly_DownSpecial_Success/sBeverly_DownSpecial_Success.yy",},"order":59,},
     {"id":{"name":"sJay_UpSpecial2_5_mockup_strip5","path":"sprites/sJay_UpSpecial2_5_mockup_strip5/sJay_UpSpecial2_5_mockup_strip5.yy",},"order":8,},
-    {"id":{"name":"oMapCamera","path":"objects/oMapCamera/oMapCamera.yy",},"order":7,},
+    {"id":{"name":"oMapCamera","path":"objects/oMapCamera/oMapCamera.yy",},"order":1,},
     {"id":{"name":"LICENSES","path":"notes/LICENSES/LICENSES.yy",},"order":0,},
     {"id":{"name":"sPauseMenu_OptionsText","path":"sprites/sPauseMenu_OptionsText/sPauseMenu_OptionsText.yy",},"order":12,},
     {"id":{"name":"sConstructionNPC3c","path":"sprites/sConstructionNPC3c/sConstructionNPC3c.yy",},"order":8,},

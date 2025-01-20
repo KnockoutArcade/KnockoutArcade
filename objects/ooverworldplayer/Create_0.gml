@@ -2,13 +2,13 @@
 // You can write your code in this editor
 
 maxSpeed = 1.5;
-acceleration = 0.2;
+acceleration = 0.3;
 
-// These refer to which directions the player is moving.
-xMovement = 0; 
-yMovement = 0;
+// This refers to which directions the player is moving.
+moveDirection = 0;
 
-// These refer to how fast the player is moving in those directions.
+moveSpeed = 0;
+
 xSpeed = 0;
 ySpeed = 0;
 
