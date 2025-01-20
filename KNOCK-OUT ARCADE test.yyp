@@ -186,6 +186,7 @@
     {"id":{"name":"CrouchingAttackScript","path":"scripts/CrouchingAttackScript/CrouchingAttackScript.yy",},"order":0,},
     {"id":{"name":"sFinalRoundStart","path":"sprites/sFinalRoundStart/sFinalRoundStart.yy",},"order":11,},
     {"id":{"name":"sh_SpiritBroken","path":"shaders/sh_SpiritBroken/sh_SpiritBroken.yy",},"order":1,},
+    {"id":{"name":"sCampaignMapTest","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"order":3,},
     {"id":{"name":"sCharSel_NameBeverly","path":"sprites/sCharSel_NameBeverly/sCharSel_NameBeverly.yy",},"order":1,},
     {"id":{"name":"sBeverly_DownSpecial_Fail","path":"sprites/sBeverly_DownSpecial_Fail/sBeverly_DownSpecial_Fail.yy",},"order":60,},
     {"id":{"name":"sCharSel_Lever","path":"sprites/sCharSel_Lever/sCharSel_Lever.yy",},"order":15,},

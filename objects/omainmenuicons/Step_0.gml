@@ -29,8 +29,8 @@ if (image_index == 0 && P1menuConfirm)
 {
 	room_goto(rRusselMap);
 	
-	global.campaignMapLocationX = 499;
-	global.campaignMapLocationY = 105
+	global.campaignMapLocationX = 160;
+	global.campaignMapLocationY = 244;
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }

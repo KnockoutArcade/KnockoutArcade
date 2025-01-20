@@ -4,7 +4,7 @@
 if (followTarget != noone)
 { 
 	xPosition = followTarget.x;
-	yPosition = followTarget.y;
+	yPosition = followTarget.y - 20;
 }
 
 x = xPosition;
