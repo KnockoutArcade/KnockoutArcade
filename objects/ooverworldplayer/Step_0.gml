@@ -110,3 +110,9 @@ if (animTimer == 1)
 }
 
 #endregion
+
+// Returning to main menu
+if (returnToMainMenu)
+{
+	room_goto(rMainMenu);
+}
