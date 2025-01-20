@@ -12,8 +12,8 @@ var returnToMainMenu = global.p1ButtonMenuDeny;
 // Movement Calculation
 #region
 
-horizontalMovement = moveRight + moveLeft;
-verticalMovement = moveUp + moveDown;
+var horizontalMovement = moveRight + moveLeft;
+var verticalMovement = moveUp + moveDown;
 
 // Get the angle to move towards
 moveDirection = point_direction(0, 0, horizontalMovement, verticalMovement);
@@ -65,5 +65,35 @@ if (place_meeting(x, y - ySpeed, oWall))
 	ySpeed = 0;
 }
 y += -ySpeed;
+
+#endregion
+
+// Animation
+#region
+
+// If moving horizontally...
+if (horizontalMovement != 0 && verticalMovement == 0)
+{
+	sprite_index = OverworldSprites.sideways_Sprite;
+	image_xscale = horizontalMovement;
+}
+else if (horizontalMovement != 0 && verticalMovement == 1) // Travelling up and diagonally
+{
+	sprite_index = OverworldSprites.diagonalUpwards_Sprite;
+	image_xscale = horizontalMovement;
+}
+else if (horizontalMovement != 0 && verticalMovement == -1) // Travelling down and diagonally
+{
+	sprite_index = OverworldSprites.diagonalDownwards_Sprite;
+	image_xscale = horizontalMovement;
+}
+else if (horizontalMovement == 0 && verticalMovement == 1) // Travelling straight up
+{
+	sprite_index = OverworldSprites.upwards_Sprite;
+}
+else if (horizontalMovement == 0 && verticalMovement == -1) // Travelling straight down
+{
+	sprite_index = OverworldSprites.downwards_Sprite;
+}
 
 #endregion
