@@ -71,6 +71,8 @@ y += -ySpeed;
 // Animation
 #region
 
+animTimer++;
+
 // If moving horizontally...
 if (horizontalMovement != 0 && verticalMovement == 0)
 {
@@ -94,6 +96,17 @@ else if (horizontalMovement == 0 && verticalMovement == 1) // Travelling straigh
 else if (horizontalMovement == 0 && verticalMovement == -1) // Travelling straight down
 {
 	sprite_index = OverworldSprites.downwards_Sprite;
+}
+else // Not moving at all
+{
+	image_index = 0;
+	animTimer = 0;
+}
+
+// If we have just started moving, immediately display the first walk frame.
+if (animTimer == 1)
+{
+	image_index = 1;
 }
 
 #endregion
