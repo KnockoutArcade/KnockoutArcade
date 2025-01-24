@@ -393,6 +393,7 @@
     {"id":{"name":"sStageSelect_StageNames_strip5","path":"sprites/sStageSelect_StageNames_strip5/sStageSelect_StageNames_strip5.yy",},"order":3,},
     {"id":{"name":"sGuntherWins","path":"sprites/sGuntherWins/sGuntherWins.yy",},"order":3,},
     {"id":{"name":"sRussel_NSpecial","path":"sprites/sRussel_NSpecial/sRussel_NSpecial.yy",},"order":28,},
+    {"id":{"name":"sFileSelect_NewGameText","path":"sprites/sFileSelect_NewGameText/sFileSelect_NewGameText.yy",},"order":6,},
     {"id":{"name":"sRussel_Standing_Light","path":"sprites/sRussel_Standing_Light/sRussel_Standing_Light.yy",},"order":1,},
     {"id":{"name":"oSuperExerciseBall","path":"objects/oSuperExerciseBall/oSuperExerciseBall.yy",},"order":4,},
     {"id":{"name":"oRoundCounter","path":"objects/oRoundCounter/oRoundCounter.yy",},"order":2,},

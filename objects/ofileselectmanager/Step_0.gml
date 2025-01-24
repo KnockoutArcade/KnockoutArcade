@@ -23,6 +23,8 @@ if (instance_exists(oScreenTransition))
 if (P1menuDeny)
 {
 	room_goto(rMainMenu);
+	
+	font_delete(fileFont);
 }
 
 switch (state)
@@ -117,6 +119,10 @@ switch (state)
 			file1DrawColor = #9092a6;
 			file2DrawColor = #38343b;
 			file3DrawColor = #38343b;
+			
+			file1TextDrawColor = c_white;
+			file2TextDrawColor = #b2b2b2;
+			file3TextDrawColor = #b2b2b2;
 		}
 		else if (selectedFile == 1)
 		{
@@ -131,6 +137,10 @@ switch (state)
 			file1DrawColor = #38343b;
 			file2DrawColor = #9092a6;
 			file3DrawColor = #38343b;
+			
+			file1TextDrawColor = #b2b2b2;
+			file2TextDrawColor = c_white;
+			file3TextDrawColor = #b2b2b2;
 		}
 		else
 		{
@@ -145,6 +155,10 @@ switch (state)
 			file1DrawColor = #38343b;
 			file2DrawColor = #38343b;
 			file3DrawColor = #9092a6;
+			
+			file1TextDrawColor = #b2b2b2;
+			file2TextDrawColor = #b2b2b2;
+			file3TextDrawColor = c_white;
 		}
 	}
 	break;

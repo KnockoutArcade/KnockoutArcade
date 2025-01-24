@@ -36,10 +36,15 @@ isSelectingFile1 = false; // These are for the draw event
 isSelectingFile2 = false;
 isSelectingFile3 = false;
 
-// What color to draw the text for each file
+// What color to use for the file number
 file1DrawColor = #38343b;
 file2DrawColor = #38343b;
 file3DrawColor = #38343b;
+
+// What color to use for the time played an completion percent
+file1TextDrawColor = #b2b2b2;
+file2TextDrawColor = #b2b2b2;
+file3TextDrawColor = #b2b2b2;
 
 // Animation Timer
 animTimer = 0;
@@ -59,3 +64,6 @@ enum eFILESELECTMENUSTATES
 menuHorizontalDirection = 0;
 menuCooldown = 13;
 menuCooldownTimer = 0;
+
+// Sprite font
+fileFont = font_add_sprite_ext(sSingleplayerHudNumbers, "0123456789.:-%", true, 1);
