@@ -2,9 +2,26 @@ var P1menuUp = global.p1ButtonMenuUp;
 var P1menuDown = global.p1ButtonMenuDown;
 var P1menuConfirm = global.p1ButtonMenuConfirm;
 
+if (screenTransitionObject != noone)
+{
+	P1menuUp = false;
+	P1menuDown = false;
+	P1menuConfirm = false;
+	
+	// Transition To other screens
+	if (screenTransitionObject.image_index >= 15)
+	{
+		room_goto(roomToTransitionTo);
+	}
+	else
+	{
+		exit;
+	}
+}
+
 menuCooldown--;
 
-if (P1menuUp && menuCooldown < 1)
+if (P1menuUp && menuCooldown < 1 )
 {
 	image_index--;
 	menuCooldown = menuCooldownBuffer;
@@ -37,8 +54,9 @@ if (image_index == 0 && P1menuConfirm)
 	audio_play_sound(sfx_UI_Select, 0, false);
 	
 	*/
+	screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 	
-	room_goto(rCampaignFileSelect);
+	roomToTransitionTo = rCampaignFileSelect;
 }
 
 if (image_index == 1 && P1menuConfirm)
@@ -117,3 +135,4 @@ if (keyboard_check_pressed(vk_backspace))
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
+

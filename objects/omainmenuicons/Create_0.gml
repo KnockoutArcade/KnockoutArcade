@@ -6,3 +6,9 @@ isPercyEyesClosed = false; // Whether Percy is blinking or not (0 for not, 1 for
 percyBlinkTimer = 0; // Timer for controlling Percy's blinks
 percyEyesOpenTimerCap = 120; // The amount of time Percy's eyes remain open
 percyEyesClosedTimerCap = 5; // The amount of time Percy's eyes remain closed
+
+screenTransitionObject = noone;
+
+animTimer = 0;
+
+roomToTransitionTo = rCharacterSelectScreen;
