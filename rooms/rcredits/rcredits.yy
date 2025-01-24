@@ -46,8 +46,8 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Rooms",
-    "path": "folders/Rooms.yy",
+    "name": "Main Menu",
+    "path": "folders/Rooms/Main Menu.yy",
   },
   "resourceVersion": "1.0",
   "name": "rCredits",
