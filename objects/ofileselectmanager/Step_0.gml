@@ -255,6 +255,21 @@ switch (state)
 			titleSubimage = 0;
 			animTimer = 0;
 			state = eFILESELECTMENUSTATES.INTRO;
+			
+			exit;
+		}
+		
+		// Selecting a character
+		if (P1menuConfirm)
+		{
+			room_goto(rRusselMap);
+	
+			global.campaignMapLocationX = 160;
+			global.campaignMapLocationY = 244;
+	
+			audio_play_sound(sfx_UI_Select, 0, false);
+			
+			font_delete(fileFont);
 		}
 	}
 	break;

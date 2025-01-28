@@ -85,7 +85,7 @@ draw_set_font(Font1);
 #region // Drawing buttons
 
 // When drawing the buttons, only show up during the "Selecting File" state
-if (state != eFILESELECTMENUSTATES.SELECTING_FILE)
+if (state != eFILESELECTMENUSTATES.SELECTING_FILE && state != eFILESELECTMENUSTATES.SELECTING_CHARACTER)
 {
 	exit;
 }
@@ -124,6 +124,10 @@ else
 }
 
 // Draw the "Y" button at the bottom of the screen
+if (state == eFILESELECTMENUSTATES.SELECTING_CHARACTER)
+{
+	exit; // But only if we are not selecting a character
+}
 draw_sprite(sFileSelect_ButtonText, 3, 111, 112);
 if (global.player1ControllerType == "KEYBOARD")
 {
