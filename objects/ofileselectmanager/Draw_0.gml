@@ -30,9 +30,9 @@ draw_set_valign(fa_center);
 draw_set_color(file2TextDrawColor);
 draw_set_font(fileFont);
 
-draw_text_ext(file2PositionX + 9, file2PositionY + 48, "0:30", 4, 130);
+draw_text_ext(file2PositionX + 9, file2PositionY + 48, "--:--", 4, 130);
 draw_set_halign(fa_center);
-draw_text_ext(file2PositionX + 16, file2PositionY + 58, "50%", 4, 130);
+draw_text_ext(file2PositionX + 16, file2PositionY + 58, "0%", 4, 130);
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
@@ -49,20 +49,38 @@ draw_set_valign(fa_center);
 draw_set_color(file3TextDrawColor);
 draw_set_font(fileFont);
 
-draw_text_ext(file3PositionX + 9, file3PositionY + 48, "20:00", 4, 130);
+draw_text_ext(file3PositionX + 9, file3PositionY + 48, "--:--", 4, 130);
 draw_set_halign(fa_center);
-draw_text_ext(file3PositionX + 16, file3PositionY + 58, "100%", 4, 130);
+draw_text_ext(file3PositionX + 16, file3PositionY + 58, "0%", 4, 130);
 
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 draw_set_color(c_white);
 draw_set_font(Font1);
 
+
 // Draw the title
 draw_sprite_ext(sFileSelect_FileSelectText, titleSubimage, titlePositionX, titlePositionY, 1, 1, 0, c_white, 1);
 
+
 // Draw the character vouchers
 draw_sprite(sFileSelect_CharacterVouchers, 0, characterVoucherPositionX, characterVoucherPositionY);
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_center);
+draw_set_color(c_white);
+draw_set_font(fileFont);
+
+draw_text_ext(characterVoucherPositionX + 45, characterVoucherPositionY + 6, "$0.00", 4, 130); // Money
+draw_text_ext(characterVoucherPositionX + 45, characterVoucherPositionY + 13, "--:--", 4, 130); // Time
+draw_set_halign(fa_center);
+draw_text_ext(characterVoucherPositionX + 61, characterVoucherPositionY + 23, "0%", 4, 130); // % Complete
+
+draw_set_halign(fa_left);
+draw_set_valign(fa_top);
+draw_set_color(c_white);
+draw_set_font(Font1);
+
 
 #region // Drawing buttons
 

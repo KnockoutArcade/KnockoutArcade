@@ -20,15 +20,6 @@ if (instance_exists(oScreenTransition))
 	exit;
 }
 
-if (P1menuDeny)
-{
-	room_goto(rMainMenu);
-	
-	font_delete(fileFont);
-	
-	exit;
-}
-
 switch (state)
 {
 	case eFILESELECTMENUSTATES.INTRO :
@@ -163,6 +154,14 @@ switch (state)
 			file3TextDrawColor = c_white;
 		}
 		
+		// Going back to the main menu
+		if (P1menuDeny)
+		{
+			room_goto(rMainMenu);
+			font_delete(fileFont);
+			exit;
+		}
+		
 		// Confirming a file
 		if (P1menuConfirm)
 		{
@@ -244,6 +243,19 @@ switch (state)
 			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
 		}
 		
+	}
+	break;
+	
+	case eFILESELECTMENUSTATES.SELECTING_CHARACTER :
+	{
+		// Going back to the file Select
+		if (P1menuDeny)
+		{
+			characterVoucherPositionX = 160;
+			titleSubimage = 0;
+			animTimer = 0;
+			state = eFILESELECTMENUSTATES.INTRO;
+		}
 	}
 	break;
 }
