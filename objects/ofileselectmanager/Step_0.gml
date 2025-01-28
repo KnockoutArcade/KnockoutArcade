@@ -25,6 +25,8 @@ if (P1menuDeny)
 	room_goto(rMainMenu);
 	
 	font_delete(fileFont);
+	
+	exit;
 }
 
 switch (state)
@@ -159,6 +161,33 @@ switch (state)
 			file1TextDrawColor = #b2b2b2;
 			file2TextDrawColor = #b2b2b2;
 			file3TextDrawColor = c_white;
+		}
+		
+		// Confirming a file
+		if (P1menuConfirm)
+		{
+			state = eFILESELECTMENUSTATES.CHOSE_FILE;
+			animTimer = 0;
+		}
+	}
+	break;
+	
+	case eFILESELECTMENUSTATES.CHOSE_FILE : 
+	{
+		animTimer++;
+		
+		// Slide the unselected files down
+		if (animTimer <= 30)
+		{
+			if (selectedFile == 0) // Selected the first file
+			{
+				file2PositionY = lerp(file2PositionY, 240, fileMovementSpeed);
+				file3PositionY = lerp(file3PositionY, 240, fileMovementSpeed);
+			}
+			else if (selectedFile == 1) // Selected the second
+			{
+				
+			}
 		}
 	}
 	break;

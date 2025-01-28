@@ -61,4 +61,55 @@ draw_set_font(Font1);
 // Draw the title
 draw_sprite_ext(sFileSelect_FileSelectText, 0, titlePositionX, titlePositionY, 1, 1, 0, c_white, 1);
 
+#region // Drawing buttons
 
+// When drawing the buttons, only show up during the "Selecting File" state
+if (state != eFILESELECTMENUSTATES.SELECTING_FILE)
+{
+	exit;
+}
+
+// Draw the "A" button at the bottom of the screen
+draw_sprite(sFileSelect_ButtonText, 0, 20, 112);
+if (global.player1ControllerType == "KEYBOARD")
+{
+	draw_sprite(sButtons_Keyboard, 16, 8, 110); // The "J" Key
+}
+else
+{
+	draw_sprite(sButtons_Controller, 0, 8, 110); // The "A" Button
+}
+
+// Draw the "B" button at the bottom of the screen
+draw_sprite(sFileSelect_ButtonText, 1, 42, 112);
+if (global.player1ControllerType == "KEYBOARD")
+{
+	draw_sprite(sButtons_Keyboard, 17, 30, 110); // The "K" Key
+}
+else
+{
+	draw_sprite(sButtons_Controller, 1, 30, 110); // The "B" Button
+}
+
+// Draw the "X" button at the bottom of the screen
+draw_sprite(sFileSelect_ButtonText, 2, 74, 112);
+if (global.player1ControllerType == "KEYBOARD")
+{
+	draw_sprite(sButtons_Keyboard, 18, 62, 110); // The "L" Key
+}
+else
+{
+	draw_sprite(sButtons_Controller, 2, 62, 110); // The "X" Button
+}
+
+// Draw the "Y" button at the bottom of the screen
+draw_sprite(sFileSelect_ButtonText, 3, 111, 112);
+if (global.player1ControllerType == "KEYBOARD")
+{
+	draw_sprite(sButtons_Keyboard, 42, 99, 110); // The ";" Key
+}
+else
+{
+	draw_sprite(sButtons_Controller, 3, 99, 110); // The "Y" Button
+}
+#endregion
