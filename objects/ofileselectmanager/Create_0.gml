@@ -6,6 +6,8 @@
 titlePositionX = -160;
 titlePositionY = 8;
 
+titleSubimage = 0; // Which text to display: "File Select" or "Character Select"
+
 // This is the bar on the left that reads "KO"
 leftmostBar = layer_get_id("LeftmostBar");
 leftmostBarPositionX = -10;
@@ -46,6 +48,16 @@ file1TextDrawColor = #b2b2b2;
 file2TextDrawColor = #b2b2b2;
 file3TextDrawColor = #b2b2b2;
 
+// Where the character voucher is
+characterVoucherPositionX = 160;
+characterVoucherPositionY = 0;
+
+characterVoucherTargetPositionX = 42;
+characterVoucherTargetPositionY = 52;
+// NOTE: There may be more than one character voucher in the far future.
+// When the time comes, make the vouchers into structs so that it's easier
+// to iterate through them.
+
 // Animation Timer
 animTimer = 0;
 
@@ -58,7 +70,7 @@ enum eFILESELECTMENUSTATES
 	DELETING_FILE,
 	COPYING_FILE,
 	CHOSE_FILE,
-	
+	CANCEL_CHARACTER_SELECT,
 	CHARACTER_SELECT_INTRO,
 	SELECTING_CHARACTER,
 	START_GAME

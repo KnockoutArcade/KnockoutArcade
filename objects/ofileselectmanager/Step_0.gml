@@ -181,14 +181,69 @@ switch (state)
 		{
 			if (selectedFile == 0) // Selected the first file
 			{
-				file2PositionY = lerp(file2PositionY, 240, fileMovementSpeed);
-				file3PositionY = lerp(file3PositionY, 240, fileMovementSpeed);
+				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
+				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
 			}
 			else if (selectedFile == 1) // Selected the second
 			{
-				
+				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
+				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
+			}
+			else if (selectedFile == 2) // Third
+			{
+				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
+				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
 			}
 		}
+		else if (animTimer > 45 && animTimer <= 75) // Slide the selected file down and the Title to the left
+		{
+			if (selectedFile == 0) // Selected the first file
+			{
+				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
+				
+			}
+			else if (selectedFile == 1) // Selected the second
+			{
+				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
+			}
+			else if (selectedFile == 2) // Third
+			{
+				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
+			}
+			
+			// Lerp Title Position
+			titlePositionX = lerp(titlePositionX, -160, 0.2);
+		}
+		else if (animTimer > 75) // transition to the character select
+		{
+			state = eFILESELECTMENUSTATES.CHARACTER_SELECT_INTRO;
+			titleSubimage = 1;
+			animTimer = 0;
+			
+			// Initialize the voucher to be offscreen
+			characterVoucherPositionX = 160;
+			characterVoucherPositionY = 52;
+		}
+	}
+	break;
+	
+	case eFILESELECTMENUSTATES.CHARACTER_SELECT_INTRO :
+	{
+		animTimer++;
+		
+		if (animTimer < 30) // Slide in the new Title and the Character Voucher
+		{
+			// Lerp Title Position
+			titlePositionX = lerp(titlePositionX, 0, 0.2);
+			
+			// Lerp Character Voucher
+			characterVoucherPositionX = lerp(characterVoucherPositionX, characterVoucherTargetPositionX, 0.2);
+		}
+		else
+		{
+			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
+		}
+		
 	}
 	break;
 }

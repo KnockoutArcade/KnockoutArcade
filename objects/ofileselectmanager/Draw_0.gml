@@ -59,7 +59,10 @@ draw_set_color(c_white);
 draw_set_font(Font1);
 
 // Draw the title
-draw_sprite_ext(sFileSelect_FileSelectText, 0, titlePositionX, titlePositionY, 1, 1, 0, c_white, 1);
+draw_sprite_ext(sFileSelect_FileSelectText, titleSubimage, titlePositionX, titlePositionY, 1, 1, 0, c_white, 1);
+
+// Draw the character vouchers
+draw_sprite(sFileSelect_CharacterVouchers, 0, characterVoucherPositionX, characterVoucherPositionY);
 
 #region // Drawing buttons
 
