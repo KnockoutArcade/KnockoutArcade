@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 319,
+  "bbox_right": 558,
   "bbox_top": 0,
   "bbox_bottom": 279,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 320,
+  "width": 559,
   "height": 280,
   "textureGroupId": {
     "name": "Default",
@@ -24,9 +24,9 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e4848417-15fd-48f7-843d-7bf84418af86","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e4848417-15fd-48f7-843d-7bf84418af86","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"LayerId":{"name":"9d7543c3-0263-4129-a780-0a6ec037feb3","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCampaignMapTest","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","name":"e4848417-15fd-48f7-843d-7bf84418af86","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"0938d8b9-b13c-4eb2-b421-ea83e22f6d56","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"0938d8b9-b13c-4eb2-b421-ea83e22f6d56","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"LayerId":{"name":"f052e859-1c2e-4c61-bcfc-edae587cf14d","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCampaignMapTest","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","name":"0938d8b9-b13c-4eb2-b421-ea83e22f6d56","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sCampaignMapTest","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"e9baf6c1-44e1-478b-808c-46503778a09b","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e4848417-15fd-48f7-843d-7bf84418af86","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"7f221f88-fc8e-4308-8873-91425a356d17","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0938d8b9-b13c-4eb2-b421-ea83e22f6d56","path":"sprites/sCampaignMapTest/sCampaignMapTest.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -65,7 +65,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"9d7543c3-0263-4129-a780-0a6ec037feb3","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f052e859-1c2e-4c61-bcfc-edae587cf14d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
