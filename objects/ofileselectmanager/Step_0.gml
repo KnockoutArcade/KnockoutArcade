@@ -4,13 +4,16 @@
 // Inputs
 var P1menuLeft = global.p1ButtonMenuLeft;
 var P1menuRight = global.p1ButtonMenuRight;
+var P1menuUp = global.p1ButtonUp;
+var P1menuDown = global.p1ButtonDown;
 var P1menuConfirm = global.p1ButtonMenuConfirm;
 var P1menuDeny = global.p1ButtonMenuDeny;
 
 menuHorizontalDirection = P1menuLeft + P1menuRight;
+var menuVerticalDirection = P1menuUp + P1menuDown;
 menuCooldownTimer--;
 
-if (menuCooldownTimer <= 0 || menuHorizontalDirection == 0)
+if (menuCooldownTimer <= 0 || (menuHorizontalDirection == 0 && menuVerticalDirection == 0))
 {
 	menuCooldownTimer = 0;
 }
@@ -195,16 +198,22 @@ switch (state)
 			{
 				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
 				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
+				
+				file1PositionY = 32;
 			}
 			else if (selectedFile == 1) // Selected the second
 			{
 				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
 				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
+				
+				file2PositionY = 32;
 			}
 			else if (selectedFile == 2) // Third
 			{
 				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
 				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
+				
+				file3PositionY = 32;
 			}
 		}
 		else if (animTimer > 45 && animTimer <= 75) // Slide the selected file down and the Title to the left
@@ -258,6 +267,7 @@ switch (state)
 		else
 		{
 			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
+			selectorPositionX = 31;
 		}
 		
 	}
@@ -267,6 +277,9 @@ switch (state)
 	{
 		// Lerp the Voucher slightly
 		characterVoucherPositionY = lerp(characterVoucherPositionY, characterVoucherTargetPositionY - 5, 0.2);
+		
+		animTimer++;
+		selectorPositionX = 31 + (sin(animTimer/4) * 2);
 		
 		// Going back to the file Select
 		if (P1menuDeny)
@@ -280,6 +293,11 @@ switch (state)
 		// Selecting a character
 		if (P1menuConfirm)
 		{
+			
+			state = eFILESELECTMENUSTATES.CHOSE_CHARACTER;
+			currentRow = 1;
+			
+			/*
 			room_goto(rRusselMap);
 	
 			global.campaignMapLocationX = 160;
@@ -288,6 +306,7 @@ switch (state)
 			audio_play_sound(sfx_UI_Select, 0, false);
 			
 			font_delete(fileFont);
+			*/
 		}
 	}
 	break;
@@ -315,6 +334,45 @@ switch (state)
 			animTimer = 0;
 			state = eFILESELECTMENUSTATES.INTRO;
 		}
+	}
+	break;
+	
+	case eFILESELECTMENUSTATES.CHOSE_CHARACTER :
+	{
+		// Handle Option Selection
+		if (menuVerticalDirection == -1 && menuCooldownTimer <= 0)
+		{
+			currentRow--;
+			menuCooldownTimer = menuCooldown;
+			
+			if (currentRow < 0)
+			{
+				currentRow = maxRows - 1;
+			}
+		}
+		else if (menuVerticalDirection == 1 && menuCooldownTimer <= 0)
+		{
+			currentRow++;
+			menuCooldownTimer = menuCooldown;
+			
+			if (currentRow > maxRows - 1)
+			{
+				currentRow = 0;
+			}
+		}
+		
+		// Handle Menu Deny
+		if (P1menuDeny || (P1menuConfirm && currentRow == 1))
+		{
+			currentRow = 1;
+			
+			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
+			animTimer = 0;
+			
+			exit;
+		}
+		
+		// Handle Menu Confirm
 	}
 	break;
 }

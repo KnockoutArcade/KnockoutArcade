@@ -58,6 +58,14 @@ characterVoucherTargetPositionY = 52;
 // When the time comes, make the vouchers into structs so that it's easier
 // to iterate through them.
 
+// Selector Hand Vars
+selectorPositionX = 31;
+selectorPositionY = 64;
+
+// Start Game Cursor Vars
+currentRow = 0;
+maxRows = 2;
+
 // Animation Timer
 animTimer = 0;
 
@@ -73,7 +81,7 @@ enum eFILESELECTMENUSTATES
 	CANCEL_CHARACTER_SELECT,
 	CHARACTER_SELECT_INTRO,
 	SELECTING_CHARACTER,
-	START_GAME
+	CHOSE_CHARACTER
 }
 
 // Menu Vars

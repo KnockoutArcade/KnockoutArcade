@@ -81,11 +81,26 @@ draw_set_valign(fa_top);
 draw_set_color(c_white);
 draw_set_font(Font1);
 
+// Draw the Selector
+if (state == eFILESELECTMENUSTATES.SELECTING_CHARACTER)
+{
+	draw_sprite(sMenu_SelectorHand, 0, selectorPositionX, selectorPositionY);
+}
+
+// Draw the Start game confirmation text
+if (state == eFILESELECTMENUSTATES.CHOSE_CHARACTER)
+{
+	draw_sprite(sFIleSelect_StartGame, 0, 0, 0);
+	
+	draw_sprite(sPauseMenu_SelectionSmall, 0, 29, 61 + (currentRow * 12));
+			
+	draw_sprite(sPauseMenu_YesNo, 0, 0, 0);
+}
 
 #region // Drawing buttons
 
 // When drawing the buttons, only show up during the "Selecting File" state
-if (state != eFILESELECTMENUSTATES.SELECTING_FILE && state != eFILESELECTMENUSTATES.SELECTING_CHARACTER)
+if (state != eFILESELECTMENUSTATES.SELECTING_FILE && state != eFILESELECTMENUSTATES.SELECTING_CHARACTER && state != eFILESELECTMENUSTATES.CHOSE_CHARACTER)
 {
 	exit;
 }
@@ -113,6 +128,10 @@ else
 }
 
 // Draw the "X" button at the bottom of the screen
+if (state == eFILESELECTMENUSTATES.CHOSE_CHARACTER)
+{
+	exit; // But only if we are not about to start the game
+}
 draw_sprite(sFileSelect_ButtonText, 2, 74, 112);
 if (global.player1ControllerType == "KEYBOARD")
 {
