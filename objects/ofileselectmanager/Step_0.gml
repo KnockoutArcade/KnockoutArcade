@@ -18,16 +18,27 @@ if (menuCooldownTimer <= 0 || (menuHorizontalDirection == 0 && menuVerticalDirec
 	menuCooldownTimer = 0;
 }
 
-if (instance_exists(oScreenTransition))
+if (screenTransitionObject != noone)
 {
 	// If we have created a backwards screen transition, exit this menu.
-	with (oScreenTransition)
+	with (screenTransitionObject)
 	{
-		if (sprite_index == sScreenTransition_Backwards && image_index >= 15)
+		if (sprite_index == sScreenTransition_Backwards && image_index >= 16)
 		{
 			room_goto(rMainMenu);
 			font_delete(other.fileFont);
 			exit;
+		}
+		else if (sprite_index == sScreenTransition && image_index >= 16)
+		{
+			room_goto(rRusselMap);
+	
+			global.campaignMapLocationX = 160;
+			global.campaignMapLocationY = 244;
+	
+			//audio_play_sound(sfx_UI_Select, 0, false);
+			
+			font_delete(other.fileFont);
 		}
 	}
 	
@@ -171,10 +182,10 @@ switch (state)
 		// Going back to the main menu
 		if (P1menuDeny)
 		{
-			with (instance_create_depth(0, 0, -10000, oScreenTransition))
-			{
-				sprite_index = sScreenTransition_Backwards;
-			}
+			// Create the screen transition object to take us away
+			screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+			screenTransitionObject.sprite_index = sScreenTransition_Backwards;
+			
 			exit;
 		}
 		
@@ -293,20 +304,8 @@ switch (state)
 		// Selecting a character
 		if (P1menuConfirm)
 		{
-			
 			state = eFILESELECTMENUSTATES.CHOSE_CHARACTER;
 			currentRow = 1;
-			
-			/*
-			room_goto(rRusselMap);
-	
-			global.campaignMapLocationX = 160;
-			global.campaignMapLocationY = 244;
-	
-			audio_play_sound(sfx_UI_Select, 0, false);
-			
-			font_delete(fileFont);
-			*/
 		}
 	}
 	break;
@@ -373,6 +372,15 @@ switch (state)
 		}
 		
 		// Handle Menu Confirm
+		if (P1menuConfirm)
+		{
+			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
+			
+			// Create the screen transition object to take us away
+			screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+			
+			exit;
+		}
 	}
 	break;
 }

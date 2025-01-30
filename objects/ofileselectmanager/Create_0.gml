@@ -91,3 +91,6 @@ menuCooldownTimer = 0;
 
 // Sprite font
 fileFont = font_add_sprite_ext(sSingleplayerHudNumbers, "0123456789.:-%", true, 1);
+
+// Screen Transition
+screenTransitionObject = noone;
