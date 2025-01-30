@@ -35,13 +35,17 @@ if (screenTransitionObject != noone)
 	
 			global.campaignMapLocationX = 160;
 			global.campaignMapLocationY = 244;
-	
-			//audio_play_sound(sfx_UI_Select, 0, false);
 			
 			font_delete(other.fileFont);
 		}
 	}
 	
+	exit;
+}
+
+// This allows the file select intro to be delayed after the initial screen transition.
+if (instance_exists(oScreenTransition))
+{
 	exit;
 }
 
@@ -107,6 +111,8 @@ switch (state)
 			selectedFile--;
 			menuCooldownTimer = menuCooldown;
 			
+			audio_play_sound(sfx_CharSel_Hover, 0, false);
+			
 			if (selectedFile < 0)
 			{
 				selectedFile = 2;
@@ -116,6 +122,8 @@ switch (state)
 		{
 			selectedFile++;
 			menuCooldownTimer = menuCooldown;
+			
+			audio_play_sound(sfx_CharSel_Hover, 0, false);
 			
 			if (selectedFile > 2)
 			{
@@ -185,6 +193,7 @@ switch (state)
 			// Create the screen transition object to take us away
 			screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 			screenTransitionObject.sprite_index = sScreenTransition_Backwards;
+			audio_play_sound(sfx_UI_Exit, 0, false);
 			
 			exit;
 		}
@@ -194,6 +203,8 @@ switch (state)
 		{
 			state = eFILESELECTMENUSTATES.CHOSE_FILE;
 			animTimer = 0;
+			
+			audio_play_sound(sfx_UI_Select, 0, false);
 		}
 	}
 	break;
@@ -297,6 +308,7 @@ switch (state)
 		{
 			animTimer = 0;
 			state = eFILESELECTMENUSTATES.CANCEL_CHARACTER_SELECT;
+			audio_play_sound(sfx_UI_Exit, 0, false);
 			
 			exit;
 		}
@@ -306,6 +318,8 @@ switch (state)
 		{
 			state = eFILESELECTMENUSTATES.CHOSE_CHARACTER;
 			currentRow = 1;
+			
+			audio_play_sound(sfx_UI_Select, 0, false);
 		}
 	}
 	break;
@@ -344,6 +358,8 @@ switch (state)
 			currentRow--;
 			menuCooldownTimer = menuCooldown;
 			
+			audio_play_sound(sfx_CharSel_Hover, 0, false);
+			
 			if (currentRow < 0)
 			{
 				currentRow = maxRows - 1;
@@ -353,6 +369,8 @@ switch (state)
 		{
 			currentRow++;
 			menuCooldownTimer = menuCooldown;
+			
+			audio_play_sound(sfx_CharSel_Hover, 0, false);
 			
 			if (currentRow > maxRows - 1)
 			{
@@ -368,6 +386,8 @@ switch (state)
 			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
 			animTimer = 0;
 			
+			audio_play_sound(sfx_UI_Exit, 0, false);
+			
 			exit;
 		}
 		
@@ -378,6 +398,8 @@ switch (state)
 			
 			// Create the screen transition object to take us away
 			screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+			
+			audio_play_sound(sfx_UI_Select, 0, false);
 			
 			exit;
 		}

@@ -44,16 +44,8 @@ else if (P1menuUp + P1menuDown == 0)
 
 if (image_index == 0 && P1menuConfirm)
 {
-	/* OLD CODE
-	
-	room_goto(rRusselMap);
-	
-	global.campaignMapLocationX = 160;
-	global.campaignMapLocationY = 244;
-	
 	audio_play_sound(sfx_UI_Select, 0, false);
 	
-	*/
 	screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 	
 	roomToTransitionTo = rCampaignFileSelect;
