@@ -173,6 +173,7 @@
     {"id":{"name":"sCharSel_ReadyToFight","path":"sprites/sCharSel_ReadyToFight/sCharSel_ReadyToFight.yy",},"order":14,},
     {"id":{"name":"PerformLandingBuffer","path":"scripts/PerformLandingBuffer/PerformLandingBuffer.yy",},"order":41,},
     {"id":{"name":"HandleTraction","path":"scripts/HandleTraction/HandleTraction.yy",},"order":3,},
+    {"id":{"name":"sScreenTransition_Backwards","path":"sprites/sScreenTransition_Backwards/sScreenTransition_Backwards.yy",},"order":3,},
     {"id":{"name":"sCommandLists_Jay_Throws","path":"sprites/sCommandLists_Jay_Throws/sCommandLists_Jay_Throws.yy",},"order":1,},
     {"id":{"name":"sRusselMap","path":"sprites/sRusselMap/sRusselMap.yy",},"order":1,},
     {"id":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"order":0,},

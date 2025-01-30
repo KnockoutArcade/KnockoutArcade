@@ -17,6 +17,17 @@ if (menuCooldownTimer <= 0 || menuHorizontalDirection == 0)
 
 if (instance_exists(oScreenTransition))
 {
+	// If we have created a backwards screen transition, exit this menu.
+	with (oScreenTransition)
+	{
+		if (sprite_index == sScreenTransition_Backwards && image_index >= 15)
+		{
+			room_goto(rMainMenu);
+			font_delete(other.fileFont);
+			exit;
+		}
+	}
+	
 	exit;
 }
 
@@ -157,8 +168,10 @@ switch (state)
 		// Going back to the main menu
 		if (P1menuDeny)
 		{
-			room_goto(rMainMenu);
-			font_delete(fileFont);
+			with (instance_create_depth(0, 0, -10000, oScreenTransition))
+			{
+				sprite_index = sScreenTransition_Backwards;
+			}
 			exit;
 		}
 		

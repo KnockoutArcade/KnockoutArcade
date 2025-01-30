@@ -7,3 +7,4 @@ if (image_index >= 28)
 {
 	instance_destroy();
 }
+
