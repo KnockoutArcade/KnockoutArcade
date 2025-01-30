@@ -50,7 +50,7 @@ file3TextDrawColor = #b2b2b2;
 
 // Where the character voucher is
 characterVoucherPositionX = 160;
-characterVoucherPositionY = 0;
+characterVoucherPositionY = 52;
 
 characterVoucherTargetPositionX = 42;
 characterVoucherTargetPositionY = 52;

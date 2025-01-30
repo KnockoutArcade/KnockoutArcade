@@ -211,16 +211,16 @@ switch (state)
 		{
 			if (selectedFile == 0) // Selected the first file
 			{
-				file1PositionY = lerp(file1PositionY, 160, fileMovementSpeed - 0.1);
+				file1PositionY = lerp(file1PositionY, 170, fileMovementSpeed - 0.1);
 				
 			}
 			else if (selectedFile == 1) // Selected the second
 			{
-				file2PositionY = lerp(file2PositionY, 160, fileMovementSpeed - 0.1);
+				file2PositionY = lerp(file2PositionY, 170, fileMovementSpeed - 0.1);
 			}
 			else if (selectedFile == 2) // Third
 			{
-				file3PositionY = lerp(file3PositionY, 160, fileMovementSpeed - 0.1);
+				file3PositionY = lerp(file3PositionY, 170, fileMovementSpeed - 0.1);
 			}
 			
 			// Lerp Title Position
@@ -247,6 +247,10 @@ switch (state)
 		{
 			// Lerp Title Position
 			titlePositionX = lerp(titlePositionX, 0, 0.2);
+		}
+		else if (animTimer >= 30 && animTimer < 60)
+		{
+			titlePositionX = 0;
 			
 			// Lerp Character Voucher
 			characterVoucherPositionX = lerp(characterVoucherPositionX, characterVoucherTargetPositionX, 0.2);
@@ -261,13 +265,14 @@ switch (state)
 	
 	case eFILESELECTMENUSTATES.SELECTING_CHARACTER :
 	{
+		// Lerp the Voucher slightly
+		characterVoucherPositionY = lerp(characterVoucherPositionY, characterVoucherTargetPositionY - 5, 0.2);
+		
 		// Going back to the file Select
 		if (P1menuDeny)
 		{
-			characterVoucherPositionX = 160;
-			titleSubimage = 0;
 			animTimer = 0;
-			state = eFILESELECTMENUSTATES.INTRO;
+			state = eFILESELECTMENUSTATES.CANCEL_CHARACTER_SELECT;
 			
 			exit;
 		}
@@ -283,6 +288,32 @@ switch (state)
 			audio_play_sound(sfx_UI_Select, 0, false);
 			
 			font_delete(fileFont);
+		}
+	}
+	break;
+	
+	case eFILESELECTMENUSTATES.CANCEL_CHARACTER_SELECT :
+	{
+		animTimer++;
+		
+		if (animTimer <= 25)
+		{
+			// Lerp the Voucher slightly
+			characterVoucherPositionY = lerp(characterVoucherPositionY, characterVoucherTargetPositionY, 0.2);
+		}
+		else if (animTimer > 25 && animTimer <= 60)
+		{
+			// Lerp Character Voucher
+			characterVoucherPositionX = lerp(characterVoucherPositionX, 175, 0.23);
+			
+			// Lerp the Title
+			titlePositionX = lerp(titlePositionX, -160, 0.23);
+		} 
+		else if (animTimer > 60)
+		{
+			titleSubimage = 0;
+			animTimer = 0;
+			state = eFILESELECTMENUSTATES.INTRO;
 		}
 	}
 	break;
