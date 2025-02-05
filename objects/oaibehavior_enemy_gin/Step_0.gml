@@ -21,7 +21,7 @@ if (characterID.hitstun > 0)
 	// Clear inputs
 	controllerID.buttonLeft = false;
 	controllerID.buttonRight = false;
-	controllerID.buttonHeavy = false;
+	controllerID.buttonLight = false;
 			
 	// Reset Timer
 	AIEventTimer = 0;
@@ -85,6 +85,9 @@ switch (AIState)
 		
 				// Reset event timers
 				AIEventTimer = 0;
+				
+				// Set the attack substate to 0
+				attackSubstate = 0;
 			}
 		}
 		
@@ -134,40 +137,82 @@ switch (AIState)
 			// Reset Timer
 			AIEventTimer = 0;
 		}
+		
+		// After a little over 2 seconds, if we have not reached our destination, go back to idle.
+		if (AIEventTimer >= 130)
+		{
+			// Set the state
+			AIState = eAIState.IDLE;
+			
+			// Clear inputs
+			controllerID.buttonLeft = false;
+			controllerID.buttonRight = false;
+			
+			// Reset Timer
+			AIEventTimer = 0;
+		}
 	}
 	break;
 	
 	case eAIState.ATTACK :
 	{
-		// Upon entering this state
-		if (AIEventTimer <= 1)
+		// This state is split into two sub-states. 
+		// First, walk to the player...
+		if (!attackSubstate)
 		{
-			// Input a heavy attack
-			controllerID.buttonHeavy = true;
+			// Walk towards the player
+			if (opponent.x > characterID.x)
+			{
+				controllerID.buttonRight = true;
+				controllerID.buttonLeft = false;
+			}
+			else if (opponent.x < characterID.x)
+			{
+				controllerID.buttonLeft = true;
+				controllerID.buttonRight = false;
+			}
+			
+			// Determine if we have gotten close enough to the player
+			if (characterID.x < opponent.x + 20) && (characterID.x > opponent.x - 20)
+			{
+				// Transition to the attack substate.
+				attackSubstate = 1;
+				
+				AIEventTimer = 0;
+				
+				// Reset controls
+				controllerID.buttonRight = false;
+				controllerID.buttonLeft = false;
+			}
+			
+			// If we can't get to the player fast enough, then just go back to idle
+			if (AIEventTimer >= 120)
+			{
+				AIState = eAIState.IDLE;
+				
+				// Reset vars
+				AIEventTimer = 0;
+				attackSubstate = 0;
+				
+				// Reset controls
+				controllerID.buttonRight = false;
+				controllerID.buttonLeft = false;
+			}
 		}
-		else
+		else // then, attack the player
 		{
-			controllerID.buttonHeavy = false;
-		}
-		
-		// Once the attack has finished (the character is not in an attack state anymore)
-		if (!characterID.inAttackState && AIEventTimer > 1)
-		{
-			// Set the state
-			AIState = eAIState.WALK;
+			// Hold down the light attack button
+			controllerID.buttonLight = true;
 			
-			// Clear inputs
-			controllerID.buttonHeavy = false;
-			
-			// Determine random delay
-			randomDelayTimer = irandom_range(30, 120);
-			
-			// Determine random ideal range
-			idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
-			
-			// Set where we are going
-			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
-			targetPositionY = opponent.y;
+			// After the attack is done, go back to idle.
+			if (AIEventTimer > 30)
+			{
+				AIState = eAIState.IDLE;
+				AIEventTimer = 0;
+				attackSubstate = 0;
+				
+				controllerID.buttonLight = false;
+			}
 		}
 	}
 	break;
@@ -178,11 +223,11 @@ switch (AIState)
 		if (characterID.state == eState.IDLE)
 		{
 			// Set the state
-			AIState = eAIState.WALK;
+			AIState = eAIState.IDLE;
 			
 			// Reset event timers
 			AIEventTimer = 0;
-			
+			/*
 			// Determine random delay
 			randomDelayTimer = irandom_range(30, 120);
 			
@@ -192,6 +237,7 @@ switch (AIState)
 			// Set where we are going
 			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
 			targetPositionY = opponent.y;
+			*/
 		}
 	}
 	break;
