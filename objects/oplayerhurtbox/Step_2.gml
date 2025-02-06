@@ -7,7 +7,7 @@ visible = global.toggleHitboxVisibility;
 if (!instance_exists(owner))
 {
 	instance_destroy();
-	show_debug_message("Destroyed");
+	show_debug_message("Hurtbox DESTROYED");
 	exit;
 }
 

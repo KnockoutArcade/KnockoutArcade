@@ -27,15 +27,16 @@ if (characterID.hitstun > 0)
 	AIEventTimer = 0;
 }
 
-// Prevent this object from running
+// Prevent this object from running and blocking
 characterID.canRun = false;
+characterID.isAbleToBlock = false;
 
 // FSM - Finite State Machine
 switch (AIState)
 {
 	case eAIState.INACTIVE :
 	{
-		
+		// Do nothing
 	}
 	break;
 	
