@@ -76,8 +76,7 @@ switch (AIState)
 				idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
 		
 				// Set where we are going
-				targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
-				targetPositionY = opponent.y;
+				setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
 			}
 			else // 4/10 chance to attack
 			{
@@ -101,7 +100,7 @@ switch (AIState)
 		// In this case, our target is some distance away from the player (based on the direction this is facing)
 		if (AIEventTimer mod 5 == 0)
 		{
-			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
+			setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
 		}
 		
 		// Determine which direction we need to walk in
@@ -161,21 +160,32 @@ switch (AIState)
 		// First, walk to the player...
 		if (!attackSubstate)
 		{
-			// Walk towards the player
-			if (opponent.x > characterID.x)
+			setTargetPosition(opponent.x, characterID.y);
+			
+			// Determine which direction we need to walk in
+			var walkDirection = sign(targetPositionX - characterID.x);
+		
+			// Determine if we have reached our destination
+			if (characterID.x < (targetPositionX + 20)) && (characterID.x > targetPositionX - 20)
 			{
-				controllerID.buttonRight = true;
-				controllerID.buttonLeft = false;
+				walkDirection = 0;
 			}
-			else if (opponent.x < characterID.x)
+		
+			// If the destination is to the left
+			if (walkDirection == -1)
 			{
 				controllerID.buttonLeft = true;
 				controllerID.buttonRight = false;
 			}
-			
-			// Determine if we have gotten close enough to the player
-			if (characterID.x < opponent.x + 20) && (characterID.x > opponent.x - 20)
+			else if (walkDirection == 1) // if the destination is to the right
 			{
+				controllerID.buttonLeft = false;
+				controllerID.buttonRight = true;
+			}
+			else // If we reach our destination
+			{
+				// if walk direction is 0, it means we don't need to move and we are able to attack
+			
 				// Transition to the attack substate.
 				attackSubstate = 1;
 				
@@ -228,17 +238,6 @@ switch (AIState)
 			
 			// Reset event timers
 			AIEventTimer = 0;
-			/*
-			// Determine random delay
-			randomDelayTimer = irandom_range(30, 120);
-			
-			// Determine random ideal range
-			idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
-			
-			// Set where we are going
-			targetPositionX = opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale);
-			targetPositionY = opponent.y;
-			*/
 		}
 	}
 	break;
