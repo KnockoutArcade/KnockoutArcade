@@ -115,20 +115,13 @@ switch (AIState)
 		// Floor collision check
 		with (characterID)
 		{
-			// If our next position would make us walk close to over a pit, stop moving.
-			if (!place_meeting(x + (walkSpeed * sign(image_xscale)), y + 1, oCollisionParent))
+			// If our next position would make us close to walking over a pit in front of us, stop moving.
+			if (!place_meeting(x + (walkSpeed * walkDirection), y + 8, oCollisionParent))
 			{
 				// note, we are using the walkspeed of the enemy so that we can be the most accurate.
 				walkDirection = 0;
 			}
-			else if (!place_meeting(x + (walkSpeed * -sign(image_xscale)), y + 1, oCollisionParent))
-			{
-				// We also need to check if this enemy would walk backwards off of a platform.
-				walkDirection = 0;
-			}
 		}
-		
-		
 		
 		// If the destination is to the left
 		if (walkDirection == -1)
