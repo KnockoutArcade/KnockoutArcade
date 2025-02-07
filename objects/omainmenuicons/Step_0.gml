@@ -93,6 +93,9 @@ if (image_index == 2 && P1menuConfirm)
 	global.p1SelectedCharacter = oRussel;
 	global.p1PaletteID = 0;
 	
+	global.p1StartingPositionX = 32;
+	global.p1StartingPositionY = 0;
+	
 	room_goto(rPlatformingStage_Russel1);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
