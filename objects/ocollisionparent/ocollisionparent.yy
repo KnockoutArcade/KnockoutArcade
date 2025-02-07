@@ -1,17 +1,11 @@
 {
-  "spriteId": {
-    "name": "sGentleSlope",
-    "path": "sprites/sGentleSlope/sGentleSlope.yy",
-  },
+  "spriteId": null,
   "solid": false,
-  "visible": true,
+  "visible": false,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "oCollisionParent",
-    "path": "objects/oCollisionParent/oCollisionParent.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -32,7 +26,7 @@
     "path": "folders/Objects/Colliders.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oSlope",
+  "name": "oCollisionParent",
   "tags": [],
   "resourceType": "GMObject",
 }

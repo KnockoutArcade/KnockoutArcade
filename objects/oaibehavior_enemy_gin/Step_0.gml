@@ -51,7 +51,7 @@ switch (AIState)
 		// Upon entering this state, determine how long between actions
 		if (AIEventTimer == 1)
 		{
-			randomDelayTimer = irandom_range(30, 120);
+			randomDelayTimer = irandom_range(30, 90);
 		}
 		
 		// Wait a random amount of time
@@ -61,10 +61,10 @@ switch (AIState)
 		if (randomDelayTimer <= 0)
 		{
 			// choose whether to walk or attack
-			var decideWalkOrAttack = irandom_range(0, 9);
+			var decideWalkOrAttack = irandom_range(0, 15);
 			
-			// 6/10 chance to choose walking
-			if (decideWalkOrAttack < 7)
+			// 12/15 chance to choose walking
+			if (decideWalkOrAttack < 16)
 			{
 				// Set the state
 				AIState = eAIState.WALK;
@@ -78,7 +78,7 @@ switch (AIState)
 				// Set where we are going
 				setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
 			}
-			else // 4/10 chance to attack
+			else // 3/15 chance to attack
 			{
 				// Set the state
 				AIState = eAIState.ATTACK;
@@ -111,6 +111,24 @@ switch (AIState)
 		{
 			walkDirection = 0;
 		}
+		
+		// Floor collision check
+		with (characterID)
+		{
+			// If our next position would make us walk close to over a pit, stop moving.
+			if (!place_meeting(x + (walkSpeed * sign(image_xscale)), y + 1, oCollisionParent))
+			{
+				// note, we are using the walkspeed of the enemy so that we can be the most accurate.
+				walkDirection = 0;
+			}
+			else if (!place_meeting(x + (walkSpeed * -sign(image_xscale)), y + 1, oCollisionParent))
+			{
+				// We also need to check if this enemy would walk backwards off of a platform.
+				walkDirection = 0;
+			}
+		}
+		
+		
 		
 		// If the destination is to the left
 		if (walkDirection == -1)
@@ -160,7 +178,7 @@ switch (AIState)
 		// First, walk to the player...
 		if (!attackSubstate)
 		{
-			setTargetPosition(opponent.x, characterID.y);
+			setTargetPosition(opponent.x, opponent.y);
 			
 			// Determine which direction we need to walk in
 			var walkDirection = sign(targetPositionX - characterID.x);
