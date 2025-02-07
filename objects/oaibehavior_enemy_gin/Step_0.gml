@@ -64,19 +64,32 @@ switch (AIState)
 			var decideWalkOrAttack = irandom_range(0, 15);
 			
 			// 12/15 chance to choose walking
-			if (decideWalkOrAttack < 16)
+			if (decideWalkOrAttack < 13)
 			{
 				// Set the state
 				AIState = eAIState.WALK;
 		
 				// Reset event timers
 				AIEventTimer = 0;
-			
-				// Determine random ideal range
-				idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
+				
+				// This enemy has a chance to walk only backwards instead of forwards
+				if (decideWalkOrAttack < 5)
+				{
+					// Determine random ideal range
+					idealRangeChosenVariation = irandom_range(-2, 2);
+					
+					// Set where we are going
+					setTargetPosition(characterID.x + ((10 + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+				}
+				else
+				{
+					// Determine random ideal range
+					idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
 		
-				// Set where we are going
-				setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+					// Set where we are going
+					setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+				}
+				
 			}
 			else // 3/15 chance to attack
 			{
@@ -116,7 +129,7 @@ switch (AIState)
 		with (characterID)
 		{
 			// If our next position would make us close to walking over a pit in front of us, stop moving.
-			if (!place_meeting(x + (walkSpeed * walkDirection), y + 8, oCollisionParent))
+			if (!place_meeting(x + (other.platformWalkoffThreshold * walkDirection), y + 8, oCollisionParent))
 			{
 				// note, we are using the walkspeed of the enemy so that we can be the most accurate.
 				walkDirection = 0;
@@ -181,7 +194,19 @@ switch (AIState)
 			{
 				walkDirection = 0;
 			}
-		
+			
+			// Floor collision check
+			with (characterID)
+			{
+				// If our next position would make us close to walking over a pit in front of us, stop moving.
+				if (!place_meeting(x + (other.platformWalkoffThreshold * walkDirection), y + 8, oCollisionParent))
+				{
+					// note, we are using the walkspeed of the enemy so that we can be the most accurate.
+					walkDirection = 0;
+				}
+			}
+			
+			
 			// If the destination is to the left
 			if (walkDirection == -1)
 			{

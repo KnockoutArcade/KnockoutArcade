@@ -9,6 +9,8 @@ idealRangeFromPlayer = 40; // How far away we'd like to be from the player
 idealRangeVariation = 20; // The variation (+ or -) on the above variable
 idealRangeChosenVariation = 0; // Once a variation is chosen, it is stored here so that the Ai will not recalculate the variation each frame
 
+platformWalkoffThreshold = 20; // How close this enemy is allowed to be from the edge of a platform
+
 attackSubstate = 0; // For Gin, determines whether it should be walking towards the player or mashing an attack.
 // 0 == walking to player
 // 1 == attacking
@@ -17,24 +19,9 @@ attackSubstate = 0; // For Gin, determines whether it should be walking towards 
 targetPositionX = x;
 targetPositionY = y;
 
-tryTargetX = 0;
-tryTargetY = 0;
-
 setTargetPosition = function(tryX, tryY)
 {
 	// Set the coordinates that we are attempting to check
 	targetPositionX = tryX;
 	targetPositionY = tryY;
-	//var collisionsToCheck = [oSlope, oWall, oSemiSolid];
-	
-	/*
-	// If there is floor beneath the point we are trying to walk to, then this is a valid target position
-	if (collision_point(tryTargetX, tryTargetY + 1, oWall, false, true) != noone || collision_point(tryTargetX, tryTargetY + 1, oSemiSolid, false, true) != noone)
-	{
-		targetPositionX = tryTargetX;
-		targetPositionY = tryTargetY;
-	}
-	
-	// Otherwise, the target position is not updated.
-	*/
 }
