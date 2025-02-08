@@ -43,6 +43,8 @@ enemySetup = function()
 		characterID = other.enemyID; // The character that this AI is controlling
 		controllerID = other.enemyControllerID; // The controller object to communicate with
 		opponent = oGameManager.p1; // Who this AI is targeting
+		
+		AIState = eAIState.INACTIVE; // Make sure this enemy is inactive when it's spawned.
 	}
 }
 
@@ -50,3 +52,6 @@ enemySetup = function()
 
 // Whether this object should be active or not
 isActive = false;
+
+// Whether the AI this object handles should be active
+isAIActive = false;

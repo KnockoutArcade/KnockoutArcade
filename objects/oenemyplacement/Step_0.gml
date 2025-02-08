@@ -19,9 +19,16 @@ else if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) >= deactivat
 	instance_destroy(enemyID);
 	instance_destroy(enemyControllerID);
 	instance_destroy(enemyAIObject);
+	
+	exit;
 }
 
-
+// Activate the AI once within range
+if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= AIActivationRadius && !isAIActive)
+{
+	enemyAIObject.AIState = eAIState.IDLE;
+	isAIActive = true;
+}
 
 
 

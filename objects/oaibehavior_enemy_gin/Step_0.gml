@@ -37,6 +37,7 @@ switch (AIState)
 	case eAIState.INACTIVE :
 	{
 		// Do nothing
+		show_debug_message("Standing Still");
 	}
 	break;
 	
@@ -51,7 +52,7 @@ switch (AIState)
 		// Upon entering this state, determine how long between actions
 		if (AIEventTimer == 1)
 		{
-			randomDelayTimer = irandom_range(30, 90);
+			randomDelayTimer = irandom_range(15, 90);
 		}
 		
 		// Wait a random amount of time
@@ -63,8 +64,8 @@ switch (AIState)
 			// choose whether to walk or attack
 			var decideWalkOrAttack = irandom_range(0, 15);
 			
-			// 12/15 chance to choose walking
-			if (decideWalkOrAttack < 13)
+			// 9/15 chance to choose walking
+			if (decideWalkOrAttack < 10)
 			{
 				// Set the state
 				AIState = eAIState.WALK;
@@ -91,7 +92,7 @@ switch (AIState)
 				}
 				
 			}
-			else // 3/15 chance to attack
+			else // 6/15 chance to attack
 			{
 				// Set the state
 				AIState = eAIState.ATTACK;
@@ -111,10 +112,10 @@ switch (AIState)
 	{
 		// Determine where we need to go (refresh every 5 frames)
 		// In this case, our target is some distance away from the player (based on the direction this is facing)
-		if (AIEventTimer mod 5 == 0)
-		{
-			setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
-		}
+		//if (AIEventTimer mod 5 == 0)
+		//{
+		//	setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+		//}
 		
 		// Determine which direction we need to walk in
 		var walkDirection = sign(targetPositionX - characterID.x);
