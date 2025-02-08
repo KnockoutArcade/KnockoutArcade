@@ -10,7 +10,10 @@ if (oGameManager.p1.isInCutscene)
 
 
 // Increase the event timer
-AIEventTimer++;
+if (AIState != eAIState.INACTIVE)
+{
+	AIEventTimer++;
+}
 
 // If this has been hit, go to hurt state
 if (characterID.hitstun > 0)
@@ -37,7 +40,6 @@ switch (AIState)
 	case eAIState.INACTIVE :
 	{
 		// Do nothing
-		show_debug_message("Standing Still");
 	}
 	break;
 	
@@ -52,7 +54,7 @@ switch (AIState)
 		// Upon entering this state, determine how long between actions
 		if (AIEventTimer == 1)
 		{
-			randomDelayTimer = irandom_range(15, 90);
+			randomDelayTimer = irandom_range(5, 45);
 		}
 		
 		// Wait a random amount of time
@@ -65,7 +67,7 @@ switch (AIState)
 			var decideWalkOrAttack = irandom_range(0, 15);
 			
 			// 9/15 chance to choose walking
-			if (decideWalkOrAttack < 10)
+			if (decideWalkOrAttack < 13)
 			{
 				// Set the state
 				AIState = eAIState.WALK;
@@ -74,7 +76,7 @@ switch (AIState)
 				AIEventTimer = 0;
 				
 				// This enemy has a chance to walk only backwards instead of forwards
-				if (decideWalkOrAttack < 5)
+				if (decideWalkOrAttack < 7)
 				{
 					// Determine random ideal range
 					idealRangeChosenVariation = irandom_range(-2, 2);

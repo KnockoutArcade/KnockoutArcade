@@ -28,6 +28,10 @@ if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= AIActivationRa
 {
 	enemyAIObject.AIState = eAIState.IDLE;
 	isAIActive = true;
+	
+	// This is to make the AI start moving instantly
+	enemyAIObject.AIEventTimer = 2;
+	enemyAIObject.randomDelayTimer = 0;
 }
 
 
