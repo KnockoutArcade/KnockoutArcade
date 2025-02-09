@@ -14,6 +14,7 @@ if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= activationRadi
 else if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) >= deactivationRadius && isActive)
 {
 	isActive = false
+	isAIActive = false;
 	
 	// Destroy the enemy
 	instance_destroy(enemyID);
