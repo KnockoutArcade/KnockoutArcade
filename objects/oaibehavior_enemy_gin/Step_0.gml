@@ -66,7 +66,7 @@ switch (AIState)
 			// choose whether to walk or attack
 			var decideWalkOrAttack = irandom_range(0, 15);
 			
-			// 9/15 chance to choose walking
+			// 12/15 chance to choose walking
 			if (decideWalkOrAttack < 13)
 			{
 				// Set the state
@@ -76,13 +76,16 @@ switch (AIState)
 				AIEventTimer = 0;
 				
 				// This enemy has a chance to walk only backwards instead of forwards
-				if (decideWalkOrAttack < 7)
+				if (decideWalkOrAttack <= walkBackwardsChance)
 				{
 					// Determine random ideal range
 					idealRangeChosenVariation = irandom_range(-2, 2);
 					
 					// Set where we are going
 					setTargetPosition(characterID.x + ((10 + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+				
+					// Enemy is now less likely to walk backwards again
+					walkBackwardsChance--;
 				}
 				else
 				{
@@ -91,10 +94,13 @@ switch (AIState)
 		
 					// Set where we are going
 					setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+					
+					// Enemy is now more likely to walk backwards
+					walkBackwardsChance++;
 				}
 				
 			}
-			else // 6/15 chance to attack
+			else // 3/15 chance to attack
 			{
 				// Set the state
 				AIState = eAIState.ATTACK;

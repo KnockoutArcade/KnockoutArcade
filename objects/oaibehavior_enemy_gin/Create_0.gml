@@ -6,10 +6,12 @@ event_inherited();
 activeRange = 200; // A player must be within this radius for this object to be active
 
 idealRangeFromPlayer = 40; // How far away we'd like to be from the player
-idealRangeVariation = 20; // The variation (+ or -) on the above variable
+idealRangeVariation = 15; // The variation (+ or -) on the above variable
 idealRangeChosenVariation = 0; // Once a variation is chosen, it is stored here so that the Ai will not recalculate the variation each frame
 
 platformWalkoffThreshold = 20; // How close this enemy is allowed to be from the edge of a platform
+
+walkBackwardsChance = 7; // How likely (out of 15) this enemy is to walk backwards instead of forwards.
 
 attackSubstate = 0; // For Gin, determines whether it should be walking towards the player or mashing an attack.
 // 0 == walking to player
