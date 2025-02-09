@@ -69,8 +69,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "KNOCK-OUT ARCADE test",
-    "path": "KNOCK-OUT ARCADE test.yyp",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
   "resourceVersion": "1.0",
   "name": "sDebug_EnemyPlacement",
