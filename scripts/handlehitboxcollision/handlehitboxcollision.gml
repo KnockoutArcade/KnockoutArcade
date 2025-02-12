@@ -218,7 +218,8 @@ function HandleHitboxCollision(ownerType)
 					}
 		
 					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
-
+					
+					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
@@ -251,7 +252,8 @@ function HandleHitboxCollision(ownerType)
 					// Set the correct states for the attacker and victim
 					ownerType.prevState = eState.COMMAND_GRAB;
 					ownerType.animTimer = 0;
-
+					
+					collision_list[| i].owner.state = eState.BEING_GRABBED;
 					collision_list[| i].owner.prevState = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 					collision_list[| i].owner.animTimer = 0;
@@ -291,7 +293,41 @@ function HandleHitboxCollision(ownerType)
 					}
 		
 					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
-
+					
+					
+					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+					var allHurtboxes = [];
+	
+					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
+					{
+						allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
+					}
+	
+					for (var i = 0; i < array_length(allHurtboxes); i++;)
+					{
+						if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == ownerType.id)
+						{ 
+							instance_destroy(allHurtboxes[i]);
+						}
+					}
+	
+					// Destroy all hitboxes that belong to this player
+					var allHitboxes = [];
+	
+					for (var i = 0; i < instance_number(oHitbox); i++;)
+					{
+						allHitboxes[i] = instance_find(oHitbox, i);
+		
+					}
+	
+					for (var i = 0; i < array_length(allHitboxes); i++;)
+					{
+						if (allHitboxes[i].owner == ownerType.id)
+						{ 
+							instance_destroy(allHitboxes[i]);
+						}
+					}
+					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
@@ -478,12 +514,18 @@ function HandleHitboxCollision(ownerType)
 					// Set the correct states for the attacker and victim
 					ownerType.prevState = eState.COMMAND_GRAB;
 					ownerType.animTimer = 0;
-
+					ownerType.inAttackState = true;
+					
+					collision_list[| i].owner.state = eState.BEING_GRABBED;
 					collision_list[| i].owner.prevState = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
 					collision_list[| i].owner.animTimer = 0;
 					collision_list[| i].owner.x = ownerType.x + (attackProperty.HoldXOffset * ownerType.image_xscale);
 					collision_list[| i].owner.isShortHopping = false; // Make sure the victim is not using their shorthop fall speed.
+					collision_list[| i].owner.jumpHsp = 0;
+					collision_list[| i].owner.hsp = 0;
+					collision_list[| i].owner.vsp = 0;
+					
 					ownerType.heldOpponent = collision_list[| i].owner;
 					ownerType.target = collision_list[| i].owner;
 				
@@ -518,7 +560,42 @@ function HandleHitboxCollision(ownerType)
 					}
 		
 					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
-
+					
+					
+					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+					var allHurtboxes = [];
+	
+					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
+					{
+						allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
+					}
+	
+					for (var i = 0; i < array_length(allHurtboxes); i++;)
+					{
+						if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == ownerType.id)
+						{ 
+							instance_destroy(allHurtboxes[i]);
+						}
+					}
+	
+					// Destroy all hitboxes that belong to this player
+					var allHitboxes = [];
+	
+					for (var i = 0; i < instance_number(oHitbox); i++;)
+					{
+						allHitboxes[i] = instance_find(oHitbox, i);
+		
+					}
+	
+					for (var i = 0; i < array_length(allHitboxes); i++;)
+					{
+						if (allHitboxes[i].owner == ownerType.id)
+						{ 
+							instance_destroy(allHitboxes[i]);
+						}
+					}
+					
+					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
