@@ -3,18 +3,28 @@
 
 with (other)
 {
-	x = 32;
-	y = 0;
+	x = other.respawnX;
+	y = other.respawnY;
 	
 	jumpHsp = 0;
 	hsp = 0;
 	vsp = 0;
 	
-	state = eState.JUMPING;
+	state = eState.LAUNCHED;
+	image_index = 0;
+	
+	hp -= other.respawnDamage;
+}
+
+// Don't move the camera if we didn't respawn the player
+if (other.playerID < 1)
+{
+	exit;
 }
 
 with (global.camObj)
 {
-	x = 0;
+	x = other.respawnCameraX;
+	y = other.respawnCameraY;
 }
 
