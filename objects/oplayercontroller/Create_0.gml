@@ -482,3 +482,6 @@ chargePartitionAmount = 7; // The amount of time (in Frames) that charge is stor
 
 // Whether or not this player has recently fallen down a bottomless pit
 hasFallenDownPit = false;
+
+// Teams
+teamID = 0; // Which team this player is on

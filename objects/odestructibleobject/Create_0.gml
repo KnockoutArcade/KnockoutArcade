@@ -108,6 +108,9 @@ state = eState.IDLE;
 	// Singleplayer stats
 	totalDamageTaken = 0;
 	totalKOs = 0;
+	
+	// Teams
+	teamID = 0; // Which team this player is on
 #endregion
 
 CharacterSprites = {
