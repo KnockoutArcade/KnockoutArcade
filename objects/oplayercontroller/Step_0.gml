@@ -3159,7 +3159,7 @@ if (target != noone)
 				ui_yOffset = 48;
 			}
 		} 
-		else 
+		else if (playerID == 2)
 		{
 			comboCounterID = instance_create_layer(175, 48, "ComboCounter", oComboCounter);
 			with (comboCounterID) 
