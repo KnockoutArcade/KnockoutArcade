@@ -28,6 +28,9 @@ if (characterID.hitstun > 0)
 			
 	// Reset Timer
 	AIEventTimer = 0;
+	
+	// Allow this enemy to attack
+	hasJustAttacked = false;
 }
 
 // Prevent this object from running and blocking
@@ -75,6 +78,9 @@ switch (AIState)
 				// Reset event timers
 				AIEventTimer = 0;
 				
+				// Reset has just attacked
+				hasJustAttacked = false;
+				
 				// This enemy has a chance to walk only backwards instead of forwards
 				if (decideWalkOrAttack <= walkBackwardsChance)
 				{
@@ -100,7 +106,7 @@ switch (AIState)
 				}
 				
 			}
-			else // 3/15 chance to attack
+			else if (!hasJustAttacked)// 3/15 chance to attack
 			{
 				// Set the state
 				AIState = eAIState.ATTACK;
@@ -110,6 +116,9 @@ switch (AIState)
 				
 				// Set the attack substate to 0
 				attackSubstate = 0;
+				
+				// Make sure this enemy can't attack twice in a row.
+				hasJustAttacked = true;
 			}
 		}
 		

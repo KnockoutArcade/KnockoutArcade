@@ -17,6 +17,8 @@ attackSubstate = 0; // For Gin, determines whether it should be walking towards 
 // 0 == walking to player
 // 1 == attacking
 
+hasJustAttacked = false; // Whether this enemy has picked attacking as its most recent action
+
 // Initialize this object's target position to its spawn location.
 targetPositionX = x;
 targetPositionY = y;
