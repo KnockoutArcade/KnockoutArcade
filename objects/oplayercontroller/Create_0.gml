@@ -479,3 +479,6 @@ timeToCharge = 45; // The amount of time (in frames) it takes in order to aquire
 bufferCharge = false; // Whether the charge should be buffered through an action
 chargePartitionTimer = 0; // Timer that determines how long the charge is stored for
 chargePartitionAmount = 7; // The amount of time (in Frames) that charge is stored for
+
+// Whether or not this player has recently fallen down a bottomless pit
+hasFallenDownPit = false;

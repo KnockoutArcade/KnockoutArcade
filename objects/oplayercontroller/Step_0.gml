@@ -486,6 +486,7 @@ if (state == eState.IDLE)
 	invincible = false;
 	isInStableState = true; // Set stable state to true
 	inAttackState = false;
+	hasFallenDownPit = false;
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -570,6 +571,7 @@ if (state == eState.CROUCHING)
 	canBlock = true;
 	invincible = false;
 	inAttackState = false;
+	hasFallenDownPit = false;
 	
 	hurtbox.image_xscale = hurtboxCrouchingWidth;
 	hurtbox.image_yscale = hurtboxCrouchingHeight;

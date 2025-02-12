@@ -55,7 +55,7 @@ switch (mode)
 			owner.hsp = 0;
 		}
 		
-		if (owner.state = eState.HITSTOP)
+		if (!owner.inAttackState)
 		{
 			instance_destroy();
 		}

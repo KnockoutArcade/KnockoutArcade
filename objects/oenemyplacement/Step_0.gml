@@ -40,10 +40,9 @@ if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= AIActivationRa
 // If this object is allowed to be active
 if (isActive)
 {
-	// Once the enemy has run out of HP, destroy it
-	if (enemyID.hp <= 0)
+	// Once the enemy has run out of HP or fallen into a pit, destroy it
+	if (enemyID.hp <= 0 || enemyID.hasFallenDownPit)
 	{
-
 		// Destroy everything
 		instance_destroy(enemyID);
 		instance_destroy(enemyControllerID);

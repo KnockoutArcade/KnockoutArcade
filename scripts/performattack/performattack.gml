@@ -115,7 +115,7 @@ function PerformAttack(Action, createdBySpirit)
 		for (var i = 0; i < Action.OpponentPositionData.NumberOfFrames; i++) 
 		{
 			//Key -   [frame, rel x, rel y, sprite, index, rotation, xscale]
-			if (animTimer >= Action.OpponentPositionData.Frames[i].Frame && heldOpponent != noone)
+			if (animTimer >= Action.OpponentPositionData.Frames[i].Frame && heldOpponent != noone && instance_exists(heldOpponent))
 			{
 				heldOpponent.x = x + Action.OpponentPositionData.Frames[i].RelativeX * image_xscale;
 				heldOpponent.y = y + Action.OpponentPositionData.Frames[i].RelativeY;

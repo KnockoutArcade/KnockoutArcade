@@ -14,6 +14,8 @@ with (other)
 	image_index = 0;
 	
 	hp -= other.respawnDamage;
+	
+	hasFallenDownPit = true;
 }
 
 // Don't move the camera if we didn't respawn the player
