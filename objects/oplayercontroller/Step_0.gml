@@ -2276,7 +2276,14 @@ switch state
 				spiritObject.hsp = 0;
 			}
 		}
-
+		
+		// If our next position would make us close to walking over a pit in front of us, stop moving.
+		if (!place_meeting(x + (10 * sign(hsp + environmentDisplacement)), y + 8, oCollisionParent))
+		{
+			hsp = 0;
+			environmentDisplacement = 0;
+		}
+		
 		if (animTimer > 42)
 		{
 			state = eState.IDLE;
@@ -2322,6 +2329,13 @@ switch state
 			{
 				spiritObject.hsp = 0;
 			}
+		}
+		
+		// If our next position would make us close to walking over a pit in front of us, stop moving.
+		if (!place_meeting(x + (10 * sign(hsp + environmentDisplacement)), y + 8, oCollisionParent))
+		{
+			hsp = 0;
+			environmentDisplacement = 0;
 		}
 		
 		if (animTimer > 58)
