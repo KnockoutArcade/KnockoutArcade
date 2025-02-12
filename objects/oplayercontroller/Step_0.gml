@@ -2574,6 +2574,12 @@ switch state
 			hsp = -3 * image_xscale;
 		}
 		
+		// If our next position would make us close to walking over a pit in front of us, stop moving.
+		if (!place_meeting(x + (10 * sign(hsp)), y + 8, oCollisionParent))
+		{
+			hsp = 0;
+		}
+		
 		// End i-frames
 		if (animTimer > 20)
 		{
