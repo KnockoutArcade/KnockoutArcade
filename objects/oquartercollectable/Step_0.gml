@@ -8,7 +8,7 @@ if (collidingPlayer != noone)
 	{
 		if (variable_instance_exists(collidingPlayer.owner, "playerID"))
 		{
-			if (collidingPlayer.owner.playerID < 3)
+			if (collidingPlayer.owner.playerID > 0)
 			{
 				collidingPlayer.owner.coinScore += coinValue;
 	
