@@ -72,7 +72,7 @@ switch (global.gameMode)
 			if (!isScreenShaking)
 			{
 				// If the camera is locked in place, don't update it's movement
-				if (!isLocked)
+				if (!isLocked && !isRespawnCamera)
 				{
 					// Set the camera's target
 					if (p1 != noone)
@@ -144,6 +144,17 @@ switch (global.gameMode)
 			
 					// Smoothly move the camera to its destination
 					x = lerp(xCameraDestination, x, cameraSpeed);
+				}
+				else if (isRespawnCamera) // Handle going to the player's position during the respawn time.
+				{
+					// Smoothly move the camera to its destination
+					x = lerp(xCameraDestination, x, cameraSpeed);
+					y = lerp(yCameraDestination, y, cameraSpeed);
+					
+					if (point_distance(x, y, xCameraDestination, yCameraDestination) <= respawnCameraThreshold)
+					{
+						isRespawnCamera = false;
+					}
 				}
 		
 				// Set the camera's position

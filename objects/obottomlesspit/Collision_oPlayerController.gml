@@ -24,7 +24,9 @@ if (other.playerID < 1)
 
 with (global.camObj)
 {
-	x = other.respawnCameraX;
-	y = other.respawnCameraY;
+	xCameraDestination = other.respawnCameraX;
+	yCameraDestination = other.respawnCameraY;
+	
+	isRespawnCamera = true;
 }
 

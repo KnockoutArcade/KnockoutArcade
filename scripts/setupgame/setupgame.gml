@@ -204,6 +204,9 @@ function SetupGame()
 				hasPerformedIntro = true;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
+				
+				// There's not a reason for the player to be locked to the screen
+				shouldStayOnScreen = false;
 			}
 			
 			//Setup Health Bar

@@ -18,6 +18,8 @@ xCameraDestination = x; // Where the camera is targeted to move towards
 yCameraDestination = y;
 
 isLocked = false; // Whether the camera is locked or not
+isRespawnCamera = false; // Whether the camera is moving to the player's respawn location or not
+respawnCameraThreshold = 2; // How close the camera must be to the respawn location in order to resume normal function.
 
 isScreenShaking = false; // Whether the camera is currently shaking
 screenShakeLevel = 0; // How much the screen should be shaking
