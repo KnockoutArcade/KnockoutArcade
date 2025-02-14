@@ -144,6 +144,8 @@ switch (global.gameMode)
 			
 					// Smoothly move the camera to its destination
 					x = lerp(xCameraDestination, x, cameraSpeed);
+					// NOTE: Not currently done implementing vertical cam
+					//y = p1.y - 104;
 				}
 				else if (isRespawnCamera) // Handle going to the player's position during the respawn time.
 				{
@@ -158,7 +160,9 @@ switch (global.gameMode)
 				}
 		
 				// Set the camera's position
+				// NOTE: Not currently done implementing vertical cam
 				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
+				//camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), y);
 	
 				// Clamp the camera to the room's bounderies
 				x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));

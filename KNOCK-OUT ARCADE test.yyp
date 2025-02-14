@@ -123,6 +123,7 @@
     {"id":{"name":"sCommandLists_Jay_Specials","path":"sprites/sCommandLists_Jay_Specials/sCommandLists_Jay_Specials.yy",},"order":2,},
     {"id":{"name":"sFileSelect_LeftmostBar","path":"sprites/sFileSelect_LeftmostBar/sFileSelect_LeftmostBar.yy",},"order":1,},
     {"id":{"name":"SideSpecialDeepBreathing","path":"scripts/SideSpecialDeepBreathing/SideSpecialDeepBreathing.yy",},"order":3,},
+    {"id":{"name":"rMinigameStage_Russel1","path":"rooms/rMinigameStage_Russel1/rMinigameStage_Russel1.yy",},"order":1,},
     {"id":{"name":"sfx_Landing","path":"sounds/sfx_Landing/sfx_Landing.yy",},"order":11,},
     {"id":{"name":"oFileSelectManager","path":"objects/oFileSelectManager/oFileSelectManager.yy",},"order":16,},
     {"id":{"name":"oVictoryScreen","path":"objects/oVictoryScreen/oVictoryScreen.yy",},"order":15,},
@@ -251,6 +252,7 @@
     {"id":{"name":"sCommandLists_Jay_CommandInputs","path":"sprites/sCommandLists_Jay_CommandInputs/sCommandLists_Jay_CommandInputs.yy",},"order":0,},
     {"id":{"name":"sJay_ALL_StandingLight2_Mockup_strip6","path":"sprites/sJay_ALL_StandingLight2_Mockup_strip6/sJay_ALL_StandingLight2_Mockup_strip6.yy",},"order":18,},
     {"id":{"name":"sFullPortait_Jay","path":"sprites/sFullPortait_Jay/sFullPortait_Jay.yy",},"order":2,},
+    {"id":{"name":"sMinigameStage_Russel1","path":"sprites/sMinigameStage_Russel1/sMinigameStage_Russel1.yy",},"order":3,},
     {"id":{"name":"sButtons_Controller","path":"sprites/sButtons_Controller/sButtons_Controller.yy",},"order":0,},
     {"id":{"name":"sRussel_Walk_Forward","path":"sprites/sRussel_Walk_Forward/sRussel_Walk_Forward.yy",},"order":4,},
     {"id":{"name":"sBeverly_Jump_Heavy","path":"sprites/sBeverly_Jump_Heavy/sBeverly_Jump_Heavy.yy",},"order":43,},
@@ -677,6 +679,7 @@
     {"roomId":{"name":"rCampaignTutorial","path":"rooms/rCampaignTutorial/rCampaignTutorial.yy",},},
     {"roomId":{"name":"rPlatformingStage_Russel1","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},},
     {"roomId":{"name":"rCampaignFileSelect","path":"rooms/rCampaignFileSelect/rCampaignFileSelect.yy",},},
+    {"roomId":{"name":"rMinigameStage_Russel1","path":"rooms/rMinigameStage_Russel1/rMinigameStage_Russel1.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
