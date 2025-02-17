@@ -272,6 +272,10 @@ function PerformAttack(Action, createdBySpirit)
 				{
 					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oSuperExerciseBall);
 				}
+				else if (Action.ProjectileData[i].ProjectileObject == "KickableObject")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oKickableObject);
+				}
 				Projectile.depth = depth - 5;
 				with (Projectile)
 				{

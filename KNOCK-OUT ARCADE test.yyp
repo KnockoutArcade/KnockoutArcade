@@ -220,6 +220,7 @@
     {"id":{"name":"rCampaignFileSelect","path":"rooms/rCampaignFileSelect/rCampaignFileSelect.yy",},"order":4,},
     {"id":{"name":"sRussel_NSpecial_Enhanced","path":"sprites/sRussel_NSpecial_Enhanced/sRussel_NSpecial_Enhanced.yy",},"order":35,},
     {"id":{"name":"oCredits","path":"objects/oCredits/oCredits.yy",},"order":9,},
+    {"id":{"name":"oKickableObject","path":"objects/oKickableObject/oKickableObject.yy",},"order":10,},
     {"id":{"name":"sSmoothCriminal_Idle","path":"sprites/sSmoothCriminal_Idle/sSmoothCriminal_Idle.yy",},"order":19,},
     {"id":{"name":"sSuperMeterBackground","path":"sprites/sSuperMeterBackground/sSuperMeterBackground.yy",},"order":1,},
     {"id":{"name":"CancelData","path":"scripts/CancelData/CancelData.yy",},"order":0,},
@@ -806,6 +807,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":".json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"EnhancedProjectile.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"BeverlySuperBall.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"KickableObject.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
