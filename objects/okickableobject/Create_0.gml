@@ -86,11 +86,4 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	}
 	
 	hasHitSomething = true;
-	
-	/*hsp = hsp * 0.4;
-	if (vsp > 0)
-	{
-		vsp = -vsp * bounceDampeningFactor;
-	}
-	*/
 }
