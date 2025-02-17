@@ -21,6 +21,8 @@ playerOwner = noone; // Who fired this projectile
 spiritOwner = noone; // If spirit fired a projectile
 target = noone; // The thing this projectile hit
 
+teamID = 3;
+
 // The properties of this attack
 hitboxProperties = {};
 hitboxProperties.NumberOfHitboxes = selectedProjectile.NumberOfHitboxes;
@@ -85,17 +87,7 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 	
 	hasHitSomething = true;
 	
-	// Determine which side to send the object
-	if (x > collisionID.x)
-	{
-		var bounceDirection = 1;
-	}
-	else
-	{
-		var bounceDirection = -1;
-	}
-	
-	hsp = abs(hsp) * bounceDirection * bounceDampeningFactor;
+	hsp = hsp * 0.4;
 	if (vsp > 0)
 	{
 		vsp = -vsp * bounceDampeningFactor;

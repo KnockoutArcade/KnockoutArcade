@@ -314,6 +314,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Add the group that this hitbox belongs to to the opponent's hitByGroup
 		//ds_list_add(collision_list.owner.hitByGroup, attackProperty.Group);
 		
+		// Set the most recent object to have hit this
+		collision_list.owner.mostRecentIDHitBy = owner;
+		
 		// Set hitstun
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 
@@ -596,6 +599,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		ds_list_add(owner.objectsHitList, collision_list.owner);
+		
+		// Set the most recent object to have hit this
+		collision_list.owner.mostRecentIDHitBy = owner.playerOwner;
 		
 		collision_list.owner.hitstun = attackProperty.AttackHitStun;
 		if (collision_list.owner.spiritObject != noone) 

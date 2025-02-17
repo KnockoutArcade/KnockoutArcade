@@ -321,6 +321,11 @@ hasBeenHitByIds = {};
 	of their hitbox groups seperately.
 */
 
+// The most recent object to have hit us
+// This is mostly just used for the kickable object, since its owner changes depending
+// on who hit it last.
+mostRecentIDHitBy = noone;
+
 toggleIdleBlock = false;
 cancelable = false;
 canBlock = false;

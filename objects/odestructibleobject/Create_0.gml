@@ -78,6 +78,10 @@ state = eState.IDLE;
 	// This is a struct which contains the IDs of every object that has recently hit us
 	hasBeenHitByIds = {};
 
+	// The most recent object to have hit us
+	// This is mostly just used for the kickable object, since its owner changes depending
+	// on who hit it last.
+	mostRecentIDHitBy = noone;
 
 	toggleIdleBlock = false;
 	cancelable = false;
