@@ -317,7 +317,7 @@ switch (state)
 		if (P1menuConfirm)
 		{
 			state = eFILESELECTMENUSTATES.CHOSE_CHARACTER;
-			currentRow = 1;
+			currentRow = 0;
 			
 			audio_play_sound(sfx_UI_Select, 0, false);
 		}
@@ -381,7 +381,7 @@ switch (state)
 		// Handle Menu Deny
 		if (P1menuDeny || (P1menuConfirm && currentRow == 1))
 		{
-			currentRow = 1;
+			currentRow = 0;
 			
 			state = eFILESELECTMENUSTATES.SELECTING_CHARACTER;
 			animTimer = 0;
