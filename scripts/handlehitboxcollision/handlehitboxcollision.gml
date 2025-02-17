@@ -69,7 +69,15 @@ function HandleHitboxCollision(ownerType)
 				}
 			}
 			
-			if (collision_list[| i].owner != ownerType && collision_list[| i].owner != projectileOwner && hasHitThis == -1 && hasGroupAlreadyHit == -1 && !collision_list[| i].owner.invincible) 
+			
+			// If:
+			//	We are not hitting ourselves
+			//  We are not a projectile hitting ourselves
+			//	This hitbox has not already hit this object
+			//	Our Group value has not already hit this object
+			//  Our target isn't invincible
+			//  Our Team IDs don't match
+			if (collision_list[| i].owner != ownerType && collision_list[| i].owner != projectileOwner && hasHitThis == -1 && hasGroupAlreadyHit == -1 && !collision_list[| i].owner.invincible && ownerType.teamID != collision_list[| i].owner.teamID) 
 			{
 				
 				//Set who the player is currently targeting
@@ -294,40 +302,6 @@ function HandleHitboxCollision(ownerType)
 		
 					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 					
-					
-					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
-					var allHurtboxes = [];
-	
-					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
-					{
-						allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
-					}
-	
-					for (var i = 0; i < array_length(allHurtboxes); i++;)
-					{
-						if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == ownerType.id)
-						{ 
-							instance_destroy(allHurtboxes[i]);
-						}
-					}
-	
-					// Destroy all hitboxes that belong to this player
-					var allHitboxes = [];
-	
-					for (var i = 0; i < instance_number(oHitbox); i++;)
-					{
-						allHitboxes[i] = instance_find(oHitbox, i);
-		
-					}
-	
-					for (var i = 0; i < array_length(allHitboxes); i++;)
-					{
-						if (allHitboxes[i].owner == ownerType.id)
-						{ 
-							instance_destroy(allHitboxes[i]);
-						}
-					}
-					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
@@ -344,19 +318,41 @@ function HandleHitboxCollision(ownerType)
 						image_xscale = ownerType.image_xscale * -1;
 					}
 
-					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
-					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
+					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+					var allHurtboxes = [];
+	
+					for (var l = 0; l < instance_number(oPlayerHurtbox); l++;) 
 					{
-						var hurtbox = instance_find(oPlayerHurtbox, i);
-
-						if (!hurtbox.primary && hurtbox.owner == id)
-						{
-							instance_destroy(hurtbox);
+						allHurtboxes[l] = instance_find(oPlayerHurtbox, l);
+					}
+	
+					for (var l = 0; l < array_length(allHurtboxes); l++;)
+					{
+						if (!allHurtboxes[l].primary && allHurtboxes[l].owner.id == ownerType.id)
+						{ 
+							instance_destroy(allHurtboxes[l]);
 						}
 					}
-
-					instance_destroy(oHitbox);
-
+					
+					// Destroy all hitboxes that belong to this player or the grabbed victim
+					var allHitboxes = [];
+				
+					for (var l = 0; l < instance_number(oHitbox); l++;)
+					{
+						allHitboxes[l] = instance_find(oHitbox, l);
+					}
+					
+					for (var l = 0; l < array_length(allHitboxes); l++;)
+					{
+						if (allHitboxes[l].owner == ownerType || allHitboxes[l].owner == collision_list[| i].owner)
+						{ 
+							instance_destroy(allHitboxes[l]);
+						}
+					}
+					// Once we're done destroying hitboxes, we don't care about anything else.
+					exit;
+					
+					
 				}
 				else if (collision_list[| i].owner.canBlock) && // Blocking
 					(collision_list[| i].owner.isAbleToBlock) &&
@@ -561,41 +557,6 @@ function HandleHitboxCollision(ownerType)
 		
 					ds_list_add(ownerType.objectsHitList, collision_list[| i].owner);
 					
-					
-					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
-					var allHurtboxes = [];
-	
-					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
-					{
-						allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
-					}
-	
-					for (var i = 0; i < array_length(allHurtboxes); i++;)
-					{
-						if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == ownerType.id)
-						{ 
-							instance_destroy(allHurtboxes[i]);
-						}
-					}
-	
-					// Destroy all hitboxes that belong to this player
-					var allHitboxes = [];
-	
-					for (var i = 0; i < instance_number(oHitbox); i++;)
-					{
-						allHitboxes[i] = instance_find(oHitbox, i);
-		
-					}
-	
-					for (var i = 0; i < array_length(allHitboxes); i++;)
-					{
-						if (allHitboxes[i].owner == ownerType.id)
-						{ 
-							instance_destroy(allHitboxes[i]);
-						}
-					}
-					
-					
 					// Depth Sorting
 					ownerType.depth = -1;
 					collision_list[| i].owner.depth = 0;
@@ -611,34 +572,41 @@ function HandleHitboxCollision(ownerType)
 						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = ownerType.image_xscale * -1;
 					}
-
-					// Cancel into the command grab move
-					/*
-					ds_list_clear(ownerType.hitByGroup);
-					if (spirit != noone)
+					
+					// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+					var allHurtboxes = [];
+	
+					for (var l = 0; l < instance_number(oPlayerHurtbox); l++;) 
 					{
-						ds_list_clear(spirit.hitByGroup);
+						allHurtboxes[l] = instance_find(oPlayerHurtbox, l);
 					}
-					if (ownerType.target != noone)
+	
+					for (var l = 0; l < array_length(allHurtboxes); l++;)
 					{
-						ds_list_clear(ownerType.target.hitByGroup);
-					}
-					ownerType.animOffset = 0;
-					*/
-
-					// Iterates through every hurtbox in the scene and destroys each one that isn't a primary hurtbox
-					for (var i = 0; i < instance_number(oPlayerHurtbox); i++;)
-					{
-						var hurtbox = instance_find(oPlayerHurtbox, i);
-
-						if (!hurtbox.primary && hurtbox.owner == id)
-						{
-							instance_destroy(hurtbox);
+						if (!allHurtboxes[l].primary && allHurtboxes[l].owner.id == ownerType.id)
+						{ 
+							instance_destroy(allHurtboxes[l]);
 						}
 					}
-
-					instance_destroy(oHitbox);
-
+					
+					// Destroy all hitboxes that belong to this player or the grabbed victim
+					var allHitboxes = [];
+				
+					for (var l = 0; l < instance_number(oHitbox); l++;)
+					{
+						allHitboxes[l] = instance_find(oHitbox, l);
+					}
+					
+					for (var l = 0; l < array_length(allHitboxes); l++;)
+					{
+						if (allHitboxes[l].owner == ownerType || allHitboxes[l].owner == collision_list[| i].owner)
+						{ 
+							instance_destroy(allHitboxes[l]);
+						}
+					}
+					// Once we're done destroying hitboxes, we don't care about anything else.
+					exit;
+					
 				}
 				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB && attackProperty.AttackType != eAttackType.HITGRAB) // Hitting
 				{

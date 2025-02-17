@@ -44,6 +44,7 @@ function SetupGame()
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
 				isInCutscene = true;
+				teamID = 2; // Set this player's team score
 			}
 			with (p1) 
 			{
@@ -51,6 +52,7 @@ function SetupGame()
 				hasPerformedIntro = global.currentRound != 1;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
+				teamID = 1; // Set this player's team score
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
@@ -204,6 +206,8 @@ function SetupGame()
 				hasPerformedIntro = true;
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
+				
+				teamID = 1; // Set this player's team score
 				
 				// There's not a reason for the player to be locked to the screen
 				shouldStayOnScreen = false;
