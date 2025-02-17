@@ -143,10 +143,9 @@
             {"propertyId":{"name":"activationRadius","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"200","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"deactivationRadius","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"200","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3872.0,"y":56.0,"resourceVersion":"1.0","name":"inst_30C5E39","tags":[],"resourceType":"GMRInstance",},
-        {"properties":[],"isDnd":false,"objectId":{"name":"oKickableObject","path":"objects/oKickableObject/oKickableObject.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":136.0,"y":88.0,"resourceVersion":"1.0","name":"inst_50217D2E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"numberOfWallBounces","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"objectId":{"name":"oDestructibleObject","path":"objects/oDestructibleObject/oDestructibleObject.yy",},"value":"3","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-          ],"isDnd":false,"objectId":{"name":"oKickableObject","path":"objects/oKickableObject/oKickableObject.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1700.0,"y":44.0,"resourceVersion":"1.0","name":"inst_23923B8E","tags":[],"resourceType":"GMRInstance",},
+          ],"isDnd":false,"objectId":{"name":"oKickableObject","path":"objects/oKickableObject/oKickableObject.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1696.0,"y":56.0,"resourceVersion":"1.0","name":"inst_23923B8E","tags":[],"resourceType":"GMRInstance",},
         {"properties":[
             {"propertyId":{"name":"enemyBehavior","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"oAIBehavior_Enemy_Gin","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"enemyHP","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"20","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
@@ -172,6 +171,7 @@
             {"propertyId":{"name":"deactivationRadius","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"400","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
             {"propertyId":{"name":"AIActivationRadius","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"value":"40","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
           ],"isDnd":false,"objectId":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":1792.0,"y":104.0,"resourceVersion":"1.0","name":"inst_614277A4","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oKickableObject","path":"objects/oKickableObject/oKickableObject.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":3128.0,"y":64.0,"resourceVersion":"1.0","name":"inst_50217D2E","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":600,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[],"visible":true,"depth":700,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"UI","tags":[],"resourceType":"GMRInstanceLayer",},
     {"assets":[
@@ -449,11 +449,11 @@
     {"name":"inst_7E4EC26F","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_2479D2C1","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_166F9E38","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
-    {"name":"inst_50217D2E","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_23923B8E","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_38C0E7A4","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_B382FC3","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
     {"name":"inst_614277A4","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
+    {"name":"inst_50217D2E","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

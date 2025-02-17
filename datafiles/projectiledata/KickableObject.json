@@ -40,7 +40,7 @@
       "AttackWidth": 12,
       "AttackHeight": 12,
       "WidthOffset": -6,
-      "HeightOffset": -6,
+      "HeightOffset": 6,
       "Group": 1,
       "Damage": 20,
       "MeterGain": 5.0,
@@ -103,6 +103,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "a3428b5a-a0b9-4e34-9b1a-5e86564e11ee",
-  "LastModified": "2025-02-16T22:49:51.1902454-07:00",
+  "LastModified": "2025-02-17T00:38:45.4917571-07:00",
   "LastModifiedBy": "creep"
 }
