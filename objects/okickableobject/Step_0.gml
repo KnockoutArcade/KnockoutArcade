@@ -34,7 +34,7 @@ if (variable_struct_names_count(hasBeenHitByIds) > 0 && ds_list_size(hitboxID) <
 }
 
 
-if (hsp == 0 && vsp == 0) || (playerOwner == noone)
+if (hsp == 0 && vsp == 0) || (playerOwner == noone) || (numberOfWallBounces <= 0)
 {
 	// With each of the things we've collided with, clear it's projectileHitBy list
 	for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)
@@ -72,11 +72,7 @@ if (hsp == 0 && vsp == 0) || (playerOwner == noone)
 }
 
 
-
-/*
-duration--;
-
-if (duration <= 0)
+if (numberOfWallBounces <= 0)
 {
 	instance_destroy(hurtbox);
 	instance_destroy();

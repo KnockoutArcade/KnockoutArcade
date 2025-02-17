@@ -247,6 +247,11 @@ if (state != eState.HITSTOP)
 		}
 		else
 		{
+			if (numberOfWallBounces > -1)
+			{
+				numberOfWallBounces--;
+			}
+			
 			hsp = -hsp * bounceDampeningFactor;
 		
 			if (abs(hsp) <= 0.1)
