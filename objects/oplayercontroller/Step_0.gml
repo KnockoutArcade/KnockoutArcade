@@ -1401,6 +1401,11 @@ switch state
 				depth += 1;
 			}
 			
+			// if we are holding run, update our HSP
+			if (runningForward)
+			{
+				hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
+			}
 			
 			// Handle shorthops
 			if (canShortHop)
