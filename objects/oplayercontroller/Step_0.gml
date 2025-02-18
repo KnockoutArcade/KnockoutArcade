@@ -3475,6 +3475,17 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 	}
 }
 
+// Update Horizontal Movement
+if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
+{
+	x += hsp + environmentDisplacement;
+	if (!isInCutscene && shouldStayOnScreen)
+	{
+		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+	}
+	xHome = x;
+}
+
 // Collisions with Floors
 if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
@@ -3584,14 +3595,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 // Update Movement
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
-	x += hsp + environmentDisplacement;
-	if (!isInCutscene && shouldStayOnScreen)
-	{
-		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
-	}
 	y += vsp;
-	
-	xHome = x;
 	yHome = y;
 }
 
