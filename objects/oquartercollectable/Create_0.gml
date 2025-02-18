@@ -8,6 +8,8 @@ traction = .5 // How much this quarter slows down when sliding along the ground
 vsp = 0; // Vertical Speed
 hsp = 0; // Horizontal Speed
 
+/*
 coinValue = .25; // How much money to give the player on collection (in dollars)
-
+healthValue = 0; // How much HP to give to the player
+meterValue = 0; // How much Meter to give to the player
 

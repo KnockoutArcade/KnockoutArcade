@@ -11,9 +11,11 @@ if (collidingPlayer != noone)
 			if (collidingPlayer.owner.playerID > 0)
 			{
 				collidingPlayer.owner.coinScore += coinValue;
+				collidingPlayer.owner.hp += healthValue;
+				collidingPlayer.owner.superMeter += meterValue;
 	
 				var particle = instance_create_layer(x, y, "Particles", oParticles);
-				with(particle)
+				with (particle)
 				{
 					lifetime = 25;
 					sprite_index = sCollectionSparkle;

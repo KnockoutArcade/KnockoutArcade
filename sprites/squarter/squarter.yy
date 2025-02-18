@@ -81,8 +81,8 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Single Player Object Sprites",
-    "path": "folders/Sprites/Single Player Object Sprites.yy",
+    "name": "Collectables",
+    "path": "folders/Sprites/Single Player Object Sprites/Collectables.yy",
   },
   "resourceVersion": "1.0",
   "name": "sQuarter",
