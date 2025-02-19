@@ -3141,6 +3141,11 @@ if (hp < 0)
 {
 	hp = 0;
 }
+if (hp > maxHitPoints)
+{
+	hp = maxHitPoints;
+}
+
 if (spirit != noone)
 {
 	if (spiritCurrentHealth < 0)
