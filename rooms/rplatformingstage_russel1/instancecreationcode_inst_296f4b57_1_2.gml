@@ -1,4 +1,6 @@
 levelDestination = rRusselMap;
 
-mapReturnX = 640;
-mapReturnY = 192;
+mapReturnX = 160;
+mapReturnY = 244;
+
+levelName = "CoinOpCarnage";

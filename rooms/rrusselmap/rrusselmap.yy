@@ -18,7 +18,9 @@
         {"properties":[],"isDnd":false,"objectId":{"name":"oOverworldPlayer","path":"objects/oOverworldPlayer/oOverworldPlayer.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":160.0,"y":224.0,"resourceVersion":"1.0","name":"inst_3077C5E9","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":0,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":8,"gridY":8,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Instances","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
-        {"properties":[],"isDnd":false,"objectId":{"name":"oCampaignLevel","path":"objects/oCampaignLevel/oCampaignLevel.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":160.0,"resourceVersion":"1.0","name":"inst_3B7FFAFB","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oCampaignLevel","path":"objects/oCampaignLevel/oCampaignLevel.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":128.0,"y":192.0,"resourceVersion":"1.0","name":"inst_3B7FFAFB","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oCampaignLevel","path":"objects/oCampaignLevel/oCampaignLevel.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":192.0,"y":192.0,"resourceVersion":"1.0","name":"inst_E541F5C","tags":[],"resourceType":"GMRInstance",},
+        {"properties":[],"isDnd":false,"objectId":{"name":"oCampaignLevel","path":"objects/oCampaignLevel/oCampaignLevel.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":256.0,"y":128.0,"resourceVersion":"1.0","name":"inst_6C19D1","tags":[],"resourceType":"GMRInstance",},
       ],"visible":true,"depth":100,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],"resourceVersion":"1.0","name":"Levels","tags":[],"resourceType":"GMRInstanceLayer",},
     {"instances":[
         {"properties":[],"isDnd":false,"objectId":{"name":"oWall","path":"objects/oWall/oWall.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":34.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":16.0,"y":0.0,"resourceVersion":"1.0","name":"inst_422F3B64","tags":[],"resourceType":"GMRInstance",},
@@ -55,6 +57,8 @@
     {"name":"inst_71EBFD0C","path":"rooms/rRusselMap/rRusselMap.yy",},
     {"name":"inst_D66F56","path":"rooms/rRusselMap/rRusselMap.yy",},
     {"name":"inst_52F6F30E","path":"rooms/rRusselMap/rRusselMap.yy",},
+    {"name":"inst_E541F5C","path":"rooms/rRusselMap/rRusselMap.yy",},
+    {"name":"inst_6C19D1","path":"rooms/rRusselMap/rRusselMap.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,
