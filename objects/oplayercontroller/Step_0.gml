@@ -2542,22 +2542,29 @@ switch state
 			hitstun--;
 		}
 		
-		// Get up after 40 frame
+		// Get up after 40 frames
 		if (animTimer > 39)
 		{
-			if (!global.roundOver) // if the round not over, get up
+			if (hp <= 0 && global.gameMode == GAMEMODE.PLATFORMING)
 			{
-				state = eState.GETUP;
-				animTimer = 0;
-				sprite_index = CharacterSprites.getup_Sprite;
-				image_index = 0;
+				state = eState.ENEMY_KO;
 			}
-			else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
+			else
 			{
-				state = eState.GETUP;
-				animTimer = 0;
-				sprite_index = CharacterSprites.getup_Sprite;
-				image_index = 0;
+				if (!global.roundOver) // if the round not over, get up
+				{
+					state = eState.GETUP;
+					animTimer = 0;
+					sprite_index = CharacterSprites.getup_Sprite;
+					image_index = 0;
+				}
+				else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
+				{
+					state = eState.GETUP;
+					animTimer = 0;
+					sprite_index = CharacterSprites.getup_Sprite;
+					image_index = 0;
+				}
 			}
 		}
 	}
@@ -3072,6 +3079,26 @@ switch state
 		SpeedTrail(0.3, 0.02, 1);
 	}
 	break;
+	
+	case eState.ENEMY_KO:
+	{
+		// Cause the enemy to flicker
+		if (animTimer mod 3 == 0)
+		{
+			visible = !visible;
+		}
+		
+		cancelable = false;
+		grounded = true;
+		invincible = true;
+		canTurnAround = false;
+		isInStableState = true;
+		inAttackState = false;
+		canBlock = false;
+		
+		image_speed = 0;
+	}
+	break;
 }
 
 // Code Outside State Machine
@@ -3361,7 +3388,7 @@ y = yHome;
 if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
-	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && state != eState.TECH_ROLL && opponent.state != eState.TECH_ROLL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && state != eState.TECH_ROLL && opponent.state != eState.TECH_ROLL && state != eState.ENEMY_KO && opponent.state != eState.ENEMY_KO) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
 		if (state != eState.HITSTOP)
 		{
