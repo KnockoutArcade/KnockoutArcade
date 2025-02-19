@@ -2548,6 +2548,7 @@ switch state
 			if (hp <= 0 && global.gameMode == GAMEMODE.PLATFORMING)
 			{
 				state = eState.ENEMY_KO;
+				animTimer = 0;
 			}
 			else
 			{
@@ -3086,6 +3087,7 @@ switch state
 		if (animTimer mod 3 == 0)
 		{
 			visible = !visible;
+			show_debug_message("yup");
 		}
 		
 		cancelable = false;

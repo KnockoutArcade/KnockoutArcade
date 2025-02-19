@@ -41,7 +41,7 @@ if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= AIActivationRa
 if (isActive)
 {
 	// Once the enemy has run out of HP or fallen into a pit, destroy it
-	if (enemyID.hp <= 0 || enemyID.hasFallenDownPit)
+	if ((enemyID.state == eState.ENEMY_KO && enemyID.animTimer >= 45) || enemyID.hasFallenDownPit)
 	{
 		// Destroy everything
 		instance_destroy(enemyID);
@@ -51,7 +51,6 @@ if (isActive)
 		// In the future, I might not want to destroy this object to allow it to respawn its enemy
 		instance_destroy();
 	}
-
 }
 
 
