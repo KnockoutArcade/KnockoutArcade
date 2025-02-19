@@ -11,7 +11,7 @@ if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) <= activationRadi
 	// run the setup script
 	enemySetup();
 }
-else if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) >= deactivationRadius && isActive)
+else if (point_distance(x, y, oGameManager.p1.x, oGameManager.p1.y) >= deactivationRadius && isActive && enemyID.hp > 0)
 {
 	isActive = false
 	isAIActive = false;
