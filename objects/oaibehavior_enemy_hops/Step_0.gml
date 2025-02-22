@@ -60,7 +60,7 @@ switch (AIState)
 		// Upon entering this state, determine how long between actions
 		if (AIEventTimer == 1)
 		{
-			randomDelayTimer = irandom_range(5, 45);
+			randomDelayTimer = irandom_range(0, 30);
 		}
 		
 		// Wait a random amount of time
@@ -70,7 +70,7 @@ switch (AIState)
 		if (randomDelayTimer <= 0)
 		{
 			// choose whether to walk or Jump
-			var decideWalkOrAttack = irandom_range(0, 15);
+			var decideWalkOrAttack = irandom_range(0, 5);
 			
 			// 12/15 chance to choose jumping
 			if (decideWalkOrAttack < 13)
@@ -79,7 +79,6 @@ switch (AIState)
 				AIState = eAIState.JUMP;
 				
 				controllerID.buttonUp = true;
-				controllerID.ButtonLeft = true;
 		
 				// Reset event timers
 				AIEventTimer = 0;
@@ -87,17 +86,30 @@ switch (AIState)
 				// Reset has just attacked
 				hasJustAttacked = false;
 				
+				// determine which way to jump
+				walkDirection = sign(characterID.opponent.x - characterID.x);
+				
 				// This enemy has a chance to walk only backwards instead of forwards
 				if (decideWalkOrAttack <= jumpBackwardsChance)
 				{
 					// Determine random ideal range
-					idealRangeChosenVariation = irandom_range(-2, 2);
+					//idealRangeChosenVariation = irandom_range(-2, 2);
+					
+					// Determine which way to jump
+					if (walkDirection == 1)
+					{
+						controllerID.buttonRight = true;
+					}
+					else if (walkDirection == -1)
+					{
+						controllerID.buttonLeft = true;
+					}
 					
 					// Set where we are going
-					setTargetPosition(characterID.x + ((10 + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
+					//setTargetPosition(characterID.x + ((10 + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
 				
 					// Enemy is now less likely to walk backwards again
-					jumpBackwardsChance--;
+					//jumpBackwardsChance--;
 				}
 				else
 				{
@@ -107,8 +119,18 @@ switch (AIState)
 					// Set where we are going
 					setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
 					
+					// Determine which way to jump (away from player)
+					if (walkDirection == 1)
+					{
+						controllerID.buttonLeft = true;
+					}
+					else if (walkDirection == -1)
+					{
+						controllerID.buttonRight = true;
+					}
+					
 					// Enemy is now more likely to walk backwards
-					jumpBackwardsChance++;
+					//jumpBackwardsChance++;
 				}
 				
 			}
@@ -305,10 +327,19 @@ switch (AIState)
 	case eAIState.JUMP :
 	{
 		controllerID.buttonUp = true;
-		controllerID.ButtonLeft = true;
+		
+		
+		if (AIEventTimer == 20)
+		{
+			controllerID.buttonMedium = true;
+		}
+		else
+		{
+			controllerID.buttonMedium = false;
+		}
 		
 		// Once we land, go back to idle
-		if (AIEventTimer >= 6 && characterID.grounded)
+		if (AIEventTimer >= 10 && characterID.grounded)
 		{
 			// Set the state
 			AIState = eAIState.IDLE;
@@ -317,7 +348,9 @@ switch (AIState)
 			AIEventTimer = 0;
 			
 			controllerID.buttonUp = false;
-			controllerID.ButtonLeft = false;
+			controllerID.buttonLeft = false;
+			controllerID.buttonRight = false;
+			controllerID.buttonMedium = false;
 		}
 	}
 	break;

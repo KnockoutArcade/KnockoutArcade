@@ -13,7 +13,7 @@ platformWalkoffThreshold = 20; // How close this enemy is allowed to be from the
 
 bottomlessPitDetectionDistance = 30; // How far away from our current position to check for a bottomless pit
 
-jumpBackwardsChance = 7; // How likely (out of 15) this enemy is to walk backwards instead of forwards.
+jumpBackwardsChance = 3; // How likely (out of 15) this enemy is to walk backwards instead of forwards.
 
 attackSubstate = 0; // For Hops, 
 // 0 == walking to player
@@ -24,6 +24,10 @@ hasJustAttacked = false; // Whether this enemy has picked attacking as its most 
 // Initialize this object's target position to its spawn location.
 targetPositionX = x;
 targetPositionY = y;
+
+// This is the starting positition for this enemy
+homePositionX = x;
+homePosiitonY = y;
 
 setTargetPosition = function(tryX, tryY)
 {
