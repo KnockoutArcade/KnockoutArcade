@@ -1406,6 +1406,10 @@ switch state
 			{
 				hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
 			}
+			else if (movedir != 0) // if we are holding left or right, jump in that direction
+			{
+				hsp = walkSpeed * movedir;
+			}
 			
 			// Handle shorthops
 			if (canShortHop)
