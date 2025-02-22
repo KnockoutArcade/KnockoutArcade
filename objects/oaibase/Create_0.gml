@@ -23,6 +23,7 @@ enum eAIState {
 	INACTIVE, // Will not move, attack, etc. until allowed to
 	IDLE, // Standing still
 	WALK, // Walk towards target position
+	JUMP, // Jump around
 	ATTACK, // General attack state
 	HURT // Handle getting hurt/getting up
 }

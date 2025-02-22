@@ -527,6 +527,7 @@
     {"id":{"name":"oTVScreen","path":"objects/oTVScreen/oTVScreen.yy",},"order":14,},
     {"id":{"name":"sGunther_CrouchLight_mockup_strip7","path":"sprites/sGunther_CrouchLight_mockup_strip7/sGunther_CrouchLight_mockup_strip7.yy",},"order":7,},
     {"id":{"name":"sBottomlessPit","path":"sprites/sBottomlessPit/sBottomlessPit.yy",},"order":0,},
+    {"id":{"name":"oAIBehavior_Enemy_Hops","path":"objects/oAIBehavior_Enemy_Hops/oAIBehavior_Enemy_Hops.yy",},"order":4,},
     {"id":{"name":"oRussel","path":"objects/oRussel/oRussel.yy",},"order":3,},
     {"id":{"name":"sJay_SC_CrouchingIdle_mockup_strip1","path":"sprites/sJay_SC_CrouchingIdle_mockup_strip1/sJay_SC_CrouchingIdle_mockup_strip1.yy",},"order":8,},
     {"id":{"name":"sTVScreen","path":"sprites/sTVScreen/sTVScreen.yy",},"order":12,},
