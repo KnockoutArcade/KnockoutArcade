@@ -13,7 +13,9 @@ platformWalkoffThreshold = 20; // How close this enemy is allowed to be from the
 
 bottomlessPitDetectionDistance = 45; // How far away from our current position to check for a bottomless pit
 
-jumpBackwardsChance = 3; // How likely (out of 15) this enemy is to walk backwards instead of forwards.
+jumpForwardsChance = 10; // How likely (out of 15) this enemy is to jump forwards
+
+playerDistanceThreshold = 60; // How far away we must be in order to always jump towards the player;
 
 attackSubstate = 0; // For Hops, 
 // 0 == walking to player

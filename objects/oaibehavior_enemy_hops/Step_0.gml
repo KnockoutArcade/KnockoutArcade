@@ -70,7 +70,9 @@ switch (AIState)
 		if (randomDelayTimer <= 0)
 		{
 			// choose whether to walk or Jump
-			var decideWalkOrAttack = irandom_range(0, 5);
+			var decideWalkOrAttack = irandom_range(0, 12);
+			
+			//show_debug_message(decideWalkOrAttack);
 			
 			// 12/15 chance to choose jumping
 			if (decideWalkOrAttack < 13)
@@ -83,23 +85,23 @@ switch (AIState)
 				// Reset event timers
 				AIEventTimer = 0;
 				
-				// Reset has just attacked
-				hasJustAttacked = false;
-				
 				// determine which way to jump
 				walkDirection = sign(characterID.opponent.x - characterID.x);
+				show_debug_message(walkDirection);
 				
-				// This enemy has a chance to walk only backwards instead of forwards
-				if (decideWalkOrAttack <= jumpBackwardsChance)
+				// This enemy has a chance to jump backwards or forwards (always forwards if far away from player)
+				if (decideWalkOrAttack <= jumpForwardsChance || (characterID.opponent.x - characterID.x) >= playerDistanceThreshold)
 				{
 					// Determine which way to jump
 					if (walkDirection == 1)
 					{
 						controllerID.buttonRight = true;
+						show_debug_message("Jumped Right");
 					}
 					else if (walkDirection == -1)
 					{
 						controllerID.buttonLeft = true;
+						show_debug_message("Jumped Left");
 					}
 					
 					// Check the area where we would land and see if there's ground there
@@ -121,10 +123,12 @@ switch (AIState)
 					if (walkDirection == 1)
 					{
 						controllerID.buttonLeft = true;
+						show_debug_message("Jumped Left (Backwards)");
 					}
 					else if (walkDirection == -1)
 					{
 						controllerID.buttonRight = true;
+						show_debug_message("Jumped Right (Backwards)");
 					}
 					
 					// Check the area where we would land and see if there's ground there
