@@ -92,9 +92,6 @@ switch (AIState)
 				// This enemy has a chance to walk only backwards instead of forwards
 				if (decideWalkOrAttack <= jumpBackwardsChance)
 				{
-					// Determine random ideal range
-					//idealRangeChosenVariation = irandom_range(-2, 2);
-					
 					// Determine which way to jump
 					if (walkDirection == 1)
 					{
@@ -105,20 +102,21 @@ switch (AIState)
 						controllerID.buttonLeft = true;
 					}
 					
-					// Set where we are going
-					//setTargetPosition(characterID.x + ((10 + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
-				
-					// Enemy is now less likely to walk backwards again
-					//jumpBackwardsChance--;
+					// Check the area where we would land and see if there's ground there
+					var safeLanding = collision_line(characterID.x + (bottomlessPitDetectionDistance * walkDirection), characterID.y + 20, characterID.x + (bottomlessPitDetectionDistance * walkDirection), characterID.y - 20, oCollisionParent, false, true);
+					var foundBottomlessPit = collision_line(characterID.x + (bottomlessPitDetectionDistance * walkDirection), characterID.y, characterID.x + (bottomlessPitDetectionDistance * walkDirection), characterID.y + 300, oBottomlessPit, false, true);
+					
+					// If it's not safe and there's a bottomless pit, jump in place
+					if (!safeLanding && foundBottomlessPit)
+					{
+						walkDirection = 0;
+						
+						controllerID.buttonLeft = false;
+						controllerID.buttonRight = false;
+					}
 				}
 				else
 				{
-					// Determine random ideal range
-					idealRangeChosenVariation = irandom_range(-idealRangeVariation, idealRangeVariation);
-		
-					// Set where we are going
-					setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
-					
 					// Determine which way to jump (away from player)
 					if (walkDirection == 1)
 					{
@@ -129,8 +127,18 @@ switch (AIState)
 						controllerID.buttonRight = true;
 					}
 					
-					// Enemy is now more likely to walk backwards
-					//jumpBackwardsChance++;
+					// Check the area where we would land and see if there's ground there
+					var safeLanding = collision_line(characterID.x + (bottomlessPitDetectionDistance * -walkDirection), characterID.y + 20, characterID.x + (bottomlessPitDetectionDistance * -walkDirection), characterID.y - 20, oCollisionParent, false, true);
+					var foundBottomlessPit = collision_line(characterID.x + (bottomlessPitDetectionDistance * -walkDirection), characterID.y, characterID.x + (bottomlessPitDetectionDistance * -walkDirection), characterID.y + 300, oBottomlessPit, false, true);
+					
+					// If it's not safe and there's a bottomless pit, jump in place
+					if (!safeLanding && foundBottomlessPit)
+					{
+						walkDirection = 0;
+						
+						controllerID.buttonLeft = false;
+						controllerID.buttonRight = false;
+					}
 				}
 				
 			}
@@ -331,7 +339,7 @@ switch (AIState)
 		
 		if (AIEventTimer == 20)
 		{
-			controllerID.buttonMedium = true;
+			//controllerID.buttonMedium = true;
 		}
 		else
 		{

@@ -11,7 +11,7 @@ idealRangeChosenVariation = 0; // Once a variation is chosen, it is stored here 
 
 platformWalkoffThreshold = 20; // How close this enemy is allowed to be from the edge of a platform
 
-bottomlessPitDetectionDistance = 30; // How far away from our current position to check for a bottomless pit
+bottomlessPitDetectionDistance = 45; // How far away from our current position to check for a bottomless pit
 
 jumpBackwardsChance = 3; // How likely (out of 15) this enemy is to walk backwards instead of forwards.
 
