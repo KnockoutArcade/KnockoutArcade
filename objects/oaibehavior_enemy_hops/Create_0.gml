@@ -19,6 +19,8 @@ playerDistanceThreshold = 60; // How far away we must be in order to always jump
 
 hasJustAttacked = false; // Whether this enemy has picked attacking as its most recent action
 
+attackChance = 3; // How likely this enemy is to attack (1/#)
+
 // These vars determine how long we should be in the walk state for
 currentWalkDuration = 0;
 walkDurationLowerBound = 15;

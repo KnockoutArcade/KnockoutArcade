@@ -250,10 +250,10 @@ switch (AIState)
 	{
 		controllerID.buttonUp = true;
 		
-		
-		if (AIEventTimer == 20)
+		// 25% chance to attack the player
+		if (AIEventTimer == 20 && irandom_range(0, attackChance) == 1)
 		{
-			//controllerID.buttonMedium = true;
+			controllerID.buttonMedium = true;
 		}
 		else
 		{
