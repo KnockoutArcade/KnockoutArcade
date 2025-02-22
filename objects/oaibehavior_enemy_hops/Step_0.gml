@@ -70,9 +70,7 @@ switch (AIState)
 		if (randomDelayTimer <= 0)
 		{
 			// choose whether to walk or Jump
-			var decideWalkOrAttack = irandom_range(0, 12);
-			
-			//show_debug_message(decideWalkOrAttack);
+			var decideWalkOrAttack = irandom_range(0, 15);
 			
 			// 12/15 chance to choose jumping
 			if (decideWalkOrAttack < 13)
@@ -80,14 +78,17 @@ switch (AIState)
 				// Set the state
 				AIState = eAIState.JUMP;
 				
+				// Might as well Jump
 				controllerID.buttonUp = true;
+				
+				// Set has just attacked
+				hasJustAttacked = false;
 		
 				// Reset event timers
 				AIEventTimer = 0;
 				
 				// determine which way to jump
 				walkDirection = sign(characterID.opponent.x - characterID.x);
-				show_debug_message(walkDirection);
 				
 				// This enemy has a chance to jump backwards or forwards (always forwards if far away from player)
 				if (decideWalkOrAttack <= jumpForwardsChance || (characterID.opponent.x - characterID.x) >= playerDistanceThreshold)
@@ -149,16 +150,16 @@ switch (AIState)
 			else if (!hasJustAttacked)// 3/15 chance to walk around for a bit
 			{
 				// Set the state
-				AIState = eAIState.ATTACK;
+				AIState = eAIState.WALK;
 		
 				// Reset event timers
 				AIEventTimer = 0;
 				
-				// Set the attack substate to 0
-				attackSubstate = 0;
-				
 				// Make sure this enemy can't attack twice in a row.
 				hasJustAttacked = true;
+				
+				// Set walk duration timer
+				currentWalkDuration = irandom_range(walkDurationLowerBound, walkDurationUpperBound);
 			}
 		}
 		
@@ -168,20 +169,23 @@ switch (AIState)
 	case eAIState.WALK :
 	{
 		// Determine where we need to go (refresh every 5 frames)
-		// In this case, our target is some distance away from the player (based on the direction this is facing)
-		//if (AIEventTimer mod 5 == 0)
-		//{
-		//	setTargetPosition(opponent.x + ((idealRangeFromPlayer + idealRangeChosenVariation)) * -sign(characterID.image_xscale), characterID.y);
-		//}
+		// In this case, our target either in front or behind us
+		if (AIEventTimer mod 5 == 0)
+		{
+			if (irandom_range(0,1) == 1)
+			{
+				// Go Left
+				setTargetPosition(characterID.x - 50, characterID.y);
+			}
+			else
+			{
+				// Go Right
+				setTargetPosition(characterID.x + 50, characterID.y);
+			}
+		}
 		
 		// Determine which direction we need to walk in
 		var walkDirection = sign(targetPositionX - characterID.x);
-		
-		// Determine if we have reached our destination
-		if (characterID.x < (targetPositionX + closeEnoughToTargetRange)) && (characterID.x > targetPositionX - closeEnoughToTargetRange)
-		{
-			walkDirection = 0;
-		}
 		
 		// Floor collision check
 		with (characterID)
@@ -207,8 +211,14 @@ switch (AIState)
 		}
 		else // If we reach our destination
 		{
-			// if walk direction is 0, it means we don't need to move and we are able to attack
-			
+			// Clear inputs
+			controllerID.buttonLeft = false;
+			controllerID.buttonRight = false;
+		}
+		
+		// After some time has passed, go back to the idle state.
+		if (AIEventTimer >= currentWalkDuration)
+		{
 			// Set the state
 			AIState = eAIState.IDLE;
 			
@@ -218,106 +228,6 @@ switch (AIState)
 			
 			// Reset Timer
 			AIEventTimer = 0;
-		}
-		
-		// After a little over 2 seconds, if we have not reached our destination, go back to idle.
-		if (AIEventTimer >= 130)
-		{
-			// Set the state
-			AIState = eAIState.IDLE;
-			
-			// Clear inputs
-			controllerID.buttonLeft = false;
-			controllerID.buttonRight = false;
-			
-			// Reset Timer
-			AIEventTimer = 0;
-		}
-	}
-	break;
-	
-	case eAIState.ATTACK :
-	{
-		// This state is split into two sub-states. 
-		// First, walk to the player...
-		if (!attackSubstate)
-		{
-			setTargetPosition(opponent.x, opponent.y);
-			
-			// Determine which direction we need to walk in
-			var walkDirection = sign(targetPositionX - characterID.x);
-		
-			// Determine if we have reached our destination
-			if (characterID.x < (targetPositionX + 20)) && (characterID.x > targetPositionX - 20)
-			{
-				walkDirection = 0;
-			}
-			
-			// Floor collision check
-			with (characterID)
-			{
-				// If our next position would make us close to walking over a pit in front of us, stop moving.
-				if (!place_meeting(x + (other.platformWalkoffThreshold * walkDirection), y + 8, oCollisionParent))
-				{
-					// note, we are using the walkspeed of the enemy so that we can be the most accurate.
-					walkDirection = 0;
-				}
-			}
-			
-			
-			// If the destination is to the left
-			if (walkDirection == -1)
-			{
-				controllerID.buttonLeft = true;
-				controllerID.buttonRight = false;
-			}
-			else if (walkDirection == 1) // if the destination is to the right
-			{
-				controllerID.buttonLeft = false;
-				controllerID.buttonRight = true;
-			}
-			else // If we reach our destination
-			{
-				// if walk direction is 0, it means we don't need to move and we are able to attack
-			
-				// Transition to the attack substate.
-				attackSubstate = 1;
-				
-				AIEventTimer = 0;
-				
-				// Reset controls
-				controllerID.buttonRight = false;
-				controllerID.buttonLeft = false;
-			}
-			
-			// If we can't get to the player fast enough, then just go back to idle
-			if (AIEventTimer >= 120)
-			{
-				AIState = eAIState.IDLE;
-				
-				// Reset vars
-				AIEventTimer = 0;
-				attackSubstate = 0;
-				
-				// Reset controls
-				controllerID.buttonRight = false;
-				controllerID.buttonLeft = false;
-			}
-		}
-		else // then, attack the player
-		{
-			// Hold down the light attack button
-			controllerID.buttonLight = true;
-			
-			// After the attack is done, go back to idle.
-			if (AIEventTimer > 30)
-			{
-				AIState = eAIState.IDLE;
-				AIEventTimer = 0;
-				attackSubstate = 0;
-				
-				controllerID.buttonLight = false;
-			}
 		}
 	}
 	break;

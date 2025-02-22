@@ -17,19 +17,16 @@ jumpForwardsChance = 10; // How likely (out of 15) this enemy is to jump forward
 
 playerDistanceThreshold = 60; // How far away we must be in order to always jump towards the player;
 
-attackSubstate = 0; // For Hops, 
-// 0 == walking to player
-// 1 == attacking
-
 hasJustAttacked = false; // Whether this enemy has picked attacking as its most recent action
+
+// These vars determine how long we should be in the walk state for
+currentWalkDuration = 0;
+walkDurationLowerBound = 15;
+walkDurationUpperBound = 30;
 
 // Initialize this object's target position to its spawn location.
 targetPositionX = x;
 targetPositionY = y;
-
-// This is the starting positition for this enemy
-homePositionX = x;
-homePosiitonY = y;
 
 setTargetPosition = function(tryX, tryY)
 {
