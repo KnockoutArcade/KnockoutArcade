@@ -63,6 +63,7 @@
     {"id":{"name":"sFileSelect_Background","path":"sprites/sFileSelect_Background/sFileSelect_Background.yy",},"order":0,},
     {"id":{"name":"sGeyser","path":"sprites/sGeyser/sGeyser.yy",},"order":1,},
     {"id":{"name":"sJay_Jump","path":"sprites/sJay_Jump/sJay_Jump.yy",},"order":30,},
+    {"id":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"order":50,},
     {"id":{"name":"sRussel_WallSplat","path":"sprites/sRussel_WallSplat/sRussel_WallSplat.yy",},"order":38,},
     {"id":{"name":"oSetControlsMenu","path":"objects/oSetControlsMenu/oSetControlsMenu.yy",},"order":13,},
     {"id":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},"order":1,},

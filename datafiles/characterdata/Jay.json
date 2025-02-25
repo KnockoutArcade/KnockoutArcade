@@ -3716,7 +3716,7 @@
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
       "MoveType": 8192,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 4915224,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3923,7 +3923,7 @@
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
       "MoveType": 16384,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 4915224,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -4126,7 +4126,7 @@
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
       "MoveType": 32768,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 4915224,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -5058,7 +5058,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 524288,
-      "MoveCanCancelInto": 4393304,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -5066,8 +5066,8 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_StandLight1_Mockup_strip4",
-      "Duration": 10,
+      "SpriteName": "sJay_TacoKick",
+      "Duration": 30,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -5090,12 +5090,12 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 7,
           "Lifetime": 4,
           "AttackWidth": 12,
           "AttackHeight": 10,
-          "WidthOffset": 12,
-          "HeightOffset": 15,
+          "WidthOffset": -30,
+          "HeightOffset": -4,
           "Group": 1,
           "Damage": 3,
           "MeterGain": 4.0,
@@ -5154,10 +5154,10 @@
         }
       ],
       "CommandNormalData": {
-        "NumpadDirection": 0,
-        "Button": 1,
-        "GroundOrAir": false,
-        "CancelWhenLanding": false
+        "NumpadDirection": 4,
+        "Button": 2,
+        "GroundOrAir": true,
+        "CancelWhenLanding": true
       },
       "NumberOfEnhancements": 0,
       "SpecialData": [],
@@ -5168,15 +5168,23 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 3,
-          "Lifetime": 6,
-          "AttackWidth": 16,
-          "AttackHeight": 10,
-          "WidthOffset": 4,
-          "HeightOffset": 9
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 25,
+          "AttackHeight": 30,
+          "WidthOffset": -10,
+          "HeightOffset": 1
+        },
+        {
+          "Start": 1,
+          "Lifetime": 99,
+          "AttackWidth": 20,
+          "AttackHeight": 13,
+          "WidthOffset": -30,
+          "HeightOffset": -1
         }
       ],
       "NumberOfProjectiles": 0,
@@ -5195,8 +5203,8 @@
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -9077,6 +9085,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2024-09-13T15:25:21.5949993-07:00",
+  "LastModified": "2025-02-24T21:21:52.4905042-07:00",
   "LastModifiedBy": "creep"
 }
