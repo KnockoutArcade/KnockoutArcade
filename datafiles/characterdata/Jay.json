@@ -3032,7 +3032,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 4393240,
+      "MoveCanCancelInto": 4394264,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3082,7 +3082,7 @@
           "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 11.0,
-          "KnockBack": 1.9999999,
+          "KnockBack": 3.0,
           "AirKnockbackVertical": -2.2999997,
           "AirKnockbackHorizontal": 1.5000001,
           "Launches": false,
@@ -3113,7 +3113,7 @@
           "ComboScaling": 1.8,
           "AttackHitStop": 13,
           "AttackHitStun": 15,
-          "KnockBack": 2.0,
+          "KnockBack": 3.0,
           "AirKnockbackVertical": -2.2999997,
           "AirKnockbackHorizontal": 1.3000001,
           "Launches": false,
@@ -9085,6 +9085,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-24T22:34:38.3980696-07:00",
+  "LastModified": "2025-02-24T22:37:30.0039855-07:00",
   "LastModifiedBy": "creep"
 }
