@@ -5067,8 +5067,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_TacoKick",
-      "Duration": 30,
-      "NumberOfFrames": 5,
+      "Duration": 44,
+      "NumberOfFrames": 15,
       "FrameData": [
         {
           "Length": 0,
@@ -5089,6 +5089,46 @@
         {
           "Length": 11,
           "ImageIndex": 4
+        },
+        {
+          "Length": 14,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 17,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 23,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 26,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 29,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 32,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 35,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 38,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 41,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
@@ -5183,7 +5223,7 @@
           "HeightOffset": 1
         },
         {
-          "Start": 1,
+          "Start": 7,
           "Lifetime": 99,
           "AttackWidth": 20,
           "AttackHeight": 13,
@@ -9089,6 +9129,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-25T21:16:49.3965481-07:00",
+  "LastModified": "2025-02-25T21:59:14.051754-07:00",
   "LastModifiedBy": "creep"
 }
