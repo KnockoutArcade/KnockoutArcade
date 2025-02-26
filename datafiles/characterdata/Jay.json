@@ -5125,7 +5125,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
-          "HitSound": "sfx_Light_Hit",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -5153,8 +5153,8 @@
           "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2"
+          "CausesWallbounce": true,
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -9089,6 +9089,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-25T21:12:01.6058699-07:00",
+  "LastModified": "2025-02-25T21:16:49.3965481-07:00",
   "LastModifiedBy": "creep"
 }
