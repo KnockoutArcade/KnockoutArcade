@@ -5068,7 +5068,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_TacoKick",
       "Duration": 30,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
           "Length": 0,
@@ -5085,6 +5085,10 @@
         {
           "Length": 9,
           "ImageIndex": 3
+        },
+        {
+          "Length": 11,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
@@ -5105,13 +5109,13 @@
           "AttackType": 0,
           "BlockStun": 5.0,
           "KnockBack": 1.5,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackVertical": -2.0,
+          "AirKnockbackHorizontal": 3.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
-          "Pushback": 1.0,
+          "GravityScaling": 2.0,
+          "Pushback": 2.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
@@ -5120,7 +5124,7 @@
           "HoldYOffset": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
+          "CausesWallbounce": true,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
@@ -5128,21 +5132,21 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 1,
+          "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 5,
+          "Damage": 7,
           "MeterGain": 6.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 10,
-          "AttackHitStun": 14,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 20,
+          "AttackHitStun": 18,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 1.5,
-          "Launches": true,
-          "LaunchKnockbackVertical": 0.2,
-          "LaunchKnockbackHorizontal": 0.1,
+          "AirKnockbackHorizontal": 4.0,
+          "Launches": false,
+          "LaunchKnockbackVertical": 0.0,
+          "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
-          "Pushback": 1.0,
+          "Pushback": 2.0,
           "ParticleXOffset": 18,
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
@@ -9085,6 +9089,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-24T22:37:30.0039855-07:00",
+  "LastModified": "2025-02-25T21:12:01.6058699-07:00",
   "LastModifiedBy": "creep"
 }

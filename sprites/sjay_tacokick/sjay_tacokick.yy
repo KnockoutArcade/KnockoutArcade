@@ -7,10 +7,10 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 14,
+  "bbox_left": 11,
   "bbox_right": 67,
-  "bbox_top": 10,
-  "bbox_bottom": 43,
+  "bbox_top": 13,
+  "bbox_bottom": 44,
   "HTile": false,
   "VTile": false,
   "For3D": false,
@@ -24,18 +24,21 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e3afe124-5d02-49d2-94ea-d14f0e192906","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e3afe124-5d02-49d2-94ea-d14f0e192906","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"4b0f5f5d-9115-41ff-905d-8b6f4b1cccac","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"e3afe124-5d02-49d2-94ea-d14f0e192906","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"63e97987-98e7-406c-bb6b-837c0665b606","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"63e97987-98e7-406c-bb6b-837c0665b606","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"4b0f5f5d-9115-41ff-905d-8b6f4b1cccac","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"63e97987-98e7-406c-bb6b-837c0665b606","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"5bd0820c-dd85-4117-82c1-481f3f092dd2","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5bd0820c-dd85-4117-82c1-481f3f092dd2","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"4b0f5f5d-9115-41ff-905d-8b6f4b1cccac","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"5bd0820c-dd85-4117-82c1-481f3f092dd2","tags":[],"resourceType":"GMSpriteFrame",},
-    {"compositeImage":{"FrameId":{"name":"e67a35f3-33d6-44f3-8a3d-3331d3bb0efc","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e67a35f3-33d6-44f3-8a3d-3331d3bb0efc","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"4b0f5f5d-9115-41ff-905d-8b6f4b1cccac","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"e67a35f3-33d6-44f3-8a3d-3331d3bb0efc","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"394831bd-0d4d-4f05-818f-1a6c9fd27aa6","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"394831bd-0d4d-4f05-818f-1a6c9fd27aa6","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"394831bd-0d4d-4f05-818f-1a6c9fd27aa6","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"fa85b2e4-0ce9-4176-b827-46049fb78b41","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"fa85b2e4-0ce9-4176-b827-46049fb78b41","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"fa85b2e4-0ce9-4176-b827-46049fb78b41","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"173b21cb-fa41-47f8-a733-947e6a4480d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"173b21cb-fa41-47f8-a733-947e6a4480d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"173b21cb-fa41-47f8-a733-947e6a4480d0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"a1fd9d32-3c64-491b-b2fb-cb07657168d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"a1fd9d32-3c64-491b-b2fb-cb07657168d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"a1fd9d32-3c64-491b-b2fb-cb07657168d0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"f213a3ce-a792-45c8-a108-d45278357869","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"f213a3ce-a792-45c8-a108-d45278357869","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"LayerId":{"name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","name":"f213a3ce-a792-45c8-a108-d45278357869","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
     "spriteId": {"name":"sJay_TacoKick","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},
@@ -45,15 +48,16 @@
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 4.0,
+    "length": 5.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MessageEventKeyframe",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0cc34b20-3308-4702-af6d-a43cf691abc1","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e3afe124-5d02-49d2-94ea-d14f0e192906","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"a6832256-a333-479f-a735-0c89275d3cfc","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"63e97987-98e7-406c-bb6b-837c0665b606","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"e2de6d78-04b7-4a83-ba77-96346f73433f","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bd0820c-dd85-4117-82c1-481f3f092dd2","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
-            {"id":"6a7e5627-a4b4-487e-9530-a07a5781ace9","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e67a35f3-33d6-44f3-8a3d-3331d3bb0efc","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"c8c1150a-a0bc-4826-9c5d-81c090f5fa09","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"394831bd-0d4d-4f05-818f-1a6c9fd27aa6","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"ba6957ff-f538-4d1f-af21-f984016f74a8","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"fa85b2e4-0ce9-4176-b827-46049fb78b41","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"63c763b6-c0d1-4f13-a720-28e9f16b20bf","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"173b21cb-fa41-47f8-a733-947e6a4480d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"dee17788-83fa-4b25-be0b-58368b6fc863","Key":3.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"a1fd9d32-3c64-491b-b2fb-cb07657168d0","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"076f2292-c521-4161-a492-ee6f4352e6ee","Key":4.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"f213a3ce-a792-45c8-a108-d45278357869","path":"sprites/sJay_TacoKick/sJay_TacoKick.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -77,7 +81,7 @@
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4b0f5f5d-9115-41ff-905d-8b6f4b1cccac","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8bea6bf4-e03a-4c44-9f44-31307f0a50a7","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
