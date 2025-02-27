@@ -2297,7 +2297,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 4393368,
+      "MoveCanCancelInto": 5441944,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3032,7 +3032,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 4394264,
+      "MoveCanCancelInto": 5442840,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -9241,6 +9241,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-26T21:23:16.0622296-07:00",
+  "LastModified": "2025-02-26T22:05:44.4094995-07:00",
   "LastModifiedBy": "creep"
 }
