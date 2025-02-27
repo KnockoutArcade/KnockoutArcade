@@ -351,6 +351,7 @@
     {"id":{"name":"sJay_SC_StandLight_MOCKUP_strip3","path":"sprites/sJay_SC_StandLight_MOCKUP_strip3/sJay_SC_StandLight_MOCKUP_strip3.yy",},"order":13,},
     {"id":{"name":"ProcessEnhancers","path":"scripts/ProcessEnhancers/ProcessEnhancers.yy",},"order":0,},
     {"id":{"name":"sKOText","path":"sprites/sKOText/sKOText.yy",},"order":14,},
+    {"id":{"name":"sJay_CommandNormal_2","path":"sprites/sJay_CommandNormal_2/sJay_CommandNormal_2.yy",},"order":51,},
     {"id":{"name":"sFightTrigger","path":"sprites/sFightTrigger/sFightTrigger.yy",},"order":8,},
     {"id":{"name":"SummonInSpiritOff","path":"scripts/SummonInSpiritOff/SummonInSpiritOff.yy",},"order":2,},
     {"id":{"name":"sGunther_SideSpecial_mockup_strip8","path":"sprites/sGunther_SideSpecial_mockup_strip8/sGunther_SideSpecial_mockup_strip8.yy",},"order":15,},
