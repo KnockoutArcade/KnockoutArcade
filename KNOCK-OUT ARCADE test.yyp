@@ -283,6 +283,7 @@
     {"id":{"name":"oSpiritDeath","path":"objects/oSpiritDeath/oSpiritDeath.yy",},"order":13,},
     {"id":{"name":"sOptionsPanelOpen","path":"sprites/sOptionsPanelOpen/sOptionsPanelOpen.yy",},"order":6,},
     {"id":{"name":"ResultsScreen","path":"scripts/ResultsScreen/ResultsScreen.yy",},"order":33,},
+    {"id":{"name":"sPlatformingStage_Russel2","path":"sprites/sPlatformingStage_Russel2/sPlatformingStage_Russel2.yy",},"order":0,},
     {"id":{"name":"sRussel_UpSpecialFinisher","path":"sprites/sRussel_UpSpecialFinisher/sRussel_UpSpecialFinisher.yy",},"order":33,},
     {"id":{"name":"sBeverly_Launched","path":"sprites/sBeverly_Launched/sBeverly_Launched.yy",},"order":31,},
     {"id":{"name":"sConstructionGuy_Walk_Forwards","path":"sprites/sConstructionGuy_Walk_Forwards/sConstructionGuy_Walk_Forwards.yy",},"order":5,},
@@ -406,6 +407,7 @@
     {"id":{"name":"oEnemyPlacement","path":"objects/oEnemyPlacement/oEnemyPlacement.yy",},"order":3,},
     {"id":{"name":"sJay_SC_DownSpecia2A_MOCKUP_strip5","path":"sprites/sJay_SC_DownSpecia2A_MOCKUP_strip5/sJay_SC_DownSpecia2A_MOCKUP_strip5.yy",},"order":5,},
     {"id":{"name":"sStageSelect_Text_strip2","path":"sprites/sStageSelect_Text_strip2/sStageSelect_Text_strip2.yy",},"order":0,},
+    {"id":{"name":"rPlatformingStage_Russel2","path":"rooms/rPlatformingStage_Russel2/rPlatformingStage_Russel2.yy",},"order":2,},
     {"id":{"name":"sStartText","path":"sprites/sStartText/sStartText.yy",},"order":1,},
     {"id":{"name":"fntVictoryQuote","path":"fonts/fntVictoryQuote/fntVictoryQuote.yy",},"order":2,},
     {"id":{"name":"sStageSelect_StageNames_strip5","path":"sprites/sStageSelect_StageNames_strip5/sStageSelect_StageNames_strip5.yy",},"order":3,},
@@ -697,6 +699,7 @@
     {"roomId":{"name":"rPlatformingStage_Russel1","path":"rooms/rPlatformingStage_Russel1/rPlatformingStage_Russel1.yy",},},
     {"roomId":{"name":"rCampaignFileSelect","path":"rooms/rCampaignFileSelect/rCampaignFileSelect.yy",},},
     {"roomId":{"name":"rMinigameStage_Russel1","path":"rooms/rMinigameStage_Russel1/rMinigameStage_Russel1.yy",},},
+    {"roomId":{"name":"rPlatformingStage_Russel2","path":"rooms/rPlatformingStage_Russel2/rPlatformingStage_Russel2.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -802,6 +805,7 @@
     {"folderPath":"folders/Sprites/File Select.yy","order":25,"resourceVersion":"1.0","name":"File Select","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Single Player Object Sprites/Collectables.yy","order":13,"resourceVersion":"1.0","name":"Collectables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Single Player Objects/Collectables.yy","order":15,"resourceVersion":"1.0","name":"Collectables","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/Stages/Singleplayer Stages/Russels Stages/Restaurant Rumble.yy","order":4,"resourceVersion":"1.0","name":"Restaurant Rumble","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

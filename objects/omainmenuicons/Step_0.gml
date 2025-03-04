@@ -97,7 +97,7 @@ if (image_index == 2 && P1menuConfirm)
 	global.p1StartingPositionY = 0; // Set back to 0 when testing other levels
 	//global.p1StartingPositionY = 552; // Set back to 0 when testing other levels
 	
-	room_goto(rPlatformingStage_Russel1);
+	room_goto(rPlatformingStage_Russel2);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
