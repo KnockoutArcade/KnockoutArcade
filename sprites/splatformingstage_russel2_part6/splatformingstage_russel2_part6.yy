@@ -8,13 +8,13 @@
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
   "bbox_left": 0,
-  "bbox_right": 959,
+  "bbox_right": 639,
   "bbox_top": 0,
   "bbox_bottom": 239,
   "HTile": false,
   "VTile": false,
   "For3D": false,
-  "width": 960,
+  "width": 640,
   "height": 240,
   "textureGroupId": {
     "name": "Default",
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"c40b5c7b-3ebe-40b9-b76c-85fb283428d1","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"c40b5c7b-3ebe-40b9-b76c-85fb283428d1","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},"LayerId":{"name":"8c2fe43a-6614-49df-8045-dc8a19f96b2f","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sPlatformingStage_Russel2_part2","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},"resourceVersion":"1.0","name":"c40b5c7b-3ebe-40b9-b76c-85fb283428d1","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"bf9f7724-8aae-422c-b1db-25d46fcb48ef","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"bf9f7724-8aae-422c-b1db-25d46fcb48ef","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},"LayerId":{"name":"f9e6c2f4-a688-4ac6-a26c-ede7f37e3e56","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sPlatformingStage_Russel2_part6","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},"resourceVersion":"1.0","name":"bf9f7724-8aae-422c-b1db-25d46fcb48ef","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sPlatformingStage_Russel2_part2","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},
+    "spriteId": {"name":"sPlatformingStage_Russel2_part6","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"0f93e0b6-008e-428f-b171-43aa33b6bd79","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c40b5c7b-3ebe-40b9-b76c-85fb283428d1","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"8fd9528f-11e9-40c8-994b-d32c45851576","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"bf9f7724-8aae-422c-b1db-25d46fcb48ef","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sPlatformingStage_Russel2_part2","path":"sprites/sPlatformingStage_Russel2_part2/sPlatformingStage_Russel2_part2.yy",},
+    "parent": {"name":"sPlatformingStage_Russel2_part6","path":"sprites/sPlatformingStage_Russel2_part6/sPlatformingStage_Russel2_part6.yy",},
     "resourceVersion": "1.4",
-    "name": "sPlatformingStage_Russel2_part2",
+    "name": "sPlatformingStage_Russel2_part6",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"8c2fe43a-6614-49df-8045-dc8a19f96b2f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"f9e6c2f4-a688-4ac6-a26c-ede7f37e3e56","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/Stages/Singleplayer Stages/Russels Stages/Restaurant Rumble.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sPlatformingStage_Russel2_part2",
+  "name": "sPlatformingStage_Russel2_part6",
   "tags": [],
   "resourceType": "GMSprite",
 }
