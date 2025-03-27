@@ -179,6 +179,7 @@ function HandleHitboxCollision(ownerType)
 					collision_list[| i].owner.grounded &&
 					collision_list[| i].owner.state != eState.THROW_TECH &&
 					collision_list[| i].owner.state != eState.JUMPSQUAT &&
+					collision_list[| i].owner.throwProtectionTimer <= 0 &&
 					collision_list[| i].owner.isThrowable)
 				{
 					// Set the correct states for the attacker and victim
@@ -255,6 +256,7 @@ function HandleHitboxCollision(ownerType)
 				else if (attackProperty.AttackType == eAttackType.COMMAND_GRAB && // Command Grabs
 					collision_list[| i].owner.state != eState.THROW_TECH &&
 					collision_list[| i].owner.blockstun < 1 &&
+					collision_list[| i].owner.throwProtectionTimer <= 0 &&
 					collision_list[| i].owner.isThrowable)
 				{
 					// Set the correct states for the attacker and victim

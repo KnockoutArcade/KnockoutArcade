@@ -144,19 +144,28 @@ if (hp <= 0)
 {
 	isExperiencingHardKnockdown = true;
 }
-// Reduce RC projectile invulnerability
-if (!global.freezeTimer && rcProjectileInvulTimer > 0)
+// Reduce RC projectile invulnerability and throw protection
+if (!global.freezeTimer)
 {
-	rcProjectileInvulTimer--;
-}
-// Reset Projectile Invulnerability
-if (rcProjectileInvulTimer > 0)
-{
-	projectileInvincible = true;
-}
-else
-{
-	projectileInvincible = false;
+	if (rcProjectileInvulTimer > 1)
+	{
+		rcProjectileInvulTimer--;
+		projectileInvincible = true;
+	}
+	else
+	{
+		rcProjectileInvulTimer = 0;
+		projectileInvincible = false;
+	}
+	
+	if (throwProtectionTimer > 1)
+	{
+		throwProtectionTimer--;
+	}
+	else
+	{
+		throwProtectionTimer = 0;
+	}
 }
 
 
@@ -2408,13 +2417,13 @@ switch state
 		
 		if (hitstun < 1)
 		{
-			// Clear the hitByGroups to allow follow-up attacks to connect
-			
 			FAvictim = false;
 			
 			if (grounded)
 			{
 				cancelCombo = true;
+				// Give throw protection
+				throwProtectionTimer = throwProtectionAmount;
 			}
 			
 			if (!grounded) 
@@ -2699,6 +2708,9 @@ switch state
 			
 			animTimer = 0;
 			
+			// Give throw protection
+			throwProtectionTimer = throwProtectionAmount;
+			
 			// Execute buffered attack
 			if (getupBufferAttack != 0)
 			{
@@ -2770,6 +2782,9 @@ switch state
 			}	
 			
 			animTimer = 0;
+			
+			// Give throw protection
+			throwProtectionTimer = throwProtectionAmount;
 			
 			// Execute buffered attack
 			if (getupBufferAttack != 0)
@@ -2918,6 +2933,8 @@ switch state
 		{
 			FAvictim = false;
 			isCrouchBlocking = false;
+			// Give throw protection
+			throwProtectionTimer = throwProtectionAmount;
 			ClearOwnerHitByGroups();
 			
 			if (blockbuffer)

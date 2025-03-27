@@ -491,3 +491,7 @@ hasFallenDownPit = false;
 
 // Teams
 teamID = 0; // Which team this player is on
+
+// Throw Protection
+throwProtectionTimer = 0; // How much throw protection this player currently has
+throwProtectionAmount = 7; // The amount of throw protection to give this player when applicable.
