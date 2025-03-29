@@ -48,6 +48,13 @@ function HandleHitboxCollision(ownerType)
 
 			var blockingDirection = -ownerOnSide;
 			
+			// Give Crossup Protection
+			if (collision_list[| i].owner.crossupProtectionTimer > 0)
+			{
+				// Blocking direction 0 is treated as being able to block either direction.
+				blockingDirection = 0;
+			}
+			
 			// Handle Mutliple hitboxes
 			
 			// Search the hasHit list for objects that this hitbox has hit
@@ -362,7 +369,7 @@ function HandleHitboxCollision(ownerType)
 						attackProperty.AttackType == eAttackType.MID ||
 						attackProperty.AttackType == eAttackType.HITGRAB ||
 						(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
-					((collision_list[| i].owner.movedir == blockingDirection || collision_list[| i].owner.toggleIdleBlock) || ((attackProperty.AttackType == eAttackType.MID || attackProperty.AttackType == eAttackType.HITGRAB) && collision_list[| i].owner.blockstun > 0))// Check if the opponent is holding back
+					(((collision_list[| i].owner.movedir == blockingDirection && blockingDirection != 0) || collision_list[| i].owner.toggleIdleBlock || (collision_list[| i].owner.movedir != 0 && blockingDirection == 0)) || ((attackProperty.AttackType == eAttackType.MID || attackProperty.AttackType == eAttackType.HITGRAB) && collision_list[| i].owner.blockstun > 0))// Check if the opponent is holding back
 				{
 					if (isProjectile && collision_list[| i].owner.projectileInvincible)
 					{
@@ -499,6 +506,10 @@ function HandleHitboxCollision(ownerType)
 					{
 						lifetime = 10;
 						sprite_index = sBlockEffect;
+						if (blockingDirection == 0)
+						{
+							sprite_index = sGeyser;
+						}
 						image_xscale = collision_list[| i].owner.image_xscale;
 					}
 

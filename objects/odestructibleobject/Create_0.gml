@@ -115,6 +115,15 @@ state = eState.IDLE;
 	
 	// Teams
 	teamID = 0; // Which team this player is on
+	
+	// Throw Protection
+	throwProtectionTimer = 0; // How much throw protection this player currently has
+	throwProtectionAmount = 0; // The amount of throw protection to give this player when applicable.
+
+	// Cross-Up Protection
+	crossupProtectionTimer = 0; // How long the player currently has crossup protection for.
+	crossupProtectionAmount = 0; // How much crossup protection to give.
+	crossupPreviousSide = 0; // Which side the opponent was previously on.
 #endregion
 
 CharacterSprites = {

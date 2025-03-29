@@ -144,7 +144,7 @@ if (hp <= 0)
 {
 	isExperiencingHardKnockdown = true;
 }
-// Reduce RC projectile invulnerability and throw protection
+// Reduce RC projectile invulnerability, throw protection, and crossup protection
 if (!global.freezeTimer)
 {
 	if (rcProjectileInvulTimer > 1)
@@ -165,6 +165,15 @@ if (!global.freezeTimer)
 	else
 	{
 		throwProtectionTimer = 0;
+	}
+	
+	if (crossupProtectionTimer > 1)
+	{
+		crossupProtectionTimer--;
+	}
+	else
+	{
+		crossupProtectionTimer = 0;
 	}
 }
 
@@ -3663,24 +3672,38 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 environmentDisplacement = 0;
 
 // Change the player's direction
+var currentOpponentDirection = 0;
+if (opponent != noone)
+{
+	if (x < opponent.x)
+	{
+		currentOpponentDirection = 1;
+	}
+	else if (x != opponent.x)
+	{
+		currentOpponentDirection = -1;
+	}
+}
+
 if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
 {
 	if (opponent != noone)
 	{
-		if (x < opponent.x)
+		image_xscale = currentOpponentDirection;
+		
+		// Handle crossup Protection
+		if (currentOpponentDirection != crossupPreviousSide)
 		{
-			image_xscale = 1;
+			crossupProtectionTimer = crossupProtectionAmount;
 		}
-		else if (x != opponent.x)
-		{
-			image_xscale = -1;
-		}
+		crossupPreviousSide = currentOpponentDirection;
 	}
 	else if (hsp != 0)
 	{
 		image_xscale = sign(hsp);
 	}
 }
+
 }
 else 
 {
