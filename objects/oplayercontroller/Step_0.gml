@@ -3679,7 +3679,7 @@ if (opponent != noone)
 	{
 		currentOpponentDirection = 1;
 	}
-	else if (x != opponent.x)
+	else
 	{
 		currentOpponentDirection = -1;
 	}
