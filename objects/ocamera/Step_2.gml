@@ -161,11 +161,12 @@ switch (global.gameMode)
 		
 				// Set the camera's position
 				// NOTE: Not currently done implementing vertical cam
-				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
-				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), y);
+				//camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), 0);
+				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), clamp(y, 0, room_height - cameraHeight));
 	
 				// Clamp the camera to the room's bounderies
 				x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
+				y = clamp(y, 0, room_height - (cameraHeight));
 		
 				// Set the home values
 				xHome = x;
