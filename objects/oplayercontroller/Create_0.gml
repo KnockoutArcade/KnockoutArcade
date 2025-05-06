@@ -500,3 +500,6 @@ throwProtectionAmount = 7; // The amount of throw protection to give this player
 crossupProtectionTimer = 0; // How long the player currently has crossup protection for.
 crossupProtectionAmount = 3; // How much crossup protection to give.
 crossupPreviousSide = -1; // Which side the opponent was previously on.
+
+// Camera Zones
+cameraZoneID = noone; // Which camera zone we are currently occupying

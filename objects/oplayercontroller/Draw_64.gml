@@ -18,8 +18,8 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, crossupPreviousSide);
-	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, crossupProtectionTimer);
+	draw_text(20, 70, cameraZoneID.cameraBoundMinY);
+	draw_text(20, 90, cameraZoneID.cameraBoundMaxY);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			

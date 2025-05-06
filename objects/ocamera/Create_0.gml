@@ -30,3 +30,7 @@ yHome = y; // The camera's position without screen shake
 
 isTargetingWinner = false; // Whether the camera should focus on the winner of a round
 roundWinTarget = noone; // The target of the camera during a round win
+
+// The vertical boundaries for the camera (at this time, horizontal bounds are assumed to be the room width)
+cameraBoundMinY = 0;
+cameraBoundMaxY = 120;

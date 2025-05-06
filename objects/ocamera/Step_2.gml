@@ -128,7 +128,6 @@ switch (global.gameMode)
 							cameraPanDelayTimer = cameraPanDelay;
 						}
 						
-						
 						if (cameraPanDirection == 1)
 						{
 							// Camera's target is set to be in front of the player
@@ -140,12 +139,13 @@ switch (global.gameMode)
 							xCameraDestination = (p1.xHome) + cameraLeftSidePanAmount + (p1.hsp * 2);
 						}
 						
+						yCameraDestination = p1.y - 80;
+						yCameraDestination = clamp(yCameraDestination, cameraBoundMinY, cameraBoundMaxY);
 					}
 			
 					// Smoothly move the camera to its destination
 					x = lerp(xCameraDestination, x, cameraSpeed);
-					// NOTE: Not currently done implementing vertical cam
-					y = p1.y - 80;
+					y = lerp(yCameraDestination, y, cameraSpeed);
 				}
 				else if (isRespawnCamera) // Handle going to the player's position during the respawn time.
 				{
