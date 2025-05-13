@@ -295,7 +295,10 @@ function SetupGame()
 				p1.vsp = global.roomTransitionData.newVSP;
 				p1.animTimer = global.roomTransitionData.currentAnimTimer;
 				
-				p1.image_xscale = sign(p1.hsp);
+				if (sign(p1.hsp) != 0)
+				{
+					p1.image_xscale = sign(p1.hsp);
+				}
 				
 				p1.state = global.roomTransitionData.newState;
 				p1.hp = global.roomTransitionData.currentHealth;

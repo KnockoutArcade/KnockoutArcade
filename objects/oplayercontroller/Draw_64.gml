@@ -17,8 +17,8 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, x);
-	draw_text(20, 70, y);
+	draw_text(20, 50, hsp);
+	draw_text(20, 70, vsp);
 	draw_text(20, 90, invincible);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

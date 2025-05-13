@@ -54,6 +54,8 @@ global.voicesVolume = 0.5;
 // Temporary No Numpad Mode
 global.noNumpadMode = false;
 
+global.toggleHitboxVisibility = false;
+
 // Room transition vars
 global.roomTransitionData = {
 	isActive : false,
