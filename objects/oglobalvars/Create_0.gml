@@ -53,3 +53,36 @@ global.voicesVolume = 0.5;
 
 // Temporary No Numpad Mode
 global.noNumpadMode = false;
+
+// Room transition vars
+global.roomTransitionData = {
+	isActive : false,
+	newX : 32,
+	newY : 0,
+	newState : eState.IDLE,
+	newHSP : 0,
+	newVSP : 0,
+	newCamX : 80,
+	newCamY : 0,
+	spawnDelay : 0,
+	currentTime : 0,
+	currentMoney : 0,
+	currentItem : 0
+};
+
+/* Room transition data format
+
+newX
+newY
+newState
+newHSP
+newVSP
+newRoom
+newCamX
+newCamY
+spawnDelay
+currentTime
+currentMoney
+currentItem
+
+*/

@@ -3131,6 +3131,13 @@ switch state
 		image_speed = 0;
 	}
 	break;
+	
+	case eState.ROOM_TRANSITION:
+	{
+		invincible = true;
+		isInCutscene = true;
+	}
+	break;
 }
 
 // Code Outside State Machine

@@ -208,7 +208,8 @@ enum eState {
 	ROUND_WIN,
 	ROUND_LOSE,
 	OBJECT_DESTROYED,
-	ENEMY_KO
+	ENEMY_KO,
+	ROOM_TRANSITION
 }
 
 enum eAttackType {

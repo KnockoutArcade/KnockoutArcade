@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, crossupPreviousSide);
 	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, crossupProtectionTimer);
+	draw_text(20, 90, invincible);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
