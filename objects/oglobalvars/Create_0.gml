@@ -62,27 +62,14 @@ global.roomTransitionData = {
 	newState : eState.IDLE,
 	newHSP : 0,
 	newVSP : 0,
+	currentAnimTimer : 0,
 	newCamX : 80,
 	newCamY : 0,
 	spawnDelay : 0,
 	currentTime : 0,
 	currentMoney : 0,
-	currentItem : 0
+	currentItem : 0,
+	currentHealth : 100,
+	currentSuperMeter : 0,
+	currentSpiritHealth: 100
 };
-
-/* Room transition data format
-
-newX
-newY
-newState
-newHSP
-newVSP
-newRoom
-newCamX
-newCamY
-spawnDelay
-currentTime
-currentMoney
-currentItem
-
-*/

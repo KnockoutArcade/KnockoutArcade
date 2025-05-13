@@ -558,6 +558,7 @@ switch (global.gameMode)
 		if (p1.hasPerformedIntro && !global.hasCompletedIntros) 
 		{
 			global.hasCompletedIntros = true;
+			
 			var particle = instance_create_layer(0, 0, "Particles", oParticles);
 			with (particle) 
 			{

@@ -36,6 +36,17 @@ if (place_meeting(x, y, oLevelTransition) && playerID == 1 && state != eState.RO
 		global.roomTransitionData.newCamX = newCamX;
 		global.roomTransitionData.newCamY = newCamY;
 		
+		global.roomTransitionData.currentHealth = other.hp;
+		global.roomTransitionData.currentSuperMeter = other.superMeter;
+		global.roomTransitionData.currentAnimTimer = other.animTimer;
+		
+		
+		// If this character has a spirit
+		if (other.selectedCharacter.UniqueData.SpiritData == 1)
+		{
+			global.roomTransitionData.currentSpiritHealth = other.spiritCurrentHealth;
+		}
+		
 		// Handle transition state
 		if (preserveState)
 		{

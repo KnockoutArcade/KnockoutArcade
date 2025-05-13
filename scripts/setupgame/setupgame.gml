@@ -285,8 +285,34 @@ function SetupGame()
 			global.gameHalt = false;
 			gameHaltTimer = 0;
 			
+			
+			// Set up some vars for the player if we are transitioning from another room
+			if (global.roomTransitionData.isActive)
+			{
+				p1.x = global.roomTransitionData.newX;
+				p1.y = global.roomTransitionData.newY;
+				p1.hsp = global.roomTransitionData.newHSP;
+				p1.vsp = global.roomTransitionData.newVSP;
+				p1.animTimer = global.roomTransitionData.currentAnimTimer;
+				
+				p1.image_xscale = sign(p1.hsp);
+				
+				p1.state = global.roomTransitionData.newState;
+				p1.hp = global.roomTransitionData.currentHealth;
+				p1.superMeter = global.roomTransitionData.currentSuperMeter;
+				
+				global.camObj.x = global.roomTransitionData.newCamX;
+				global.camObj.y = global.roomTransitionData.newCamY;
+				
+				global.hasCompletedIntros = true;
+				
+				p1.isInCutscene = false;
+			}
+			
+			
+			
 			//Handle Intros
-			if (global.hasCompletedIntros) 
+			if (global.hasCompletedIntros && !global.roomTransitionData.isActive) 
 			{
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
@@ -303,6 +329,8 @@ function SetupGame()
 					global.campaignStartLevelDelay = 0;
 				}
 			}
+			
+			global.roomTransitionData.isActive = false;
 		}
 		break;
 	}
