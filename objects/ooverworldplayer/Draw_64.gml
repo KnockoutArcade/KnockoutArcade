@@ -9,8 +9,8 @@ draw_set_color(c_white);
 	
 draw_text(20, 10, xSpeed);
 draw_text(20, 30, ySpeed);
-draw_text(20, 50, x);
-draw_text(20, 70, y);
+draw_text(20, 50, bbox_left);
+draw_text(20, 70, bbox_top);
 //draw_text(20, 90, superMeter);
 
 

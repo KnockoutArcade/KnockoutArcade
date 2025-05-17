@@ -13,7 +13,7 @@ var returnToMainMenu = global.p1ButtonMenuDeny;
 #region
 
 var horizontalMovement = moveRight + moveLeft;
-var verticalMovement = moveUp + moveDown;
+var verticalMovement = -(moveUp + moveDown);
 
 // Get the angle to move towards
 moveDirection = point_direction(0, 0, horizontalMovement, verticalMovement);
@@ -54,17 +54,17 @@ if (place_meeting(x + xSpeed, y, oWall))
 
 x += xSpeed;
 
-if (place_meeting(x, y - ySpeed, oWall))
+if (place_meeting(x, y + ySpeed, oWall))
 {
 	y = round(y);
 	
-	while !(place_meeting(x, y - sign(ySpeed), oWall))
+	while !(place_meeting(x, y + sign(ySpeed), oWall))
 	{
-		y -= sign(ySpeed);
+		y += sign(ySpeed);
 	}
 	ySpeed = 0;
 }
-y += -ySpeed;
+y += ySpeed;
 
 #endregion
 
@@ -79,21 +79,21 @@ if (horizontalMovement != 0 && verticalMovement == 0)
 	sprite_index = OverworldSprites.sideways_Sprite;
 	image_xscale = horizontalMovement;
 }
-else if (horizontalMovement != 0 && verticalMovement == 1) // Travelling up and diagonally
+else if (horizontalMovement != 0 && verticalMovement == -1) // Travelling up and diagonally
 {
 	sprite_index = OverworldSprites.diagonalUpwards_Sprite;
 	image_xscale = horizontalMovement;
 }
-else if (horizontalMovement != 0 && verticalMovement == -1) // Travelling down and diagonally
+else if (horizontalMovement != 0 && verticalMovement == 1) // Travelling down and diagonally
 {
 	sprite_index = OverworldSprites.diagonalDownwards_Sprite;
 	image_xscale = horizontalMovement;
 }
-else if (horizontalMovement == 0 && verticalMovement == 1) // Travelling straight up
+else if (horizontalMovement == 0 && verticalMovement == -1) // Travelling straight up
 {
 	sprite_index = OverworldSprites.upwards_Sprite;
 }
-else if (horizontalMovement == 0 && verticalMovement == -1) // Travelling straight down
+else if (horizontalMovement == 0 && verticalMovement == 1) // Travelling straight down
 {
 	sprite_index = OverworldSprites.downwards_Sprite;
 }

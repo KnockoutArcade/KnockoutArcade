@@ -3568,10 +3568,13 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 	//Determine wether we are rising into a ceiling or falling onto a floor.
 	var fallDirection = sign(vsp);
 	
-	while (!place_meeting(x, y + sign(vsp), oWall))
+	while (!place_meeting(x, y + fallDirection, oWall))
 	{
-		y += sign(vsp);
+		y += fallDirection;
 	}
+	
+	// Round y to nearest integer to help make flush collision
+	//y = round(y);
 	
 	isJumpingForward = false;
 	
@@ -3625,7 +3628,8 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 		// Determine if we are above the platform's surface
 		if (y < semiSolidCollision_list[| i].y + 1) && (fallDirection == 1)
 		{
-		
+			//y = round(y);
+			
 			while (!place_meeting(x, y + sign(vsp), semiSolidCollision_list[| i]))
 			{
 				y += sign(vsp);
