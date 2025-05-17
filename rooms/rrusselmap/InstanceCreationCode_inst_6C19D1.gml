@@ -1,11 +1,11 @@
 // Which level to send the player to
-levelDestination = rCampaignTutorial;
+levelDestination = rPlatformingStage_Russel2;
 
 // Where to start the player in the level
 levelStartX = 32;
-levelStartY = -10;
+levelStartY = 224;
 
-levelName = "CampaignTutorial";
+levelName = "RestarauntRumble";
 
 // If the level for this object has been completed, change its color
 if (ds_list_find_index(global.completedLevels, levelName) != -1)
@@ -17,4 +17,4 @@ else
 	image_index = 0;
 }
 
-startLevelDelay = 100;
+startLevelDelay = 0;
