@@ -62,6 +62,23 @@ if (place_meeting(x, y, oLevelTransition) && playerID == 1 && state != eState.RO
 		{
 			global.roomTransitionData.newHSP = other.hsp;
 			global.roomTransitionData.newVSP = other.vsp;
+			
+			// Preserve our height going into the next room (ignore for vertical room transitions)
+			if (applyVerticalOffset)
+			{
+				// Note: we are always assuming that 2 room transitions that link to each other
+				// have the exact same y-scale, and that for horizontal transitions, the 
+				// spawn point is always at the base of the transition object.
+				
+				// Take the relative difference between the player and the transition object and invert it
+				var spawnPositionOffset = abs(bbox_top - bbox_bottom) - abs(other.y - y);
+				
+				global.roomTransitionData.newY = newPositionY - spawnPositionOffset;
+				global.roomTransitionData.newGrounded = other.grounded;
+				global.roomTransitionData.newJumpHSP = other.jumpHsp;
+				
+				// Note: When placing room transitions, be sure to extend them into the floor/ceiling
+			}
 		}
 		else
 		{

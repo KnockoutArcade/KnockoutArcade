@@ -294,6 +294,8 @@ function SetupGame()
 				p1.hsp = global.roomTransitionData.newHSP;
 				p1.vsp = global.roomTransitionData.newVSP;
 				p1.animTimer = global.roomTransitionData.currentAnimTimer;
+				p1.grounded = global.roomTransitionData.newGrounded;
+				p1.jumpHsp = global.roomTransitionData.newJumpHSP;
 				
 				if (sign(p1.hsp) != 0)
 				{
