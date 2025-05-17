@@ -334,6 +334,7 @@
     {"id":{"name":"sRussel_Idle","path":"sprites/sRussel_Idle/sRussel_Idle.yy",},"order":0,},
     {"id":{"name":"oBottomlessPit","path":"objects/oBottomlessPit/oBottomlessPit.yy",},"order":4,},
     {"id":{"name":"sConstructionNPC2c","path":"sprites/sConstructionNPC2c/sConstructionNPC2c.yy",},"order":5,},
+    {"id":{"name":"rLevelTransitionTest3","path":"rooms/rLevelTransitionTest3/rLevelTransitionTest3.yy",},"order":8,},
     {"id":{"name":"sEnhancedProjectile","path":"sprites/sEnhancedProjectile/sEnhancedProjectile.yy",},"order":3,},
     {"id":{"name":"oCharacterSelectManager","path":"objects/oCharacterSelectManager/oCharacterSelectManager.yy",},"order":2,},
     {"id":{"name":"rMainMenu","path":"rooms/rMainMenu/rMainMenu.yy",},"order":0,},
@@ -713,6 +714,7 @@
     {"roomId":{"name":"rPlatformingStage_Russel2","path":"rooms/rPlatformingStage_Russel2/rPlatformingStage_Russel2.yy",},},
     {"roomId":{"name":"rLevelTransitionTest1","path":"rooms/rLevelTransitionTest1/rLevelTransitionTest1.yy",},},
     {"roomId":{"name":"rLevelTransitionTest2","path":"rooms/rLevelTransitionTest2/rLevelTransitionTest2.yy",},},
+    {"roomId":{"name":"rLevelTransitionTest3","path":"rooms/rLevelTransitionTest3/rLevelTransitionTest3.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
