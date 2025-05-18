@@ -1297,7 +1297,7 @@
       "HurtboxData": [
         {
           "Start": 3,
-          "Lifetime": 18,
+          "Lifetime": 13,
           "AttackWidth": 30,
           "AttackHeight": 18,
           "WidthOffset": 7,
@@ -6270,6 +6270,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2024-11-20T16:49:12.9641616-07:00",
+  "LastModified": "2025-05-18T16:06:37.4956986-07:00",
   "LastModifiedBy": "creep"
 }

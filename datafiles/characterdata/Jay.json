@@ -3089,7 +3089,7 @@
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
-          "Pushback": 1.3000001,
+          "Pushback": 2.0,
           "ParticleXOffset": 12,
           "ParticleYOffset": 5,
           "ParticleEffect": "sSmallHitspark",
@@ -3269,9 +3269,9 @@
         {
           "Start": 10,
           "Lifetime": 14,
-          "AttackWidth": 31,
+          "AttackWidth": 27,
           "AttackHeight": 3,
-          "WidthOffset": 4,
+          "WidthOffset": 0,
           "HeightOffset": 0,
           "Group": 1,
           "Damage": 6,
@@ -3349,8 +3349,8 @@
       "HurtboxData": [
         {
           "Start": 10,
-          "Lifetime": 19,
-          "AttackWidth": 30,
+          "Lifetime": 20,
+          "AttackWidth": 25,
           "AttackHeight": 11,
           "WidthOffset": 4,
           "HeightOffset": -2
@@ -3359,7 +3359,7 @@
           "Start": 1,
           "Lifetime": 99,
           "AttackWidth": 20,
-          "AttackHeight": 25,
+          "AttackHeight": 23,
           "WidthOffset": -8,
           "HeightOffset": -4
         }
@@ -3631,11 +3631,11 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 4,
+      "NumberOfHurtboxes": 5,
       "HurtboxData": [
         {
-          "Start": 7,
-          "Lifetime": 3,
+          "Start": 8,
+          "Lifetime": 2,
           "AttackWidth": 43,
           "AttackHeight": 8,
           "WidthOffset": -21,
@@ -3651,7 +3651,7 @@
         },
         {
           "Start": 30,
-          "Lifetime": 6,
+          "Lifetime": 4,
           "AttackWidth": 43,
           "AttackHeight": 8,
           "WidthOffset": -21,
@@ -3659,6 +3659,14 @@
         },
         {
           "Start": 1,
+          "Lifetime": 7,
+          "AttackWidth": 20,
+          "AttackHeight": 35,
+          "WidthOffset": -10,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 8,
           "Lifetime": 99,
           "AttackWidth": 20,
           "AttackHeight": 20,
@@ -9356,6 +9364,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-02-28T22:48:54.0712081-07:00",
+  "LastModified": "2025-05-18T15:47:49.7361908-07:00",
   "LastModifiedBy": "creep"
 }
