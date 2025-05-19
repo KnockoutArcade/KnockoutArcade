@@ -3375,7 +3375,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Crouch_Light",
-      "Duration": 10,
+      "Duration": 11,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -3383,15 +3383,15 @@
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 10,
+          "Length": 11,
           "ImageIndex": 3
         }
       ],
@@ -3400,7 +3400,7 @@
         {
           "Start": 5,
           "Lifetime": 2,
-          "AttackWidth": 22,
+          "AttackWidth": 30,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -3408,19 +3408,19 @@
           "Damage": 4,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 6,
+          "AttackHitStop": 8,
           "AttackHitStun": 11,
           "AttackType": 2,
-          "BlockStun": 6.0,
-          "KnockBack": 2.0,
+          "BlockStun": 5.0,
+          "KnockBack": 3.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 3.0,
-          "Pushback": 1.0,
-          "ParticleXOffset": 5,
+          "GravityScaling": 2.0,
+          "Pushback": 2.0,
+          "ParticleXOffset": 20,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
@@ -3451,7 +3451,7 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 5,
+          "ParticleXOffset": 20,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
@@ -3479,16 +3479,16 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 4,
-          "Lifetime": 4,
-          "AttackWidth": 10,
+          "Start": 5,
+          "Lifetime": 6,
+          "AttackWidth": 24,
           "AttackHeight": 20,
           "WidthOffset": 4,
           "HeightOffset": 0
         },
         {
           "Start": 1,
-          "Lifetime": 11,
+          "Lifetime": 20,
           "AttackWidth": 20,
           "AttackHeight": 25,
           "WidthOffset": -8,
@@ -8249,6 +8249,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-05-18T19:57:47.6595362-07:00",
+  "LastModified": "2025-05-18T20:17:06.8164025-07:00",
   "LastModifiedBy": "creep"
 }
