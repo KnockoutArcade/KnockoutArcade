@@ -379,30 +379,7 @@ switch (global.gameMode)
 		}
 
 
-		// Frame-by-frame
-		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
-		{
-			if (!global.game_paused)
-			{
-				global.game_paused = true;
-				global.frameskip = 0;
-			}
-			else 
-			{
-				global.game_paused = false;
-			}
-		}
-
-		if (global.game_paused && keyboard_check_pressed(ord("O")))
-		{
-			global.frameskip = 1;
-		}
-
-		if (global.frameskip > 0)
-		{
-			global.game_paused = false;
-			global.frameskip = -1;
-		}
+		
 
 
 	}
