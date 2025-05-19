@@ -6,4 +6,3 @@ if (global.hitstop > 0 && !global.game_paused)
     global.hitstop--;
 }
 
-

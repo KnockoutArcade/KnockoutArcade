@@ -57,7 +57,6 @@ if (!primary)
 	if (!global.game_paused && owner.hitstop < 1 && owner.state != eState.HITSTOP && owner.state != eState.SCREEN_FREEZE)
 	{
 		lifetime--;
-		show_debug_message(string(id) + ": " + string(lifetime));
 	}
 	
 	// If the owner is ever not in an attack state and also isn't frozen, destroy this.
