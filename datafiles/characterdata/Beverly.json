@@ -3057,7 +3057,7 @@
         {
           "Start": 12,
           "Lifetime": 2,
-          "AttackWidth": 35,
+          "AttackWidth": 41,
           "AttackHeight": 18,
           "WidthOffset": -1,
           "HeightOffset": 6,
@@ -3077,7 +3077,7 @@
           "LaunchKnockbackHorizontal": 1.8,
           "GravityScaling": 3.0,
           "Pushback": 2.7000003,
-          "ParticleXOffset": 18,
+          "ParticleXOffset": 25,
           "ParticleYOffset": 10,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 23,
@@ -8249,6 +8249,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-05-18T19:46:12.1573125-07:00",
+  "LastModified": "2025-05-18T19:53:23.6290684-07:00",
   "LastModifiedBy": "creep"
 }
