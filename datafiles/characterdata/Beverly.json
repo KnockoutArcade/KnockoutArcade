@@ -3745,11 +3745,11 @@
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 11,
           "ImageIndex": 2
         },
         {
-          "Length": 11,
+          "Length": 13,
           "ImageIndex": 3
         }
       ],
@@ -3792,9 +3792,9 @@
           "ActivateTimeStop": false
         },
         {
-          "Start": 11,
-          "Lifetime": 2,
-          "AttackWidth": 28,
+          "Start": 13,
+          "Lifetime": 3,
+          "AttackWidth": 31,
           "AttackHeight": 7,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -3805,7 +3805,7 @@
           "AttackHitStop": 14,
           "AttackHitStun": 11,
           "AttackType": 2,
-          "BlockStun": 10.0,
+          "BlockStun": 7.0,
           "KnockBack": 2.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.5,
@@ -3899,7 +3899,7 @@
       "HurtboxData": [
         {
           "Start": 9,
-          "Lifetime": 3,
+          "Lifetime": 14,
           "AttackWidth": 33,
           "AttackHeight": 14,
           "WidthOffset": -1,
@@ -3907,7 +3907,7 @@
         },
         {
           "Start": 1,
-          "Lifetime": 32,
+          "Lifetime": 36,
           "AttackWidth": 30,
           "AttackHeight": 20,
           "WidthOffset": -14,
@@ -3922,10 +3922,32 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 6,
+            "HorizontalSpeed": 3.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 7,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
@@ -8249,6 +8271,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-05-18T20:38:38.1359454-07:00",
+  "LastModified": "2025-05-18T21:00:40.5524944-07:00",
   "LastModifiedBy": "creep"
 }
