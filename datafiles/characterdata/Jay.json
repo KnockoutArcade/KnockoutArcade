@@ -2261,8 +2261,30 @@
         "FallScale": 0.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -2.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 1.0,
         "FallScale": 0.4
       },
@@ -5620,15 +5642,15 @@
           "ImageIndex": 2
         },
         {
-          "Length": 20,
+          "Length": 8,
           "ImageIndex": 3
         },
         {
-          "Length": 23,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 25,
+          "Length": 16,
           "ImageIndex": 5
         }
       ],
@@ -5683,14 +5705,36 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -1.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -6762,7 +6806,7 @@
     {
       "UID": "b0242922-ba00-4698-97fa-f93b9adaa4cf",
       "MoveType": 16,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -6770,28 +6814,36 @@
       ],
       "SwitchMoveset": true,
       "SwitchToMoveset": 1,
-      "SpriteName": "sJay_Nspecial_mockup_strip5",
+      "SpriteName": "sJay_Standing_Light2",
       "Duration": 25,
-      "NumberOfFrames": 5,
+      "NumberOfFrames": 7,
       "FrameData": [
         {
-          "Length": 2,
-          "ImageIndex": 1
+          "Length": 0,
+          "ImageIndex": 0
         },
         {
           "Length": 5,
+          "ImageIndex": 1
+        },
+        {
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 20,
+          "Length": 12,
           "ImageIndex": 3
         },
         {
-          "Length": 23,
+          "Length": 16,
           "ImageIndex": 4
         },
         {
-          "Length": 25,
+          "Length": 20,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 24,
           "ImageIndex": 5
         }
       ],
@@ -6846,14 +6898,36 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 1.0000001,
-        "FallScale": 0.4
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -2.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -9364,6 +9438,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-05-18T15:47:49.7361908-07:00",
+  "LastModified": "2025-05-18T23:32:02.6978303-07:00",
   "LastModifiedBy": "creep"
 }
