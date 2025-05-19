@@ -2841,10 +2841,10 @@
       "AttackData": [
         {
           "Start": 7,
-          "Lifetime": 4,
-          "AttackWidth": 23,
+          "Lifetime": 3,
+          "AttackWidth": 34,
           "AttackHeight": 8,
-          "WidthOffset": 12,
+          "WidthOffset": 6,
           "HeightOffset": 14,
           "Group": 1,
           "Damage": 6,
@@ -2918,15 +2918,15 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 2,
+      "NumberOfHurtboxes": 3,
       "HurtboxData": [
         {
-          "Start": 6,
-          "Lifetime": 8,
-          "AttackWidth": 14,
-          "AttackHeight": 8,
+          "Start": 7,
+          "Lifetime": 3,
+          "AttackWidth": 30,
+          "AttackHeight": 10,
           "WidthOffset": 5,
-          "HeightOffset": 14
+          "HeightOffset": 12
         },
         {
           "Start": 1,
@@ -2935,6 +2935,14 @@
           "AttackHeight": 36,
           "WidthOffset": -8,
           "HeightOffset": 0
+        },
+        {
+          "Start": 10,
+          "Lifetime": 9,
+          "AttackWidth": 20,
+          "AttackHeight": 10,
+          "WidthOffset": 10,
+          "HeightOffset": 10
         }
       ],
       "NumberOfProjectiles": 0,
@@ -8241,6 +8249,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-05-18T19:38:22.9315553-07:00",
+  "LastModified": "2025-05-18T19:46:12.1573125-07:00",
   "LastModifiedBy": "creep"
 }
