@@ -3176,11 +3176,11 @@
       "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 5,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
@@ -3203,7 +3203,7 @@
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 5,
+          "Start": 6,
           "Lifetime": 4,
           "AttackWidth": 20,
           "AttackHeight": 8,
@@ -3216,7 +3216,7 @@
           "AttackHitStop": 11,
           "AttackHitStun": 18,
           "AttackType": 1,
-          "BlockStun": 16.0,
+          "BlockStun": 15.0,
           "KnockBack": 4.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 2.0,
@@ -3284,8 +3284,8 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 5,
-          "Lifetime": 13,
+          "Start": 6,
+          "Lifetime": 12,
           "AttackWidth": 22,
           "AttackHeight": 6,
           "WidthOffset": 4,
@@ -3303,7 +3303,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-02-09T00:35:56.5678462-07:00",
+  "LastModified": "2025-05-18T19:21:42.8366104-07:00",
   "LastModifiedBy": "creep"
 }

@@ -377,11 +377,6 @@ switch (global.gameMode)
 				lifetime = 110;
 			}
 		}
-
-
-		
-
-
 	}
 	break;
 	
