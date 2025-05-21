@@ -172,7 +172,7 @@ function PressAttackButton(attack)
 					
 					inAttackState = true;
 				} 
-				else if (state != eState.JUMPSQUAT && movedir != 0)
+				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0)
 				{
 					state = eState.SIDE_SPECIAL;
 					image_index = 0;
@@ -196,6 +196,12 @@ function PressAttackButton(attack)
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.UpSpecial, attack);
 					
+					// Special rule for singleplayer: Turn around to face the inputted direction
+					if (global.gameMode == GAMEMODE.PLATFORMING && movedir != 0)
+					{
+						image_xscale = movedir;
+					}
+					
 					// reset anim timer
 					animTimer = 0;
 					
@@ -207,6 +213,12 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					image_index = 0;
 					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
+					
+					// Special rule for singleplayer: Turn around to face the inputted direction
+					if (global.gameMode == GAMEMODE.PLATFORMING && movedir != 0)
+					{
+						image_xscale = movedir;
+					}
 					
 					// reset anim timer
 					animTimer = 0;

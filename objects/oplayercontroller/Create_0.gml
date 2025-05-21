@@ -504,3 +504,5 @@ crossupPreviousSide = -1; // Which side the opponent was previously on.
 
 // Camera Zones
 cameraZoneID = noone; // Which camera zone we are currently occupying
+
+// Turn-around buffer

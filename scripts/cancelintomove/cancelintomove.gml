@@ -14,8 +14,8 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 		spiritObject.hitstopBuffer = true;
 	}
 	
-	// Special exception for side specials in platforming mode
-	if (global.gameMode == GAMEMODE.PLATFORMING && _prevState == eState.SIDE_SPECIAL)
+	// Special exception for specials in platforming mode
+	if (global.gameMode == GAMEMODE.PLATFORMING && (_prevState == eState.SIDE_SPECIAL || _prevState == eState.UP_SPECIAL || _prevState == eState.DOWN_SPECIAL) && movedir != 0)
 	{
 		bufferedTurnAroundDirection = movedir;
 	}

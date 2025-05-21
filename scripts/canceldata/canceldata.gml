@@ -202,7 +202,7 @@ function CancelData(_array, _attack, _late)
 			}
 		}
 	// Up Special
-	else if ((_array.MoveCanCancelInto & 65536 == 65536) && (_attack == 5 && movedir == 0 && verticalMoveDir == 1))
+	else if ((_array.MoveCanCancelInto & 65536 == 65536) && (_attack == 5 && verticalMoveDir == 1))
 	{
 		// Handle Charge inputs
 		if (downUpChargeTimer >= timeToCharge)
@@ -220,7 +220,7 @@ function CancelData(_array, _attack, _late)
 		}
 	}
 	// Down Special
-	else if ((_array.MoveCanCancelInto & 131072 == 131072) && (_attack == 5 && movedir == 0 && verticalMoveDir == -1))
+	else if ((_array.MoveCanCancelInto & 131072 == 131072) && (_attack == 5 && verticalMoveDir == -1))
 	{
 		if (_late)
 		{
