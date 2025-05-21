@@ -267,11 +267,12 @@ switch (spiritState)
 	// Spirit attack
 	case eSpiritState.ATTACK:
 	{
+		// Make the spirit appear in front
+		depth = -2;
+		
 		// Freeze when in hitstop or screen freeze
 		if (hostObject.state != eState.HITSTOP && hostObject.state != eState.SCREEN_FREEZE)
 		{
-			x += hsp + environmentDisplacement;
-			
 			// Special exception for Jay's Spirit OFF Down Special
 			if (hostObject.prevState == eState.DOWN_SPECIAL)
 			{
@@ -280,6 +281,7 @@ switch (spiritState)
 			else
 			{
 				y = hostObject.y;
+				x += hsp + environmentDisplacement;
 			}
 			
 			
@@ -428,7 +430,7 @@ y = yHome;
 if (hostObject.opponent != noone)
 {
 	// Check to see if players are about to be touching
-	if (place_meeting(x+hsp+environmentDisplacement, y, hostObject.opponent) && hostObject.state != eState.BEING_GRABBED && hostObject.opponent.state != eState.BEING_GRABBED && hostObject.state != eState.TECH_ROLL && hostObject.opponent.state != eState.TECH_ROLL && hostObject.state != eState.DOWN_SPECIAL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	if (place_meeting(x+hsp+environmentDisplacement, y, hostObject.opponent) && hostObject.state != eState.BEING_GRABBED && hostObject.opponent.state != eState.BEING_GRABBED && hostObject.state != eState.TECH_ROLL && hostObject.opponent.state != eState.TECH_ROLL && hostObject.prevState != eState.DOWN_SPECIAL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
 		if (hostObject.state != eState.HITSTOP)
 		{

@@ -4211,12 +4211,12 @@
           "AttackType": 0,
           "BlockStun": 3.0,
           "KnockBack": 4.0,
-          "AirKnockbackVertical": -2.5,
+          "AirKnockbackVertical": 0.2,
           "AirKnockbackHorizontal": 1.5,
           "Launches": true,
           "LaunchKnockbackVertical": -2.2,
           "LaunchKnockbackHorizontal": 1.5,
-          "GravityScaling": 3.0,
+          "GravityScaling": 1.0,
           "Pushback": 0.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
@@ -9410,6 +9410,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-05-20T22:01:33.8378305-07:00",
+  "LastModified": "2025-05-20T22:44:20.8945521-07:00",
   "LastModifiedBy": "creep"
 }
