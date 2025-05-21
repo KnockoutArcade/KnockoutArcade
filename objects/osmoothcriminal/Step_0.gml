@@ -418,7 +418,7 @@ y = yHome;
 if (hostObject.opponent != noone)
 {
 	// Check to see if players are about to be touching
-	if (place_meeting(x+hsp+environmentDisplacement, y, hostObject.opponent) && hostObject.state != eState.BEING_GRABBED && hostObject.opponent.state != eState.BEING_GRABBED && hostObject.state != eState.TECH_ROLL && hostObject.opponent.state != eState.TECH_ROLL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	if (place_meeting(x+hsp+environmentDisplacement, y, hostObject.opponent) && hostObject.state != eState.BEING_GRABBED && hostObject.opponent.state != eState.BEING_GRABBED && hostObject.state != eState.TECH_ROLL && hostObject.opponent.state != eState.TECH_ROLL && hostObject.state != eState.DOWN_SPECIAL) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
 		if (hostObject.state != eState.HITSTOP)
 		{
@@ -473,7 +473,7 @@ x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
 // Handle going off screen
-if (!nextToPlayer)
+if (!nextToPlayer || hostObject.prevState == eState.DOWN_SPECIAL)
 {
 	if (x < global.camObj.x-75 || x > global.camObj.x+75)
 	{

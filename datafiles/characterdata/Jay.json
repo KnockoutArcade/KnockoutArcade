@@ -4934,56 +4934,28 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_DownSpecial1_Mockup_strip4",
-      "Duration": 27,
-      "NumberOfFrames": 12,
+      "SpriteName": "sJay_UpSpecial2_Mockup_strip6",
+      "Duration": 30,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 8,
           "ImageIndex": 2
         },
         {
-          "Length": 9,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 12,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 21,
+          "Length": 10,
           "ImageIndex": 3
         },
         {
           "Length": 24,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 27,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 30,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 33,
-          "ImageIndex": 3
-        },
-        {
-          "Length": 36,
           "ImageIndex": 4
         }
       ],
@@ -5065,7 +5037,7 @@
         "ToggleState": false,
         "PerformAttack": true,
         "PerformInSpiritOff": true,
-        "StartXOffset": 10,
+        "StartXOffset": 60,
         "StartYOffset": 0,
         "SummonSpirit": false,
         "ReturnToPlayer": false,
@@ -9438,6 +9410,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-05-18T23:32:02.6978303-07:00",
+  "LastModified": "2025-05-20T22:01:33.8378305-07:00",
   "LastModifiedBy": "creep"
 }

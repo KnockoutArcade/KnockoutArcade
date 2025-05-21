@@ -125,6 +125,7 @@
     {"id":{"name":"sCharSel_CharReady","path":"sprites/sCharSel_CharReady/sCharSel_CharReady.yy",},"order":11,},
     {"id":{"name":"sCharacterHintSheets","path":"sprites/sCharacterHintSheets/sCharacterHintSheets.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial3Low_MOCKUP","path":"sprites/sBeverly_SideSpecial3Low_MOCKUP/sBeverly_SideSpecial3Low_MOCKUP.yy",},"order":5,},
+    {"id":{"name":"sSmoothCriminal_DownSpecial","path":"sprites/sSmoothCriminal_DownSpecial/sSmoothCriminal_DownSpecial.yy",},"order":20,},
     {"id":{"name":"oCollisionParent","path":"objects/oCollisionParent/oCollisionParent.yy",},"order":8,},
     {"id":{"name":"sCharSel_NameRussel","path":"sprites/sCharSel_NameRussel/sCharSel_NameRussel.yy",},"order":0,},
     {"id":{"name":"sLevelTransition","path":"sprites/sLevelTransition/sLevelTransition.yy",},"order":11,},
@@ -390,6 +391,7 @@
     {"id":{"name":"sPauseMenu_Open_P2","path":"sprites/sPauseMenu_Open_P2/sPauseMenu_Open_P2.yy",},"order":1,},
     {"id":{"name":"sBeverly_StandLight2","path":"sprites/sBeverly_StandLight2/sBeverly_StandLight2.yy",},"order":39,},
     {"id":{"name":"sCharSel_PaletteSel","path":"sprites/sCharSel_PaletteSel/sCharSel_PaletteSel.yy",},"order":10,},
+    {"id":{"name":"SC_DownSpecial_OFF","path":"scripts/SC_DownSpecial_OFF/SC_DownSpecial_OFF.yy",},"order":0,},
     {"id":{"name":"sfx_Light_Hit","path":"sounds/sfx_Light_Hit/sfx_Light_Hit.yy",},"order":1,},
     {"id":{"name":"sRusselWins","path":"sprites/sRusselWins/sRusselWins.yy",},"order":0,},
     {"id":{"name":"sCharSel_Descriptions","path":"sprites/sCharSel_Descriptions/sCharSel_Descriptions.yy",},"order":3,},
@@ -821,6 +823,7 @@
     {"folderPath":"folders/Sprites/Single Player Object Sprites/Collectables.yy","order":13,"resourceVersion":"1.0","name":"Collectables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/Single Player Objects/Collectables.yy","order":15,"resourceVersion":"1.0","name":"Collectables","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/Stages/Singleplayer Stages/Russels Stages/Restaurant Rumble.yy","order":4,"resourceVersion":"1.0","name":"Restaurant Rumble","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/SupplementaryAttackScripts/SmoothCriminal.yy","order":2,"resourceVersion":"1.0","name":"SmoothCriminal","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

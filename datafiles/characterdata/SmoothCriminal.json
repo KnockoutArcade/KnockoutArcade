@@ -4024,74 +4024,62 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SC_DownSpecial1_MOCKUP_strip3",
-      "Duration": 27,
-      "NumberOfFrames": 9,
+      "SpriteName": "sSmoothCriminal_DownSpecial",
+      "Duration": 30,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 3,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 10,
           "ImageIndex": 2
-        },
-        {
-          "Length": 8,
-          "ImageIndex": 3
         },
         {
           "Length": 12,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 18,
           "ImageIndex": 3
         },
         {
-          "Length": 21,
-          "ImageIndex": 1
+          "Length": 14,
+          "ImageIndex": 4
         },
         {
           "Length": 24,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 27,
-          "ImageIndex": 3
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 6,
-          "Lifetime": 5,
-          "AttackWidth": 29,
-          "AttackHeight": 42,
-          "WidthOffset": -7,
+          "Start": 12,
+          "Lifetime": 4,
+          "AttackWidth": 25,
+          "AttackHeight": 30,
+          "WidthOffset": -10,
           "HeightOffset": 0,
-          "Group": 23,
-          "Damage": 3,
-          "MeterGain": 3.0,
-          "ComboScaling": 2.0,
-          "AttackHitStop": 10,
+          "Group": 1,
+          "Damage": 6,
+          "MeterGain": 6.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 14,
           "AttackHitStun": 15,
           "AttackType": 1,
           "BlockStun": 12.0,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 1.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 0.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 0.7,
+          "Launches": true,
+          "LaunchKnockbackVertical": -3.5,
+          "LaunchKnockbackHorizontal": 0.7,
+          "GravityScaling": 2.0,
           "Pushback": 1.0,
           "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "HoldXOffset": 0,
@@ -4099,7 +4087,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2",
+          "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false
         }
@@ -4108,27 +4096,27 @@
         {
           "CounterHitLevel": 2,
           "Group": 1,
-          "Damage": 12,
+          "Damage": 8,
           "MeterGain": 8.0,
-          "ComboScaling": 1.5,
-          "AttackHitStop": 13,
-          "AttackHitStun": 28,
-          "KnockBack": 2.0,
-          "AirKnockbackVertical": 0.0,
-          "AirKnockbackHorizontal": 0.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": -3.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 19,
+          "AttackHitStun": 20,
+          "KnockBack": 3.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -4.0,
           "LaunchKnockbackHorizontal": 1.0,
           "GravityScaling": 0.0,
-          "Pushback": 2.0,
+          "Pushback": 0.0,
           "ParticleXOffset": 0,
-          "ParticleYOffset": 0,
+          "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2"
+          "HitSound": "sfx_Medium_Hit"
         }
       ],
       "CommandNormalData": {
@@ -4146,71 +4134,46 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 1,
-          "Lifetime": 99,
-          "AttackWidth": 20,
-          "AttackHeight": 40,
-          "WidthOffset": -8,
-          "HeightOffset": 0
+          "Lifetime": 11,
+          "AttackWidth": 38,
+          "AttackHeight": 15,
+          "WidthOffset": -18,
+          "HeightOffset": -2
+        },
+        {
+          "Start": 12,
+          "Lifetime": 30,
+          "AttackWidth": 31,
+          "AttackHeight": 30,
+          "WidthOffset": -14,
+          "HeightOffset": -2
         }
       ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
         "HitBox": 1,
-        "NumberOfHits": 2,
-        "HitOnFrames": [
-          12,
-          18
-        ]
+        "NumberOfHits": 0,
+        "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
-        "Windows": [
-          {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 0.5,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
-          },
-          {
-            "StartingFrame": 27,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
-          }
-        ],
+        "NumberOfWindows": 0,
+        "Windows": [],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 2,
-        "Windows": [
-          {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 5.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
-          },
-          {
-            "StartingFrame": 27,
-            "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": false
-          }
-        ],
+        "NumberOfWindows": 0,
+        "Windows": [],
         "GravityScale": 0.0,
         "FallScale": 0.0
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "SC_DownSpecial_OFF",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -4636,43 +4599,31 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SC_DownSpecial1_MOCKUP_strip3",
       "Duration": 27,
-      "NumberOfFrames": 9,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 3,
-          "ImageIndex": 1
+          "Length": 0,
+          "ImageIndex": 0
         },
         {
-          "Length": 6,
-          "ImageIndex": 2
+          "Length": 4,
+          "ImageIndex": 1
         },
         {
           "Length": 8,
-          "ImageIndex": 3
+          "ImageIndex": 2
         },
         {
           "Length": 12,
-          "ImageIndex": 1
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 18,
           "ImageIndex": 3
         },
         {
-          "Length": 21,
-          "ImageIndex": 1
+          "Length": 14,
+          "ImageIndex": 4
         },
         {
-          "Length": 24,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 27,
-          "ImageIndex": 3
+          "Length": 26,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 0,
@@ -5848,6 +5799,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-05-19T22:06:28.7331972-07:00",
+  "LastModified": "2025-05-20T22:14:09.1676093-07:00",
   "LastModifiedBy": "creep"
 }
