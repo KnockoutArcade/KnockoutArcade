@@ -184,7 +184,7 @@ if (!inAttackState && movedir != 0)
 }
 
 // Reset General Input Buffer
-if (!inAttackState) 
+if (!inAttackState && state != eState.HURT && state != eState.RUN_BACKWARD) 
 {
 	bufferAttackInput = 0;
 }
@@ -2435,6 +2435,12 @@ switch state
 			hitstun--;
 		}
 		
+		// Detect input buffer
+		if (hitstun <= inputBufferLength && attack != 0)
+		{
+			bufferAttackInput = attack;
+		}
+		
 		if (hitstun < 1)
 		{
 			FAvictim = false;
@@ -2444,28 +2450,37 @@ switch state
 				cancelCombo = true;
 				// Give throw protection
 				throwProtectionTimer = throwProtectionAmount;
+				
+				// Buffer the attack if we have one
+				if (bufferAttackInput != 0)
+				{
+					PressAttackButton(bufferAttackInput);
+				}
 			}
 			
 			if (!grounded) 
 			{
 				state = eState.LAUNCHED;
 			}
-			else if (movedir == 0)
+			else if (movedir == 0 && bufferAttackInput == 0)
 			{
 				ClearOwnerHitByGroups();
 				state = eState.IDLE;
 			}
-			else if (movedir != image_xscale)
+			else if (movedir != image_xscale && bufferAttackInput == 0)
 			{
 				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 				canBlock = true;
 			} 
-			else 
+			else if (bufferAttackInput == 0)
 			{
 				ClearOwnerHitByGroups();
 				state = eState.WALKING;
 			}
+			
+			// Reset input buffer
+			bufferAttackInput = 0;
 		}
 		
 		if (grounded)
