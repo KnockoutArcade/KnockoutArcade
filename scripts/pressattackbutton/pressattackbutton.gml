@@ -171,7 +171,6 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					
 					inAttackState = true;
-					motionInput = [];
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0)
 				{
@@ -189,7 +188,6 @@ function PressAttackButton(attack)
 					}
 					
 					inAttackState = true;
-					motionInput = [];
 				}
 				else if (verticalMoveDir == 1)
 				{
@@ -208,7 +206,6 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					
 					inAttackState = true;
-					motionInput = [];
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
 				{
@@ -227,7 +224,6 @@ function PressAttackButton(attack)
 					animTimer = 0;
 					
 					inAttackState = true;
-					motionInput = [];
 				}
 			break;
 			

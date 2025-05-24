@@ -33,6 +33,7 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -60,8 +61,9 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial, 0);
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -83,8 +85,9 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial, 0);
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -107,7 +110,8 @@ function ProcessEnhancers(Special) {
 							inputWindowStart = [];
 							inputWindowEnd = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial, 0);
+							motionInput = [];
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -130,7 +134,8 @@ function ProcessEnhancers(Special) {
 							inputWindowStart = [];
 							inputWindowEnd = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedNeutralSpecial2, 0);
+							motionInput = [];
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -153,7 +158,8 @@ function ProcessEnhancers(Special) {
 							inputWindowStart = [];
 							inputWindowEnd = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedSideSpecial2, 0);
+							
+							motionInput = [];
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -176,7 +182,8 @@ function ProcessEnhancers(Special) {
 							inputWindowStart = [];
 							inputWindowEnd = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedUpSpecial2, 0);
+							motionInput = [];
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -199,7 +206,8 @@ function ProcessEnhancers(Special) {
 							inputWindowStart = [];
 							inputWindowEnd = [];
 							requireSpecialButton = false;
-							SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial2, 0);
+							motionInput = [];
+							
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -221,12 +229,12 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
 								enhanced[j] = false;
 							}
-							SetSpiritMoveData(true, selectedCharacter.RekkaLauncher, 0);
 							if (spiritObject != noone)
 							{
 								with (spiritObject)
@@ -248,6 +256,7 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -277,6 +286,7 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -306,6 +316,7 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
@@ -335,6 +346,7 @@ function ProcessEnhancers(Special) {
 							progressInInputs = [];
 							inputWindowStart = [];
 							inputWindowEnd = [];
+							motionInput = [];
 							requireSpecialButton = false;
 							for (var j = 0; j < array_length(enhanced); j++;)
 							{
