@@ -7,6 +7,7 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	animOffset = _animOffset;
 	hitstopBuffer = true;
 	isThrowable = true;
+	bufferAttackInput = 0;
 	if (spiritObject != noone)
 	{
 		spiritObject.prevState = _prevState;

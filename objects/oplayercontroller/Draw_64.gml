@@ -17,8 +17,8 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, hsp);
-	draw_text(20, 70, bufferedTurnAroundDirection);
+	draw_text(20, 50, inAttackState);
+	draw_text(20, 70, bufferAttackInput);
 	draw_text(20, 90, storedComboDamage);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

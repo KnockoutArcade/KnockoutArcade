@@ -183,6 +183,12 @@ if (!inAttackState && movedir != 0)
 	bufferedTurnAroundDirection = movedir;
 }
 
+// Reset General Input Buffer
+if (!inAttackState) 
+{
+	bufferAttackInput = 0;
+}
+
 // Initialize Hurtbox Values
 hurtbox.image_xscale = hurtboxStandingWidth;
 hurtbox.image_yscale = hurtboxStandingHeight;
@@ -1548,7 +1554,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.StandLight, true, 1, 1, false, false, attack);
 		
 		if (cancelable)
 		{
@@ -1559,7 +1565,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_2: 
 	{
-		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.StandLight2, true, 1, 1, false, false, attack);
 		
 		if (cancelable)
 		{
@@ -1570,7 +1576,7 @@ switch state
 	
 	case eState.STANDING_LIGHT_ATTACK_3:
 	{
-		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.StandLight3, true, 1, 1, false, false, attack);
 		
 		if (cancelable)
 		{
@@ -1581,7 +1587,7 @@ switch state
 	
 	case eState.STANDING_MEDIUM_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.StandMedium, true, 1, 1, false, false, attack);
 		
 		// Cancelable into heavy
 		if (cancelable)
@@ -1593,7 +1599,7 @@ switch state
 	
 	case eState.STANDING_HEAVY_ATTACK:
 	{
-		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.StandHeavy, true, 1, 1, false, false, attack);
 		
 		if (cancelable && hitstop < 1)
 		{
@@ -1680,7 +1686,7 @@ switch state
 		cancelOnLanding = selectedCharacter.CommandNormal1.CommandNormalData.CancelWhenLanding;
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.CommandNormal1, true, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, false, true, attack);
 		} 
 		else 
 		{
@@ -1700,7 +1706,7 @@ switch state
 		cancelOnLanding = selectedCharacter.CommandNormal2.CommandNormalData.CancelWhenLanding;
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.CommandNormal2, true, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.CommandNormal2, true, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale, false, true, attack);
 		} 
 		else 
 		{
@@ -1720,7 +1726,7 @@ switch state
 		cancelOnLanding = selectedCharacter.CommandNormal3.CommandNormalData.CancelWhenLanding;
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.CommandNormal3, true, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.CommandNormal3, true, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale, false, true, attack);
 		} 
 		else 
 		{
@@ -1741,7 +1747,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{	
-			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true);
+			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true, attack);
 		} 
 		else 
 		{
@@ -1763,7 +1769,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1785,7 +1791,7 @@ switch state
 		cancelOnLanding = true;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1816,7 +1822,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1838,7 +1844,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial, true, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1854,7 +1860,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial, true, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1870,7 +1876,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial, true, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1886,7 +1892,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial, true, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1902,7 +1908,7 @@ switch state
 		invincible = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedNeutralSpecial2, true, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1918,7 +1924,7 @@ switch state
 		invincible = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedSideSpecial2, true, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1934,7 +1940,7 @@ switch state
 		invincible = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedUpSpecial2, true, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1950,7 +1956,7 @@ switch state
 		invincible = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.EnhancedDownSpecial2, true, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1967,7 +1973,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.RekkaLauncher, true, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -1984,7 +1990,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.RekkaFinisher, true, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -2001,7 +2007,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.RekkaConnecter, true, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -2018,7 +2024,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.RekkaLow, true, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -2035,7 +2041,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.RekkaHigh, true, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -2099,7 +2105,7 @@ switch state
 		cancelOnLanding = false;
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.Super, true, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{
@@ -2178,7 +2184,7 @@ switch state
 	{
 		invincible = false;
 		
-		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false);
+		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false, attack);
 		
 	}
 	break;
@@ -2242,7 +2248,7 @@ switch state
 		
 		if (grounded)
 		{
-			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true);
+			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true, attack);
 		}
 		else 
 		{

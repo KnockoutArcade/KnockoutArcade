@@ -505,4 +505,6 @@ crossupPreviousSide = -1; // Which side the opponent was previously on.
 // Camera Zones
 cameraZoneID = noone; // Which camera zone we are currently occupying
 
-// Turn-around buffer
+// General Input Buffer
+inputBufferLength = 4; // How long the general input buffer is in frames
+bufferAttackInput = 0; // The attack that is stored.

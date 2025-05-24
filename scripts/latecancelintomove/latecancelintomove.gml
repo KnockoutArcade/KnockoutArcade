@@ -9,6 +9,7 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	animTimer = 0;
 	PressAttackButton(attackID);
 	isThrowable = true;
+	bufferAttackInput = 0;
 
 	// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
 	var allHurtboxes = [];

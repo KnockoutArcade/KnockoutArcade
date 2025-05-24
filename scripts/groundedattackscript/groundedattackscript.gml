@@ -2,7 +2,7 @@
 /// @param {moveToDo}  moveToDo  The message to show
 
 // maintainState is a boolean. If false, go into a jumping state after leaving the ground
-function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff, maintainState) 
+function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, ignoreWalkoff, maintainState, attackID) 
 {
 	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
@@ -94,8 +94,14 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			GroundedAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, true, maintainState);
+			GroundedAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, true, maintainState, attackID);
 		}
+	}
+	
+	// Buffer attack input
+	if ((animTimer >= moveToDo.Duration - inputBufferLength) && attackID != 0)
+	{
+		bufferAttackInput = attackID;
 	}
 	
 	// If the animation has expired
@@ -103,9 +109,17 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	{
 		state = eState.IDLE;
 		frameAdvantage = true;
-		hsp = 0;
+		//hsp = 0;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// Execute buffered input (make sure not a spirit)
+		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
+		{
+			PressAttackButton(bufferAttackInput);
+			bufferAttackInput = 0;
+			animTimer = 0;
+		}
 		
 		// If this performed by a spirit, update their state
 		if (selectedCharacter.UniqueData.SpiritData == 2)
