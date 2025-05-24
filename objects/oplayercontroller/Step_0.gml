@@ -1371,12 +1371,25 @@ switch state
 		
 		previousWalkFrame = floor(image_index);
 		
+		// Handle input buffer
+		if (animTimer >= backdashDuration - inputBufferLength && attack != 0)
+		{
+			bufferAttackInput = attack;
+		}
+		
 		// Handle Ending
 		if (animTimer >= backdashDuration)
 		{
 			state = eState.IDLE;
 			hsp = 0;
 			invincible = false;
+			
+			// Execute buffered attack
+			if (bufferAttackInput != 0)
+			{
+				PressAttackButton(bufferAttackInput);
+				bufferAttackInput = 0;
+			}
 		}
 		
 		HandleWalkingOffPlatforms(false);
