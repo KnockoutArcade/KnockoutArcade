@@ -12,6 +12,9 @@ function PerformLandingBuffer()
 		landingBufferAttack = 0;
 		landingBufferTimer = 0;
 		
+		// Also reset general input buffer just in case
+		bufferAttackInput = 0;
+		
 		// Turn around to face opponent
 		if (opponent != noone)
 		{
