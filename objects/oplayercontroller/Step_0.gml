@@ -1387,6 +1387,19 @@ switch state
 			// Execute buffered attack
 			if (bufferAttackInput != 0)
 			{
+				// Turn around to face opponent
+				if (opponent != noone)
+				{
+					if (x < opponent.x)
+					{
+						image_xscale = 1;
+					}
+					else if (x != opponent.x)
+					{
+						image_xscale = -1;
+					}
+				}
+				
 				PressAttackButton(bufferAttackInput);
 				bufferAttackInput = 0;
 			}
@@ -2467,6 +2480,19 @@ switch state
 				// Buffer the attack if we have one
 				if (bufferAttackInput != 0)
 				{
+					// Turn around to face opponent
+					if (opponent != noone)
+					{
+						if (x < opponent.x)
+						{
+							image_xscale = 1;
+						}
+						else if (x != opponent.x)
+						{
+							image_xscale = -1;
+						}
+					}
+					
 					PressAttackButton(bufferAttackInput);
 				}
 			}

@@ -113,6 +113,19 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState, attackID)
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
 		{
+			// Turn around to face opponent
+			if (opponent != noone)
+			{
+				if (x < opponent.x)
+				{
+					image_xscale = 1;
+				}
+				else if (x != opponent.x)
+				{
+					image_xscale = -1;
+				}
+			}
+			
 			PressAttackButton(bufferAttackInput);
 			bufferAttackInput = 0;
 		}
