@@ -4,9 +4,9 @@
 // Debug stuff
 if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE) 
 {
-	//hp = maxHitPoints;
+	hp = maxHitPoints;
 }
-//superMeter = 100;
+superMeter = 100;
 
 // Handle Player Intros
 if (!hasPerformedIntro) 

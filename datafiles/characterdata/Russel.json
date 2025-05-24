@@ -7738,7 +7738,7 @@
         {
           "Start": 35,
           "Lifetime": 6,
-          "AttackWidth": 23,
+          "AttackWidth": 28,
           "AttackHeight": 36,
           "WidthOffset": 5,
           "HeightOffset": 2,
@@ -7953,7 +7953,7 @@
           },
           {
             "StartingFrame": 33,
-            "HorizontalSpeed": 1.0,
+            "HorizontalSpeed": 1.5,
             "VerticalSpeed": -2.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-05-24T08:42:59.6407902-07:00",
+  "LastModified": "2025-05-24T12:58:02.0780968-07:00",
   "LastModifiedBy": "creep"
 }
