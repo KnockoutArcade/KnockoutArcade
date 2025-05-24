@@ -118,7 +118,6 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			PressAttackButton(bufferAttackInput);
 			bufferAttackInput = 0;
-			animTimer = 0;
 		}
 		
 		// If this performed by a spirit, update their state

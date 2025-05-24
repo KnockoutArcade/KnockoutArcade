@@ -9,7 +9,7 @@ function PressAttackButton(attack)
 		switch attack 
 		{
 			case 1:
-				if (prevState == eState.STANDING_LIGHT_ATTACK_2)
+				if (prevState == eState.STANDING_LIGHT_ATTACK_2 && bufferAttackInput == 0)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
 					//SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
@@ -19,7 +19,7 @@ function PressAttackButton(attack)
 					
 					inAttackState = true;
 				}
-				else if (prevState == eState.STANDING_LIGHT_ATTACK_3)
+				else if (prevState == eState.STANDING_LIGHT_ATTACK_3 && bufferAttackInput == 0)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
 					//SetSpiritMoveData(false, selectedCharacter.StandLight3, attack);
