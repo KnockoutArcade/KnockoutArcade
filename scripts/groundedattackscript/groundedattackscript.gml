@@ -10,6 +10,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 	inAttackState = true;
 	canBlock = false;
 	invincible = false;
+	isExperiencingHardKnockdown = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
@@ -112,6 +113,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		//hsp = 0;
 		isThrowable = true;
 		isEXFlash = false;
+		isExperiencingHardKnockdown = false;
 		
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)

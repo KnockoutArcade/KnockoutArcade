@@ -516,6 +516,7 @@ if (state == eState.IDLE)
 	isInStableState = true; // Set stable state to true
 	inAttackState = false;
 	hasFallenDownPit = false;
+	isExperiencingHardKnockdown = false;
 	
 	sprite_index = CharacterSprites.idle_Sprite;
 	image_speed = 1;
@@ -2477,6 +2478,8 @@ switch state
 				// Give throw protection
 				throwProtectionTimer = throwProtectionAmount;
 				
+				isExperiencingHardKnockdown = false;
+				
 				// Buffer the attack if we have one
 				if (bufferAttackInput != 0)
 				{
@@ -2645,6 +2648,7 @@ switch state
 					animTimer = 0;
 					sprite_index = CharacterSprites.getup_Sprite;
 					image_index = 0;
+					isExperiencingHardKnockdown = false;
 				}
 				else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
 				{
@@ -2652,6 +2656,7 @@ switch state
 					animTimer = 0;
 					sprite_index = CharacterSprites.getup_Sprite;
 					image_index = 0;
+					isExperiencingHardKnockdown = false;
 				}
 			}
 		}
@@ -2671,6 +2676,7 @@ switch state
 		canTurnAround = false;
 		inAttackState = false;
 		canBlock = false;
+		isExperiencingHardKnockdown = false;
 		
 		cancelCombo = true;
 		
@@ -2756,6 +2762,7 @@ switch state
 		canTurnAround = false;
 		inAttackState = false;
 		canBlock = true;
+		isExperiencingHardKnockdown = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		
@@ -2831,6 +2838,7 @@ switch state
 		canTurnAround = false;
 		inAttackState = false;
 		canBlock = true;
+		isExperiencingHardKnockdown = false;
 
 		image_speed = (image_index > image_number - 1) ? 0 : 1;
 		

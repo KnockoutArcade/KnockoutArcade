@@ -10,6 +10,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 	inAttackState = true;
 	canBlock = false;
 	invincible = false;
+	isExperiencingHardKnockdown = false;
 	
 	// Resets all run timers
 	holdBackwardTimer = 0;
@@ -111,6 +112,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		frameAdvantage = true;
 		isThrowable = true;
 		isEXFlash = false;
+		isExperiencingHardKnockdown = false;
 		
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)

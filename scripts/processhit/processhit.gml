@@ -11,12 +11,15 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 {
 	if (!isProjectile)
 	{
+		// TODO: Put this in the character editor
+		collision_list.owner.isExperiencingHardKnockdown = false;
+		
 		// Attack hit script
 		if (attackProperty.UseHitScript)
 		{
 			var scriptToExecute = asset_get_index(attackProperty.SupplementaryHitScript);
 			
-			scriptToExecute();
+			scriptToExecute(collision_list.owner);
 		}
 		
 		// Combo Scaling

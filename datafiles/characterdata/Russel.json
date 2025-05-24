@@ -4121,8 +4121,8 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
@@ -4150,8 +4150,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -5557,8 +5557,8 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
@@ -5586,8 +5586,8 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 5,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-05-24T13:04:45.5951452-07:00",
+  "LastModified": "2025-05-24T13:24:23.3350519-07:00",
   "LastModifiedBy": "creep"
 }
