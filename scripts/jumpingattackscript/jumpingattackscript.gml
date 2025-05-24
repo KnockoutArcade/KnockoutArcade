@@ -2,7 +2,7 @@
 /// @param {moveToDo}  message  The message to show
 
 // 
-function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult) 
+function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attackID) 
 {
 	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
@@ -94,10 +94,15 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			JumpingAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult);
+			JumpingAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, attackID);
 		}
 	}
 	
+	// Buffer attack input
+	if ((animTimer >= moveToDo.Duration - inputBufferLength) && attackID != 0)
+	{
+		bufferAttackInput = attackID;
+	}
 	
 	if (animTimer > moveToDo.Duration) 
 	{
@@ -106,6 +111,13 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult)
 		frameAdvantage = true;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// Execute buffered input (make sure not a spirit)
+		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
+		{
+			PressAttackButton(bufferAttackInput);
+			bufferAttackInput = 0;
+		}
 		
 		// If this performed by a spirit, update their state
 		if (selectedCharacter.UniqueData.SpiritData == 2)

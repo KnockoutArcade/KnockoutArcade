@@ -2,7 +2,7 @@
 /// @param {moveToDo}  message  The message to show
 
 // maintainState is a boolean. If false, go into a jumping state after leaving the ground
-function CrouchingAttackScript(moveToDo, onGround, maintainState) 
+function CrouchingAttackScript(moveToDo, onGround, maintainState, attackID) 
 {
 	sprite_index = moveToDo.SpriteId;
 	grounded = onGround;
@@ -92,10 +92,15 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			CrouchingAttackScript(FindAttackState(other.state), onGround, true);
+			CrouchingAttackScript(FindAttackState(other.state), onGround, true, attackID);
 		}
 	}
 	
+	// Buffer attack input
+	if ((animTimer >= moveToDo.Duration - inputBufferLength) && attackID != 0)
+	{
+		bufferAttackInput = attackID;
+	}
 	
 	if (animTimer > moveToDo.Duration) 
 	{
@@ -104,6 +109,13 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState)
 		hsp = 0;
 		isThrowable = true;
 		isEXFlash = false;
+		
+		// Execute buffered input (make sure not a spirit)
+		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
+		{
+			PressAttackButton(bufferAttackInput);
+			bufferAttackInput = 0;
+		}
 		
 		// If this performed by a spirit, update their state
 		if (selectedCharacter.UniqueData.SpiritData == 2)

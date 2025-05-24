@@ -1611,7 +1611,7 @@ switch state
 	
 	case eState.CROUCHING_LIGHT_ATTACK: 
 	{	
-		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false);
+		CrouchingAttackScript(selectedCharacter.CrouchingLight, true, false, attack);
 		
 		if (cancelable && hitstop < 1) 
 		{
@@ -1622,7 +1622,7 @@ switch state
 	
 	case eState.CROUCHING_MEDIUM_ATTACK: 
 	{
-		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false);
+		CrouchingAttackScript(selectedCharacter.CrouchingMedium, true, false, attack);
 		
 		if (cancelable && hitstop < 1)
 		{
@@ -1634,7 +1634,7 @@ switch state
 	
 	case eState.CROUCHING_HEAVY_ATTACK: 
 	{
-		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false);
+		CrouchingAttackScript(selectedCharacter.CrouchingHeavy, true, false, attack);
 	
 		if (cancelable && hitstop < 1)
 		{
@@ -1646,7 +1646,7 @@ switch state
 	
 	case eState.JUMPING_LIGHT_ATTACK: 
 	{
-		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1);
+		JumpingAttackScript(selectedCharacter.JumpingLight, false, 1, 1, attack);
 		
 		if (cancelable && hitstop < 1)
 		{
@@ -1659,7 +1659,7 @@ switch state
 	
 	case eState.JUMPING_MEDIUM_ATTACK: 
 	{
-		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1);
+		JumpingAttackScript(selectedCharacter.JumpingMedium, false, 1, 1, attack);
 	
 		if (cancelable && hitstop < 1)
 		{
@@ -1671,7 +1671,7 @@ switch state
 	
 	case eState.JUMPING_HEAVY_ATTACK: 
 	{
-		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1);
+		JumpingAttackScript(selectedCharacter.JumpingHeavy, false, 1, 1, attack);
 		
 		if (cancelable && hitstop < 1)
 		{
@@ -1690,7 +1690,7 @@ switch state
 		} 
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.CommandNormal1, false, selectedCharacter.CommandNormal1.AirMovementData.GravityScale, selectedCharacter.CommandNormal1.AirMovementData.FallScale, attack);
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1710,7 +1710,7 @@ switch state
 		} 
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.CommandNormal2, false, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.CommandNormal2, false, selectedCharacter.CommandNormal2.AirMovementData.GravityScale, selectedCharacter.CommandNormal2.AirMovementData.FallScale, attack);
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1730,7 +1730,7 @@ switch state
 		} 
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.CommandNormal3, false, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.CommandNormal3, false, selectedCharacter.CommandNormal3.AirMovementData.GravityScale, selectedCharacter.CommandNormal3.AirMovementData.FallScale, attack);
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1751,7 +1751,7 @@ switch state
 		} 
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.NeutralSpecial);
@@ -1773,7 +1773,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.SideSpecial);
@@ -1795,7 +1795,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.UpSpecial);
@@ -1826,7 +1826,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.DownSpecial);
@@ -1848,7 +1848,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
@@ -1864,7 +1864,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
@@ -1880,7 +1880,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
@@ -1896,7 +1896,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
@@ -1912,7 +1912,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial2);
@@ -1928,7 +1928,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial2);
@@ -1944,7 +1944,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial2);
@@ -1960,7 +1960,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
@@ -1977,7 +1977,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.RekkaLauncher);
@@ -1994,7 +1994,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.RekkaFinisher);
@@ -2011,7 +2011,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.RekkaConnecter);
@@ -2028,7 +2028,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.RekkaLow);
@@ -2045,7 +2045,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, attack);
 		}
 		
 		ProcessEnhancers(selectedCharacter.RekkaHigh);
@@ -2109,7 +2109,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.Super, false, selectedCharacter.Super.AirMovementData.GravityScale, selectedCharacter.Super.AirMovementData.FallScale, attack);
 		}
 		
 		
@@ -2252,7 +2252,7 @@ switch state
 		}
 		else 
 		{
-			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale);
+			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, attack);
 		}
 		
 		ProccessCommandGrab();
