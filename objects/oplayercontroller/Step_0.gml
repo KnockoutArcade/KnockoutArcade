@@ -3675,7 +3675,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		{
 			floorHit = true;
 			hasUsedFloorBounce = true;
-			hitstop = 20;
+			hitstop = 10;
 			state = eState.LAUNCHED;
 			sprite_index = CharacterSprites.knockdown_Sprite;
 			image_index = 5;
