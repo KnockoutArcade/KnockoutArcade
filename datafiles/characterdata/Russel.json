@@ -4100,8 +4100,8 @@
           "WidthOffset": 8,
           "HeightOffset": 0,
           "Group": 1,
-          "Damage": 12,
-          "MeterGain": 12.0,
+          "Damage": 9,
+          "MeterGain": 9.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 14,
           "AttackHitStun": 11,
@@ -4133,8 +4133,8 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 14,
-          "MeterGain": 14.0,
+          "Damage": 11,
+          "MeterGain": 11.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 30,
           "AttackHitStun": 14,
@@ -4599,14 +4599,14 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -4705,8 +4705,8 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseFloorBounce",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
@@ -4738,11 +4738,11 @@
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSparkEffect",
-          "ParticleDuration": 5,
+          "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseFloorBounce",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
@@ -4769,9 +4769,9 @@
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSparkEffect",
-          "ParticleDuration": 5,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "ParticleDuration": 23,
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseFloorBounce",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         },
@@ -4794,9 +4794,9 @@
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSparkEffect",
-          "ParticleDuration": 5,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "ParticleDuration": 23,
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseFloorBounce",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit"
         }
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-05-24T13:24:23.3350519-07:00",
+  "LastModified": "2025-05-24T20:56:43.1628324-07:00",
   "LastModifiedBy": "creep"
 }

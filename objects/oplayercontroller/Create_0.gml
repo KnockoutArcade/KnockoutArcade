@@ -260,6 +260,11 @@ wallBouncing = false;
 wallHit = false; // this is to dectect when the player hits the wall
 hasUsedWallBounce = false; // Has this player already been wallbounced in a combo?
 
+// Floor bounce Variables
+floorBouncing = false;
+floorHit = false; // This is to detect when a player hits the floor
+hasUsedFloorBounce = false; // Has this player already been floorbounced in a combo?
+
 // Intro
 hasPerformedIntro = true;
 

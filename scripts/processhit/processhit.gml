@@ -11,8 +11,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 {
 	if (!isProjectile)
 	{
-		// TODO: Put this in the character editor
+		// TODO: Put these in the character editor
 		collision_list.owner.isExperiencingHardKnockdown = false;
+		collision_list.owner.floorBouncing = false;
 		
 		// Attack hit script
 		if (attackProperty.UseHitScript)

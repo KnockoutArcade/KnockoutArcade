@@ -43,6 +43,7 @@ function HandleKnockdownState( _hardKnockdown)
 	ClearOwnerHitByGroups();
 	invincible = true;
 	hasUsedWallBounce = false;
+	hasUsedFloorBounce = false;
 	
 	// Handle spawning impact particle
 	// Spawn a landing particle once the player hits the ground

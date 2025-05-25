@@ -690,7 +690,7 @@ if (state == eState.HITSTOP)
 	
 	if (hitstun > 0 || prevState = eState.LAUNCHED)
 	{
-		if (!isGrabbed && !wallBouncing)
+		if (!isGrabbed && !wallBouncing && !floorBouncing)
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 		}
@@ -815,6 +815,12 @@ if (state == eState.HITSTOP)
 			wallHit = false;
 			image_xscale *= -1; // Flip opponent around
 		}
+		if (floorHit)
+		{
+			floorBouncing = false;
+			floorHit = false;
+		}
+		
 		prevSprite = 0;
 		shuffle = 0;
 		framesSinceHitstun = 0;
@@ -2478,6 +2484,14 @@ switch state
 				// Give throw protection
 				throwProtectionTimer = throwProtectionAmount;
 				
+				// Remove wall and floor bounces
+				wallBouncing = false;
+				wallHit = false;
+				hasUsedWallBounce = false;
+				floorBouncing = false;
+				floorHit = false;
+				hasUsedFloorBounce = false;
+				
 				isExperiencingHardKnockdown = false;
 				
 				// Buffer the attack if we have one
@@ -2632,8 +2646,8 @@ switch state
 			hitstun--;
 		}
 		
-		// Get up after 40 frames
-		if (animTimer > 39)
+		// Get up after 30 frames
+		if (animTimer > 29)
 		{
 			if (hp <= 0 && global.gameMode == GAMEMODE.PLATFORMING)
 			{
@@ -3635,6 +3649,10 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 	xHome = x;
 }
 
+// Used to detect if we have floor bounced on this frame so that the player is
+// flush with the floor during the floor bounce animation
+var isFloorBouncingThisFrame = false;
+
 // Collisions with Floors
 if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 {
@@ -3646,16 +3664,27 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		y += fallDirection;
 	}
 	
-	// Round y to nearest integer to help make flush collision
-	//y = round(y);
-	
 	isJumpingForward = false;
 	
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
 		
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
+		// Floor bouncing
+		if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && floorBouncing && !hasUsedFloorBounce && fallDirection == 1)
+		{
+			floorHit = true;
+			hasUsedFloorBounce = true;
+			hitstop = 20;
+			state = eState.LAUNCHED;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 5;
+			hsp = (hsp * .5);
+			vsp = -4;
+			isFloorBouncingThisFrame = true;
+			audio_play_sound(sfx_Landing, 1, false);
+		}
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1 && !floorBouncing) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -3675,10 +3704,11 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			grounded = true;
 			isThrowable = true;
 		}
-		if (state == eState.LAUNCHED)
+		if (state == eState.LAUNCHED && !floorBouncing)
 		{
 			HandleKnockdownState(isExperiencingHardKnockdown);
 		}
+		
 	}
 }
 
@@ -3745,8 +3775,8 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 }
 
 
-// Update Movement
-if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
+// Update Movement (carve exception for floor bounces)
+if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE && !isFloorBouncingThisFrame)
 {
 	y += vsp;
 	yHome = y;
