@@ -6,7 +6,7 @@ if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state !=
 {
 	hp = maxHitPoints;
 }
-superMeter = 100;
+//superMeter = 100;
 
 // Handle Player Intros
 if (!hasPerformedIntro) 
@@ -187,6 +187,12 @@ if (!inAttackState && movedir != 0)
 if (!inAttackState && state != eState.HURT && state != eState.RUN_BACKWARD) 
 {
 	bufferAttackInput = 0;
+}
+
+// Reset blockbuffer
+if (state != eState.BLOCKING && state != eState.SCREEN_FREEZE)
+{
+	blockbuffer = 0;
 }
 
 // Initialize Hurtbox Values
@@ -2933,80 +2939,7 @@ switch state
 		
 		if (attack > 0)
 		{
-			blockbuffer = true;
-		}
-		
-		// Buffer attack out of block
-		switch attack 
-		{
-			case 1 : 
-			{
-				if (verticalMoveDir == -1)
-				{
-					prevState = eState.CROUCHING_LIGHT_ATTACK;
-				}
-				else 
-				{
-					prevState = eState.STANDING_LIGHT_ATTACK; 
-				}
-			}
-			break;
-			
-			case 2 : 
-			{
-				if (verticalMoveDir == -1)
-				{
-					prevState = eState.CROUCHING_MEDIUM_ATTACK;
-				}
-				else 
-				{
-					prevState = eState.STANDING_MEDIUM_ATTACK;
-				}
-			}
-			break;
-			
-			case 3 : 
-			{
-				if (verticalMoveDir == -1)
-				{
-					prevState = eState.CROUCHING_HEAVY_ATTACK;
-				}
-				else
-				{
-					prevState = eState.STANDING_HEAVY_ATTACK;
-				}
-			}
-			break;
-			
-			case 5 : 
-			{
-				if (verticalMoveDir == 0 && movedir == 0)
-				{
-					prevState = eState.NEUTRAL_SPECIAL;
-				}
-				else if (movedir != 0 )
-				{
-					prevState = eState.SIDE_SPECIAL;
-				}
-				else if (verticalMoveDir == 1)
-				{
-					prevState = eState.UP_SPECIAL;
-				}
-				else if (verticalMoveDir == -1)
-				{
-					prevState = eState.DOWN_SPECIAL;
-				}
-			}
-			break;
-			
-			case 6 : 
-			{
-				if (superMeter >= 50)
-				{
-					prevState = eState.SUPER;
-				}
-			}
-			break;
+			blockbuffer = attack;
 		}
 		
 		if (knockbackVel > 0)
@@ -3020,10 +2953,7 @@ switch state
 			knockbackVel = 0;
 		}
 		
-		if (!global.game_paused)
-		{
-			blockstun--;
-		}
+		blockstun--;
 		
 		if (blockstun < 1) 
 		{
@@ -3033,14 +2963,11 @@ switch state
 			throwProtectionTimer = throwProtectionAmount;
 			ClearOwnerHitByGroups();
 			
-			if (blockbuffer)
+			animTimer = 0;
+			if (blockbuffer != 0)
 			{
-				if (prevState == eState.SUPER)
-				{
-					superMeter -= 50; 
-				}
-				state = prevState;
-				animTimer = 0;
+				PressAttackButton(blockbuffer);
+				image_index = 0;
 			} 
 			else 
 			{
@@ -3064,7 +2991,7 @@ switch state
 			
 			hsp = 0;
 			knockbackVel = 0;
-			blockbuffer = false;
+			blockbuffer = 0;
 		}
 		
 		if (spiritObject != noone)
