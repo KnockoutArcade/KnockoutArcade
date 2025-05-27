@@ -770,10 +770,13 @@ if (state == eState.HITSTOP)
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
+			hurtbox.image_xscale = hurtboxCrouchingWidth;
+			hurtbox.image_yscale = hurtboxCrouchingHeight;
+			hurtboxXOffset = hurtboxXOffsetCrouching;
 		}
 		else
 		{
-			sprite_index = CharacterSprites.standBlock_Sprite; // Set Crouching Anim
+			sprite_index = CharacterSprites.standBlock_Sprite;
 		}
 
 		FAvictim = true;
@@ -2930,6 +2933,10 @@ switch state
 		if (isCrouchBlocking)
 		{
 			sprite_index = CharacterSprites.crouchBlock_Sprite;
+			
+			hurtbox.image_xscale = hurtboxCrouchingWidth;
+			hurtbox.image_yscale = hurtboxCrouchingHeight;
+			hurtboxXOffset = hurtboxXOffsetCrouching;
 		}
 		else 
 		{
