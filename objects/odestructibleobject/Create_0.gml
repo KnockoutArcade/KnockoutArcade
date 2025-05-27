@@ -124,6 +124,17 @@ state = eState.IDLE;
 	crossupProtectionTimer = 0; // How long the player currently has crossup protection for.
 	crossupProtectionAmount = 0; // How much crossup protection to give.
 	crossupPreviousSide = 0; // Which side the opponent was previously on.
+	
+	// Wall bounce Variables
+	wallBouncing = false;
+	wallHit = false; // this is to dectect when the player hits the wall
+	hasUsedWallBounce = false; // Has this player already been wallbounced in a combo?
+	
+	// Floor bounce Variables
+	floorBouncing = false;
+	floorHit = false; // This is to detect when a player hits the floor
+	hasUsedFloorBounce = false; // Has this player already been floorbounced in a combo?
+
 #endregion
 
 CharacterSprites = {
