@@ -3564,6 +3564,17 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		sprite_index = CharacterSprites.wallSplat_Sprite;
 		hsp = -(hsp * .5);
 		vsp = -2;
+		
+		// Create particle effect
+		var impactParticle = instance_create_layer(x, y, "Instances", oParticles);
+		with (impactParticle) 
+		{
+			sprite_index = sWallsplatParticle;
+			image_index = 0;
+			image_xscale = other.image_xscale;
+			lifetime = 17;
+			depth = other.depth + 1;
+		}
 	}
 	else if (state != eState.HITSTOP)
 	{

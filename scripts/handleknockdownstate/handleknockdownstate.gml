@@ -53,7 +53,7 @@ function HandleKnockdownState( _hardKnockdown)
 		sprite_index = sKnockdownParticle;
 		image_index = 0;
 		image_xscale = other.image_xscale;
-		lifetime = 10;
+		lifetime = 17;
 		depth = other.depth + 1;
 	}
 }
