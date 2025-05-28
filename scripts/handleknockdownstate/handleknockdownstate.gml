@@ -50,10 +50,10 @@ function HandleKnockdownState( _hardKnockdown)
 	var landingParticle = instance_create_layer(x, y, "Instances", oParticles);
 	with (landingParticle) 
 	{
-		sprite_index = sLandingParticle;
+		sprite_index = sKnockdownParticle;
 		image_index = 0;
 		image_xscale = other.image_xscale;
-		lifetime = 20;
-		depth -= 1;
+		lifetime = 10;
+		depth = other.depth + 1;
 	}
 }

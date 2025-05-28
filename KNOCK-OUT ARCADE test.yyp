@@ -310,6 +310,7 @@
     {"id":{"name":"sBeverly_Super","path":"sprites/sBeverly_Super/sBeverly_Super.yy",},"order":64,},
     {"id":{"name":"oPlayerHurtbox","path":"objects/oPlayerHurtbox/oPlayerHurtbox.yy",},"order":1,},
     {"id":{"name":"sPlatformingStage_Russel1_part1","path":"sprites/sPlatformingStage_Russel1_part1/sPlatformingStage_Russel1_part1.yy",},"order":0,},
+    {"id":{"name":"sKnockdownParticle","path":"sprites/sKnockdownParticle/sKnockdownParticle.yy",},"order":3,},
     {"id":{"name":"sRussel_Run_Forward","path":"sprites/sRussel_Run_Forward/sRussel_Run_Forward.yy",},"order":30,},
     {"id":{"name":"sBeverly_JumpLight_Mockup_strip3","path":"sprites/sBeverly_JumpLight_Mockup_strip3/sBeverly_JumpLight_Mockup_strip3.yy",},"order":16,},
     {"id":{"name":"sOptionsButtons","path":"sprites/sOptionsButtons/sOptionsButtons.yy",},"order":4,},
