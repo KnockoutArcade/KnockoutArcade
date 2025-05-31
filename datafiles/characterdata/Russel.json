@@ -3897,8 +3897,8 @@
           "AttackHitStop": 25,
           "AttackHitStun": 14,
           "KnockBack": 5.0,
-          "AirKnockbackVertical": -2.0,
-          "AirKnockbackHorizontal": 4.0,
+          "AirKnockbackVertical": -4.0,
+          "AirKnockbackHorizontal": 0.0,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
           "LaunchKnockbackHorizontal": 0.0,
@@ -3922,7 +3922,7 @@
           "AttackHitStop": 18,
           "AttackHitStun": 14,
           "KnockBack": 5.0,
-          "AirKnockbackVertical": -2.0,
+          "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": 0.5,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-05-31T12:41:29.7678706-07:00",
+  "LastModified": "2025-05-31T12:47:22.7409972-07:00",
   "LastModifiedBy": "creep"
 }
