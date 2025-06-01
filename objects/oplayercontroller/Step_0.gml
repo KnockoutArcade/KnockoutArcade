@@ -2288,6 +2288,8 @@ switch state
 		
 		sprite_index = CharacterSprites.grab_Sprite;
 		
+		ProccessCommandGrab();
+		
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.CommandGrab, true, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, false, true, attack);
@@ -2297,7 +2299,7 @@ switch state
 			JumpingAttackScript(selectedCharacter.CommandGrab, false, selectedCharacter.CommandGrab.AirMovementData.GravityScale, selectedCharacter.CommandGrab.AirMovementData.FallScale, attack);
 		}
 		
-		ProccessCommandGrab();
+		
 	}
 	break;
 	

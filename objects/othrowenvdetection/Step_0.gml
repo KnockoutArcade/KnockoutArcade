@@ -55,7 +55,7 @@ switch (mode)
 			owner.hsp = 0;
 		}
 		
-		if (!owner.inAttackState)
+		if (!owner.inAttackState || owner.prevState != eState.COMMAND_GRAB)
 		{
 			instance_destroy();
 		}

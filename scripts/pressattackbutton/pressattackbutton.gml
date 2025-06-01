@@ -12,7 +12,8 @@ function PressAttackButton(attack)
 				if (prevState == eState.STANDING_LIGHT_ATTACK_2 && bufferAttackInput == 0)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
-					//SetSpiritMoveData(false, selectedCharacter.StandLight2, attack);
+					sprite_index = selectedCharacter.StandLight2.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -22,7 +23,8 @@ function PressAttackButton(attack)
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3 && bufferAttackInput == 0)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
-					//SetSpiritMoveData(false, selectedCharacter.StandLight3, attack);
+					sprite_index = selectedCharacter.StandLight3.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -32,7 +34,8 @@ function PressAttackButton(attack)
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 					state = eState.JUMPING_LIGHT_ATTACK;
-					//SetSpiritMoveData(false, selectedCharacter.JumpingLight, attack);
+					sprite_index = selectedCharacter.JumpingLight.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -42,7 +45,8 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir = -1)
 				{
 					state = eState.CROUCHING_LIGHT_ATTACK;
-					//SetSpiritMoveData(false, selectedCharacter.CrouchingLight, attack);
+					sprite_index = selectedCharacter.CrouchingLight.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -53,7 +57,8 @@ function PressAttackButton(attack)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
-					//SetSpiritMoveData(false, selectedCharacter.StandLight, attack);
+					sprite_index = selectedCharacter.StandLight.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -71,7 +76,8 @@ function PressAttackButton(attack)
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.JUMPING_MEDIUM_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingMedium, attack);
+					sprite_index = selectedCharacter.JumpingMedium.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -81,7 +87,8 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_MEDIUM_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.CrouchingMedium, attack);
+					sprite_index = selectedCharacter.CrouchingMedium.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -91,8 +98,8 @@ function PressAttackButton(attack)
 				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_MEDIUM_ATTACK;
+					sprite_index = selectedCharacter.StandMedium.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.StandMedium, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -102,7 +109,6 @@ function PressAttackButton(attack)
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_MEDIUM_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingMedium, attack);
 				}
 			break;
 			
@@ -110,7 +116,8 @@ function PressAttackButton(attack)
 				if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
 				 	state = eState.JUMPING_HEAVY_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingHeavy, attack);
+					sprite_index = selectedCharacter.JumpingHeavy.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -120,7 +127,8 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == -1)
 				{
 					state = eState.CROUCHING_HEAVY_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.CrouchingHeavy, attack);
+					sprite_index = selectedCharacter.CrouchingHeavy.SpriteId;
+					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
@@ -130,8 +138,8 @@ function PressAttackButton(attack)
 				else if (state != eState.JUMPSQUAT)
 				{
 					state = eState.STANDING_HEAVY_ATTACK;
+					sprite_index = selectedCharacter.StandHeavy.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.StandHeavy, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -141,7 +149,6 @@ function PressAttackButton(attack)
 				else
 				{
 					jumpAttackBuffer = eState.JUMPING_HEAVY_ATTACK;
-					SetSpiritMoveData(false, selectedCharacter.JumpingHeavy, attack);
 				}
 			break;
 			
@@ -149,9 +156,8 @@ function PressAttackButton(attack)
 				if (state != eState.JUMPING && state != eState.JUMPSQUAT && state != eState.RUSH_CANCEL_UP) 
 				{
 					state = eState.GRAB;
-					sprite_index = sRussel_Grab;
+					sprite_index = selectedCharacter.Grab.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.Grab, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -164,8 +170,8 @@ function PressAttackButton(attack)
 				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0)
 				{
 					state = eState.NEUTRAL_SPECIAL;
+					sprite_index = selectedCharacter.NeutralSpecial.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.NeutralSpecial, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -175,8 +181,8 @@ function PressAttackButton(attack)
 				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0)
 				{
 					state = eState.SIDE_SPECIAL;
+					sprite_index = selectedCharacter.SideSpecial.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.SideSpecial, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -192,9 +198,8 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == 1)
 				{
 					state = eState.UP_SPECIAL
-					animTimer = 0;
+					sprite_index = selectedCharacter.UpSpecial.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.UpSpecial, attack);
 					
 					// Special rule for singleplayer: Turn around to face the inputted direction
 					if (global.gameMode == GAMEMODE.PLATFORMING && movedir != 0)
@@ -210,9 +215,8 @@ function PressAttackButton(attack)
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
 				{
 					state = eState.DOWN_SPECIAL
-					animTimer = 0;
+					sprite_index = selectedCharacter.DownSpecial.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.DownSpecial, attack);
 					
 					// Special rule for singleplayer: Turn around to face the inputted direction
 					if (global.gameMode == GAMEMODE.PLATFORMING && movedir != 0)
@@ -232,8 +236,8 @@ function PressAttackButton(attack)
 				{
 					superMeter -= 50;
 					state = eState.SUPER;
+					sprite_index = selectedCharacter.Super.SpriteId;
 					image_index = 0;
-					SetSpiritMoveData(false, selectedCharacter.Super, attack);
 					
 					// reset anim timer
 					animTimer = 0;
@@ -293,7 +297,8 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal1.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal1.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal1.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_1;
-				SetSpiritMoveData(false, selectedCharacter.CommandNormal1, attack);
+				sprite_index = selectedCharacter.CommandNormal1.SpriteId;
+				image_index = 0;
 					
 				// reset anim timer
 				animTimer = 0;
@@ -306,7 +311,8 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal2.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal2.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal2.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_2;
-				SetSpiritMoveData(false, selectedCharacter.CommandNormal2, attack);
+				sprite_index = selectedCharacter.CommandNormal2.SpriteId;
+				image_index = 0;
 					
 				// reset anim timer
 				animTimer = 0;
@@ -319,7 +325,8 @@ function PressAttackButton(attack)
 			if (attack == selectedCharacter.CommandNormal3.CommandNormalData.Button && inputDirection == selectedCharacter.CommandNormal3.CommandNormalData.NumpadDirection && grounded != selectedCharacter.CommandNormal3.CommandNormalData.GroundOrAir)
 			{
 				state = eState.COMMAND_NORMAL_3;
-				SetSpiritMoveData(false, selectedCharacter.CommandNormal3, attack);
+				sprite_index = selectedCharacter.CommandNormal3.SpriteId;
+				image_index = 0;
 					
 				// reset anim timer
 				animTimer = 0;
