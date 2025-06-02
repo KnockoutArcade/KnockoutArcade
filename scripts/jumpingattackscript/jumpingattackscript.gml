@@ -118,7 +118,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
 		{
 			// Turn around to face opponent
-			if (opponent != noone)
+			if (opponent != noone && grounded)
 			{
 				if (x < opponent.x)
 				{

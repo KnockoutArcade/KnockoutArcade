@@ -116,7 +116,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState, attackID)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
 		{
 			// Turn around to face opponent
-			if (opponent != noone)
+			if (opponent != noone && grounded)
 			{
 				if (x < opponent.x)
 				{

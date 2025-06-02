@@ -4998,8 +4998,8 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.4
       },
       "AirMovementData": {
         "NumberOfWindows": 3,
@@ -5008,29 +5008,29 @@
             "StartingFrame": 0,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 4.3213367E-07,
+            "VerticalSpeed": -3.0,
             "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 18,
+            "StartingFrame": 2,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.0000001,
-        "FallScale": 0.5
+        "GravityScale": 1.0,
+        "FallScale": 0.4
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "JayDownSpecial_AirSlowdown",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -9410,6 +9410,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-05-20T22:44:20.8945521-07:00",
+  "LastModified": "2025-06-01T22:11:22.6856402-07:00",
   "LastModifiedBy": "creep"
 }

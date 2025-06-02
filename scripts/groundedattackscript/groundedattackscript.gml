@@ -119,7 +119,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
 		{
 			// Turn around to face opponent
-			if (opponent != noone)
+			if (opponent != noone && grounded)
 			{
 				if (x < opponent.x)
 				{

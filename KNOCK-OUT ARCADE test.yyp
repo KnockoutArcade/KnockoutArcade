@@ -240,6 +240,7 @@
     {"id":{"name":"sBeverly_StandLight2_MOCKUP_strip3","path":"sprites/sBeverly_StandLight2_MOCKUP_strip3/sBeverly_StandLight2_MOCKUP_strip3.yy",},"order":9,},
     {"id":{"name":"oComboCounter","path":"objects/oComboCounter/oComboCounter.yy",},"order":0,},
     {"id":{"name":"Cutscene_TeleportObject","path":"scripts/Cutscene_TeleportObject/Cutscene_TeleportObject.yy",},"order":2,},
+    {"id":{"name":"JayDownSpecial_AirSlowdown","path":"scripts/JayDownSpecial_AirSlowdown/JayDownSpecial_AirSlowdown.yy",},"order":0,},
     {"id":{"name":"DeepBreathingActivate","path":"scripts/DeepBreathingActivate/DeepBreathingActivate.yy",},"order":2,},
     {"id":{"name":"sfx_CharSel_SelectAlt","path":"sounds/sfx_CharSel_SelectAlt/sfx_CharSel_SelectAlt.yy",},"order":0,},
     {"id":{"name":"sSuperFlashBackground","path":"sprites/sSuperFlashBackground/sSuperFlashBackground.yy",},"order":6,},
@@ -829,6 +830,7 @@
     {"folderPath":"folders/Sprites/Stages/Singleplayer Stages/Russels Stages/Restaurant Rumble.yy","order":4,"resourceVersion":"1.0","name":"Restaurant Rumble","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts/SmoothCriminal.yy","order":2,"resourceVersion":"1.0","name":"SmoothCriminal","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/SupplementaryAttackScripts/General.yy","order":3,"resourceVersion":"1.0","name":"General","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/SupplementaryAttackScripts/Jay.yy","order":4,"resourceVersion":"1.0","name":"Jay","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
