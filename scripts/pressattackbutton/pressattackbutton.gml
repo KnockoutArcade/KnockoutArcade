@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function PressAttackButton(attack)
+function PressAttackButton(attack, _late = false)
 {	
 		// Debug
 		//if (attack != 0) show_debug_message("Pressed " + string(attack));
@@ -9,7 +9,7 @@ function PressAttackButton(attack)
 		switch attack 
 		{
 			case 1:
-				if (prevState == eState.STANDING_LIGHT_ATTACK_2 && bufferAttackInput == 0)
+				if (prevState == eState.STANDING_LIGHT_ATTACK_2 && _late)
 				{ 
 					state = eState.STANDING_LIGHT_ATTACK_2;
 					sprite_index = selectedCharacter.StandLight2.SpriteId;
@@ -20,7 +20,7 @@ function PressAttackButton(attack)
 					
 					inAttackState = true;
 				}
-				else if (prevState == eState.STANDING_LIGHT_ATTACK_3 && bufferAttackInput == 0)
+				else if (prevState == eState.STANDING_LIGHT_ATTACK_3 && _late)
 				{
 					state = eState.STANDING_LIGHT_ATTACK_3;
 					sprite_index = selectedCharacter.StandLight3.SpriteId;
@@ -58,7 +58,6 @@ function PressAttackButton(attack)
 					state = eState.STANDING_LIGHT_ATTACK;
 					image_index = 0;
 					sprite_index = selectedCharacter.StandLight.SpriteId;
-					image_index = 0;
 					
 					// reset anim timer
 					animTimer = 0;
