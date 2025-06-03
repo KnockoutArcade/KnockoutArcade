@@ -192,4 +192,21 @@ switch (state)
 		}
 	}
 	break;
+	
+	case eSetControlsState.WAIT_FOR_INPUT:
+	{
+		if (playerNumber == 0 && playerControlsType == "KEYBOARD")
+		{
+			draw_sprite(sButtons_Keyboard, 16, x + 34, y + 64);
+		}
+		else if (playerNumber == 1 && playerControlsType == "KEYBOARD")
+		{
+			draw_sprite(sButtons_Keyboard, 64, x + 34, y + 64);
+		}
+		else
+		{
+			draw_sprite(sButtons_Controller, 0, x + 34, y + 64);
+		}
+	}
+	break;
 }

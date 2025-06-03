@@ -426,6 +426,15 @@ switch (state)
 						p2ControlsMenu.playerNumber = 1;
 						p2ControlsMenu.playerControls = global.player2Controls;
 						p2ControlsMenu.playerControlsType = global.player2ControllerType;
+						
+						if (playerNumber == 0)
+						{
+							p2ControlsMenu.isWaitingForInput = true;
+						}
+						else
+						{
+							p1ControlsMenu.isWaitingForInput = true;
+						}
 					}
 					break;
 				

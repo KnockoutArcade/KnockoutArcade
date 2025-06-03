@@ -76,6 +76,19 @@ switch (state)
 	
 	case eSetControlsState.WAIT_FOR_INPUT:
 	{
+		// Handle Activating
+		if (menuConfirm && !menuConfirmBuffer)
+		{
+			sprite_index = sControlsMenu_TurnFace;
+			image_index = 0;
+			
+			state = eSetControlsState.TURN_TO_FACE;
+			
+			audio_play_sound(sfx_UI_Select, 0, false);
+		}
+		
+		
+		// Handle leaving
 		if (menuDeny && !menuDenyBuffer) || (instance_number(oSetControlsMenu) <= 1)
 		{
 			menuDenyBuffer = true;
