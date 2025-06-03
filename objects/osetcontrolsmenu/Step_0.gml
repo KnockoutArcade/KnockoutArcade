@@ -56,10 +56,39 @@ switch (state)
 		// If we are using the opening animation and we have reached the end, switch to the turn to face animation
 		if (image_index >= image_number - 1)
 		{
-			sprite_index = sControlsMenu_TurnFace;
-			image_index = 0;
+			if (isWaitingForInput)
+			{
+				sprite_index = sControlsMenu_PressStart;
+				image_index = 0;
+				
+				state = eSetControlsState.WAIT_FOR_INPUT;
+			}
+			else
+			{
+				sprite_index = sControlsMenu_TurnFace;
+				image_index = 0;
+				
+				state = eSetControlsState.TURN_TO_FACE;
+			}
+		}
+	}
+	break;
+	
+	case eSetControlsState.WAIT_FOR_INPUT:
+	{
+		if (menuDeny && !menuDenyBuffer) || (instance_number(oSetControlsMenu) <= 1)
+		{
+			menuDenyBuffer = true;
 			
-			state = eSetControlsState.TURN_TO_FACE;
+			// Switch to the turn away state
+			sprite_index = sControlsMenu_Opening;
+			image_index = 6;
+			image_speed = -1;
+			
+			state = eSetControlsState.LEAVE;
+			
+			// Play Sound
+			audio_play_sound(sfx_UI_Exit, 0, false);
 		}
 	}
 	break;

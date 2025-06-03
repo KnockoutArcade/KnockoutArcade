@@ -115,6 +115,7 @@ if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 		p2ControlsMenu.playerNumber = 1;
 		p2ControlsMenu.playerControls = global.player2Controls;
 		p2ControlsMenu.playerControlsType = global.player2ControllerType;
+		p2ControlsMenu.isWaitingForInput = true;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
