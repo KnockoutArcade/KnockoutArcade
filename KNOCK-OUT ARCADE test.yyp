@@ -281,6 +281,7 @@
     {"id":{"name":"oCharacterSelectButtons","path":"objects/oCharacterSelectButtons/oCharacterSelectButtons.yy",},"order":14,},
     {"id":{"name":"sJay_JumpingMedium_mockup_strip5","path":"sprites/sJay_JumpingMedium_mockup_strip5/sJay_JumpingMedium_mockup_strip5.yy",},"order":18,},
     {"id":{"name":"sRussel_UpSpecial","path":"sprites/sRussel_UpSpecial/sRussel_UpSpecial.yy",},"order":32,},
+    {"id":{"name":"sRunItBack","path":"sprites/sRunItBack/sRunItBack.yy",},"order":12,},
     {"id":{"name":"sRussel_Grab","path":"sprites/sRussel_Grab/sRussel_Grab.yy",},"order":19,},
     {"id":{"name":"sRussel_Jumping_Heavy","path":"sprites/sRussel_Jumping_Heavy/sRussel_Jumping_Heavy.yy",},"order":18,},
     {"id":{"name":"sndTestSfx","path":"sounds/sndTestSfx/sndTestSfx.yy",},"order":1,},
