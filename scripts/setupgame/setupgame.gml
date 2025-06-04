@@ -41,7 +41,11 @@ function SetupGame()
 			{
 				image_xscale *= -1;
 				opponent = other.p1;
-				hasPerformedIntro = global.currentRound != 1;
+				hasPerformedIntro = false;
+				if (global.currentRound != 1 || global.isDoingRematch)
+				{
+					hasPerformedIntro = true;
+				}
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 2; // Set this player's team score
@@ -49,7 +53,11 @@ function SetupGame()
 			with (p1) 
 			{
 				opponent = other.p2;
-				hasPerformedIntro = global.currentRound != 1;
+				hasPerformedIntro = false;
+				if (global.currentRound != 1 || global.isDoingRematch)
+				{
+					hasPerformedIntro = true;
+				}
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 1; // Set this player's team score
@@ -164,28 +172,41 @@ function SetupGame()
 				var particle = instance_create_layer(80, 0, "Particles", oParticles);
 				with (particle) 
 				{
-					if(global.currentRound == 1)
+					if (global.currentRound == 1)
 					{
-						sprite_index = sRound1Start;
-						lifetime = 110;
+						if (global.isDoingRematch)
+						{
+							sprite_index = sRunItBack;
+							lifetime = 80;
+						}
+						else
+						{
+							sprite_index = sRound1Start;
+							lifetime = 110;
+						}
+						
 					}
-					if(global.currentRound == 2)
+					if (global.currentRound == 2)
 					{
 						sprite_index = sRound2Start;
 						lifetime = 110;
 					}
-					if(global.currentRound == 3)
+					if (global.currentRound == 3)
 					{
 						sprite_index = sFinalRoundStart;
 						lifetime = 110;
 					}
 				}
+				global.isDoingRematch = false;
 			}
 		}
 		break;
 		
 		case GAMEMODE.PLATFORMING:
 		{
+			// Safegaurd
+			global.isDoingRematch = false;
+			
 			//Setup Player
 			p1 = instance_create_layer(global.p1StartingPositionX, global.p1StartingPositionY, "Instances", global.p1SelectedCharacter);
 			

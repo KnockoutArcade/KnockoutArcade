@@ -56,6 +56,9 @@ global.noNumpadMode = false;
 
 global.toggleHitboxVisibility = false;
 
+// Detect rematch
+global.isDoingRematch = false;
+
 // Room transition vars
 global.roomTransitionData = {
 	isActive : false,

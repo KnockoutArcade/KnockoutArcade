@@ -104,6 +104,7 @@ function ResultsScreen()
 		switch (prioritySelection)
 		{
 			case 0:
+				global.isDoingRematch = true;
 				room_restart();
 			break;
 			case 1:

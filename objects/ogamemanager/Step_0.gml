@@ -373,9 +373,18 @@ switch (global.gameMode)
 			var particle = instance_create_layer(80, 0, "Particles", oParticles);
 			with (particle) 
 			{
-				sprite_index = sRound1Start;
-				lifetime = 110;
+				if (global.isDoingRematch)
+				{
+					sprite_index = sRunItBack;
+					lifetime = 80;
+				}
+				else
+				{
+					sprite_index = sRound1Start;
+					lifetime = 110;
+				}
 			}
+			global.isDoingRematch = false;
 		}
 	}
 	break;

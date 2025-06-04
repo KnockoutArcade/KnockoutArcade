@@ -9,7 +9,7 @@ function ProccessCommandGrab()
 	if (selectedCharacter.Name == "Russel")
 	{
 		// Detect if we have hit the ground. We're using the late part of the move as the activation hitbox.
-		if (grounded && vsp > 0 && animTimer < 99)
+		if (grounded && animTimer < 99 && animTimer > 24)
 		{
 			animTimer = 99;
 		}
