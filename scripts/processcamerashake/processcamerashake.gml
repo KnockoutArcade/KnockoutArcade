@@ -12,14 +12,22 @@ function ProcessCameraShake()
 	var effectiveShake = screenShakeLevel - 1;
 	effectiveShake = max(screenShakeLevel, 0);
 	
-	var randomCamOffsetX = random_range((-effectiveShake / 2), (effectiveShake / 2)) * 10;
-	var randomCamOffsetY = random_range((-effectiveShake / 2), (effectiveShake / 2)) * 10;
+	var randomCamOffsetX = random_range((-effectiveShake), (effectiveShake)) * 0.5;
+	var randomCamOffsetY = random_range((-effectiveShake), (effectiveShake)) * 0.5;
 	
 	// Apply offset
-	if (screenShakeDuration mod 3 <= 10)
+	if (screenShakeDuration mod 3 == 1)
 	{
 		x = xHome + randomCamOffsetX;
 		y = yHome + randomCamOffsetY;
+		
+		previousShakeX = randomCamOffsetX;
+		previousShakeY = randomCamOffsetY;
+	}
+	else
+	{
+		x = xHome + previousShakeX;
+		y = yHome + previousShakeY;
 	}
 	
 	// Once the duration has expired...
@@ -31,6 +39,9 @@ function ProcessCameraShake()
 		// return the camera to its normal position
 		x = xHome;
 		y = yHome;
+		
+		previousShakeX = 0;
+		previousShakeY = 0;
 	}
 	
 	// Set the camera's view

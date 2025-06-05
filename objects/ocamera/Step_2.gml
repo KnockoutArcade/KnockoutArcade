@@ -49,6 +49,7 @@ switch (global.gameMode)
 				xHome = x;
 				yHome = y;
 				
+				// Handle Screen Shake
 				if (isScreenShaking)
 				{
 					ProcessCameraShake();
@@ -69,106 +70,110 @@ switch (global.gameMode)
 	{
 		if (!global.game_paused)
 		{
-				// If the camera is locked in place, don't update it's movement
-				if (!isLocked && !isRespawnCamera)
+			// If the camera is locked in place, don't update it's movement
+			if (!isLocked && !isRespawnCamera)
+			{
+				// Set the camera's target
+				if (p1 != noone)
 				{
-					// Set the camera's target
-					if (p1 != noone)
+					// Camera behavior in Singleplayer is a lot different from VS mode.
+					// The camera will attempt to keep the player on the left side of
+					// the screen so that they can see more of the upcoming level.
+						
+					// If the player starts moving to the left, the camera will slowly
+					// pan over to the left until the player is in the middle of the screen.
+					// If they start moving to the right again, the camera pans until the
+					// the player is off to the left side of the screen.
+						
+					// The camera's panning speed is tied to the player's movement speed.
+					// If the player starts sprinting, the camera will pan much quicker.
+						
+					if (p1.movedir > 0 && (!p1.inAttackState || p1.inAttackState && p1.animTimer < 2) && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the right
 					{
-						// Camera behavior in Singleplayer is a lot different from VS mode.
-						// The camera will attempt to keep the player on the left side of
-						// the screen so that they can see more of the upcoming level.
-						
-						// If the player starts moving to the left, the camera will slowly
-						// pan over to the left until the player is in the middle of the screen.
-						// If they start moving to the right again, the camera pans until the
-						// the player is off to the left side of the screen.
-						
-						// The camera's panning speed is tied to the player's movement speed.
-						// If the player starts sprinting, the camera will pan much quicker.
-						
-						if (p1.movedir > 0 && (!p1.inAttackState || p1.inAttackState && p1.animTimer < 2) && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the right
-						{
-							cameraPanDelayTimer -= 2;
+						cameraPanDelayTimer -= 2;
 							
-							if (cameraPanDelayTimer <= 0)
+						if (cameraPanDelayTimer <= 0)
+						{
+							cameraPanDelayTimer = 0;
+							cameraSpeed = 0.9;
+								
+							if (p1.runningForward)
 							{
-								cameraPanDelayTimer = 0;
-								cameraSpeed = 0.9;
-								
-								if (p1.runningForward)
-								{
-									cameraSpeed = 0.75;
-								}
-								
-								cameraPanDirection = 1;
+								cameraSpeed = 0.75;
 							}
-						}
-						else if (p1.movedir < 0 && (!p1.inAttackState || p1.inAttackState && p1.animTimer < 2) && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the left
-						{
-							cameraPanDelayTimer -= 1;
-							
-							if (cameraPanDelayTimer <= 0)
-							{
-								cameraPanDelayTimer = 0;
-								cameraSpeed = 0.9;
 								
-								if (p1.runningForward)
-								{
-									cameraSpeed = 0.75;
-								}
-								
-								cameraPanDirection = -1;
-							}
+							cameraPanDirection = 1;
 						}
-						else // Player is not moving
-						{
-							cameraPanDelayTimer = cameraPanDelay;
-						}
-						
-						if (cameraPanDirection == 1)
-						{
-							// Camera's target is set to be in front of the player
-							xCameraDestination = (p1.xHome) + cameraRightSidePanAmount;
-						}
-						else if (cameraPanDirection == -1)
-						{
-							// Camera's target is set to be almost on top of the player
-							xCameraDestination = (p1.xHome) + cameraLeftSidePanAmount + (p1.hsp * 2);
-						}
-						
-						yCameraDestination = p1.y - 80;
-						yCameraDestination = clamp(yCameraDestination, cameraBoundMinY, cameraBoundMaxY);
 					}
+					else if (p1.movedir < 0 && (!p1.inAttackState || p1.inAttackState && p1.animTimer < 2) && p1.hitstop <= 0 && p1.blockstun <= 0 && p1.hitstun <= 0) // Player is moving to the left
+					{
+						cameraPanDelayTimer -= 1;
+							
+						if (cameraPanDelayTimer <= 0)
+						{
+							cameraPanDelayTimer = 0;
+							cameraSpeed = 0.9;
+								
+							if (p1.runningForward)
+							{
+								cameraSpeed = 0.75;
+							}
+								
+							cameraPanDirection = -1;
+						}
+					}
+					else // Player is not moving
+					{
+						cameraPanDelayTimer = cameraPanDelay;
+					}
+						
+					if (cameraPanDirection == 1)
+					{
+						// Camera's target is set to be in front of the player
+						xCameraDestination = (p1.xHome) + cameraRightSidePanAmount;
+					}
+					else if (cameraPanDirection == -1)
+					{
+						// Camera's target is set to be almost on top of the player
+						xCameraDestination = (p1.xHome) + cameraLeftSidePanAmount + (p1.hsp * 2);
+					}
+						
+					yCameraDestination = p1.y - 80;
+					yCameraDestination = clamp(yCameraDestination, cameraBoundMinY, cameraBoundMaxY);
+				}
+			}
 			
-					// Smoothly move the camera to its destination
-					x = lerp(xCameraDestination, x, cameraSpeed);
-					y = lerp(yCameraDestination, y, cameraSpeed);
-				}
-				else if (isRespawnCamera) // Handle going to the player's position during the respawn time.
-				{
-					// Smoothly move the camera to its destination
-					x = lerp(xCameraDestination, x, cameraSpeed);
-					y = lerp(yCameraDestination, y, cameraSpeed);
+			// Smoothly move the camera to its destination
+			if (!p1.isInCutscene)
+			{
+				x = lerp(xCameraDestination, x, cameraSpeed);
+				y = lerp(yCameraDestination, y, cameraSpeed);
+			}
+			
+			// Handle going to the player's position during the respawn time.
+			if (isRespawnCamera) 
+			{
+				// Smoothly move the camera to its destination
+				x = lerp(xCameraDestination, x, cameraSpeed);
+				y = lerp(yCameraDestination, y, cameraSpeed);
 					
-					if (point_distance(x, y, xCameraDestination, yCameraDestination) <= respawnCameraThreshold)
-					{
-						isRespawnCamera = false;
-					}
+				if (point_distance(x, y, xCameraDestination, yCameraDestination) <= respawnCameraThreshold)
+				{
+					isRespawnCamera = false;
 				}
+			}
 		
-				// Set the camera's position
-				// NOTE: Not currently done implementing vertical cam
-				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), clamp(y, 0, room_height - cameraHeight));
+			// Set the camera's position
+			// NOTE: Not currently done implementing vertical cam
+			camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - (cameraWidth)), clamp(y, 0, room_height - cameraHeight));
 	
-				// Clamp the camera to the room's bounderies
-				x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
-				y = clamp(y, 0, room_height - (cameraHeight));
+			// Clamp the camera to the room's bounderies
+			x = clamp(x, cameraWidth*.5, room_width - (cameraWidth*.5));
+			y = clamp(y, 0, room_height - (cameraHeight));
 		
-				// Set the home values
-				xHome = x;
-				yHome = y;
-				
+			// Set the home values
+			xHome = x;
+			yHome = y;
 				
 			if (isScreenShaking) // Handle Screen Shake
 			{

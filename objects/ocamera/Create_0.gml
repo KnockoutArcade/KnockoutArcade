@@ -24,6 +24,8 @@ respawnCameraThreshold = 2; // How close the camera must be to the respawn locat
 isScreenShaking = false; // Whether the camera is currently shaking
 screenShakeLevel = 0; // How much the screen should be shaking
 screenShakeDuration = 0; // How long to shake the screen for
+previousShakeX = 0; // Stores previous shake direction
+previousShakeY = 0;
 
 xHome = x; // The camera's position without screen shake
 yHome = y; // The camera's position without screen shake

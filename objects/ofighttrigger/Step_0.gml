@@ -59,6 +59,8 @@ if (isTriggered)
 	global.camObj.isLocked = lockCamera;
 	global.camObj.x = lockCameraPositionX;
 	global.camObj.y = lockCameraPositionY;
+	global.camObj.xCameraDestination = lockCameraPositionX;
+	global.camObj.yCameraDestination = lockCameraPositionY;
 	
 	isTriggered = false;
 }
