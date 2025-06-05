@@ -12,11 +12,11 @@ function ProcessCameraShake()
 	var effectiveShake = screenShakeLevel - 1;
 	effectiveShake = max(screenShakeLevel, 0);
 	
-	var randomCamOffsetX = random_range((-effectiveShake / 2), (effectiveShake / 2));
-	var randomCamOffsetY = random_range((-effectiveShake / 2), (effectiveShake / 2));
+	var randomCamOffsetX = random_range((-effectiveShake / 2), (effectiveShake / 2)) * 10;
+	var randomCamOffsetY = random_range((-effectiveShake / 2), (effectiveShake / 2)) * 10;
 	
 	// Apply offset
-	if (screenShakeDuration mod 3 == 1)
+	if (screenShakeDuration mod 3 <= 10)
 	{
 		x = xHome + randomCamOffsetX;
 		y = yHome + randomCamOffsetY;

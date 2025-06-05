@@ -35,25 +35,25 @@ switch (global.gameMode)
 					xCameraDestination = roundWinTarget.xHome;
 				}
 				
-				// If the camera is not shaking...
-				if (!isScreenShaking)
-				{
-					cameraSpeed = 0.75;
-					x = lerp(xCameraDestination, x, cameraSpeed);
+				
+				cameraSpeed = 0.75;
+				x = lerp(xCameraDestination, x, cameraSpeed);
+				y = 0;
 	
-					camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, cameraWidth), 0);
+				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, cameraWidth), 0);
 
 	
-					// Clamp the camera to the room's bounderies
-					x = clamp(x, cameraWidth*.5, cameraWidth*1.5);
+				// Clamp the camera to the room's bounderies
+				x = clamp(x, cameraWidth*.5, cameraWidth*1.5);
 				
-					xHome = x;
-					yHome = y;
-				}
-				else // Handle screen shake
+				xHome = x;
+				yHome = y;
+				
+				if (isScreenShaking)
 				{
 					ProcessCameraShake();
 				}
+				
 			}
 			else 
 			{
@@ -69,8 +69,6 @@ switch (global.gameMode)
 	{
 		if (!global.game_paused)
 		{
-			if (!isScreenShaking)
-			{
 				// If the camera is locked in place, don't update it's movement
 				if (!isLocked && !isRespawnCamera)
 				{
@@ -170,8 +168,9 @@ switch (global.gameMode)
 				// Set the home values
 				xHome = x;
 				yHome = y;
-			}
-			else // Handle Screen Shake
+				
+				
+			if (isScreenShaking) // Handle Screen Shake
 			{
 				ProcessCameraShake();
 			}

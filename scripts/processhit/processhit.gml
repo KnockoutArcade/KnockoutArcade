@@ -646,10 +646,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		// Handle Screen Shake
-		/*
+		
 		global.camObj.isScreenShaking = true; // Set screen shake to true
 		global.camObj.screenShakeLevel = counterHitProperty.CounterHitLevel; // Set the screen shake level
 		global.camObj.screenShakeDuration = attackProperty.AttackHitStop; // Set the screen shake duration
-		*/
+		
 	}
 }
