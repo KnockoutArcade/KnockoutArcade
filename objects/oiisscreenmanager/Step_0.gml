@@ -3,6 +3,19 @@
 
 initInteractScreenTimer++;
 
+if (initInteractScreenTimer == initInteractScreenTransitionPoint)
+{
+	var transitionScreen = instance_create_depth(0, 0, -10000, oScreenTransition);
+	
+	with (transitionScreen)
+	{
+		screenTransitionType = eSCREENTRANSITIONS.FADE;
+		screenFadeDuration = 45;
+		screenFadeHoldDuration = 15;
+	}
+}
+
+
 if (initInteractScreenTimer >= initInteractScreenDuration)
 {
 	room_goto(rTitleScreen);

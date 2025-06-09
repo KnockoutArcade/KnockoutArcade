@@ -5,6 +5,8 @@ audio_group_load(audiogroup_soundeffect);
 audio_group_load(audiogroup_music);
 audio_group_load(audiogroup_voices);
 
+if (room == rTitleScreen) show_debug_message("yup");
+
 global.p1PaletteID = 0;
 global.p2PaletteID = 1;
 
