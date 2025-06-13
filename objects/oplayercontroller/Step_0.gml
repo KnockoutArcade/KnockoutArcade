@@ -448,17 +448,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 	&& state != eState.REKKA_LOW
 	&& state != eState.REKKA_HIGH) 
 {
-	inputSet = false;
-	motionInput = [];
-	ds_list_clear(listOfInputs);
-	progressInInputs = [];
-	enhanced = [];
-	inputWindowStart = [];
-	inputWindowEnd = [];
-	changeFrame = 999;
-	changeImmediately = false;
-	requireSpecialButton = false;
-	requiredPosition = [];
+	ResetEnhancer();
 }
 else
 {
@@ -1796,8 +1786,6 @@ switch state
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, attack);
 		}
 		
-		ProcessEnhancers(selectedCharacter.NeutralSpecial);
-		
 		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.NeutralSpecial, attack, true);
@@ -1818,8 +1806,6 @@ switch state
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, attack);
 		}
 		
-		ProcessEnhancers(selectedCharacter.SideSpecial);
-		
 		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.SideSpecial, attack, true);
@@ -1839,8 +1825,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.UpSpecial);
 		
 		if (cancelable && hitstop < 1)
 		{
@@ -1871,8 +1855,6 @@ switch state
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, attack);
 		}
 		
-		ProcessEnhancers(selectedCharacter.DownSpecial);
-		
 		if (cancelable && hitstop < 1)
 		{
 			CancelData(selectedCharacter.DownSpecial, attack, true);
@@ -1892,8 +1874,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial, false, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial);
 	}
 	break;
 	
@@ -1908,8 +1888,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial, false, selectedCharacter.EnhancedSideSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial);
 	}
 	break;
 	
@@ -1924,8 +1902,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial, false, selectedCharacter.EnhancedUpSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial);
 	}
 	break;
 	
@@ -1940,8 +1916,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial, false, selectedCharacter.EnhancedDownSpecial.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
 	}
 	break;
 	
@@ -1956,8 +1930,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedNeutralSpecial2, false, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedNeutralSpecial2.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedNeutralSpecial2);
 	}
 	break;
 	
@@ -1972,8 +1944,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedSideSpecial2, false, selectedCharacter.EnhancedSideSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedSideSpecial2.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedSideSpecial2);
 	}
 	break;
 	
@@ -1988,8 +1958,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedUpSpecial2, false, selectedCharacter.EnhancedUpSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedUpSpecial2.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedUpSpecial2);
 	}
 	break;
 	
@@ -2004,8 +1972,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.EnhancedDownSpecial2, false, selectedCharacter.EnhancedDownSpecial2.AirMovementData.GravityScale, selectedCharacter.EnhancedDownSpecial2.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.EnhancedDownSpecial);
 	}
 	break;
 
@@ -2021,8 +1987,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.RekkaLauncher, false, selectedCharacter.RekkaLauncher.AirMovementData.GravityScale, selectedCharacter.RekkaLauncher.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.RekkaLauncher);
 	}
 	break;
 	
@@ -2038,8 +2002,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.RekkaFinisher, false, selectedCharacter.RekkaFinisher.AirMovementData.GravityScale, selectedCharacter.RekkaFinisher.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.RekkaFinisher);
 	}
 	break;
 	
@@ -2055,8 +2017,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.RekkaConnecter, false, selectedCharacter.RekkaConnecter.AirMovementData.GravityScale, selectedCharacter.RekkaConnecter.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.RekkaConnecter);
 	}
 	break;
 	
@@ -2072,8 +2032,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.RekkaLow, false, selectedCharacter.RekkaLow.AirMovementData.GravityScale, selectedCharacter.RekkaLow.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.RekkaLow);
 	}
 	break;
 	
@@ -2089,8 +2047,6 @@ switch state
 		{
 			JumpingAttackScript(selectedCharacter.RekkaHigh, false, selectedCharacter.RekkaHigh.AirMovementData.GravityScale, selectedCharacter.RekkaHigh.AirMovementData.FallScale, attack);
 		}
-		
-		ProcessEnhancers(selectedCharacter.RekkaHigh);
 	}
 	break;
 	

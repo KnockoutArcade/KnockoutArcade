@@ -111,6 +111,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState, attackID)
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		ResetEnhancer();
 		
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)

@@ -99,6 +99,9 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		}
 	}
 	
+	// Process enhanced moves
+	ProcessEnhancers(moveToDo);
+	
 	// Buffer attack input
 	if ((animTimer >= moveToDo.Duration - inputBufferLength) && attackID != 0)
 	{
@@ -113,6 +116,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		ResetEnhancer();
 		
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)

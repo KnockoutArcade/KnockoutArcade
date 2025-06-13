@@ -175,6 +175,9 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
+					// reset special move enhancers
+					ResetEnhancer();
+					
 					inAttackState = true;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0)
@@ -185,6 +188,9 @@ function PressAttackButton(attack, _late = false)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					// reset special move enhancers
+					ResetEnhancer();
 					
 					// Special rule for singleplayer: Turn around to face the inputted direction
 					if (global.gameMode == GAMEMODE.PLATFORMING)
@@ -206,6 +212,9 @@ function PressAttackButton(attack, _late = false)
 						image_xscale = movedir;
 					}
 					
+					// reset special move enhancers
+					ResetEnhancer();
+					
 					// reset anim timer
 					animTimer = 0;
 					
@@ -225,6 +234,9 @@ function PressAttackButton(attack, _late = false)
 					
 					// reset anim timer
 					animTimer = 0;
+					
+					// reset special move enhancers
+					ResetEnhancer();
 					
 					inAttackState = true;
 				}

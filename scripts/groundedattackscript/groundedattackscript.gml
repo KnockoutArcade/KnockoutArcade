@@ -99,6 +99,9 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		}
 	}
 	
+	// Process enhanced moves
+	ProcessEnhancers(moveToDo);
+	
 	// Buffer attack input
 	if ((animTimer >= moveToDo.Duration - inputBufferLength) && attackID != 0)
 	{
@@ -114,6 +117,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		ResetEnhancer();
 		
 		// Execute buffered input (make sure not a spirit)
 		if (bufferAttackInput != 0 && selectedCharacter.UniqueData.SpiritData != 2)
