@@ -2285,7 +2285,7 @@
           },
           {
             "StartingFrame": 7,
-            "HorizontalSpeed": 2.5,
+            "HorizontalSpeed": 3.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -2327,20 +2327,20 @@
           },
           {
             "StartingFrame": 7,
-            "HorizontalSpeed": 2.5,
+            "HorizontalSpeed": 3.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 32,
-            "HorizontalSpeed": -0.25,
+            "HorizontalSpeed": -0.3,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 40,
+            "StartingFrame": 39,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -8068,6 +8068,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-06-01T20:10:09.8505426-07:00",
+  "LastModified": "2025-06-13T21:40:34.6021486-07:00",
   "LastModifiedBy": "creep"
 }
