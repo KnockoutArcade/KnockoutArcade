@@ -256,6 +256,22 @@ function PressAttackButton(attack, _late = false)
 					inAttackState = true;
 				}
 			break;
+			
+			case 7: // Taunt
+			{
+				if (grounded)
+				{
+					state = eState.TAUNT;
+					sprite_index = sRussel_Taunt;
+					image_index = 0;
+					
+					// reset anim timer
+					animTimer = 0;
+					
+					inAttackState = false;
+				}
+			}
+			break;
 		}
 		
 		

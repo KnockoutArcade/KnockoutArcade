@@ -66,7 +66,8 @@ if (playerID == 1 && !isInCutscene) // Player 1
 	var grab = 4 * global.p1ButtonGrab;
 	var special = 5 * global.p1ButtonSpecial;
 	var super = 6 * global.p1ButtonSuper;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+	var taunt = 7 * keyboard_check_pressed(ord("T"));
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
 
 } 
 else if (playerID == 2 && !isInCutscene) // Player 2
@@ -3087,6 +3088,31 @@ switch state
 		
 		// Create speed trail
 		SpeedTrail(0.3, 0.02, 1);
+	}
+	break;
+	
+	case eState.TAUNT:
+	{
+		cancelable = false;
+		isShortHopping = false;
+		isSuperJumping = false;
+		hasSpentDoubleJump = false;
+		canBlock = false;
+		invincible = false;
+		isInStableState = false; // Set stable state to true
+		inAttackState = false;
+		hasFallenDownPit = false;
+		isExperiencingHardKnockdown = false;
+		
+		if (animTimer >= 177)
+		{
+			state = eState.IDLE;
+		}
+		
+		sprite_index = sRussel_Taunt;
+		image_speed = 1;
+		
+		HandleWalkingOffPlatforms(false);
 	}
 	break;
 	
