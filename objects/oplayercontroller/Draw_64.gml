@@ -16,9 +16,9 @@ if (playerID == 1)
 	draw_set_color(c_white);
 	
 	draw_text(20, 10, state);
-	draw_text(20, 30, prevState);
+	draw_text(20, 30, combo);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, hasPerformedIntro);
+	draw_text(20, 70, storedComboDamage);
 	draw_text(20, 90, enhanced);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
