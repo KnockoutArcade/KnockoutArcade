@@ -5646,10 +5646,31 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 1,
+        "NumberOfWindows": 4,
         "Windows": [
           {
             "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.75,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 3,
+            "HorizontalSpeed": 1.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 4,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -5660,7 +5681,7 @@
         "FallScale": 10.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 3,
+        "NumberOfWindows": 4,
         "Windows": [
           {
             "StartingFrame": 0,
@@ -5682,6 +5703,13 @@
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 99,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 0.5,
@@ -6803,11 +6831,11 @@
           "AttackType": 0,
           "BlockStun": 33.0,
           "KnockBack": 1.0,
-          "AirKnockbackVertical": -3.0,
-          "AirKnockbackHorizontal": 2.0,
-          "Launches": false,
-          "LaunchKnockbackVertical": 0.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "AirKnockbackVertical": -3.5,
+          "AirKnockbackHorizontal": 1.6,
+          "Launches": true,
+          "LaunchKnockbackVertical": -4.0,
+          "LaunchKnockbackHorizontal": 1.6,
           "GravityScaling": 5.0,
           "Pushback": 1.0,
           "ParticleXOffset": 15,
@@ -8068,6 +8096,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-06-14T21:29:44.8598336-07:00",
+  "LastModified": "2025-06-14T21:43:44.5175603-07:00",
   "LastModifiedBy": "creep"
 }
