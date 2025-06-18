@@ -89,7 +89,8 @@ else if (playerID == 2 && !isInCutscene) // Player 2
 	var grab = 4 * global.p2ButtonGrab;
 	var special = 5 * global.p2ButtonSpecial;
 	var super = 6 * global.p2ButtonSuper;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super);
+	var taunt = 7 * keyboard_check_pressed(ord("Y"));
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
 }
 else if (controllerID != noone) // AI Controller
 {
@@ -3103,8 +3104,9 @@ switch state
 		inAttackState = false;
 		hasFallenDownPit = false;
 		isExperiencingHardKnockdown = false;
+		canTurnAround = false;
 		
-		if (animTimer >= 177)
+		if (animTimer >= 184)
 		{
 			state = eState.IDLE;
 		}
