@@ -179,7 +179,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		
 		// SUPER HACKEY WAY OF MAKING ALL ENHANCED NORMALS CANCEL TO SUPER
 		// CHANGE THIS LATER PLEASE I BEG OF YOU
-		// REMEMBER TO CHANGE OverwriteSpiritMoveset
+		// REMEMBER TO CHANGE OverwriteSpiritMoveset and OverwriteMoveset
 		if (selectedCharacter.MoveData[i].EnhanceMoveType != 0)
 		{
 			nextMove.MoveCanCancelInto = 4194304;

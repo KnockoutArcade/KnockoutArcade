@@ -116,7 +116,15 @@ function OverwriteMoveset()
 					selectedCharacter.Super = nextMove;
 					break;
 				}
-		
+				
+				// SUPER HACKEY WAY OF MAKING ALL ENHANCED NORMALS CANCEL TO SUPER
+				// CHANGE THIS LATER PLEASE I BEG OF YOU
+				if (selectedCharacter.MoveData[i].EnhanceMoveType != 0)
+				{
+					nextMove.MoveCanCancelInto = 4194304;
+					show_debug_message("Overwrote Enhancer Cancels");
+				}
+				
 				switch (selectedCharacter.MoveData[i].EnhanceMoveType)
 				{
 					case 1:
