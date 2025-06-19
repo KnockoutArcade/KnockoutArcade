@@ -16,8 +16,16 @@ global.player2ControllerType = "KEYBOARD";
 // Set Default Controls
 ControllerSetup();
 
-SetPlayerButtons();
-
-SaveControls();
-
 LoadControls();
+
+// If the controls do not have a version number, update them
+if (!variable_struct_exists(global.player1Controls, "versionNumber"))
+{
+	SetPlayerButtons();
+	SaveControls();
+	LoadControls();
+	
+	show_debug_message("Updated old control data");
+}
+
+

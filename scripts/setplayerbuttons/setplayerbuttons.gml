@@ -77,7 +77,10 @@ function SetPlayerButtons()
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
 			buttonMenuPause : gp_start
-		}
+		},
+		
+		versionNumber : 1 // This number represents the current "version" of the controls.
+		// Useful for making sure that old game saves can get updated to the latest version
 	};
 	
 	global.player2Controls = {
@@ -153,7 +156,10 @@ function SetPlayerButtons()
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
 			buttonMenuPause : gp_start
-		}
+		},
+		
+		versionNumber : 1 // This number represents the current "version" of the controls.
+		// Useful for making sure that old game saves can get updated to the latest version
 	};
 }
 
@@ -235,7 +241,10 @@ function RestorePlayer1DefaultControls()
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
 			buttonMenuPause : gp_start
-		}
+		},
+		
+		versionNumber : 1 // This number represents the current "version" of the controls.
+		// Useful for making sure that old game saves can get updated to the latest version
 	};
 }
 
@@ -315,6 +324,9 @@ function RestorePlayer2DefaultControls()
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
 			buttonMenuPause : gp_start
-		}
+		},
+		
+		versionNumber : 1 // This number represents the current "version" of the controls.
+		// Useful for making sure that old game saves can get updated to the latest version
 	};
 }
