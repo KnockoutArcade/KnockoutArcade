@@ -6460,7 +6460,7 @@
     {
       "UID": "687f8742-8020-440c-9312-894fe679f4bf",
       "MoveType": 0,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4194304,
       "EnhanceMoveType": 2,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [],

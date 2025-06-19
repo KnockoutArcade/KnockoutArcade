@@ -117,6 +117,13 @@ function OverwriteSpiritMoveset(spiritOff)
 				break;
 			}
 
+			// SUPER HACKEY WAY OF MAKING ALL ENHANCED NORMALS CANCEL TO SUPER
+			// CHANGE THIS LATER PLEASE I BEG OF YOU
+			if (selectedCharacter.MoveData[i].EnhanceMoveType != 0)
+			{
+				nextMove.MoveCanCancelInto = 4194304;
+			}
+
 			switch (selectedCharacter.MoveData[i].EnhanceMoveType)
 			{
 			case 1:
