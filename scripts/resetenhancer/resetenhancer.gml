@@ -13,6 +13,4 @@ function ResetEnhancer()
 	changeImmediately = false;
 	requireSpecialButton = false;
 	requiredPosition = [];
-	
-	show_debug_message("Enhancers Reset");
 }

@@ -452,7 +452,7 @@ if (state != eState.NEUTRAL_SPECIAL && state != eState.SIDE_SPECIAL && state != 
 {
 	ResetEnhancer();
 }
-else
+else if (hitstun <= 0)
 {
 	PerformMotionInputs(attack);
 }
