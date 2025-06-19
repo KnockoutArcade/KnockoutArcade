@@ -17,6 +17,8 @@ function SetPlayerButtons()
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : ord("M"),
 			buttonRun : vk_lshift,
+			buttonTaunt : ord("T"),
+			buttonItem : ord ("Q"),
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : ord("A"),
@@ -50,6 +52,8 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonTaunt : gp_select,
+			buttonItem : gp_shoulderlb,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,
@@ -90,6 +94,8 @@ function SetPlayerButtons()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
+			buttonTaunt : vk_numpad6,
+			buttonItem : vk_numpad7,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : vk_left,
@@ -122,6 +128,8 @@ function SetPlayerButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonTaunt : gp_select,
+			buttonItem : gp_shoulderlb,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,
@@ -167,6 +175,8 @@ function RestorePlayer1DefaultControls()
 			buttonSpecial : 186,    // Keyboard code value for ";"
 			buttonSuper : ord("M"),
 			buttonRun : vk_lshift,
+			buttonTaunt : ord("T"),
+			buttonItem : ord ("Q"),
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : ord("A"),
@@ -200,6 +210,8 @@ function RestorePlayer1DefaultControls()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonTaunt : gp_select,
+			buttonItem : gp_shoulderlb,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,
@@ -244,6 +256,8 @@ function RestorePlayer2DefaultControls()
 			buttonSpecial : vk_numpad0,
 			buttonSuper : vk_numpad5,
 			buttonRun : 110, // Keyboard code value for numpad "."
+			buttonTaunt : vk_numpad6,
+			buttonItem : vk_numpad7,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : vk_left,
@@ -276,6 +290,8 @@ function RestorePlayer2DefaultControls()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonTaunt : gp_select,
+			buttonItem : gp_shoulderlb,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,

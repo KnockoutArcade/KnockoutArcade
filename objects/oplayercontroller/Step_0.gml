@@ -66,7 +66,7 @@ if (playerID == 1 && !isInCutscene) // Player 1
 	var grab = 4 * global.p1ButtonGrab;
 	var special = 5 * global.p1ButtonSpecial;
 	var super = 6 * global.p1ButtonSuper;
-	var taunt = 7 * keyboard_check_pressed(ord("T"));
+	var taunt = 7 * global.p1ButtonTaunt;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
 
 } 
@@ -89,7 +89,7 @@ else if (playerID == 2 && !isInCutscene) // Player 2
 	var grab = 4 * global.p2ButtonGrab;
 	var special = 5 * global.p2ButtonSpecial;
 	var super = 6 * global.p2ButtonSuper;
-	var taunt = 7 * keyboard_check_pressed(ord("Y"));
+	var taunt = 7 * global.p2ButtonTaunt;
 	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
 }
 else if (controllerID != noone) // AI Controller

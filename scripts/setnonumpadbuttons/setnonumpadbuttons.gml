@@ -16,6 +16,8 @@ function SetNoNumpadButtons()
 			buttonSpecial : ord("4"),
 			buttonSuper : ord("6"),
 			buttonRun : ord("Q"),
+			buttonTaunt : ord("Y"),
+			buttonItem : ord("I"),
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : vk_left,
@@ -48,6 +50,8 @@ function SetNoNumpadButtons()
 			buttonSpecial : gp_face1,
 			buttonSuper : gp_shoulderl,
 			buttonRun : gp_shoulderrb,
+			buttonTaunt : gp_select,
+			buttonItem : gp_shoulderlb,
 			
 			// Menu Controls - These will never be changed
 			buttonMenuLeft : gp_axislh,

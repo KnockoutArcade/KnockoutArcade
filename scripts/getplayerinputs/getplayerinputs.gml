@@ -17,6 +17,8 @@ function GetPlayerInputs()
 		global.p1ButtonSpecial = keyboard_check_pressed(global.player1Controls.Keyboard.buttonSpecial);
 		global.p1ButtonSuper = keyboard_check_pressed(global.player1Controls.Keyboard.buttonSuper);
 		global.p1ButtonRun = keyboard_check(global.player1Controls.Keyboard.buttonRun);
+		global.p1ButtonTaunt = keyboard_check_pressed(global.player1Controls.Keyboard.buttonTaunt);
+		global.p1ButtonItem = keyboard_check_pressed(global.player1Controls.Keyboard.buttonItem);
 		
 		// Menu Controls
 		global.p1ButtonMenuLeft = keyboard_check(global.player1Controls.Keyboard.buttonMenuLeft) * -1;
@@ -83,6 +85,8 @@ function GetPlayerInputs()
 		global.p1ButtonSpecial = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonSpecial);
 		global.p1ButtonSuper = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonSuper);
 		global.p1ButtonRun = gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonRun);
+		global.p1ButtonTaunt = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonTaunt);
+		global.p1ButtonItem = gamepad_button_check_pressed(global.player1ControllerSlot, global.player1Controls.Controller.buttonItem);
 	
 		// Menu Controls
 		global.p1ButtonMenuLeft = (gamepad_axis_value(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuLeft) < -.25 || gamepad_button_check(global.player1ControllerSlot, global.player1Controls.Controller.buttonMenuLeftDPAD)) * -1;
@@ -121,6 +125,8 @@ function GetPlayerInputs()
 		global.p2ButtonSpecial = keyboard_check_pressed(global.player2Controls.Keyboard.buttonSpecial);
 		global.p2ButtonSuper = keyboard_check_pressed(global.player2Controls.Keyboard.buttonSuper);
 		global.p2ButtonRun = keyboard_check(global.player2Controls.Keyboard.buttonRun);
+		global.p2ButtonTaunt = keyboard_check_pressed(global.player2Controls.Keyboard.buttonTaunt);
+		global.p2ButtonItem = keyboard_check_pressed(global.player2Controls.Keyboard.buttonItem);
 		
 		// Menu Controls
 		global.p2ButtonMenuLeft = keyboard_check(global.player2Controls.Keyboard.buttonMenuLeft) * -1;
@@ -187,7 +193,9 @@ function GetPlayerInputs()
 		global.p2ButtonSpecial = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonSpecial);
 		global.p2ButtonSuper = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonSuper);
 		global.p2ButtonRun = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonRun);
-	
+		global.p2ButtonTaunt = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonTaunt);
+		global.p2ButtonItem = gamepad_button_check_pressed(global.player2ControllerSlot, global.player2Controls.Controller.buttonItem);
+
 		// Menu Controls
 		global.p2ButtonMenuLeft = (gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuLeft) < -.25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuLeftDPAD)) * -1;
 		global.p2ButtonMenuRight = gamepad_axis_value(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRight) > .25 || gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuRightDPAD);
