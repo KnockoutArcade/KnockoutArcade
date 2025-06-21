@@ -11,6 +11,7 @@ environmentDisplacement = 0;
 vsp = 0; // Vertical speed
 walkSpeed = selectedCharacter.WalkSpeed; // How fast the character walks in pixels/frame
 runSpeed = selectedCharacter.RunSpeed; // How fast the character runs in pixels/frame
+runSpeedAcceleration = 0.9; // How fast the character accelerates to their tops speed
 traction = selectedCharacter.Traction; // How much this character slows down each frame in pixels/frame
 jumpSpeed = selectedCharacter.JumpSpeed; // How high a character jumps - Initial Jump velocity
 fallSpeed = selectedCharacter.FallSpeed; // How fast a character falls

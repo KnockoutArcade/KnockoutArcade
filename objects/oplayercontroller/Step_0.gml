@@ -1133,8 +1133,11 @@ switch state
 			}
 
 			image_speed = 1;
-		
-			hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
+			
+			// calculate run speed
+			var currentRunSpeed = min(abs(hsp) + runSpeedAcceleration, runSpeed);
+			
+			hsp = (currentRunSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
 			vsp += fallSpeed;
 
 			if (!runningForward) 
@@ -1153,6 +1156,8 @@ switch state
 				if (movedir != -image_xscale) 
 				{
 					isJumpingForward = true;
+					hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
+					jumpHsp = hsp;
 				}
 				else 
 				{
@@ -1464,7 +1469,7 @@ switch state
 				depth += 1;
 			}
 			
-			// if we are holding run, update our HSP
+			// Handle jumping while running
 			if (runningForward)
 			{
 				hsp = (runSpeed + (speedBonus / 100 * runSpeed)) * image_xscale;
@@ -1474,6 +1479,7 @@ switch state
 				hsp = walkSpeed * movedir;
 			}
 			
+	
 			// Handle shorthops
 			if (canShortHop)
 			{
