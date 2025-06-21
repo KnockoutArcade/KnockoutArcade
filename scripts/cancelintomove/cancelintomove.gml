@@ -9,7 +9,10 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	isThrowable = true;
 	bufferAttackInput = 0;
 	
-	hsp = 0; // reset speeds
+	if (grounded)
+	{
+		hsp = 0; // reset speeds
+	}
 	
 	if (spiritObject != noone)
 	{

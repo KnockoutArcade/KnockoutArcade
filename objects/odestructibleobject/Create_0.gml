@@ -90,7 +90,11 @@ state = eState.IDLE;
 	projectileInvincible = false;
 
 	knockbackVel = 0;
+	knockbackVelTimer = 0;
+	knockbackVelDuration = 5; // How long to make knockback/pushback last for
 	pushbackVel = 0;
+	pushbackVelTimer = 0;
+	pushbackVelDuration = 5;
 	
 	grounded = true;
 
@@ -134,6 +138,8 @@ state = eState.IDLE;
 	floorBouncing = false;
 	floorHit = false; // This is to detect when a player hits the floor
 	hasUsedFloorBounce = false; // Has this player already been floorbounced in a combo?
+	
+	environmentDisplacement = 0;
 
 #endregion
 

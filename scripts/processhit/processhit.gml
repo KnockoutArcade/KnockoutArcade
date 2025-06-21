@@ -23,6 +23,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			scriptToExecute(collision_list.owner);
 		}
 		
+		// Reset Speed
+		collision_list.owner.hsp = 0;
+		
 		// Combo Scaling
 		if (!collision_list.owner.isDestructibleObject)
 		{
@@ -287,7 +290,7 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// If there is, transfer our knockback to the other player 
 		with (collision_list.owner)
 		{
-			if (place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall) && other.owner.grounded && grounded)
+			if (place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall) && other.owner.grounded && grounded && !isDestructibleObject)
 			{
 				other.owner.pushbackVel = attackProperty.KnockBack;
 				other.owner.pushbackVelTimer = 0;

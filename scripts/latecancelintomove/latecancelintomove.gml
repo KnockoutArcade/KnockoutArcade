@@ -8,7 +8,10 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	image_index = 0;
 	animTimer = 0;
 	
-	hsp = 0; // reset speeds
+	if (grounded)
+	{
+		hsp = 0; // reset speeds
+	}
 	
 	PressAttackButton(attackID, true);
 	isThrowable = true;

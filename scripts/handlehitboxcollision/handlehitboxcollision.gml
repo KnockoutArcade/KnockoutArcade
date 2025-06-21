@@ -458,6 +458,7 @@ function HandleHitboxCollision(ownerType)
 					
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
+					collision_list[| i].owner.hsp = 0;
 					
 					// Handle Hitstop
 					if (spirit != noone) 
@@ -650,7 +651,7 @@ function HandleHitboxCollision(ownerType)
 					}
 					
 					// Face opponent towards the source of damage;
-					if (!collision_list[| i].owner.isDestructibleObject && collision_list[| i].owner.state != eState.BEING_GRABBED)
+					if (collision_list[| i].owner.knockbackMultiplier != 0 && collision_list[| i].owner.state != eState.BEING_GRABBED)
 					{
 						var victimFacingDirection = 1;
 						
