@@ -18,7 +18,7 @@ if (playerID == 1)
 	draw_text(20, 10, x);
 	draw_text(20, 30, combo);
 	draw_text(20, 50, animTimer);
-	draw_text(20, 70, pushbackVelTimer);
+	draw_text(20, 70, storedComboDamage);
 	draw_text(20, 90, pushbackVel);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

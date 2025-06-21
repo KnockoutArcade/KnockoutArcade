@@ -3616,7 +3616,7 @@
         {
           "Start": 4,
           "Lifetime": 2,
-          "AttackWidth": 20,
+          "AttackWidth": 22,
           "AttackHeight": 5,
           "WidthOffset": 8,
           "HeightOffset": 0,
@@ -3696,8 +3696,8 @@
       "HurtboxData": [
         {
           "Start": 4,
-          "Lifetime": 4,
-          "AttackWidth": 25,
+          "Lifetime": 6,
+          "AttackWidth": 27,
           "AttackHeight": 10,
           "WidthOffset": 4,
           "HeightOffset": 0
@@ -8096,6 +8096,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-06-21T00:52:02.4577282-07:00",
+  "LastModified": "2025-06-21T08:17:15.5568069-07:00",
   "LastModifiedBy": "creep"
 }
