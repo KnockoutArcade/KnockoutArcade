@@ -450,10 +450,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			}
 		}
 		
-		
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		
-		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
@@ -595,6 +591,12 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				}
 			}
 		}
+		
+		// Apply grounded knockback
+		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.knockbackVelTimer = 0 // reset the timer
+		collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+		
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		
