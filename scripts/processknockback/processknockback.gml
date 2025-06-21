@@ -8,7 +8,7 @@ function ProcessKnockback()
 		
 		var knockbackdistance = log10((9/knockbackVelDuration) * knockbackVelTimer + 1) - log10((9/knockbackVelDuration) * (knockbackVelTimer - 1) + 1)
 		
-		environmentDisplacement = knockbackdistance * knockbackVel * -sign(image_xscale);
+		environmentDisplacement += knockbackdistance * knockbackVel * -sign(image_xscale);
 	}
 			
 	if (knockbackVelTimer >= knockbackVelDuration)

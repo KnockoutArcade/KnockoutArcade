@@ -8,7 +8,7 @@ function ProcessPushback()
 		
 		var pushbackdistance = log10((9/pushbackVelDuration) * pushbackVelTimer + 1) - log10((9/pushbackVelDuration) * (pushbackVelTimer - 1) + 1)
 		
-		environmentDisplacement = pushbackdistance * pushbackVel * -sign(image_xscale);
+		environmentDisplacement += pushbackdistance * pushbackVel * -sign(image_xscale);
 	}
 			
 	if (pushbackVelTimer >= pushbackVelDuration)
