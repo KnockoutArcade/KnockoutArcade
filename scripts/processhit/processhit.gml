@@ -115,26 +115,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			}
 		}
 		
-		
-		// Apply grounded knockback
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		collision_list.owner.knockbackVelTimer = 0 // reset the timer
-		collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
-		
-		// Do a quick check to see if there's a wall behind the opponent
-		// If there is, transfer our knockback to the other player 
-		with (collision_list.owner)
-		{
-			if (place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall) && other.owner.grounded)
-			{
-				other.owner.pushbackVel = attackProperty.KnockBack;
-				other.owner.pushbackVelTimer = 0;
-				other.owner.pushbackVelDuration = max(min(other.moveDuration - other.owner.animTimer, MaximumPushbackDuration), 1);
-			}
-		}
-		
-
-		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
@@ -295,6 +275,23 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					collision_list.owner.spiritObject.hsp = 2 * -collision_list.owner.spiritObject.image_xscale;
 					collision_list.owner.spiritObject.grounded = false;
 				}
+			}
+		}
+		
+		// Apply grounded knockback
+		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+		collision_list.owner.knockbackVelTimer = 0 // reset the timer
+		collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+		
+		// Do a quick check to see if there's a wall behind the opponent
+		// If there is, transfer our knockback to the other player 
+		with (collision_list.owner)
+		{
+			if (place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall) && other.owner.grounded && grounded)
+			{
+				other.owner.pushbackVel = attackProperty.KnockBack;
+				other.owner.pushbackVelTimer = 0;
+				other.owner.pushbackVelDuration = max(min(other.moveDuration - other.owner.animTimer, MaximumPushbackDuration), 1);
 			}
 		}
 		

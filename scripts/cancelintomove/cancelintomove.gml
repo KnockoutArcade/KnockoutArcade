@@ -8,6 +8,9 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	hitstopBuffer = true;
 	isThrowable = true;
 	bufferAttackInput = 0;
+	
+	hsp = 0; // reset speeds
+	
 	if (spiritObject != noone)
 	{
 		spiritObject.prevState = _prevState;

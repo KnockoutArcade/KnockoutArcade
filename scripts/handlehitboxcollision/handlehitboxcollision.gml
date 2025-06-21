@@ -441,7 +441,7 @@ function HandleHitboxCollision(ownerType)
 					// If there is, transfer our knockback to the other player 
 					with (collision_list[| i].owner)
 					{
-						if (place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oWall) && other.owner.grounded && !other.isProjectile)
+						if (place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oWall) && other.owner.grounded && grounded && !other.isProjectile)
 						{
 							ownerType.pushbackVel = other.attackProperty.Pushback;
 							ownerType.pushbackVelTimer = 0;
