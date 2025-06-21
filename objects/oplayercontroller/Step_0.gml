@@ -2577,6 +2577,19 @@ switch state
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 			
+			if (knockbackVel != 0)
+			{
+				environmentDisplacement = (knockbackVel / knockbackVelDuration) * -sign(image_xscale);
+				knockbackVelTimer++;
+			}
+			
+			if (knockbackVelTimer >= knockbackVelDuration)
+			{
+				knockbackVel = 0;
+				knockbackTimer = 0;
+			}
+			
+			/*
 			// This code handles getting knocked back on the ground.
 			if (knockbackVel > 0)
 			{
@@ -2594,6 +2607,7 @@ switch state
 				hsp = 0;
 				knockbackVel = 0;
 			}
+			*/
 		} 
 		else 
 		{

@@ -122,7 +122,6 @@ function OverwriteMoveset()
 				if (selectedCharacter.MoveData[i].EnhanceMoveType != 0)
 				{
 					nextMove.MoveCanCancelInto = 4194304;
-					show_debug_message("Overwrote Enhancer Cancels");
 				}
 				
 				switch (selectedCharacter.MoveData[i].EnhanceMoveType)

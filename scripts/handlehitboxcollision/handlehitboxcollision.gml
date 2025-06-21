@@ -437,6 +437,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
+					collision_list[| i].owner.knockbackVelTimer = 0;
 					
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
