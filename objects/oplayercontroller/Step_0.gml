@@ -1067,6 +1067,7 @@ switch state
 		if (movedir == 0) 
 		{
 			state = eState.IDLE;
+			hsp = 0;
 		}
 		
 		// Handle Jumping And Crouching
