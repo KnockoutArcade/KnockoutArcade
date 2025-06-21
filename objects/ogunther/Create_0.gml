@@ -29,6 +29,10 @@ hurtboxXOffsetCrouching = -11;
 hurtboxXOffset = hurtboxXOffsetStanding;
 hurtboxYOffset = 0;
 
+// RUN ACCEL - PUT IN CHAR EDITOR
+runSpeedAcceleration = 1; // How fast the character accelerates to their top speed
+
+
 with (hurtbox) 
 {
 	primary = true;
