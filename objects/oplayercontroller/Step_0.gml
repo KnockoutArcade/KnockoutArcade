@@ -1022,6 +1022,8 @@ switch state
 			}
 			
 			previousWalkFrame = floor(image_index);
+			
+			hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 		}
 		else if (movedir == -image_xscale)
 		{
@@ -1037,6 +1039,9 @@ switch state
 			}
 			
 			previousWalkFrame = floor(image_index);
+			
+			// Walk 10% slower
+			hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir * 0.9;
 		}
 		
 		// Handle Transition to Run
@@ -1056,8 +1061,6 @@ switch state
 		}
 		
 		image_speed = 1;
-		
-		hsp = (walkSpeed + (speedBonus / 100 * walkSpeed)) * movedir;
 		
 		vsp += fallSpeed;
 
