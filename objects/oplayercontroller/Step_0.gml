@@ -2577,37 +2577,8 @@ switch state
 		{
 			sprite_index = CharacterSprites.hurt_Sprite;
 			
-			if (knockbackVel != 0)
-			{
-				environmentDisplacement = (knockbackVel / knockbackVelDuration) * -sign(image_xscale);
-				knockbackVelTimer++;
-			}
-			
-			if (knockbackVelTimer >= knockbackVelDuration)
-			{
-				knockbackVel = 0;
-				knockbackTimer = 0;
-			}
-			
-			/*
-			// This code handles getting knocked back on the ground.
-			if (knockbackVel > 0)
-			{
-				hsp = knockbackVel * -image_xscale;
-				knockbackVel--;
-			} 
-			else if (knockbackVel < 0) 
-			{
-				hsp = knockbackVel * -image_xscale;
-				knockbackVel++;
-			}
-			// Prevent player from ocillating if knockbackVel is a decimal.
-			if (knockbackVel > -1 && knockbackVel < 1)
-			{
-				hsp = 0;
-				knockbackVel = 0;
-			}
-			*/
+			// Handle knockback
+			ProcessKnockback();
 		} 
 		else 
 		{
@@ -2988,16 +2959,8 @@ switch state
 			blockbuffer = attack;
 		}
 		
-		if (knockbackVel > 0)
-		{
-			hsp = knockbackVel * -image_xscale;
-			knockbackVel--;
-		} 
-		else 
-		{
-			hsp = 0;
-			knockbackVel = 0;
-		}
+		// Handle knockback
+		ProcessKnockback();
 		
 		blockstun--;
 		

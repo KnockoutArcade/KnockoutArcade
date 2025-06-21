@@ -340,7 +340,7 @@ canBlock = false;
 
 knockbackVel = 0;
 knockbackVelTimer = 0;
-knockbackVelDuration = 5; // How long to make knockback/pushback last for
+knockbackVelDuration = 7; // How long to make knockback/pushback last for
 pushbackVel = 0;
 pushbackVelTimer = 0;
 

@@ -4,8 +4,6 @@
 // Allows player to perform motion inputs during special moves
 function PerformMotionInputs(attack)
 {
-	show_debug_message("Motion Input Performed" + string(current_time));
-	
 	if (inputSet)
 	{
 		var inputPerformed = false;
