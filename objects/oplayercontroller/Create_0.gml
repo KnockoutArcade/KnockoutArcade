@@ -340,9 +340,10 @@ canBlock = false;
 
 knockbackVel = 0;
 knockbackVelTimer = 0;
-knockbackVelDuration = 7; // How long to make knockback/pushback last for
+knockbackVelDuration = 5; // How long to make knockback/pushback last for
 pushbackVel = 0;
 pushbackVelTimer = 0;
+pushbackVelDuration = 5;
 
 maxHitPoints = selectedCharacter.MaxHP;
 hp = maxHitPoints;

@@ -436,8 +436,25 @@ function HandleHitboxCollision(ownerType)
 						ownerType.superMeter += floor(attackProperty.MeterGain * 0.75 * ownerType.meterPenalty);
 					}
 
-					collision_list[| i].owner.knockbackVel = attackProperty.KnockBack;
-					collision_list[| i].owner.knockbackVelTimer = 0;
+
+					// Do a quick check to see if there's a wall behind the opponent
+					// If there is, transfer our knockback to the other player 
+					with (collision_list[| i].owner)
+					{
+						if (place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oWall) && other.owner.grounded && !other.isProjectile)
+						{
+							ownerType.pushbackVel = other.attackProperty.Pushback;
+							ownerType.pushbackVelTimer = 0;
+							ownerType.pushbackVelDuration = max(min(other.moveDuration - ownerType.animTimer, MaximumPushbackDuration), 1);
+						}
+						else
+						{
+							knockbackVel = other.attackProperty.KnockBack;
+							knockbackVelTimer = 0;
+							knockbackVelDuration = max(min(other.attackProperty.BlockStun, MaximumPushbackDuration), 1); // Always at least 1, but never more than x
+						}
+					}
+					
 					
 					collision_list[| i].owner.blockstun = attackProperty.BlockStun;
 					collision_list[| i].owner.shuffle = 0;
@@ -454,10 +471,6 @@ function HandleHitboxCollision(ownerType)
 					{
 						ownerType.prevState = ownerType.state; // Set the owner's previous state
 						ownerType.state = eState.HITSTOP;
-						
-						// Apply pushback
-						ownerType.pushbackVel = attackProperty.Pushback;
-						
 						// Apply hitstop
 						ownerType.hitstop = attackProperty.AttackHitStop;
 						

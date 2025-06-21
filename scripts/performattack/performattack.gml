@@ -178,6 +178,7 @@ function PerformAttack(Action, createdBySpirit)
 				attackProperty = Action.AttackProperty[i];
 				counterHitProperty = Action.CounterHitProperty[i];
 				finalBlowSuper = Action.SuperData.FinalBlowKO;
+				moveDuration = Action.Duration;
 			}
 		}
 	}
@@ -219,6 +220,7 @@ function PerformAttack(Action, createdBySpirit)
 						attackProperty = Action.AttackProperty[i];
 						counterHitProperty = Action.CounterHitProperty[i];
 						finalBlowSuper = Action.SuperData.FinalBlowKO;
+						moveDuration = Action.Duration;
 					}
 					
 					// Clears the hitBy data to allow attacks to connect properly
