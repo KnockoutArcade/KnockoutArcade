@@ -3779,18 +3779,18 @@ if (opponent != noone)
 	}
 }
 
+// Handle crossup Protection
+if (currentOpponentDirection != crossupPreviousSide)
+{
+	crossupProtectionTimer = crossupProtectionAmount;
+}
+crossupPreviousSide = currentOpponentDirection;
+
 if (!inAttackState && canTurnAround && !rcActivated && hitstun <= 0 && state != eState.HITSTOP && blockstun <= 0)
 {
 	if (opponent != noone)
 	{
 		image_xscale = currentOpponentDirection;
-		
-		// Handle crossup Protection
-		if (currentOpponentDirection != crossupPreviousSide)
-		{
-			crossupProtectionTimer = crossupProtectionAmount;
-		}
-		crossupPreviousSide = currentOpponentDirection;
 	}
 	else if (hsp != 0)
 	{
