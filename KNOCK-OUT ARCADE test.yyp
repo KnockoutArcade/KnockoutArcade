@@ -354,6 +354,7 @@
     {"id":{"name":"Font1","path":"fonts/Font1/Font1.yy",},"order":0,},
     {"id":{"name":"oOverworldPlayer","path":"objects/oOverworldPlayer/oOverworldPlayer.yy",},"order":0,},
     {"id":{"name":"sSpiritText","path":"sprites/sSpiritText/sSpiritText.yy",},"order":3,},
+    {"id":{"name":"sRusselStage_v2","path":"sprites/sRusselStage_v2/sRusselStage_v2.yy",},"order":7,},
     {"id":{"name":"SetupCharacter","path":"scripts/SetupCharacter/SetupCharacter.yy",},"order":1,},
     {"id":{"name":"sSparkEffect","path":"sprites/sSparkEffect/sSparkEffect.yy",},"order":2,},
     {"id":{"name":"sQuarter","path":"sprites/sQuarter/sQuarter.yy",},"order":0,},
