@@ -370,7 +370,7 @@ switch (global.gameMode)
 		if (p1.hasPerformedIntro && p2.hasPerformedIntro && !global.hasCompletedIntros) 
 		{
 			global.hasCompletedIntros = true;
-			var particle = instance_create_layer(80, 0, "Particles", oParticles);
+			var particle = instance_create_layer((room_width / 2) - 80, 0, "Particles", oParticles);
 			with (particle) 
 			{
 				if (global.isDoingRematch)

@@ -40,11 +40,11 @@ switch (global.gameMode)
 				x = lerp(xCameraDestination, x, cameraSpeed);
 				y = 0;
 	
-				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, cameraWidth), 0);
+				camera_set_view_pos(view_camera[0], clamp(x-(cameraWidth*.5), 0, room_width - cameraWidth), 0);
 
 	
 				// Clamp the camera to the room's bounderies
-				x = clamp(x, cameraWidth*.5, cameraWidth*1.5);
+				x = clamp(x, cameraWidth*.5, room_width - (cameraWidth * 0.5));
 				
 				xHome = x;
 				yHome = y;

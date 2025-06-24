@@ -9,7 +9,17 @@ function SetupGame()
 			// Set the current state of the game manager
 			state = eGameManagerState.DURING_MATCH;
 			
-			if (room != rStageArcade)
+			if (room == rRusselStage)
+			{
+				p1 = instance_create_layer(129, 104, "Instances", global.p1SelectedCharacter);
+				p1.playerID = 1;
+				p1.controller = global.player1ControllerSlot;
+				
+				p2 = instance_create_layer(199, 104, "Instances", global.p2SelectedCharacter);
+				p2.playerID = 2;
+				p2.controller = global.player2ControllerSlot;
+			} 
+			else if (room != rStageArcade)
 			{
 				p1 = instance_create_layer(104, 104, "Instances", global.p1SelectedCharacter);
 				p1.playerID = 1;
@@ -18,7 +28,7 @@ function SetupGame()
 				p2 = instance_create_layer(216, 104, "Instances", global.p2SelectedCharacter);
 				p2.playerID = 2;
 				p2.controller = global.player2ControllerSlot;
-			} 
+			}
 			else
 			{
 				p1 = instance_create_layer(32, 104, "Instances", global.p1SelectedCharacter);
@@ -169,7 +179,7 @@ function SetupGame()
 	
 			if (global.hasCompletedIntros) 
 			{
-				var particle = instance_create_layer(80, 0, "Particles", oParticles);
+				var particle = instance_create_layer((room_width / 2) - 80, 0, "Particles", oParticles);
 				with (particle) 
 				{
 					if (global.currentRound == 1)
