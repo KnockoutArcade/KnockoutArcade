@@ -108,8 +108,26 @@ P2ControlsMenuObj = noone;
 // Controller Assignement
 #region
 
-ControllerTypeAssigner_WASD = {};
+// Get the number of controllers
+var gp_num = gamepad_get_device_count();
+var numOfControllers = 0;
+for (var i = 0; i < gp_num; i++;)	
+{
+	if (gamepad_is_connected(i))
+	{
+		numOfControllers++;
+	}
+		
+}
 
-ControllerTypeAssinger_Arrows = {};
+//ControllerTypeAssigner_WASD = {};
+//ControllerTypeAssinger_Arrows = {};
+
+ControllerTypeAssigner = array_create(numOfControllers);
+
+for (var j = 0; j < array_length(ControllerTypeAssigner); j++)
+{
+	
+}
 
 #endregion

@@ -400,6 +400,7 @@
     {"id":{"name":"sPauseMenu_Open_P2","path":"sprites/sPauseMenu_Open_P2/sPauseMenu_Open_P2.yy",},"order":1,},
     {"id":{"name":"sBeverly_StandLight2","path":"sprites/sBeverly_StandLight2/sBeverly_StandLight2.yy",},"order":39,},
     {"id":{"name":"sCharSel_PaletteSel","path":"sprites/sCharSel_PaletteSel/sCharSel_PaletteSel.yy",},"order":10,},
+    {"id":{"name":"oController","path":"objects/oController/oController.yy",},"order":2,},
     {"id":{"name":"SC_DownSpecial_OFF","path":"scripts/SC_DownSpecial_OFF/SC_DownSpecial_OFF.yy",},"order":0,},
     {"id":{"name":"sCharSel_ControllerAssignBG","path":"sprites/sCharSel_ControllerAssignBG/sCharSel_ControllerAssignBG.yy",},"order":17,},
     {"id":{"name":"sfx_Light_Hit","path":"sounds/sfx_Light_Hit/sfx_Light_Hit.yy",},"order":1,},
