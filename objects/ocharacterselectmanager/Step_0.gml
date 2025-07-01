@@ -54,8 +54,11 @@ if (P2ControlsMenuObj != noone)
 	}
 }
 
-
-if (state == eCharacterSelectState.CHARACTER_SELECT)
+if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
+{
+	
+}
+else if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
     charSelBoxTimer++;
 

@@ -2,10 +2,11 @@
 // You can write your code in this editor
 
 // The current state of the character select screen
-state = eCharacterSelectState.CHARACTER_SELECT; 
+state = eCharacterSelectState.CONTROLLER_ASSIGN; 
 
 enum eCharacterSelectState
 {
+	CONTROLLER_ASSIGN,
 	CHARACTER_SELECT,
 	STAGE_SELECT,
 	MUSIC_SELECT,
@@ -103,3 +104,12 @@ transitionObject = noone; // The object that handles transition animations
 // Controls Menu
 P1ControlsMenuObj = noone;
 P2ControlsMenuObj = noone;
+
+// Controller Assignement
+#region
+
+ControllerTypeAssigner_WASD = {};
+
+ControllerTypeAssinger_Arrows = {};
+
+#endregion
