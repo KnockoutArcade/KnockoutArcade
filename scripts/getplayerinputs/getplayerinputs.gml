@@ -75,7 +75,66 @@ function GetPlayerInputs()
 	}
 	else // For pads...
 	{
+		if (GamepadCodeIsAxis(controlMappings.Controller.buttonLeft))
+		{
+			buttonLeft = (gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonLeft) < -.25 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuLeftDPAD)) * -1;
+		}
+		else
+		{
+			buttonLeft = (gamepad_button_check(controllerSlot, controlMappings.Controller.buttonLeft) || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuLeftDPAD)) * -1;
+		}
+		if (GamepadCodeIsAxis(controlMappings.Controller.buttonRight))
+		{
+			buttonRight = gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonRight) > .25 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuRightDPAD);
+		}
+		else
+		{
+			buttonRight = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonRight) || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuRightDPAD);
+		}
+		if (GamepadCodeIsAxis(controlMappings.Controller.buttonUp))
+		{
+			buttonUp = gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonUp) < -.7 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuUpDPAD);
+		}
+		else
+		{
+			buttonUp = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonUp) || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuUpDPAD);
+		}
+		if (GamepadCodeIsAxis(controlMappings.Controller.buttonDown))
+		{
+			buttonDown = (gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonDown) > .7 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuDownDPAD)) * -1;
+		}
+		else
+		{
+			buttonDown = (gamepad_button_check(controllerSlot, controlMappings.Controller.buttonDown) || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuDownDPAD)) * -1;
+		}
 		
+		buttonLight = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonLight);
+		buttonMedium = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMedium);
+		buttonHeavy = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonHeavy);
+		buttonGrab = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonGrab);
+		buttonSpecial = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonSpecial);
+		buttonSuper = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonSuper);
+		buttonRun = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonRun);
+		buttonTaunt = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonTaunt);
+		buttonItem = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonItem);
+	
+		// Menu Controls
+		buttonMenuLeft = (gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonMenuLeft) < -.25 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuLeftDPAD)) * -1;
+		buttonMenuRight = gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonMenuRight) > .25 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuRightDPAD);
+		buttonMenuUp = gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonMenuUp) < -.7 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuUpDPAD);
+		buttonMenuDown = (gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonMenuDown) > .7 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuDownDPAD)) * -1;
+		
+		buttonMenuConfirm = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuConfirm);
+		buttonMenuDeny = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuDeny);
+		buttonMenuSwitch = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuSwitch);
+		buttonMenuSetControls = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuSetControls);
+		
+		buttonMenuPageRight = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuPageRight);
+		buttonMenuPageLeft = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuPageLeft);
+		buttonMenuTriggerRight = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuTriggerRight);
+		buttonMenuTriggerLeft = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuTriggerLeft);
+		
+		buttonMenuPause = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuPause);
 	}
 	
 	

@@ -41,3 +41,6 @@ controlMappings = {};
 
 // Controller Type
 controllerType = CONTROLLER_TYPES.PAD;
+
+// Controller Slot
+controllerSlot = 0;

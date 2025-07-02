@@ -14,8 +14,11 @@ function ControllerSetup(_list, _id, _controllerType)
 		// Assume player 1 as the default
 		SetPlayerButtons(controlMappings, 0);
 		
-		// set the controller type
-		
+		// Controller Type
+		controllerType = _controllerType;
+
+		// Controller Slot
+		controllerSlot = _id;
 	}
 	
 	ds_list_add(_list, controllerSlotData);
