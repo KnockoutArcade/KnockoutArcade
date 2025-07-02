@@ -179,7 +179,7 @@ function RestorePlayer1DefaultControls()
 {
 	global.player1Controls = 
 	{
-		Keyboard : 
+		Keyboard_WASD : 
 		{
 			buttonLeft : ord("A"),
 			buttonRight : ord("D"),
@@ -254,16 +254,7 @@ function RestorePlayer1DefaultControls()
 			buttonMenuPause : gp_start
 		},
 		
-		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
-		// Useful for making sure that old game saves can get updated to the latest version
-	};
-}
-
-// restore the default controls for player 2
-function RestorePlayer2DefaultControls()
-{
-	global.player2Controls = {
-		Keyboard : 
+		Keyboard_Arrows : 
 		{
 			buttonLeft : vk_left,
 			buttonRight : vk_right,
@@ -297,6 +288,51 @@ function RestorePlayer2DefaultControls()
 			
 			buttonMenuPause : vk_backspace
 		},
+		
+		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
+		// Useful for making sure that old game saves can get updated to the latest version
+	};
+}
+
+// restore the default controls for player 2
+function RestorePlayer2DefaultControls()
+{
+	global.player2Controls = {
+		Keyboard_WASD : 
+		{
+			buttonLeft : ord("A"),
+			buttonRight : ord("D"),
+			buttonUp : ord("W"),
+			buttonDown : ord("S"),
+			buttonLight : ord("J"),
+			buttonMedium : ord("K"),
+			buttonHeavy : ord("L"),
+			buttonGrab : vk_space,
+			buttonSpecial : 186,    // Keyboard code value for ";"
+			buttonSuper : ord("M"),
+			buttonRun : vk_lshift,
+			buttonTaunt : ord("T"),
+			buttonItem : ord ("Q"),
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : ord("A"),
+			buttonMenuRight : ord("D"),
+			buttonMenuUp : ord("W"),
+			buttonMenuDown : ord("S"),
+			
+			buttonMenuConfirm : ord("J"),
+			buttonMenuDeny : ord("K"),
+			buttonMenuSwitch : ord("L"),
+			buttonMenuSetControls : 186,
+			
+			buttonMenuPageRight : ord("E"),
+			buttonMenuPageLeft : ord("Q"),
+			buttonMenuTriggerRight : ord("E"),
+			buttonMenuTriggerLeft : ord("Q"),
+			
+			buttonMenuPause : vk_escape
+		},
+		
 		Controller : 
 		{
 			buttonLeft : gp_axislh,
@@ -335,6 +371,41 @@ function RestorePlayer2DefaultControls()
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
 			buttonMenuPause : gp_start
+		},
+		
+		Keyboard_Arrows : 
+		{
+			buttonLeft : vk_left,
+			buttonRight : vk_right,
+			buttonUp : vk_up,
+			buttonDown : vk_down,
+			buttonLight : vk_numpad1,
+			buttonMedium : vk_numpad2,
+			buttonHeavy : vk_numpad3,
+			buttonGrab : vk_numpad4,
+			buttonSpecial : vk_numpad0,
+			buttonSuper : vk_numpad5,
+			buttonRun : 110, // Keyboard code value for numpad "."
+			buttonTaunt : vk_numpad6,
+			buttonItem : vk_numpad7,
+			
+			// Menu Controls - These will never be changed
+			buttonMenuLeft : vk_left,
+			buttonMenuRight : vk_right,
+			buttonMenuUp : vk_up,
+			buttonMenuDown : vk_down,
+			
+			buttonMenuConfirm : vk_numpad1,
+			buttonMenuDeny : vk_numpad2,
+			buttonMenuSwitch : vk_numpad3,
+			buttonMenuSetControls : vk_numpad4,
+			
+			buttonMenuPageRight : vk_right,
+			buttonMenuPageLeft : vk_left,
+			buttonMenuTriggerRight : vk_pageup,
+			buttonMenuTriggerLeft : vk_pagedown,
+			
+			buttonMenuPause : vk_backspace
 		},
 		
 		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
