@@ -2,6 +2,16 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function GetPlayerInputs() 
 {
+	
+	
+	
+	
+	
+	
+	
+	
+	/*
+	
 	// This code handles all of the inputs for the game
 	// Left and Down return -1 instead of 1 because they are the opposite directions
 	if (global.player1ControllerType == "KEYBOARD") 
@@ -219,4 +229,6 @@ function GetPlayerInputs()
 		
 		global.p2ButtonMenuPause = gamepad_button_check(global.player2ControllerSlot, global.player2Controls.Controller.buttonMenuPause);
 	};
+	
+	*/
 }

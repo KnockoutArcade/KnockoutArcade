@@ -1,7 +1,22 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function ControllerSetup()
+function ControllerSetup(_list, _id, _controllerType)
 {
+	
+	var controllerSlotData = {
+		controllerInstance : instance_create_depth(0, 0, 0, oController),
+		controllerSlotID : _id,
+		controllerType : _controllerType,
+	}
+	
+	with (controllerSlotData.controllerInstance)
+	{
+		controlMappings_Battle = {}
+	}
+	
+	ds_list_add(_list, controllerSlotData);
+	
+	/*
 	// This script sets the player's controls according to the type of input device they're using,
 	// and also sets the buttons to default controls.
 	
@@ -42,4 +57,5 @@ function ControllerSetup()
 			}
 		}
 	}
+	*/
 }

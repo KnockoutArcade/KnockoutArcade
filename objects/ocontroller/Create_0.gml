@@ -35,3 +35,8 @@ buttonMenuTriggerRight = false;
 buttonMenuTriggerLeft = false;
 			
 buttonMenuPause = false;
+
+// Control mappings
+controlMappings_Battle = {};
+
+controlMappings_Menus = {};

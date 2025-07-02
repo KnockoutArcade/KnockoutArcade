@@ -24,32 +24,19 @@ controllers = ds_list_create();
 // Iterate through each controller and initialize them
 for (var i = 0; i < (numOfControllers); i++;)
 {
-	var controllerSlotData = {
-		controllerInstance : instance_create_depth(0, 0, 0, oController),
-		controllerSlotID : i,
-		controllerType : "pad"
-	}
-	
-	ds_list_add(controllers, controllerSlotData);
+	ControllerSetup(controllers, i, "pad");
 }
 
 // Add WASD and Arrow Keys to the controls
-var controllerSlotData = {
-	controllerInstance : instance_create_depth(0, 0, 0, oController),
-	controllerSlotID : 13, // Specific slot for WASD
-	controllerType : "wasd"
-}
-ds_list_add(controllers, controllerSlotData);
+ControllerSetup(controllers, 13, "wasd");
 
-controllerSlotData = {
-	controllerInstance : instance_create_depth(0, 0, 0, oController),
-	controllerSlotID : 14, // Specific slot for Arrow Keys
-	controllerType : "arrow"
-}
-ds_list_add(controllers, controllerSlotData);
+ControllerSetup(controllers, 14, "arrows");
 
-//show_debug_message(controllers[| 0]);
+LoadControls();
 
+
+
+/*
 global.lastControllerButton = -1;
 
 global.player1ControllerSlot = -1;
@@ -72,5 +59,5 @@ if (!variable_struct_exists(global.player1Controls, "versionNumber"))
 	
 	show_debug_message("Updated old control data");
 }
-
+*/
 

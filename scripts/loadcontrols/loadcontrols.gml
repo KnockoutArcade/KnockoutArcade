@@ -11,6 +11,21 @@ function LoadControls()
 		var loadedControls = json_parse(controlString);
 		
 		global.player1Controls = loadedControls;
+		
+		
+		if (!variable_struct_exists(global.player1Controls, "versionNumber"))
+		{
+			RestorePlayer1DefaultControls();
+			SaveControls();
+	
+			show_debug_message("Updated old control data");
+		}
+	}
+	else
+	{
+		RestorePlayer1DefaultControls();
+		
+		SaveControls();
 	}
 	
 	if (file_exists("2PlayerControls.save"))
@@ -22,5 +37,20 @@ function LoadControls()
 		var p2loadedControls = json_parse(p2controlString);
 		
 		global.player2Controls = p2loadedControls;
+		
+		
+		if (!variable_struct_exists(global.player2Controls, "versionNumber"))
+		{
+			RestorePlayer2DefaultControls();
+			SaveControls();
+	
+			show_debug_message("Updated old control data");
+		}
+	}
+	else
+	{
+		RestorePlayer2DefaultControls();
+		
+		SaveControls();
 	}
 }

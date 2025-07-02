@@ -3,5 +3,5 @@
 
 //show_debug_message("I exist!");
 
-
+GetPlayerInputs();
 

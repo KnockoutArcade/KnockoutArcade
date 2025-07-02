@@ -1,7 +1,17 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function SetPlayerButtons() 
+function SetPlayerButtons(_structToMap, _controllerType) 
 {
+	
+	if (_controllerType == "pad")
+	{
+		controlMappings_Battle = {
+			
+		}
+	}
+	
+	
+	/*
 	global.player1Controls = 
 	{
 		Keyboard : 
@@ -161,6 +171,7 @@ function SetPlayerButtons()
 		versionNumber : 1 // This number represents the current "version" of the controls.
 		// Useful for making sure that old game saves can get updated to the latest version
 	};
+	*/
 }
 
 // restore the default controls for player 1
@@ -243,7 +254,7 @@ function RestorePlayer1DefaultControls()
 			buttonMenuPause : gp_start
 		},
 		
-		versionNumber : 1 // This number represents the current "version" of the controls.
+		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
 		// Useful for making sure that old game saves can get updated to the latest version
 	};
 }
@@ -326,7 +337,7 @@ function RestorePlayer2DefaultControls()
 			buttonMenuPause : gp_start
 		},
 		
-		versionNumber : 1 // This number represents the current "version" of the controls.
+		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
 		// Useful for making sure that old game saves can get updated to the latest version
 	};
 }
