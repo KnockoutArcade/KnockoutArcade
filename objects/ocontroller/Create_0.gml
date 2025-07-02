@@ -37,6 +37,7 @@ buttonMenuTriggerLeft = false;
 buttonMenuPause = false;
 
 // Control mappings
-controlMappings_Battle = {};
+controlMappings = {};
 
-controlMappings_Menus = {};
+// Controller Type
+controllerType = CONTROLLER_TYPES.PAD;

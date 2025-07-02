@@ -11,7 +11,11 @@ function ControllerSetup(_list, _id, _controllerType)
 	
 	with (controllerSlotData.controllerInstance)
 	{
-		controlMappings_Battle = {}
+		// Assume player 1 as the default
+		SetPlayerButtons(controlMappings, 0);
+		
+		// set the controller type
+		
 	}
 	
 	ds_list_add(_list, controllerSlotData);

@@ -2,7 +2,81 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function GetPlayerInputs() 
 {
-	
+	// For the left side of the keyboard...
+	if (controllerType == CONTROLLER_TYPES.WASD)
+	{
+		buttonLeft = keyboard_check(controlMappings.Keyboard_WASD.buttonLeft) * -1;
+		buttonRight = keyboard_check(controlMappings.Keyboard_WASD.buttonRight);
+		buttonUp = keyboard_check(controlMappings.Keyboard_WASD.buttonUp);
+		buttonDown = keyboard_check(controlMappings.Keyboard_WASD.buttonDown) * -1;
+
+		buttonLight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonLight);
+		buttonMedium = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMedium);
+		buttonHeavy = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonHeavy);
+		buttonSpecial = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonSpecial);
+		buttonGrab = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonGrab);
+		buttonSuper = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonSuper);
+		buttonRun = keyboard_check(controlMappings.Keyboard_WASD.buttonRun);
+		buttonTaunt = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonTaunt);
+		buttonItem = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonItem);
+
+		// Menu controls
+		buttonMenuLeft = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuLeft) * -1;
+		buttonMenuRight = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuRight);
+		buttonMenuUp = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuUp);
+		buttonMenuDown = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuDown) * -1;
+			
+		buttonMenuConfirm = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuConfirm);
+		buttonMenuDeny = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuDeny);
+		buttonMenuSwitch = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuSwitch);
+		buttonMenuSetControls = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuSetControls);
+			
+		buttonMenuPageRight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuPageRight);
+		buttonMenuPageLeft = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuPageLeft);
+		buttonMenuTriggerRight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuTriggerRight);
+		buttonMenuTriggerLeft = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuTriggerLeft);
+			
+		buttonMenuPause = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuPause);
+	}
+	else if (controllerType == CONTROLLER_TYPES.ARROWS) // Arrow Keys...
+	{
+		buttonLeft = keyboard_check(controlMappings.Keyboard_Arrows.buttonLeft) * -1;
+		buttonRight = keyboard_check(controlMappings.Keyboard_Arrows.buttonRight);
+		buttonUp = keyboard_check(controlMappings.Keyboard_Arrows.buttonUp);
+		buttonDown = keyboard_check(controlMappings.Keyboard_Arrows.buttonDown) * -1;
+
+		buttonLight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonLight);
+		buttonMedium = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMedium);
+		buttonHeavy = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonHeavy);
+		buttonSpecial = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonSpecial);
+		buttonGrab = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonGrab);
+		buttonSuper = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonSuper);
+		buttonRun = keyboard_check(controlMappings.Keyboard_Arrows.buttonRun);
+		buttonTaunt = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonTaunt);
+		buttonItem = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonItem);
+
+		// Menu controls
+		buttonMenuLeft = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuLeft) * -1;
+		buttonMenuRight = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuRight);
+		buttonMenuUp = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuUp);
+		buttonMenuDown = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuDown) * -1;
+			
+		buttonMenuConfirm = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuConfirm);
+		buttonMenuDeny = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuDeny);
+		buttonMenuSwitch = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuSwitch);
+		buttonMenuSetControls = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuSetControls);
+			
+		buttonMenuPageRight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuPageRight);
+		buttonMenuPageLeft = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuPageLeft);
+		buttonMenuTriggerRight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuTriggerRight);
+		buttonMenuTriggerLeft = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuTriggerLeft);
+			
+		buttonMenuPause = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuPause);
+	}
+	else // For pads...
+	{
+		
+	}
 	
 	
 	

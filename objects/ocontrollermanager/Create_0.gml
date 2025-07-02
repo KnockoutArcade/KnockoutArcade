@@ -36,12 +36,13 @@ LoadControls();
 
 
 
-/*
+
 global.lastControllerButton = -1;
 
 global.player1ControllerSlot = -1;
 global.player2ControllerSlot = -1;
 
+/*
 global.player1ControllerType = "KEYBOARD";
 global.player2ControllerType = "KEYBOARD";
 
