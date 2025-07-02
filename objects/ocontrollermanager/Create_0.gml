@@ -5,6 +5,7 @@
 // SetPlayerButton script. After that, you can reference the new button elsewhere by checking if
 // global.pXbuttonY is true, where x is the player to check and Y is the button
 
+LoadControls();
 
 // Get the number of controllers
 var gp_num = gamepad_get_device_count();
@@ -24,15 +25,15 @@ controllers = ds_list_create();
 // Iterate through each controller and initialize them
 for (var i = 0; i < (numOfControllers); i++;)
 {
-	ControllerSetup(controllers, i, "pad");
+	ControllerSetup(controllers, i, CONTROLLER_TYPES.PAD);
 }
 
 // Add WASD and Arrow Keys to the controls
-ControllerSetup(controllers, 13, "wasd");
+ControllerSetup(controllers, 13, CONTROLLER_TYPES.WASD);
 
-ControllerSetup(controllers, 14, "arrows");
+ControllerSetup(controllers, 14, CONTROLLER_TYPES.ARROWS);
 
-LoadControls();
+
 
 
 

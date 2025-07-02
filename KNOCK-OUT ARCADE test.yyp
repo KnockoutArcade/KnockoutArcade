@@ -94,6 +94,7 @@
     {"id":{"name":"sJumpParticle","path":"sprites/sJumpParticle/sJumpParticle.yy",},"order":1,},
     {"id":{"name":"oSuperFlashBackground","path":"objects/oSuperFlashBackground/oSuperFlashBackground.yy",},"order":8,},
     {"id":{"name":"sFileSelect_FileSelectText","path":"sprites/sFileSelect_FileSelectText/sFileSelect_FileSelectText.yy",},"order":2,},
+    {"id":{"name":"FindController","path":"scripts/FindController/FindController.yy",},"order":9,},
     {"id":{"name":"rCredits","path":"rooms/rCredits/rCredits.yy",},"order":2,},
     {"id":{"name":"sJay_Standing_Light3","path":"sprites/sJay_Standing_Light3/sJay_Standing_Light3.yy",},"order":40,},
     {"id":{"name":"sMapLevel","path":"sprites/sMapLevel/sMapLevel.yy",},"order":0,},

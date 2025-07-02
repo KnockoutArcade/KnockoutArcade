@@ -12,11 +12,10 @@ function LoadControls()
 		
 		global.player1Controls = loadedControls;
 		
-		
 		if (!variable_struct_exists(global.player1Controls, "versionNumber") || global.player1Controls.versionNumber < 2)
 		{
 			RestorePlayer1DefaultControls();
-			SaveControls();
+			SaveControls(1);
 	
 			show_debug_message("Updated old control data");
 		}
@@ -25,7 +24,7 @@ function LoadControls()
 	{
 		RestorePlayer1DefaultControls();
 		
-		SaveControls();
+		SaveControls(1);
 	}
 	
 	if (file_exists("2PlayerControls.save"))
@@ -42,7 +41,7 @@ function LoadControls()
 		if (!variable_struct_exists(global.player2Controls, "versionNumber") || global.player2Controls.versionNumber < 2)
 		{
 			RestorePlayer2DefaultControls();
-			SaveControls();
+			SaveControls(2);
 	
 			show_debug_message("Updated old control data");
 		}
@@ -51,6 +50,6 @@ function LoadControls()
 	{
 		RestorePlayer2DefaultControls();
 		
-		SaveControls();
+		SaveControls(2);
 	}
 }

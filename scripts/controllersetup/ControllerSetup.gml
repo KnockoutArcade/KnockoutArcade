@@ -12,57 +12,13 @@ function ControllerSetup(_list, _id, _controllerType)
 	with (controllerSlotData.controllerInstance)
 	{
 		// Assume player 1 as the default
-		SetPlayerButtons(controlMappings, 0);
+		controlMappings = SetPlayerButtons(controlMappings, 0);
 		
 		// Controller Type
 		controllerType = _controllerType;
-
 		// Controller Slot
 		controllerSlot = _id;
 	}
 	
 	ds_list_add(_list, controllerSlotData);
-	
-	/*
-	// This script sets the player's controls according to the type of input device they're using,
-	// and also sets the buttons to default controls.
-	
-	global.player1ControllerSlot = -1;
-	global.player2ControllerSlot = -1;
-	
-	global.player1ControllerType = "KEYBOARD";
-	global.player2ControllerType = "KEYBOARD";
-	
-	var gp_num = gamepad_get_device_count();
-	var numOfControllers = 0;
-	for (var i = 0; i < gp_num; i++;)	
-	{
-	    if (gamepad_is_connected(i))
-		{
-			numOfControllers++;
-			if (numOfControllers == 0) 
-			{
-				global.player1ControllerType = "KEYBOARD";
-				global.player2ControllerType = "KEYBOARD";
-				
-				SetPlayerButtons();
-			}
-			if (numOfControllers == 1)
-			{
-				global.player1ControllerSlot = i;
-				global.player1ControllerType = "PAD";
-				global.player2ControllerType = "KEYBOARD";
-				
-				SetPlayerButtons();
-			}
-			if (numOfControllers == 2) 
-			{
-				global.player2ControllerSlot = i;
-				global.player2ControllerType = "PAD";
-				
-				SetPlayerButtons();
-			}
-		}
-	}
-	*/
 }

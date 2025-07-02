@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-//show_debug_message("I exist!");
+//show_debug_message(controlMappings);
 
 GetPlayerInputs();
 

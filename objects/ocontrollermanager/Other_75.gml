@@ -7,7 +7,7 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 {
 	show_debug_message("Controller connected in slot " + string(ds_map_find_value(async_load, "pad_index")));
 	
-	ControllerSetup(controllers, ds_map_find_value(async_load, "pad_index"), "pad");
+	ControllerSetup(controllers, ds_map_find_value(async_load, "pad_index"), CONTROLLER_TYPES.PAD);
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
 }

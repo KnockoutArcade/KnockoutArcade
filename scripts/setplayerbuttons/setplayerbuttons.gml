@@ -4,12 +4,14 @@ function SetPlayerButtons(_structToMap, _playerSide)
 {
 	if (_playerSide == 0)
 	{
-		_structToMap = global.player1Controls;
+		_structToMap = StructCopy(global.player1Controls);
 	}
 	else
 	{
-		_structToMap = global.player2Controls;
+		_structToMap = StructCopy(global.player2Controls);
 	}
+	
+	return _structToMap;
 }
 
 // restore the default controls for player 1
