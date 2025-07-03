@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+exit;
 if (playerNumber == 0)
 {
 	// Player 1 input vars

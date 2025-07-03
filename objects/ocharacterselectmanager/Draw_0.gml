@@ -2,7 +2,14 @@
 // You can write your code in this editor
 var pressStartID = layer_background_get_id("PressStart");
 
-if (state == eCharacterSelectState.CHARACTER_SELECT)
+if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
+{
+	// Hide specific background layers
+	layer_background_visible(pressStartID, 0);
+	
+	// Draw the vertical blue background
+}
+else if (state == eCharacterSelectState.CHARACTER_SELECT)
 {
 	// Hide specific background layers
 	layer_background_visible(pressStartID, 0);

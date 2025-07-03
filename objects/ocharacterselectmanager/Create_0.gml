@@ -108,26 +108,67 @@ P2ControlsMenuObj = noone;
 // Controller Assignement
 #region
 
-// Get the number of controllers
-var gp_num = gamepad_get_device_count();
-var numOfControllers = 0;
-for (var i = 0; i < gp_num; i++;)	
-{
-	if (gamepad_is_connected(i))
-	{
-		numOfControllers++;
-	}
-		
-}
+// These are the 4 controllers that show up on the assignment screen
+controllerAssign = [];
+numberOfMaxAssignedControllers = 4;
 
-//ControllerTypeAssigner_WASD = {};
-//ControllerTypeAssinger_Arrows = {};
+controllerAssignData = [];
 
-ControllerTypeAssigner = array_create(numOfControllers);
-
-for (var j = 0; j < array_length(ControllerTypeAssigner); j++)
-{
+// Create an array of controller IDs for handling
+var controllerArray = [];
 	
+// Add pads first
+for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
+{
+	if (oControllerManager.controllers[| i].controllerType == CONTROLLER_TYPES.PAD)
+	{
+		controllerArray[i] = oControllerManager.controllers[| i].controllerInstance;
+	}
+}
+	
+// If we have 3 or fewer controllers, add WASD controller to the array
+if (array_length(controllerArray) <= 3)
+{
+	array_push(controllerArray, FindController(13));
+}
+// If we have 2 or less, also add the Arrow keys
+if (array_length(controllerArray) <= 2)
+{
+	array_push(controllerArray, FindController(14));
+}
+	
+// Assign the controllers
+for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controllerArray); j++;)
+{
+	controllerAssign[j] = controllerArray[j];
+	
+	controllerAssignData[j] = {
+		xPos : 0,
+		yPos : 0,
+		
+		playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
+	}
 }
 
+#endregion
+
+
+#region // Controller Updating
+
+// Add this to the list of objects to be notified when the controllers disconnect
+ds_list_add(oControllerManager.controllerUpdateNotifyList, id);
+
+// Update controller script
+controllerUpdate = function ControllerUpdate(_isNewConnected)
+{
+	// If a controller was added
+	if (_isNewConnected)
+	{
+		
+	}
+	else
+	{
+		
+	}
+}
 #endregion

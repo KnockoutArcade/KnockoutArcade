@@ -1,6 +1,6 @@
 /// @description Controller Detection
 // You can write your code in this editor
-
+var gamepadEventType = false; // true = new controller connected, false = controller disconnected
 
 // Handle controller connect/disconnect
 if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
@@ -10,10 +10,9 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 	ControllerSetup(controllers, ds_map_find_value(async_load, "pad_index"), CONTROLLER_TYPES.PAD);
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
+	
+	gamepadEventType = true;
 }
-
-
-
 
 if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 {
@@ -30,7 +29,30 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 	}
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
+	
+	gamepadEventType = false;
 }
 
 
+// Notify objects that controllers have been updated
+var objectsToRemove = [];
 
+for (var j = 0; j < ds_list_size(controllerUpdateNotifyList); j++;)
+{
+	if (instance_exists(controllerUpdateNotifyList[| j]))
+	{
+		controllerUpdateNotifyList[| j].controllerUpdate(gamepadEventType);
+	}
+	else
+	{
+		array_push(objectsToRemove, controllerUpdateNotifyList[| j]);
+	}
+}
+
+// Remove objects from the notify list that do not exist anymore
+for (var k = 0; k < array_length(objectsToRemove); k++;)
+{
+	var objectIndex = ds_list_find_index(controllerUpdateNotifyList, objectsToRemove[k]);
+	
+	ds_list_delete(controllerUpdateNotifyList, objectIndex);
+}

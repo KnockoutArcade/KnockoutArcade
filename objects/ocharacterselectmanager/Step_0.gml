@@ -1,6 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+exit;
 
 // Player 1 cursor vars
 var P1menuLeft = global.p1ButtonMenuLeft;
