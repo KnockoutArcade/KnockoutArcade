@@ -151,6 +151,9 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 	}
 }
 
+p1SideController = -1; // Whether each player side is currently occupied or not
+p2SideController = -1;
+
 #endregion
 
 
@@ -173,6 +176,7 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 			yPos : 0,
 		
 			playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
+			cursorCooldown : 0
 		}
 		)
 	}

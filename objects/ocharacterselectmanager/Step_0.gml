@@ -74,13 +74,47 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		{
 			controllerAssignData[i].playerSide += tempControllerDirection;
 			
+			// Cap playerSide to be between -1 and 1
+			if (controllerAssignData[i].playerSide > 1) controllerAssignData[i].playerSide = 1;
+			else if (controllerAssignData[i].playerSide < -1) controllerAssignData[i].playerSide = -1;
+			
+			// Set cursor cooldown
 			controllerAssignData[i].cursorCooldown = 13;
 		}
 		
-		if (controllerAssignData[i].playerSide > 1) controllerAssignData[i].playerSide = 1;
-		else if (controllerAssignData[i].playerSide < -1) controllerAssignData[i].playerSide = -1
+		// If we move into the player spot and it's empty 
+		if (controllerAssignData[i].playerSide == -1 && p1SideController == -1)
+		{
+			p1SideController = controllerAssign[i];
+		}
+		else if (controllerAssignData[i].playerSide == -1 && p1SideController != controllerAssign[i]) // If we get there and its not us
+		{
+			controllerAssignData[i].playerSide = 0;
+			controllerAssignData[i].cursorCooldown = 0;
+		}
 		
+		// Ditto but for the other side
+		if (controllerAssignData[i].playerSide == 1 && p2SideController == -1)
+		{
+			p2SideController = controllerAssign[i];
+		}
+		else if (controllerAssignData[i].playerSide == 1 && p2SideController != controllerAssign[i]) // If we get there and its not us
+		{
+			controllerAssignData[i].playerSide = 0;
+			controllerAssignData[i].cursorCooldown = 0;
+		}
 		
+		// If we move back to the center and one of the sides was assigned to us, unassign it
+		if (controllerAssignData[i].playerSide == 0 && p1SideController == controllerAssign[i])
+		{
+			p1SideController = -1;
+		}
+		else if (controllerAssignData[i].playerSide == 0 && p2SideController == controllerAssign[i])
+		{
+			p2SideController = -1;
+		}
+		
+		// Handle position
 		controllerAssignData[i].xPos = 66 + (44 * controllerAssignData[i].playerSide);
 		
 		if (controllerAssignData[i].playerSide == 0) 
@@ -91,7 +125,6 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		{
 			controllerAssignData[i].yPos = 37;
 		}
-		
 	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)
