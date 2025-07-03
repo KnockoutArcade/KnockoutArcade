@@ -12,7 +12,7 @@ function LoadControls()
 		
 		global.player1Controls = loadedControls;
 		
-		if (!variable_struct_exists(global.player1Controls, "versionNumber") || global.player1Controls.versionNumber < 2)
+		if (!variable_struct_exists(global.player1Controls, "versionNumber") || global.player1Controls.versionNumber != ControllerSaveVersionNumber)
 		{
 			RestorePlayer1DefaultControls();
 			SaveControls(1);
@@ -38,7 +38,7 @@ function LoadControls()
 		global.player2Controls = p2loadedControls;
 		
 		
-		if (!variable_struct_exists(global.player2Controls, "versionNumber") || global.player2Controls.versionNumber < 2)
+		if (!variable_struct_exists(global.player2Controls, "versionNumber") || global.player2Controls.versionNumber != ControllerSaveVersionNumber)
 		{
 			RestorePlayer2DefaultControls();
 			SaveControls(2);
