@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-exit;
+/*
 
 // Player 1 cursor vars
 var P1menuLeft = global.p1ButtonMenuLeft;
@@ -35,7 +35,7 @@ var P2menuCancel = global.p2ButtonMenuDeny;
 var P2ChangeControls = global.p2ButtonMenuSetControls;
 
 var P2menuConfirmBuffer = false;
-
+*/
 P1cursorCooldown--;
 P2cursorCooldown--;
 
@@ -57,7 +57,42 @@ if (P2ControlsMenuObj != noone)
 
 if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 {
-	
+	for (var i = 0; i < array_length(controllerAssign) && i < numberOfMaxAssignedControllers; i++;)
+	{
+		var tempControllerMenuLeft = controllerAssign[i].buttonMenuLeft;
+		var tempControllerMenuRight = controllerAssign[i].buttonMenuRight;
+		var tempControllerDirection = tempControllerMenuLeft + tempControllerMenuRight;
+		
+		if (tempControllerMenuLeft == 0 && tempControllerMenuRight == 0)
+		{
+			controllerAssignData[i].cursorCooldown = 0;
+		}
+		
+		controllerAssignData[i].cursorCooldown--;
+		
+		if (controllerAssignData[i].cursorCooldown <= 0 && tempControllerDirection != 0)
+		{
+			controllerAssignData[i].playerSide += tempControllerDirection;
+			
+			controllerAssignData[i].cursorCooldown = 13;
+		}
+		
+		if (controllerAssignData[i].playerSide > 1) controllerAssignData[i].playerSide = 1;
+		else if (controllerAssignData[i].playerSide < -1) controllerAssignData[i].playerSide = -1
+		
+		
+		controllerAssignData[i].xPos = 66 + (44 * controllerAssignData[i].playerSide);
+		
+		if (controllerAssignData[i].playerSide == 0) 
+		{
+			controllerAssignData[i].yPos = 19 + (21 * i);
+		}
+		else 
+		{
+			controllerAssignData[i].yPos = 37;
+		}
+		
+	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)
 {

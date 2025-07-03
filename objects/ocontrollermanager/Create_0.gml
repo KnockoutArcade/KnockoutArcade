@@ -37,7 +37,7 @@ ControllerSetup(controllers, 14, CONTROLLER_TYPES.ARROWS);
 // Notify update list
 // This is a list of all the objects that need to know if a controller is added/removed
 controllerUpdateNotifyList = ds_list_create();
-// For an object to be compatible, it must have a controllerUpdate(_isNewConnected) function.
+// For an object to be compatible, it must have a controllerUpdate(_isNewConnected, _controllerID) function.
 // All an object needs to do to opt in is to add its ID to this list
 
 

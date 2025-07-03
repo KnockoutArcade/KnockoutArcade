@@ -8,6 +8,24 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 	layer_background_visible(pressStartID, 0);
 	
 	// Draw the vertical blue background
+	draw_sprite(sCharSel_ControllerAssignBG, 0, 0, 0);
+	
+	// Draw any controllers we have connected
+	for (var i = 0; i < array_length(controllerAssign) && i < numberOfMaxAssignedControllers; i++;)
+	{
+		if (controllerAssign[i].controllerType == CONTROLLER_TYPES.PAD)
+		{
+			draw_sprite(sCharSel_ControllerTypes, 2, controllerAssignData[i].xPos, controllerAssignData[i].yPos);
+		}
+		else if (controllerAssign[i].controllerType == CONTROLLER_TYPES.WASD)
+		{
+			draw_sprite(sCharSel_ControllerTypes, 0, controllerAssignData[i].xPos, controllerAssignData[i].yPos);
+		}
+		else
+		{
+			draw_sprite(sCharSel_ControllerTypes, 1, controllerAssignData[i].xPos, controllerAssignData[i].yPos);
+		}
+	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)
 {

@@ -147,6 +147,7 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 		yPos : 0,
 		
 		playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
+		cursorCooldown : 0
 	}
 }
 
@@ -159,12 +160,21 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 ds_list_add(oControllerManager.controllerUpdateNotifyList, id);
 
 // Update controller script
-controllerUpdate = function ControllerUpdate(_isNewConnected)
+controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 {
 	// If a controller was added
 	if (_isNewConnected)
 	{
+		array_push(controllerAssign, FindController(_controllerID.controllerSlot));
 		
+		array_push(controllerAssignData, 
+		{
+			xPos : 0,
+			yPos : 0,
+		
+			playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
+		}
+		)
 	}
 	else
 	{

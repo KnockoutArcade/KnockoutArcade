@@ -1,6 +1,5 @@
 /// @description Controller Detection
 // You can write your code in this editor
-var gamepadEventType = false; // true = new controller connected, false = controller disconnected
 
 // Handle controller connect/disconnect
 if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
@@ -11,18 +10,46 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
 	
-	gamepadEventType = true;
+	// Find the controller ID we just added
+	var addedControllerId = controllers[| ds_list_size(controllers) - 1].controllerInstance;
+	
+	
+	// Notify objects that controllers have been updated
+	var objectsToRemove = [];
+
+	for (var j = 0; j < ds_list_size(controllerUpdateNotifyList); j++;)
+	{
+		if (instance_exists(controllerUpdateNotifyList[| j]))
+		{
+			controllerUpdateNotifyList[| j].controllerUpdate(true, addedControllerId);
+		}
+		else
+		{
+			array_push(objectsToRemove, controllerUpdateNotifyList[| j]);
+		}
+	}
+
+	// Remove objects from the notify list that do not exist anymore
+	for (var k = 0; k < array_length(objectsToRemove); k++;)
+	{
+		var objectIndex = ds_list_find_index(controllerUpdateNotifyList, objectsToRemove[k]);
+	
+		ds_list_delete(controllerUpdateNotifyList, objectIndex);
+	}
 }
 
 if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 {
 	show_debug_message("Controller lost in slot " + string(ds_map_find_value(async_load, "pad_index")));
 	
+	var destroyedControllerId = -1;
+	
 	// Remove it from the list
 	for (var i = 0; i < ds_list_size(controllers); i++;)
 	{
 		if (controllers[| i].controllerSlotID == string(ds_map_find_value(async_load, "pad_index")))
 		{
+			destroyedControllerId = controllers[| i].controllerInstance;
 			instance_destroy(controllers[| i].controllerInstance);
 			ds_list_delete(controllers, i);
 		}
@@ -30,29 +57,28 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
 	
-	gamepadEventType = false;
-}
+	// Notify objects that controllers have been updated
+	var objectsToRemove = [];
 
-
-// Notify objects that controllers have been updated
-var objectsToRemove = [];
-
-for (var j = 0; j < ds_list_size(controllerUpdateNotifyList); j++;)
-{
-	if (instance_exists(controllerUpdateNotifyList[| j]))
+	for (var j = 0; j < ds_list_size(controllerUpdateNotifyList); j++;)
 	{
-		controllerUpdateNotifyList[| j].controllerUpdate(gamepadEventType);
+		if (instance_exists(controllerUpdateNotifyList[| j]))
+		{
+			controllerUpdateNotifyList[| j].controllerUpdate(false, destroyedControllerId);
+		}
+		else
+		{
+			array_push(objectsToRemove, controllerUpdateNotifyList[| j]);
+		}
 	}
-	else
-	{
-		array_push(objectsToRemove, controllerUpdateNotifyList[| j]);
-	}
-}
 
-// Remove objects from the notify list that do not exist anymore
-for (var k = 0; k < array_length(objectsToRemove); k++;)
-{
-	var objectIndex = ds_list_find_index(controllerUpdateNotifyList, objectsToRemove[k]);
+	// Remove objects from the notify list that do not exist anymore
+	for (var k = 0; k < array_length(objectsToRemove); k++;)
+	{
+		var objectIndex = ds_list_find_index(controllerUpdateNotifyList, objectsToRemove[k]);
 	
-	ds_list_delete(controllerUpdateNotifyList, objectIndex);
+		ds_list_delete(controllerUpdateNotifyList, objectIndex);
+	}
 }
+
+
