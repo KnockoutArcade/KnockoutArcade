@@ -1,6 +1,51 @@
-var P1menuUp = global.p1ButtonMenuUp;
-var P1menuDown = global.p1ButtonMenuDown;
-var P1menuConfirm = global.p1ButtonMenuConfirm;
+// Find the first controller
+var slot0Controller = FindController(0); // Find the first gamepad ID
+var wasdController = FindController(13); // Find the WASD controller object
+
+// Both the first controller slot and the WASD controller can control the title screen
+
+// initialize the inputs
+var P1menuUp = 0;
+var P1menuDown = 0;
+var P1menuConfirm = 0;
+
+// Handle detecting controller inputs
+if (slot0Controller != -1)
+{
+	if (slot0Controller.buttonMenuConfirm)
+	{
+		P1menuConfirm = true;
+	}
+	
+	if (slot0Controller.buttonMenuUp)
+	{
+		P1menuUp = 1;
+	}
+	
+	if (slot0Controller.buttonMenuDown == -1)
+	{
+		P1menuDown = -1;
+	}
+}
+// Handle detecting WASD inputs
+if (wasdController != -1)
+{
+	if (wasdController.buttonMenuConfirm)
+	{
+		P1menuConfirm = true;
+	}
+	
+	if (wasdController.buttonMenuUp)
+	{
+		P1menuUp = 1;
+	}
+	
+	if (wasdController.buttonMenuDown == -1)
+	{
+		P1menuDown = -1;
+	}
+}
+
 
 if (screenTransitionObject != noone)
 {
@@ -37,7 +82,7 @@ else if (P1menuDown == -1 && menuCooldown < 1)
 	
 	audio_play_sound(sfx_UI_Hover, 0, false);
 }
-else if (P1menuUp + P1menuDown == 0)
+else if (P1menuUp == 0 && P1menuDown == 0)
 {
 	menuCooldown = 0;
 }
