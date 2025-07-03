@@ -154,6 +154,62 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 p1SideController = -1; // Whether each player side is currently occupied or not
 p2SideController = -1;
 
+sortControllers = function SortControllers() 
+{
+	var padControllers = [];
+	var padControllersData = [];
+	
+	var nonPadControllers = [];
+	var nonPadControllersData = [];
+	
+	// Go through each controller and sort them into different arrays
+	for (var i = 0; i < array_length(controllerAssign); i++;)
+	{
+		if (controllerAssign[i].controllerType == CONTROLLER_TYPES.PAD)
+		{
+			array_push(padControllers, controllerAssign[i]);
+			array_push(padControllersData, controllerAssignData[i]);
+		}
+		else
+		{
+			array_push(nonPadControllers, controllerAssign[i]);
+			array_push(nonPadControllersData, controllerAssignData[i]);
+		}
+	}
+	
+	// Reset Controller Assign
+	controllerAssign = [];
+	controllerAssignData = [];
+	
+	// Rebuild Controller Assign
+	for (var j = 0; j < array_length(padControllers); j++;)
+	{
+		array_push(controllerAssign, padControllers[j]);
+		array_push(controllerAssignData, padControllersData[j]);
+	}
+	for (var k = 0; k < array_length(nonPadControllers); k++;)
+	{
+		array_push(controllerAssign, nonPadControllers[k]);
+		array_push(controllerAssignData, nonPadControllersData[k]);
+	}
+	
+	p1SideController = -1;
+	p2SideController = -1;
+	
+	// Go through the new data one more time and update the player sides
+	for (var l = 0; l < array_length(controllerAssignData); l++;)
+	{
+		if (controllerAssignData[l].playerSide == -1)
+		{
+			p1SideController = controllerAssign[l];
+		}
+		else if (controllerAssignData[l].playerSide == 1)
+		{
+			p2SideController = controllerAssign[l];
+		}
+	}
+}
+
 #endregion
 
 
@@ -179,10 +235,32 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 			cursorCooldown : 0
 		}
 		)
+		
+		sortControllers();
 	}
 	else
 	{
-		
+		// Go through each controller to find the one that disconnected and remove it
+		for (var i = 0; i < array_length(controllerAssign); i++;)
+		{
+			if (controllerAssign[i] == _controllerID)
+			{
+				// If it was on a side, remove it
+				if (p1SideController == controllerAssign[i])
+				{
+					p1SideController = -1;
+				}
+				if (p2SideController == controllerAssign[i])
+				{
+					p2SideController = -1;
+				}
+				
+				array_delete(controllerAssign, i, 1);
+				array_delete(controllerAssignData, i, 1);
+				
+				show_debug_message(controllerAssign);
+			}
+		}
 	}
 }
 #endregion
