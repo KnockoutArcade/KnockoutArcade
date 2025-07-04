@@ -1,41 +1,84 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-/*
+
 
 // Player 1 cursor vars
-var P1menuLeft = global.p1ButtonMenuLeft;
-var P1menuRight = global.p1ButtonMenuRight;
-var P1menuColMove = P1menuLeft + P1menuRight;
+if (instance_exists(p1SideController) && p1SideController != -1)
+{
+	var P1menuLeft = p1SideController.buttonMenuLeft;
+	var P1menuRight = p1SideController.buttonMenuRight;
+	var P1menuColMove = P1menuLeft + P1menuRight;
 
-var P1menuUp = global.p1ButtonMenuUp;
-var P1menuDown = global.p1ButtonMenuDown;
-var P1menuRowMove = P1menuUp + P1menuDown;
+	var P1menuUp = p1SideController.buttonMenuUp;
+	var P1menuDown = p1SideController.buttonMenuDown;
+	var P1menuRowMove = P1menuUp + P1menuDown;
 
-var P1menuConfirm = global.p1ButtonMenuConfirm;
-var P1menuCancel = global.p1ButtonMenuDeny;
-var P1switch = global.p1ButtonMenuSwitch;
-var P1ChangeControls = global.p1ButtonMenuSetControls;
-var P1menuConfirmBuffer = false;
-var P1menuAltSelBuffer = false;
-var P1menuMapSelBuffer = false;
-var P1menuMusicSelBuffer = false;
+	var P1menuConfirm = p1SideController.buttonMenuConfirm;
+	var P1menuCancel = p1SideController.buttonMenuDeny;
+	var P1switch = p1SideController.buttonMenuSwitch;
+	var P1ChangeControls = p1SideController.buttonMenuSetControls;
+	var P1menuConfirmBuffer = false;
+	var P1menuAltSelBuffer = false;
+	var P1menuMapSelBuffer = false;
+	var P1menuMusicSelBuffer = false;
+}
+else 
+{
+	var P1menuLeft = false;
+	var P1menuRight = false;
+	var P1menuColMove = P1menuLeft + P1menuRight;
+
+	var P1menuUp = false;
+	var P1menuDown = false;
+	var P1menuRowMove = P1menuUp + P1menuDown;
+
+	var P1menuConfirm = false;
+	var P1menuCancel = false;
+	var P1switch = false;
+	var P1ChangeControls = false;
+	var P1menuConfirmBuffer = false;
+	var P1menuAltSelBuffer = false;
+	var P1menuMapSelBuffer = false;
+	var P1menuMusicSelBuffer = false;
+	
+}
 
 // Player 2 cursor vars
-var P2menuLeft = global.p2ButtonMenuLeft;
-var P2menuRight = global.p2ButtonMenuRight;
-var P2menuColMove = P2menuLeft + P2menuRight;
+if (instance_exists(p2SideController) && p2SideController != -1)
+{
+	var P2menuLeft = p2SideController.buttonMenuLeft;
+	var P2menuRight = p2SideController.buttonMenuRight;
+	var P2menuColMove = P2menuLeft + P2menuRight;
 
-var P2menuUp = global.p2ButtonMenuUp;
-var P2menuDown = global.p2ButtonMenuDown;
-var P2menuRowMove = P2menuUp + P2menuDown;
+	var P2menuUp = p2SideController.buttonMenuUp;
+	var P2menuDown = p2SideController.buttonMenuDown;
+	var P2menuRowMove = P2menuUp + P2menuDown;
 
-var P2menuConfirm = global.p2ButtonMenuConfirm;
-var P2menuCancel = global.p2ButtonMenuDeny;
-var P2ChangeControls = global.p2ButtonMenuSetControls;
+	var P2menuConfirm = p2SideController.buttonMenuConfirm;
+	var P2menuCancel = p2SideController.buttonMenuDeny;
+	var P2switch = p2SideController.buttonMenuSwitch;
+	var P2ChangeControls = p2SideController.buttonMenuSetControls;
 
-var P2menuConfirmBuffer = false;
-*/
+	var P2menuConfirmBuffer = false;
+}
+else
+{
+	var P2menuLeft = false;
+	var P2menuRight = false;
+	var P2menuColMove = P2menuLeft + P2menuRight;
+
+	var P2menuUp = false;
+	var P2menuDown = false;
+	var P2menuRowMove = P2menuUp + P2menuDown;
+
+	var P2menuConfirm = false;
+	var P2menuCancel = false;
+	var P2ChangeControls = false;
+
+	var P2menuConfirmBuffer = false;
+}
+
 P1cursorCooldown--;
 P2cursorCooldown--;
 
@@ -58,6 +101,7 @@ if (P2ControlsMenuObj != noone)
 if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 {
 	var goBackToMainMenu = false;
+	var proceedToCharSel = false;
 	
 	for (var i = 0; i < array_length(controllerAssign) && i < numberOfMaxAssignedControllers; i++;)
 	{
@@ -68,6 +112,11 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (controllerAssign[i].buttonMenuDeny)
 		{
 			goBackToMainMenu = true;
+		}
+		
+		if (controllerAssign[i].buttonMenuConfirm)
+		{
+			proceedToCharSel = true;
 		}
 		
 		if (tempControllerMenuLeft == 0 && tempControllerMenuRight == 0)
@@ -138,6 +187,15 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 	if (goBackToMainMenu)
 	{
 		room_goto(rMainMenu);
+		exit;
+	}
+	else if (proceedToCharSel)
+	{
+		state = eCharacterSelectState.CHARACTER_SELECT;
+		
+		// Store the slots separately that way if the controllers DC, we know which slot to look for when they come back
+		if (p1SideController != -1) p1SideControllerSlot = p1SideController.controllerSlot;
+		if (p2SideController != -1) p2SideControllerSlot = p2SideController.controllerSlot;
 	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)

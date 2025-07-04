@@ -156,6 +156,9 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 p1SideController = -1; // Whether each player side is currently occupied or not
 p2SideController = -1;
 
+p1SideControllerSlot = -1; // Which controller slot each player is watching for
+p2SideControllerSlot = -1;
+
 sortControllers = function SortControllers() 
 {
 	var padControllers = [];
@@ -226,19 +229,35 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 	// If a controller was added
 	if (_isNewConnected)
 	{
-		array_push(controllerAssign, FindController(_controllerID.controllerSlot));
-		
-		array_push(controllerAssignData, 
+		if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		{
-			xPos : 0,
-			yPos : 0,
+			array_push(controllerAssign, FindController(_controllerID.controllerSlot));
 		
-			playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
-			cursorCooldown : 0
+			array_push(controllerAssignData, 
+			{
+				xPos : 0,
+				yPos : 0,
+		
+				playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
+				cursorCooldown : 0
+			}
+			)
+		
+			sortControllers();
 		}
-		)
-		
-		sortControllers();
+		else
+		{
+			// Handle reassigning the controller if it reconnects
+			if (_controllerID.controllerSlot == p1SideControllerSlot)
+			{
+				p1SideController = _controllerID;
+			}
+			
+			if (_controllerID.controllerSlot == p2SideControllerSlot)
+			{
+				p2SideController = _controllerID;
+			}
+		}
 	}
 	else
 	{
