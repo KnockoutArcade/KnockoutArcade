@@ -263,6 +263,8 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 				show_debug_message(controllerAssign);
 			}
 		}
+		
+		sortControllers();
 	}
 }
 #endregion
