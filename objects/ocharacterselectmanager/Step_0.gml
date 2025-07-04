@@ -57,11 +57,18 @@ if (P2ControlsMenuObj != noone)
 
 if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 {
+	var goBackToMainMenu = false;
+	
 	for (var i = 0; i < array_length(controllerAssign) && i < numberOfMaxAssignedControllers; i++;)
 	{
 		var tempControllerMenuLeft = controllerAssign[i].buttonMenuLeft;
 		var tempControllerMenuRight = controllerAssign[i].buttonMenuRight;
 		var tempControllerDirection = tempControllerMenuLeft + tempControllerMenuRight;
+		
+		if (controllerAssign[i].buttonMenuDeny)
+		{
+			goBackToMainMenu = true;
+		}
 		
 		if (tempControllerMenuLeft == 0 && tempControllerMenuRight == 0)
 		{
@@ -125,6 +132,12 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		{
 			controllerAssignData[i].yPos = 37;
 		}
+	}
+	
+	// Handle returning to Main Menu
+	if (goBackToMainMenu)
+	{
+		room_goto(rMainMenu);
 	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)

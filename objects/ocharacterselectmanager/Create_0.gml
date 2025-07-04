@@ -122,7 +122,7 @@ for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
 {
 	if (oControllerManager.controllers[| i].controllerType == CONTROLLER_TYPES.PAD)
 	{
-		controllerArray[i] = oControllerManager.controllers[| i].controllerInstance;
+		array_push(controllerArray, oControllerManager.controllers[| i].controllerInstance);
 	}
 }
 	
@@ -136,7 +136,7 @@ if (array_length(controllerArray) <= 2)
 {
 	array_push(controllerArray, FindController(14));
 }
-	
+
 // Assign the controllers
 for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controllerArray); j++;)
 {
@@ -150,6 +150,8 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 		cursorCooldown : 0
 	}
 }
+
+
 
 p1SideController = -1; // Whether each player side is currently occupied or not
 p2SideController = -1;

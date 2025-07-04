@@ -9,6 +9,12 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 	ControllerSetup(controllers, ds_map_find_value(async_load, "pad_index"), CONTROLLER_TYPES.PAD);
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
+	/*
+	for (var ii = 0; ii < ds_list_size(controllers); ii++;)
+	{
+		show_debug_message(string(controllers[| ii].controllerInstance) + " type " + string(controllers[| ii].controllerType));
+	}
+	*/
 	
 	// Find the controller ID we just added
 	var addedControllerId = controllers[| ds_list_size(controllers) - 1].controllerInstance;
@@ -16,7 +22,7 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 	
 	// Notify objects that controllers have been updated
 	var objectsToRemove = [];
-
+	
 	for (var j = 0; j < ds_list_size(controllerUpdateNotifyList); j++;)
 	{
 		if (instance_exists(controllerUpdateNotifyList[| j]))
@@ -36,6 +42,8 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 	
 		ds_list_delete(controllerUpdateNotifyList, objectIndex);
 	}
+	
+	//show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
 }
 
 if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
@@ -56,6 +64,12 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 	}
 	
 	show_debug_message(string(ds_list_size(controllers)) + " controllers left");
+	/*
+	for (var ii = 0; ii < ds_list_size(controllers); ii++;)
+	{
+		show_debug_message(string(controllers[| ii].controllerInstance) + " type " + string(controllers[| ii].controllerType));
+	}
+	*/
 	
 	// Notify objects that controllers have been updated
 	var objectsToRemove = [];
@@ -79,6 +93,8 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 	
 		ds_list_delete(controllerUpdateNotifyList, objectIndex);
 	}
+	
+	//show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
 }
 
 

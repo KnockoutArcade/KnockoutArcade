@@ -34,6 +34,7 @@ ControllerSetup(controllers, 13, CONTROLLER_TYPES.WASD);
 ControllerSetup(controllers, 14, CONTROLLER_TYPES.ARROWS);
 
 
+
 // Notify update list
 // This is a list of all the objects that need to know if a controller is added/removed
 controllerUpdateNotifyList = ds_list_create();
