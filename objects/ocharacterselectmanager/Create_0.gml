@@ -126,15 +126,15 @@ for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
 	}
 }
 	
-// If we have 3 or fewer controllers, add WASD controller to the array
-if (array_length(controllerArray) <= 3)
-{
-	array_push(controllerArray, FindController(13));
-}
-// If we have 2 or less, also add the Arrow keys
+// If we have 2 or fewer controllers, add both keyboard controls to the array
 if (array_length(controllerArray) <= 2)
 {
+	array_push(controllerArray, FindController(13));
 	array_push(controllerArray, FindController(14));
+}
+else if (array_length(controllerArray) <= 3)
+{
+	array_push(controllerArray, FindController(13)); // Otherwise, only add WASD if there's exactly 3 controllers
 }
 
 // Assign the controllers
