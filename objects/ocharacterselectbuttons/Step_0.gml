@@ -50,8 +50,8 @@ else if (useAllControllers)
 		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuUp) allPlayersControls.menuUp = oControllerManager.controllers[| i].controllerInstance.buttonMenuUp;
 		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDown == -1) allPlayersControls.menuDown = oControllerManager.controllers[| i].controllerInstance.buttonMenuDown;
 		
-		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm_hold) allPlayersControls.menuConfirm = true;
-		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDeny_hold) allPlayersControls.menuDeny = true;
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm_hold) allPlayersControls.menuConfirmA = true;
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDeny_hold) allPlayersControls.menuCancelB = true;
 		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuSwitch_hold) allPlayersControls.menuSwitchX = true;
 		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuSetControls_hold) allPlayersControls.menuChangeControlsY = true;
 		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuPageRight_hold) allPlayersControls.menuPageRightRB = true;

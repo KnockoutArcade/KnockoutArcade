@@ -42,9 +42,13 @@ switch (state)
 		// If we press any button
 		var anyButtonPressed = false;
 		
-		for (var i = 0; i < oControllerManager.controllers; i++)
+		for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++)
 		{
-			if (GamepadCheck(oControllerManager.controllers[| i].controllerSlotID)) anyButtonPressed = true;
+			if (GamepadCheck(oControllerManager.controllers[| i].controllerSlotID)) 
+			{
+				anyButtonPressed = true;
+				show_debug_message("pressed any button")
+			}
 		}
 		
 		if (keyboard_check_pressed(vk_anykey) || anyButtonPressed)
