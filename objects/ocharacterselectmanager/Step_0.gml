@@ -270,6 +270,7 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (p1SideController != -1) 
 		{
 			p1SideControllerSlot = p1SideController.controllerSlot;
+			p1ArcadeButtonsObject.controllerSlot = p1SideControllerSlot;
 			p1IsCPU = false;
 		}
 		else
@@ -281,12 +282,19 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (p2SideController != -1) 
 		{
 			p2SideControllerSlot = p2SideController.controllerSlot;
+			p2ArcadeButtonsObject.controllerSlot = p2SideControllerSlot;
 			p2IsCPU = false;
 		}
 		else
 		{
 			p2SideControllerSlot = -1;
 			p2IsCPU = true;
+		}
+		// If both players are CPUs, make the first arcade stick listen for all inputs
+		if (p1IsCPU && p2IsCPU)
+		{
+			p1ArcadeButtonsObject.useAllControllers = true;
+			p2ArcadeButtonsObject.useAllControllers = false;
 		}
 	}
 }

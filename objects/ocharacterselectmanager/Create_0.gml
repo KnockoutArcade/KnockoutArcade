@@ -291,3 +291,8 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 	}
 }
 #endregion
+
+// Arcade buttons
+p1ArcadeButtonsObject = instance_create_layer(2, 99, "Buttons", oCharacterSelectButtons);
+
+p2ArcadeButtonsObject = instance_create_layer(85, 99, "Buttons", oCharacterSelectButtons);

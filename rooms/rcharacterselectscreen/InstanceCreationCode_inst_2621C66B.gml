@@ -1,1 +1,0 @@
-playerNumber = 1;
