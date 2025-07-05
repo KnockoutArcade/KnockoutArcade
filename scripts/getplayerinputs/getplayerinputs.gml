@@ -27,14 +27,28 @@ function GetPlayerInputs()
 		buttonMenuDown = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuDown) * -1;
 			
 		buttonMenuConfirm = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuConfirm);
+		buttonMenuConfirm_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuConfirm);
+		
 		buttonMenuDeny = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuDeny);
+		buttonMenuDeny_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuDeny);
+		
 		buttonMenuSwitch = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuSwitch);
+		buttonMenuSwitch_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuSwitch);
+		
 		buttonMenuSetControls = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuSetControls);
+		buttonMenuSetControls_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuSetControls);
 			
 		buttonMenuPageRight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuPageRight);
+		buttonMenuPageRight_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuPageRight);
+		
 		buttonMenuPageLeft = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuPageLeft);
+		buttonMenuPageLeft_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuPageLeft);
+		
 		buttonMenuTriggerRight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuTriggerRight);
+		buttonMenuTriggerRight_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuTriggerRight);
+		
 		buttonMenuTriggerLeft = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMenuTriggerLeft);
+		buttonMenuTriggerLeft_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuTriggerLeft);
 			
 		buttonMenuPause = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuPause);
 	}
@@ -62,14 +76,28 @@ function GetPlayerInputs()
 		buttonMenuDown = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuDown) * -1;
 			
 		buttonMenuConfirm = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuConfirm);
+		buttonMenuConfirm_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuConfirm);
+		
 		buttonMenuDeny = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuDeny);
+		buttonMenuDeny_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuDeny);
+		
 		buttonMenuSwitch = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuSwitch);
+		buttonMenuSwitch_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuSwitch);
+		
 		buttonMenuSetControls = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuSetControls);
+		buttonMenuSetControls_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuSetControls);
 			
 		buttonMenuPageRight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuPageRight);
+		buttonMenuPageRight_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuPageRight);
+		
 		buttonMenuPageLeft = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuPageLeft);
+		buttonMenuPageLeft_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuPageLeft);
+		
 		buttonMenuTriggerRight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuTriggerRight);
+		buttonMenuTriggerRight_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuTriggerRight);
+		
 		buttonMenuTriggerLeft = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMenuTriggerLeft);
+		buttonMenuTriggerLeft_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuTriggerLeft);
 			
 		buttonMenuPause = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuPause);
 	}
@@ -125,14 +153,28 @@ function GetPlayerInputs()
 		buttonMenuDown = (gamepad_axis_value(controllerSlot, controlMappings.Controller.buttonMenuDown) > .7 || gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuDownDPAD)) * -1;
 		
 		buttonMenuConfirm = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuConfirm);
+		buttonMenuConfirm_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuConfirm);
+		
 		buttonMenuDeny = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuDeny);
+		buttonMenuDeny_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuDeny);
+		
 		buttonMenuSwitch = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuSwitch);
+		buttonMenuSwitch_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuSwitch);
+		
 		buttonMenuSetControls = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuSetControls);
+		buttonMenuSetControls_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuSetControls);
 		
 		buttonMenuPageRight = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuPageRight);
+		buttonMenuPageRight_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuPageRight);
+		
 		buttonMenuPageLeft = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuPageLeft);
+		buttonMenuPageLeft_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuPageLeft);
+		
 		buttonMenuTriggerRight = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuTriggerRight);
+		buttonMenuTriggerRight_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuTriggerRight);
+		
 		buttonMenuTriggerLeft = gamepad_button_check_pressed(controllerSlot, controlMappings.Controller.buttonMenuTriggerLeft);
+		buttonMenuTriggerLeft_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuTriggerLeft);
 		
 		buttonMenuPause = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuPause);
 	}
