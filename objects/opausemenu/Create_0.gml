@@ -4,6 +4,8 @@
 owner = noone; // The object that spawned this menu
 
 playerNumber = 0; // Which player is responsible for pausing (0 = player 1, 1 = player 2)
+controllerSlot = -1; // Which controller Slot to listen for
+useAllControllers = false; // Whether to 
 
 state = ePauseMenuState.MAIN;
 areYouSureAction = eAreYouSureAction.RESTART; // What to do after selecting "Yes" on Are You Sure?

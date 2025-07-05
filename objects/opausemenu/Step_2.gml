@@ -3,39 +3,58 @@
 
 
 #region Handle Inputs
+var menuUp = 0;
+var menuDown = 0;
+var menuRowMove = menuUp + menuDown;
+	
+var menuLeft = 0;
+var menuRight = 0;
+var menuCollumnMove = menuLeft + menuRight;
+	
+var menuConfirm = 0;
+var menuConfirmBuffer = false;
+	
+var menuDeny = 0;
+var menuDenyBuffer = false;
 
-// Determine which player's inputs to use
-if (playerNumber == 0)
+// Listen for the controller
+var controllerObject = FindController(controllerSlot)
+if (controllerObject != -1 && !useAllControllers)
 {
-	var menuUp = global.p1ButtonMenuUp;
-	var menuDown = global.p1ButtonMenuDown;
-	var menuRowMove = menuUp + menuDown;
+	menuUp = controllerObject.buttonMenuUp;
+	menuDown = controllerObject.buttonMenuDown;
+	menuRowMove = menuUp + menuDown;
 	
-	var menuLeft = global.p1ButtonMenuLeft;
-	var menuRight = global.p1ButtonMenuRight;
-	var menuCollumnMove = menuLeft + menuRight;
+	menuLeft = controllerObject.buttonMenuLeft;
+	menuRight = controllerObject.buttonMenuRight;
+	menuCollumnMove = menuLeft + menuRight;
 	
-	var menuConfirm = global.p1ButtonMenuConfirm;
-	var menuConfirmBuffer = false;
+	menuConfirm = controllerObject.buttonMenuConfirm;
+	menuConfirmBuffer = false;
 	
-	var menuDeny = global.p1ButtonMenuDeny;
-	var menuDenyBuffer = false;
+	menuDeny = controllerObject.buttonMenuDeny;
+	menuDenyBuffer = false;
 }
-else
+else if (useAllControllers) // Listen for all controllers
 {
-	var menuUp = global.p2ButtonMenuUp;
-	var menuDown = global.p2ButtonMenuDown;
-	var menuRowMove = menuUp + menuDown;
+	// For each input, if any controller is pressing that button, set that button to true
+	for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
+	{
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuLeft == -1) menuLeft = oControllerManager.controllers[| i].controllerInstance.buttonMenuLeft;
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuRight) menuRight = oControllerManager.controllers[| i].controllerInstance.buttonMenuRight;
+		
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuUp) menuUp = oControllerManager.controllers[| i].controllerInstance.buttonMenuUp;
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDown == -1) menuDown = oControllerManager.controllers[| i].controllerInstance.buttonMenuDown;
+		
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm) menuConfirm = true;
+		if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDeny) menuDeny = true;
+	}
 	
-	var menuLeft = global.p2ButtonMenuLeft;
-	var menuRight = global.p2ButtonMenuRight;
-	var menuCollumnMove = menuLeft + menuRight;
+	menuRowMove = menuUp + menuDown;
+	menuCollumnMove = menuLeft + menuRight;
 	
-	var menuConfirm = global.p2ButtonMenuConfirm;
-	var menuConfirmBuffer = false;
-	
-	var menuDeny = global.p2ButtonMenuDeny;
-	var menuDenyBuffer = false;
+	menuConfirmBuffer = false;
+	menuDenyBuffer = false;
 }
 
 // Decrease the cursor cooldown

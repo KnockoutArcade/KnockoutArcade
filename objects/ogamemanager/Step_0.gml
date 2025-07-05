@@ -39,6 +39,13 @@ switch (global.gameMode)
 			{
 				p1PauseButton = p1ControllerInstance.buttonMenuPause;
 			}
+			else if (global.player1ControllerSlot == -1 && global.player2ControllerSlot == -1) // If both players are bots, any player can pause
+			{
+				for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
+				{
+					if (oControllerManager.controllers[| i].controllerInstance.buttonMenuPause) p1PauseButton = true;
+				}
+			}
 			
 			var p2ControllerInstance = FindController(global.player2ControllerSlot);
 			var p2PauseButton = false;
@@ -81,12 +88,23 @@ switch (global.gameMode)
 				{
 					// set Player number to 1, and set the proper opening animation
 					pauseMenuObject.playerNumber = 1;
+					pauseMenuObject.controllerSlot = global.player2ControllerSlot;
 					pauseMenuObject.sprite_index = sPauseMenu_Open_P2;
 				}
 				else // otherwise, P1 has paused the game
 				{
 					// set Player number to 0 (animation already set by default)
 					pauseMenuObject.playerNumber = 0;
+					
+					// If both players are CPUs, then any controller can control the pause menu
+					if (global.player1ControllerSlot == -1 && global.player2ControllerSlot == -1)
+					{
+						pauseMenuObject.useAllControllers = true;
+					}
+					else
+					{
+						pauseMenuObject.controllerSlot = global.player1ControllerSlot;
+					}
 				}
 				
 				// Pause the game
