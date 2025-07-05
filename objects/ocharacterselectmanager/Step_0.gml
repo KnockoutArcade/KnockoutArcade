@@ -38,7 +38,7 @@ if (p1IsCPU && p2IsCPU)
 #endregion
 
 // Player 1 cursor vars
-if (p1IsCPU && p2IsCPU && !P1hasSelectedAlt) // Both CPUs
+if (p1IsCPU && p2IsCPU && (!P1hasSelectedAlt || P1hasSelectedAlt && state != eCharacterSelectState.CHARACTER_SELECT)) // Both CPUs
 {
 	var P1menuLeft = allPlayersControls.buttonMenuLeft;
 	var P1menuRight = allPlayersControls.buttonMenuRight;
@@ -915,7 +915,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 	
 	if (P1switch)
 	{
-		state = 2;
+		state = eCharacterSelectState.MUSIC_SELECT;
 		
 		RTF_animTimer = 0;
         RTF_currentFrame = 0;
@@ -923,7 +923,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 
     if (P1menuCancel)
     {
-        state = 0;
+        state = eCharacterSelectState.CHARACTER_SELECT;
         P1hasSelectedAlt = false;
 
         RTF_animTimer = 0;
@@ -934,7 +934,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 	
 	if (P2menuCancel)
     {
-        state = 0;
+        state = eCharacterSelectState.CHARACTER_SELECT;
         P2hasSelectedAlt = false;
 
         RTF_animTimer = 0;
@@ -1003,7 +1003,7 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
 
     if (P1switch)
     {
-        state = 1;
+        state =  eCharacterSelectState.STAGE_SELECT;
         P1hasSelectedMap = false;
 
         RTF_animTimer = 0;
