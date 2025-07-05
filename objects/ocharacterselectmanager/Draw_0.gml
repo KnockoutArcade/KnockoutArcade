@@ -709,3 +709,4 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
 		draw_sprite(sStageSelect_MusicNames_strip5, 4, 53, 58);
 	}
 }
+

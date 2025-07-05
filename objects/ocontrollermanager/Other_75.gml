@@ -43,7 +43,7 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad discovered")
 		ds_list_delete(controllerUpdateNotifyList, objectIndex);
 	}
 	
-	//show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
+	show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
 }
 
 if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
@@ -94,7 +94,7 @@ if (ds_map_find_value(async_load, "event_type") == "gamepad lost")
 		ds_list_delete(controllerUpdateNotifyList, objectIndex);
 	}
 	
-	//show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
+	show_debug_message(string(ds_list_size(controllerUpdateNotifyList)) + " objects to update");
 }
 
 

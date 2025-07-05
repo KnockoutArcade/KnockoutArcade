@@ -224,7 +224,11 @@ sortControllers = function SortControllers()
 #region // Controller Updating
 
 // Add this to the list of objects to be notified when the controllers disconnect
-ds_list_add(oControllerManager.controllerUpdateNotifyList, id);
+// Check if this ID is already in there first
+if (ds_list_find_index(oControllerManager.controllerUpdateNotifyList, id) == -1)
+{
+	ds_list_add(oControllerManager.controllerUpdateNotifyList, id);
+}
 
 // Update controller script
 controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
@@ -232,8 +236,6 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 	// If a controller was added
 	if (_isNewConnected)
 	{
-		if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
-		{
 			array_push(controllerAssign, FindController(_controllerID.controllerSlot));
 		
 			array_push(controllerAssignData, 
@@ -247,9 +249,7 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 			)
 		
 			sortControllers();
-		}
-		else
-		{
+			
 			// Handle reassigning the controller if it reconnects
 			if (_controllerID.controllerSlot == p1SideControllerSlot)
 			{
@@ -260,7 +260,8 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 			{
 				p2SideController = _controllerID;
 			}
-		}
+			
+			show_debug_message("Controller connected");
 	}
 	else
 	{

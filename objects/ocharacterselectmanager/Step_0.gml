@@ -38,7 +38,7 @@ if (p1IsCPU && p2IsCPU)
 #endregion
 
 // Player 1 cursor vars
-if (p1IsCPU && p2IsCPU) // Both CPUs
+if (p1IsCPU && p2IsCPU && !P1hasSelectedAlt) // Both CPUs
 {
 	var P1menuLeft = allPlayersControls.buttonMenuLeft;
 	var P1menuRight = allPlayersControls.buttonMenuRight;
@@ -98,7 +98,7 @@ else // empty Controller
 }
 
 // Player 2 cursor vars
-if (p1IsCPU && p2IsCPU) // Both CPUs
+if (p1IsCPU && p2IsCPU && P1hasSelectedAlt) // Both CPUs
 {
 	var P2menuLeft = allPlayersControls.buttonMenuLeft;
 	var P2menuRight = allPlayersControls.buttonMenuRight;
