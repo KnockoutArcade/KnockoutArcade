@@ -77,9 +77,59 @@ switch (state)
 	
 	case eSetControlsState.WAIT_FOR_INPUT:
 	{
-		// Handle Activating
-		if (menuConfirm && !menuConfirmBuffer)
+		// Timer vars to rotate through the displayed start button
+		waitForInputTimer++;
+		
+		if (waitForInputTimer >= waitForInputInterval)
 		{
+			waitForInputTimer = 0;
+			waitForInputButtonType++;
+		}
+		
+		if (waitForInputButtonType >= 3)
+		{
+			waitForInputButtonType = 0;
+		}
+		
+		var isSlotBeingUsed = false;
+		var controllerSlotToAssign = -1;
+		
+		// Listen for any controller inputs
+		for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
+		{
+			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm) 
+			{
+				// Find all controls menus and put them in a list
+				var allControlsMenus = [];
+				for (var j = 0; j < instance_number(oSetControlsMenu); j++;)
+				{
+					allControlsMenus[j] = instance_find(oSetControlsMenu, j);
+				}
+				
+				// Go through each controls menu and check if its controllerSlot matches the slot of the controller that pressed A
+				for (var k = 0; k < array_length(allControlsMenus); k++;)
+				{
+					if (allControlsMenus[k].controllerSlot == -1)
+					{
+						break;
+					}
+					
+					if (allControlsMenus[k].controllerSlot == oControllerManager.controllers[| i].controllerSlotID)
+					{
+						isSlotBeingUsed = true;
+					}
+					else
+					{
+						controllerSlotToAssign = oControllerManager.controllers[| i].controllerSlotID;
+					}
+				}
+			}
+		}
+		
+		if (!isSlotBeingUsed && controllerSlotToAssign != -1)
+		{
+			controllerSlot = controllerSlotToAssign;
+			
 			sprite_index = sControlsMenu_TurnFace;
 			image_index = 0;
 			
@@ -88,9 +138,8 @@ switch (state)
 			audio_play_sound(sfx_UI_Select, 0, false);
 		}
 		
-		
-		// Handle leaving
-		if (menuDeny && !menuDenyBuffer) || (instance_number(oSetControlsMenu) <= 1)
+		// Handle Leaving
+		if (instance_number(oSetControlsMenu) <= 1)
 		{
 			menuDenyBuffer = true;
 			

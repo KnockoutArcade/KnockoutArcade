@@ -22,6 +22,9 @@ controllerSlot = -1;
 
 
 isWaitingForInput = false;
+waitForInputTimer = 0;
+waitForInputInterval = 120;
+waitForInputButtonType = 0; // 0 = pad, 1 = WASD, 2 = Arrows
 
 // Selection Vars
 selectedRow = 0; // Which row we have currently selected

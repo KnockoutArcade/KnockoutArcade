@@ -187,15 +187,29 @@ if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 
 	if (P1menuConfirm && image_index = 3)
 	{
+		// Spawn P1 controls menu
 		var p1ControlsMenu = instance_create_depth(0, 0, -10000, oSetControlsMenu);
 		p1ControlsMenu.playerNumber = 0;
 		p1ControlsMenu.playerControls = global.player1Controls;
-		p1ControlsMenu.playerControlsType = global.player1ControllerType;
 		
+		// If the first controller slot is the one that pressed A, then set the controller type to pad
+		if (slot0Controller.buttonMenuConfirm)
+		{
+			p1ControlsMenu.playerControlsType = CONTROLLER_TYPES.PAD;
+			p1ControlsMenu.controllerSlot = 0;
+		}
+		else // Otherwise, set it to the WASD controller
+		{
+			p1ControlsMenu.playerControlsType = CONTROLLER_TYPES.WASD;
+			p1ControlsMenu.controllerSlot = 13;
+		}
+		
+		
+		// Spawn the P2 controls menu as waiting for inputs
 		var p2ControlsMenu = instance_create_depth(80, 0, -10000, oSetControlsMenu);
 		p2ControlsMenu.playerNumber = 1;
 		p2ControlsMenu.playerControls = global.player2Controls;
-		p2ControlsMenu.playerControlsType = global.player2ControllerType;
+		p2ControlsMenu.controllerSlot = -1;
 		p2ControlsMenu.isWaitingForInput = true;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);

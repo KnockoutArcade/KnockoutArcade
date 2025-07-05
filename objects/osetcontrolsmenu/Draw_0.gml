@@ -263,11 +263,11 @@ switch (state)
 	
 	case eSetControlsState.WAIT_FOR_INPUT:
 	{
-		if (playerNumber == 0 && playerControlsType == CONTROLLER_TYPES.WASD)
+		if (waitForInputButtonType == 2)
 		{
 			draw_sprite(sButtons_Keyboard, 16, x + 34, y + 64);
 		}
-		else if (playerNumber == 1 && playerControlsType == CONTROLLER_TYPES.WASD)
+		else if (waitForInputButtonType == 1)
 		{
 			draw_sprite(sButtons_Keyboard, 64, x + 34, y + 64);
 		}
