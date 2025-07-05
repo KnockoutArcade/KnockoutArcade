@@ -988,13 +988,15 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
     }
 	
 	// Handle Music selection
-    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMusic)
+	if ((P1menuRowMove != 0 || P2menuRowMove != 0) && P1cursorCooldown < 1 && !P1hasSelectedMusic)
     {
-        P1musicSelRow -= P1menuRowMove;
+        P1musicSelRow += clamp(P1menuRowMove + P2menuRowMove, -1, 1);
         P1cursorCooldown = 10;
+		
+		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
-    if (P1menuRowMove == 0)
+    if (P1menuRowMove == 0 && P2menuRowMove == 0)
     {
         P1cursorCooldown = 0;
     }
@@ -1034,7 +1036,7 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
         selectedMusic = 1;
     }
 
-    if (P1switch)
+    if (P1switch || P2switch)
     {
         state =  eCharacterSelectState.STAGE_SELECT;
         P1hasSelectedMap = false;
