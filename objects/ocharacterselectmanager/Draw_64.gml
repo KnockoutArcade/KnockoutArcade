@@ -9,8 +9,8 @@ draw_rectangle(10, 0, 50, 100, false);
 draw_set_alpha(1);
 draw_set_color(c_white);
 	
-draw_text(20, 10, P1hasSelectedAlt);
-draw_text(20, 30, P1hasSelectedChar);
-draw_text(20, 50, P2hasSelectedAlt);
-draw_text(20, 70, P2hasSelectedChar);
+draw_text(20, 10, p1SideController);
+draw_text(20, 30, p1SideControllerSlot);
+draw_text(20, 50, p2SideController);
+draw_text(20, 70, p2SideControllerSlot);
 draw_text(20, 90, ds_list_size(oControllerManager.controllerUpdateNotifyList));

@@ -1055,6 +1055,36 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
 }
 else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 {
+	// For CPU controllers, pass control back to the player
+	if (p1IsCPU && !p2IsCPU && p1SideController != -1)
+	{
+		p2SideController = p1SideController;
+		p2SideControllerSlot = p1SideControllerSlot;
+			
+		p1SideController = -1;
+		p1SideControllerSlot = -1;
+	}
+	else if (!p1IsCPU && p2IsCPU && p2SideController != -1)
+	{
+		p1SideController = p2SideController;
+		p1SideControllerSlot = p2SideControllerSlot;
+			
+		p2SideController = -1;
+		p2SideControllerSlot = -1;
+	}
+	else if (p1IsCPU && p2IsCPU)
+	{
+		p1SideController = -1;
+		p1SideControllerSlot = -1;
+		
+		p2SideController = -1;
+		p2SideControllerSlot = -1;
+	}
+	
+	
+	global.player1ControllerSlot = p1SideControllerSlot;
+	global.player2ControllerSlot = p2SideControllerSlot;
+	
 	// Increment the transition timer
 	transitionTimer++;
 	
