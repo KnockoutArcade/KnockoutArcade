@@ -426,7 +426,21 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             P1hasSelectedChar = false;
             global.p1SelectedCharacter = noone;
         }
-        else if (!P2hasSelectedChar)
+        else if (p1IsCPU && !p2IsCPU)
+		{
+			// If we're the CPU and p2 isn't, pass control to P2
+			p2SideController = p1SideController;
+			p2SideControllerSlot = p1SideControllerSlot;
+			
+			p1SideController = -1;
+			p1SideControllerSlot = -1;
+			
+			// Un-select P2's character
+			P2hasSelectedChar = false;
+            global.p2SelectedCharacter = noone;
+			P2hasSelectedAlt = false;
+		}
+		else if (!P2hasSelectedChar)
         {
             // If neither player has chosen a character, return to main menu
             room_goto(rMainMenu);
@@ -570,11 +584,26 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
         {
             P2hasSelectedChar = false;
             global.p2SelectedCharacter = noone;
-        } else if (p1IsCPU)
+        } 
+		else if (p2IsCPU)
         {
-            // If neither player has chosen a character, return to main menu
-            room_goto(rMainMenu);
+            // If we are the CPU, always pass control back to P1
+			p1SideController = p2SideController;
+			p1SideControllerSlot = p2SideControllerSlot;
+			
+			p2SideController = -1;
+			p2SideControllerSlot = -1;
+			
+			// Un-select P1's character
+			P1hasSelectedChar = false;
+            global.p1SelectedCharacter = noone;
+			P1hasSelectedAlt = false;
         }
+		else if (!p2IsCPU && !P1hasSelectedChar)
+		{
+			// If neither player has chosen a character, return to main menu
+            room_goto(rMainMenu);
+		}
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
