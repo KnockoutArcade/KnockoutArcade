@@ -25,7 +25,11 @@ if (!skipIntro)
 
 if (state == eVictoryScreenState.OPTIONS)
 {
-	draw_sprite(sVictoryScreen_OptionsBase, 0, global.camObj.x - 80, global.camObj.y);
+	// Only draw this if p1 is a player, or both players are CPUs
+	if (global.player1ControllerSlot != 1 || (global.player1ControllerSlot != 1 && global.player2ControllerSlot != 1))
+	{
+		draw_sprite(sVictoryScreen_OptionsBase, 0, global.camObj.x - 80, global.camObj.y);
+	}
 	
 	// Player Selections
 	if (!P1hasSelectedresult)

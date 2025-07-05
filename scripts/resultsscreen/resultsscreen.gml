@@ -2,19 +2,70 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ResultsScreen()
 {
-	var P1menuUp = global.p1ButtonMenuUp;
-	var P1menuDown = global.p1ButtonMenuDown;
+	// If both players are CPUs, then any player is allowed to control the P1 side
+	if (global.player1ControllerSlot == -1 && global.player2ControllerSlot == -1)
+	{
+		var allPlayersControls = {
+			menuUp : 0,
+			menuDown : 0,
+			menuConfirm : 0,
+			menuDeny : 0,
+		}
+		
+		for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++)
+		{
+			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuUp) allPlayersControls.menuUp = oControllerManager.controllers[| i].controllerInstance.buttonMenuUp;
+			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDown == -1) allPlayersControls.menuDown = oControllerManager.controllers[| i].controllerInstance.buttonMenuDown;
+		
+			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm) allPlayersControls.menuConfirm = true;
+			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuDeny) allPlayersControls.menuDeny = true;
+		}
+	}
+	
+	var p1ControllerInstance = FindController(global.player1ControllerSlot);
+	var P1menuUp = 0;
+	var P1menuDown = 0;
 	var P1menuRowMove = P1menuUp + P1menuDown;
-	var P1menuConfirm = global.p1ButtonMenuConfirm;
-	var P1menuDeny = global.p1ButtonMenuDeny;
+	var P1menuConfirm = 0;
+	var P1menuDeny = 0;
 	var P1menuConfirmBuffer = false;
 	
-	var P2menuUp = global.p2ButtonMenuUp;
-	var P2menuDown = global.p2ButtonMenuDown;
+	if (p1ControllerInstance != -1)
+	{
+		P1menuUp = p1ControllerInstance.buttonMenuUp;
+		P1menuDown = p1ControllerInstance.buttonMenuDown;
+		P1menuRowMove = P1menuUp + P1menuDown;
+		P1menuConfirm = p1ControllerInstance.buttonMenuConfirm;
+		P1menuDeny = p1ControllerInstance.buttonMenuDeny;
+		P1menuConfirmBuffer = false;
+	}
+	else if (global.player2ControllerSlot == -1) // If both players are CPUs, listen for any controllers
+	{
+		P1menuUp = allPlayersControls.menuUp;
+		P1menuDown = allPlayersControls.menuDown;
+		P1menuRowMove = P1menuUp + P1menuDown;
+		P1menuConfirm = allPlayersControls.menuConfirm;
+		P1menuDeny = allPlayersControls.menuDeny;
+		P1menuConfirmBuffer = false;
+	}
+	
+	var p2ControllerInstance = FindController(global.player2ControllerSlot);
+	var P2menuUp = 0;
+	var P2menuDown = 0;
 	var P2menuRowMove = P2menuUp + P2menuDown;
-	var P2menuConfirm = global.p2ButtonMenuConfirm;
-	var P2menuDeny = global.p2ButtonMenuDeny;
+	var P2menuConfirm = 0;
+	var P2menuDeny = 0;
 	var P2menuConfirmBuffer = false;
+	
+	if (p2ControllerInstance != -1)
+	{
+		P2menuUp = p2ControllerInstance.buttonMenuUp;
+		P2menuDown = p2ControllerInstance.buttonMenuDown;
+		P2menuRowMove = P2menuUp + P2menuDown;
+		P2menuConfirm = p2ControllerInstance.buttonMenuConfirm;
+		P2menuDeny = p2ControllerInstance.buttonMenuDeny;
+		P2menuConfirmBuffer = false;
+	}
 	
 	P1cursorCooldown--;
 	P2cursorCooldown--;
