@@ -17,7 +17,9 @@ animTimer = 0; // The animation timer for this object
 
 playerNumber = 0; // Which player is currently controlling this object (0 = P1, 1 = P2)
 playerControls = global.player1Controls;
-playerControlsType = global.player1ControllerType;
+playerControlsType = CONTROLLER_TYPES.PAD;
+controllerSlot = -1;
+
 
 isWaitingForInput = false;
 

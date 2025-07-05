@@ -44,3 +44,6 @@ controllerType = CONTROLLER_TYPES.PAD;
 
 // Controller Slot
 controllerSlot = 0;
+
+// Player side
+playerSide = 0;

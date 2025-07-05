@@ -15,8 +15,8 @@ if (playerID == 1)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(20, 10, x);
-	draw_text(20, 30, combo);
+	draw_text(20, 10, global.player1ControllerSlot);
+	draw_text(20, 30, global.player2ControllerSlot);
 	draw_text(20, 50, animTimer);
 	draw_text(20, 70, storedComboDamage);
 	draw_text(20, 90, hsp);

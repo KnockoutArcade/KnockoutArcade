@@ -2,38 +2,39 @@
 // You can write your code in this editor
 
 #region Inputs
-// Determine which player's inputs to use
-if (playerNumber == 0)
+// Initialize
+var menuUp = 0;
+var menuDown = 0;
+var menuRowMove = menuUp + menuDown;
+	
+var menuLeft = 0;
+var menuRight = 0;
+var menuCollumnMove = menuLeft + menuRight;
+	
+var menuConfirm = false;
+var menuConfirmBuffer = false;
+	
+var menuDeny = false;
+var menuDenyBuffer = false;
+
+// Detect the controller
+var controllerObject = FindController(controllerSlot);
+
+if (controllerObject != -1)
 {
-	var menuUp = global.p1ButtonMenuUp;
-	var menuDown = global.p1ButtonMenuDown;
-	var menuRowMove = menuUp + menuDown;
+	menuUp = controllerObject.buttonMenuUp;
+	menuDown = controllerObject.buttonMenuDown;
+	menuRowMove = menuUp + menuDown;
 	
-	var menuLeft = global.p1ButtonMenuLeft;
-	var menuRight = global.p1ButtonMenuRight;
-	var menuCollumnMove = menuLeft + menuRight;
+	menuLeft = controllerObject.buttonMenuLeft;
+	menuRight = controllerObject.buttonMenuRight;
+	menuCollumnMove = menuLeft + menuRight;
 	
-	var menuConfirm = global.p1ButtonMenuConfirm;
-	var menuConfirmBuffer = false;
+	menuConfirm = controllerObject.buttonMenuConfirm;
+	menuConfirmBuffer = false;
 	
-	var menuDeny = global.p1ButtonMenuDeny;
-	var menuDenyBuffer = false;
-}
-else
-{
-	var menuUp = global.p2ButtonMenuUp;
-	var menuDown = global.p2ButtonMenuDown;
-	var menuRowMove = menuUp + menuDown;
-	
-	var menuLeft = global.p2ButtonMenuLeft;
-	var menuRight = global.p2ButtonMenuRight;
-	var menuCollumnMove = menuLeft + menuRight;
-	
-	var menuConfirm = global.p2ButtonMenuConfirm;
-	var menuConfirmBuffer = false;
-	
-	var menuDeny = global.p2ButtonMenuDeny;
-	var menuDenyBuffer = false;
+	menuDeny = controllerObject.buttonMenuDeny;
+	menuDenyBuffer = false;
 }
 
 #endregion
@@ -56,7 +57,7 @@ switch (state)
 		// If we are using the opening animation and we have reached the end, switch to the turn to face animation
 		if (image_index >= image_number - 1)
 		{
-			if (isWaitingForInput)
+			if (isWaitingForInput || controllerSlot == -1)
 			{
 				sprite_index = sControlsMenu_PressStart;
 				image_index = 0;
@@ -176,7 +177,7 @@ switch (state)
 				{
 					RestorePlayer1DefaultControls();
 					
-					SaveControls();
+					SaveControls(1);
 					
 					playerControls = global.player1Controls;
 				}
@@ -184,7 +185,7 @@ switch (state)
 				{
 					RestorePlayer2DefaultControls();
 					
-					SaveControls();
+					SaveControls(2);
 					
 					playerControls = global.player2Controls;
 				}
@@ -225,31 +226,15 @@ switch (state)
 			var newKeyPressed = false;
 			var newKey = 0;
 	
-			if (playerNumber == 0)
+			if (playerControlsType == CONTROLLER_TYPES.WASD || playerControlsType == CONTROLLER_TYPES.ARROWS)
 			{
-				if (playerControlsType == "KEYBOARD")
-				{
-					newKeyPressed = keyboard_check_pressed(vk_anykey);
-					newKey = keyboard_lastkey;
-				}
-				else
-				{
-					newKeyPressed = GamepadCheck(global.player1ControllerSlot);
-					newKey = global.lastControllerButton;
-				}
+				newKeyPressed = keyboard_check_pressed(vk_anykey);
+				newKey = keyboard_lastkey;
 			}
 			else
 			{
-				if (playerControlsType == "KEYBOARD")
-				{
-					newKeyPressed = keyboard_check_pressed(vk_anykey);
-					newKey = keyboard_lastkey;
-				}
-				else
-				{
-					newKeyPressed = GamepadCheck(global.player2ControllerSlot);
-					newKey = global.lastControllerButton;
-				}
+				newKeyPressed = GamepadCheck(controllerSlot);
+				newKey = global.lastControllerButton;
 			}
 	
 			// If we have pressed a new button...
@@ -261,9 +246,13 @@ switch (state)
 				switch (selectedOption)
 				{
 					case 0: // up
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonUp = newKey;
+							playerControls.Keyboard_WASD.buttonUp = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonUp = newKey;
 						}
 						else
 						{
@@ -272,9 +261,13 @@ switch (state)
 					break;
 			
 					case 1: // down
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonDown = newKey;
+							playerControls.Keyboard_WASD.buttonDown = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonDown = newKey;
 						}
 						else
 						{
@@ -283,9 +276,13 @@ switch (state)
 					break;
 			
 					case 2: // left
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonLeft = newKey;
+							playerControls.Keyboard_WASD.buttonLeft = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonLeft = newKey;
 						}
 						else
 						{
@@ -294,9 +291,13 @@ switch (state)
 					break;
 			
 					case 3: // right
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonRight = newKey;
+							playerControls.Keyboard_WASD.buttonRight = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonRight = newKey;
 						}
 						else
 						{
@@ -305,9 +306,13 @@ switch (state)
 					break;
 			
 					case 4: // light
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonLight = newKey;
+							playerControls.Keyboard_WASD.buttonLight = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonLight = newKey;
 						}
 						else
 						{
@@ -316,9 +321,13 @@ switch (state)
 					break;
 			
 					case 5: // medium
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonMedium = newKey;
+							playerControls.Keyboard_WASD.buttonMedium = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonMedium = newKey;
 						}
 						else
 						{
@@ -327,9 +336,13 @@ switch (state)
 					break;
 			
 					case 6: // heavy
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonHeavy = newKey;
+							playerControls.Keyboard_WASD.buttonHeavy = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonHeavy = newKey;
 						}
 						else
 						{
@@ -338,9 +351,13 @@ switch (state)
 					break;
 			
 					case 7: //special
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonSpecial = newKey;
+							playerControls.Keyboard_WASD.buttonSpecial = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonSpecial = newKey;
 						}
 						else
 						{
@@ -350,9 +367,13 @@ switch (state)
 			
 					
 					case 8: //grab
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonGrab = newKey;
+							playerControls.Keyboard_WASD.buttonGrab = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonGrab = newKey;
 						}
 						else
 						{
@@ -361,9 +382,13 @@ switch (state)
 					break;
 			
 					case 9: //Run
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonRun = newKey;
+							playerControls.Keyboard_WASD.buttonRun = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonRun = newKey;
 						}
 						else
 						{
@@ -372,9 +397,13 @@ switch (state)
 					break;
 					
 					case 10: //Super
-						if (playerControlsType == "KEYBOARD")
+						if (playerControlsType == CONTROLLER_TYPES.WASD)
 						{
-							playerControls.Keyboard.buttonSuper = newKey;
+							playerControls.Keyboard_WASD.buttonSuper = newKey;
+						}
+						else if (playerControlsType == CONTROLLER_TYPES.ARROWS)
+						{
+							playerControls.Keyboard_Arrows.buttonSuper = newKey;
 						}
 						else
 						{
@@ -387,7 +416,15 @@ switch (state)
 				audio_play_sound(sfx_UI_Select, 0, false);
 				
 				// Save the player's controls
-				SaveControls();
+				if (playerNumber == 0)
+				{
+					SaveControls(1);
+				}
+				else
+				{
+					SaveControls(2);
+				}
+				
 			}
 		}
 	}

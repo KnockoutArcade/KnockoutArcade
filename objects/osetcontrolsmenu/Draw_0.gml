@@ -46,7 +46,7 @@ switch (state)
 			if (controlsOptions[topRowOption + i] < 11) // If the option has an input...
 			{
 				// If player is using a controller...
-				if (playerControlsType == "PAD")
+				if (playerControlsType == CONTROLLER_TYPES.PAD)
 				{
 					// determine which option to look up the input for
 					var lookupOption = 0;
@@ -114,7 +114,7 @@ switch (state)
 					// draw the input
 					draw_sprite(sButtons_Controller, ConvertButtonIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
 				}
-				else // for keyboard...
+				else if (playerControlsType == CONTROLLER_TYPES.WASD)// for WASD
 				{
 					// determine which option to look up the input for
 					var lookupOption = 0;
@@ -122,59 +122,127 @@ switch (state)
 					{
 						case 0: // up
 						{
-							lookupOption = playerControls.Keyboard.buttonUp;
+							lookupOption = playerControls.Keyboard_WASD.buttonUp;
 						}
 						break;
 						case 1: // down
 						{
-							lookupOption = playerControls.Keyboard.buttonDown;
+							lookupOption = playerControls.Keyboard_WASD.buttonDown;
 						}
 						break;
 						case 2: // left
 						{
-							lookupOption = playerControls.Keyboard.buttonLeft;
+							lookupOption = playerControls.Keyboard_WASD.buttonLeft;
 						}
 						break;
 						case 3: // right
 						{
-							lookupOption = playerControls.Keyboard.buttonRight;
+							lookupOption = playerControls.Keyboard_WASD.buttonRight;
 						}
 						break;
 						
 						case 4: // light
 						{
-							lookupOption = playerControls.Keyboard.buttonLight;
+							lookupOption = playerControls.Keyboard_WASD.buttonLight;
 						}
 						break;
 						case 5: // medium
 						{
-							lookupOption = playerControls.Keyboard.buttonMedium;
+							lookupOption = playerControls.Keyboard_WASD.buttonMedium;
 						}
 						break;
 						case 6: // heavy
 						{
-							lookupOption = playerControls.Keyboard.buttonHeavy;
+							lookupOption = playerControls.Keyboard_WASD.buttonHeavy;
 						}
 						break;
 						case 7: // special
 						{
-							lookupOption = playerControls.Keyboard.buttonSpecial;
+							lookupOption = playerControls.Keyboard_WASD.buttonSpecial;
 						}
 						break;
 						
 						case 8: // grab
 						{
-							lookupOption = playerControls.Keyboard.buttonGrab;
+							lookupOption = playerControls.Keyboard_WASD.buttonGrab;
 						}
 						break;
 						case 9: // run
 						{
-							lookupOption = playerControls.Keyboard.buttonRun;
+							lookupOption = playerControls.Keyboard_WASD.buttonRun;
 						}
 						break;
 						case 10: // super
 						{
-							lookupOption = playerControls.Keyboard.buttonSuper;
+							lookupOption = playerControls.Keyboard_WASD.buttonSuper;
+						}
+						break;
+					}
+						
+					// draw the input
+					draw_sprite(sButtons_Keyboard, ConvertKeyIntoImageIndex(lookupOption), x + 58, y + 20 + (i * 10));
+				}
+				else // for arrow keys
+				{
+					// determine which option to look up the input for
+					var lookupOption = 0;
+					switch (controlsOptions[topRowOption + i])
+					{
+						case 0: // up
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonUp;
+						}
+						break;
+						case 1: // down
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonDown;
+						}
+						break;
+						case 2: // left
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonLeft;
+						}
+						break;
+						case 3: // right
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonRight;
+						}
+						break;
+						
+						case 4: // light
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonLight;
+						}
+						break;
+						case 5: // medium
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonMedium;
+						}
+						break;
+						case 6: // heavy
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonHeavy;
+						}
+						break;
+						case 7: // special
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonSpecial;
+						}
+						break;
+						
+						case 8: // grab
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonGrab;
+						}
+						break;
+						case 9: // run
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonRun;
+						}
+						break;
+						case 10: // super
+						{
+							lookupOption = playerControls.Keyboard_Arrows.buttonSuper;
 						}
 						break;
 					}
@@ -195,11 +263,11 @@ switch (state)
 	
 	case eSetControlsState.WAIT_FOR_INPUT:
 	{
-		if (playerNumber == 0 && playerControlsType == "KEYBOARD")
+		if (playerNumber == 0 && playerControlsType == CONTROLLER_TYPES.WASD)
 		{
 			draw_sprite(sButtons_Keyboard, 16, x + 34, y + 64);
 		}
-		else if (playerNumber == 1 && playerControlsType == "KEYBOARD")
+		else if (playerNumber == 1 && playerControlsType == CONTROLLER_TYPES.WASD)
 		{
 			draw_sprite(sButtons_Keyboard, 64, x + 34, y + 64);
 		}

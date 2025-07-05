@@ -391,7 +391,8 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 		P1ControlsMenuObj = instance_create_depth(0, 0, -20000, oSetControlsMenu);
 		P1ControlsMenuObj.playerNumber = 0;
 		P1ControlsMenuObj.playerControls = global.player1Controls;
-		P1ControlsMenuObj.playerControlsType = global.player1ControllerType;
+		P1ControlsMenuObj.playerControlsType = p1SideController.controllerType;
+		P1ControlsMenuObj.controllerSlot = p1SideControllerSlot;
 	}
 	
     if (P1menuConfirm && !P1hasSelectedChar && P1ControlsMenuObj == noone)
@@ -538,7 +539,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
 
 	// Handle Controls Menu
-	if (P2ChangeControls && P2ControlsMenuObj == noone)
+	if (P2ChangeControls && P2ControlsMenuObj == noone && !p2IsCPU)
 	{
 		// Play Sound
 		audio_play_sound(sfx_UI_Select, 0, false);
@@ -547,7 +548,8 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 		P2ControlsMenuObj = instance_create_depth(80, 0, -20000, oSetControlsMenu);
 		P2ControlsMenuObj.playerNumber = 1;
 		P2ControlsMenuObj.playerControls = global.player2Controls;
-		P2ControlsMenuObj.playerControlsType = global.player2ControllerType;
+		P2ControlsMenuObj.playerControlsType = p2SideController.controllerType;
+		P2ControlsMenuObj.controllerSlot = p2SideControllerSlot;
 	}
 	
     if (P2menuConfirm && !P2hasSelectedChar && P2ControlsMenuObj == noone)
