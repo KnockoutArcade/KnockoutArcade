@@ -47,51 +47,53 @@ if (!global.gameHalt)
 { 
 
 // Handle Inputs
-if (playerID == 1 && !isInCutscene) // Player 1
+if (controllerSlot != -1 && !isInCutscene) // Player 1
 {
-	//Movement Buttons
-	var moveleft = global.p1ButtonLeft;
-	var moveright = global.p1ButtonRight;
-	movedir = moveleft + moveright;
-	var jumpButton = global.p1ButtonUp;
-	var crouchButton = global.p1ButtonDown;
-	verticalMoveDir = jumpButton + crouchButton;
+	var controllerInstance = FindController(controllerSlot);
 	
-	var runButton = global.p1ButtonRun;
+	if (controllerInstance != -1)
+	{
+		//Movement Buttons
+		var moveleft = controllerInstance.buttonLeft;
+		var moveright = controllerInstance.buttonRight;
+		movedir = moveleft + moveright;
+		var jumpButton = controllerInstance.buttonUp;
+		var crouchButton = controllerInstance.buttonDown;
+		verticalMoveDir = jumpButton + crouchButton;
+	
+		var runButton = controllerInstance.buttonRun;
 
-	// Attack Buttons
-	var lightattack = global.p1ButtonLight;
-	var mediumattack = 2 * global.p1ButtonMedium;
-	var heavyattack = 3 * global.p1ButtonHeavy;
-	var grab = 4 * global.p1ButtonGrab;
-	var special = 5 * global.p1ButtonSpecial;
-	var super = 6 * global.p1ButtonSuper;
-	var taunt = 7 * global.p1ButtonTaunt;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
+		// Attack Buttons
+		var lightattack = controllerInstance.buttonLight;
+		var mediumattack = 2 * controllerInstance.buttonMedium;
+		var heavyattack = 3 * controllerInstance.buttonHeavy;
+		var grab = 4 * controllerInstance.buttonGrab;
+		var special = 5 * controllerInstance.buttonSpecial;
+		var super = 6 * controllerInstance.buttonSuper;
+		var taunt = 7 * controllerInstance.buttonTaunt;
+		var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
+	}
+	else
+	{
+		var moveleft = false;
+		var moveright = false;
+		movedir = 0;
+		var jumpButton = false;
+		var crouchButton = false;
+		verticalMoveDir = 0;
 
+		var runButton = false;
+
+		// Attack Buttons
+		var lightattack = false;
+		var mediumattack = false;
+		var heavyattack = false;
+		var grab = false;
+		var special = false;
+		var super = false;
+		var attack = 0;
+	}
 } 
-else if (playerID == 2 && !isInCutscene) // Player 2
-{
-	var moveleft = global.p2ButtonLeft;
-	var moveright = global.p2ButtonRight;
-	movedir = moveleft + moveright;
-	var jumpButton = global.p2ButtonUp;
-	//var jumpButton = true;
-	var crouchButton = global.p2ButtonDown;
-	verticalMoveDir = jumpButton + crouchButton;
-
-	var runButton = global.p2ButtonRun;
-
-	// Attack Buttons
-	var lightattack = global.p2ButtonLight;
-	var mediumattack = 2 * global.p2ButtonMedium;
-	var heavyattack = 3 * global.p2ButtonHeavy;
-	var grab = 4 * global.p2ButtonGrab;
-	var special = 5 * global.p2ButtonSpecial;
-	var super = 6 * global.p2ButtonSuper;
-	var taunt = 7 * global.p2ButtonTaunt;
-	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
-}
 else if (controllerID != noone) // AI Controller
 {
 	var moveleft = controllerID.buttonLeft * -1;

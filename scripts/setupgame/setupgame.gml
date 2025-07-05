@@ -59,6 +59,8 @@ function SetupGame()
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 2; // Set this player's team score
+				
+				controllerSlot = global.player2ControllerSlot;
 			}
 			with (p1) 
 			{
@@ -71,6 +73,8 @@ function SetupGame()
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 1; // Set this player's team score
+				
+				controllerSlot = global.player1ControllerSlot;
 			}
 		
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);

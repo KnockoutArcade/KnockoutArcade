@@ -1,6 +1,31 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+/*
+else if (playerID == 2 && !isInCutscene) // Player 2
+{
+	var moveleft = global.p2ButtonLeft;
+	var moveright = global.p2ButtonRight;
+	movedir = moveleft + moveright;
+	var jumpButton = global.p2ButtonUp;
+	//var jumpButton = true;
+	var crouchButton = global.p2ButtonDown;
+	verticalMoveDir = jumpButton + crouchButton;
+
+	var runButton = global.p2ButtonRun;
+
+	// Attack Buttons
+	var lightattack = global.p2ButtonLight;
+	var mediumattack = 2 * global.p2ButtonMedium;
+	var heavyattack = 3 * global.p2ButtonHeavy;
+	var grab = 4 * global.p2ButtonGrab;
+	var special = 5 * global.p2ButtonSpecial;
+	var super = 6 * global.p2ButtonSuper;
+	var taunt = 7 * global.p2ButtonTaunt;
+	var attack = max(lightattack, mediumattack, heavyattack, grab, special, super, taunt);
+}
+*/
+
 switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
@@ -8,8 +33,22 @@ switch (global.gameMode)
 		// Handle Pausing
 		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene) // Check to see if we are in the during match state
 		{
+			var p1ControllerInstance = FindController(global.player1ControllerSlot);
+			var p1PauseButton = false;
+			if (p1ControllerInstance != -1)
+			{
+				p1PauseButton = p1ControllerInstance.buttonMenuPause;
+			}
+			
+			var p2ControllerInstance = FindController(global.player2ControllerSlot);
+			var p2PauseButton = false;
+			if (p2ControllerInstance != -1)
+			{
+				p2PauseButton = p2ControllerInstance.buttonMenuPause;
+			}
+			
 			// If p1 pressed pause and the pause menu isn't up already
-			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			if (p1PauseButton && pauseMenuObject == noone)
 			{
 				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
 			}
@@ -19,7 +58,7 @@ switch (global.gameMode)
 			}
 			
 			// If p2 pressed pause and the pause menu isn't up already
-			if (global.p2ButtonMenuPause && pauseMenuObject == noone)
+			if (p2PauseButton && pauseMenuObject == noone)
 			{
 				pauseMenuButtonHeldTimer_P2++; // increment P2's timer by 1
 			}
