@@ -2,9 +2,62 @@
 // You can write your code in this editor
 
 
+#region If both players are CPU, accept input from all controllers
+
+var allPlayersControls = {
+	buttonMenuLeft : false,
+	buttonMenuRight : false,
+			
+	buttonMenuUp : false,
+	buttonMenuDown : false,
+			
+	buttonMenuConfirm : false,
+	buttonMenuDeny : false,
+	buttonMenuSwitch : false,
+	buttonMenuSetControls : false
+}
+
+if (p1IsCPU && p2IsCPU)
+{
+	// For each input, if any controller is pressing that button, set that button to true
+	for (var i = 0; i < array_length(controllerAssign); i++;)
+	{
+		if (controllerAssign[i].buttonMenuLeft == -1) allPlayersControls.buttonMenuLeft = controllerAssign[i].buttonMenuLeft;
+		if (controllerAssign[i].buttonMenuRight) allPlayersControls.buttonMenuRight = controllerAssign[i].buttonMenuRight;
+		
+		if (controllerAssign[i].buttonMenuUp) allPlayersControls.buttonMenuUp = controllerAssign[i].buttonMenuUp;
+		if (controllerAssign[i].buttonMenuDown == -1) allPlayersControls.buttonMenuDown = controllerAssign[i].buttonMenuDown;
+		
+		if (controllerAssign[i].buttonMenuConfirm) allPlayersControls.buttonMenuConfirm = true;
+		if (controllerAssign[i].buttonMenuDeny) allPlayersControls.buttonMenuDeny = true;
+		if (controllerAssign[i].buttonMenuSwitch) allPlayersControls.buttonMenuSwitch = true;
+		if (controllerAssign[i].buttonMenuSetControls) allPlayersControls.buttonMenuSetControls = true;
+	}
+}
+
+#endregion
 
 // Player 1 cursor vars
-if (instance_exists(p1SideController) && p1SideController != -1)
+if (p1IsCPU && p2IsCPU) // Both CPUs
+{
+	var P1menuLeft = allPlayersControls.buttonMenuLeft;
+	var P1menuRight = allPlayersControls.buttonMenuRight;
+	var P1menuColMove = P1menuLeft + P1menuRight;
+
+	var P1menuUp = allPlayersControls.buttonMenuUp;
+	var P1menuDown = allPlayersControls.buttonMenuDown;
+	var P1menuRowMove = P1menuUp + P1menuDown;
+
+	var P1menuConfirm = allPlayersControls.buttonMenuConfirm;
+	var P1menuCancel = allPlayersControls.buttonMenuDeny;
+	var P1switch = allPlayersControls.buttonMenuSwitch;
+	var P1ChangeControls = allPlayersControls.buttonMenuSetControls;
+	var P1menuConfirmBuffer = false;
+	var P1menuAltSelBuffer = false;
+	var P1menuMapSelBuffer = false;
+	var P1menuMusicSelBuffer = false;
+}
+else if (instance_exists(p1SideController) && p1SideController != -1) // Human Player
 {
 	var P1menuLeft = p1SideController.buttonMenuLeft;
 	var P1menuRight = p1SideController.buttonMenuRight;
@@ -23,7 +76,7 @@ if (instance_exists(p1SideController) && p1SideController != -1)
 	var P1menuMapSelBuffer = false;
 	var P1menuMusicSelBuffer = false;
 }
-else 
+else // empty Controller
 {
 	var P1menuLeft = false;
 	var P1menuRight = false;
@@ -45,7 +98,26 @@ else
 }
 
 // Player 2 cursor vars
-if (instance_exists(p2SideController) && p2SideController != -1)
+if (p1IsCPU && p2IsCPU) // Both CPUs
+{
+	var P2menuLeft = allPlayersControls.buttonMenuLeft;
+	var P2menuRight = allPlayersControls.buttonMenuRight;
+	var P2menuColMove = P2menuLeft + P2menuRight;
+
+	var P2menuUp = allPlayersControls.buttonMenuUp;
+	var P2menuDown = allPlayersControls.buttonMenuDown;
+	var P2menuRowMove = P2menuUp + P2menuDown;
+
+	var P2menuConfirm = allPlayersControls.buttonMenuConfirm;
+	var P2menuCancel = allPlayersControls.buttonMenuDeny;
+	var P2switch = allPlayersControls.buttonMenuSwitch;
+	var P2ChangeControls = allPlayersControls.buttonMenuSetControls;
+	var P2menuConfirmBuffer = false;
+	var P2menuAltSelBuffer = false;
+	var P2menuMapSelBuffer = false;
+	var P2menuMusicSelBuffer = false;
+}
+else if (instance_exists(p2SideController) && p2SideController != -1) // Human Player
 {
 	var P2menuLeft = p2SideController.buttonMenuLeft;
 	var P2menuRight = p2SideController.buttonMenuRight;
@@ -62,7 +134,7 @@ if (instance_exists(p2SideController) && p2SideController != -1)
 
 	var P2menuConfirmBuffer = false;
 }
-else
+else // Empty controller
 {
 	var P2menuLeft = false;
 	var P2menuRight = false;
@@ -301,7 +373,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
 	
 	// Handle Controls Menu
-	if (P1ChangeControls && P1ControlsMenuObj == noone)
+	if (P1ChangeControls && P1ControlsMenuObj == noone && !p1IsCPU)
 	{
 		// Play Sound
 		audio_play_sound(sfx_UI_Select, 0, false);
@@ -392,6 +464,16 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             P1menuAltSelBuffer = true;
 			
 			audio_play_sound(sfx_CharSel_Ready, 0, false);
+			
+			if (p2IsCPU)
+			{
+				// If p2 is a CPU controller, switch our control over to them
+				p2SideController = p1SideController;
+				p2SideControllerSlot = p1SideControllerSlot;
+			
+				p1SideController = -1;
+				// Preserve our controller slot
+			}
         }
     }
 
@@ -488,6 +570,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
         {
             P2hasSelectedChar = false;
             global.p2SelectedCharacter = noone;
+        } else if (p1IsCPU)
+        {
+            // If neither player has chosen a character, return to main menu
+            room_goto(rMainMenu);
         }
 
         RTF_animTimer = 0;
@@ -523,6 +609,17 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             P2menuConfirmBuffer = true;
 			
 			audio_play_sound(sfx_CharSel_Ready, 0, false);
+			
+			// If p1 is a CPU controller and we aren't, switch our control over to them
+			// Different for P2 because if both players are CPUs, once P2 selects their character we go to the Stage Sel
+			if (p1IsCPU && !p2IsCPU)
+			{
+				p1SideController = p2SideController;
+				p1SideControllerSlot = p2SideControllerSlot;
+				
+				p2SideController = -1;
+				// Preserve our controller slot
+			}
         }
     }
 
