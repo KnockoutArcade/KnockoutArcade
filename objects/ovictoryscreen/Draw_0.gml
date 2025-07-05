@@ -25,31 +25,44 @@ if (!skipIntro)
 
 if (state == eVictoryScreenState.OPTIONS)
 {
-	// Only draw this if p1 is a player, or both players are CPUs
-	if (global.player1ControllerSlot != 1 || (global.player1ControllerSlot != 1 && global.player2ControllerSlot != 1))
+	var baseSpriteIndex = 0; // which image index to use for the base
+	
+	// Figure out how many players there are
+	if ((global.player1ControllerSlot != -1 && global.player2ControllerSlot == -1) || (global.player1ControllerSlot == -1 && global.player2ControllerSlot == -1))
 	{
-		draw_sprite(sVictoryScreen_OptionsBase, 0, global.camObj.x - 80, global.camObj.y);
+		// P1 is a player and P2 isn't, OR P1 and P2 are both CPUS
+		baseSpriteIndex = 1;
+	}
+	else if (global.player1ControllerSlot == -1 && global.player2ControllerSlot != -1)
+	{
+		// P1 is a CPU and P2 is a player
+		baseSpriteIndex = 2;
 	}
 	
+	
+	
+	// Draw the base
+	draw_sprite(sVictoryScreen_OptionsBase, baseSpriteIndex, global.camObj.x - 80, global.camObj.y);
+	
 	// Player Selections
-	if (!P1hasSelectedresult)
+	if (!P1hasSelectedresult && baseSpriteIndex <= 1)
 	{
 		draw_sprite(sVictoryScreen_OptionsSelection, 0, global.camObj.x - 80 + 13, global.camObj.y + 51 + (12 * P1resultSelRow));
 	}
-	if (!P2hasSelectedresult)
+	if (!P2hasSelectedresult && (baseSpriteIndex == 0 || baseSpriteIndex == 2))
 	{
 		draw_sprite(sVictoryScreen_OptionsSelection, 0, global.camObj.x - 80 + 95, global.camObj.y + 51 + (12 * P2resultSelRow));
 	}
 	
 	// Draw text
-	draw_sprite(sVictoryScreen_OptionsText, 0, global.camObj.x - 80, global.camObj.y);
+	draw_sprite(sVictoryScreen_OptionsText, baseSpriteIndex, global.camObj.x - 80, global.camObj.y);
 	
 	// Player Confirmations
-	if (P1hasSelectedresult)
+	if (P1hasSelectedresult && baseSpriteIndex <= 1)
 	{
 		draw_sprite(sVictoryScreen_OptionsSelection, 1, global.camObj.x - 80 + 13, global.camObj.y + 51 + (12 * P1resultSelRow));
 	}
-	if (P2hasSelectedresult)
+	if (P2hasSelectedresult && (baseSpriteIndex == 0 || baseSpriteIndex == 2))
 	{
 		draw_sprite(sVictoryScreen_OptionsSelection, 1, global.camObj.x - 80 + 95, global.camObj.y + 51 + (12 * P2resultSelRow));
 	}

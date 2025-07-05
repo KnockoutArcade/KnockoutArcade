@@ -40,7 +40,14 @@ switch (state)
 		}
 		
 		// If we press any button
-		if (keyboard_check_pressed(vk_anykey) || GamepadCheck(global.player1ControllerSlot) || GamepadCheck(global.player2ControllerSlot))
+		var anyButtonPressed = false;
+		
+		for (var i = 0; i < oControllerManager.controllers; i++)
+		{
+			if (GamepadCheck(oControllerManager.controllers[| i].controllerSlotID)) anyButtonPressed = true;
+		}
+		
+		if (keyboard_check_pressed(vk_anykey) || anyButtonPressed)
 		{
 			// If we still printing the quote, instantly complete it.
 			if (quotePrintingLength < quoteLength)

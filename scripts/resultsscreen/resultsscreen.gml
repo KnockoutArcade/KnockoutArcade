@@ -39,7 +39,7 @@ function ResultsScreen()
 		P1menuDeny = p1ControllerInstance.buttonMenuDeny;
 		P1menuConfirmBuffer = false;
 	}
-	else if (global.player2ControllerSlot == -1) // If both players are CPUs, listen for any controllers
+	else if (global.player1ControllerSlot == -1 && global.player2ControllerSlot == -1) // If both players are CPUs, listen for any controllers
 	{
 		P1menuUp = allPlayersControls.menuUp;
 		P1menuDown = allPlayersControls.menuDown;
@@ -47,6 +47,10 @@ function ResultsScreen()
 		P1menuConfirm = allPlayersControls.menuConfirm;
 		P1menuDeny = allPlayersControls.menuDeny;
 		P1menuConfirmBuffer = false;
+	}
+	else if (global.player1ControllerSlot == -1) // If just this is a CPU, automatically select rematch
+	{
+		P1hasSelectedresult = true;
 	}
 	
 	var p2ControllerInstance = FindController(global.player2ControllerSlot);
@@ -65,6 +69,10 @@ function ResultsScreen()
 		P2menuConfirm = p2ControllerInstance.buttonMenuConfirm;
 		P2menuDeny = p2ControllerInstance.buttonMenuDeny;
 		P2menuConfirmBuffer = false;
+	}
+	else if (global.player2ControllerSlot == -1) // If this is a CPU, automatically select rematch
+	{
+		P2hasSelectedresult = true;
 	}
 	
 	P1cursorCooldown--;
@@ -94,19 +102,20 @@ function ResultsScreen()
         P1resultSelRow = P1resultSelRowMax - 1;
     }
 
-    if (P1menuConfirm)
+    if (P1menuDeny)
+	{
+		P1hasSelectedresult = false;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+	}
+	else if (P1menuConfirm)
 	{
 		P1hasSelectedresult = true;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 	
-	if (P1menuDeny)
-	{
-		P1hasSelectedresult = false;
-		
-		audio_play_sound(sfx_UI_Exit, 0, false);
-	}
+	
 	
 	// Handle result selection (Player 2)
     if (P2menuRowMove != 0 && P2cursorCooldown < 1 && !P2hasSelectedresult)
@@ -132,19 +141,20 @@ function ResultsScreen()
         P2resultSelRow = P2resultSelRowMax - 1;
     }
 
-    if (P2menuConfirm)
+    if (P2menuDeny)
+	{
+		P2hasSelectedresult = false;
+		
+		audio_play_sound(sfx_UI_Exit, 0, false);
+	}
+	else if (P2menuConfirm)
 	{
 		P2hasSelectedresult = true;
 		
 		audio_play_sound(sfx_UI_Select, 0, false);
 	}
 	
-	if (P2menuDeny)
-	{
-		P2hasSelectedresult = false;
-		
-		audio_play_sound(sfx_UI_Exit, 0, false);
-	}
+	
 	
 	if (P1hasSelectedresult && P2hasSelectedresult)
 	{
