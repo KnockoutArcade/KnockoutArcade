@@ -38,7 +38,7 @@ if (p1IsCPU && p2IsCPU)
 #endregion
 
 // Player 1 cursor vars
-if (p1IsCPU && p2IsCPU && (!P1hasSelectedAlt || P1hasSelectedAlt && state != eCharacterSelectState.CHARACTER_SELECT)) // Both CPUs
+if (p1IsCPU && p2IsCPU && (!P1hasSelectedAlt)) // Both CPUs
 {
 	var P1menuLeft = allPlayersControls.buttonMenuLeft;
 	var P1menuRight = allPlayersControls.buttonMenuRight;
@@ -146,6 +146,7 @@ else // Empty controller
 
 	var P2menuConfirm = false;
 	var P2menuCancel = false;
+	var P2switch = false;
 	var P2ChangeControls = false;
 
 	var P2menuConfirmBuffer = false;
@@ -703,23 +704,23 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
     }
 
     // Handle Map selection
-    if (P1menuColMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+    if ((P1menuColMove != 0 || P2menuColMove != 0) && P1cursorCooldown < 1 && !P1hasSelectedMap)
     {
-        P1mapSelCol += P1menuColMove;
+        P1mapSelCol += clamp(P1menuColMove + P2menuColMove, -1, 1);
         P1cursorCooldown = 10;
 		
 		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
-    if (P1menuRowMove != 0 && P1cursorCooldown < 1 && !P1hasSelectedMap)
+    if ((P1menuRowMove != 0 || P2menuRowMove != 0) && P1cursorCooldown < 1 && !P1hasSelectedMap)
     {
-        P1mapSelRow += P1menuRowMove;
+        P1mapSelRow += clamp(P1menuRowMove + P2menuRowMove, -1, 1);
         P1cursorCooldown = 10;
 		
 		audio_play_sound(sfx_CharSel_Hover, 0, false);
     }
 
-    if (P1menuRowMove == 0 && P1menuColMove == 0)
+    if (P1menuRowMove == 0 && P1menuColMove == 0 && P2menuRowMove == 0 && P2menuColMove == 0)
     {
         P1cursorCooldown = 0;
     }
@@ -745,10 +746,11 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
     }
 	
 	// If we have clicked on a stage
-    if (P1menuConfirm && !P1menuConfirmBuffer && !P1hasSelectedMap)
+    if (((P1menuConfirm && !P1menuConfirmBuffer) || (P2menuConfirm && !P2menuConfirmBuffer)) && !P1hasSelectedMap && !P1menuCancel && !P2menuCancel)
     {
         P1hasSelectedMap = true;
         P1menuMapSelBuffer = true;
+        P2menuMapSelBuffer = true;
 		
 		// Start match on Russel's Stage
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
@@ -939,32 +941,34 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
         {
             P1hasSelectedMap = false;
 			P1menuMapSelBuffer = false;
+			P2menuMapSelBuffer = false;
 		}
     }
 	
-	if (P1switch)
+	if (P1switch || P2switch)
 	{
 		state = eCharacterSelectState.MUSIC_SELECT;
 		
 		RTF_animTimer = 0;
         RTF_currentFrame = 0;
 	}
-
-    if (P1menuCancel)
+	
+	
+	
+	if (P2menuCancel)
     {
         state = eCharacterSelectState.CHARACTER_SELECT;
-        P1hasSelectedAlt = false;
+        P2hasSelectedAlt = false;
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
 		
 		audio_play_sound(sfx_UI_Exit, 0, false);
     }
-	
-	if (P2menuCancel)
+	else if (P1menuCancel)
     {
         state = eCharacterSelectState.CHARACTER_SELECT;
-        P2hasSelectedAlt = false;
+        P1hasSelectedAlt = false;
 
         RTF_animTimer = 0;
         RTF_currentFrame = 0;
