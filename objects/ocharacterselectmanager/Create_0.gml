@@ -250,7 +250,7 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 		
 			sortControllers();
 			
-			// Handle reassigning the controller if it reconnects
+			// Handle reassigning the controller if it reconnects (If we've selected our alt)
 			if (_controllerID.controllerSlot == p1SideControllerSlot)
 			{
 				p1SideController = _controllerID;

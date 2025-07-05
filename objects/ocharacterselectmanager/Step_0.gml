@@ -472,7 +472,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 				p2SideControllerSlot = p1SideControllerSlot;
 			
 				p1SideController = -1;
-				// Preserve our controller slot
+				p1SideControllerSlot = -1;
 			}
         }
     }
@@ -618,7 +618,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 				p1SideControllerSlot = p2SideControllerSlot;
 				
 				p2SideController = -1;
-				// Preserve our controller slot
+				p2SideControllerSlot = -1;
 			}
         }
     }
