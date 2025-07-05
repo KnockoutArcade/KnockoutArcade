@@ -194,8 +194,27 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		state = eCharacterSelectState.CHARACTER_SELECT;
 		
 		// Store the slots separately that way if the controllers DC, we know which slot to look for when they come back
-		if (p1SideController != -1) p1SideControllerSlot = p1SideController.controllerSlot;
-		if (p2SideController != -1) p2SideControllerSlot = p2SideController.controllerSlot;
+		if (p1SideController != -1) 
+		{
+			p1SideControllerSlot = p1SideController.controllerSlot;
+			p1IsCPU = false;
+		}
+		else
+		{
+			p1SideControllerSlot = -1;
+			p1IsCPU = true;
+		}
+		
+		if (p2SideController != -1) 
+		{
+			p2SideControllerSlot = p2SideController.controllerSlot;
+			p2IsCPU = false;
+		}
+		else
+		{
+			p2SideControllerSlot = -1;
+			p2IsCPU = true;
+		}
 	}
 }
 else if (state == eCharacterSelectState.CHARACTER_SELECT)

@@ -34,12 +34,28 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 
     if (P1charSelCol == P2charSelCol && P1charSelRow == P2charSelRow)
     {
-        draw_sprite(sCharSel_SelectionBox, 2 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
+        var selectionBoxToUse = 2;
+		
+		// Determine which sprite index to use based on the combination of players (CPU vs not)
+		if (p1IsCPU && p2IsCPU) selectionBoxToUse = 12;
+		else if (p1IsCPU && !p2IsCPU) selectionBoxToUse = 10;
+		else if (!p1IsCPU && p2IsCPU) selectionBoxToUse = 8;
+		else if (!p1IsCPU && !p2IsCPU) selectionBoxToUse = 2;
+		
+		draw_sprite(sCharSel_SelectionBox, selectionBoxToUse + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
     }
     else
     {
-        draw_sprite(sCharSel_SelectionBox, 0 + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
-        draw_sprite(sCharSel_SelectionBox, 4 + (charSelBoxAlt * P2hasSelectedChar), 44 + (23 * P2charSelCol), 63 + (19 * P2charSelRow));
+        var p1SelectionBoxToUse = 0;
+		if (p1IsCPU) p1SelectionBoxToUse = 6;
+		
+		draw_sprite(sCharSel_SelectionBox, p1SelectionBoxToUse + (charSelBoxAlt * P1hasSelectedChar), 44 + (23 * P1charSelCol), 63 + (19 * P1charSelRow));
+        
+		var p2SelectionBoxToUse = 4;
+		if (p2IsCPU && !p1IsCPU) p2SelectionBoxToUse = 6;
+		else if (p2IsCPU && p1IsCPU) p2SelectionBoxToUse = 14;
+		
+		draw_sprite(sCharSel_SelectionBox, p2SelectionBoxToUse + (charSelBoxAlt * P2hasSelectedChar), 44 + (23 * P2charSelCol), 63 + (19 * P2charSelRow));
     }
 
     //Draw Player 1 character

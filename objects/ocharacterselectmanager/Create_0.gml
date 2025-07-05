@@ -159,6 +159,9 @@ p2SideController = -1;
 p1SideControllerSlot = -1; // Which controller slot each player is watching for
 p2SideControllerSlot = -1;
 
+p1IsCPU = false; // Whether each side is a CPU or not
+p2IsCPU = false;
+
 sortControllers = function SortControllers() 
 {
 	var padControllers = [];
