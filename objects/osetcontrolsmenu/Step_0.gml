@@ -91,52 +91,76 @@ switch (state)
 			waitForInputButtonType = 0;
 		}
 		
-		var isSlotBeingUsed = false;
-		var controllerSlotToAssign = -1;
-		
-		// Listen for any controller inputs
-		for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
+		// If we do not have a specific controller to listen for, listen for any controller
+		if (controllerSlot == -1)
 		{
-			if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm) 
+			var isSlotBeingUsed = false;
+			var controllerSlotToAssign = -1;
+		
+			// Listen for any controller inputs
+			for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
 			{
-				// Find all controls menus and put them in a list
-				var allControlsMenus = [];
-				for (var j = 0; j < instance_number(oSetControlsMenu); j++;)
+				if (oControllerManager.controllers[| i].controllerInstance.buttonMenuConfirm) 
 				{
-					allControlsMenus[j] = instance_find(oSetControlsMenu, j);
-				}
+					// Find all controls menus and put them in a list
+					var allControlsMenus = [];
+					for (var j = 0; j < instance_number(oSetControlsMenu); j++;)
+					{
+						allControlsMenus[j] = instance_find(oSetControlsMenu, j);
+					}
 				
-				// Go through each controls menu and check if its controllerSlot matches the slot of the controller that pressed A
-				for (var k = 0; k < array_length(allControlsMenus); k++;)
-				{
-					if (allControlsMenus[k].controllerSlot == -1)
+					// Go through each controls menu and check if its controllerSlot matches the slot of the controller that pressed A
+					for (var k = 0; k < array_length(allControlsMenus); k++;)
 					{
-						break;
-					}
+						if (allControlsMenus[k].controllerSlot == -1)
+						{
+							break;
+						}
 					
-					if (allControlsMenus[k].controllerSlot == oControllerManager.controllers[| i].controllerSlotID)
-					{
-						isSlotBeingUsed = true;
+						if (allControlsMenus[k].controllerSlot == oControllerManager.controllers[| i].controllerSlotID)
+						{
+							isSlotBeingUsed = true;
+						}
+						else
+						{
+							controllerSlotToAssign = oControllerManager.controllers[| i].controllerSlotID;
+						}
 					}
-					else
-					{
-						controllerSlotToAssign = oControllerManager.controllers[| i].controllerSlotID;
-					}
+				}
+			}
+		
+			if (!isSlotBeingUsed && controllerSlotToAssign != -1)
+			{
+				controllerSlot = controllerSlotToAssign;
+			
+				sprite_index = sControlsMenu_TurnFace;
+				image_index = 0;
+			
+				state = eSetControlsState.TURN_TO_FACE;
+			
+				audio_play_sound(sfx_UI_Select, 0, false);
+			}
+		}
+		else // Otherwise, listen for the A button on a specific controller
+		{
+			var assignedController = FindController(controllerSlot);
+			
+			// It is possible that this controller disconnected, so wait for it to come back
+			if (assignedController != -1)
+			{
+				// if this controller presses A, activate this object
+				if (assignedController.buttonMenuConfirm)
+				{
+					sprite_index = sControlsMenu_TurnFace;
+					image_index = 0;
+			
+					state = eSetControlsState.TURN_TO_FACE;
+			
+					audio_play_sound(sfx_UI_Select, 0, false);
 				}
 			}
 		}
 		
-		if (!isSlotBeingUsed && controllerSlotToAssign != -1)
-		{
-			controllerSlot = controllerSlotToAssign;
-			
-			sprite_index = sControlsMenu_TurnFace;
-			image_index = 0;
-			
-			state = eSetControlsState.TURN_TO_FACE;
-			
-			audio_play_sound(sfx_UI_Select, 0, false);
-		}
 		
 		// Handle Leaving
 		if (instance_number(oSetControlsMenu) <= 1)

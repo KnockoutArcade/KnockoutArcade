@@ -436,23 +436,79 @@ switch (state)
 						audio_play_sound(sfx_UI_Select, 0, false);
 					
 						// Spawn the controls objects
-						var p1ControlsMenu = instance_create_depth(global.camObj.x - 80, global.camObj.y, -20000, oSetControlsMenu);
-						p1ControlsMenu.playerNumber = 0;
-						p1ControlsMenu.playerControls = global.player1Controls;
-						p1ControlsMenu.playerControlsType = global.player1ControllerType;
-		
-						var p2ControlsMenu = instance_create_depth(global.camObj.x, global.camObj.y, -20000, oSetControlsMenu);
-						p2ControlsMenu.playerNumber = 1;
-						p2ControlsMenu.playerControls = global.player2Controls;
-						p2ControlsMenu.playerControlsType = global.player2ControllerType;
-						
 						if (playerNumber == 0)
 						{
-							p2ControlsMenu.isWaitingForInput = true;
+							// If this is not a CPU, spawn P1's controls object
+							if (controllerSlot != -1)
+							{
+								var p1ControlsMenu = instance_create_depth(global.camObj.x - 80, global.camObj.y, -20000, oSetControlsMenu);
+								p1ControlsMenu.playerNumber = 0;
+								p1ControlsMenu.playerControls = global.player1Controls;
+								
+								// Search for the controller instance so we know what controller type to look for
+								var controllerInstance = FindController(controllerSlot);
+								if (controllerInstance != -1)
+								{
+									p1ControlsMenu.playerControlsType = controllerInstance.controllerType;
+								}
+								
+								p1ControlsMenu.controllerSlot = controllerSlot;
+							}
+							
+							// Spawn P2 control object, unless that player's a CPU
+							if (p2ControllerSlot != -1)
+							{
+								var p2ControlsMenu = instance_create_depth(global.camObj.x, global.camObj.y, -20000, oSetControlsMenu);
+								p2ControlsMenu.playerNumber = 1;
+								p2ControlsMenu.playerControls = global.player2Controls;
+								
+								// Search for the controller instance so we know what controller type to look for
+								var controllerInstance2 = FindController(p2ControllerSlot);
+								if (controllerInstance2 != -1)
+								{
+									p2ControlsMenu.playerControlsType = controllerInstance2.controllerType;
+								}
+								
+								p2ControlsMenu.controllerSlot = p2ControllerSlot;
+								p2ControlsMenu.isWaitingForInput = true;
+							}
 						}
 						else
 						{
-							p1ControlsMenu.isWaitingForInput = true;
+							// Spawn P2 control object, unless that player's a CPU
+							if (controllerSlot != -1)
+							{
+								var p2ControlsMenu = instance_create_depth(global.camObj.x, global.camObj.y, -20000, oSetControlsMenu);
+								p2ControlsMenu.playerNumber = 1;
+								p2ControlsMenu.playerControls = global.player2Controls;
+								
+								// Search for the controller instance so we know what controller type to look for
+								var controllerInstance2 = FindController(controllerSlot);
+								if (controllerInstance2 != -1)
+								{
+									p2ControlsMenu.playerControlsType = controllerInstance2.controllerType;
+								}
+								
+								p2ControlsMenu.controllerSlot = controllerSlot;
+							}
+							
+							// If this is not a CPU, spawn P1's controls object
+							if (p2ControllerSlot != -1)
+							{
+								var p1ControlsMenu = instance_create_depth(global.camObj.x - 80, global.camObj.y, -20000, oSetControlsMenu);
+								p1ControlsMenu.playerNumber = 0;
+								p1ControlsMenu.playerControls = global.player1Controls;
+								
+								// Search for the controller instance so we know what controller type to look for
+								var controllerInstance = FindController(p2ControllerSlot);
+								if (controllerInstance != -1)
+								{
+									p1ControlsMenu.playerControlsType = controllerInstance.controllerType;
+								}
+								
+								p1ControlsMenu.controllerSlot = p2ControllerSlot;
+								p1ControlsMenu.isWaitingForInput = true;
+							}
 						}
 					}
 					break;

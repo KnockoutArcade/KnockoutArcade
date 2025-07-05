@@ -89,6 +89,7 @@ switch (global.gameMode)
 					// set Player number to 1, and set the proper opening animation
 					pauseMenuObject.playerNumber = 1;
 					pauseMenuObject.controllerSlot = global.player2ControllerSlot;
+					pauseMenuObject.p2ControllerSlot = global.player1ControllerSlot;
 					pauseMenuObject.sprite_index = sPauseMenu_Open_P2;
 				}
 				else // otherwise, P1 has paused the game
@@ -104,6 +105,7 @@ switch (global.gameMode)
 					else
 					{
 						pauseMenuObject.controllerSlot = global.player1ControllerSlot;
+						pauseMenuObject.p2ControllerSlot = global.player2ControllerSlot;
 					}
 				}
 				

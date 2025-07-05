@@ -5,6 +5,7 @@ owner = noone; // The object that spawned this menu
 
 playerNumber = 0; // Which player is responsible for pausing (0 = player 1, 1 = player 2)
 controllerSlot = -1; // Which controller Slot to listen for
+p2ControllerSlot = -1; // If there's a second player in the match, this stores their controller slot
 useAllControllers = false; // Whether to 
 
 state = ePauseMenuState.MAIN;
