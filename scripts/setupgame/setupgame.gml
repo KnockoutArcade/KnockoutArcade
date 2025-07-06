@@ -123,7 +123,7 @@ function SetupGame()
 			}
 	
 			TimerObject = instance_create_layer(73, 24, "Timer", oTimer);
-			global.gameTimer = 5;
+			global.gameTimer = 99;
 	
 			// Create Super Meter UI
 				// Player 1
