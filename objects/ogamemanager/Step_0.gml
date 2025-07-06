@@ -453,8 +453,15 @@ switch (global.gameMode)
 		// Handle Pausing
 		if (!global.game_paused && !p1.isInCutscene) // Check to see if we are not in a cutscene right now
 		{
+			var p1ControllerInstance = FindController(global.player1ControllerSlot);
+			var p1PauseButton = false;
+			if (p1ControllerInstance != -1)
+			{
+				p1PauseButton = p1ControllerInstance.buttonMenuPause;
+			}
+			
 			// If p1 pressed pause and the pause menu isn't up already
-			if (global.p1ButtonMenuPause && pauseMenuObject == noone)
+			if (p1PauseButton && pauseMenuObject == noone)
 			{
 				pauseMenuButtonHeldTimer_P1++; // increment P1's timer by 1
 			}
@@ -474,6 +481,10 @@ switch (global.gameMode)
 				
 				// set Player number to 0 (animation already set by default)
 				pauseMenuObject.playerNumber = 0;
+				
+				// Establish controller ports with pause menu
+				pauseMenuObject.controllerSlot = global.player1ControllerSlot;
+				pauseMenuObject.p2ControllerSlot = -1;
 				
 				// Pause the game
 				global.game_paused = true;

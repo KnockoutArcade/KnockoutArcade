@@ -142,6 +142,16 @@ if (image_index == 2 && P1menuConfirm)
 	global.p1StartingPositionY = 104; // Set back to 0 when testing other levels
 	//global.p1StartingPositionY = 552; // Set back to 0 when testing other levels
 	
+	// Set up controller
+	if (slot0Controller.buttonMenuConfirm)
+	{
+		global.player1ControllerSlot = 0;
+	}
+	else
+	{
+		global.player1ControllerSlot = 13;
+	}
+	
 	room_goto(rLevelTransitionTest1);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
@@ -161,6 +171,7 @@ else if (percyBlinkTimer >= percyEyesClosedTimerCap) && (isPercyEyesClosed)
 }
 
 // Enable no-Numpad mode
+/*
 if (keyboard_check_pressed(vk_backspace))
 {
 	if (global.noNumpadMode)
