@@ -107,7 +107,7 @@ if (state != eFILESELECTMENUSTATES.SELECTING_FILE && state != eFILESELECTMENUSTA
 
 // Draw the "A" button at the bottom of the screen
 draw_sprite(sFileSelect_ButtonText, 0, 20, 112);
-if (global.player1ControllerType == "KEYBOARD")
+if (mostRecentControllerType == CONTROLLER_TYPES.WASD)
 {
 	draw_sprite(sButtons_Keyboard, 16, 8, 110); // The "J" Key
 }
@@ -118,7 +118,7 @@ else
 
 // Draw the "B" button at the bottom of the screen
 draw_sprite(sFileSelect_ButtonText, 1, 42, 112);
-if (global.player1ControllerType == "KEYBOARD")
+if (mostRecentControllerType == CONTROLLER_TYPES.WASD)
 {
 	draw_sprite(sButtons_Keyboard, 17, 30, 110); // The "K" Key
 }
@@ -133,7 +133,7 @@ if (state == eFILESELECTMENUSTATES.CHOSE_CHARACTER)
 	exit; // But only if we are not about to start the game
 }
 draw_sprite(sFileSelect_ButtonText, 2, 74, 112);
-if (global.player1ControllerType == "KEYBOARD")
+if (mostRecentControllerType == CONTROLLER_TYPES.WASD)
 {
 	draw_sprite(sButtons_Keyboard, 18, 62, 110); // The "L" Key
 }
@@ -148,7 +148,7 @@ if (state == eFILESELECTMENUSTATES.SELECTING_CHARACTER)
 	exit; // But only if we are not selecting a character
 }
 draw_sprite(sFileSelect_ButtonText, 3, 111, 112);
-if (global.player1ControllerType == "KEYBOARD")
+if (mostRecentControllerType == CONTROLLER_TYPES.WASD)
 {
 	draw_sprite(sButtons_Keyboard, 42, 99, 110); // The ";" Key
 }

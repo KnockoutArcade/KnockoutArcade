@@ -1,13 +1,93 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-// Inputs
-var P1menuLeft = global.p1ButtonMenuLeft;
-var P1menuRight = global.p1ButtonMenuRight;
-var P1menuUp = global.p1ButtonUp;
-var P1menuDown = global.p1ButtonDown;
-var P1menuConfirm = global.p1ButtonMenuConfirm;
-var P1menuDeny = global.p1ButtonMenuDeny;
+// Find the first controller
+var slot0Controller = FindController(0); // Find the first gamepad ID
+var wasdController = FindController(13); // Find the WASD controller object
+
+// Both the first controller slot and the WASD controller can control the file screen
+
+// initialize the inputs
+var P1menuLeft = 0;
+var P1menuRight = 0;
+var P1menuUp = 0;
+var P1menuDown = 0;
+
+var P1menuConfirm = 0;
+var P1menuDeny = 0;
+
+// Handle detecting controller inputs
+if (slot0Controller != -1)
+{
+	if (slot0Controller.buttonMenuLeft == -1) 
+	{
+		P1menuLeft = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuRight) 
+	{
+		P1menuRight = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	
+	if (slot0Controller.buttonMenuUp) 
+	{
+		P1menuUp = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuDown == -1) 
+	{
+		P1menuDown = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+
+	if (slot0Controller.buttonMenuConfirm) 
+	{
+		P1menuConfirm = true;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuDeny) 
+	{
+		P1menuDeny = true;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+}
+// Handle detecting WASD inputs
+if (wasdController != -1)
+{
+	if (wasdController.buttonMenuLeft == -1) 
+	{
+		P1menuLeft = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuRight) 
+	{
+		P1menuRight = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	
+	if (wasdController.buttonMenuUp) 
+	{
+		P1menuUp = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuDown == -1) 
+	{
+		P1menuDown = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+
+	if (wasdController.buttonMenuConfirm) 
+	{
+		P1menuConfirm = true;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuDeny) 
+	{
+		P1menuDeny = true;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+}
 
 menuHorizontalDirection = P1menuLeft + P1menuRight;
 var menuVerticalDirection = P1menuUp + P1menuDown;

@@ -94,3 +94,6 @@ fileFont = font_add_sprite_ext(sSingleplayerHudNumbers, "0123456789.:-%", true, 
 
 // Screen Transition
 screenTransitionObject = noone;
+
+// Most recent controller type used
+mostRecentControllerType = CONTROLLER_TYPES.PAD;
