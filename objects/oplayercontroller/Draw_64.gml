@@ -15,11 +15,11 @@ if (playerID == 1)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(20, 10, global.player1ControllerSlot);
-	draw_text(20, 30, global.player2ControllerSlot);
-	draw_text(20, 50, animTimer);
+	draw_text(20, 10, state);
+	draw_text(20, 30, animTimer);
+	draw_text(20, 50, comboScaling);
 	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, hsp);
+	draw_text(20, 90, gravityScaling);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -39,11 +39,11 @@ else
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(750, 10, x);
+	draw_text(750, 10, state);
 	draw_text(750, 30, animTimer);
-	draw_text(750, 50, crossupPreviousSide);
-	draw_text(750, 70, floorBouncing);
-	draw_text(750, 90, buffer);
+	draw_text(750, 50, comboScaling);
+	draw_text(750, 70, storedComboDamage);
+	draw_text(750, 90, gravityScaling);
 	
 	
 }
