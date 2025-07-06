@@ -96,6 +96,7 @@ switch (state)
 		{
 			var isSlotBeingUsed = false;
 			var controllerSlotToAssign = -1;
+			var controllerTypeToAssign = 0;
 		
 			// Listen for any controller inputs
 			for (var i = 0; i < ds_list_size(oControllerManager.controllers); i++;)
@@ -124,6 +125,7 @@ switch (state)
 						else
 						{
 							controllerSlotToAssign = oControllerManager.controllers[| i].controllerSlotID;
+							controllerTypeToAssign = oControllerManager.controllers[| i].controllerType;
 						}
 					}
 				}
@@ -132,6 +134,7 @@ switch (state)
 			if (!isSlotBeingUsed && controllerSlotToAssign != -1)
 			{
 				controllerSlot = controllerSlotToAssign;
+				playerControlsType = controllerTypeToAssign;
 			
 				sprite_index = sControlsMenu_TurnFace;
 				image_index = 0;
