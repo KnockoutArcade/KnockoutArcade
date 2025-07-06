@@ -2,12 +2,93 @@
 // You can write your code in this editor
 
 // Inputs
-var moveUp = global.p1ButtonMenuUp;
-var moveDown = global.p1ButtonMenuDown;
-var moveLeft = global.p1ButtonMenuLeft;
-var moveRight = global.p1ButtonMenuRight;
+// Find the first controller
+var slot0Controller = FindController(0); // Find the first gamepad ID
+var wasdController = FindController(13); // Find the WASD controller object
 
-var returnToMainMenu = global.p1ButtonMenuDeny;
+// Both the first controller slot and the WASD controller can control the file screen
+
+// initialize the inputs
+var moveLeft = 0;
+var moveRight = 0;
+var moveUp = 0;
+var moveDown = 0;
+
+var confirm = 0;
+var returnToMainMenu = 0;
+
+// Handle detecting controller inputs
+if (slot0Controller != -1)
+{
+	if (slot0Controller.buttonMenuLeft == -1) 
+	{
+		moveLeft = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuRight) 
+	{
+		moveRight = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	
+	if (slot0Controller.buttonMenuUp) 
+	{
+		moveUp = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuDown == -1) 
+	{
+		moveDown = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+
+	if (slot0Controller.buttonMenuConfirm) 
+	{
+		confirm = true;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+	if (slot0Controller.buttonMenuDeny) 
+	{
+		returnToMainMenu = true;
+		mostRecentControllerType = CONTROLLER_TYPES.PAD;
+	}
+}
+// Handle detecting WASD inputs
+if (wasdController != -1)
+{
+	if (wasdController.buttonMenuLeft == -1) 
+	{
+		moveLeft = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuRight) 
+	{
+		moveRight = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	
+	if (wasdController.buttonMenuUp) 
+	{
+		moveUp = 1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuDown == -1) 
+	{
+		moveDown = -1;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+
+	if (wasdController.buttonMenuConfirm) 
+	{
+		confirm = true;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+	if (wasdController.buttonMenuDeny) 
+	{
+		returnToMainMenu = true;
+		mostRecentControllerType = CONTROLLER_TYPES.WASD;
+	}
+}
 
 // Movement Calculation
 #region
@@ -115,4 +196,34 @@ if (animTimer == 1)
 if (returnToMainMenu)
 {
 	room_goto(rMainMenu);
+	exit;
+}
+
+// Accepting a level
+if (confirm && place_meeting(x, y, oCampaignLevel))
+{
+	with (instance_place(x, y, oCampaignLevel))
+	{
+		global.p1StartingPositionX = levelStartX;
+		global.p1StartingPositionY = levelStartY;
+	
+		global.gameMode = GAMEMODE.PLATFORMING;
+	
+		global.p1SelectedCharacter = oRussel;
+		global.p1PaletteID = 0;
+	
+		global.campaignStartLevelDelay = startLevelDelay;
+		
+		// Set up controls
+		if (other.mostRecentControllerType == CONTROLLER_TYPES.PAD)
+		{
+			global.player1ControllerSlot = 0;
+		}
+		else
+		{
+			global.player1ControllerSlot = 13;
+		}
+		
+		room_goto(levelDestination);
+	}
 }

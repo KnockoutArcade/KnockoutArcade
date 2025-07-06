@@ -28,3 +28,4 @@ OverworldSprites = {
 	diagonalDownwards_Sprite : sOverworldRussel_DownDiagonal
 }
 
+mostRecentControllerType = CONTROLLER_TYPES.PAD;
