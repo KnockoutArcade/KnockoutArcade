@@ -193,7 +193,7 @@ if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 		p1ControlsMenu.playerControls = global.player1Controls;
 		
 		// If the first controller slot is the one that pressed A, then set the controller type to pad
-		if (slot0Controller.buttonMenuConfirm)
+		if (slot0Controller != -1 && slot0Controller.buttonMenuConfirm)
 		{
 			p1ControlsMenu.playerControlsType = CONTROLLER_TYPES.PAD;
 			p1ControlsMenu.controllerSlot = 0;
