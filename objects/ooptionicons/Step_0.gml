@@ -52,7 +52,7 @@ if (!isClosingOptionsMenu && !instance_exists(oSetControlsMenu))
 	// Handle detecting WASD inputs
 	if (wasdController != -1)
 	{
-		if (slot0Controller != -1)
+		if (wasdController != -1)
 		{
 			if (wasdController.buttonMenuConfirm)
 			{

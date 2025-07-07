@@ -143,7 +143,7 @@ if (image_index == 2 && P1menuConfirm)
 	//global.p1StartingPositionY = 552; // Set back to 0 when testing other levels
 	
 	// Set up controller
-	if (slot0Controller.buttonMenuConfirm)
+	if (slot0Controller != -1 && slot0Controller.buttonMenuConfirm)
 	{
 		global.player1ControllerSlot = 0;
 	}
