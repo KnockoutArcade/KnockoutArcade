@@ -1999,7 +1999,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_SideSpecial",
-      "Duration": 40,
+      "Duration": 32,
       "NumberOfFrames": 9,
       "FrameData": [
         {
@@ -2139,19 +2139,63 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.5,
-        "FallScale": 0.5
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 32,
+            "HorizontalSpeed": 1.5,
+            "VerticalSpeed": -2.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 33,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
+        "NumberOfWindows": 3,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 32,
+            "HorizontalSpeed": 1.5,
+            "VerticalSpeed": -2.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 33,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
         "GravityScale": 1.0000001,
         "FallScale": 1.0000001
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "JaySideSpecial_Teleport",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -9426,6 +9470,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-14T21:05:44.5263804-07:00",
+  "LastModified": "2025-07-14T21:40:42.2022218-07:00",
   "LastModifiedBy": "creep"
 }

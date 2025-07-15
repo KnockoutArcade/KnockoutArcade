@@ -89,6 +89,7 @@ heldUpFrames = 0; // How long the player has held UP for
 jumpHsp = 0; // How much momentum the player is carrying with their jump
 isJumpingForward = false; // Whether the player approaching the opponent with their jump or not.
 movedir = 0;
+previousMoveDir = image_xscale; // The last direction we were holding
 verticalMoveDir = 0;
 grounded = true;
 

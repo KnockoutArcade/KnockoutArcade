@@ -135,6 +135,12 @@ else // Safegaurd in case an empty character is spawned
 	var attack = 0;
 }
 
+// Store sideways movement direction for later use
+if (movedir != 0)
+{
+	previousMoveDir = movedir;
+}
+
 // Reset Vars
 canTurnAround = true;
 isInStableState = false;
