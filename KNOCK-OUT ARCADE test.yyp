@@ -143,6 +143,7 @@
     {"id":{"name":"oFileSelectManager","path":"objects/oFileSelectManager/oFileSelectManager.yy",},"order":16,},
     {"id":{"name":"oVictoryScreen","path":"objects/oVictoryScreen/oVictoryScreen.yy",},"order":15,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":5,},
+    {"id":{"name":"sJay_SideSpecial","path":"sprites/sJay_SideSpecial/sJay_SideSpecial.yy",},"order":52,},
     {"id":{"name":"oOptionIcons","path":"objects/oOptionIcons/oOptionIcons.yy",},"order":8,},
     {"id":{"name":"sJay_SC_StandingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_StandingHeavy_MOCKUP_strip5/sJay_SC_StandingHeavy_MOCKUP_strip5.yy",},"order":11,},
     {"id":{"name":"sTimeUp","path":"sprites/sTimeUp/sTimeUp.yy",},"order":3,},

@@ -1998,29 +1998,45 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SideSpecial_mockup_strip5",
-      "Duration": 23,
-      "NumberOfFrames": 5,
+      "SpriteName": "sJay_SideSpecial",
+      "Duration": 40,
+      "NumberOfFrames": 9,
       "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
         {
           "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 17,
+          "Length": 9,
           "ImageIndex": 3
         },
         {
-          "Length": 20,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 23,
+          "Length": 15,
           "ImageIndex": 5
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2140,9 +2156,9 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": true,
-        "PerformInSpiritOff": true,
-        "StartXOffset": 10,
+        "PerformAttack": false,
+        "PerformInSpiritOff": false,
+        "StartXOffset": 0,
         "StartYOffset": 0,
         "SummonSpirit": false,
         "ReturnToPlayer": false,
@@ -9410,6 +9426,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-09T22:23:51.9846238-07:00",
+  "LastModified": "2025-07-14T21:05:44.5263804-07:00",
   "LastModifiedBy": "creep"
 }
