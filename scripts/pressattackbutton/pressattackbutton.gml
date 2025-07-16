@@ -166,7 +166,7 @@ function PressAttackButton(attack, _late = false)
 			break;
 			
 			case 5:
-				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0)
+				if (state != eState.JUMPSQUAT && movedir == 0 && verticalMoveDir == 0 && !hasUsedAirNeutralSpecial)
 				{
 					state = eState.NEUTRAL_SPECIAL;
 					sprite_index = selectedCharacter.NeutralSpecial.SpriteId;
@@ -179,8 +179,9 @@ function PressAttackButton(attack, _late = false)
 					ResetEnhancer();
 					
 					inAttackState = true;
+					hasUsedAirNeutralSpecial = true;
 				} 
-				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0)
+				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0 && !hasUsedAirSideSpecial)
 				{
 					state = eState.SIDE_SPECIAL;
 					sprite_index = selectedCharacter.SideSpecial.SpriteId;
@@ -199,8 +200,9 @@ function PressAttackButton(attack, _late = false)
 					}
 					
 					inAttackState = true;
+					hasUsedAirSideSpecial = true;
 				}
-				else if (verticalMoveDir == 1)
+				else if (verticalMoveDir == 1 && !hasUsedAirUpSpecial)
 				{
 					state = eState.UP_SPECIAL
 					sprite_index = selectedCharacter.UpSpecial.SpriteId;
@@ -219,8 +221,9 @@ function PressAttackButton(attack, _late = false)
 					animTimer = 0;
 					
 					inAttackState = true;
+					hasUsedAirUpSpecial = true;
 				}
-				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT)
+				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT && !hasUsedAirDownSpecial)
 				{
 					state = eState.DOWN_SPECIAL
 					sprite_index = selectedCharacter.DownSpecial.SpriteId;
@@ -239,6 +242,7 @@ function PressAttackButton(attack, _late = false)
 					ResetEnhancer();
 					
 					inAttackState = true;
+					hasUsedAirDownSpecial = true;
 				}
 			break;
 			

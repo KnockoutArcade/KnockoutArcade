@@ -2517,6 +2517,11 @@ switch state
 		inAttackState = false;
 		canBlock = false;
 		
+		hasUsedAirNeutralSpecial = false;
+		hasUsedAirSideSpecial = false;
+		hasUsedAirUpSpecial = false;
+		hasUsedAirDownSpecial = false;
+		
 		if (!global.game_paused)
 		{
 			hitstun--;
@@ -3576,6 +3581,11 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			isThrowable = true;
 			gravityScaling = 0;
 			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
+			
 			audio_play_sound(sfx_Landing, 1, false);
 			
 			// Landing Buffer
@@ -3585,6 +3595,11 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 		{
 			grounded = true;
 			isThrowable = true;
+			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
 		}
 		if (state == eState.LAUNCHED)
 		{
@@ -3686,6 +3701,11 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			isThrowable = true;
 			gravityScaling = 0;
 			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
+			
 			audio_play_sound(sfx_Landing, 1, false);
 			
 			// Landing Buffer
@@ -3695,6 +3715,11 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 		{
 			grounded = true;
 			isThrowable = true;
+			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
 		}
 		if (state == eState.LAUNCHED && !floorBouncing)
 		{
@@ -3744,6 +3769,11 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					canTurnAround = true;
 					isThrowable = true;
 					gravityScaling = 0;
+					
+					hasUsedAirNeutralSpecial = false;
+					hasUsedAirSideSpecial = false;
+					hasUsedAirUpSpecial = false;
+					hasUsedAirDownSpecial = false;
 			
 					audio_play_sound(sfx_Landing, 1, false);
 					
@@ -3754,6 +3784,11 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 				{
 					grounded = true;
 					isThrowable = true;
+					
+					hasUsedAirNeutralSpecial = false;
+					hasUsedAirSideSpecial = false;
+					hasUsedAirUpSpecial = false;
+					hasUsedAirDownSpecial = false;
 				}
 				if (state == eState.LAUNCHED)
 				{

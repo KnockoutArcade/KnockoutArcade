@@ -7,6 +7,8 @@ function JaySideSpecial_Teleport()
 		exit;
 	}
 	
+	hasUsedAirSideSpecial = true;
+	
 	if (animTimer >= 12)
 	{
 		canCollideWithPlayers = false;

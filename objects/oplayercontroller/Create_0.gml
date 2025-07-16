@@ -522,3 +522,10 @@ cameraZoneID = noone; // Which camera zone we are currently occupying
 // General Input Buffer
 inputBufferLength = 4; // How long the general input buffer is in frames
 bufferAttackInput = 0; // The attack that is stored.
+
+// Once-per-airtime specials
+// When a player uses a special move, they must land before they are allowed to input that move again
+hasUsedAirNeutralSpecial = false;
+hasUsedAirSideSpecial = false;
+hasUsedAirUpSpecial = false;
+hasUsedAirDownSpecial = false;

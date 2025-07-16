@@ -46,7 +46,7 @@ function CancelData(_array, _attack, _late)
 	// Check to see if the player has inputted an attack AND if the inputted attack is a valid cancel
 	
 	// Side Special
-	if ((_array.MoveCanCancelInto & 8 == 8) && (_attack == 5 && movedir != 0 && verticalMoveDir == 0))
+	if ((_array.MoveCanCancelInto & 8 == 8) && (_attack == 5 && movedir != 0 && verticalMoveDir == 0) && !hasUsedAirSideSpecial)
 	{
 		if (_late)
 		{
@@ -56,18 +56,22 @@ function CancelData(_array, _attack, _late)
 		{
 		 	CancelIntoMove(eState.SIDE_SPECIAL, selectedCharacter.SideSpecial.SpriteId, 1);
 		}
+		
+		hasUsedAirSideSpecial = true;
 	}
 	// Neutral Special
-	else if ((_array.MoveCanCancelInto & 16 == 16) && (_attack == 5 && movedir == 0 && verticalMoveDir == 0))
+	else if ((_array.MoveCanCancelInto & 16 == 16) && (_attack == 5 && movedir == 0 && verticalMoveDir == 0) && !hasUsedAirNeutralSpecial)
 	{
 		if (_late)
-			{
-				LateCancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial, _attack);
-			}
+		{
+			LateCancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial, _attack);
+		}
 		else
-			{
-				CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
-			}
+		{
+			CancelIntoMove(eState.NEUTRAL_SPECIAL, selectedCharacter.NeutralSpecial.SpriteId, 1);
+		}
+		
+		hasUsedAirNeutralSpecial = true;
 	}
 	// Standing Light 1
 	else if ((_array.MoveCanCancelInto & 32 == 32) && (_attack == 1 && verticalMoveDir == 0) && grounded)
@@ -202,7 +206,7 @@ function CancelData(_array, _attack, _late)
 			}
 		}
 	// Up Special
-	else if ((_array.MoveCanCancelInto & 65536 == 65536) && (_attack == 5 && verticalMoveDir == 1))
+	else if ((_array.MoveCanCancelInto & 65536 == 65536) && (_attack == 5 && verticalMoveDir == 1) && !hasUsedAirUpSpecial)
 	{
 		// Handle Charge inputs
 		if (downUpChargeTimer >= timeToCharge)
@@ -218,9 +222,11 @@ function CancelData(_array, _attack, _late)
 		{
 			CancelIntoMove(eState.UP_SPECIAL, selectedCharacter.UpSpecial.SpriteId, 1);
 		}
+		
+		hasUsedAirUpSpecial = true;
 	}
 	// Down Special
-	else if ((_array.MoveCanCancelInto & 131072 == 131072) && (_attack == 5 && verticalMoveDir == -1))
+	else if ((_array.MoveCanCancelInto & 131072 == 131072) && (_attack == 5 && verticalMoveDir == -1) && !hasUsedAirDownSpecial)
 	{
 		if (_late)
 		{
@@ -230,6 +236,8 @@ function CancelData(_array, _attack, _late)
 		{
 			CancelIntoMove(eState.DOWN_SPECIAL, selectedCharacter.DownSpecial.SpriteId, 1);
 		}
+		
+		hasUsedAirDownSpecial = true;
 	}
 	// Super
 	else if ((_array.MoveCanCancelInto & 4194304 == 4194304) && (_attack == 6 && superMeter >= 50 && !timeStopActivated && !spiritBroken))
