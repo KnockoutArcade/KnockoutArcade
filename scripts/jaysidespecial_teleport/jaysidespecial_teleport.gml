@@ -7,6 +7,11 @@ function JaySideSpecial_Teleport()
 		exit;
 	}
 	
+	if (animTimer >= 12)
+	{
+		canCollideWithPlayers = false;
+	}
+	
 	if (animTimer == 32)
 	{
 		x = opponent.x;

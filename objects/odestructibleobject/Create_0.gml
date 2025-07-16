@@ -67,6 +67,7 @@ state = eState.IDLE;
 	hitstunShuffleTimer = 0;
 	shuffle = 0;
 	spiritON = false;
+	canCollideWithPlayers = false;
 
 	isGrabbed = false;
 

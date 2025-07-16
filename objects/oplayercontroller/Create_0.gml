@@ -257,6 +257,7 @@ prevState = 0;
 inAttackState = false;
 canTurnAround = true;
 cancelOnLanding = true; // whether or not the character should cancel their current air attack if they land
+canCollideWithPlayers = true; // wheter or not this character should be colliding with other players
 
 // Wall bounce Variables
 wallBouncing = false;

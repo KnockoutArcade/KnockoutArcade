@@ -143,6 +143,7 @@ if (movedir != 0)
 
 // Reset Vars
 canTurnAround = true;
+canCollideWithPlayers = true;
 isInStableState = false;
 // If gravity scaling ever dips below 0, reset it to 0
 if (gravityScaling < 0)
@@ -2361,6 +2362,7 @@ switch state
 		grounded = true;
 		inAttackState = false;
 		canTurnAround = false;
+		canCollideWithPlayers = false;
 		canBlock = false;
 		
 		isGrabbed = true;
@@ -2725,6 +2727,7 @@ switch state
 		grounded = true;
 		invincible = true;
 		canTurnAround = false;
+		canCollideWithPlayers = false;
 		inAttackState = false;
 		canBlock = false;
 		isExperiencingHardKnockdown = false;
@@ -3193,6 +3196,7 @@ switch state
 		canTurnAround = false;
 		isInStableState = true;
 		inAttackState = false;
+		canCollideWithPlayers = false;
 		canBlock = false;
 		
 		image_speed = 0;
@@ -3496,7 +3500,7 @@ y = yHome;
 if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
-	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && state != eState.BEING_GRABBED && opponent.state != eState.BEING_GRABBED && state != eState.TECH_ROLL && opponent.state != eState.TECH_ROLL && state != eState.ENEMY_KO && opponent.state != eState.ENEMY_KO) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && canCollideWithPlayers && opponent.canCollideWithPlayers) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
 		if (state != eState.HITSTOP)
 		{
