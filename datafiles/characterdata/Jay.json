@@ -2120,14 +2120,54 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 6,
       "HurtboxData": [
         {
           "Start": 1,
-          "Lifetime": 99,
+          "Lifetime": 2,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -7,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 3,
+          "Lifetime": 3,
+          "AttackWidth": 28,
+          "AttackHeight": 20,
+          "WidthOffset": -20,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 3,
+          "Lifetime": 3,
           "AttackWidth": 20,
-          "AttackHeight": 32,
-          "WidthOffset": -8,
+          "AttackHeight": 18,
+          "WidthOffset": -23,
+          "HeightOffset": 18
+        },
+        {
+          "Start": 6,
+          "Lifetime": 3,
+          "AttackWidth": 25,
+          "AttackHeight": 30,
+          "WidthOffset": -30,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 9,
+          "Lifetime": 3,
+          "AttackWidth": 18,
+          "AttackHeight": 24,
+          "WidthOffset": -30,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 32,
+          "Lifetime": 3,
+          "AttackWidth": 14,
+          "AttackHeight": 36,
+          "WidthOffset": -7,
           "HeightOffset": 0
         }
       ],
@@ -9470,6 +9510,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-14T21:40:42.2022218-07:00",
+  "LastModified": "2025-07-15T20:45:29.2525617-07:00",
   "LastModifiedBy": "creep"
 }
