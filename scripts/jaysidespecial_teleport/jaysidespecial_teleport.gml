@@ -7,6 +7,14 @@ function JaySideSpecial_Teleport()
 		exit;
 	}
 	
+	if (spiritBroken)
+	{
+		state = eState.ENHANCED_SIDE_SPECIAL_2;
+		animTimer = 0;
+		hasUsedAirSideSpecial = false;
+		exit;
+	}
+	
 	hasUsedAirSideSpecial = true;
 	
 	if (animTimer >= 12)
