@@ -1177,7 +1177,7 @@
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
       "MoveType": 32,
-      "MoveCanCancelInto": 4393304,
+      "MoveCanCancelInto": 7539032,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2419,7 +2419,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 5441944,
+      "MoveCanCancelInto": 7539096,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2681,7 +2681,7 @@
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
       "MoveType": 256,
-      "MoveCanCancelInto": 4395544,
+      "MoveCanCancelInto": 6492696,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -2898,7 +2898,7 @@
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
       "MoveType": 512,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 6488088,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3154,7 +3154,7 @@
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
       "MoveType": 1024,
-      "MoveCanCancelInto": 5442840,
+      "MoveCanCancelInto": 7539992,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3337,7 +3337,7 @@
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
       "MoveType": 2048,
-      "MoveCanCancelInto": 4395544,
+      "MoveCanCancelInto": 6492696,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -3558,7 +3558,7 @@
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
       "MoveType": 4096,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 6488088,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -5383,7 +5383,7 @@
     {
       "UID": "33e46444-1d88-4027-85ed-7d18f0326ff1",
       "MoveType": 1048576,
-      "MoveCanCancelInto": 4393240,
+      "MoveCanCancelInto": 6490392,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -5618,16 +5618,21 @@
       ],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "",
-      "Duration": 0,
-      "NumberOfFrames": 0,
-      "FrameData": [],
+      "SpriteName": "sJayStandON_Pose_StandMedium_Mockup_strip3",
+      "Duration": 32,
+      "NumberOfFrames": 1,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        }
+      ],
       "NumberOfHitboxes": 0,
       "AttackData": [],
       "CounterData": [],
       "CommandNormalData": {
-        "NumpadDirection": 0,
-        "Button": 1,
+        "NumpadDirection": 6,
+        "Button": 3,
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
@@ -5640,8 +5645,17 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 32,
+          "AttackWidth": 17,
+          "AttackHeight": 34,
+          "WidthOffset": -7,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -5667,9 +5681,9 @@
       "MoveSoundData": [],
       "SpiritData": {
         "ToggleState": false,
-        "PerformAttack": false,
-        "PerformInSpiritOff": false,
-        "StartXOffset": 0,
+        "PerformAttack": true,
+        "PerformInSpiritOff": true,
+        "StartXOffset": 10,
         "StartYOffset": 0,
         "SummonSpirit": false,
         "ReturnToPlayer": false,
@@ -6830,7 +6844,7 @@
     {
       "UID": "1a8a6520-bcf7-4039-9e99-081309c4c8f4",
       "MoveType": 32,
-      "MoveCanCancelInto": 4393304,
+      "MoveCanCancelInto": 6490456,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7324,7 +7338,7 @@
     {
       "UID": "4afa7429-6d41-4bd5-97f3-04638476f409",
       "MoveType": 1024,
-      "MoveCanCancelInto": 4397848,
+      "MoveCanCancelInto": 6495000,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7420,7 +7434,7 @@
     {
       "UID": "b0bd9bb2-37ff-4865-b873-591085816194",
       "MoveType": 2048,
-      "MoveCanCancelInto": 4395544,
+      "MoveCanCancelInto": 6492696,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7516,7 +7530,7 @@
     {
       "UID": "2871012d-430a-4c86-aba6-597111deac51",
       "MoveType": 4096,
-      "MoveCanCancelInto": 4390936,
+      "MoveCanCancelInto": 6488088,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -9586,6 +9600,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-15T21:24:03.1828173-07:00",
+  "LastModified": "2025-07-19T12:35:02.717005-07:00",
   "LastModifiedBy": "creep"
 }

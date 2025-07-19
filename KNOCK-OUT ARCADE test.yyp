@@ -463,6 +463,7 @@
     {"id":{"name":"sBeverly_SideSpecial_RekkaFinisher","path":"sprites/sBeverly_SideSpecial_RekkaFinisher/sBeverly_SideSpecial_RekkaFinisher.yy",},"order":50,},
     {"id":{"name":"PerformProjectile","path":"scripts/PerformProjectile/PerformProjectile.yy",},"order":35,},
     {"id":{"name":"oHitbox","path":"objects/oHitbox/oHitbox.yy",},"order":0,},
+    {"id":{"name":"sSmoothCriminal_CommandNormal_Overhead","path":"sprites/sSmoothCriminal_CommandNormal_Overhead/sSmoothCriminal_CommandNormal_Overhead.yy",},"order":21,},
     {"id":{"name":"StructCopy","path":"scripts/StructCopy/StructCopy.yy",},"order":27,},
     {"id":{"name":"sGunther_CrouchHeavy_mockup_strip14","path":"sprites/sGunther_CrouchHeavy_mockup_strip14/sGunther_CrouchHeavy_mockup_strip14.yy",},"order":5,},
     {"id":{"name":"sBeverlyStage","path":"sprites/sBeverlyStage/sBeverlyStage.yy",},"order":3,},
