@@ -2730,8 +2730,8 @@
       "AttackData": [
         {
           "Start": 9,
-          "Lifetime": 5,
-          "AttackWidth": 27,
+          "Lifetime": 4,
+          "AttackWidth": 31,
           "AttackHeight": 6,
           "WidthOffset": 5,
           "HeightOffset": 28,
@@ -9600,6 +9600,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-22T20:29:09.6736226-07:00",
+  "LastModified": "2025-07-23T19:45:01.32212-07:00",
   "LastModifiedBy": "creep"
 }
