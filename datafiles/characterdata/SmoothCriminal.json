@@ -5204,7 +5204,7 @@
           "ImageIndex": 3
         },
         {
-          "Length": 25,
+          "Length": 27,
           "ImageIndex": 4
         }
       ],
@@ -5221,7 +5221,7 @@
           "Damage": 5,
           "MeterGain": 5.0,
           "ComboScaling": 0.5,
-          "AttackHitStop": 6,
+          "AttackHitStop": 10,
           "AttackHitStun": 10,
           "AttackType": 0,
           "BlockStun": 10.0,
@@ -5257,7 +5257,7 @@
           "Damage": 5,
           "MeterGain": 5.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 8,
+          "AttackHitStop": 6,
           "AttackHitStun": 11,
           "AttackType": 0,
           "BlockStun": 7.0,
@@ -6057,6 +6057,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-07-22T20:25:01.9260863-07:00",
+  "LastModified": "2025-07-23T19:39:41.5666333-07:00",
   "LastModifiedBy": "creep"
 }
