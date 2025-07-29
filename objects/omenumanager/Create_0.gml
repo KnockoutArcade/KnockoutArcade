@@ -8,9 +8,14 @@ randomize();
 
 animTimer = 0;
 logoAppearStart = 20;
-logoAppearEnd = 40;
+logoAppearEnd = 45;
+logoShakeEnd = 55;
+
+logoShakeIntensity = 3;
+randomOffsetX = 0;
+randomOffsetY = 0;
 
 maxScale = 5;
-minScale = 0.8;
+minScale = 0.95;
 
 isAcceptingInputs = false;

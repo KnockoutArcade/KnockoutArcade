@@ -12,8 +12,6 @@ if (slot0Controller != -1)
 
 var pressButton = keyboard_check(vk_anykey) || controllerAnyButton;
 
-startTextTimer++;
-
 if (pressButton && isAcceptingInputs)
 {
 	room = rMainMenu;
@@ -22,3 +20,8 @@ if (pressButton && isAcceptingInputs)
 
 
 animTimer++;
+
+if (animTimer > logoAppearEnd)
+{
+	isAcceptingInputs = true;
+}
