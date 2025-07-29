@@ -10,4 +10,7 @@ animTimer = 0;
 logoAppearStart = 20;
 logoAppearEnd = 40;
 
+maxScale = 5;
+minScale = 0.8;
+
 isAcceptingInputs = false;
