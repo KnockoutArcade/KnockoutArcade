@@ -1,6 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Handle music
+audio_play_sound(bgm_CharacterSelect, 0, false);
+
 // The current state of the character select screen
 state = eCharacterSelectState.CONTROLLER_ASSIGN; 
 

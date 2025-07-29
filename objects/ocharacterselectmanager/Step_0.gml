@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+// Music
+if (!audio_is_playing(bgm_CharacterSelect) && !audio_is_playing(bgm_CharacterSelect_Loop) && state != eCharacterSelectState.TRANSITION_TO_FIGHT)
+{
+	audio_play_sound(bgm_CharacterSelect_Loop, 0, true);
+}
+
 
 #region If both players are CPU, accept input from all controllers
 
@@ -260,6 +266,8 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 	if (goBackToMainMenu)
 	{
 		room_goto(rMainMenu);
+		audio_stop_sound(bgm_CharacterSelect);
+		audio_stop_sound(bgm_CharacterSelect_Loop);
 		exit;
 	}
 	else if (proceedToCharSel)
@@ -454,6 +462,8 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
         {
             // If neither player has chosen a character, return to main menu
             room_goto(rMainMenu);
+			audio_stop_sound(bgm_CharacterSelect);
+			audio_stop_sound(bgm_CharacterSelect_Loop);
         }
 
         RTF_animTimer = 0;
@@ -614,6 +624,8 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 		{
 			// If neither player has chosen a character, return to main menu
             room_goto(rMainMenu);
+			audio_stop_sound(bgm_CharacterSelect);
+			audio_stop_sound(bgm_CharacterSelect_Loop);
 		}
 
         RTF_animTimer = 0;
@@ -1057,6 +1069,10 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
 }
 else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 {
+	audio_stop_sound(bgm_CharacterSelect);
+	audio_stop_sound(bgm_CharacterSelect_Loop);
+	
+	
 	// For CPU controllers, pass control back to the player
 	if (p1IsCPU && !p2IsCPU && p1SideController != -1)
 	{

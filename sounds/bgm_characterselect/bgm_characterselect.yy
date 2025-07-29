@@ -11,14 +11,14 @@
     "name": "audiogroup_music",
     "path": "audiogroups/audiogroup_music",
   },
-  "soundFile": "bgm_russel_stage.ogg",
-  "duration": 100.0,
+  "soundFile": "bgm_characterselect.ogg",
+  "duration": 128.95937,
   "parent": {
     "name": "Music",
     "path": "folders/Sounds/Music.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bgm_Russel_Stage",
+  "name": "bgm_CharacterSelect",
   "tags": [],
   "resourceType": "GMSound",
 }
