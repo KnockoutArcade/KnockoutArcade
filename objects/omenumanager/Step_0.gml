@@ -14,7 +14,11 @@ var pressButton = keyboard_check(vk_anykey) || controllerAnyButton;
 
 startTextTimer++;
 
-if (pressButton)
+if (pressButton && isAcceptingInputs)
 {
 	room = rMainMenu;
+	exit;
 }
+
+
+animTimer++;
