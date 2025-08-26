@@ -6853,7 +6853,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_Idle",
-      "Duration": 10,
+      "Duration": 12,
       "NumberOfFrames": 8,
       "FrameData": [
         {
@@ -9600,6 +9600,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-07-23T19:45:01.32212-07:00",
+  "LastModified": "2025-08-25T20:41:40.4802059-07:00",
   "LastModifiedBy": "creep"
 }

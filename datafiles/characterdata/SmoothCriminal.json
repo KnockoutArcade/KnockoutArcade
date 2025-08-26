@@ -1625,25 +1625,25 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SC_StandLight_MOCKUP_strip3",
-      "Duration": 10,
+      "SpriteName": "sSmoothCriminal_Standing_Light",
+      "Duration": 12,
       "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 0,
-          "ImageIndex": 2
-        },
-        {
-          "Length": 3,
           "ImageIndex": 0
         },
         {
-          "Length": 5,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 6,
           "ImageIndex": 2
+        },
+        {
+          "Length": 10,
+          "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 1,
@@ -6151,6 +6151,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-07-30T21:05:38.221387-07:00",
+  "LastModified": "2025-08-25T20:54:49.2724736-07:00",
   "LastModifiedBy": "creep"
 }
