@@ -1804,7 +1804,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sSmoothCriminal_Standing_Light2",
       "Duration": 28,
-      "NumberOfFrames": 8,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
           "Length": 0,
@@ -1837,6 +1837,14 @@
         {
           "Length": 16,
           "ImageIndex": 7
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
@@ -1844,7 +1852,7 @@
         {
           "Start": 4,
           "Lifetime": 2,
-          "AttackWidth": 23,
+          "AttackWidth": 27,
           "AttackHeight": 11,
           "WidthOffset": 6,
           "HeightOffset": 16,
@@ -1852,20 +1860,20 @@
           "Damage": 2,
           "MeterGain": 1.0,
           "ComboScaling": 0.5,
-          "AttackHitStop": 4,
+          "AttackHitStop": 3,
           "AttackHitStun": 12,
           "AttackType": 1,
           "BlockStun": 7.0,
-          "KnockBack": 0.0,
+          "KnockBack": 0.5,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 0.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.5,
-          "Pushback": 0.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 0,
+          "Pushback": 0.5,
+          "ParticleXOffset": 26,
+          "ParticleYOffset": 5,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
           "HoldXOffset": 0,
@@ -1880,7 +1888,7 @@
       ],
       "CounterData": [
         {
-          "CounterHitLevel": 1,
+          "CounterHitLevel": 2,
           "Group": 1,
           "Damage": 5,
           "MeterGain": 2.0,
@@ -6143,6 +6151,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-08-27T21:11:38.63077-07:00",
+  "LastModified": "2025-08-27T22:12:20.6954453-07:00",
   "LastModifiedBy": "creep"
 }
