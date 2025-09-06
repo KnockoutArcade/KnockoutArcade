@@ -1686,7 +1686,7 @@
           "AttackHitStop": 7,
           "AttackHitStun": 17,
           "AttackType": 1,
-          "BlockStun": 6.0,
+          "BlockStun": 12.0,
           "KnockBack": 6.0,
           "AirKnockbackVertical": -3.0,
           "AirKnockbackHorizontal": -0.2,
@@ -1716,8 +1716,8 @@
           "WidthOffset": -4,
           "HeightOffset": 30,
           "Group": 2,
-          "Damage": 3,
-          "MeterGain": 3.0,
+          "Damage": 4,
+          "MeterGain": 4.0,
           "ComboScaling": 0.4,
           "AttackHitStop": 12,
           "AttackHitStun": 17,
@@ -1774,8 +1774,8 @@
         {
           "CounterHitLevel": 2,
           "Group": 1,
-          "Damage": 10,
-          "MeterGain": 10.0,
+          "Damage": 8,
+          "MeterGain": 8.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 15,
           "AttackHitStun": 25,
@@ -1816,7 +1816,7 @@
       "HurtboxData": [
         {
           "Start": 10,
-          "Lifetime": 14,
+          "Lifetime": 10,
           "AttackWidth": 33,
           "AttackHeight": 14,
           "WidthOffset": 5,
@@ -1824,9 +1824,9 @@
         },
         {
           "Start": 1,
-          "Lifetime": 99,
-          "AttackWidth": 20,
-          "AttackHeight": 45,
+          "Lifetime": 39,
+          "AttackWidth": 27,
+          "AttackHeight": 36,
           "WidthOffset": -8,
           "HeightOffset": 0
         }
@@ -6274,6 +6274,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-05T21:58:20.1896424-07:00",
+  "LastModified": "2025-09-05T22:07:11.4539175-07:00",
   "LastModifiedBy": "creep"
 }
