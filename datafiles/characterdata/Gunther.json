@@ -1619,18 +1619,18 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Standing_Medium",
       "Duration": 38,
-      "NumberOfFrames": 11,
+      "NumberOfFrames": 12,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
@@ -1662,8 +1662,12 @@
           "ImageIndex": 9
         },
         {
-          "Length": 34,
+          "Length": 35,
           "ImageIndex": 10
+        },
+        {
+          "Length": 37,
+          "ImageIndex": 11
         }
       ],
       "NumberOfHitboxes": 2,
@@ -6270,6 +6274,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-05T20:11:17.7807253-07:00",
+  "LastModified": "2025-09-05T21:58:20.1896424-07:00",
   "LastModifiedBy": "creep"
 }
