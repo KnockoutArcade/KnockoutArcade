@@ -179,7 +179,6 @@ function PressAttackButton(attack, _late = false)
 					ResetEnhancer();
 					
 					inAttackState = true;
-					hasUsedAirNeutralSpecial = true;
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0 && !hasUsedAirSideSpecial)
 				{
@@ -200,7 +199,6 @@ function PressAttackButton(attack, _late = false)
 					}
 					
 					inAttackState = true;
-					hasUsedAirSideSpecial = true;
 				}
 				else if (verticalMoveDir == 1 && !hasUsedAirUpSpecial)
 				{
@@ -221,7 +219,6 @@ function PressAttackButton(attack, _late = false)
 					animTimer = 0;
 					
 					inAttackState = true;
-					hasUsedAirUpSpecial = true;
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT && !hasUsedAirDownSpecial)
 				{
@@ -242,7 +239,6 @@ function PressAttackButton(attack, _late = false)
 					ResetEnhancer();
 					
 					inAttackState = true;
-					hasUsedAirDownSpecial = true;
 				}
 			break;
 			

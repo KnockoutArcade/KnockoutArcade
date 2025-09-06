@@ -1801,10 +1801,14 @@ switch state
 		if (grounded)
 		{	
 			GroundedAttackScript(selectedCharacter.NeutralSpecial, true, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, true, true, attack);
+			
+			hasUsedAirNeutralSpecial = false;
 		} 
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.NeutralSpecial, false, selectedCharacter.NeutralSpecial.AirMovementData.GravityScale, selectedCharacter.NeutralSpecial.AirMovementData.FallScale, attack);
+			
+			hasUsedAirNeutralSpecial = true;
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1821,10 +1825,14 @@ switch state
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.SideSpecial, true, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, false, true, attack);
+		
+			hasUsedAirSideSpecial = false;
 		}
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.SideSpecial, false, selectedCharacter.SideSpecial.AirMovementData.GravityScale, selectedCharacter.SideSpecial.AirMovementData.FallScale, attack);
+		
+			hasUsedAirSideSpecial = true;
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1841,10 +1849,14 @@ switch state
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.UpSpecial, true, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, false, true, attack);
+		
+			hasUsedAirUpSpecial = false;
 		}
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.UpSpecial, false, selectedCharacter.UpSpecial.AirMovementData.GravityScale, selectedCharacter.UpSpecial.AirMovementData.FallScale, attack);
+			
+			hasUsedAirUpSpecial = true;
 		}
 		
 		if (cancelable && hitstop < 1)
@@ -1870,10 +1882,14 @@ switch state
 		if (grounded)
 		{
 			GroundedAttackScript(selectedCharacter.DownSpecial, true, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, false, true, attack);
+		
+			hasUsedAirDownSpecial = false;
 		}
 		else 
 		{
 			JumpingAttackScript(selectedCharacter.DownSpecial, false, selectedCharacter.DownSpecial.AirMovementData.GravityScale, selectedCharacter.DownSpecial.AirMovementData.FallScale, attack);
+		
+			hasUsedAirDownSpecial = true;
 		}
 		
 		if (cancelable && hitstop < 1)
