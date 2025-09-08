@@ -1441,8 +1441,8 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
@@ -1453,8 +1453,8 @@
         {
           "CounterHitLevel": 1,
           "Group": 1,
-          "Damage": 20,
-          "MeterGain": 12.0,
+          "Damage": 10,
+          "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 30,
           "AttackHitStun": 14,
@@ -1470,10 +1470,10 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -1676,8 +1676,8 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
@@ -1688,9 +1688,9 @@
         {
           "CounterHitLevel": 1,
           "Group": 1,
-          "Damage": 20,
-          "MeterGain": 12.0,
-          "ComboScaling": 1.0,
+          "Damage": 10,
+          "MeterGain": 10.0,
+          "ComboScaling": 4.0,
           "AttackHitStop": 30,
           "AttackHitStun": 14,
           "KnockBack": 5.0,
@@ -1705,10 +1705,10 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": false,
-          "SupplementaryHitScript": "",
+          "UseHitScript": true,
+          "SupplementaryHitScript": "CauseHardKnockdown",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "sfx_Heavy_Hit"
         }
       ],
       "CommandNormalData": {
@@ -8096,6 +8096,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-09-07T21:50:06.2399167-07:00",
+  "LastModified": "2025-09-07T22:01:11.6452885-07:00",
   "LastModifiedBy": "creep"
 }
