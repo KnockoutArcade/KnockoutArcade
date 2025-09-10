@@ -2225,7 +2225,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sGunther_Crouch_Light",
-      "Duration": 16,
+      "Duration": 14,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -2259,9 +2259,9 @@
           "MeterGain": 2.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 8,
-          "AttackHitStun": 15,
+          "AttackHitStun": 14,
           "AttackType": 2,
-          "BlockStun": 11.0,
+          "BlockStun": 8.0,
           "KnockBack": 11.0,
           "AirKnockbackVertical": -0.25,
           "AirKnockbackHorizontal": 5.0,
@@ -2292,7 +2292,7 @@
           "MeterGain": 6.0,
           "ComboScaling": 2.5,
           "AttackHitStop": 10,
-          "AttackHitStun": 20,
+          "AttackHitStun": 19,
           "KnockBack": 11.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 1.0,
@@ -2330,26 +2330,26 @@
       "HurtboxData": [
         {
           "Start": 3,
-          "Lifetime": 3,
+          "Lifetime": 4,
           "AttackWidth": 18,
           "AttackHeight": 17,
           "WidthOffset": 8,
           "HeightOffset": 6
         },
         {
-          "Start": 6,
+          "Start": 7,
           "Lifetime": 8,
           "AttackWidth": 18,
-          "AttackHeight": 17,
+          "AttackHeight": 20,
           "WidthOffset": 4,
-          "HeightOffset": 3
+          "HeightOffset": 0
         },
         {
           "Start": 1,
           "Lifetime": 18,
-          "AttackWidth": 20,
+          "AttackWidth": 24,
           "AttackHeight": 27,
-          "WidthOffset": -8,
+          "WidthOffset": -12,
           "HeightOffset": 0
         }
       ],
@@ -6270,6 +6270,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-09T21:21:33.6896343-07:00",
+  "LastModified": "2025-09-09T22:22:55.3259054-07:00",
   "LastModifiedBy": "creep"
 }
