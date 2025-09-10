@@ -20,7 +20,7 @@
   "JumpHorizontalSpeed": 0.0,
   "CharacterSprites": {
     "Idle": "sGunther_Idle",
-    "Crouch": "sGunther_CrouchIdle_mockup_strip1",
+    "Crouch": "sGunther_Crouch",
     "StandBlock": "sRussel_Block",
     "CrouchBlock": "sRussel_Crouch_Block",
     "WalkForward": "sGunther_Walk_Forward",
@@ -2229,38 +2229,38 @@
       "NumberOfFrames": 7,
       "FrameData": [
         {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
           "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 4,
+          "Length": 5,
           "ImageIndex": 2
         },
         {
-          "Length": 4,
+          "Length": 8,
           "ImageIndex": 3
         },
         {
-          "Length": 5,
+          "Length": 11,
           "ImageIndex": 4
         },
         {
-          "Length": 6,
+          "Length": 14,
           "ImageIndex": 5
         },
         {
-          "Length": 14,
-          "ImageIndex": 6
-        },
-        {
           "Length": 16,
-          "ImageIndex": 7
+          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 4,
+          "Start": 5,
           "Lifetime": 4,
           "AttackWidth": 25,
           "AttackHeight": 10,
@@ -6282,6 +6282,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-05T22:19:27.3942871-07:00",
+  "LastModified": "2025-09-09T20:17:39.3083038-07:00",
   "LastModifiedBy": "creep"
 }
