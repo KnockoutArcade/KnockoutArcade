@@ -2224,37 +2224,25 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sGunther_CrouchLight_mockup_strip7",
+      "SpriteName": "sGunther_Crouch_Light",
       "Duration": 16,
-      "NumberOfFrames": 7,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 5,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 9,
           "ImageIndex": 3
-        },
-        {
-          "Length": 11,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 14,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 16,
-          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2262,8 +2250,8 @@
         {
           "Start": 5,
           "Lifetime": 4,
-          "AttackWidth": 25,
-          "AttackHeight": 10,
+          "AttackWidth": 29,
+          "AttackHeight": 5,
           "WidthOffset": 13,
           "HeightOffset": 0,
           "Group": 1,
@@ -2274,14 +2262,14 @@
           "AttackHitStun": 15,
           "AttackType": 2,
           "BlockStun": 11.0,
-          "KnockBack": 10.0,
+          "KnockBack": 11.0,
           "AirKnockbackVertical": -0.25,
           "AirKnockbackHorizontal": 5.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 3.0,
-          "Pushback": 10.0,
+          "Pushback": 11.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
@@ -2305,14 +2293,14 @@
           "ComboScaling": 2.5,
           "AttackHitStop": 10,
           "AttackHitStun": 20,
-          "KnockBack": 10.0,
+          "KnockBack": 11.0,
           "AirKnockbackVertical": -0.5,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
-          "Pushback": 10.0,
+          "Pushback": 11.0,
           "ParticleXOffset": 10,
           "ParticleYOffset": 0,
           "ParticleEffect": "sSmallHitspark",
@@ -2358,9 +2346,9 @@
         },
         {
           "Start": 1,
-          "Lifetime": 99,
+          "Lifetime": 18,
           "AttackWidth": 20,
-          "AttackHeight": 30,
+          "AttackHeight": 27,
           "WidthOffset": -8,
           "HeightOffset": 0
         }
@@ -6282,6 +6270,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-09T20:17:39.3083038-07:00",
+  "LastModified": "2025-09-09T21:21:33.6896343-07:00",
   "LastModifiedBy": "creep"
 }

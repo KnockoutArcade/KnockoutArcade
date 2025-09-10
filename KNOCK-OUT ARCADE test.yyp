@@ -364,6 +364,7 @@
     {"id":{"name":"SetupCharacter","path":"scripts/SetupCharacter/SetupCharacter.yy",},"order":1,},
     {"id":{"name":"sSparkEffect","path":"sprites/sSparkEffect/sSparkEffect.yy",},"order":2,},
     {"id":{"name":"sQuarter","path":"sprites/sQuarter/sQuarter.yy",},"order":0,},
+    {"id":{"name":"sGunther_Crouch_Light","path":"sprites/sGunther_Crouch_Light/sGunther_Crouch_Light.yy",},"order":29,},
     {"id":{"name":"sBeverly_StandLight3_MOCKUP_strip3","path":"sprites/sBeverly_StandLight3_MOCKUP_strip3/sBeverly_StandLight3_MOCKUP_strip3.yy",},"order":7,},
     {"id":{"name":"sHUDPortraits_Russel","path":"sprites/sHUDPortraits_Russel/sHUDPortraits_Russel.yy",},"order":14,},
     {"id":{"name":"DeactivateSpirit","path":"scripts/DeactivateSpirit/DeactivateSpirit.yy",},"order":3,},
