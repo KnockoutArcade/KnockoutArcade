@@ -28,7 +28,7 @@ function JaySideSpecial_Teleport()
 		y = 70; // Always teleports to the same height;
 		grounded = false;
 		
-		var teleportDistance = 40 * previousMoveDir; // How far away to make Jay teleport from the opponent
+		var teleportDistance = 35 * previousMoveDir; // How far away to make Jay teleport from the opponent
 
 		for (var i = 0; i < abs(teleportDistance); i++;)
 		{
