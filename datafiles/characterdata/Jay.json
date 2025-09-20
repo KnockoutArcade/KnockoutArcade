@@ -1222,7 +1222,7 @@
           "AttackHitStop": 6,
           "AttackHitStun": 12,
           "AttackType": 1,
-          "BlockStun": 3.0,
+          "BlockStun": 5.0,
           "KnockBack": 8.0,
           "AirKnockbackVertical": 0.0,
           "AirKnockbackHorizontal": 1.0,
@@ -9608,6 +9608,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-09-20T15:52:01.2539004-07:00",
+  "LastModified": "2025-09-20T16:00:47.431229-07:00",
   "LastModifiedBy": "creep"
 }
