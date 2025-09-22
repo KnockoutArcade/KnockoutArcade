@@ -510,6 +510,8 @@ if (target != noone)
 	}
 }
 
+
+
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
