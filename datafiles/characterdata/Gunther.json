@@ -2409,12 +2409,16 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sGunther_CrouchMedium_mockup_strip10",
-      "Duration": 30,
-      "NumberOfFrames": 10,
+      "SpriteName": "sGunther_Crouch_Medium",
+      "Duration": 27,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
           "ImageIndex": 1
         },
         {
@@ -2428,30 +2432,6 @@
         {
           "Length": 13,
           "ImageIndex": 4
-        },
-        {
-          "Length": 15,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 17,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 19,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 21,
-          "ImageIndex": 8
-        },
-        {
-          "Length": 24,
-          "ImageIndex": 9
-        },
-        {
-          "Length": 28,
-          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2468,7 +2448,7 @@
           "MeterGain": 9.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 13,
-          "AttackHitStun": 27,
+          "AttackHitStun": 24,
           "AttackType": 2,
           "BlockStun": 13.0,
           "KnockBack": 16.0,
@@ -2501,7 +2481,7 @@
           "MeterGain": 12.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
-          "AttackHitStun": 32,
+          "AttackHitStun": 29,
           "KnockBack": 16.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 3.0,
@@ -6270,6 +6250,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "76bdeba5-bd09-4c81-8ff3-15037a4e74fb",
-  "LastModified": "2025-09-11T22:21:52.2864945-07:00",
+  "LastModified": "2025-09-22T22:27:51.8291231-07:00",
   "LastModifiedBy": "creep"
 }
