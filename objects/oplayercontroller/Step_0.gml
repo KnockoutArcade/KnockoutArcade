@@ -47,7 +47,7 @@ if (!global.gameHalt)
 { 
 
 // Handle Inputs
-if (controllerSlot != -1 && !isInCutscene) // Player 1
+if (controllerSlot != -1 && !isInCutscene) // Human Player
 {
 	var controllerInstance = FindController(controllerSlot);
 	
@@ -510,7 +510,7 @@ if (target != noone)
 	}
 }
 
-
+// Cancel the opponent's combo
 
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
@@ -2557,7 +2557,6 @@ switch state
 			
 			if (grounded)
 			{
-				cancelCombo = true;
 				// Give throw protection
 				throwProtectionTimer = throwProtectionAmount;
 				
@@ -2604,7 +2603,7 @@ switch state
 			{
 				ClearOwnerHitByGroups();
 				state = eState.WALKING;
-				canBlock = true;
+				//canBlock = true;
 			} 
 			else if (bufferAttackInput == 0)
 			{

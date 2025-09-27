@@ -18,7 +18,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (prevState == eState.STANDING_LIGHT_ATTACK_3 && _late)
 				{
@@ -29,7 +29,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (state == eState.JUMPING || state == eState.RUSH_CANCEL_UP)
 				{
@@ -40,7 +40,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (verticalMoveDir = -1)
 				{
@@ -51,7 +51,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (state != eState.JUMPSQUAT)
 				{ 
@@ -62,7 +62,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else
 				{
@@ -81,7 +81,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (verticalMoveDir == -1)
 				{
@@ -92,7 +92,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
@@ -103,7 +103,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else
 				{
@@ -121,7 +121,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (verticalMoveDir == -1)
 				{
@@ -132,7 +132,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (state != eState.JUMPSQUAT)
 				{
@@ -143,7 +143,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else
 				{
@@ -161,7 +161,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 			break;
 			
@@ -178,7 +178,7 @@ function PressAttackButton(attack, _late = false)
 					// reset special move enhancers
 					ResetEnhancer();
 					
-					inAttackState = true;
+					
 				} 
 				else if (state != eState.JUMPSQUAT && movedir != 0 && verticalMoveDir == 0 && !hasUsedAirSideSpecial)
 				{
@@ -198,7 +198,7 @@ function PressAttackButton(attack, _late = false)
 						image_xscale = movedir;
 					}
 					
-					inAttackState = true;
+					
 				}
 				else if (verticalMoveDir == 1 && !hasUsedAirUpSpecial)
 				{
@@ -218,7 +218,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 				else if (verticalMoveDir == -1 && state != eState.JUMPSQUAT && !hasUsedAirDownSpecial)
 				{
@@ -238,7 +238,7 @@ function PressAttackButton(attack, _late = false)
 					// reset special move enhancers
 					ResetEnhancer();
 					
-					inAttackState = true;
+					
 				}
 			break;
 			
@@ -253,7 +253,7 @@ function PressAttackButton(attack, _late = false)
 					// reset anim timer
 					animTimer = 0;
 					
-					inAttackState = true;
+					
 				}
 			break;
 			
@@ -267,8 +267,6 @@ function PressAttackButton(attack, _late = false)
 					
 					// reset anim timer
 					animTimer = 0;
-					
-					inAttackState = false;
 				}
 			}
 			break;
@@ -330,7 +328,7 @@ function PressAttackButton(attack, _late = false)
 				// reset anim timer
 				animTimer = 0;
 					
-				inAttackState = true;
+				
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal2"))
@@ -344,7 +342,7 @@ function PressAttackButton(attack, _late = false)
 				// reset anim timer
 				animTimer = 0;
 					
-				inAttackState = true;
+				
 			}
 		}
 		if (variable_struct_exists(selectedCharacter, "CommandNormal3"))
@@ -358,7 +356,7 @@ function PressAttackButton(attack, _late = false)
 				// reset anim timer
 				animTimer = 0;
 					
-				inAttackState = true;
+				
 			}
 		}
 		

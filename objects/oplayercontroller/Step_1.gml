@@ -97,3 +97,8 @@ if (place_meeting(x, y, oLevelTransition) && playerID == 1 && state != eState.RO
 	
 	state = eState.ROOM_TRANSITION;
 }
+
+if (hitstun <= 0 && state != eState.LAUNCHED && state != eState.HURT && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE)
+{
+	cancelCombo = true;
+}
