@@ -510,8 +510,6 @@ if (target != noone)
 	}
 }
 
-// Cancel the opponent's combo
-
 // IDLE and CROUCH are being handled outside of the state machine, as doing them inside would cause 1 frame delays between switching states.
 if (state == eState.IDLE)
 {
@@ -999,6 +997,10 @@ if (state != eState.SCREEN_FREEZE && state != eState.HITSTOP && state != eState.
 	global.freezeTimer = false;
 }
 
+if (state != eState.BLOCKING && state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
+{
+	prevState = state;
+}
 
 // State Machine
 switch state 
@@ -3248,10 +3250,7 @@ else
 	
 	
 	hitstopBuffer = false;
-	if (state != eState.BLOCKING)
-	{
-		prevState = state;
-	}
+	
 	
 	if (hitstun < 1)
 	{
@@ -3378,7 +3377,7 @@ else if (spiritObject != noone)
 	hasUsedMeter = false;
 	}
 }
-else
+else 
 {
 	startCombo = false;
 	

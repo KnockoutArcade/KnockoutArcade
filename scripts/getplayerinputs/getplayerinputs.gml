@@ -10,8 +10,8 @@ function GetPlayerInputs()
 		buttonUp = keyboard_check(controlMappings.Keyboard_WASD.buttonUp);
 		buttonDown = keyboard_check(controlMappings.Keyboard_WASD.buttonDown) * -1;
 
-		buttonLight = keyboard_check(controlMappings.Keyboard_WASD.buttonLight);
-		buttonMedium = keyboard_check(controlMappings.Keyboard_WASD.buttonMedium);
+		buttonLight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonLight);
+		buttonMedium = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMedium);
 		buttonHeavy = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonHeavy);
 		buttonSpecial = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonSpecial);
 		buttonGrab = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonGrab);
@@ -59,8 +59,8 @@ function GetPlayerInputs()
 		buttonUp = keyboard_check(controlMappings.Keyboard_Arrows.buttonUp);
 		buttonDown = keyboard_check(controlMappings.Keyboard_Arrows.buttonDown) * -1;
 
-		buttonLight = keyboard_check(controlMappings.Keyboard_Arrows.buttonLight);
-		buttonMedium = keyboard_check(controlMappings.Keyboard_Arrows.buttonMedium);
+		buttonLight = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonLight);
+		buttonMedium = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonMedium);
 		buttonHeavy = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonHeavy);
 		buttonSpecial = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonSpecial);
 		buttonGrab = keyboard_check_pressed(controlMappings.Keyboard_Arrows.buttonGrab);
