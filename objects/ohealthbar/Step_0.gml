@@ -13,7 +13,7 @@ if (attatchedTo != noone)
 	}
 	
 	// if the object that we are attached to is NOT in hitstun, update the damage sprite's length
-	if (attatchedTo.hitstun <= 0 && attatchedTo.state != eState.LAUNCHED)
+	if (attatchedTo.hitstun <= 0 && attatchedTo.state != eState.LAUNCHED && attatchedTo.prevState != eState.HURT)
 	{
 		if (abs(initialHealthXscale) != abs(image_xscale))
 		{
