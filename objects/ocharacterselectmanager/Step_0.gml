@@ -426,6 +426,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
         {
             global.p1SelectedCharacter = oGunther;
         }
+		else if (P1charSelCol == 1 && P1charSelRow == 1)
+        {
+            global.p1SelectedCharacter = oLuchador;
+        }
         else
         {
             P1hasSelectedChar = false;
@@ -587,6 +591,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 		else if (P2charSelCol == 0 && P2charSelRow == 1)
         {
             global.p2SelectedCharacter = oGunther;
+        }
+		else if (P2charSelCol == 1 && P2charSelRow == 1)
+        {
+            global.p2SelectedCharacter = oLuchador;
         }
         else
         {
