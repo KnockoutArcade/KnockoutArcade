@@ -2825,7 +2825,7 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Standing_Light2",
+      "SpriteName": "sLuchador_Standing_Light2",
       "Duration": 14,
       "NumberOfFrames": 4,
       "FrameData": [
@@ -2838,18 +2838,18 @@
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 4,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 8,
           "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 2,
+          "Start": 3,
           "Lifetime": 4,
           "AttackWidth": 25,
           "AttackHeight": 8,
@@ -3002,10 +3002,14 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Standing_Light3",
-      "Duration": 22,
-      "NumberOfFrames": 4,
+      "SpriteName": "sLuchador_Standing_Light3",
+      "Duration": 26,
+      "NumberOfFrames": 7,
       "FrameData": [
+        {
+          "Length": 1,
+          "ImageIndex": 0
+        },
         {
           "Length": 3,
           "ImageIndex": 1
@@ -3019,14 +3023,22 @@
           "ImageIndex": 3
         },
         {
-          "Length": 18,
+          "Length": 12,
           "ImageIndex": 4
+        },
+        {
+          "Length": 17,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 22,
+          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 6,
+          "Start": 9,
           "Lifetime": 3,
           "AttackWidth": 27,
           "AttackHeight": 8,
@@ -8104,6 +8116,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-11-16T16:12:51.1776729-07:00",
+  "LastModified": "2025-11-16T16:27:54.6208552-07:00",
   "LastModifiedBy": "creep"
 }
