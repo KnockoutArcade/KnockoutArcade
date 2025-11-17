@@ -444,6 +444,7 @@
     {"id":{"name":"sStageSelect_StageNames_strip5","path":"sprites/sStageSelect_StageNames_strip5/sStageSelect_StageNames_strip5.yy",},"order":3,},
     {"id":{"name":"sGunther_Crouch_Medium","path":"sprites/sGunther_Crouch_Medium/sGunther_Crouch_Medium.yy",},"order":30,},
     {"id":{"name":"sGuntherWins","path":"sprites/sGuntherWins/sGuntherWins.yy",},"order":3,},
+    {"id":{"name":"sLuchador_Standing_Heavy","path":"sprites/sLuchador_Standing_Heavy/sLuchador_Standing_Heavy.yy",},"order":5,},
     {"id":{"name":"sRussel_NSpecial","path":"sprites/sRussel_NSpecial/sRussel_NSpecial.yy",},"order":28,},
     {"id":{"name":"sFileSelect_NewGameText","path":"sprites/sFileSelect_NewGameText/sFileSelect_NewGameText.yy",},"order":6,},
     {"id":{"name":"sLuchador_Idle","path":"sprites/sLuchador_Idle/sLuchador_Idle.yy",},"order":0,},

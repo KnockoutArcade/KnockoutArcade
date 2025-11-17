@@ -3398,12 +3398,16 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Standing_Heavy",
-      "Duration": 36,
-      "NumberOfFrames": 7,
+      "SpriteName": "sLuchador_Standing_Heavy",
+      "Duration": 46,
+      "NumberOfFrames": 12,
       "FrameData": [
         {
-          "Length": 2,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 3,
           "ImageIndex": 1
         },
         {
@@ -3411,11 +3415,11 @@
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 10,
           "ImageIndex": 3
         },
         {
-          "Length": 15,
+          "Length": 14,
           "ImageIndex": 4
         },
         {
@@ -3423,23 +3427,39 @@
           "ImageIndex": 5
         },
         {
-          "Length": 25,
+          "Length": 24,
           "ImageIndex": 6
         },
         {
-          "Length": 33,
+          "Length": 30,
           "ImageIndex": 7
+        },
+        {
+          "Length": 32,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 35,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 41,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 44,
+          "ImageIndex": 11
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 12,
+          "Start": 14,
           "Lifetime": 5,
-          "AttackWidth": 23,
-          "AttackHeight": 20,
-          "WidthOffset": -1,
-          "HeightOffset": 0,
+          "AttackWidth": 46,
+          "AttackHeight": 15,
+          "WidthOffset": 2,
+          "HeightOffset": 17,
           "Group": 1,
           "Damage": 10,
           "MeterGain": 10.0,
@@ -3539,7 +3559,7 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 3,
+        "NumberOfWindows": 4,
         "Windows": [
           {
             "StartingFrame": 0,
@@ -3549,18 +3569,25 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 12,
-            "HorizontalSpeed": 24.0,
+            "StartingFrame": 1,
+            "HorizontalSpeed": 1.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 13,
+            "StartingFrame": 16,
+            "HorizontalSpeed": 3.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 17,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 1.0,
@@ -8116,6 +8143,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-11-16T17:12:27.8231621-07:00",
+  "LastModified": "2025-11-16T17:32:00.8634105-07:00",
   "LastModifiedBy": "creep"
 }
