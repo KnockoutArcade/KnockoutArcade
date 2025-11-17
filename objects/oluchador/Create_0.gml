@@ -15,6 +15,9 @@ for (var i = 0; i < global.numberOfCharacters; i++;)
 	}
 }
 
+// RUN ACCEL - PUT IN CHAR EDITOR
+runSpeedAcceleration = 1; // How fast the character accelerates to their top speed
+
 event_inherited();
 
 
