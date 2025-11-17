@@ -67,7 +67,7 @@
     "backdropXOffset": 0.0,
     "backdropYOffset": 0.0,
     "xorigin": 26,
-    "yorigin": 46,
+    "yorigin": 47,
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sLuchador_Standing_Light","path":"sprites/sLuchador_Standing_Light/sLuchador_Standing_Light.yy",},

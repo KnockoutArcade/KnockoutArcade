@@ -3191,10 +3191,14 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sRussel_Standing_Medium",
+      "SpriteName": "sLuchador_Standing_Medium",
       "Duration": 21,
       "NumberOfFrames": 6,
       "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
         {
           "Length": 3,
           "ImageIndex": 1
@@ -3212,22 +3216,18 @@
           "ImageIndex": 4
         },
         {
-          "Length": 15,
+          "Length": 19,
           "ImageIndex": 5
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
           "Start": 6,
-          "Lifetime": 4,
-          "AttackWidth": 20,
+          "Lifetime": 6,
+          "AttackWidth": 22,
           "AttackHeight": 8,
-          "WidthOffset": 10,
+          "WidthOffset": 8,
           "HeightOffset": 12,
           "Group": 1,
           "Damage": 6,
@@ -3345,7 +3345,7 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 5,
+            "StartingFrame": 6,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
@@ -8116,6 +8116,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-11-16T16:27:54.6208552-07:00",
+  "LastModified": "2025-11-16T17:05:28.673825-07:00",
   "LastModifiedBy": "creep"
 }
