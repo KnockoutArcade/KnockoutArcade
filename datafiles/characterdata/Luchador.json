@@ -1184,7 +1184,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sLuchador_Standing_Light",
-      "Duration": 8,
+      "Duration": 9,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -1200,7 +1200,7 @@
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 9,
           "ImageIndex": 3
         }
       ],
@@ -1217,18 +1217,18 @@
           "Damage": 3,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 8,
-          "AttackHitStun": 9,
+          "AttackHitStop": 9,
+          "AttackHitStun": 8,
           "AttackType": 1,
-          "BlockStun": 3.0,
-          "KnockBack": 7.0,
+          "BlockStun": 5.0,
+          "KnockBack": 9.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 1.0,
-          "Pushback": 7.0,
+          "Pushback": 9.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 5,
           "ParticleEffect": "sSmallHitspark",
@@ -1251,15 +1251,15 @@
           "MeterGain": 5.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 10,
-          "AttackHitStun": 11,
-          "KnockBack": 7.0,
+          "AttackHitStun": 10,
+          "KnockBack": 9.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
-          "Pushback": 7.0,
+          "Pushback": 9.0,
           "ParticleXOffset": 23,
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
@@ -1291,8 +1291,8 @@
           "Start": 4,
           "Lifetime": 6,
           "AttackWidth": 23,
-          "AttackHeight": 32,
-          "WidthOffset": -6,
+          "AttackHeight": 34,
+          "WidthOffset": -9,
           "HeightOffset": 0
         },
         {
@@ -1300,12 +1300,12 @@
           "Lifetime": 3,
           "AttackWidth": 15,
           "AttackHeight": 32,
-          "WidthOffset": -15,
+          "WidthOffset": -12,
           "HeightOffset": 0
         },
         {
           "Start": 4,
-          "Lifetime": 6,
+          "Lifetime": 4,
           "AttackWidth": 22,
           "AttackHeight": 10,
           "WidthOffset": 10,
@@ -8113,6 +8113,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-11-16T20:59:49.7384758-07:00",
+  "LastModified": "2025-11-17T21:10:34.3929666-07:00",
   "LastModifiedBy": "creep"
 }
