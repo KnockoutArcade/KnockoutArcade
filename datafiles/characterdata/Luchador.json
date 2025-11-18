@@ -1220,7 +1220,7 @@
           "AttackHitStop": 9,
           "AttackHitStun": 8,
           "AttackType": 1,
-          "BlockStun": 5.0,
+          "BlockStun": 4.0,
           "KnockBack": 9.0,
           "AirKnockbackVertical": -1.0,
           "AirKnockbackHorizontal": 1.0,
@@ -1289,7 +1289,7 @@
       "HurtboxData": [
         {
           "Start": 4,
-          "Lifetime": 6,
+          "Lifetime": 7,
           "AttackWidth": 23,
           "AttackHeight": 34,
           "WidthOffset": -9,
@@ -2834,45 +2834,45 @@
           "ImageIndex": 0
         },
         {
-          "Length": 2,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 4,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 8,
+          "Length": 9,
           "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 3,
-          "Lifetime": 4,
-          "AttackWidth": 25,
-          "AttackHeight": 8,
+          "Start": 4,
+          "Lifetime": 2,
+          "AttackWidth": 30,
+          "AttackHeight": 13,
           "WidthOffset": 12,
-          "HeightOffset": 15,
+          "HeightOffset": 12,
           "Group": 1,
           "Damage": 3,
           "MeterGain": 3.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 10,
-          "AttackHitStun": 14,
+          "AttackHitStop": 11,
+          "AttackHitStun": 10,
           "AttackType": 1,
           "BlockStun": 7.0,
           "KnockBack": -3.0,
           "AirKnockbackVertical": -1.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 1.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 2.0,
           "Pushback": 3.0,
-          "ParticleXOffset": 3,
-          "ParticleYOffset": 0,
+          "ParticleXOffset": 10,
+          "ParticleYOffset": 3,
           "ParticleEffect": "sSmallHitspark",
           "ParticleDuration": 20,
           "HoldXOffset": 0,
@@ -2896,14 +2896,14 @@
           "AttackHitStun": 14,
           "KnockBack": -3.0,
           "AirKnockbackVertical": -1.0,
-          "AirKnockbackHorizontal": 1.0,
+          "AirKnockbackHorizontal": 1.5,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 3.0,
           "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
+          "ParticleYOffset": 5,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "UseHitScript": false,
@@ -2927,22 +2927,30 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 2,
+      "NumberOfHurtboxes": 3,
       "HurtboxData": [
         {
-          "Start": 2,
-          "Lifetime": 10,
+          "Start": 1,
+          "Lifetime": 3,
           "AttackWidth": 28,
-          "AttackHeight": 10,
-          "WidthOffset": 4,
-          "HeightOffset": 12
+          "AttackHeight": 29,
+          "WidthOffset": -20,
+          "HeightOffset": 0
         },
         {
-          "Start": 1,
-          "Lifetime": 15,
-          "AttackWidth": 20,
-          "AttackHeight": 30,
-          "WidthOffset": -6,
+          "Start": 4,
+          "Lifetime": 12,
+          "AttackWidth": 24,
+          "AttackHeight": 32,
+          "WidthOffset": -1,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 4,
+          "Lifetime": 5,
+          "AttackWidth": 10,
+          "AttackHeight": 25,
+          "WidthOffset": 18,
           "HeightOffset": 0
         }
       ],
@@ -8113,6 +8121,6 @@
   },
   "Version": "Ver1.2.2",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-11-17T21:10:34.3929666-07:00",
+  "LastModified": "2025-11-17T21:25:09.0367948-07:00",
   "LastModifiedBy": "creep"
 }
