@@ -35,7 +35,7 @@ p1CharacterPortait_EndingPosition = [121, 78]; // The ending position of P1's po
 winningCharacter = global.p1SelectedCharacter; // The character that won the match
 losingCharacter = global.p2SelectedCharacter; // The character that lost the match
 
-winQuote = "THIS MESSAGE SHOULD NOT APPEAR"; // The win quote to display
+winQuote = "NO DIALOGUE YET"; // The win quote to display
 quoteLength = 0; // How long the quote is (in characters)
 displayQuote = ""; // The part of the quote that we are printing.
 quotePrintingLength = 0; // How much of the quote we have currently printed.
