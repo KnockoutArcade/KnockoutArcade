@@ -486,6 +486,7 @@
     {"id":{"name":"bgm_CharacterSelect_Loop","path":"sounds/bgm_CharacterSelect_Loop/bgm_CharacterSelect_Loop.yy",},"order":2,},
     {"id":{"name":"HandleKnockdownState","path":"scripts/HandleKnockdownState/HandleKnockdownState.yy",},"order":0,},
     {"id":{"name":"oAIBehavior_Enemy_Gin","path":"objects/oAIBehavior_Enemy_Gin/oAIBehavior_Enemy_Gin.yy",},"order":2,},
+    {"id":{"name":"sCharSel_NameLuchador","path":"sprites/sCharSel_NameLuchador/sCharSel_NameLuchador.yy",},"order":4,},
     {"id":{"name":"sLuchador_Standing_Light","path":"sprites/sLuchador_Standing_Light/sLuchador_Standing_Light.yy",},"order":1,},
     {"id":{"name":"sJay_StandLight1_Mockup_strip4","path":"sprites/sJay_StandLight1_Mockup_strip4/sJay_StandLight1_Mockup_strip4.yy",},"order":12,},
     {"id":{"name":"sGunther_Run_Forward","path":"sprites/sGunther_Run_Forward/sGunther_Run_Forward.yy",},"order":23,},

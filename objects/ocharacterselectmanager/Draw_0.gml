@@ -313,6 +313,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
     {
         draw_sprite(sGunther_Idle, 0 + P1charSelCurrentFrame, 29, 65);
     }
+	else if (P1charSelCol == 1 && P1charSelRow == 1)
+    {
+        draw_sprite(sLuchador_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+    }
     shader_reset();
 
     if (P1charSelCol == 0 && P1charSelRow == 0)
@@ -330,6 +334,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 	else if (P1charSelCol == 0 && P1charSelRow == 1)
     {
         draw_sprite(sCharSel_NameGunther, 0, 14, 69);
+    }
+	else if (P1charSelCol == 1 && P1charSelRow == 1)
+    {
+        draw_sprite(sCharSel_NameLuchador, 0, 14, 69);
     }
 
 
@@ -588,6 +596,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
     {
         draw_sprite_ext(sGunther_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
     }
+	else if (P2charSelCol == 1 && P2charSelRow == 1)
+    {
+        draw_sprite_ext(sLuchador_Idle, 0 + P2charSelCurrentFrame, 131, 65, -1, 1, 0, -1, 1);
+    }
     shader_reset();
 
     if (P2charSelCol == 0 && P2charSelRow == 0)
@@ -605,6 +617,10 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 	else if (P2charSelCol == 0 && P2charSelRow == 1)
     {
         draw_sprite(sCharSel_NameGunther, 0, 118, 69);
+    }
+	else if (P2charSelCol == 1 && P2charSelRow == 1)
+    {
+        draw_sprite(sCharSel_NameLuchador, 0, 118, 69);
     }
 
 
