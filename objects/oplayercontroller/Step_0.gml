@@ -695,7 +695,7 @@ if (state == eState.HITSTOP)
 	
 	hitstunShuffleTimer++;
 	
-	if (hitstun > 0 || prevState = eState.LAUNCHED)
+	if (prevState == eState.HURT || prevState == eState.LAUNCHED)
 	{
 		if (!isGrabbed && !wallBouncing && !floorBouncing)
 		{
