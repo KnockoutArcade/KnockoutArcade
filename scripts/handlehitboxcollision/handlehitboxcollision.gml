@@ -385,6 +385,15 @@ function HandleHitboxCollision(ownerType)
 						spirit.state = eState.HITSTOP;
 					}
 					
+					if (collision_list[| i].owner.spiritON || collision_list[| i].owner.pendingToggle) 
+					{
+						collision_list[| i].owner.spiritCurrentHealth -= attackProperty.ChipDamage;
+					}
+					else
+					{
+						collision_list[| i].owner.hp -= attackProperty.ChipDamage;
+					}
+					
 					// Face opponent towards the source of damage;
 					if (!collision_list[| i].owner.isDestructibleObject)
 					{
