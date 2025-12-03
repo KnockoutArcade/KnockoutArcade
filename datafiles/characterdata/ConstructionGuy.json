@@ -279,7 +279,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -437,8 +438,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.2",
+  "Version": "Ver1.2.3",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2024-06-03T13:32:25.6730353-07:00",
+  "LastModified": "2025-11-26T23:00:29.0697673-07:00",
   "LastModifiedBy": "creep"
 }

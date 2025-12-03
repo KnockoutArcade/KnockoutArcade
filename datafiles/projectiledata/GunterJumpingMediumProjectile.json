@@ -164,7 +164,8 @@
       "UseHitScript": false,
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
-      "HitSound": "sfx_light_hit2"
+      "HitSound": "sfx_light_hit2",
+      "ChipDamage": 0
     }
   ],
   "CounterData": [
@@ -199,8 +200,8 @@
     "NumberOfHits": 0,
     "HitOnFrames": []
   },
-  "Version": "Ver1.2.2",
+  "Version": "Ver1.2.3",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2025-06-21T12:10:09.701882-07:00",
+  "LastModified": "2025-12-02T19:14:49.0921999-07:00",
   "LastModifiedBy": "creep"
 }

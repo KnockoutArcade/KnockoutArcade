@@ -1240,7 +1240,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -1461,7 +1462,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -1682,7 +1684,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -1887,7 +1890,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_light_hit2",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -2090,7 +2094,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -2391,7 +2396,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -2564,7 +2570,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -2766,7 +2773,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -2943,7 +2951,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -3165,7 +3174,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -3338,7 +3348,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -3519,7 +3530,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -3700,7 +3712,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -3893,7 +3906,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -4093,7 +4107,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -4286,7 +4301,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -4482,7 +4498,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -5052,7 +5069,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": true
+          "ActivateTimeStop": true,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -5248,7 +5266,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         },
         {
           "Start": 23,
@@ -5284,7 +5303,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -5502,7 +5522,8 @@
           "CausesWallbounce": false,
           "HitSound": "",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -5679,7 +5700,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -5857,7 +5879,8 @@
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
-          "ActivateTimeStop": false
+          "ActivateTimeStop": false,
+          "ChipDamage": 0
         }
       ],
       "CounterData": [
@@ -6153,8 +6176,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.2",
+  "Version": "Ver1.2.3",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-08-28T22:39:22.4107338-07:00",
+  "LastModified": "2025-11-26T23:00:29.1057133-07:00",
   "LastModifiedBy": "creep"
 }
