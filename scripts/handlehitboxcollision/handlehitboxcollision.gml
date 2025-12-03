@@ -385,15 +385,6 @@ function HandleHitboxCollision(ownerType)
 						spirit.state = eState.HITSTOP;
 					}
 					
-					if (collision_list[| i].owner.spiritON || collision_list[| i].owner.pendingToggle) 
-					{
-						collision_list[| i].owner.spiritCurrentHealth -= attackProperty.ChipDamage;
-					}
-					else
-					{
-						collision_list[| i].owner.hp -= attackProperty.ChipDamage;
-					}
-					
 					// Face opponent towards the source of damage;
 					if (!collision_list[| i].owner.isDestructibleObject)
 					{
@@ -475,6 +466,28 @@ function HandleHitboxCollision(ownerType)
 						spirit.hitstop = attackProperty.AttackHitStop;
 					}
 					collision_list[| i].owner.hitstop = attackProperty.AttackHitStop;
+					
+					// Chip Damage (Spirits prevent their host from taking chip)
+					if (collision_list[| i].owner.spiritON || collision_list[| i].owner.pendingToggle) 
+					{
+						collision_list[| i].owner.spiritCurrentHealth -= attackProperty.ChipDamage;
+					}
+					else
+					{
+						collision_list[| i].owner.hp -= attackProperty.ChipDamage;
+						
+						// Detect death
+						if (collision_list[| i].owner.hp <= 0)
+						{
+							collision_list[| i].owner.prevState = eState.HURT;
+							collision_list[| i].owner.state = eState.HITSTOP;
+							collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;
+							
+							collision_list[| i].owner.vsp = -2;
+							collision_list[| i].owner.grounded = false;
+							collision_list[| i].owner.hsp = 2 * -collision_list[| i].owner.image_xscale; 
+						}
+					}
 					
 					// If this is not a projectile...
 					if (!isProjectile)
