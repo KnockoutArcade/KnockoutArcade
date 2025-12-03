@@ -349,7 +349,7 @@ pushbackVelTimer = 0;
 pushbackVelDuration = 5;
 
 maxHitPoints = selectedCharacter.MaxHP;
-hp = 5;
+hp = maxHitPoints;
 
 frameAdvantage = false;
 FAvictim = false;

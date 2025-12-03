@@ -406,6 +406,7 @@ if (hostObject.spiritCurrentHealth <= 0)
 	hostObject.grounded = false;
 	hostObject.vsp = -4; // Launches the player up
 	hostObject.hsp = 0;
+	hostObject.canBlock = false;
 
 	DeactivateSpirit(true);
 }
