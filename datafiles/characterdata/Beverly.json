@@ -4658,7 +4658,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         },
         {
           "Start": 16,
@@ -4695,7 +4695,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -6183,7 +6183,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -6588,7 +6588,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -6777,7 +6777,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -7148,7 +7148,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         },
         {
           "Start": 8,
@@ -7185,7 +7185,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -7634,7 +7634,7 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 2
         },
         {
           "Start": 16,
@@ -7671,7 +7671,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 2
         }
       ],
       "CounterData": [
@@ -8222,7 +8222,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 1
         }
       ],
       "CounterData": [
@@ -8388,6 +8388,6 @@
   },
   "Version": "Ver1.2.3",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-11-26T23:00:29.0212628-07:00",
+  "LastModified": "2025-12-03T22:06:23.5411506-07:00",
   "LastModifiedBy": "creep"
 }

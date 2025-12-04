@@ -92,7 +92,7 @@
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
       "HitSound": "sfx_Light_Hit",
-      "ChipDamage": 2
+      "ChipDamage": 1
     }
   ],
   "CounterData": [
@@ -129,6 +129,6 @@
   },
   "Version": "Ver1.2.3",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2025-12-02T19:15:13.0388031-07:00",
+  "LastModified": "2025-12-03T22:02:41.4521573-07:00",
   "LastModifiedBy": "creep"
 }
