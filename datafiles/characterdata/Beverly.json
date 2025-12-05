@@ -1234,7 +1234,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -1263,7 +1263,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -1427,7 +1427,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -1456,7 +1456,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -3861,7 +3861,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         },
         {
@@ -3893,14 +3893,14 @@
           "ParticleDuration": 5,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -3929,7 +3929,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         },
         {
@@ -3952,11 +3952,11 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -7277,7 +7277,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 1,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         },
         {
@@ -7316,7 +7316,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 1,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -7345,7 +7345,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         },
         {
@@ -7372,7 +7372,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -8367,7 +8367,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 1,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -8396,7 +8396,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -8536,6 +8536,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-04T21:08:29.887946-07:00",
+  "LastModified": "2025-12-04T21:14:44.2520494-07:00",
   "LastModifiedBy": "creep"
 }
