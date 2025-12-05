@@ -2625,7 +2625,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -3576,7 +3576,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -3605,7 +3605,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -4194,7 +4194,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -5786,7 +5786,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -5809,13 +5809,13 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
-          "CauseHardKnockdown": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -5969,7 +5969,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -5992,13 +5992,13 @@
           "Pushback": 0.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
-          "ParticleEffect": "",
+          "ParticleEffect": "sArcadeBackground",
           "ParticleDuration": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
-          "CauseHardKnockdown": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -6270,6 +6270,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2025-12-04T21:08:29.9733747-07:00",
+  "LastModified": "2025-12-04T21:22:31.9852903-07:00",
   "LastModifiedBy": "creep"
 }
