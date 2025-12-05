@@ -165,7 +165,9 @@
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
       "HitSound": "sfx_light_hit2",
-      "ChipDamage": 0
+      "ChipDamage": 0,
+      "CauseHardKnockdown": false,
+      "CauseFloorBounce": false
     }
   ],
   "CounterData": [
@@ -192,7 +194,9 @@
       "UseHitScript": false,
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
-      "HitSound": "sfx_light_hit2"
+      "HitSound": "sfx_light_hit2",
+      "CauseHardKnockdown": false,
+      "CauseFloorBounce": false
     }
   ],
   "RehitData": {
@@ -200,8 +204,8 @@
     "NumberOfHits": 0,
     "HitOnFrames": []
   },
-  "Version": "Ver1.2.3",
+  "Version": "Ver1.2.4",
   "UID": "d1f3835f-596a-4c9c-95c2-33db628ea161",
-  "LastModified": "2025-12-02T19:14:49.0921999-07:00",
+  "LastModified": "2025-12-04T21:08:30.0410771-07:00",
   "LastModifiedBy": "creep"
 }
