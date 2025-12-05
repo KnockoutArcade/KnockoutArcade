@@ -1241,7 +1241,9 @@
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -1268,7 +1270,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -1442,13 +1446,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -1472,10 +1478,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -1678,13 +1686,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -1708,10 +1718,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -1877,7 +1889,9 @@
           "HitSound": "",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -1904,7 +1918,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -2103,7 +2119,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "Start": 26,
@@ -2140,7 +2158,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -2167,7 +2187,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -2192,7 +2214,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -2535,7 +2559,9 @@
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "Start": 31,
@@ -2572,7 +2598,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -2599,7 +2627,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -2624,7 +2654,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -2883,7 +2915,9 @@
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -2910,7 +2944,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -3061,7 +3097,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -3088,7 +3126,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -3247,7 +3287,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -3274,7 +3316,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -3459,7 +3503,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -3486,7 +3532,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -3660,7 +3708,9 @@
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -3687,7 +3737,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit"
+          "HitSound": "sfx_Medium_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -3862,7 +3914,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "Start": 9,
@@ -3899,7 +3953,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -3926,7 +3982,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 2,
@@ -3951,7 +4009,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -4136,13 +4196,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -4166,10 +4228,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -4341,7 +4405,9 @@
           "HitSound": "sfx_Light_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -4368,7 +4434,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Light_Hit"
+          "HitSound": "sfx_Light_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -4527,7 +4595,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -4554,7 +4624,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -4723,13 +4795,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseFloorBounce",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": true
         },
         {
           "Start": 12,
@@ -4760,13 +4834,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseFloorBounce",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": true
         }
       ],
       "CounterData": [
@@ -4790,10 +4866,12 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 23,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseFloorBounce",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": true
         },
         {
           "CounterHitLevel": 3,
@@ -4815,10 +4893,12 @@
           "ParticleYOffset": 0,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 23,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseFloorBounce",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": true
         }
       ],
       "CommandNormalData": {
@@ -5017,7 +5097,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -5044,7 +5126,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -5303,7 +5387,9 @@
           "HitSound": "",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -5330,7 +5416,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": ""
+          "HitSound": "",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -5579,13 +5667,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 3
+          "ChipDamage": 3,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -5609,10 +5699,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 5,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -5853,7 +5945,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "Start": 23,
@@ -5890,7 +5984,9 @@
           "HitSound": "sfx_Medium_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0
+          "ChipDamage": 0,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -5917,7 +6013,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -5942,7 +6040,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -6321,7 +6421,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -6348,7 +6450,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -6560,13 +6664,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         },
         {
           "Start": 13,
@@ -6597,13 +6703,15 @@
           "ParticleDuration": 23,
           "HoldXOffset": 0,
           "HoldYOffset": 0,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -6627,10 +6735,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 23,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -6652,10 +6762,12 @@
           "ParticleYOffset": 10,
           "ParticleEffect": "sSparkEffect",
           "ParticleDuration": 23,
-          "UseHitScript": true,
-          "SupplementaryHitScript": "CauseHardKnockdown",
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -6878,7 +6990,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 2
+          "ChipDamage": 2,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -6905,7 +7019,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": true,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -7827,7 +7943,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 1
+          "ChipDamage": 1,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "Start": 72,
@@ -7864,7 +7982,9 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": true,
           "ActivateTimeStop": false,
-          "ChipDamage": 2
+          "ChipDamage": 2,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CounterData": [
@@ -7891,7 +8011,9 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         },
         {
           "CounterHitLevel": 3,
@@ -7915,8 +8037,10 @@
           "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit"
+          "CausesWallbounce": true,
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
         }
       ],
       "CommandNormalData": {
@@ -8127,6 +8251,6 @@
   },
   "Version": "Ver1.2.3",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2025-12-02T21:58:35.4984814-07:00",
+  "LastModified": "2025-12-04T20:55:09.2106297-07:00",
   "LastModifiedBy": "creep"
 }

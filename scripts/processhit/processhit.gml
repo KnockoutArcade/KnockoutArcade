@@ -11,10 +11,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 {
 	if (!isProjectile)
 	{
-		// TODO: Put these in the character editor
-		collision_list.owner.isExperiencingHardKnockdown = false;
-		collision_list.owner.floorBouncing = false;
-		
 		// Attack hit script
 		if (attackProperty.UseHitScript)
 		{
@@ -119,6 +115,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
+		collision_list.owner.isExperiencingHardKnockdown = attackProperty.CauseHardKnockdown;
+		collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
@@ -451,6 +449,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		}
 		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
+		collision_list.owner.isExperiencingHardKnockdown = attackProperty.CauseHardKnockdown;
+		collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
