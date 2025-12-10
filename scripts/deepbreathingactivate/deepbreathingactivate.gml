@@ -3,4 +3,9 @@
 function DeepBreathingActivate()
 {
 	hasSpecialCharge = true;
+	
+	if (animTimer == 1)
+	{
+		superMeter += 3;
+	}
 }

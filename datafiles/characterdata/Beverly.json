@@ -4981,20 +4981,24 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial",
-      "Duration": 48,
-      "NumberOfFrames": 3,
+      "Duration": 45,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 24,
+          "Length": 12,
           "ImageIndex": 1
         },
         {
-          "Length": 30,
+          "Length": 24,
           "ImageIndex": 2
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 3
         }
       ],
       "NumberOfHitboxes": 2,
@@ -5140,24 +5144,13 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 2,
+      "NumberOfEnhancements": 1,
       "SpecialData": [
         {
           "NumpadInput": "5",
           "ButtonPressRequired": true,
-          "StartingFrame": 1,
-          "EndingFrame": 24,
-          "EnhancementMove": 2,
-          "TransitionImmediately": true,
-          "TransitionFrame": 0,
-          "RequiredPosition": 0,
-          "DeactivateSpirit": false
-        },
-        {
-          "NumpadInput": "5",
-          "ButtonPressRequired": true,
-          "StartingFrame": 25,
-          "EndingFrame": 30,
+          "StartingFrame": 24,
+          "EndingFrame": 29,
           "EnhancementMove": 128,
           "TransitionImmediately": true,
           "TransitionFrame": 0,
@@ -5179,7 +5172,7 @@
           "Lifetime": 49,
           "AttackWidth": 14,
           "AttackHeight": 34,
-          "WidthOffset": -9,
+          "WidthOffset": -6,
           "HeightOffset": 0
         }
       ],
@@ -7531,7 +7524,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial_Success",
-      "Duration": 23,
+      "Duration": 10,
       "NumberOfFrames": 0,
       "FrameData": [],
       "NumberOfHitboxes": 0,
@@ -8536,6 +8529,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-04T21:14:44.2520494-07:00",
+  "LastModified": "2025-12-09T20:34:12.4714211-07:00",
   "LastModifiedBy": "creep"
 }

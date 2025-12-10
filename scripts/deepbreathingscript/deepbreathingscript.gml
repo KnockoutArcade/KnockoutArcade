@@ -16,7 +16,7 @@ function DeepBreathingScript()
 		inputWindowStart = [];
 		inputWindowEnd = [];
 		requireSpecialButton = false;
-		SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial, 0);
+		//SetSpiritMoveData(true, selectedCharacter.EnhancedDownSpecial, 0);
 		if (spiritObject != noone)
 		{
 			with (spiritObject)
@@ -28,5 +28,17 @@ function DeepBreathingScript()
 		
 		animTimer = 0;
 		image_index = 0;
+	}
+	else
+	{
+		if (animTimer == 1) 
+		{
+			hsp *= 0.5;
+		}
+		
+		if (animTimer >= 30)
+		{
+			hasSpecialCharge = true;
+		}
 	}
 }
