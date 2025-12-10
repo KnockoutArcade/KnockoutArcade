@@ -40,6 +40,8 @@ spiritbar1 = noone;
 spiritbar2 = noone;
 TimerObject = noone;
 hudObject = noone;
+specialChargeIcon1 = noone;
+specialChargeIcon2 = noone;
 
 calculateFrameData = false;
 frameAdvantage = 0;

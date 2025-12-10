@@ -77,6 +77,24 @@ function SetupGame()
 				controllerSlot = global.player1ControllerSlot;
 			}
 		
+			// Special Charge Icon (for Beverly)
+			specialChargeIcon1 = instance_create_layer(63, 24, "UI", oSpecialChargeIcon);
+			with (specialChargeIcon1)
+			{
+				owner = other.p1;
+				ui_offsetX = x;
+				ui_offsetY = y;
+			}
+			
+			specialChargeIcon2 = instance_create_layer(97, 24, "UI", oSpecialChargeIcon);
+			with (specialChargeIcon2)
+			{
+				owner = other.p2;
+				ui_offsetX = x;
+				ui_offsetY = y;
+				image_xscale = -1;
+			}
+			
 			healthbar1 = instance_create_layer(71, 16, "UI", oHealthbar);
 			with (healthbar1) 
 			{
@@ -173,6 +191,8 @@ function SetupGame()
 				ui_xOffset = x;
 				ui_yOffset = y;
 			}
+			
+			
 			
 			// Frame Advantage
 			frameAdvantage = 0;

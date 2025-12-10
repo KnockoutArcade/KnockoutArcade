@@ -31,7 +31,7 @@ if (!global.togglePresentationMode)
 	var displayMeter = min(owner.superMeter, 100);
 	
 	// Fill up depending on how full the player's meter is
-	if (meterDir = -1)
+	if (meterDir == -1)
 	{
 		draw_sprite_ext(sSuperMeterBar, meterIndex, x+4 + 53, y+7, ((meterDir * displayMeter) / 100) * 53, 1, 0, c_white, 1);
 	}
