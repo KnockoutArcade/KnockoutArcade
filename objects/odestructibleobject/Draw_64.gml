@@ -10,7 +10,7 @@ draw_set_color(c_white);
 	
 //draw_text(750, 10, duration);
 //draw_text(750, 30, canSpawnHitboxes);
-draw_text(750, 50, hitstun);
+draw_text(750, 50, image_xscale);
 
 var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			

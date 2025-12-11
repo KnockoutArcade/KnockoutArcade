@@ -129,6 +129,7 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	image_angle = previousAngle;
 	
+	// Runs out of hits
 	if (projectileHealth <= 0)
 	{
 		destroyScript();
