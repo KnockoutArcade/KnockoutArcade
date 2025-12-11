@@ -129,6 +129,11 @@ if (!global.gameHalt && !global.freezeTimer)
 	
 	image_angle = previousAngle;
 	
+	if (projectileHealth <= 0)
+	{
+		destroyScript();
+	}
+	
 	#endregion
 	
 	if (hitstopTimer <= 0)

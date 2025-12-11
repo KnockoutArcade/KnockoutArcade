@@ -137,11 +137,4 @@ projectileMeetingScript = function ProjectileMeetingScript(collisionID, createCo
 			sprite_index = sFireballCollision;
 		}
 	}
-	
-	
-	if (projectileHealth <= 0)
-	{
-		destroyScript();
-	}
-
 }
