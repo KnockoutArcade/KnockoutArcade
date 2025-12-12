@@ -2012,7 +2012,7 @@
           "HeightOffset": 4,
           "Group": 1,
           "Damage": 5,
-          "MeterGain": 4.0,
+          "MeterGain": 5.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 13,
           "AttackHitStun": 16,
@@ -5976,7 +5976,7 @@
           "HeightOffset": 0,
           "Group": 0,
           "Damage": 4,
-          "MeterGain": 3.0,
+          "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 13,
           "AttackHitStun": 16,
@@ -6895,7 +6895,7 @@
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 1,
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -6903,8 +6903,8 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 6,
-          "MeterGain": 6.0,
+          "Damage": 7,
+          "MeterGain": 7.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
           "AttackHitStun": 20,
@@ -6924,7 +6924,7 @@
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
           "HitSound": "sfx_Heavy_Hit",
-          "CauseHardKnockdown": false,
+          "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
       ],
@@ -8529,6 +8529,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-11T21:19:58.1323632-07:00",
+  "LastModified": "2025-12-11T21:27:56.7378933-07:00",
   "LastModifiedBy": "creep"
 }
