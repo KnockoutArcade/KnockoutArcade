@@ -2299,7 +2299,7 @@
       "SwitchMoveset": true,
       "SwitchToMoveset": 2,
       "SpriteName": "sJay_Standing_Light2",
-      "Duration": 25,
+      "Duration": 12,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -7080,7 +7080,7 @@
       "SwitchMoveset": true,
       "SwitchToMoveset": 1,
       "SpriteName": "sJay_Standing_Light2",
-      "Duration": 25,
+      "Duration": 12,
       "NumberOfFrames": 7,
       "FrameData": [
         {
@@ -9718,6 +9718,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2025-12-04T21:20:02.2267088-07:00",
+  "LastModified": "2025-12-11T21:39:55.9418017-07:00",
   "LastModifiedBy": "creep"
 }
