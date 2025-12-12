@@ -20,6 +20,19 @@ if (hitstun != 0)
 }
 
 // If we have been hit by the player who spawned this, create a hitbox
+if (mostRecentIDHitBy == playerOwner && ds_list_size(hitboxID) <= 0 && canSpawnHitboxes)
+{
+	hasSpawnedHitboxes = false;
+	
+	PerformProjectile(id, spiritOwner);
+}
+else if (mostRecentIDHitBy != playerOwner)
+{
+	isHitByOpponent = true;
+}
+
+
+/*
 if (variable_struct_exists(hasBeenHitByIds, string(playerOwner.id)) && ds_list_size(hitboxID) <= 0 && canSpawnHitboxes)
 {
 	hasSpawnedHitboxes = false;
@@ -36,7 +49,7 @@ if (array_length(_hasBeenHitBy) > 0)
 		isHitByOpponent = true;
 	}
 }
-
+*/
 
 if (hasHitSomething || (hsp == 0 && vsp == 0) || isHitByOpponent)
 {
