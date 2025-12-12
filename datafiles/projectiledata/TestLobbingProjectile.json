@@ -3,8 +3,8 @@
   "HasLifetime": true,
   "Lifetime": 120,
   "AnimationSpeed": 0,
-  "HorizontalSpeed": 2.5,
-  "VerticalSpeed": -5.0,
+  "HorizontalSpeed": 2.75,
+  "VerticalSpeed": -4.5,
   "EnvironmentalDisplacement": 0,
   "FallSpeed": 0.5,
   "GroundTraction": 0.0,
@@ -133,6 +133,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "e6e73233-e57b-4ba6-afb8-4bac0656d1c0",
-  "LastModified": "2025-12-04T21:08:30.0455917-07:00",
+  "LastModified": "2025-12-11T21:34:38.8314167-07:00",
   "LastModifiedBy": "creep"
 }
