@@ -41,8 +41,8 @@ else
 	
 	draw_text(750, 10, state);
 	draw_text(750, 30, animTimer);
-	draw_text(750, 50, hasUsedFloorBounce);
-	draw_text(750, 70, floorBouncing);
+	draw_text(750, 50, storedSuperJump);
+	draw_text(750, 70, superJumpTimer);
 	draw_text(750, 90, hitstun);
 	
 	

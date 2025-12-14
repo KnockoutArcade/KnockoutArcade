@@ -384,19 +384,18 @@ if (rcBuffer)
 }
 
 // Handle storing input for Super Jump
-if (superJumpTimer > 0) 
-{
-	superJumpTimer--;
-} 
-else
-{
-	storedSuperJump = false;
-}
-
 if (verticalMoveDir == -1)
 {
-	storedSuperJump = true;
-	superJumpTimer = 6;
+	superJumpTimer++;
+	
+	if (superJumpTimer > 0 && superJumpTimer <= 6)
+	{
+		storedSuperJump = true;
+	}
+	else
+	{
+		storedSuperJump = false;
+	}
 	
 	// Handle Down-Up Charge
 	downUpChargeTimer++;
@@ -404,6 +403,7 @@ if (verticalMoveDir == -1)
 }
 else
 {
+	superJumpTimer = 0;
 	chargePartitionTimer--;
 	if (chargePartitionTimer <= 0 && !bufferCharge)
 	{
