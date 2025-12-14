@@ -116,7 +116,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		collision_list.owner.isExperiencingHardKnockdown = attackProperty.CauseHardKnockdown;
-		collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
+		if (!collision_list.owner.hasUsedFloorBounce)
+		{
+			collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
+		}
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
@@ -450,7 +453,10 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		
 		collision_list.owner.wallBouncing = attackProperty.CausesWallbounce;
 		collision_list.owner.isExperiencingHardKnockdown = attackProperty.CauseHardKnockdown;
-		collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
+		if (!collision_list.owner.hasUsedFloorBounce)
+		{
+			collision_list.owner.floorBouncing = attackProperty.CauseFloorBounce;
+		}
 		
 		if (collision_list.owner.spiritON || collision_list.owner.pendingToggle) 
 		{
