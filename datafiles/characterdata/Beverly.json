@@ -3804,7 +3804,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Crouch_Heavy",
       "Duration": 31,
-      "NumberOfFrames": 5,
+      "NumberOfFrames": 10,
       "FrameData": [
         {
           "Length": 0,
@@ -3825,6 +3825,26 @@
         {
           "Length": 13,
           "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 27,
+          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 2,
@@ -8533,6 +8553,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-15T21:37:08.0168628-07:00",
+  "LastModified": "2025-12-15T22:31:06.8584661-07:00",
   "LastModifiedBy": "creep"
 }
