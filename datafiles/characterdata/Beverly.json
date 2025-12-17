@@ -3856,7 +3856,7 @@
           "Damage": 6,
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 14,
+          "AttackHitStop": 6,
           "AttackHitStun": 11,
           "AttackType": 2,
           "BlockStun": 10.0,
@@ -8549,6 +8549,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-16T22:11:38.3656328-07:00",
+  "LastModified": "2025-12-16T22:13:38.3716823-07:00",
   "LastModifiedBy": "creep"
 }
