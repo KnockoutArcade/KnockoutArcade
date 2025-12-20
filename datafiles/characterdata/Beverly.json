@@ -3069,7 +3069,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandHeavy",
-      "Duration": 28,
+      "Duration": 32,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -3089,11 +3089,11 @@
           "ImageIndex": 4
         },
         {
-          "Length": 20,
+          "Length": 22,
           "ImageIndex": 5
         },
         {
-          "Length": 24,
+          "Length": 28,
           "ImageIndex": 6
         }
       ],
@@ -8549,6 +8549,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2025-12-16T22:13:38.3716823-07:00",
+  "LastModified": "2025-12-19T17:55:11.8524889-07:00",
   "LastModifiedBy": "creep"
 }
