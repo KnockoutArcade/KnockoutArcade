@@ -17,7 +17,7 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, combo);
+	draw_text(20, 50, gravityScaling);
 	draw_text(20, 70, storedComboDamage);
 	draw_text(20, 90, hitstun);
 	
@@ -41,8 +41,8 @@ else
 	
 	draw_text(750, 10, state);
 	draw_text(750, 30, animTimer);
-	draw_text(750, 50, storedSuperJump);
-	draw_text(750, 70, superJumpTimer);
+	draw_text(750, 50, gravityScaling);
+	draw_text(750, 70, storedComboDamage);
 	draw_text(750, 90, hitstun);
 	
 	
