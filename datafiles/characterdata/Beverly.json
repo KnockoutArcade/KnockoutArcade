@@ -4326,12 +4326,12 @@
           "Lifetime": 6,
           "AttackWidth": 32,
           "AttackHeight": 12,
-          "WidthOffset": 0,
-          "HeightOffset": 1,
+          "WidthOffset": -2,
+          "HeightOffset": -2,
           "Group": 1,
           "Damage": 8,
-          "MeterGain": 6.0,
-          "ComboScaling": 2.0,
+          "MeterGain": 8.0,
+          "ComboScaling": 1.0,
           "AttackHitStop": 12,
           "AttackHitStun": 18,
           "AttackType": 0,
@@ -4342,9 +4342,9 @@
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
-          "GravityScaling": 3.0,
+          "GravityScaling": 2.0,
           "Pushback": 6.0,
-          "ParticleXOffset": 10,
+          "ParticleXOffset": 20,
           "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 5,
@@ -4378,14 +4378,14 @@
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 0.0,
           "Pushback": 6.0,
-          "ParticleXOffset": 18,
-          "ParticleYOffset": 10,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 0,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Medium_Hit",
+          "HitSound": "sfx_Heavy_Hit",
           "CauseHardKnockdown": false,
           "CauseFloorBounce": false
         }
@@ -4409,19 +4409,19 @@
       "HurtboxData": [
         {
           "Start": 8,
-          "Lifetime": 13,
+          "Lifetime": 22,
           "AttackWidth": 32,
-          "AttackHeight": 12,
+          "AttackHeight": 18,
           "WidthOffset": -6,
-          "HeightOffset": 5
+          "HeightOffset": 1
         },
         {
           "Start": 1,
-          "Lifetime": 28,
-          "AttackWidth": 15,
+          "Lifetime": 33,
+          "AttackWidth": 18,
           "AttackHeight": 28,
           "WidthOffset": -9,
-          "HeightOffset": 9
+          "HeightOffset": 5
         }
       ],
       "NumberOfProjectiles": 0,
@@ -8577,6 +8577,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-01T14:49:14.0673794-07:00",
+  "LastModified": "2026-01-01T16:13:28.9249409-07:00",
   "LastModifiedBy": "creep"
 }
