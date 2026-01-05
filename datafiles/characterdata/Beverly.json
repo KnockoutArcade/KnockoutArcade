@@ -4482,27 +4482,43 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Jump_Heavy",
       "Duration": 30,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 7,
       "FrameData": [
         {
-          "Length": 7,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 11,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 15,
+          "Length": 11,
           "ImageIndex": 3
+        },
+        {
+          "Length": 13,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 17,
+          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 7,
-          "Lifetime": 4,
-          "AttackWidth": 25,
+          "Start": 9,
+          "Lifetime": 3,
+          "AttackWidth": 30,
           "AttackHeight": 13,
           "WidthOffset": 3,
           "HeightOffset": 5,
@@ -4539,7 +4555,7 @@
           "CauseFloorBounce": false
         },
         {
-          "Start": 15,
+          "Start": 17,
           "Lifetime": 4,
           "AttackWidth": 25,
           "AttackHeight": 10,
@@ -8577,6 +8593,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-01T16:13:28.9249409-07:00",
+  "LastModified": "2026-01-04T20:44:19.5496987-07:00",
   "LastModifiedBy": "creep"
 }
