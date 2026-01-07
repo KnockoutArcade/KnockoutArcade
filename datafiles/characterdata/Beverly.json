@@ -5561,14 +5561,14 @@
           },
           {
             "StartingFrame": 13,
-            "HorizontalSpeed": 5.0,
-            "VerticalSpeed": 5.0,
+            "HorizontalSpeed": 4.0,
+            "VerticalSpeed": 6.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
             "StartingFrame": 20,
-            "HorizontalSpeed": 3.0,
+            "HorizontalSpeed": 4.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -8617,6 +8617,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-04T22:08:52.1126761-07:00",
+  "LastModified": "2026-01-06T21:35:43.5744856-07:00",
   "LastModifiedBy": "creep"
 }
