@@ -5424,17 +5424,37 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Jump_Divekick",
       "Duration": 72,
-      "NumberOfFrames": 1,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 11,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 3,
           "ImageIndex": 1
+        },
+        {
+          "Length": 5,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 9,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 14,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 13,
+          "Start": 14,
           "Lifetime": 60,
           "AttackWidth": 19,
           "AttackHeight": 19,
@@ -5546,36 +5566,43 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 1.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 3,
+        "NumberOfWindows": 4,
         "Windows": [
           {
-            "StartingFrame": 0,
-            "HorizontalSpeed": -0.3,
-            "VerticalSpeed": -0.6,
+            "StartingFrame": 1,
+            "HorizontalSpeed": -0.1,
+            "VerticalSpeed": -2.1,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 13,
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 16,
             "HorizontalSpeed": 4.0,
-            "VerticalSpeed": 6.0,
+            "VerticalSpeed": 5.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 20,
+            "StartingFrame": 17,
             "HorizontalSpeed": 4.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.9
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -8617,6 +8644,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-06T21:35:43.5744856-07:00",
+  "LastModified": "2026-01-12T22:00:41.0315888-07:00",
   "LastModifiedBy": "creep"
 }
