@@ -5601,8 +5601,8 @@
             "OverwriteHorizontalSpeed": true
           }
         ],
-        "GravityScale": 1.0,
-        "FallScale": 0.9
+        "GravityScale": 0.9,
+        "FallScale": 1.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -8644,6 +8644,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-12T22:00:41.0315888-07:00",
+  "LastModified": "2026-01-12T22:04:13.9429606-07:00",
   "LastModifiedBy": "creep"
 }
