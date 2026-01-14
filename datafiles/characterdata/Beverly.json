@@ -5424,7 +5424,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_Jump_Divekick",
       "Duration": 72,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 14,
       "FrameData": [
         {
           "Length": 0,
@@ -5449,6 +5449,38 @@
         {
           "Length": 14,
           "ImageIndex": 5
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 22,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 26,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 9
         }
       ],
       "NumberOfHitboxes": 1,
@@ -8644,6 +8676,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-12T22:04:13.9429606-07:00",
+  "LastModified": "2026-01-13T20:46:20.4668134-07:00",
   "LastModifiedBy": "creep"
 }
