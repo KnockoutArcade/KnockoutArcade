@@ -5683,14 +5683,14 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CommandNormal",
       "Duration": 26,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 5,
+          "Length": 7,
           "ImageIndex": 1
         },
         {
@@ -5698,15 +5698,23 @@
           "ImageIndex": 2
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 3
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
           "Start": 10,
-          "Lifetime": 6,
+          "Lifetime": 4,
           "AttackWidth": 40,
           "AttackHeight": 10,
           "WidthOffset": -5,
@@ -5718,7 +5726,7 @@
           "AttackHitStop": 12,
           "AttackHitStun": 18,
           "AttackType": 1,
-          "BlockStun": 8.0,
+          "BlockStun": 13.0,
           "KnockBack": 12.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 2.0,
@@ -5818,7 +5826,7 @@
         "NumberOfWindows": 4,
         "Windows": [
           {
-            "StartingFrame": 0,
+            "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -5826,20 +5834,20 @@
           },
           {
             "StartingFrame": 2,
-            "HorizontalSpeed": 1.5,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
-          },
-          {
-            "StartingFrame": 8,
             "HorizontalSpeed": 1.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 12,
+            "StartingFrame": 10,
+            "HorizontalSpeed": 2.1,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 16,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -5894,7 +5902,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CommandNormal",
       "Duration": 26,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 6,
       "FrameData": [
         {
           "Length": 0,
@@ -5909,8 +5917,16 @@
           "ImageIndex": 2
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 3
+        },
+        {
+          "Length": 16,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 1,
@@ -5929,7 +5945,7 @@
           "AttackHitStop": 12,
           "AttackHitStun": 18,
           "AttackType": 1,
-          "BlockStun": 8.0,
+          "BlockStun": 13.0,
           "KnockBack": 9.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 2.0,
@@ -6044,7 +6060,7 @@
           },
           {
             "StartingFrame": 8,
-            "HorizontalSpeed": -0.75,
+            "HorizontalSpeed": -1.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
@@ -8684,6 +8700,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-13T21:09:21.6961725-07:00",
+  "LastModified": "2026-01-17T23:28:13.0091867-07:00",
   "LastModifiedBy": "creep"
 }
