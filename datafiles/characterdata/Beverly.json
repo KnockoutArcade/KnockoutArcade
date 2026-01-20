@@ -5710,15 +5710,15 @@
           "ImageIndex": 5
         },
         {
-          "Length": 21,
+          "Length": 19,
           "ImageIndex": 6
         },
         {
-          "Length": 24,
+          "Length": 22,
           "ImageIndex": 7
         },
         {
-          "Length": 26,
+          "Length": 25,
           "ImageIndex": 8
         }
       ],
@@ -5941,15 +5941,15 @@
           "ImageIndex": 5
         },
         {
-          "Length": 21,
+          "Length": 19,
           "ImageIndex": 6
         },
         {
-          "Length": 24,
+          "Length": 22,
           "ImageIndex": 7
         },
         {
-          "Length": 26,
+          "Length": 25,
           "ImageIndex": 8
         }
       ],
@@ -6069,7 +6069,7 @@
         "NumberOfWindows": 4,
         "Windows": [
           {
-            "StartingFrame": 0,
+            "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -6083,14 +6083,14 @@
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 8,
-            "HorizontalSpeed": -1.0,
+            "StartingFrame": 10,
+            "HorizontalSpeed": -2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 12,
+            "StartingFrame": 15,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -8724,6 +8724,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-19T20:50:47.635561-07:00",
+  "LastModified": "2026-01-19T20:57:09.1965234-07:00",
   "LastModifiedBy": "creep"
 }
