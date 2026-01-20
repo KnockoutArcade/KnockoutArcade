@@ -5683,31 +5683,43 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CommandNormal",
       "Duration": 26,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 7,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 10,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 10,
           "ImageIndex": 3
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 20,
+          "Length": 16,
           "ImageIndex": 5
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 26,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
@@ -5902,31 +5914,43 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_CommandNormal",
       "Duration": 26,
-      "NumberOfFrames": 6,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 8,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 10,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 10,
           "ImageIndex": 3
         },
         {
-          "Length": 16,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 20,
+          "Length": 16,
           "ImageIndex": 5
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 26,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
@@ -8700,6 +8724,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-17T23:32:49.4320803-07:00",
+  "LastModified": "2026-01-19T20:50:47.635561-07:00",
   "LastModifiedBy": "creep"
 }
