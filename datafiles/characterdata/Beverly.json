@@ -5074,7 +5074,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 6
     },
     {
       "UID": "4014c4eb-f2e9-4750-9633-50f3736dc021",
@@ -5516,9 +5516,9 @@
           "MeterGain": 4.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 15,
-          "AttackHitStun": 13,
+          "AttackHitStun": 16,
           "AttackType": 0,
-          "BlockStun": 5.0,
+          "BlockStun": 9.0,
           "KnockBack": 6.0,
           "AirKnockbackVertical": 1.0,
           "AirKnockbackHorizontal": 2.0,
@@ -5552,7 +5552,7 @@
           "MeterGain": 10.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 19,
-          "AttackHitStun": 14,
+          "AttackHitStun": 17,
           "KnockBack": 6.0,
           "AirKnockbackVertical": 3.0,
           "AirKnockbackHorizontal": 2.0,
@@ -5690,7 +5690,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 6
+      "LandingLag": 4
     },
     {
       "UID": "002b23a6-d787-4a25-a6ad-1682ace2b41d",
@@ -8760,6 +8760,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-21T20:25:18.270938-07:00",
+  "LastModified": "2026-01-21T21:20:46.5757014-07:00",
   "LastModifiedBy": "creep"
 }
