@@ -720,7 +720,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Properties on Counter Hit
-					if (collision_list[| i].owner.inAttackState)
+					if (collision_list[| i].owner.inAttackState || collision_list[| i].owner.landingLag > 0)
 					{
 						// Determine if we should display the coutner hit text on the p1 or p2 side
 						var isP2 = (ownerType.playerID == 2);

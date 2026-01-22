@@ -7928,7 +7928,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_UpSpecial",
-      "Duration": 60,
+      "Duration": 90,
       "NumberOfFrames": 5,
       "FrameData": [
         {
@@ -8205,7 +8205,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 15
     },
     {
       "UID": "c2386cb8-fa0f-4236-8f55-ef2cba60cca2",
@@ -8760,6 +8760,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-21T20:08:28.8004844-07:00",
+  "LastModified": "2026-01-21T20:25:18.270938-07:00",
   "LastModifiedBy": "creep"
 }
