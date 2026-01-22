@@ -68,6 +68,7 @@ state = eState.IDLE;
 	shuffle = 0;
 	spiritON = false;
 	canCollideWithPlayers = false;
+	landingLag = 0;
 
 	isGrabbed = false;
 

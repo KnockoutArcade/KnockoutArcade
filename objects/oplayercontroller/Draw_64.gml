@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, grounded);
 	draw_text(20, 70, landingLag);
-	draw_text(20, 90, hitstun);
+	draw_text(20, 90, bufferAttackInput);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			

@@ -195,7 +195,7 @@ if (!inAttackState && movedir != 0)
 }
 
 // Reset General Input Buffer
-if (!inAttackState && state != eState.HURT && state != eState.RUN_BACKWARD) 
+if (!inAttackState && state != eState.HURT && state != eState.RUN_BACKWARD && state != eState.LANDING_LAG) 
 {
 	bufferAttackInput = 0;
 }
@@ -3246,10 +3246,16 @@ switch state
 		image_index = 0;
 		image_speed = 1;
 		
-		hsp = 0;
+		vsp += fallSpeed;
 		
 		landingLag--;
 		inAttackState = false;
+		grounded = true;
+		
+		if (attack != 0)
+		{
+			bufferAttackInput = attack;
+		}
 		
 		if (landingLag <= 0)
 		{
@@ -3258,6 +3264,27 @@ switch state
 			canTurnAround = true;
 			canBlock = true;
 			frameAdvantage = true;
+			
+			// buffer inputs
+			if (bufferAttackInput != 0)
+			{
+				// Turn around to face opponent
+				if (opponent != noone && grounded)
+				{
+					if (x < opponent.x)
+					{
+						image_xscale = 1;
+					}
+					else if (x != opponent.x)
+					{
+						image_xscale = -1;
+					}
+				}
+			
+				PressAttackButton(bufferAttackInput);
+				bufferAttackInput = 0;
+				canBlock = false;
+			}
 		}
 	}
 	break;
@@ -3763,6 +3790,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			canTurnAround = false;
 			isThrowable = true;
 			gravityScaling = 0;
+			hsp *= 0.5;
 			
 			hasUsedAirNeutralSpecial = false;
 			hasUsedAirSideSpecial = false;
@@ -3788,7 +3816,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 }
 
 // Semisolid Platform Collision
-var semiSolidCollisionCheck = place_meeting(x, y+vsp+fallSpeed, oSemiSolid);
+var semiSolidCollisionCheck = place_meeting(x, y+vsp, oSemiSolid);
 var collisionID = noone;
 
 if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
