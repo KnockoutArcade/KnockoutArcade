@@ -17,8 +17,8 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, gravityScaling);
-	draw_text(20, 70, cancelOnLanding);
+	draw_text(20, 50, grounded);
+	draw_text(20, 70, landingLag);
 	draw_text(20, 90, hitstun);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

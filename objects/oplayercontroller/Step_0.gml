@@ -3246,13 +3246,16 @@ switch state
 		image_index = 0;
 		image_speed = 1;
 		
+		hsp = 0;
+		
 		landingLag--;
-		inAttackState = true;
+		inAttackState = false;
 		
 		if (landingLag <= 0)
 		{
 			state = eState.IDLE;
 			animTimer = 0;
+			canTurnAround = true;
 		}
 	}
 	break;
@@ -3755,7 +3758,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			state = eState.LANDING_LAG;
 			grounded = true;
 			frameAdvantage = true;
-			inAttackState = true;
+			inAttackState = false;
 			canTurnAround = false;
 			isThrowable = true;
 			gravityScaling = 0;
