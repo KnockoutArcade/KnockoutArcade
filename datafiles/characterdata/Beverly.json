@@ -1357,7 +1357,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "3040e46f-52a4-4da8-a6e6-579ca058c124",
@@ -1550,7 +1551,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "b37e1485-d5f2-406e-8117-ac743c7ddccc",
@@ -1740,7 +1742,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "02964764-f1b3-4099-9866-309811d6e312",
@@ -1973,7 +1976,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "032032e6-71fc-4f2c-bf79-7b5e75d8fe99",
@@ -2273,7 +2277,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "150230bc-e2a4-4d88-95ad-49e12dbdd02d",
@@ -2451,7 +2456,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "39969ce0-55a8-4628-a404-8492204900e1",
@@ -2644,7 +2650,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "68718318-582f-484f-85b8-a8b46471ea81",
@@ -2837,7 +2844,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "4a32edd2-9506-46f2-ba64-e6a8dbaaa48f",
@@ -3057,7 +3065,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "8e403acc-1ddd-4663-84e0-c0e323676d8c",
@@ -3423,7 +3432,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "e1b610d0-50bf-4ce8-a949-ce5a17ba2d0b",
@@ -3605,7 +3615,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "92e06525-08fd-4a6b-944a-a126c1911d81",
@@ -3791,7 +3802,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "1db3ebc9-02fa-4b83-8763-adfe9e24d63d",
@@ -4081,7 +4093,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "582c0fc1-6201-412e-ba98-71632ad4f9ea",
@@ -4263,7 +4276,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "e6c5fb56-1fdf-412a-806b-231ab79057b8",
@@ -4469,7 +4483,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "ac2d45da-5d08-4b27-8439-c525b63a7b13",
@@ -4753,7 +4768,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "7316822a-00ef-464c-94a0-875d7db960c9",
@@ -5057,7 +5073,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "4014c4eb-f2e9-4750-9633-50f3736dc021",
@@ -5331,7 +5348,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "039f3f23-c7c3-491b-9d18-d633cdc6d841",
@@ -5411,7 +5429,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "3536ae38-502d-4c61-95a2-5bfbac9df27d",
@@ -5670,7 +5689,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 6
     },
     {
       "UID": "002b23a6-d787-4a25-a6ad-1682ace2b41d",
@@ -5901,7 +5921,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "fb5341fd-20f9-47f4-829d-6e88de427deb",
@@ -6132,7 +6153,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "a600705a-70a0-4404-bc0c-4db86dd20cdd",
@@ -6410,7 +6432,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "de503c3d-e23e-42a6-a337-6fdf5abb7e13",
@@ -6610,7 +6633,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "ac497af1-e298-4eba-9dcb-0211fe95d68d",
@@ -6815,7 +6839,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "fc3808e8-587d-46b8-98ad-96ab51b2166c",
@@ -7024,7 +7049,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "a3e7e9af-e00d-4166-a9b3-3d47feaa370c",
@@ -7246,7 +7272,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "86651c9d-185f-433a-9613-a9bc2c126ad9",
@@ -7399,7 +7426,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "210d5096-39f7-49a5-b57d-f5079fe5db45",
@@ -7707,7 +7735,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "abb40bd0-4f3d-463f-aafc-e28ba7b5573c",
@@ -7796,7 +7825,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "76a09866-bb08-4470-8175-9b79ff4c4aa8",
@@ -7885,7 +7915,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "909150ce-8b93-4712-ae48-4214dd925904",
@@ -8173,7 +8204,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "c2386cb8-fa0f-4236-8f55-ef2cba60cca2",
@@ -8253,7 +8285,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "9f22ad39-4974-4cf4-8b3b-63e792ad661c",
@@ -8333,7 +8366,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "65c518e5-b001-4d77-826b-00ddf568ba18",
@@ -8413,7 +8447,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     },
     {
       "UID": "d33d2427-1cef-46fe-b15d-dd94995d1d09",
@@ -8696,7 +8731,8 @@
         "IncreaseSpeedBy": 0.0,
         "JumpType": 0,
         "SpiritInstall": false
-      }
+      },
+      "LandingLag": 0
     }
   ],
   "UniqueData": {
@@ -8722,8 +8758,8 @@
     "RunForwardFootsteps": [],
     "RunBackwardFootsteps": []
   },
-  "Version": "Ver1.2.4",
+  "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-19T20:57:09.1965234-07:00",
+  "LastModified": "2026-01-21T20:08:28.8004844-07:00",
   "LastModifiedBy": "creep"
 }

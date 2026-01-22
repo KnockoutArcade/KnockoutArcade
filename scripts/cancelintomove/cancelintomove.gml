@@ -8,6 +8,7 @@ function CancelIntoMove(_prevState, _prevSprite, _animOffset)
 	hitstopBuffer = true;
 	isThrowable = true;
 	bufferAttackInput = 0;
+	landingLag = 0;
 	
 	if (grounded)
 	{

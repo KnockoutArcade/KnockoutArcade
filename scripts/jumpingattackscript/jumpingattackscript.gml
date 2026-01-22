@@ -116,6 +116,7 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		landingLag = 0;
 		image_index = 4;
 		sprite_index = CharacterSprites.jump_Sprite;
 		ResetEnhancer();

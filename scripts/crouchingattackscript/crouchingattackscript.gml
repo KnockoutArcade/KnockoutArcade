@@ -111,6 +111,7 @@ function CrouchingAttackScript(moveToDo, onGround, maintainState, attackID)
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		landingLag = 0;
 		ResetEnhancer();
 		
 		// Execute buffered input (make sure not a spirit)

@@ -98,6 +98,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.SuperData = selectedCharacter.MoveData[i].SuperData;
 		nextMove.UseMoveScript = selectedCharacter.MoveData[i].UseMoveScript;
 		nextMove.SupplementaryMoveScript = selectedCharacter.MoveData[i].SupplementaryMoveScript;
+		nextMove.LandingLag = selectedCharacter.MoveData[i].LandingLag;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{

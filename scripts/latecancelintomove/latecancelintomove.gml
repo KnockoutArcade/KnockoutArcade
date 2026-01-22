@@ -7,6 +7,7 @@ function LateCancelIntoMove(_prevState, moveToCancel, attackID)
 	sprite_index = moveToCancel.SpriteId;
 	image_index = 0;
 	animTimer = 0;
+	landingLag = 0;
 	
 	if (grounded)
 	{

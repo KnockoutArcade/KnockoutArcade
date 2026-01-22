@@ -201,6 +201,7 @@ enum eState {
 	TECH_ROLL,
 	GETUP,
 	QUICK_GETUP,
+	LANDING_LAG,
 	HITSTOP,
 	BLOCKING,
 	RUSH_CANCEL_FORWARD,
@@ -529,3 +530,6 @@ hasUsedAirNeutralSpecial = false;
 hasUsedAirSideSpecial = false;
 hasUsedAirUpSpecial = false;
 hasUsedAirDownSpecial = false;
+
+// Landing Lag
+landingLag = 0; // How much lag a move has when landing with it (command normals and special moves)

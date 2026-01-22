@@ -2384,6 +2384,7 @@ switch state
 		canTurnAround = false;
 		canCollideWithPlayers = false;
 		canBlock = false;
+		landingLag = 0;
 		
 		isGrabbed = true;
 	}
@@ -2536,6 +2537,7 @@ switch state
 		isEXFlash = false;
 		inAttackState = false;
 		canBlock = false;
+		landingLag = 0;
 		
 		hasUsedAirNeutralSpecial = false;
 		hasUsedAirSideSpecial = false;
@@ -2666,6 +2668,7 @@ switch state
 		grounded = false;
 		inAttackState = false;
 		canBlock = false;
+		landingLag = 0;
 		
 		FAvictim = false;
 		
@@ -3078,6 +3081,7 @@ switch state
 		inAttackState = false;
 		isEXFlash = true;
 		canBlock = false;
+		landingLag = 0;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -3129,6 +3133,7 @@ switch state
 		inAttackState = false;
 		isEXFlash = true;
 		canBlock = false;
+		landingLag = 0;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -3168,6 +3173,7 @@ switch state
 		inAttackState = false;
 		isEXFlash = true;
 		canBlock = false;
+		landingLag = 0;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;
@@ -3231,6 +3237,23 @@ switch state
 	{
 		invincible = true;
 		isInCutscene = true;
+	}
+	break;
+	
+	case eState.LANDING_LAG:
+	{
+		sprite_index = CharacterSprites.crouch_Sprite;
+		image_index = 0;
+		image_speed = 1;
+		
+		landingLag--;
+		inAttackState = true;
+		
+		if (landingLag <= 0)
+		{
+			state = eState.IDLE;
+			animTimer = 0;
+		}
 	}
 	break;
 }
@@ -3707,7 +3730,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			isFloorBouncingThisFrame = true;
 			audio_play_sound(sfx_Landing, 1, false);
 		}
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1 && !floorBouncing) 
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1 && !floorBouncing && landingLag <= 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -3726,6 +3749,21 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			
 			// Landing Buffer
 			PerformLandingBuffer();
+		}
+		if (!grounded && state != eState.HURT && state != eState.LAUNCHED && fallDirection && landingLag >= 0)
+		{
+			state = eState.LANDING_LAG;
+			grounded = true;
+			frameAdvantage = true;
+			inAttackState = true;
+			canTurnAround = false;
+			isThrowable = true;
+			gravityScaling = 0;
+			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
 		}
 		if (!cancelOnLanding) 
 		{

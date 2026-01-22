@@ -32,6 +32,8 @@ function PerformAttack(Action, createdBySpirit)
 		}
 	}
 	
+	// Landing Lag
+	landingLag = Action.LandingLag;
 	
 	// Momentum Data
 	// Grounded

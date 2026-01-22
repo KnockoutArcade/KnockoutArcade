@@ -117,6 +117,7 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		isThrowable = true;
 		isEXFlash = false;
 		isExperiencingHardKnockdown = false;
+		landingLag = 0;
 		ResetEnhancer();
 		
 		// Execute buffered input (make sure not a spirit)
