@@ -3242,9 +3242,15 @@ switch state
 	
 	case eState.LANDING_LAG:
 	{
-		sprite_index = CharacterSprites.crouch_Sprite;
-		image_index = 0;
-		image_speed = 1;
+		sprite_index = sBeverly_LandingLag;
+		if (image_index >= sprite_get_number(sprite_index))
+		{
+			image_speed = 0;
+		}
+		else
+		{
+			image_speed = 1;
+		}
 		
 		vsp += fallSpeed;
 		
@@ -3791,6 +3797,8 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			isThrowable = true;
 			gravityScaling = 0;
 			hsp *= 0.5;
+			image_index = 0;
+			sprite_index = sBeverly_LandingLag;
 			
 			hasUsedAirNeutralSpecial = false;
 			hasUsedAirSideSpecial = false;
