@@ -5842,13 +5842,13 @@
           "Start": 7,
           "Lifetime": 12,
           "AttackWidth": 20,
-          "AttackHeight": 36,
+          "AttackHeight": 33,
           "WidthOffset": -8,
-          "HeightOffset": 6
+          "HeightOffset": 10
         },
         {
-          "Start": 7,
-          "Lifetime": 12,
+          "Start": 10,
+          "Lifetime": 9,
           "AttackWidth": 24,
           "AttackHeight": 14,
           "WidthOffset": 8,
@@ -6090,13 +6090,13 @@
           "Start": 7,
           "Lifetime": 12,
           "AttackWidth": 20,
-          "AttackHeight": 36,
+          "AttackHeight": 33,
           "WidthOffset": -8,
-          "HeightOffset": 6
+          "HeightOffset": 10
         },
         {
-          "Start": 7,
-          "Lifetime": 12,
+          "Start": 10,
+          "Lifetime": 9,
           "AttackWidth": 24,
           "AttackHeight": 14,
           "WidthOffset": 8,
@@ -8792,6 +8792,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-21T21:31:48.4166058-07:00",
+  "LastModified": "2026-01-21T22:20:51.3533022-07:00",
   "LastModifiedBy": "creep"
 }
