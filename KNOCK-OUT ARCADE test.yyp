@@ -377,6 +377,7 @@
     {"id":{"name":"sBeverly_Jumpsquat","path":"sprites/sBeverly_Jumpsquat/sBeverly_Jumpsquat.yy",},"order":25,},
     {"id":{"name":"SetSpiritMoveData","path":"scripts/SetSpiritMoveData/SetSpiritMoveData.yy",},"order":0,},
     {"id":{"name":"sSuperMeterP2","path":"sprites/sSuperMeterP2/sSuperMeterP2.yy",},"order":3,},
+    {"id":{"name":"BevSuperScript","path":"scripts/BevSuperScript/BevSuperScript.yy",},"order":7,},
     {"id":{"name":"sGunther_DownSpecialWhiff_mockup_strip10","path":"sprites/sGunther_DownSpecialWhiff_mockup_strip10/sGunther_DownSpecialWhiff_mockup_strip10.yy",},"order":17,},
     {"id":{"name":"sJay_SC_StandLight_MOCKUP_strip3","path":"sprites/sJay_SC_StandLight_MOCKUP_strip3/sJay_SC_StandLight_MOCKUP_strip3.yy",},"order":13,},
     {"id":{"name":"ProcessEnhancers","path":"scripts/ProcessEnhancers/ProcessEnhancers.yy",},"order":0,},

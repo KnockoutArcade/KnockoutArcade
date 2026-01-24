@@ -19,3 +19,10 @@ if (instance_exists(playerOwner))
 {
 	playerOwner.meterPenalty = 1;
 }
+
+var _particle = instance_create_depth(x, y, depth, oParticles);
+with (_particle)
+{
+	sprite_index = sBeverly_SuperDissipate;
+	lifetime = 10;
+}

@@ -96,11 +96,4 @@ if (duration <= 0)
 {
 	instance_destroy(hurtbox);
 	instance_destroy();
-	
-	var _particle = instance_create_depth(x, y, depth, oParticles);
-	with (_particle)
-	{
-		sprite_index = sBeverly_SuperDissipate;
-		lifetime = 10;
-	}
 }
