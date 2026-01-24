@@ -37,7 +37,12 @@
     "GetUp": "sRussel_Getup",
     "RushCancel": "sRussel_RushCancel",
     "WallSplat": "sRussel_WallSplat",
-    "QuickGetup": "sRussel_QuickGetup"
+    "QuickGetup": "sRussel_QuickGetup",
+    "TechRoll": "sRussel_TechRoll",
+    "LandingLag": "sBeverly_LandingLag",
+    "Victory": "sRussel_Victory",
+    "TimeOut": "sRussel_Lose",
+    "Taunt": "sRussel_Taunt"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -8362,6 +8367,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-01-23T20:07:12.0048734-07:00",
+  "LastModified": "2026-01-23T20:53:48.7294098-07:00",
   "LastModifiedBy": "creep"
 }

@@ -18,13 +18,7 @@ function HandleKnockdownState( _hardKnockdown)
 		else
 		{
 			state = eState.TECH_ROLL;
-			sprite_index = sRussel_TechRoll;
-			
-			// TEMPORARY
-			if (selectedCharacter.Name == "Beverly")
-			{
-				sprite_index = sBeverly_TechRoll;
-			}
+			sprite_index = CharacterSprites.techRoll_Sprite;
 			
 			image_xscale = -movedir;
 		}

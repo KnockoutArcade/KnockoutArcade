@@ -251,6 +251,11 @@ CharacterSprites = {
 	rushCancel_Sprite : selectedCharacter.Sprites.RushCancel,
 	wallSplat_Sprite : selectedCharacter.Sprites.WallSplat,
 	quickGetup_Sprite : selectedCharacter.Sprites.QuickGetup,
+	techRoll_Sprite : selectedCharacter.Sprites.TechRoll,
+	victory_Sprite : selectedCharacter.Sprites.Victory,
+	timeOut_Sprite : selectedCharacter.Sprites.Taunt,
+	taunt_Sprite : selectedCharacter.Sprites.Taunt,
+	landingLag_Sprite : selectedCharacter.Sprites.LandingLag,
 }
 
 // State-related Variables

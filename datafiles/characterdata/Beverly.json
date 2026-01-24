@@ -37,7 +37,12 @@
     "GetUp": "sBeverly_Getup",
     "RushCancel": "sBeverly_RushCancel",
     "WallSplat": "sBeverly_WallSplat",
-    "QuickGetup": "sBeverly_QuickGetup"
+    "QuickGetup": "sBeverly_QuickGetup",
+    "TechRoll": "sBeverly_TechRoll",
+    "LandingLag": "sBeverly_LandingLag",
+    "Victory": "sBeverly_Victory",
+    "TimeOut": "sRussel_Lose",
+    "Taunt": "sRussel_Taunt"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -8793,6 +8798,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-23T20:04:33.2447432-07:00",
+  "LastModified": "2026-01-23T20:42:48.5107589-07:00",
   "LastModifiedBy": "creep"
 }

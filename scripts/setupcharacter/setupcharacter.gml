@@ -63,6 +63,11 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		RushCancel : asset_get_index(selectedCharacter.CharacterSprites.RushCancel),
 		WallSplat : asset_get_index(selectedCharacter.CharacterSprites.WallSplat),
 		QuickGetup : asset_get_index(selectedCharacter.CharacterSprites.QuickGetup),
+		TechRoll : asset_get_index(selectedCharacter.CharacterSprites.TechRoll),
+		Victory : asset_get_index(selectedCharacter.CharacterSprites.Victory),
+		TimeOut : asset_get_index(selectedCharacter.CharacterSprites.TimeOut),
+		Taunt : asset_get_index(selectedCharacter.CharacterSprites.Taunt),
+		LandingLag : asset_get_index(selectedCharacter.CharacterSprites.LandingLag),
 	}
 	
 	//setup the moves
