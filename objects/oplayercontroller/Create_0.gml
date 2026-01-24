@@ -253,7 +253,7 @@ CharacterSprites = {
 	quickGetup_Sprite : selectedCharacter.Sprites.QuickGetup,
 	techRoll_Sprite : selectedCharacter.Sprites.TechRoll,
 	victory_Sprite : selectedCharacter.Sprites.Victory,
-	timeOut_Sprite : selectedCharacter.Sprites.Taunt,
+	timeOut_Sprite : selectedCharacter.Sprites.TimeOut,
 	taunt_Sprite : selectedCharacter.Sprites.Taunt,
 	landingLag_Sprite : selectedCharacter.Sprites.LandingLag,
 }

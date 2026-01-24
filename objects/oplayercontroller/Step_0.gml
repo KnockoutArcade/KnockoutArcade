@@ -3199,12 +3199,12 @@ switch state
 		isExperiencingHardKnockdown = false;
 		canTurnAround = false;
 		
-		if (animTimer >= 184)
+		if (animTimer >= 184) // set this in character editor
 		{
 			state = eState.IDLE;
 		}
 		
-		sprite_index = sRussel_Taunt;
+		sprite_index = CharacterSprites.taunt_Sprite;
 		image_speed = 1;
 		
 		HandleWalkingOffPlatforms(false);
@@ -3788,7 +3788,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			// Landing Buffer
 			PerformLandingBuffer();
 		}
-		if (!grounded && state != eState.HURT && state != eState.LAUNCHED && fallDirection && landingLag >= 0)
+		if (!grounded && state != eState.HURT && state != eState.LAUNCHED && fallDirection && landingLag > 0)
 		{
 			state = eState.LANDING_LAG;
 			grounded = true;
@@ -3798,7 +3798,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			gravityScaling = 0;
 			hsp *= 0.5;
 			image_index = 0;
-			sprite_index = sBeverly_LandingLag;
+			sprite_index = CharacterSprites.landingLag_Sprite;
 			
 			hasUsedAirNeutralSpecial = false;
 			hasUsedAirSideSpecial = false;
@@ -3949,13 +3949,7 @@ else
 // Play Victory animation
 if (state == eState.ROUND_WIN)
 {
-	sprite_index = sRussel_Victory;
-	
-	if (selectedCharacter.Name == "Beverly")
-	{
-		sprite_index = sBeverly_SideSpecial_RekkaConnecter;
-		image_index = 3;
-	}
+	sprite_index = CharacterSprites.victory_Sprite;
 	
 	if image_index > (image_number - 1) 
 	{
@@ -3968,7 +3962,7 @@ if (state == eState.ROUND_WIN)
 }
 if (state == eState.ROUND_LOSE)
 {
-	sprite_index = sRussel_Lose;
+	sprite_index = CharacterSprites.timeOut_Sprite;
 	image_speed = 1;
 	
 	if image_index > (image_number - 1) 
