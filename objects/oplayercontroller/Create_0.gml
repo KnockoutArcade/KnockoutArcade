@@ -250,6 +250,7 @@ CharacterSprites = {
 	getup_Sprite : selectedCharacter.Sprites.GetUp,
 	rushCancel_Sprite : selectedCharacter.Sprites.RushCancel,
 	wallSplat_Sprite : selectedCharacter.Sprites.WallSplat,
+	quickGetup_Sprite : selectedCharacter.Sprites.QuickGetup,
 }
 
 // State-related Variables

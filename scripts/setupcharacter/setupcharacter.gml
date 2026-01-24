@@ -62,6 +62,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		GetUp : asset_get_index(selectedCharacter.CharacterSprites.GetUp),
 		RushCancel : asset_get_index(selectedCharacter.CharacterSprites.RushCancel),
 		WallSplat : asset_get_index(selectedCharacter.CharacterSprites.WallSplat),
+		QuickGetup : asset_get_index(selectedCharacter.CharacterSprites.QuickGetup),
 	}
 	
 	//setup the moves

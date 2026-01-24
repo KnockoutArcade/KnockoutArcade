@@ -36,7 +36,8 @@
     "Knockdown": "sBeverly_KnockedDown",
     "GetUp": "sBeverly_Getup",
     "RushCancel": "sBeverly_RushCancel",
-    "WallSplat": "sBeverly_WallSplat"
+    "WallSplat": "sBeverly_WallSplat",
+    "QuickGetup": "sBeverly_QuickGetup"
   },
   "SuperMeterBuildRate": 0.05,
   "BaseColor": {
@@ -8792,6 +8793,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-21T22:20:51.3533022-07:00",
+  "LastModified": "2026-01-23T20:04:33.2447432-07:00",
   "LastModifiedBy": "creep"
 }
