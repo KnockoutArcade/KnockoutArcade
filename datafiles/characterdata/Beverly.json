@@ -2476,7 +2476,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_StandLight2",
       "Duration": 15,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
           "Length": 0,
@@ -2489,6 +2489,14 @@
         {
           "Length": 6,
           "ImageIndex": 2
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 13,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
@@ -8798,6 +8806,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-01-23T21:36:45.8244422-07:00",
+  "LastModified": "2026-01-26T20:46:23.2039176-07:00",
   "LastModifiedBy": "creep"
 }
