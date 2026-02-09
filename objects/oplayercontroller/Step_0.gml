@@ -2438,7 +2438,7 @@ switch state
 			environmentDisplacement = 0;
 		}
 		
-		if (animTimer > 42)
+		if (animTimer > selectedCharacter.ForwardThrow.Duration)
 		{
 			state = eState.IDLE;
 			frameAdvantage = true;
