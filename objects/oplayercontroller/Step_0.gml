@@ -3250,7 +3250,7 @@ switch state
 	
 	case eState.LANDING_LAG:
 	{
-		sprite_index = sBeverly_LandingLag;
+		sprite_index = CharacterSprites.landingLag_Sprite;
 		if (image_index >= sprite_get_number(sprite_index))
 		{
 			image_speed = 0;

@@ -5592,7 +5592,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 15
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -8291,6 +8291,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-01-25T21:23:43.6969973-07:00",
+  "LastModified": "2026-02-15T22:01:41.1218401-07:00",
   "LastModifiedBy": "creep"
 }
