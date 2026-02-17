@@ -6,7 +6,7 @@ if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state !=
 {
 	//hp = maxHitPoints;
 }
-superMeter = 100;
+//superMeter = 100;
 
 // Handle Player Intros
 if (!hasPerformedIntro) 
@@ -3655,8 +3655,21 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 	if (state != eState.HITSTOP)
 	{
 		vsp = 0;
-		
-		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding) 
+		// Floor bouncing
+		if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && floorBouncing && !hasUsedFloorBounce)
+		{
+			floorHit = true;
+			hasUsedFloorBounce = true;
+			hitstop = 10;
+			state = eState.LAUNCHED;
+			sprite_index = CharacterSprites.knockdown_Sprite;
+			image_index = 5;
+			hsp = (hsp * .5);
+			vsp = -4;
+			isFloorBouncingThisFrame = true;
+			audio_play_sound(sfx_Landing, 1, false);
+		}
+		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && !floorBouncing && landingLag <= 0) 
 		{
 			state = eState.IDLE;
 			grounded = true;
@@ -3676,6 +3689,23 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			// Landing Buffer
 			PerformLandingBuffer();
 		}
+		if (!grounded && state != eState.HURT && state != eState.LAUNCHED && landingLag > 0)
+		{
+			state = eState.LANDING_LAG;
+			grounded = true;
+			inAttackState = false;
+			canTurnAround = false;
+			isThrowable = true;
+			gravityScaling = 0;
+			hsp *= 0.5;
+			image_index = 0;
+			sprite_index = CharacterSprites.landingLag_Sprite;
+			
+			hasUsedAirNeutralSpecial = false;
+			hasUsedAirSideSpecial = false;
+			hasUsedAirUpSpecial = false;
+			hasUsedAirDownSpecial = false;
+		}
 		if (!cancelOnLanding) 
 		{
 			grounded = true;
@@ -3686,7 +3716,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			hasUsedAirUpSpecial = false;
 			hasUsedAirDownSpecial = false;
 		}
-		if (state == eState.LAUNCHED)
+		if (state == eState.LAUNCHED && !floorBouncing)
 		{
 			HandleKnockdownState(isExperiencingHardKnockdown);
 		}
@@ -3861,8 +3891,21 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 			if (state != eState.HITSTOP)
 			{
 				vsp = 0;
-				
-				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1) 
+				// Floor bouncing
+				if ((state == eState.LAUNCHED || (state == eState.HURT && !grounded)) && floorBouncing && !hasUsedFloorBounce && fallDirection == 1)
+				{
+					floorHit = true;
+					hasUsedFloorBounce = true;
+					hitstop = 10;
+					state = eState.LAUNCHED;
+					sprite_index = CharacterSprites.knockdown_Sprite;
+					image_index = 5;
+					hsp = (hsp * .5);
+					vsp = -4;
+					isFloorBouncingThisFrame = true;
+					audio_play_sound(sfx_Landing, 1, false);
+				}
+				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && !floorBouncing && fallDirection == 1 && landingLag <= 0) 
 				{
 					state = eState.IDLE;
 					grounded = true;
@@ -3882,6 +3925,23 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					// Landing Buffer
 					PerformLandingBuffer();
 				}
+				if (!grounded && state != eState.HURT && state != eState.LAUNCHED && fallDirection && landingLag > 0)
+				{
+					state = eState.LANDING_LAG;
+					grounded = true;
+					inAttackState = false;
+					canTurnAround = false;
+					isThrowable = true;
+					gravityScaling = 0;
+					hsp *= 0.5;
+					image_index = 0;
+					sprite_index = CharacterSprites.landingLag_Sprite;
+			
+					hasUsedAirNeutralSpecial = false;
+					hasUsedAirSideSpecial = false;
+					hasUsedAirUpSpecial = false;
+					hasUsedAirDownSpecial = false;
+				}
 				if (!cancelOnLanding) 
 				{
 					grounded = true;
@@ -3892,7 +3952,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					hasUsedAirUpSpecial = false;
 					hasUsedAirDownSpecial = false;
 				}
-				if (state == eState.LAUNCHED)
+				if (state == eState.LAUNCHED && !floorBouncing)
 				{
 					HandleKnockdownState(isExperiencingHardKnockdown);
 				}

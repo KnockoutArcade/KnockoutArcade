@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 // DEBUG STUFF
+/*
 draw_set_alpha(.5);
 draw_set_color(c_black);
 draw_rectangle(740, 0, 800, 100, false);
@@ -22,7 +23,8 @@ var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 	   {
 			draw_text(750 + (20 * k), 110 + (20 * j), hasBeenHitByIds[$ hitByIDs[j]]);
 	   }
-	   */
+	   
 	}
 
 
+*/
