@@ -39,7 +39,7 @@
     "WallSplat": "sRussel_WallSplat",
     "QuickGetup": "sRussel_QuickGetup",
     "TechRoll": "sRussel_TechRoll",
-    "LandingLag": "sBeverly_LandingLag",
+    "LandingLag": "sJay_Crouch",
     "Victory": "sRussel_Victory",
     "TimeOut": "sRussel_Lose",
     "Taunt": "sRussel_Taunt"
@@ -5138,7 +5138,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 15
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -9780,6 +9780,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-01-23T20:52:35.3239003-07:00",
+  "LastModified": "2026-02-17T20:06:30.196216-07:00",
   "LastModifiedBy": "creep"
 }
