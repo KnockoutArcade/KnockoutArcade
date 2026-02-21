@@ -393,7 +393,7 @@ if (global.gameMode = GAMEMODE.VERSUS)
 else
 {
 	meterBuildRate = 0; // The rate at which the player builds meter by approaching
-	meterPenalty = 0.25; // Certain moves cause the amount of meter you build to be reduced
+	meterPenalty = 0.5; // Certain moves cause the amount of meter you build to be reduced
 }
 
 meterScaling = 1; // How much meter gain will be scaled (multiplier)
