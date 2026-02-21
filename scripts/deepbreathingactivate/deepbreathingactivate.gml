@@ -6,6 +6,6 @@ function DeepBreathingActivate()
 	
 	if (animTimer == 1)
 	{
-		superMeter += 3;
+		superMeter += 5;
 	}
 }
