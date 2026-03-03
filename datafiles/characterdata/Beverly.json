@@ -1191,21 +1191,33 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_BackwardThrow",
       "Duration": 30,
-      "NumberOfFrames": 2,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 12,
+          "Length": 6,
           "ImageIndex": 1
+        },
+        {
+          "Length": 9,
+          "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 14,
+          "Start": 24,
           "Lifetime": 5,
           "AttackWidth": 10,
           "AttackHeight": 20,
@@ -1285,7 +1297,7 @@
       "OpponentPositionData": {
         "DistanceFromWall": -70.0,
         "ThrowOffset": 0,
-        "NumberOfFrames": 2,
+        "NumberOfFrames": 3,
         "Frames": [
           {
             "Frame": 0,
@@ -1297,7 +1309,16 @@
             "XScale": -1
           },
           {
-            "Frame": 12,
+            "Frame": 9,
+            "RelativeX": 10,
+            "RelativeY": -10,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 90,
+            "XScale": -1
+          },
+          {
+            "Frame": 24,
             "RelativeX": -20,
             "RelativeY": -20,
             "Sprite": 0,
@@ -1312,8 +1333,8 @@
         {
           "Start": 4,
           "Lifetime": 1,
-          "AttackWidth": 20,
-          "AttackHeight": 25,
+          "AttackWidth": 0,
+          "AttackHeight": 0,
           "WidthOffset": -6,
           "HeightOffset": 0
         }
@@ -8903,6 +8924,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-02-21T14:39:32.2415658-07:00",
+  "LastModified": "2026-03-02T21:18:22.3761735-07:00",
   "LastModifiedBy": "creep"
 }
