@@ -2492,7 +2492,7 @@ switch state
 			environmentDisplacement = 0;
 		}
 		
-		if (animTimer > 58)
+		if (animTimer > selectedCharacter.BackwardThrow.Duration)
 		{
 			state = eState.IDLE;
 			frameAdvantage = true;

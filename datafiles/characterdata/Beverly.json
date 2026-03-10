@@ -1190,28 +1190,76 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_BackwardThrow",
-      "Duration": 30,
-      "NumberOfFrames": 5,
+      "Duration": 66,
+      "NumberOfFrames": 17,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 6,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 6,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 9,
           "ImageIndex": 3
         },
         {
-          "Length": 24,
+          "Length": 12,
           "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 22,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 32,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 44,
+          "ImageIndex": 12
+        },
+        {
+          "Length": 50,
+          "ImageIndex": 13
+        },
+        {
+          "Length": 54,
+          "ImageIndex": 14
+        },
+        {
+          "Length": 58,
+          "ImageIndex": 15
+        },
+        {
+          "Length": 62,
+          "ImageIndex": 16
         }
       ],
       "NumberOfHitboxes": 1,
@@ -1219,10 +1267,10 @@
         {
           "Start": 24,
           "Lifetime": 5,
-          "AttackWidth": 10,
-          "AttackHeight": 20,
-          "WidthOffset": -20,
-          "HeightOffset": 20,
+          "AttackWidth": 30,
+          "AttackHeight": 40,
+          "WidthOffset": -50,
+          "HeightOffset": 10,
           "Group": 2,
           "Damage": 9,
           "MeterGain": 5.0,
@@ -1295,9 +1343,9 @@
       "SpecialData": [],
       "IsThrow": true,
       "OpponentPositionData": {
-        "DistanceFromWall": -70.0,
+        "DistanceFromWall": -90.0,
         "ThrowOffset": 0,
-        "NumberOfFrames": 3,
+        "NumberOfFrames": 6,
         "Frames": [
           {
             "Frame": 0,
@@ -1309,21 +1357,48 @@
             "XScale": -1
           },
           {
+            "Frame": 3,
+            "RelativeX": 14,
+            "RelativeY": 0,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 0,
+            "XScale": -1
+          },
+          {
+            "Frame": 6,
+            "RelativeX": 12,
+            "RelativeY": -20,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 45,
+            "XScale": -1
+          },
+          {
             "Frame": 9,
             "RelativeX": 10,
-            "RelativeY": -10,
+            "RelativeY": -18,
+            "Sprite": 0,
+            "Index": 0,
+            "Rotation": 75,
+            "XScale": -1
+          },
+          {
+            "Frame": 12,
+            "RelativeX": 6,
+            "RelativeY": -14,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 90,
             "XScale": -1
           },
           {
-            "Frame": 24,
-            "RelativeX": -20,
-            "RelativeY": -20,
+            "Frame": 20,
+            "RelativeX": -40,
+            "RelativeY": -40,
             "Sprite": 0,
             "Index": 0,
-            "Rotation": 90,
+            "Rotation": 180,
             "XScale": -1
           }
         ]
@@ -8924,6 +8999,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-02T21:18:22.3761735-07:00",
+  "LastModified": "2026-03-09T21:31:22.0048469-07:00",
   "LastModifiedBy": "creep"
 }
