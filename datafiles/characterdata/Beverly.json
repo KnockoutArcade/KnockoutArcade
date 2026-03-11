@@ -1275,7 +1275,7 @@
           "Damage": 9,
           "MeterGain": 5.0,
           "ComboScaling": 4.0,
-          "AttackHitStop": 4,
+          "AttackHitStop": 5,
           "AttackHitStun": 10,
           "AttackType": 1,
           "BlockStun": 5.0,
@@ -1367,7 +1367,7 @@
           },
           {
             "Frame": 6,
-            "RelativeX": 12,
+            "RelativeX": 7,
             "RelativeY": -20,
             "Sprite": 0,
             "Index": 0,
@@ -1376,7 +1376,7 @@
           },
           {
             "Frame": 9,
-            "RelativeX": 10,
+            "RelativeX": 5,
             "RelativeY": -18,
             "Sprite": 0,
             "Index": 0,
@@ -1385,7 +1385,7 @@
           },
           {
             "Frame": 12,
-            "RelativeX": 6,
+            "RelativeX": 1,
             "RelativeY": -14,
             "Sprite": 0,
             "Index": 0,
@@ -1394,8 +1394,8 @@
           },
           {
             "Frame": 20,
-            "RelativeX": -40,
-            "RelativeY": -40,
+            "RelativeX": -45,
+            "RelativeY": -34,
             "Sprite": 0,
             "Index": 0,
             "Rotation": 180,
@@ -8999,6 +8999,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-09T21:31:22.0048469-07:00",
+  "LastModified": "2026-03-10T21:04:33.5199253-07:00",
   "LastModifiedBy": "creep"
 }
