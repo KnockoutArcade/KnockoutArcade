@@ -1918,20 +1918,56 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_NeutralSpecial",
-      "Duration": 40,
-      "NumberOfFrames": 3,
+      "Duration": 45,
+      "NumberOfFrames": 12,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 15,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 20,
+          "Length": 5,
           "ImageIndex": 2
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 17,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 22,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 26,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 11
         }
       ],
       "NumberOfHitboxes": 1,
@@ -2017,10 +2053,10 @@
           "NumpadInput": "236",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
-          "EndingFrame": 14,
+          "EndingFrame": 18,
           "EnhancementMove": 1,
-          "TransitionImmediately": true,
-          "TransitionFrame": 0,
+          "TransitionImmediately": false,
+          "TransitionFrame": 19,
           "RequiredPosition": 0,
           "DeactivateSpirit": false
         }
@@ -2054,8 +2090,8 @@
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
-          "SpawnFrame": 16,
-          "SpawnXOffset": 10,
+          "SpawnFrame": 22,
+          "SpawnXOffset": 24,
           "SpawnYOffset": -10,
           "ProjectileObject": "TestLobbingProjectile"
         }
@@ -8999,6 +9035,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-10T21:04:33.5199253-07:00",
+  "LastModified": "2026-03-17T21:58:14.6720428-07:00",
   "LastModifiedBy": "creep"
 }
