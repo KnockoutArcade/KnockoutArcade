@@ -560,6 +560,7 @@
     {"id":{"name":"creditsFont","path":"fonts/creditsFont/creditsFont.yy",},"order":1,},
     {"id":{"name":"oQuarterCollectable","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"order":0,},
     {"id":{"name":"sSmoothCriminal_Standing_Light","path":"sprites/sSmoothCriminal_Standing_Light/sSmoothCriminal_Standing_Light.yy",},"order":22,},
+    {"id":{"name":"sBeverly_FireballSpike","path":"sprites/sBeverly_FireballSpike/sBeverly_FireballSpike.yy",},"order":7,},
     {"id":{"name":"sJay_SideSpecial_Reappear","path":"sprites/sJay_SideSpecial_Reappear/sJay_SideSpecial_Reappear.yy",},"order":42,},
     {"id":{"name":"sConstructionNPC1a","path":"sprites/sConstructionNPC1a/sConstructionNPC1a.yy",},"order":0,},
     {"id":{"name":"ProcessPushback","path":"scripts/ProcessPushback/ProcessPushback.yy",},"order":5,},

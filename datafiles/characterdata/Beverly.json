@@ -7641,7 +7641,7 @@
       "ProjectileData": [
         {
           "SpawnFrame": 8,
-          "SpawnXOffset": 10,
+          "SpawnXOffset": 16,
           "SpawnYOffset": -20,
           "ProjectileObject": "EnhancedProjectile"
         }
@@ -9067,6 +9067,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-23T19:49:41.8584988-07:00",
+  "LastModified": "2026-03-23T22:48:44.9865073-07:00",
   "LastModifiedBy": "creep"
 }

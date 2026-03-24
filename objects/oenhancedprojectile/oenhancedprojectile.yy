@@ -1,7 +1,7 @@
 {
   "spriteId": {
-    "name": "sBeverly_EnhancedFireball",
-    "path": "sprites/sBeverly_EnhancedFireball/sBeverly_EnhancedFireball.yy",
+    "name": "sBeverly_FireballSpike",
+    "path": "sprites/sBeverly_FireballSpike/sBeverly_FireballSpike.yy",
   },
   "solid": false,
   "visible": true,
