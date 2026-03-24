@@ -7567,21 +7567,45 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sBeverly_Jump_Heavy",
+      "SpriteName": "sBeverly_CommandNormal",
       "Duration": 36,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 8,
+          "Length": 3,
           "ImageIndex": 1
         },
         {
-          "Length": 12,
+          "Length": 5,
           "ImageIndex": 2
+        },
+        {
+          "Length": 8,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 10,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 25,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 0,
@@ -9043,6 +9067,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-21T12:32:27.9277528-07:00",
+  "LastModified": "2026-03-23T19:49:41.8584988-07:00",
   "LastModifiedBy": "creep"
 }
