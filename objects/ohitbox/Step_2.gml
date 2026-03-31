@@ -43,7 +43,6 @@ if (lifetime < 1)
 // Handle non-projectiles
 if (!isProjectile)
 {
-	show_debug_message(string(attackProperty.ChipDamage) + " chip damage");
 	HandleHitboxCollision(owner);
 }
 else if (!global.freezeTimer)

@@ -6,4 +6,8 @@ function BevEnhancedUpSpecial()
 	{
 		invincible = false;
 	}
+	else
+	{
+		invincible = true;
+	}
 }
