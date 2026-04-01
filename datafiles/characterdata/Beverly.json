@@ -5033,7 +5033,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_UpSpecial",
       "Duration": 60,
-      "NumberOfFrames": 8,
+      "NumberOfFrames": 13,
       "FrameData": [
         {
           "Length": 0,
@@ -5060,12 +5060,32 @@
           "ImageIndex": 5
         },
         {
-          "Length": 17,
+          "Length": 18,
           "ImageIndex": 6
         },
         {
-          "Length": 34,
+          "Length": 22,
           "ImageIndex": 7
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 34,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 40,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 46,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 52,
+          "ImageIndex": 12
         }
       ],
       "NumberOfHitboxes": 2,
@@ -8248,7 +8268,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_UpSpecial",
       "Duration": 90,
-      "NumberOfFrames": 8,
+      "NumberOfFrames": 13,
       "FrameData": [
         {
           "Length": 0,
@@ -8275,12 +8295,32 @@
           "ImageIndex": 5
         },
         {
-          "Length": 17,
+          "Length": 18,
           "ImageIndex": 6
         },
         {
-          "Length": 34,
+          "Length": 22,
           "ImageIndex": 7
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 34,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 40,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 46,
+          "ImageIndex": 11
+        },
+        {
+          "Length": 52,
+          "ImageIndex": 12
         }
       ],
       "NumberOfHitboxes": 2,
@@ -9091,6 +9131,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-03-30T21:22:48.2294236-07:00",
+  "LastModified": "2026-03-31T19:59:59.9121995-07:00",
   "LastModifiedBy": "creep"
 }
