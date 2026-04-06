@@ -13,7 +13,7 @@ function GetPlayerInputs()
 		buttonLight = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonLight);
 		buttonMedium = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonMedium);
 		buttonHeavy = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonHeavy);
-		buttonSpecial = keyboard_check(controlMappings.Keyboard_WASD.buttonSpecial);
+		buttonSpecial = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonSpecial);
 		buttonGrab = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonGrab);
 		buttonSuper = keyboard_check_pressed(controlMappings.Keyboard_WASD.buttonSuper);
 		buttonRun = keyboard_check(controlMappings.Keyboard_WASD.buttonRun);
