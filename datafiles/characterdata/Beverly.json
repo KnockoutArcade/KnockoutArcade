@@ -5362,23 +5362,43 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial",
       "Duration": 45,
-      "NumberOfFrames": 4,
+      "NumberOfFrames": 9,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 12,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 24,
+          "Length": 12,
           "ImageIndex": 2
         },
         {
-          "Length": 30,
+          "Length": 15,
           "ImageIndex": 3
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 4
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 34,
+          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 2,
@@ -8080,8 +8100,17 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial_Success",
       "Duration": 10,
-      "NumberOfFrames": 0,
-      "FrameData": [],
+      "NumberOfFrames": 2,
+      "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
+          "ImageIndex": 1
+        }
+      ],
       "NumberOfHitboxes": 0,
       "AttackData": [],
       "CounterData": [],
@@ -9123,6 +9152,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-06T11:34:50.6144713-07:00",
+  "LastModified": "2026-04-06T15:16:37.9566626-07:00",
   "LastModifiedBy": "creep"
 }
