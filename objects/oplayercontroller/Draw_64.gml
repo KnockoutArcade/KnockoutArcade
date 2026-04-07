@@ -17,9 +17,9 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
-	draw_text(20, 50, gravityScaling);
-	draw_text(20, 70, storedComboDamage);
-	draw_text(20, 90, hitstun);
+	draw_text(20, 50, hsp);
+	draw_text(20, 70, pushbackVel);
+	draw_text(20, 90, buffer);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -41,7 +41,7 @@ else
 	
 	draw_text(750, 10, state);
 	draw_text(750, 30, animTimer);
-	draw_text(750, 50, gravityScaling);
+	draw_text(750, 50, hsp);
 	draw_text(750, 70, storedComboDamage);
 	draw_text(750, 90, hitstun);
 	

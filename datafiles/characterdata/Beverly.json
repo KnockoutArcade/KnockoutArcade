@@ -1417,7 +1417,7 @@
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -9152,6 +9152,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-06T15:16:37.9566626-07:00",
+  "LastModified": "2026-04-06T21:34:47.4923033-07:00",
   "LastModifiedBy": "creep"
 }

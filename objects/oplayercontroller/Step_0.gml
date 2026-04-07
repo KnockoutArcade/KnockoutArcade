@@ -3591,7 +3591,7 @@ y = yHome;
 if (opponent != noone && !wallHit)
 {
 	// Check to see if players are about to be touching
-	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && canCollideWithPlayers && opponent.canCollideWithPlayers) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
+	if (place_meeting(x+hsp+environmentDisplacement, y, opponent) && canCollideWithPlayers && opponent.canCollideWithPlayers && opponent.prevState != eState.BEING_GRABBED && prevState != eState.BEING_GRABBED) // && opponent.state != eState.BEING_GRABBED && ((grounded && opponent.grounded) || ((((opponent.state = eState.HURT || opponent.state = eState.BLOCKING) && !opponent.grounded) || opponent.state = eState.LAUNCHED) || (((state = eState.HURT || opponent.state = eState.BLOCKING) && !grounded) || state = eState.LAUNCHED))))
 	{
 		if (state != eState.HITSTOP)
 		{
@@ -3764,6 +3764,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 // Update Horizontal Movement
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
+	buffer = environmentDisplacement;
 	x += hsp + environmentDisplacement;
 	if (!isInCutscene && shouldStayOnScreen)
 	{
