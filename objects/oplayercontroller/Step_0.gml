@@ -3717,7 +3717,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			hasUsedAirUpSpecial = false;
 			hasUsedAirDownSpecial = false;
 		}
-		if (state == eState.LAUNCHED && !floorBouncing)
+		if ((state == eState.LAUNCHED || (state == eState.HURT && gravityScaling >= GravityScalingMaximum)) && !floorBouncing)
 		{
 			HandleKnockdownState(isExperiencingHardKnockdown);
 		}
@@ -3855,9 +3855,10 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			hasUsedAirUpSpecial = false;
 			hasUsedAirDownSpecial = false;
 		}
-		if (state == eState.LAUNCHED && !floorBouncing)
+		if ((state == eState.LAUNCHED || (state == eState.HURT && gravityScaling >= GravityScalingMaximum)) && !floorBouncing)
 		{
 			HandleKnockdownState(isExperiencingHardKnockdown);
+			
 		}
 		
 	}
@@ -3954,7 +3955,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					hasUsedAirUpSpecial = false;
 					hasUsedAirDownSpecial = false;
 				}
-				if (state == eState.LAUNCHED && !floorBouncing)
+				if ((state == eState.LAUNCHED || (state == eState.HURT && gravityScaling >= GravityScalingMaximum)) && !floorBouncing)
 				{
 					HandleKnockdownState(isExperiencingHardKnockdown);
 				}
