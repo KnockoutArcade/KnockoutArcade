@@ -541,3 +541,6 @@ hasUsedAirDownSpecial = false;
 
 // Landing Lag
 landingLag = 0; // How much lag a move has when landing with it (command normals and special moves)
+
+// Camera buffer zone
+cameraBufferAmount = 8; // How far the player is allowed to be from the sides of the screen (in pixels)

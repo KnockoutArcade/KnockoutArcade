@@ -3768,7 +3768,7 @@ if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 	x += hsp + environmentDisplacement;
 	if (!isInCutscene && shouldStayOnScreen)
 	{
-		x = clamp(x, global.camObj.x-80, global.camObj.x+80);
+		x = clamp(x, global.camObj.x - (80 - cameraBufferAmount), global.camObj.x + (80 - cameraBufferAmount));
 	}
 	xHome = x;
 }
