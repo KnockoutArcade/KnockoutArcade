@@ -18,7 +18,7 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, gravityScaling);
-	draw_text(20, 70, hsp + environmentDisplacement);
+	draw_text(20, 70, hsp);
 	draw_text(20, 90, buffer);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);

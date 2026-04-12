@@ -3756,6 +3756,7 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		sprite_index = CharacterSprites.wallSplat_Sprite;
 		hsp = -(hsp * .5);
 		vsp = -2;
+		environmentDisplacement = 0;
 		
 		// Create particle effect
 		var impactParticle = instance_create_layer(x, y, "Instances", oParticles);
