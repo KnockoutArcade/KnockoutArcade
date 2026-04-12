@@ -785,27 +785,6 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 		// Start match on Russel's Stage
         if (P1mapSelCol == 0 && P1mapSelRow == 0)
         {
-			if (selectedMusic == 0) // Auto
-			{
-				selectedMusic = 2;
-			}
-			else if (selectedMusic == 1) // Random
-			{
-				P1musicSelRow = irandom_range(0, musicSelRowMax);
-				if (P1musicSelRow == 0)
-				{
-					selectedMusic = 2;
-				}
-				else if (P1musicSelRow == 1)
-				{
-					selectedMusic = 3;
-				}
-				else if (P1musicSelRow == 2)
-				{
-					selectedMusic = 4;
-				}
-			}
-			
 			selectedStage = rRusselStage;
 			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
 			
@@ -814,27 +793,6 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
         }
         else if (P1mapSelCol == 1 && P1mapSelRow == 0) // Start Match on Beverly's Stage
         {
-			if (selectedMusic == 0) // Auto
-			{
-				selectedMusic = 3;
-			}
-			else if (selectedMusic == 1) // Random
-			{
-				P1musicSelRow = irandom_range(0, musicSelRowMax);
-				if (P1musicSelRow == 0)
-				{
-					selectedMusic = 2;
-				}
-				else if (P1musicSelRow == 1)
-				{
-					selectedMusic = 3;
-				}
-				else if (P1musicSelRow == 2)
-				{
-					selectedMusic = 4;
-				}
-			}
-			
 			selectedStage = rBeverlyStage;
 			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
 			
@@ -843,27 +801,6 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
         }
         else if (P1mapSelCol == 2 && P1mapSelRow == 0) // Start match on Jay's Stage
         {
-			if (selectedMusic == 0) // Auto
-			{
-				selectedMusic = 4;
-			}
-			else if (selectedMusic == 1) // Random
-			{
-				P1musicSelRow = irandom_range(0, musicSelRowMax);
-				if (P1musicSelRow == 0)
-				{
-					selectedMusic = 2;
-				}
-				else if (P1musicSelRow == 1)
-				{
-					selectedMusic = 3;
-				}
-				else if (P1musicSelRow == 2)
-				{
-					selectedMusic = 4;
-				}
-			}
-			
 			selectedStage = rJayStage;
 			state = eCharacterSelectState.TRANSITION_TO_FIGHT;
 			
@@ -878,28 +815,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 				P1mapSelRow = irandom_range(0, mapSelRowMax);
 				P1mapSelCol = irandom_range(0, mapSelColMax);
 			    if (P1mapSelCol == 0 && P1mapSelRow == 0)
-			    {
-					if (selectedMusic == 0) // Auto
-					{
-						selectedMusic = 2;
-					}
-					else if (selectedMusic == 1) // Random
-					{
-						P1musicSelRow = irandom_range(0, musicSelRowMax);
-						if (P1musicSelRow == 0)
-						{
-							selectedMusic = 2;
-						}
-						else if (P1musicSelRow == 1)
-						{
-							selectedMusic = 3;
-						}
-						else if (P1musicSelRow == 2)
-						{
-							selectedMusic = 4;
-						}
-					}
-					
+			    {	
 					validStage = true;
 					
 					selectedStage = rRusselStage;
@@ -908,28 +824,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 					//global.gameMode = GAMEMODE.VERSUS;
 			    }
 			    else if (P1mapSelCol == 1 && P1mapSelRow == 0)
-			    {
-					if (selectedMusic == 0) // Auto
-					{
-						selectedMusic = 3;
-					}
-					else if (selectedMusic == 1) // Random
-					{
-						P1musicSelRow = irandom_range(0, musicSelRowMax);
-						if (P1musicSelRow == 0)
-						{
-							selectedMusic = 2;
-						}
-						else if (P1musicSelRow == 1)
-						{
-							selectedMusic = 3;
-						}
-						else if (P1musicSelRow == 2)
-						{
-							selectedMusic = 4;
-						}
-					}
-					
+			    {	
 					validStage = true;
 					selectedStage = rBeverlyStage;
 					state = eCharacterSelectState.TRANSITION_TO_FIGHT;
@@ -937,28 +832,7 @@ else if (state == eCharacterSelectState.STAGE_SELECT)
 					//global.gameMode = GAMEMODE.VERSUS;
 			    }
 			    else if (P1mapSelCol == 2 && P1mapSelRow == 0)
-			    {
-					if (selectedMusic == 0) // Auto
-					{
-						selectedMusic = 4;
-					}
-					else if (selectedMusic == 1) // Random
-					{
-						P1musicSelRow = irandom_range(0, musicSelRowMax);
-						if (P1musicSelRow == 0)
-						{
-							selectedMusic = 2;
-						}
-						else if (P1musicSelRow == 1)
-						{
-							selectedMusic = 3;
-						}
-						else if (P1musicSelRow == 2)
-						{
-							selectedMusic = 4;
-						}
-					}
-					
+			    {	
 					validStage = true;
 					selectedStage = rJayStage;
 					state = eCharacterSelectState.TRANSITION_TO_FIGHT;
@@ -1043,27 +917,30 @@ else if (state == eCharacterSelectState.MUSIC_SELECT)
 
     if (P1musicSelRow == 0)
     {
-		selectedMusic = 0;
+		selectedMusic = eMusicOptions.AUTO;
     }
 	else if (P1musicSelRow == 1)
 	{
-		selectedMusic = 1;
+		selectedMusic = eMusicOptions.RANDOM;
 	}
     else if (P1musicSelRow == 2)
     {
-		selectedMusic = 2;
+		selectedMusic = eMusicOptions.RUSSEL;
+		global.currentBGM = bgm_Russel_Stage;
     }
     else if (P1musicSelRow == 3)
     {
-		selectedMusic = 3;
+		selectedMusic = eMusicOptions.BEVERLY;
+		global.currentBGM = bgm_Beverly_Stage;
     }
 	else if (P1musicSelRow == 4)
     {
-		selectedMusic = 4;
+		selectedMusic = eMusicOptions.RUSSEL;
+		global.currentBGM = bgm_Russel_Stage;
     }
     else
     {
-        selectedMusic = 1;
+        selectedMusic = eMusicOptions.RANDOM;
     }
 
     if (P1switch || P2switch)
@@ -1137,6 +1014,34 @@ else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 	{
 		// Go to the selected stage
 		room_goto(selectedStage);
+		
+		// Set the appropriate music
+		if (selectedMusic == eMusicOptions.AUTO)
+		{
+			if (selectedStage == rRusselStage)
+			{
+				global.currentBGM = bgm_Russel_Stage;
+			}
+			else if (selectedStage == rBeverlyStage)
+			{
+				global.currentBGM = bgm_Beverly_Stage;
+			}
+			else
+			{
+				global.currentBGM = bgm_Russel_Stage;
+			}
+		}
+		else if (selectedMusic == eMusicOptions.RANDOM)
+		{
+			if (irandom(1) == 0) 
+			{
+				global.currentBGM = bgm_Russel_Stage
+			}
+			else
+			{
+				global.currentBGM = bgm_Beverly_Stage;
+			}
+		}
 		// Update the game into versus mode
 		global.gameMode = GAMEMODE.VERSUS;
 	}

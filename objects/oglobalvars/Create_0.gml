@@ -84,3 +84,6 @@ global.roomTransitionData = {
 	currentSuperMeter : 0,
 	currentSpiritHealth: 100
 };
+
+// Current song
+global.currentBGM = bgm_Russel_Stage;

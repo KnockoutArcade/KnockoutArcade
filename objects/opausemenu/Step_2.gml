@@ -584,21 +584,21 @@ switch (state)
 						room_goto(rCharacterSelectScreen);
 						
 						// reset music
-						audio_stop_sound(bgm_Russel_Stage);
+						audio_stop_sound(global.currentBGM);
 					}
 					else if (areYouSureAction == eAreYouSureAction.MAIN_MENU)
 					{
 						room_goto(rMainMenu);
 						
 						// reset music
-						audio_stop_sound(bgm_Russel_Stage);
+						audio_stop_sound(global.currentBGM);
 					}
 					else if (areYouSureAction == eAreYouSureAction.RESTART)
 					{
 						room_restart();
 						
 						// reset music
-						audio_stop_sound(bgm_Russel_Stage);
+						audio_stop_sound(global.currentBGM);
 					}
 					
 				}

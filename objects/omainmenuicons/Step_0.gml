@@ -94,6 +94,7 @@ if (image_index == 0 && P1menuConfirm)
 	screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 	
 	roomToTransitionTo = rCampaignFileSelect;
+	global.currentBGM = bgm_Russel_Stage;
 }
 
 if (image_index == 1 && P1menuConfirm)
@@ -134,6 +135,8 @@ if (image_index == 4 && P1menuConfirm)
 if (image_index == 2 && P1menuConfirm)
 {
 	global.gameMode = GAMEMODE.PLATFORMING;
+	
+	global.currentBGM = bgm_Russel_Stage;
 	
 	global.p1SelectedCharacter = oRussel;
 	global.p1PaletteID = 0;

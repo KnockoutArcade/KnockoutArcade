@@ -16,6 +16,14 @@ enum eCharacterSelectState
 	TRANSITION_TO_FIGHT
 }
 
+enum eMusicOptions
+{
+	AUTO,
+	RANDOM,
+	RUSSEL,
+	BEVERLY
+}
+
 P1charSelRow = 0;
 P1charSelCol = 0;
 P1cursorCooldown = 5;
