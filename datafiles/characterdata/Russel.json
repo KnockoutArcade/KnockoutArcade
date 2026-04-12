@@ -3514,7 +3514,7 @@
           "HoldYOffset": 0,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
-          "CausesWallbounce": false,
+          "CausesWallbounce": true,
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
@@ -8291,6 +8291,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-03-21T12:33:49.6023737-07:00",
+  "LastModified": "2026-04-12T13:33:05.7720918-07:00",
   "LastModifiedBy": "creep"
 }

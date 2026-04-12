@@ -99,7 +99,7 @@ function HandleHitboxCollision(ownerType)
 				{
 					// Put both players in a throw tech state
 					ownerType.state = eState.THROW_TECH;
-					ownerType.hsp = -5 * ownerType.image_xscale;
+					ownerType.hsp = ThrowTechDistance * -ownerType.image_xscale;
 					ownerType.animTimer = 0;
 					
 					if (spirit != noone)
@@ -107,7 +107,7 @@ function HandleHitboxCollision(ownerType)
 						if (spirit.spiritState != eSpiritState.DEACTIVATED)
 						{
 							spirit.spiritState = eSpiritState.ACTIVE;
-							spirit.hsp = -5 * spirit.image_xscale;
+							spirit.hsp = ThrowTechDistance * -spirit.image_xscale;
 							spirit.animTimer = 0;
 						}
 					}
@@ -145,7 +145,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					collision_list[| i].owner.state = eState.THROW_TECH;
-					collision_list[| i].owner.hsp = -5 * collision_list[| i].owner.image_xscale;
+					collision_list[| i].owner.hsp = ThrowTechDistance * -collision_list[| i].owner.image_xscale;
 					collision_list[| i].owner.animTimer = 0;
 					
 					if (collision_list[| i].owner.spiritObject != noone)

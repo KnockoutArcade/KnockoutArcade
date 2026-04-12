@@ -2298,7 +2298,6 @@ switch state
 		invincible = false;
 		
 		GroundedAttackScript(selectedCharacter.Grab, true, 1, 1, false, false, attack);
-		
 	}
 	break;
 	
@@ -2348,6 +2347,13 @@ switch state
 				}
 			}
 		}
+		
+		// Handle throw release
+		if (target.state != eState.BEING_GRABBED)
+		{
+			HandleThrowRelease();
+		}
+		
 	}
 	break;
 	
@@ -2422,7 +2428,7 @@ switch state
 		}
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if (animTimer > selectedCharacter.ForwardThrow.AttackProperty[0].Start)
+		if (animTimer >= selectedCharacter.ForwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
 			
@@ -2430,6 +2436,10 @@ switch state
 			{
 				spiritObject.hsp = 0;
 			}
+		}
+		else if (target.state != eState.BEING_GRABBED)
+		{
+			HandleThrowRelease();
 		}
 		
 		// If our next position would make us close to walking over a pit in front of us, stop moving.
@@ -2476,7 +2486,7 @@ switch state
 		}
 		
 		// Set our hsp to 0 if we are on the first active frame of the move
-		if (animTimer > selectedCharacter.BackwardThrow.AttackProperty[0].Start)
+		if (animTimer >= selectedCharacter.BackwardThrow.AttackProperty[0].Start)
 		{
 			hsp = 0;
 			
@@ -2484,6 +2494,10 @@ switch state
 			{
 				spiritObject.hsp = 0;
 			}
+		} 
+		else if (target.state != eState.BEING_GRABBED)
+		{
+			HandleThrowRelease();
 		}
 		
 		// If our next position would make us close to walking over a pit in front of us, stop moving.
@@ -3764,7 +3778,6 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 // Update Horizontal Movement
 if (state != eState.HITSTOP && state != eState.SCREEN_FREEZE)
 {
-	buffer = environmentDisplacement;
 	x += hsp + environmentDisplacement;
 	if (!isInCutscene && shouldStayOnScreen)
 	{
