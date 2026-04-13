@@ -130,6 +130,9 @@ switch (global.gameMode)
 			p1.isEXFlash = false;
 			p2.isEXFlash = false;
 			
+			pauseMenuButtonHeldTimer_P1 = 0;
+			pauseMenuButtonHeldTimer_P2 = 0;
+			
 			// Disable inputs for players
 			p1.isInCutscene = true; 
 			p2.isInCutscene = true;
@@ -279,6 +282,9 @@ switch (global.gameMode)
 			// Disable inputs for players
 			p1.isInCutscene = true; 
 			p2.isInCutscene = true;
+			
+			pauseMenuButtonHeldTimer_P1 = 0;
+			pauseMenuButtonHeldTimer_P2 = 0;
 			
 			global.roundOver = true;
 			gameHaltTimer++;
