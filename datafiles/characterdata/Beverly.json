@@ -7790,26 +7790,34 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_DownSpecial_Enhanced",
-      "Duration": 30,
-      "NumberOfFrames": 3,
+      "Duration": 27,
+      "NumberOfFrames": 5,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 8,
+          "Length": 7,
           "ImageIndex": 1
         },
         {
-          "Length": 12,
+          "Length": 9,
           "ImageIndex": 2
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 3
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 2,
       "AttackData": [
         {
-          "Start": 8,
+          "Start": 7,
           "Lifetime": 4,
           "AttackWidth": 28,
           "AttackHeight": 20,
@@ -7848,7 +7856,7 @@
           "CauseFloorBounce": false
         },
         {
-          "Start": 8,
+          "Start": 7,
           "Lifetime": 4,
           "AttackWidth": 23,
           "AttackHeight": 20,
@@ -9152,6 +9160,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-06T21:34:47.4923033-07:00",
+  "LastModified": "2026-04-13T21:30:29.3129452-07:00",
   "LastModifiedBy": "creep"
 }

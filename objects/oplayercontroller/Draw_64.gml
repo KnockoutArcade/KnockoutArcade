@@ -18,8 +18,8 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, gravityScaling);
-	draw_text(20, 70, hsp);
-	draw_text(20, 90, buffer);
+	draw_text(20, 70, comboScaling);
+	draw_text(20, 90, storedComboDamage);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -40,10 +40,10 @@ else
 	draw_set_color(c_white);
 	
 	draw_text(750, 10, state);
-	draw_text(750, 30, hitstop);
-	draw_text(750, 50, xHome);
-	draw_text(750, 70, yHome);
-	draw_text(750, 90, environmentDisplacement);
+	draw_text(750, 30, animTimer);
+	draw_text(750, 50, gravityScaling);
+	draw_text(750, 70, comboScaling);
+	draw_text(750, 90, storedComboDamage);
 	
 	
 }
