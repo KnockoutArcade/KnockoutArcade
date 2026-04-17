@@ -7851,7 +7851,7 @@
           "AirKnockbackVertical": -2.5,
           "AirKnockbackHorizontal": 4.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackVertical": -3.5,
           "LaunchKnockbackHorizontal": 4.0,
           "GravityScaling": 2.0,
           "Pushback": 16.0,
@@ -7887,10 +7887,10 @@
           "AttackType": 1,
           "BlockStun": 10.0,
           "KnockBack": 16.0,
-          "AirKnockbackVertical": -3.0,
+          "AirKnockbackVertical": -2.5,
           "AirKnockbackHorizontal": 4.0,
           "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackVertical": -3.5,
           "LaunchKnockbackHorizontal": 4.0,
           "GravityScaling": 2.0,
           "Pushback": 16.0,
@@ -7982,15 +7982,23 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 1,
+      "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
           "Start": 1,
           "Lifetime": 31,
-          "AttackWidth": 14,
+          "AttackWidth": 18,
           "AttackHeight": 36,
-          "WidthOffset": -8,
+          "WidthOffset": -9,
           "HeightOffset": 0
+        },
+        {
+          "Start": 9,
+          "Lifetime": 15,
+          "AttackWidth": 49,
+          "AttackHeight": 17,
+          "WidthOffset": -24,
+          "HeightOffset": 10
         }
       ],
       "NumberOfProjectiles": 0,
@@ -8055,7 +8063,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -2.0,
+            "VerticalSpeed": -1.2,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -8069,7 +8077,7 @@
           {
             "StartingFrame": 8,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": -1.0,
+            "VerticalSpeed": -0.9,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -9176,6 +9184,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-14T22:04:43.7360521-07:00",
+  "LastModified": "2026-04-16T21:14:14.0721813-07:00",
   "LastModifiedBy": "creep"
 }
