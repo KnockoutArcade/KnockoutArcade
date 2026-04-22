@@ -12,16 +12,48 @@ if (slot0Controller != -1)
 
 var pressButton = keyboard_check(vk_anykey) || controllerAnyButton;
 
-if (pressButton && isAcceptingInputs)
-{
-	room = rMainMenu;
-	exit;
-}
-
-
 animTimer++;
 
-if (animTimer > logoAppearEnd)
+if (!isTransitioning)
 {
-	isAcceptingInputs = true;
+	if (pressButton && isAcceptingInputs)
+	{
+		isTransitioning = true;
+		animTimer = 0;
+	
+		var transitionScreen = instance_create_depth(0, 0, -10000, oScreenTransition);
+	
+		with (transitionScreen)
+		{
+			screenTransitionType = eSCREENTRANSITIONS.WIPE;
+		}
+	
+		audio_sound_gain(bgm_TitleScreen, 0, 750);
+		audio_play_sound(sfx_UI_Select, 1, false);
+		exit;
+	}
+	
+	if (animTimer == musicStart)
+	{
+		audio_play_sound(bgm_TitleScreen, 0, false);
+		audio_sound_gain(bgm_TitleScreen, 1, 0);
+	}
+	
+	if (animTimer > logoAppearEnd)
+	{
+		isAcceptingInputs = true;
+	}
 }
+else
+{	
+	if (animTimer == titleTransitionPoint)
+	{
+		room_goto(rMainMenu);
+		audio_stop_sound(bgm_TitleScreen);
+	}
+}
+
+
+
+
+

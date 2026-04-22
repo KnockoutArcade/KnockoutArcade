@@ -5,3 +5,4 @@ initInteractScreenDuration = 165;
 initInteractScreenTimer = 0;
 
 initInteractScreenTransitionPoint = 120; // when to transition to another screen
+initInteractScreenSoundPoint = 60;

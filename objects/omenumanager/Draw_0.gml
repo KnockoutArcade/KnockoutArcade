@@ -8,11 +8,17 @@ if (startTextTimer > 29)
 	
 }
 
-if (startTextShow)
+if (startTextShow && !isTransitioning)
 {
 	draw_sprite(sStartText, 0, 0, 0);
 }
 
+
+if (isTransitioning)
+{
+	draw_sprite(sLogo, 0, 80, 60);
+	exit;
+}
 
 // Draw the logo
 if (animTimer > logoAppearStart && animTimer < logoAppearEnd)

@@ -15,6 +15,10 @@ if (initInteractScreenTimer == initInteractScreenTransitionPoint)
 	}
 }
 
+if (initInteractScreenTimer == initInteractScreenSoundPoint)
+{
+	audio_play_sound(sfx_CharSel_Ready, 0, false);
+}
 
 if (initInteractScreenTimer >= initInteractScreenDuration)
 {

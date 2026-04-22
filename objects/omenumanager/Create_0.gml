@@ -10,6 +10,7 @@ animTimer = 0;
 logoAppearStart = 20;
 logoAppearEnd = 45;
 logoShakeEnd = 55;
+musicStart = 10;
 
 logoShakeIntensity = 3;
 randomOffsetX = 0;
@@ -19,3 +20,6 @@ maxScale = 5;
 minScale = 0.95;
 
 isAcceptingInputs = false;
+
+isTransitioning = false;
+titleTransitionPoint = 45;
