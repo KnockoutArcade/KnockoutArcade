@@ -11,7 +11,7 @@
     "name": "audiogroup_soundeffect",
     "path": "audiogroups/audiogroup_soundeffect",
   },
-  "soundFile": "sfx_charsel_selectalt.wav",
+  "soundFile": "sfx_charsel_selectalt.ogg",
   "duration": 3.424943,
   "parent": {
     "name": "CharSel",

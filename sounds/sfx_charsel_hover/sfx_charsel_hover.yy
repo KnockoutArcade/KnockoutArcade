@@ -11,7 +11,7 @@
     "name": "audiogroup_soundeffect",
     "path": "audiogroups/audiogroup_soundeffect",
   },
-  "soundFile": "sfx_charsel_hover.wav",
+  "soundFile": "sfx_charsel_hover.ogg",
   "duration": 3.424943,
   "parent": {
     "name": "CharSel",

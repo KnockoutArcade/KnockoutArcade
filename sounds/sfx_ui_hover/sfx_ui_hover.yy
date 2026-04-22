@@ -11,7 +11,7 @@
     "name": "audiogroup_soundeffect",
     "path": "audiogroups/audiogroup_soundeffect",
   },
-  "soundFile": "sfx_ui_hover.wav",
+  "soundFile": "sfx_ui_hover.ogg",
   "duration": 1.578957,
   "parent": {
     "name": "UI_Sounds",

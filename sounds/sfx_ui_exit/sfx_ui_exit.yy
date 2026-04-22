@@ -11,7 +11,7 @@
     "name": "audiogroup_soundeffect",
     "path": "audiogroups/audiogroup_soundeffect",
   },
-  "soundFile": "sfx_ui_exit.wav",
+  "soundFile": "sfx_ui_exit.ogg",
   "duration": 1.712472,
   "parent": {
     "name": "UI_Sounds",
