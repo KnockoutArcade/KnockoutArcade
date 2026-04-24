@@ -2197,7 +2197,7 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial",
       "Duration": 33,
-      "NumberOfFrames": 9,
+      "NumberOfFrames": 11,
       "FrameData": [
         {
           "Length": 0,
@@ -2224,16 +2224,24 @@
           "ImageIndex": 5
         },
         {
-          "Length": 23,
+          "Length": 17,
           "ImageIndex": 6
         },
         {
-          "Length": 27,
+          "Length": 20,
           "ImageIndex": 7
         },
         {
-          "Length": 30,
+          "Length": 23,
           "ImageIndex": 8
+        },
+        {
+          "Length": 27,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 30,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -9208,6 +9216,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-22T21:09:09.9080241-07:00",
+  "LastModified": "2026-04-23T20:13:49.0556958-07:00",
   "LastModifiedBy": "creep"
 }
