@@ -53,6 +53,11 @@ global.musicVolume = 0.5;
 global.sfxVolume = 0.5;
 global.voicesVolume = 0.5;
 
+// Update actual volume
+audio_group_set_gain(audiogroup_music, global.musicVolume, 0); // Set the volume
+audio_group_set_gain(audiogroup_soundeffect, global.sfxVolume, 0);
+audio_group_set_gain(audiogroup_voices, global.voicesVolume, 0);
+
 // Temporary No Numpad Mode
 global.noNumpadMode = false;
 

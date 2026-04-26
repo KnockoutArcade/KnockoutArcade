@@ -35,8 +35,8 @@ if (!isTransitioning)
 	
 	if (animTimer == musicStart)
 	{
+		audio_sound_gain(bgm_TitleScreen, global.musicVolume, 0);
 		audio_play_sound(bgm_TitleScreen, 0, false);
-		audio_sound_gain(bgm_TitleScreen, 1, 0);
 	}
 	
 	if (animTimer > logoAppearEnd)
