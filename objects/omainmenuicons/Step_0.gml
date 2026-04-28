@@ -94,6 +94,7 @@ if (image_index == 0 && P1menuConfirm)
 	screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 	
 	roomToTransitionTo = rCampaignFileSelect;
+	audio_sound_gain(bgm_MainMenu, 0, 750);
 	global.currentBGM = bgm_Russel_Stage;
 }
 
@@ -115,6 +116,8 @@ if (image_index == 1 && P1menuConfirm)
 	room_goto(rCharacterSelectScreen);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
+	
+	audio_stop_sound(bgm_MainMenu);
 }
 
 if (image_index == 3 && P1menuConfirm)
@@ -158,6 +161,7 @@ if (image_index == 2 && P1menuConfirm)
 	room_goto(rLevelTransitionTest1);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
+	audio_stop_sound(bgm_MainMenu);
 }
 
 // Control Percy's Blinking

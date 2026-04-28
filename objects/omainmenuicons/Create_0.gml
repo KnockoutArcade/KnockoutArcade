@@ -12,3 +12,17 @@ screenTransitionObject = noone;
 animTimer = 0;
 
 roomToTransitionTo = rCharacterSelectScreen;
+
+
+if (!audio_is_playing(bgm_MainMenu))
+{
+	audio_sound_gain(bgm_MainMenu, global.musicVolume, 0);
+	audio_play_sound(bgm_MainMenu, 0, true);
+}
+else if (audio_sound_get_gain(bgm_MainMenu) < 0.1)
+{
+	audio_stop_sound(bgm_MainMenu);
+	
+	audio_sound_gain(bgm_MainMenu, global.musicVolume, 0);
+	audio_play_sound(bgm_MainMenu, 0, true);
+}
