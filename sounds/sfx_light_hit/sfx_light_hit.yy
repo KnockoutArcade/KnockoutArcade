@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_light_hit.wav",
-  "duration": 1.199819,
+  "duration": 0.788458,
   "parent": {
     "name": "HitSounds",
     "path": "folders/Sounds/HitSounds.yy",

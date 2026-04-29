@@ -8,17 +8,17 @@
   "type": 0,
   "bitDepth": 1,
   "audioGroupId": {
-    "name": "audiogroup_soundeffect",
-    "path": "audiogroups/audiogroup_soundeffect",
+    "name": "audiogroup_default",
+    "path": "audiogroups/audiogroup_default",
   },
-  "soundFile": "sfx_heavy_hit.wav",
-  "duration": 1.048083,
+  "soundFile": "sfx_light_hit_3.wav",
+  "duration": 0.903854,
   "parent": {
     "name": "HitSounds",
     "path": "folders/Sounds/HitSounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_Heavy_Hit",
+  "name": "sfx_Light_Hit_3",
   "tags": [],
   "resourceType": "GMSound",
 }

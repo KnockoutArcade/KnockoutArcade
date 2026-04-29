@@ -6526,19 +6526,23 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaConnecter",
       "Duration": 26,
-      "NumberOfFrames": 3,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 5,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 9,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 9,
           "ImageIndex": 3
+        },
+        {
+          "Length": 12,
+          "ImageIndex": 4
         }
       ],
       "NumberOfHitboxes": 1,
@@ -9216,6 +9220,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-23T20:13:49.0556958-07:00",
+  "LastModified": "2026-04-28T20:49:01.1768176-07:00",
   "LastModifiedBy": "creep"
 }
