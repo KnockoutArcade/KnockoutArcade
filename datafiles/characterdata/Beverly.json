@@ -6525,9 +6525,13 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaConnecter",
-      "Duration": 26,
-      "NumberOfFrames": 4,
+      "Duration": 34,
+      "NumberOfFrames": 11,
       "FrameData": [
+        {
+          "Length": 0,
+          "ImageIndex": 0
+        },
         {
           "Length": 4,
           "ImageIndex": 1
@@ -6543,6 +6547,30 @@
         {
           "Length": 12,
           "ImageIndex": 4
+        },
+        {
+          "Length": 15,
+          "ImageIndex": 5
+        },
+        {
+          "Length": 18,
+          "ImageIndex": 6
+        },
+        {
+          "Length": 21,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 25,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 31,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -6714,21 +6742,42 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 5,
         "Windows": [
           {
             "StartingFrame": 4,
-            "HorizontalSpeed": 3.0,
+            "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 5,
-            "HorizontalSpeed": 0.0,
+            "StartingFrame": 9,
+            "HorizontalSpeed": 1.5,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": false
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 13,
+            "HorizontalSpeed": 0.75,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 19,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 21,
+            "HorizontalSpeed": 0.25,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
           }
         ],
         "GravityScale": 1.0,
@@ -9223,6 +9272,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-29T20:39:44.7357745-07:00",
+  "LastModified": "2026-04-29T22:00:47.5297132-07:00",
   "LastModifiedBy": "creep"
 }
