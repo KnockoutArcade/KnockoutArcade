@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_default",
   },
   "soundFile": "sfx_medium_whiff.wav",
-  "duration": 0.173083,
+  "duration": 0.168271,
   "parent": {
     "name": "HitSounds",
     "path": "folders/Sounds/HitSounds.yy",

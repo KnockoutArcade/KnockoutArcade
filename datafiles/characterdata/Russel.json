@@ -8334,7 +8334,7 @@
     "SpiritOnMoveset": 0
   },
   "NonmoveSoundData": {
-    "WalkingSoundEffect": "sfx_Footstep_H",
+    "WalkingSoundEffect": "sfx_Footstep_L1",
     "WalkForwardFootsteps": [
       1,
       4
@@ -8355,6 +8355,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-04-28T21:08:01.9133341-07:00",
+  "LastModified": "2026-04-29T19:51:43.5844646-07:00",
   "LastModifiedBy": "creep"
 }

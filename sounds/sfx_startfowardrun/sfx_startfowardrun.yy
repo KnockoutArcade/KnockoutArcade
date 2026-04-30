@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_startfowardrun.wav",
-  "duration": 1.712472,
+  "duration": 0.418271,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Movement",
+    "path": "folders/Sounds/Movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfx_StartFowardRun",

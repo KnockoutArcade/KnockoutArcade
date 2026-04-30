@@ -12,10 +12,10 @@
     "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_jump.wav",
-  "duration": 1.712472,
+  "duration": 0.509625,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "Movement",
+    "path": "folders/Sounds/Movement.yy",
   },
   "resourceVersion": "1.0",
   "name": "sfx_Jump",
