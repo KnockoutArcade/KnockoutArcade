@@ -8348,13 +8348,10 @@
       1,
       5
     ],
-    "RunBackwardFootsteps": [
-      5,
-      6
-    ]
+    "RunBackwardFootsteps": []
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-04-29T19:51:43.5844646-07:00",
+  "LastModified": "2026-04-29T20:39:01.6785536-07:00",
   "LastModifiedBy": "creep"
 }

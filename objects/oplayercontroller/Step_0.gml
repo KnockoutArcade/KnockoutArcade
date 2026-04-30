@@ -561,6 +561,7 @@ if (state == eState.IDLE)
 		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
+		audio_play_sound(backdashSFX, 0, false);
 	}
 	
 	// Handle Jumping
@@ -646,6 +647,7 @@ if (state == eState.CROUCHING)
 		animTimer = 0;
 		sprite_index = CharacterSprites.runBackward_Sprite;
 		image_index = 0;
+		audio_play_sound(backdashSFX, 0, false);
 	}
 	
 	vsp += fallSpeed;
@@ -1078,6 +1080,7 @@ switch state
 			animTimer = 0;
 			sprite_index = CharacterSprites.runBackward_Sprite;
 			image_index = 0;
+			audio_play_sound(backdashSFX, 0, false);
 		}
 		
 		image_speed = 1;
@@ -1275,6 +1278,7 @@ switch state
 				{
 					animTimer = 0;
 					image_index = 0;
+					audio_play_sound(initialDashSFX, 0, false);
 				}
 			}
 			
@@ -1464,9 +1468,6 @@ switch state
 		
 		if (animTimer > 4)
 		 {
-			// play sound effect
-			audio_play_sound(sfx_Jump, 1, false);
-			
 			// If the player buffered an attack, transition into the arial that they buffered
 			if (jumpAttackBuffer != 0)
 			{
@@ -1512,12 +1513,18 @@ switch state
 					vsp = -jumpSpeed;
 					isShortHopping = false;
 					jumpHsp = hsp;
+					
+					// play sound effect
+					audio_play_sound(sfx_Jump, 1, false);
 				}
 				else 
 				{
 					vsp = -(jumpSpeed * 0.88);
 					isShortHopping = true;
 					jumpHsp = hsp;
+					
+					// play sound effect
+					audio_play_sound(sfx_Shorthop, 1, false);
 				}
 			}
 			
@@ -1528,11 +1535,17 @@ switch state
 				{
 					vsp = -(jumpSpeed * 1.25);
 					jumpHsp = hsp * 1.35;
+					
+					// play sound effect
+					audio_play_sound(sfx_SuperJump, 1, false);
 				}
 				else
 				{
 					vsp = -jumpSpeed;
 					jumpHsp = hsp;
+					
+					// play sound effect
+					audio_play_sound(sfx_Jump, 1, false);
 				}
 			}
 			
@@ -1543,6 +1556,8 @@ switch state
 				isShortHopping = false;
 				isSuperJumping = false;
 				jumpHsp = hsp;
+				// play sound effect
+				audio_play_sound(sfx_Jump, 1, false);
 			}
 		}
 	}
@@ -3716,6 +3731,8 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			image_index = 0;
 			sprite_index = CharacterSprites.landingLag_Sprite;
 			
+			audio_play_sound(sfx_Landing, 1, false);
+			
 			hasUsedAirNeutralSpecial = false;
 			hasUsedAirSideSpecial = false;
 			hasUsedAirUpSpecial = false;
@@ -3854,6 +3871,8 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			image_index = 0;
 			sprite_index = CharacterSprites.landingLag_Sprite;
 			
+			audio_play_sound(sfx_Landing, 1, false);
+			
 			hasUsedAirNeutralSpecial = false;
 			hasUsedAirSideSpecial = false;
 			hasUsedAirUpSpecial = false;
@@ -3953,6 +3972,8 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					hsp *= 0.5;
 					image_index = 0;
 					sprite_index = CharacterSprites.landingLag_Sprite;
+					
+					audio_play_sound(sfx_Landing, 1, false);
 			
 					hasUsedAirNeutralSpecial = false;
 					hasUsedAirSideSpecial = false;

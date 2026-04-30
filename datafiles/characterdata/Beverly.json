@@ -9215,11 +9215,14 @@
       7
     ],
     "RunningSoundEffect": "sfx_Footstep_H",
-    "RunForwardFootsteps": [],
+    "RunForwardFootsteps": [
+      3,
+      7
+    ],
     "RunBackwardFootsteps": []
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-29T19:52:17.7244312-07:00",
+  "LastModified": "2026-04-29T20:39:44.7357745-07:00",
   "LastModifiedBy": "creep"
 }

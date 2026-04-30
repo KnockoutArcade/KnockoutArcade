@@ -25,7 +25,8 @@ previousWalkFrame = 0; // Stores the image_index for the previous walk frame (us
 RunningSoundEffect = selectedCharacter.NonmoveSoundData.RunningSoundEffect;
 RunForwardFootsteps = selectedCharacter.NonmoveSoundData.RunForwardFootsteps;
 RunBackwardFootsteps = selectedCharacter.NonmoveSoundData.RunBackwardFootsteps;
-initialDashSFX = sfx_Jump;
+initialDashSFX = sfx_StartFowardRun;
+backdashSFX = sfx_Backdash;
 
 // Running variables
 canRun = true; // Whether the player is allowed to run/backdash or not

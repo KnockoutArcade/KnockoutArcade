@@ -28,6 +28,9 @@ hurtboxYOffset = 0;
 // RUN ACCEL - PUT IN CHAR EDITOR
 runSpeedAcceleration = 1.2; // How fast the character accelerates to their top speed
 
+// Unique backdash sfx for bev
+backdashSFX = sfx_Backdash_Beverly;
+
 with (hurtbox) 
 {
 	primary = true;
