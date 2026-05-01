@@ -6525,7 +6525,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaConnecter",
-      "Duration": 34,
+      "Duration": 35,
       "NumberOfFrames": 11,
       "FrameData": [
         {
@@ -6553,23 +6553,23 @@
           "ImageIndex": 5
         },
         {
-          "Length": 18,
+          "Length": 19,
           "ImageIndex": 6
         },
         {
-          "Length": 21,
+          "Length": 23,
           "ImageIndex": 7
         },
         {
-          "Length": 25,
+          "Length": 26,
           "ImageIndex": 8
         },
         {
-          "Length": 28,
+          "Length": 29,
           "ImageIndex": 9
         },
         {
-          "Length": 31,
+          "Length": 32,
           "ImageIndex": 10
         }
       ],
@@ -6766,11 +6766,11 @@
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 19,
-            "HorizontalSpeed": 0.25,
+            "StartingFrame": 15,
+            "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           },
           {
             "StartingFrame": 21,
@@ -9272,6 +9272,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-29T22:00:47.5297132-07:00",
+  "LastModified": "2026-04-30T20:01:22.3879904-07:00",
   "LastModifiedBy": "creep"
 }
