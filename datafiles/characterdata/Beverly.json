@@ -7606,14 +7606,14 @@
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 4,
+            "StartingFrame": 2,
             "HorizontalSpeed": 3.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 5,
+            "StartingFrame": 7,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -9272,6 +9272,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-04-30T20:01:22.3879904-07:00",
+  "LastModified": "2026-05-06T22:30:21.0347011-07:00",
   "LastModifiedBy": "creep"
 }
