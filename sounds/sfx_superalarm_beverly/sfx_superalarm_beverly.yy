@@ -11,14 +11,14 @@
     "name": "audiogroup_soundeffect",
     "path": "audiogroups/audiogroup_soundeffect",
   },
-  "soundFile": "sfx_spend50meter.wav",
-  "duration": 2.995374,
+  "soundFile": "sfx_superalarm_beverly.wav",
+  "duration": 0.802875,
   "parent": {
     "name": "SuperAlarms",
     "path": "folders/Sounds/SuperAlarms.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sfx_spend50Meter",
+  "name": "sfx_SuperAlarm_Beverly",
   "tags": [],
   "resourceType": "GMSound",
 }
