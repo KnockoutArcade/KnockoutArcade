@@ -1,7 +1,7 @@
 {
   "conversionMode": 0,
   "compression": 0,
-  "volume": 1.0,
+  "volume": 0.5,
   "preload": false,
   "bitRate": 128,
   "sampleRate": 44100,
@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_spend50meter.wav",
-  "duration": 2.995374,
+  "duration": 3.424943,
   "parent": {
     "name": "SuperAlarms",
     "path": "folders/Sounds/SuperAlarms.yy",

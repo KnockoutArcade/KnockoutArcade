@@ -421,6 +421,7 @@
     {"id":{"name":"sFileSelect_Font","path":"sprites/sFileSelect_Font/sFileSelect_Font.yy",},"order":5,},
     {"id":{"name":"sHealthbar_Damage_Blue","path":"sprites/sHealthbar_Damage_Blue/sHealthbar_Damage_Blue.yy",},"order":16,},
     {"id":{"name":"sHealthbar_Blue","path":"sprites/sHealthbar_Blue/sHealthbar_Blue.yy",},"order":15,},
+    {"id":{"name":"sfx_LargeCounter","path":"sounds/sfx_LargeCounter/sfx_LargeCounter.yy",},"order":10,},
     {"id":{"name":"sGunther_Standing_Light","path":"sprites/sGunther_Standing_Light/sGunther_Standing_Light.yy",},"order":24,},
     {"id":{"name":"sfx_UI_Select","path":"sounds/sfx_UI_Select/sfx_UI_Select.yy",},"order":0,},
     {"id":{"name":"sSmoothCriminal_Standing_Light2","path":"sprites/sSmoothCriminal_Standing_Light2/sSmoothCriminal_Standing_Light2.yy",},"order":23,},

@@ -759,6 +759,8 @@ function HandleHitboxCollision(ownerType)
 						}
 						else if (other.counterHitProperty.CounterHitLevel == 3)
 						{
+							audio_play_sound(sfx_LargeCounter, 0, false);
+							
 							var counterParticle = instance_create_layer(global.camObj.x - 80, 0, "Particles", oParticles);
 							with(counterParticle)
 							{
