@@ -7502,19 +7502,19 @@
           "ImageIndex": 5
         },
         {
-          "Length": 24,
+          "Length": 26,
           "ImageIndex": 6
         },
         {
-          "Length": 28,
+          "Length": 30,
           "ImageIndex": 7
         },
         {
-          "Length": 32,
+          "Length": 34,
           "ImageIndex": 8
         },
         {
-          "Length": 36,
+          "Length": 38,
           "ImageIndex": 9
         }
       ],
@@ -7631,7 +7631,7 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 3,
         "Windows": [
           {
             "StartingFrame": 2,
@@ -7646,6 +7646,13 @@
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 30,
+            "HorizontalSpeed": 0.75,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": true
           }
         ],
         "GravityScale": 1.0,
@@ -9300,6 +9307,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-05-07T21:39:22.1349461-07:00",
+  "LastModified": "2026-05-08T18:27:21.1974671-07:00",
   "LastModifiedBy": "creep"
 }
