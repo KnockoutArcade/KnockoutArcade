@@ -139,7 +139,7 @@
       "UseHitScript": false,
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
-      "HitSound": "sfx_Medium_Hit",
+      "HitSound": "sfx_BeverlySuper_Hit",
       "ChipDamage": 1,
       "CauseHardKnockdown": true,
       "CauseFloorBounce": false
@@ -169,7 +169,7 @@
       "UseHitScript": false,
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
-      "HitSound": "sfx_Heavy_Hit",
+      "HitSound": "sfx_BeverlySuper_Hit",
       "CauseHardKnockdown": true,
       "CauseFloorBounce": false
     }
@@ -181,6 +181,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
-  "LastModified": "2026-05-08T18:24:14.7011584-07:00",
+  "LastModified": "2026-05-08T22:49:48.7140092-07:00",
   "LastModifiedBy": "creep"
 }

@@ -9130,7 +9130,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit",
+          "HitSound": "sfx_BeverlySuper_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 1,
@@ -9162,7 +9162,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_Heavy_Hit",
+          "HitSound": "sfx_BeverlySuper_Hit",
           "CauseHardKnockdown": true,
           "CauseFloorBounce": false
         }
@@ -9251,8 +9251,13 @@
       },
       "UseMoveScript": true,
       "SupplementaryMoveScript": "BevSuperScript",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_SuperAlarm_Beverly",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -9307,6 +9312,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-05-08T18:27:21.1974671-07:00",
+  "LastModified": "2026-05-08T22:37:07.6573886-07:00",
   "LastModifiedBy": "creep"
 }
