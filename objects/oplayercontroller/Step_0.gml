@@ -2767,6 +2767,8 @@ switch state
 					sprite_index = CharacterSprites.getup_Sprite;
 					image_index = 0;
 					isExperiencingHardKnockdown = false;
+					
+					audio_play_sound(sfx_Getup, 1, false);
 				}
 				else if (global.gameTimer <= 0) // if the round is over due to a timeout, get up
 				{
@@ -3697,7 +3699,7 @@ if (place_meeting(x, y + 8, oSlope) && state != eState.BEING_GRABBED && sign(vsp
 			hsp = (hsp * .5);
 			vsp = -4;
 			isFloorBouncingThisFrame = true;
-			audio_play_sound(sfx_Landing, 1, false);
+			audio_play_sound(sfx_Floorbounce, 1, false);
 		}
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && !floorBouncing && landingLag <= 0) 
 		{
@@ -3775,6 +3777,8 @@ if (place_meeting(x+hsp+environmentDisplacement, y, oWall) && state != eState.BE
 		vsp = -2;
 		environmentDisplacement = 0;
 		
+		audio_play_sound(sfx_Wallbounce, 1, false);
+		
 		// Create particle effect
 		var impactParticle = instance_create_layer(x, y, "Instances", oParticles);
 		with (impactParticle) 
@@ -3837,7 +3841,7 @@ if (place_meeting(x, y+vsp, oWall) && state != eState.BEING_GRABBED)
 			hsp = (hsp * .5);
 			vsp = -4;
 			isFloorBouncingThisFrame = true;
-			audio_play_sound(sfx_Landing, 1, false);
+			audio_play_sound(sfx_Floorbounce, 1, false);
 		}
 		if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && fallDirection == 1 && !floorBouncing && landingLag <= 0) 
 		{
@@ -3939,7 +3943,7 @@ if (semiSolidCollisionCheck) && (state != eState.BEING_GRABBED)
 					hsp = (hsp * .5);
 					vsp = -4;
 					isFloorBouncingThisFrame = true;
-					audio_play_sound(sfx_Landing, 1, false);
+					audio_play_sound(sfx_Floorbounce, 1, false);
 				}
 				if (!grounded && state != eState.LAUNCHED && state != eState.HURT && cancelOnLanding && !floorBouncing && fallDirection == 1 && landingLag <= 0) 
 				{

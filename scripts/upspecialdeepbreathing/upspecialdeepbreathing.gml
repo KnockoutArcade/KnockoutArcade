@@ -15,6 +15,7 @@ function UpSpecialDeepBreathing()
 		}
 		
 		isEXFlash = true;
+		audio_play_sound(sfx_UseEnhancedMove, 1, false);
 		
 		invincible = true;
 		

@@ -6,6 +6,7 @@ function DeepBreathingScript()
 	{
 		hasSpecialCharge = false;
 		isEXFlash = true;
+		audio_play_sound(sfx_UseEnhancedMove, 1, false);
 		
 		state = eState.ENHANCED_DOWN_SPECIAL;
 		sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId;

@@ -7,6 +7,8 @@ function HandleKnockdownState( _hardKnockdown)
 	{
 		state = eState.KNOCKED_DOWN;
 		sprite_index = CharacterSprites.knockdown_Sprite;
+		
+		audio_play_sound(sfx_Knockdown, 0, false);
 	}
 	else // Handle soft knockdown
 	{
@@ -14,6 +16,8 @@ function HandleKnockdownState( _hardKnockdown)
 		{
 			state = eState.QUICK_GETUP;
 			sprite_index = CharacterSprites.quickGetup_Sprite;
+			
+			audio_play_sound(sfx_QuickGetup, 0, false);
 		}
 		else
 		{
@@ -21,6 +25,7 @@ function HandleKnockdownState( _hardKnockdown)
 			sprite_index = CharacterSprites.techRoll_Sprite;
 			
 			image_xscale = -movedir;
+			audio_play_sound(sfx_TechRoll, 0, false);
 		}
 	}
 		

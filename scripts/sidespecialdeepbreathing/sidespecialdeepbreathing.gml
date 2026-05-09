@@ -6,6 +6,7 @@ function SideSpecialDeepBreathing()
 	{
 		hasSpecialCharge = false;
 		isEXFlash = true;
+		audio_play_sound(sfx_UseEnhancedMove, 1, false);
 		
 		state = eState.REKKA_LAUNCHER;
 		sprite_index = selectedCharacter.RekkaLauncher.SpriteId;

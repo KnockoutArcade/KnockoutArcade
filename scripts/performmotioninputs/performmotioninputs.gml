@@ -116,6 +116,7 @@ function PerformMotionInputs(attack)
 					{
 						superMeter -= 25;
 						hasUsedMeter = true
+						audio_play_sound(sfx_UseEnhancedMove, 1, false);
 					}
 				
 					if (changeImmediately)
