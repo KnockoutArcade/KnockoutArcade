@@ -2,7 +2,7 @@
   "option_windows_display_name": "KNOCK-OUT ARCADE",
   "option_windows_executable_name": "KNOCKOUT_ARCADE.exe",
   "option_windows_version": "0.5.0.0",
-  "option_windows_company_info": "YoYo Games Ltd",
+  "option_windows_company_info": "Inspired Pixel Games LLC",
   "option_windows_product_info": "KNOCK-OUT ARCADE",
   "option_windows_copyright_info": "",
   "option_windows_description_info": "KNOCKOUT ARCADE",
