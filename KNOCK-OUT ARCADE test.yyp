@@ -345,6 +345,7 @@
     {"id":{"name":"sKnockdownParticle","path":"sprites/sKnockdownParticle/sKnockdownParticle.yy",},"order":3,},
     {"id":{"name":"sRussel_Run_Forward","path":"sprites/sRussel_Run_Forward/sRussel_Run_Forward.yy",},"order":30,},
     {"id":{"name":"sBeverly_JumpLight_Mockup_strip3","path":"sprites/sBeverly_JumpLight_Mockup_strip3/sBeverly_JumpLight_Mockup_strip3.yy",},"order":16,},
+    {"id":{"name":"sCharSel_TurnOnFlash","path":"sprites/sCharSel_TurnOnFlash/sCharSel_TurnOnFlash.yy",},"order":19,},
     {"id":{"name":"sOptionsButtons","path":"sprites/sOptionsButtons/sOptionsButtons.yy",},"order":4,},
     {"id":{"name":"sBeverly_StandHeavy","path":"sprites/sBeverly_StandHeavy/sBeverly_StandHeavy.yy",},"order":27,},
     {"id":{"name":"sResults_Cursor_strip2","path":"sprites/sResults_Cursor_strip2/sResults_Cursor_strip2.yy",},"order":8,},

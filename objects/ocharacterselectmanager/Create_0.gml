@@ -312,5 +312,14 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 
 // Arcade buttons
 p1ArcadeButtonsObject = instance_create_layer(2, 99, "Buttons", oCharacterSelectButtons);
-
 p2ArcadeButtonsObject = instance_create_layer(85, 99, "Buttons", oCharacterSelectButtons);
+
+// Create the visual effect for turning the machine on
+var turnOnParticle = instance_create_layer(x, y, "Manager", oParticles);
+with (turnOnParticle) 
+{
+	sprite_index = sCharSel_TurnOnFlash;
+	image_index = 0;
+	lifetime = 20;
+	depth = other.depth - 1;
+}
