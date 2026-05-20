@@ -156,13 +156,20 @@ for (var j = 0; j < numberOfMaxAssignedControllers && j < array_length(controlle
 	controllerAssignData[j] = {
 		xPos : 0,
 		yPos : 0,
+		xTarget : 0,
+		yTarget : 0,
 		
 		playerSide : 0, // -1 = P1, 0 = middle, 1 = P2
 		cursorCooldown : 0
 	}
 }
 
-
+// Defines where the controller icons are drawn to the screen
+controllerAssignMiddleXPosition = 66;
+controllerAssignMiddleXPositionOffset = 44;
+controllerAssignMiddleYPosition = 19;
+controllerAssignMiddleYPositionOffset = 21;
+controllerAssignSelectedYPosition = 37;
 
 p1SideController = -1; // Whether each player side is currently occupied or not
 p2SideController = -1;

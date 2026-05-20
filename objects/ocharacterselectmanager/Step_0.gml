@@ -249,17 +249,21 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 			p2SideController = -1;
 		}
 		
-		// Handle position
-		controllerAssignData[i].xPos = 66 + (44 * controllerAssignData[i].playerSide);
+		// Handle target
+		controllerAssignData[i].xTarget = controllerAssignMiddleXPosition + (controllerAssignMiddleXPositionOffset * controllerAssignData[i].playerSide);
 		
 		if (controllerAssignData[i].playerSide == 0) 
 		{
-			controllerAssignData[i].yPos = 19 + (21 * i);
+			controllerAssignData[i].yTarget = controllerAssignMiddleYPosition + (controllerAssignMiddleYPositionOffset * i);
 		}
 		else 
 		{
-			controllerAssignData[i].yPos = 37;
+			controllerAssignData[i].yTarget = controllerAssignSelectedYPosition;
 		}
+		
+		// Update position
+		controllerAssignData[i].xPos = lerp(controllerAssignData[i].xPos, controllerAssignData[i].xTarget, 0.5);
+		controllerAssignData[i].yPos = lerp(controllerAssignData[i].yPos, controllerAssignData[i].yTarget, 0.5);
 	}
 	
 	// Handle returning to Main Menu
@@ -462,12 +466,25 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             global.p2SelectedCharacter = noone;
 			P2hasSelectedAlt = false;
 		}
-		else if (!P2hasSelectedChar)
+		else
         {
-            // If neither player has chosen a character, return to main menu
-            room_goto(rMainMenu);
-			audio_stop_sound(bgm_CharacterSelect);
-			audio_stop_sound(bgm_CharacterSelect_Loop);
+            // Return to controller assignment
+			state = eCharacterSelectState.CONTROLLER_ASSIGN;
+			
+			P1charSelRow = 0;
+			P1charSelCol = 0;
+			P1cursorCooldown = 5;
+			P2charSelRow = 0;
+			P2charSelCol = 2;
+			P2cursorCooldown = 5;
+			
+			p1ArcadeButtonsObject.controllerSlot = -1;
+			p2ArcadeButtonsObject.controllerSlot = -1;
+			
+			// Un-select P2's character
+			P2hasSelectedChar = false;
+            global.p2SelectedCharacter = noone;
+			P2hasSelectedAlt = false;
         }
 
         RTF_animTimer = 0;
@@ -628,12 +645,25 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             global.p1SelectedCharacter = noone;
 			P1hasSelectedAlt = false;
         }
-		else if (!p2IsCPU && !P1hasSelectedChar)
+		else if (!p2IsCPU)
 		{
-			// If neither player has chosen a character, return to main menu
-            room_goto(rMainMenu);
-			audio_stop_sound(bgm_CharacterSelect);
-			audio_stop_sound(bgm_CharacterSelect_Loop);
+			// Return to controller assignment
+			state = eCharacterSelectState.CONTROLLER_ASSIGN;
+			
+			P1charSelRow = 0;
+			P1charSelCol = 0;
+			P1cursorCooldown = 5;
+			P2charSelRow = 0;
+			P2charSelCol = 2;
+			P2cursorCooldown = 5;
+			
+			p1ArcadeButtonsObject.controllerSlot = -1;
+			p2ArcadeButtonsObject.controllerSlot = -1;
+			
+			// Un-select P1's character
+			P1hasSelectedChar = false;
+            global.p1SelectedCharacter = noone;
+			P1hasSelectedAlt = false;
 		}
 
         RTF_animTimer = 0;
