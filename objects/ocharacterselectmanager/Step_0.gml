@@ -196,6 +196,7 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (controllerAssign[i].buttonMenuConfirm)
 		{
 			proceedToCharSel = true;
+			audio_play_sound(sfx_UI_Select, 0, false);
 		}
 		
 		if (tempControllerMenuLeft == 0 && tempControllerMenuRight == 0)
@@ -221,6 +222,7 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (controllerAssignData[i].playerSide == -1 && p1SideController == -1)
 		{
 			p1SideController = controllerAssign[i];
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		else if (controllerAssignData[i].playerSide == -1 && p1SideController != controllerAssign[i]) // If we get there and its not us
 		{
@@ -232,6 +234,7 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (controllerAssignData[i].playerSide == 1 && p2SideController == -1)
 		{
 			p2SideController = controllerAssign[i];
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		else if (controllerAssignData[i].playerSide == 1 && p2SideController != controllerAssign[i]) // If we get there and its not us
 		{
@@ -243,10 +246,12 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		if (controllerAssignData[i].playerSide == 0 && p1SideController == controllerAssign[i])
 		{
 			p1SideController = -1;
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		else if (controllerAssignData[i].playerSide == 0 && p2SideController == controllerAssign[i])
 		{
 			p2SideController = -1;
+			audio_play_sound(sfx_UI_Hover, 0, false);
 		}
 		
 		// Handle target
@@ -272,6 +277,7 @@ if (state == eCharacterSelectState.CONTROLLER_ASSIGN)
 		room_goto(rMainMenu);
 		audio_stop_sound(bgm_CharacterSelect);
 		audio_stop_sound(bgm_CharacterSelect_Loop);
+		audio_play_sound(sfx_UI_Exit, 0, false);
 		exit;
 	}
 	else if (proceedToCharSel)
@@ -491,6 +497,9 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 			p1ArcadeButtonsObject.controllerSlot = -1;
 			p2ArcadeButtonsObject.controllerSlot = -1;
 			
+			p1ArcadeButtonsObject.useAllControllers = false;
+			p2ArcadeButtonsObject.useAllControllers = false;
+			
 			// Un-select P2's character
 			P2hasSelectedChar = false;
             global.p2SelectedCharacter = noone;
@@ -655,7 +664,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             global.p1SelectedCharacter = noone;
 			P1hasSelectedAlt = false;
         }
-		else if (!p2IsCPU)
+		else
 		{
 			// Return to controller assignment
 			state = eCharacterSelectState.CONTROLLER_ASSIGN;
@@ -669,6 +678,9 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 			
 			p1ArcadeButtonsObject.controllerSlot = -1;
 			p2ArcadeButtonsObject.controllerSlot = -1;
+			
+			p1ArcadeButtonsObject.useAllControllers = false;
+			p2ArcadeButtonsObject.useAllControllers = false;
 			
 			// Un-select P1's character
 			P1hasSelectedChar = false;
