@@ -6857,8 +6857,8 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaOverhead",
-      "Duration": 36,
-      "NumberOfFrames": 8,
+      "Duration": 40,
+      "NumberOfFrames": 12,
       "FrameData": [
         {
           "Length": 0,
@@ -6891,6 +6891,22 @@
         {
           "Length": 22,
           "ImageIndex": 7
+        },
+        {
+          "Length": 27,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 29,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 36,
+          "ImageIndex": 10
+        },
+        {
+          "Length": 38,
+          "ImageIndex": 11
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7001,21 +7017,21 @@
         "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 0,
+            "StartingFrame": 2,
             "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 11,
+            "StartingFrame": 17,
             "HorizontalSpeed": 0.8,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 18,
+            "StartingFrame": 23,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -9352,6 +9368,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-05-21T20:59:33.405785-07:00",
+  "LastModified": "2026-05-21T22:04:56.1231857-07:00",
   "LastModifiedBy": "creep"
 }
