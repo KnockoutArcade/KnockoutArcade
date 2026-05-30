@@ -460,6 +460,7 @@
     {"id":{"name":"ResetEnhancer","path":"scripts/ResetEnhancer/ResetEnhancer.yy",},"order":4,},
     {"id":{"name":"sSpiritFire","path":"sprites/sSpiritFire/sSpiritFire.yy",},"order":40,},
     {"id":{"name":"sfx_spend50Meter","path":"sounds/sfx_spend50Meter/sfx_spend50Meter.yy",},"order":3,},
+    {"id":{"name":"fntTrainingMode","path":"fonts/fntTrainingMode/fntTrainingMode.yy",},"order":3,},
     {"id":{"name":"sDoubleKOText","path":"sprites/sDoubleKOText/sDoubleKOText.yy",},"order":16,},
     {"id":{"name":"sBeverly_SideSpecial1_MOCKUP","path":"sprites/sBeverly_SideSpecial1_MOCKUP/sBeverly_SideSpecial1_MOCKUP.yy",},"order":2,},
     {"id":{"name":"Cutscene_PanCameraLinear","path":"scripts/Cutscene_PanCameraLinear/Cutscene_PanCameraLinear.yy",},"order":7,},
