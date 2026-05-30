@@ -4,6 +4,10 @@ function SetupGame()
 {
 	switch (global.gameMode) 
 	{
+		case GAMEMODE.TRAINING:
+		{
+			global.hasCompletedIntros = true;
+		}
 		case GAMEMODE.VERSUS:
 		{
 			// Set the current state of the game manager

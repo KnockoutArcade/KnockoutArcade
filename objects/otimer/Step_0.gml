@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-if (!global.gameHalt && !global.game_paused && !global.freezeTimer && !oPlayerController.isInCutscene)
+if (!global.gameHalt && !global.game_paused && !global.freezeTimer && !oPlayerController.isInCutscene && global.gameMode != GAMEMODE.TRAINING)
 {
 
 	if (frameTimer = 0)

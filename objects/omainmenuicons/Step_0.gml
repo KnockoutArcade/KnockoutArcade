@@ -112,7 +112,7 @@ if (image_index == 1 && P1menuConfirm)
 	*/
 	
 	// ORIGINAL CODE - GO BACK TO THIS AFTER TESTING
-	
+	global.gameMode = GAMEMODE.VERSUS;
 	room_goto(rCharacterSelectScreen);
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
@@ -134,9 +134,17 @@ if (image_index == 4 && P1menuConfirm)
 	audio_play_sound(sfx_UI_Select, 0, false);
 }
 
-// Testing out Single-Player Mechanics. This takes you to the test level
+// Training
 if (image_index == 2 && P1menuConfirm)
 {
+	global.gameMode = GAMEMODE.TRAINING;
+	
+	room_goto(rCharacterSelectScreen);
+	
+	audio_play_sound(sfx_UI_Select, 0, false);
+	
+	audio_stop_sound(bgm_MainMenu);
+	/*
 	global.gameMode = GAMEMODE.PLATFORMING;
 	
 	global.currentBGM = bgm_Russel_Stage;
@@ -162,6 +170,9 @@ if (image_index == 2 && P1menuConfirm)
 	
 	audio_play_sound(sfx_UI_Select, 0, false);
 	audio_stop_sound(bgm_MainMenu);
+	*/
+	
+	
 }
 
 // Control Percy's Blinking

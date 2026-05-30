@@ -314,6 +314,12 @@ controllerUpdate = function ControllerUpdate(_isNewConnected, _controllerID)
 p1ArcadeButtonsObject = instance_create_layer(2, 99, "Buttons", oCharacterSelectButtons);
 p2ArcadeButtonsObject = instance_create_layer(85, 99, "Buttons", oCharacterSelectButtons);
 
+// If in training mode, use different background
+if (global.gameMode = GAMEMODE.TRAINING)
+{
+	layer_background_sprite(layer_background_get_id("Background"), sCharSel_TrainingBackground);
+}
+
 // Create the visual effect for turning the machine on
 var turnOnParticle = instance_create_layer(x, y, "Manager", oParticles);
 with (turnOnParticle) 

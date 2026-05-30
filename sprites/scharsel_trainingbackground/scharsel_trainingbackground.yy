@@ -7,9 +7,9 @@
   "edgeFiltering": false,
   "collisionTolerance": 0,
   "swfPrecision": 2.525,
-  "bbox_left": 3,
-  "bbox_right": 148,
-  "bbox_top": 108,
+  "bbox_left": 0,
+  "bbox_right": 159,
+  "bbox_top": 0,
   "bbox_bottom": 119,
   "HTile": false,
   "VTile": false,
@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"3c726e97-2d8c-42b5-a1b2-6373e6bbafe2","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"3c726e97-2d8c-42b5-a1b2-6373e6bbafe2","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},"LayerId":{"name":"a36f8f11-5c7c-4e06-89b1-412972b43cdc","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"sCharSel_ButtonShadows","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},"resourceVersion":"1.0","name":"3c726e97-2d8c-42b5-a1b2-6373e6bbafe2","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"c31063cd-d4d6-46f3-a23c-f121d2e83dd8","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"c31063cd-d4d6-46f3-a23c-f121d2e83dd8","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},"LayerId":{"name":"50b0c513-9557-48b2-a118-c912d340944d","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"sCharSel_TrainingBackground","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},"resourceVersion":"1.0","name":"c31063cd-d4d6-46f3-a23c-f121d2e83dd8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"sCharSel_ButtonShadows","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},
+    "spriteId": {"name":"sCharSel_TrainingBackground","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 0.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"MomentsEventKeyframe",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"dd9c5947-3dea-46d5-b2b7-9da865afdaeb","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"3c726e97-2d8c-42b5-a1b2-6373e6bbafe2","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
+            {"id":"6980f680-bbb2-4a26-a246-84039f54a3f4","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c31063cd-d4d6-46f3-a23c-f121d2e83dd8","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe`1","elementType":"SpriteFrameKeyframe",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore`1","elementType":"SpriteFrameKeyframe",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,14 +58,14 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"sCharSel_ButtonShadows","path":"sprites/sCharSel_ButtonShadows/sCharSel_ButtonShadows.yy",},
+    "parent": {"name":"sCharSel_TrainingBackground","path":"sprites/sCharSel_TrainingBackground/sCharSel_TrainingBackground.yy",},
     "resourceVersion": "1.4",
-    "name": "sCharSel_ButtonShadows",
+    "name": "sCharSel_TrainingBackground",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"a36f8f11-5c7c-4e06-89b1-412972b43cdc","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"50b0c513-9557-48b2-a118-c912d340944d","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
@@ -73,7 +73,7 @@
     "path": "folders/Sprites/CharacterSelectAssets.yy",
   },
   "resourceVersion": "1.0",
-  "name": "sCharSel_ButtonShadows",
+  "name": "sCharSel_TrainingBackground",
   "tags": [],
   "resourceType": "GMSprite",
 }

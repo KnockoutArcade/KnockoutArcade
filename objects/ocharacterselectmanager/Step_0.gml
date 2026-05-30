@@ -1095,6 +1095,9 @@ else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 			}
 		}
 		// Update the game into versus mode
-		global.gameMode = GAMEMODE.VERSUS;
+		if (global.gamemode != GAMEMODE.TRAINING)
+		{
+			global.gameMode = GAMEMODE.VERSUS;
+		}
 	}
 }
