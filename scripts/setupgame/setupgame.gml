@@ -56,7 +56,7 @@ function SetupGame()
 				image_xscale *= -1;
 				opponent = other.p1;
 				hasPerformedIntro = false;
-				if (global.currentRound != 1 || global.isDoingRematch)
+				if (global.currentRound != 1 || global.isDoingRematch || global.gameMode == GAMEMODE.TRAINING)
 				{
 					hasPerformedIntro = true;
 				}
@@ -70,7 +70,7 @@ function SetupGame()
 			{
 				opponent = other.p2;
 				hasPerformedIntro = false;
-				if (global.currentRound != 1 || global.isDoingRematch)
+				if (global.currentRound != 1 || global.isDoingRematch || global.gameMode == GAMEMODE.TRAINING)
 				{
 					hasPerformedIntro = true;
 				}
