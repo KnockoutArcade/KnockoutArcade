@@ -81,6 +81,10 @@ p1TrainingRightX = 303;
 p2TrainingRightX = 311;
 isTrainingPositionsSwapped = false;
 
+// Training Mode Data
+p1MaxComboDamage = 0;
+p2MaxComboDamage = 0;
+
 // Controllers
 p1ControllerInstance = FindController(global.player1ControllerSlot);
 p2ControllerInstance = FindController(global.player2ControllerSlot);

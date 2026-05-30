@@ -701,6 +701,16 @@ switch (global.gameMode)
 			global.camObj.xCameraDestination = (p1.x + p2.x) * 0.5;
 		}
 		
+		// Handle tracking stats
+		if (p1.storedComboDamage > p1MaxComboDamage)
+		{
+			p1MaxComboDamage = p1.storedComboDamage;
+		}
+		if (p2.storedComboDamage > p2MaxComboDamage)
+		{
+			p2MaxComboDamage = p2.storedComboDamage;
+		}
+		
 		// Frame-by-frame
 		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
 		{
