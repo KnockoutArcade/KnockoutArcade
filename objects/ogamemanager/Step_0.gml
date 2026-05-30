@@ -633,9 +633,13 @@ switch (global.gameMode)
 		
 		// Handle resetting positions
 		var p1SelectButton = false;
+		var p1HorizontalDirection = 0;
+		var p1VerticalDirection = 0;
 		if (p1ControllerInstance != -1)
 		{
 			p1SelectButton = p1ControllerInstance.buttonMenuSelect;
+			p1HorizontalDirection = p1ControllerInstance.buttonLeft + p1ControllerInstance.buttonRight;
+			p1VerticalDirection = p1ControllerInstance.buttonDown + p1ControllerInstance.buttonUp;
 		}
 		
 		if (p1SelectButton && pauseMenuButtonHeldTimer_P1 <= 0)
@@ -652,6 +656,49 @@ switch (global.gameMode)
 			ResetGame();
 			SetupGame();
 			trainingModeAllowPlayersOffscreenTimer = 5;
+			
+			if (p1VerticalDirection == 1)
+			{
+				isTrainingPositionsSwapped = true;
+			}
+			else
+			{
+				isTrainingPositionsSwapped = false;
+			}
+			
+			if (p1HorizontalDirection == -1)
+			{
+				p1.x = p1TrainingLeftX;
+				p2.x = p2TrainingLeftX;
+			}
+			else if (p1HorizontalDirection == 1)
+			{
+				p1.x = p1TrainingRightX;
+				p2.x = p2TrainingRightX;
+			}
+			else if (p1VerticalDirection == -1)
+			{
+				p1.x = p1TrainingMiddleX;
+				p2.x = p2TrainingMiddleX;
+			}
+			else
+			{
+				p1.x = p1TrainingPrevX;
+				p2.x = p2TrainingPrevX;
+			}
+			
+			if (isTrainingPositionsSwapped)
+			{
+				var tempPlayerX = p2.x;
+				p2.x = p1.x;
+				p1.x = tempPlayerX;
+			}
+			
+			p1TrainingPrevX = p1.x;
+			p2TrainingPrevX = p2.x;
+			
+			global.camObj.x = (p1.x + p2.x) * 0.5;
+			global.camObj.xCameraDestination = (p1.x + p2.x) * 0.5;
 		}
 		
 		// Frame-by-frame

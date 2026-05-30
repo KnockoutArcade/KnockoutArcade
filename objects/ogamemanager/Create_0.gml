@@ -71,6 +71,16 @@ pauseMenuHoldRequirement = 30; // How long the player must hold the pause button
 p1SelectHeldTimer = 0;
 trainingModeAllowPlayersOffscreenTimer = 10;
 
+p1TrainingPrevX = 129;
+p2TrainingPrevX = 199;
+p1TrainingLeftX = 17;
+p2TrainingLeftX = 39;
+p1TrainingMiddleX = 129;
+p2TrainingMiddleX = 199;
+p1TrainingRightX = 303;
+p2TrainingRightX = 311;
+isTrainingPositionsSwapped = false;
+
 // Controllers
 p1ControllerInstance = FindController(global.player1ControllerSlot);
 p2ControllerInstance = FindController(global.player2ControllerSlot);
