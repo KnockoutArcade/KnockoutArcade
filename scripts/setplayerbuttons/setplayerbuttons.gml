@@ -51,7 +51,8 @@ function RestorePlayer1DefaultControls()
 			buttonMenuTriggerRight : ord("E"),
 			buttonMenuTriggerLeft : ord("Q"),
 			
-			buttonMenuPause : vk_escape
+			buttonMenuPause : vk_escape,
+			buttonMenuSelect : vk_lalt
 		},
 		
 		Controller : 
@@ -91,7 +92,8 @@ function RestorePlayer1DefaultControls()
 			buttonMenuTriggerRight : gp_shoulderrb,
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
-			buttonMenuPause : gp_start
+			buttonMenuPause : gp_start,
+			buttonMenuSelect : gp_select
 		},
 		
 		Keyboard_Arrows : 
@@ -126,7 +128,8 @@ function RestorePlayer1DefaultControls()
 			buttonMenuTriggerRight : vk_pageup,
 			buttonMenuTriggerLeft : vk_pagedown,
 			
-			buttonMenuPause : vk_backspace
+			buttonMenuPause : vk_backspace,
+			buttonMenuSelect : vk_ralt
 		},
 		
 		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.
@@ -170,7 +173,8 @@ function RestorePlayer2DefaultControls()
 			buttonMenuTriggerRight : ord("E"),
 			buttonMenuTriggerLeft : ord("Q"),
 			
-			buttonMenuPause : vk_escape
+			buttonMenuPause : vk_escape,
+			buttonMenuSelect : vk_lalt
 		},
 		
 		Controller : 
@@ -210,7 +214,8 @@ function RestorePlayer2DefaultControls()
 			buttonMenuTriggerRight : gp_shoulderrb,
 			buttonMenuTriggerLeft : gp_shoulderlb,
 			
-			buttonMenuPause : gp_start
+			buttonMenuPause : gp_start,
+			buttonMenuSelect : gp_select
 		},
 		
 		Keyboard_Arrows : 
@@ -245,7 +250,8 @@ function RestorePlayer2DefaultControls()
 			buttonMenuTriggerRight : vk_pageup,
 			buttonMenuTriggerLeft : vk_pagedown,
 			
-			buttonMenuPause : vk_backspace
+			buttonMenuPause : vk_backspace,
+			buttonMenuSelect : vk_ralt
 		},
 		
 		versionNumber : ControllerSaveVersionNumber // This number represents the current "version" of the controls.

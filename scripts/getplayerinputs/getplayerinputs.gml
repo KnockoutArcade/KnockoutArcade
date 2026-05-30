@@ -51,6 +51,7 @@ function GetPlayerInputs()
 		buttonMenuTriggerLeft_hold = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuTriggerLeft);
 			
 		buttonMenuPause = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuPause);
+		buttonMenuSelect = keyboard_check(controlMappings.Keyboard_WASD.buttonMenuSelect);
 	}
 	else if (controllerType == CONTROLLER_TYPES.ARROWS) // Arrow Keys...
 	{
@@ -100,6 +101,7 @@ function GetPlayerInputs()
 		buttonMenuTriggerLeft_hold = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuTriggerLeft);
 			
 		buttonMenuPause = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuPause);
+		buttonMenuSelect = keyboard_check(controlMappings.Keyboard_Arrows.buttonMenuSelect);
 	}
 	else // For pads...
 	{
@@ -177,6 +179,7 @@ function GetPlayerInputs()
 		buttonMenuTriggerLeft_hold = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuTriggerLeft);
 		
 		buttonMenuPause = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuPause);
+		buttonMenuSelect = gamepad_button_check(controllerSlot, controlMappings.Controller.buttonMenuSelect);
 	}
 	
 	

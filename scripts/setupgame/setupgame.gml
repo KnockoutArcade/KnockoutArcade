@@ -7,6 +7,7 @@ function SetupGame()
 		case GAMEMODE.TRAINING:
 		{
 			global.hasCompletedIntros = true;
+			global.currentRound = 0;
 		}
 		case GAMEMODE.VERSUS:
 		{
@@ -61,7 +62,10 @@ function SetupGame()
 					hasPerformedIntro = true;
 				}
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
-				isInCutscene = true;
+				if (global.gameMode == GAMEMODE.VERSUS)
+				{
+					isInCutscene = true;
+				}
 				teamID = 2; // Set this player's team score
 				
 				controllerSlot = global.player2ControllerSlot;
@@ -75,7 +79,10 @@ function SetupGame()
 					hasPerformedIntro = true;
 				}
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
-				isInCutscene = true;
+				if (global.gameMode == GAMEMODE.VERSUS)
+				{
+					isInCutscene = true;
+				}
 				teamID = 1; // Set this player's team score
 				
 				controllerSlot = global.player1ControllerSlot;
@@ -205,7 +212,7 @@ function SetupGame()
 			global.gameHalt = false;
 			gameHaltTimer = 0;
 	
-			if (global.hasCompletedIntros) 
+			if (global.hasCompletedIntros && global.gameMode != GAMEMODE.TRAINING) 
 			{
 				var particle = instance_create_layer((room_width / 2) - 80, 0, "Particles", oParticles);
 				with (particle) 

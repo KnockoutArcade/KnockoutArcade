@@ -3,6 +3,7 @@
 
 switch (global.gameMode)
 {
+	case GAMEMODE.TRAINING:
 	case GAMEMODE.VERSUS:
 	{
 		// Frame Advantage

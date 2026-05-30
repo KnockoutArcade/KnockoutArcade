@@ -67,13 +67,16 @@ pauseMenuButtonHeldTimer_P1 = 0; // Keeps track of how many frames P1 has held d
 pauseMenuButtonHeldTimer_P2 = 0; // Keeps track of how many frames P2 has held down the pause button
 pauseMenuHoldRequirement = 30; // How long the player must hold the pause button in order to pause
 
+// Controllers
+p1ControllerInstance = FindController(global.player1ControllerSlot);
+p2ControllerInstance = FindController(global.player2ControllerSlot);
+
 // Singleplayer Pause Script
 function GameManagerPauseSingleplayer()
 {
 	// Handle Pausing
 	if (!global.game_paused && !p1.isInCutscene) // Check to see if we are not in a cutscene right now
 	{
-		var p1ControllerInstance = FindController(global.player1ControllerSlot);
 		var p1PauseButton = false;
 		if (p1ControllerInstance != -1)
 		{

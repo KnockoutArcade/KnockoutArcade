@@ -33,7 +33,6 @@ switch (global.gameMode)
 		// Handle Pausing
 		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene) // Check to see if we are in the during match state
 		{
-			var p1ControllerInstance = FindController(global.player1ControllerSlot);
 			var p1PauseButton = false;
 			if (p1ControllerInstance != -1)
 			{
@@ -47,7 +46,6 @@ switch (global.gameMode)
 				}
 			}
 			
-			var p2ControllerInstance = FindController(global.player2ControllerSlot);
 			var p2PauseButton = false;
 			if (p2ControllerInstance != -1)
 			{
@@ -622,6 +620,19 @@ switch (global.gameMode)
 	case GAMEMODE.TRAINING:
 	{
 		GameManagerPauseSingleplayer();
+		
+		// Handle resetting positions
+		var p1SelectButton = false;
+		if (p1ControllerInstance != -1)
+		{
+			p1SelectButton = p1ControllerInstance.buttonMenuSelect;
+		}
+		
+		if (p1SelectButton)
+		{
+			ResetGame();
+			SetupGame();
+		}
 		
 		// Frame-by-frame
 		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
