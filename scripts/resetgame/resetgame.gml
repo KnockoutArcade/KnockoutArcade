@@ -28,6 +28,9 @@ function ResetGame()
 	instance_destroy(oSuperKOOrange);
 	instance_destroy(oRoundCounter);
 	instance_destroy(oSpecialChargeIcon);
+	instance_destroy(oComboCounter);
+	instance_destroy(oParticles);
+	instance_destroy(oSuperFlashBackground);
 	
 	instance_destroy(global.camObj);
 	

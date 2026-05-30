@@ -621,6 +621,16 @@ switch (global.gameMode)
 	{
 		GameManagerPauseSingleplayer();
 		
+		if (p1.isInCutscene)
+		{
+			trainingModeAllowPlayersOffscreenTimer--;
+		}
+		if (trainingModeAllowPlayersOffscreenTimer <= 0)
+		{
+			p1.isInCutscene = false;
+			p2.isInCutscene = false;
+		}
+		
 		// Handle resetting positions
 		var p1SelectButton = false;
 		if (p1ControllerInstance != -1)
@@ -628,10 +638,20 @@ switch (global.gameMode)
 			p1SelectButton = p1ControllerInstance.buttonMenuSelect;
 		}
 		
-		if (p1SelectButton)
+		if (p1SelectButton && pauseMenuButtonHeldTimer_P1 <= 0)
+		{
+			p1SelectHeldTimer++;
+		}
+		else
+		{
+			p1SelectHeldTimer = 0;
+		}
+		
+		if (p1SelectHeldTimer == 1)
 		{
 			ResetGame();
 			SetupGame();
+			trainingModeAllowPlayersOffscreenTimer = 5;
 		}
 		
 		// Frame-by-frame

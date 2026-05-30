@@ -67,6 +67,10 @@ pauseMenuButtonHeldTimer_P1 = 0; // Keeps track of how many frames P1 has held d
 pauseMenuButtonHeldTimer_P2 = 0; // Keeps track of how many frames P2 has held down the pause button
 pauseMenuHoldRequirement = 30; // How long the player must hold the pause button in order to pause
 
+// Training mode position reset
+p1SelectHeldTimer = 0;
+trainingModeAllowPlayersOffscreenTimer = 10;
+
 // Controllers
 p1ControllerInstance = FindController(global.player1ControllerSlot);
 p2ControllerInstance = FindController(global.player2ControllerSlot);

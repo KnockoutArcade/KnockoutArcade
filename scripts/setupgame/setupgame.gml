@@ -62,10 +62,7 @@ function SetupGame()
 					hasPerformedIntro = true;
 				}
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
-				if (global.gameMode == GAMEMODE.VERSUS)
-				{
-					isInCutscene = true;
-				}
+				isInCutscene = true;
 				teamID = 2; // Set this player's team score
 				
 				controllerSlot = global.player2ControllerSlot;
@@ -79,10 +76,7 @@ function SetupGame()
 					hasPerformedIntro = true;
 				}
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
-				if (global.gameMode == GAMEMODE.VERSUS)
-				{
-					isInCutscene = true;
-				}
+				isInCutscene = true;
 				teamID = 1; // Set this player's team score
 				
 				controllerSlot = global.player1ControllerSlot;
