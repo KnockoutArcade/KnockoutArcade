@@ -185,6 +185,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Record Combo Damage
 		owner.comboDamage += scaledDamage;
 		owner.storedComboDamage = owner.comboDamage;
+		owner.storedMoveDamage = scaledDamage;
+		owner.storedDamageScaling = round(scaleAmount * 100);
 		
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
 		collision_list.owner.superMeter += (attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
@@ -506,6 +508,8 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					
 		owner.playerOwner.comboDamage += scaledDamage;
 		owner.playerOwner.storedComboDamage = owner.playerOwner.comboDamage;
+		owner.playerOwner.storedMoveDamage = scaledDamage;
+		owner.playerOwner.storedDamageScaling = round(scaleAmount * 100);
 		
 		collision_list.owner.superMeter += (attackProperty.MeterGain * 0.25 * collision_list.owner.meterPenalty);
 		// Meter Build - P1 gets 100% meter, P2 gets 25%
