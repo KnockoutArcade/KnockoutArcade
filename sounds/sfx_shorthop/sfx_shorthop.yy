@@ -12,7 +12,7 @@
     "path": "audiogroups/audiogroup_soundeffect",
   },
   "soundFile": "sfx_shorthop.wav",
-  "duration": 0.509625,
+  "duration": 0.538458,
   "parent": {
     "name": "Movement",
     "path": "folders/Sounds/Movement.yy",
