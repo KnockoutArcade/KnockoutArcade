@@ -752,6 +752,7 @@
     {"id":{"name":"sRussel_ForwardThrow","path":"sprites/sRussel_ForwardThrow/sRussel_ForwardThrow.yy",},"order":21,},
     {"id":{"name":"sBeverly_FireballDissipate","path":"sprites/sBeverly_FireballDissipate/sBeverly_FireballDissipate.yy",},"order":0,},
     {"id":{"name":"sVictoryScreen_OptionsBase","path":"sprites/sVictoryScreen_OptionsBase/sVictoryScreen_OptionsBase.yy",},"order":0,},
+    {"id":{"name":"bgm_StartVSMatch","path":"sounds/bgm_StartVSMatch/bgm_StartVSMatch.yy",},"order":8,},
     {"id":{"name":"NeutralSpecialDeepBreathing","path":"scripts/NeutralSpecialDeepBreathing/NeutralSpecialDeepBreathing.yy",},"order":4,},
     {"id":{"name":"BevEnhancedUpSpecial","path":"scripts/BevEnhancedUpSpecial/BevEnhancedUpSpecial.yy",},"order":6,},
     {"id":{"name":"sMainMenu","path":"sprites/sMainMenu/sMainMenu.yy",},"order":2,},

@@ -1046,6 +1046,9 @@ else if (state == eCharacterSelectState.TRANSITION_TO_FIGHT)
 	// On the first frame of transitioning...
 	if (transitionTimer == 1)
 	{
+		// Play the music
+		audio_play_sound(bgm_StartVSMatch, 0, false);
+		
 		// Spawn the transition object
 		transitionObject = instance_create_depth(0, 0, -1000, oFightTransitionScreen);
 		
