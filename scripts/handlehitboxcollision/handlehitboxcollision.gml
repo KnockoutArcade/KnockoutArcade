@@ -194,6 +194,7 @@ function HandleHitboxCollision(ownerType)
 					ownerType.state = eState.HOLD;
 					ownerType.animTimer = 0;
 					ownerType.heldOpponent = collision_list[| i].owner;
+					ownerType.target = collision_list[| i].owner;
 					
 					collision_list[| i].owner.state = eState.BEING_GRABBED;
 					collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.hurt_Sprite;

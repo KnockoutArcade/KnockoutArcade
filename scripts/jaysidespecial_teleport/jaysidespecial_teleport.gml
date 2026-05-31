@@ -2,7 +2,7 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function JaySideSpecial_Teleport()
 {
-	if (global.gameMode != GAMEMODE.VERSUS)
+	if (global.gameMode == GAMEMODE.PLATFORMING)
 	{
 		exit;
 	}
