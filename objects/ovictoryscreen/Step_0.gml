@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+if (!audio_is_playing(bgm_VictoryScreen_Russel) && !audio_is_playing(bgm_VictoryScreen_Loop))
+{
+	audio_play_sound(bgm_VictoryScreen_Loop, 0, true);
+}
 
 animTimer++;
 
@@ -76,5 +80,3 @@ switch (state)
 	}
 	break;
 }
-
-

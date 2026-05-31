@@ -162,6 +162,9 @@ function ResultsScreen()
 		
 		font_delete(victoryFont);
 		
+		audio_stop_sound(bgm_VictoryScreen_Loop);
+		audio_stop_sound(bgm_VictoryScreen_Russel);
+		
 		switch (prioritySelection)
 		{
 			case 0:
