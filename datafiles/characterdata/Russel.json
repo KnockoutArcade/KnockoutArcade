@@ -1895,7 +1895,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Grab",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
@@ -1927,7 +1927,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Grab",
           "CauseHardKnockdown": false,
           "CauseFloorBounce": false
         }
@@ -1987,8 +1987,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Grab_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -5456,7 +5461,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Grab",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
@@ -8379,6 +8384,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-05-31T12:22:18.5189784-07:00",
+  "LastModified": "2026-05-31T13:24:23.7317342-07:00",
   "LastModifiedBy": "creep"
 }

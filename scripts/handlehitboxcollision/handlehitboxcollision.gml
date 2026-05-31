@@ -178,6 +178,9 @@ function HandleHitboxCollision(ownerType)
 						image_xscale = 1;
 					}
 					
+					//Play sound effect
+					audio_play_sound(sfx_ThrowTech, 0, false);
+					
 					ds_list_add(hasHit, collision_list[| i].owner.id);
 				} 
 				else if (attackProperty.AttackType == eAttackType.GRAB && // Grabbing
@@ -258,6 +261,12 @@ function HandleHitboxCollision(ownerType)
 						lifetime = other.attackProperty.ParticleDuration;
 						sprite_index = asset_get_index(other.attackProperty.ParticleEffect);
 						image_xscale = particleSpawner.image_xscale * -1;
+					}
+					
+					// Play Sound effect
+					if (attackProperty.HitSound != "")
+					{
+						audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
 					}
 
 				}
@@ -361,8 +370,6 @@ function HandleHitboxCollision(ownerType)
 					}
 					// Once we're done destroying hitboxes, we don't care about anything else.
 					exit;
-					
-					
 				}
 				else if (collision_list[| i].owner.canBlock) && // Blocking
 					(collision_list[| i].owner.isAbleToBlock) &&
@@ -614,7 +621,13 @@ function HandleHitboxCollision(ownerType)
 
 					// Reset Frame Advantage Counter
 					oGameManager.frameAdvantage = 0;
-
+					
+					// Play Sound effect
+					if (attackProperty.HitSound != "")
+					{
+						audio_play_sound(asset_get_index(attackProperty.HitSound), 0, false);
+					}
+					
 					// Draw grab effect
 					var particle = instance_create_layer(x + (attackProperty.ParticleXOffset * ownerType.image_xscale), y - attackProperty.ParticleYOffset, "Particles", oParticles);
 					with(particle)
