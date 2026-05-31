@@ -7896,7 +7896,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sRussel_Super",
-      "Duration": 100,
+      "Duration": 120,
       "NumberOfFrames": 33,
       "FrameData": [
         {
@@ -8348,7 +8348,7 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 15
     }
   ],
   "UniqueData": {
@@ -8379,6 +8379,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-05-08T22:49:21.404098-07:00",
+  "LastModified": "2026-05-31T12:22:18.5189784-07:00",
   "LastModifiedBy": "creep"
 }
