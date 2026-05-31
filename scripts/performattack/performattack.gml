@@ -360,4 +360,19 @@ function PerformAttack(Action, createdBySpirit)
 			spiritObject.nextToPlayer = true;
 		}
 	}
+	
+	// Training Mode debug data
+	if (Action.NumberOfHitboxes > 0)
+	{
+		storedMoveStartup = Action.AttackProperty[0].Start;
+		if (state == eState.SUPER)
+		{
+			storedMoveStartup = Action.AttackProperty[0].Start - 30;
+		}
+	}
+	else if (Action.NumberOfProjectiles > 0)
+	{
+		storedMoveStartup = Action.ProjectileData[0].SpawnFrame;
+	}
+	storedMoveDuration = Action.Duration;
 }

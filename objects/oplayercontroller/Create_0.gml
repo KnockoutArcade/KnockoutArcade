@@ -375,6 +375,8 @@ comboDamage = 0; // Records how much damage a combo did
 storedComboDamage = 0; // Used as a debug variable to display combo damage
 storedMoveDamage = 0; // Used as a debug variable to display the most recent hit's damage
 storedDamageScaling = 0; // Used as a debug variable to display damage scaling
+storedMoveStartup = 0; // Displays the current attack's startup frames
+storedMoveDuration = 0; // Displays the current attack's total duration
 
 // Gravity Scaling Related variables
 /* 

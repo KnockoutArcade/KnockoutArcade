@@ -30,8 +30,9 @@ if (global.gameMode == GAMEMODE.TRAINING && pauseMenuObject == noone)
 	
 	draw_set_halign(fa_right);
 	draw_text(320, 130, string(p1.storedMoveDamage) + " (" + string(p1.storedDamageScaling) + "%)");
-	draw_text(320, 150, string(p1.storedComboDamage));
-	draw_text(320, 170, string(p1MaxComboDamage));
+	draw_text(320, 150, p1.storedComboDamage);
+	draw_text(320, 170, p1MaxComboDamage);
+	draw_text(320, 190, string(p1.storedMoveStartup) + "f (" + string(p1.storedMoveDuration) + "f)");
 	
 	draw_set_halign(fa_left);
 	draw_set_font(Font1);
