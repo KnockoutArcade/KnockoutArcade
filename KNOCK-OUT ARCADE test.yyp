@@ -531,6 +531,7 @@
     {"id":{"name":"oJsonImport","path":"objects/oJsonImport/oJsonImport.yy",},"order":5,},
     {"id":{"name":"sfx_Medium_Whiff","path":"sounds/sfx_Medium_Whiff/sfx_Medium_Whiff.yy",},"order":6,},
     {"id":{"name":"sComboCounter_Numbers","path":"sprites/sComboCounter_Numbers/sComboCounter_Numbers.yy",},"order":1,},
+    {"id":{"name":"sBeverly_SideSpecial_RekkaLauncher","path":"sprites/sBeverly_SideSpecial_RekkaLauncher/sBeverly_SideSpecial_RekkaLauncher.yy",},"order":67,},
     {"id":{"name":"sfx_Footstep_H2","path":"sounds/sfx_Footstep_H2/sfx_Footstep_H2.yy",},"order":4,},
     {"id":{"name":"sScrollStageTest","path":"sprites/sScrollStageTest/sScrollStageTest.yy",},"order":0,},
     {"id":{"name":"oMenuManager","path":"objects/oMenuManager/oMenuManager.yy",},"order":1,},
