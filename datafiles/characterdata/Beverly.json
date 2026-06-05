@@ -7292,35 +7292,51 @@
       "SwitchToMoveset": 0,
       "SpriteName": "sBeverly_SideSpecial_RekkaLauncher",
       "Duration": 60,
-      "NumberOfFrames": 7,
+      "NumberOfFrames": 11,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 3,
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 10,
+          "Length": 7,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 10,
           "ImageIndex": 3
         },
         {
-          "Length": 14,
+          "Length": 12,
           "ImageIndex": 4
         },
         {
-          "Length": 16,
+          "Length": 14,
           "ImageIndex": 5
         },
         {
-          "Length": 21,
+          "Length": 16,
           "ImageIndex": 6
+        },
+        {
+          "Length": 20,
+          "ImageIndex": 7
+        },
+        {
+          "Length": 24,
+          "ImageIndex": 8
+        },
+        {
+          "Length": 28,
+          "ImageIndex": 9
+        },
+        {
+          "Length": 32,
+          "ImageIndex": 10
         }
       ],
       "NumberOfHitboxes": 1,
@@ -7341,12 +7357,12 @@
           "AttackType": 1,
           "BlockStun": 3.0,
           "KnockBack": 12.0,
-          "AirKnockbackVertical": -5.5,
+          "AirKnockbackVertical": -6.2,
           "AirKnockbackHorizontal": 0.3,
           "Launches": true,
           "LaunchKnockbackVertical": -6.5,
           "LaunchKnockbackHorizontal": 0.3,
-          "GravityScaling": 4.0,
+          "GravityScaling": 3.0,
           "Pushback": 12.0,
           "ParticleXOffset": 15,
           "ParticleYOffset": 25,
@@ -7375,11 +7391,11 @@
           "AttackHitStop": 19,
           "AttackHitStun": 19,
           "KnockBack": 12.0,
-          "AirKnockbackVertical": -4.0,
-          "AirKnockbackHorizontal": 0.0,
+          "AirKnockbackVertical": -6.2,
+          "AirKnockbackHorizontal": 0.3,
           "Launches": true,
           "LaunchKnockbackVertical": -6.0,
-          "LaunchKnockbackHorizontal": 0.0,
+          "LaunchKnockbackHorizontal": 0.3,
           "GravityScaling": 0.0,
           "Pushback": 12.0,
           "ParticleXOffset": 15,
@@ -9376,6 +9392,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-06-04T20:58:31.4838326-07:00",
+  "LastModified": "2026-06-04T22:20:56.8878918-07:00",
   "LastModifiedBy": "creep"
 }
