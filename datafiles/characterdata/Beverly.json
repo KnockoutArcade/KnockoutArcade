@@ -7355,7 +7355,7 @@
           "AttackHitStop": 15,
           "AttackHitStun": 19,
           "AttackType": 1,
-          "BlockStun": 3.0,
+          "BlockStun": 15.0,
           "KnockBack": 12.0,
           "AirKnockbackVertical": -6.2,
           "AirKnockbackHorizontal": 0.3,
@@ -7428,16 +7428,16 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 7,
+          "Start": 9,
           "Lifetime": 4,
-          "AttackWidth": 16,
+          "AttackWidth": 20,
           "AttackHeight": 28,
           "WidthOffset": 2,
-          "HeightOffset": 0
+          "HeightOffset": 10
         },
         {
           "Start": 1,
-          "Lifetime": 23,
+          "Lifetime": 62,
           "AttackWidth": 20,
           "AttackHeight": 36,
           "WidthOffset": -10,
@@ -9392,6 +9392,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-06-04T22:20:56.8878918-07:00",
+  "LastModified": "2026-06-05T21:46:47.7235182-07:00",
   "LastModifiedBy": "creep"
 }
