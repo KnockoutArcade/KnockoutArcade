@@ -82,6 +82,30 @@ function SetupGame()
 				controllerSlot = global.player1ControllerSlot;
 			}
 		
+			#region Spawn AI opponent
+			if (global.gameMode != GAMEMODE.TRAINING && p2.controllerSlot == -1)
+			{
+				var p2AIController = instance_create_depth(0, 0, 0, oAIController);
+				var p2AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_Enemy_Gin);
+				
+				p2.controllerID = p2AIController;
+				p2AIBehavior.characterID = p2; // Who this AI is controlling
+				p2AIBehavior.controllerID = p2AIController; // The controller object to communicate with
+				p2AIBehavior.opponent = p1; // Who this AI is targeting
+			}
+			
+			if (global.gameMode != GAMEMODE.TRAINING && p1.controllerSlot == -1)
+			{
+				var p1AIController = instance_create_depth(0, 0, 0, oAIController);
+				var p1AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_Enemy_Gin);
+				
+				p1.controllerID = p1AIController;
+				p1AIBehavior.characterID = p1; // Who this AI is controlling
+				p1AIBehavior.controllerID = p1AIController; // The controller object to communicate with
+				p1AIBehavior.opponent = p2; // Who this AI is targeting
+			}
+			#endregion
+		
 			// Special Charge Icon (for Beverly)
 			specialChargeIcon1 = instance_create_layer(63, 24, "UI", oSpecialChargeIcon);
 			with (specialChargeIcon1)

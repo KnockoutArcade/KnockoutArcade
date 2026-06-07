@@ -101,7 +101,7 @@ if (controllerSlot != -1 && !isInCutscene) // Human Player
 		var attack = 0;
 	}
 } 
-else if (controllerID != noone) // AI Controller
+else if (controllerID != noone && !isInCutscene) // AI Controller
 {
 	var moveleft = controllerID.buttonLeft * -1;
 	var moveright = controllerID.buttonRight;

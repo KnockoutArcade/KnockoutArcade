@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, gravityScaling);
 	draw_text(20, 70, comboScaling);
-	draw_text(20, 90, target);
+	draw_text(20, 90, controllerSlot);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			

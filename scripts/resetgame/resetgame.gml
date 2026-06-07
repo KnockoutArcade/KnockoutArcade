@@ -32,6 +32,9 @@ function ResetGame()
 	instance_destroy(oParticles);
 	instance_destroy(oSuperFlashBackground);
 	
+	instance_destroy(oAIBase);
+	instance_destroy(oAIController);
+	
 	instance_destroy(global.camObj);
 	
 	global.freezeTimer = false;
