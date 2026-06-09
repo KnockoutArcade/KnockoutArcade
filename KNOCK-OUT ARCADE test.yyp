@@ -630,6 +630,7 @@
     {"id":{"name":"sJay_Standing_Heavy","path":"sprites/sJay_Standing_Heavy/sJay_Standing_Heavy.yy",},"order":42,},
     {"id":{"name":"sBeverly_Crouch_Medium","path":"sprites/sBeverly_Crouch_Medium/sBeverly_Crouch_Medium.yy",},"order":29,},
     {"id":{"name":"ControllerSetup","path":"scripts/ControllerSetup/ControllerSetup.yy",},"order":0,},
+    {"id":{"name":"oAIBehavior_VersusCPU_Test","path":"objects/oAIBehavior_VersusCPU_Test/oAIBehavior_VersusCPU_Test.yy",},"order":5,},
     {"id":{"name":"GetPrintableKeyName","path":"scripts/GetPrintableKeyName/GetPrintableKeyName.yy",},"order":16,},
     {"id":{"name":"sBeverly_ForwardThrow","path":"sprites/sBeverly_ForwardThrow/sBeverly_ForwardThrow.yy",},"order":47,},
     {"id":{"name":"sCommandLists_Russel_Specials","path":"sprites/sCommandLists_Russel_Specials/sCommandLists_Russel_Specials.yy",},"order":2,},

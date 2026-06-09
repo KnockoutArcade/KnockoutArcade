@@ -25,7 +25,14 @@ enum eAIState {
 	WALK, // Walk towards target position
 	JUMP, // Jump around
 	ATTACK, // General attack state
-	HURT // Handle getting hurt/getting up
+	HURT, // Handle getting hurt/getting up
+	LAUNCHED,
+	KNOCKDOWN,
+	WAIT,
+	ADVANCE,
+	RETREAT,
+	PRESSURE,
+	POKE
 }
 
 AIState = eAIState.IDLE; // The state that the AI is currently in

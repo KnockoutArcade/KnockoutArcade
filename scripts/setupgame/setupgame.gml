@@ -86,7 +86,7 @@ function SetupGame()
 			if (global.gameMode != GAMEMODE.TRAINING && p2.controllerSlot == -1)
 			{
 				var p2AIController = instance_create_depth(0, 0, 0, oAIController);
-				var p2AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_Enemy_Gin);
+				var p2AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_VersusCPU_Test);
 				
 				p2.controllerID = p2AIController;
 				p2AIBehavior.characterID = p2; // Who this AI is controlling
@@ -97,7 +97,7 @@ function SetupGame()
 			if (global.gameMode != GAMEMODE.TRAINING && p1.controllerSlot == -1)
 			{
 				var p1AIController = instance_create_depth(0, 0, 0, oAIController);
-				var p1AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_Enemy_Gin);
+				var p1AIBehavior = instance_create_depth(0, 0, 0, oAIBehavior_VersusCPU_Test);
 				
 				p1.controllerID = p1AIController;
 				p1AIBehavior.characterID = p1; // Who this AI is controlling
