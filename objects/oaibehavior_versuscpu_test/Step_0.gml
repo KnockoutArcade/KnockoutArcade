@@ -30,15 +30,18 @@ if (AIState != eAIState.INACTIVE)
 }
 
 // If this has been hit, go to hurt state
-if (characterID.hitstun > 0)
+if (characterID.prevState == eState.HURT)
 {
 	// Set the state
 	AIState = eAIState.HURT;
-	
-	// Clear inputs
-	controllerID.buttonLeft = false;
-	controllerID.buttonRight = false;
-	controllerID.buttonLight = false;
+			
+	// Reset Timer
+	AIEventTimer = 0;
+}
+if (characterID.state == eState.KNOCKED_DOWN)
+{
+	// Set the state
+	AIState = eAIState.KNOCKDOWN;
 			
 	// Reset Timer
 	AIEventTimer = 0;
@@ -321,6 +324,56 @@ switch (AIState)
 	case (eAIState.HURT):
 	{
 		// Return to Walk once we've recovered
+		if (characterID.state == eState.IDLE)
+		{
+			// Set the state
+			AIState = eAIState.IDLE;
+			
+			// Reset event timers
+			AIEventTimer = 0;
+			
+			// Update getting grabbed
+			willReactToGrab = irandom_range(0,1);
+			willRun = false;
+			willJump = false;
+		}
+		else if (characterID.state == eState.LAUNCHED)
+		{
+			// Set the state
+			AIState = eAIState.IDLE;
+			
+			// Reset event timers
+			AIEventTimer = 0;
+		}
+	}
+	break;
+	
+	case (eAIState.LAUNCHED):
+	{
+		controllerID.buttonLeft = irandom_range(0, 1);
+		controllerID.buttonRight = irandom_range(0, 1);
+	}
+	break;
+	
+	case (eAIState.KNOCKDOWN):
+	{
+		var rng = irandom(99);
+		
+		if (characterID.animTimer == 25 && characterID.state == eState.GETUP)
+		{
+			if (rng < 25)
+			{
+				CPUChooseAttack(reversalAttacks);
+			}
+			else if (rng < 30)
+			{
+				AIState = eAIState.WAIT;
+				randomDelayTimer = irandom_range(10,30);
+				AIEventTimer = 0;
+			}
+			
+		}
+		
 		if (characterID.state == eState.IDLE)
 		{
 			// Set the state

@@ -29,6 +29,11 @@ pokeAttacks = [
 [6, 4, 40], [5, 4, 20]
 ];
 
+reversalAttacks = [
+[5, 1, 50], [2, 1, 40],
+[5, 5, 30]
+];
+
 function CPUTransitionToAdvance()
 {
 	AIState = eAIState.ADVANCE;
