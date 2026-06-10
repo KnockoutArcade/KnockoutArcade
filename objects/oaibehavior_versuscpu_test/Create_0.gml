@@ -14,7 +14,7 @@ willRun = false;
 willJump = false;
 
 // What moves to use for pressuring the opponent
-// [direction, attack, weight (probability)]
+// [direction, attack, weight (probability), condition()]
 pressureAttacks = [
 [5, 1, 50],[2, 1, 50],
 [5, 2, 30],[2, 2, 30],[6, 2, 20],
@@ -23,6 +23,11 @@ pressureAttacks = [
 [6, 5, 30],[4, 5, 30]
 ];
 
+pokeAttacks = [
+[5, 2, 50], [8, 2, 20],
+[5, 3, 40], [2, 3, 10],
+[6, 4, 40], [5, 4, 20]
+];
 
 function CPUTransitionToAdvance()
 {
@@ -60,7 +65,7 @@ function CPUTransitionToRetreat()
 	}
 }
 
-function CPUChoosePressureAttack()
+function CPUChooseAttack(attackSet)
 {
 	var totalWeight = 0;
 	var runningTotal = 0;
@@ -68,21 +73,21 @@ function CPUChoosePressureAttack()
 	var attackMove = 0;
 	var distanceFromPlayer = opponent.x - characterID.x;
 	
-	for (var i = 0; i < array_length(pressureAttacks); i++)
+	for (var i = 0; i < array_length(attackSet); i++)
 	{
-		totalWeight += pressureAttacks[i][2];
+		totalWeight += attackSet[i][2];
 	}
 	
 	var rng = irandom(totalWeight);
 	
-	for (var j = 0; j < array_length(pressureAttacks); j++)
+	for (var j = 0; j < array_length(attackSet); j++)
 	{
-		runningTotal += pressureAttacks[j][2];
+		runningTotal += attackSet[j][2];
 		
 		if (rng <= runningTotal)
 		{
-			attackDir = pressureAttacks[j][0];
-			attackMove = pressureAttacks[j][1];
+			attackDir = attackSet[j][0];
+			attackMove = attackSet[j][1];
 			break;
 		}
 	}

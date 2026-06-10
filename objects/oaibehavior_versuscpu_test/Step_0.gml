@@ -94,7 +94,7 @@ switch (AIState)
 				AIState = eAIState.WAIT;
 				randomDelayTimer = irandom_range(10,30);
 			}
-			else if (chooseNextState < 45)
+			else if (chooseNextState < 40)
 			{
 				CPUTransitionToAdvance();
 			}
@@ -238,7 +238,7 @@ switch (AIState)
 	{
 		if (AIEventTimer <= 1)
 		{
-			CPUChoosePressureAttack();
+			CPUChooseAttack(pressureAttacks);
 		}
 		else if (!characterID.inAttackState)
 		{
@@ -271,7 +271,7 @@ switch (AIState)
 	{
 		if (AIEventTimer <= 1)
 		{
-			controllerID.buttonMedium = true;
+			CPUChooseAttack(pokeAttacks);
 		}
 		else if (!characterID.inAttackState)
 		{
