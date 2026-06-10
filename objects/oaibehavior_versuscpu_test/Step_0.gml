@@ -108,9 +108,15 @@ switch (AIState)
 				randomDelayTimer = irandom_range(0, 100);
 				AIEventTimer = 0;
 			}
+			else if (chooseNextState < 95)
+			{
+				AIState = eAIState.POKE;
+				randomDelayTimer = irandom_range(0, 100);
+				AIEventTimer = 0;
+			}
 			else
 			{
-				randomDelayTimer = irandom_range(0, 60);
+				randomDelayTimer = irandom_range(0, 10);
 			}
 		}
 		
@@ -141,7 +147,7 @@ switch (AIState)
 			controllerID.buttonUp = true;
 		}
 		
-		if (abs(distanceFromPlayer) <= 30)
+		if (abs(distanceFromPlayer) <= 28)
 		{
 			AIState = eAIState.PRESSURE;
 			randomDelayTimer = irandom_range(0, 100);
@@ -158,10 +164,16 @@ switch (AIState)
 			{
 				CPUTransitionToRetreat();
 			}
+			else if (chooseNextState < 80)
+			{
+				AIState = eAIState.POKE;
+				randomDelayTimer = irandom_range(0, 100);
+				AIEventTimer = 0;
+			}
 			else
 			{
 				AIState = eAIState.IDLE;
-				randomDelayTimer = irandom_range(0, 60);
+				randomDelayTimer = irandom_range(0, 25);
 			}
 		}
 	}
@@ -190,6 +202,13 @@ switch (AIState)
 			controllerID.buttonUp = true;
 		}
 		
+		if (abs(distanceFromPlayer) <= 28)
+		{
+			AIState = eAIState.PRESSURE;
+			randomDelayTimer = irandom_range(0, 100);
+			AIEventTimer = 0;
+		}
+		
 		if (AIEventTimer >= randomDelayTimer)
 		{
 			AIEventTimer = 0;
@@ -200,10 +219,16 @@ switch (AIState)
 			{
 				CPUTransitionToAdvance();
 			}
+			else if (chooseNextState < 80)
+			{
+				AIState = eAIState.POKE;
+				randomDelayTimer = irandom_range(0, 100);
+				AIEventTimer = 0;
+			}
 			else
 			{
 				AIState = eAIState.IDLE;
-				randomDelayTimer = irandom_range(0, 60);
+				randomDelayTimer = irandom_range(0, 25);
 			}
 		}
 	}
@@ -213,7 +238,7 @@ switch (AIState)
 	{
 		if (AIEventTimer <= 1)
 		{
-			controllerID.buttonLight = true;
+			CPUChoosePressureAttack();
 		}
 		else if (!characterID.inAttackState)
 		{
@@ -228,12 +253,12 @@ switch (AIState)
 			else if (chooseNextState < 20)
 			{
 				AIState = eAIState.IDLE;
-				randomDelayTimer = irandom_range(0, 60);
+				randomDelayTimer = irandom_range(0, 25);
 				AIEventTimer = 0;
 				willRun = false;
 				willJump = false;
 			}
-			else if (abs(distanceFromPlayer) > 35)
+			else if (abs(distanceFromPlayer) > 28)
 			{
 				CPUTransitionToAdvance();
 			}
@@ -244,7 +269,39 @@ switch (AIState)
 	
 	case (eAIState.POKE):
 	{
-		
+		if (AIEventTimer <= 1)
+		{
+			controllerID.buttonMedium = true;
+		}
+		else if (!characterID.inAttackState)
+		{
+			AIEventTimer = 0;
+			
+			var chooseNextState = irandom_range(0, 99);
+			
+			if (chooseNextState < 40)
+			{
+				CPUTransitionToRetreat();
+			}
+			else if (chooseNextState < 50)
+			{
+				AIState = eAIState.IDLE;
+				randomDelayTimer = irandom_range(0, 25);
+				AIEventTimer = 0;
+				willRun = false;
+				willJump = false;
+			}
+			else if (abs(distanceFromPlayer) > 28)
+			{
+				CPUTransitionToAdvance();
+			}
+			else
+			{
+				AIState = eAIState.PRESSURE;
+				randomDelayTimer = irandom_range(0, 100);
+				AIEventTimer = 0;
+			}
+		}
 	}
 	break;
 	
@@ -253,7 +310,7 @@ switch (AIState)
 		if (AIEventTimer >= randomDelayTimer)
 		{
 			AIState = eAIState.IDLE;
-			randomDelayTimer = irandom_range(0, 60);
+			randomDelayTimer = irandom_range(0, 25);
 			AIEventTimer = 0;
 			willRun = false;
 			willJump = false;
