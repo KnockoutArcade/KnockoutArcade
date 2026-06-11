@@ -266,6 +266,13 @@ switch (AIState)
 				CPUTransitionToAdvance();
 			}
 		}
+		else if (characterID.cancelable)
+		{
+			AIState = eAIState.PERFORM_COMBO;
+			AIEventTimer = 0;
+			
+			CPUChooseCombo( characterID.prevState, comboRoutes);
+		}
 		
 	}
 	break;
@@ -304,6 +311,13 @@ switch (AIState)
 				randomDelayTimer = irandom_range(0, 100);
 				AIEventTimer = 0;
 			}
+		}
+		else if (characterID.cancelable)
+		{
+			AIState = eAIState.PERFORM_COMBO;
+			AIEventTimer = 0;
+			
+			CPUChooseCombo( characterID.prevState, comboRoutes);
 		}
 	}
 	break;
@@ -386,6 +400,109 @@ switch (AIState)
 			willReactToGrab = irandom_range(0,1);
 			willRun = false;
 			willJump = false;
+		}
+	}
+	break;
+	
+	case (eAIState.PERFORM_COMBO):
+	{
+		if (array_length(currentComboRoute) == 0 || (comboStep >= array_length(currentComboRoute) && !characterID.inAttackState) || characterID.state == eState.IDLE)
+		{
+			AIState = eAIState.IDLE;
+			randomDelayTimer = irandom_range(0, 60);
+			AIEventTimer = 0;
+			willRun = false;
+			willJump = false;
+			
+			comboAttack = 0;
+			comboDir = 0;
+			comboInputType = -1;
+			comboStep = 0;
+			hasInputtedAttack = false;
+		}
+		else if (!hasInputtedAttack && characterID.cancelable)
+		{
+			hasInputtedAttack = true;
+			
+			if (comboDir == 1 || comboDir == 4 || comboDir == 7)
+			{
+				if (sign(distanceFromPlayer) == 1)
+				{
+					controllerID.buttonLeft = true;
+					controllerID.buttonRight = false;
+				}
+				else
+				{
+					controllerID.buttonLeft = false;
+					controllerID.buttonRight = true;
+				}
+		
+				if (comboDir == 1) controllerID.buttonDown = true;
+				else if (comboDir == 7) controllerID.buttonUp = true;
+			}
+			else if (comboDir == 2)
+			{
+				controllerID.buttonDown = true;
+			}
+			else if (comboDir == 8)
+			{
+				controllerID.buttonUp = true;
+			}
+			if (comboDir == 3 || comboDir == 6 || comboDir == 9)
+			{
+				if (sign(distanceFromPlayer) == -1)
+				{
+					controllerID.buttonLeft = true;
+					controllerID.buttonRight = false;
+				}
+				else
+				{
+					controllerID.buttonLeft = false;
+					controllerID.buttonRight = true;
+				}
+		
+				if (comboDir == 3) controllerID.buttonDown = true;
+				else if (comboDir == 9) controllerID.buttonUp = true;
+			}
+	
+			// Handle attack input
+			if (comboAttack == 1)
+			{
+				controllerID.buttonLight = true;
+			}
+			else if (comboAttack == 2)
+			{
+				controllerID.buttonMedium = true;
+			}
+			else if (comboAttack == 3)
+			{
+				controllerID.buttonHeavy = true;
+			}
+			else if (comboAttack == 4)
+			{
+				controllerID.buttonSpecial = true;
+			}
+			else if (comboAttack == 5)
+			{
+				controllerID.buttonGrab = true;
+			}
+			else if (comboAttack == 6)
+			{
+				controllerID.buttonSuper = true;
+			}
+			
+			
+			comboStep++;
+			if (comboStep < array_length(currentComboRoute))
+			{
+				comboAttack = currentComboRoute[comboStep][2];
+				comboDir = currentComboRoute[comboStep][1];
+				comboInputType = currentComboRoute[comboStep][0];
+			}
+		}
+		else if (characterID.hitstop <= 0)
+		{
+			hasInputtedAttack = false;
 		}
 	}
 	break;

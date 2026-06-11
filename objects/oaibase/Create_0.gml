@@ -32,7 +32,8 @@ enum eAIState {
 	ADVANCE,
 	RETREAT,
 	PRESSURE,
-	POKE
+	POKE,
+	PERFORM_COMBO
 }
 
 AIState = eAIState.IDLE; // The state that the AI is currently in

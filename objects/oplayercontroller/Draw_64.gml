@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, gravityScaling);
 	draw_text(20, 70, comboScaling);
-	draw_text(20, 90, controllerSlot);
+	draw_text(20, 90, cancelable);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -43,7 +43,7 @@ else
 	draw_text(750, 30, animTimer);
 	draw_text(750, 50, gravityScaling);
 	draw_text(750, 70, comboScaling);
-	draw_text(750, 90, storedComboDamage);
+	draw_text(750, 90, cancelable);
 	
 	
 }
