@@ -16,7 +16,7 @@ willJump = false;
 // What moves to use for pressuring the opponent
 // [direction, attack, weight (probability), condition()]
 pressureAttacks = [
-[5, 1, 50],[2, 1, 50000],
+[5, 1, 50],[2, 1, 50],
 [5, 2, 30],[2, 2, 30],[6, 2, 20],
 [2, 3, 30],
 [5, 4, 20],[2, 4, 20],
@@ -58,7 +58,7 @@ comboRoutes = [
 		weight : 1,
 		route : 
 		[
-			[-1, 5, 2], [-1, 5, 3], [-1, 6, 5]
+			[-1, 5, 2], [-1, 5, 3], [-1, 6, 4]
 		]
 	},
 	{

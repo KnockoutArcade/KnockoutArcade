@@ -409,7 +409,7 @@ switch (AIState)
 		if (array_length(currentComboRoute) == 0 || (comboStep >= array_length(currentComboRoute) && !characterID.inAttackState) || characterID.state == eState.IDLE)
 		{
 			AIState = eAIState.IDLE;
-			randomDelayTimer = irandom_range(0, 60);
+			randomDelayTimer = irandom_range(0, 15);
 			AIEventTimer = 0;
 			willRun = false;
 			willJump = false;
@@ -419,8 +419,9 @@ switch (AIState)
 			comboInputType = -1;
 			comboStep = 0;
 			hasInputtedAttack = false;
+			currentComboRoute = [];
 		}
-		else if (!hasInputtedAttack && characterID.cancelable)
+		else if (!hasInputtedAttack && characterID.cancelable && comboStep < array_length(currentComboRoute))
 		{
 			hasInputtedAttack = true;
 			
