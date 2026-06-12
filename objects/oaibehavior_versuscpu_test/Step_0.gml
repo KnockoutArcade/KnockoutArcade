@@ -381,17 +381,28 @@ switch (AIState)
 		
 		if (characterID.animTimer == 25 && characterID.state == eState.GETUP)
 		{
-			if (rng < 25)
+			if (rng < 30)
 			{
 				CPUChooseAttack(reversalAttacks);
 			}
-			else if (rng < 30)
+			else if (rng < 35)
 			{
 				AIState = eAIState.WAIT;
 				randomDelayTimer = irandom_range(10,30);
 				AIEventTimer = 0;
 			}
 			
+		}
+		
+		if (characterID.cancelable)
+		{
+			CPUChooseCombo( characterID.prevState, comboRoutes);
+			
+			if (array_length(currentComboRoute) > 0)
+			{
+				AIState = eAIState.PERFORM_COMBO;
+				AIEventTimer = 0;
+			}
 		}
 		
 		if (characterID.state == eState.IDLE)
