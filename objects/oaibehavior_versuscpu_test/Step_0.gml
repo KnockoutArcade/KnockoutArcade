@@ -21,7 +21,7 @@ if (characterID.isInCutscene || global.game_paused)
 }
 
 // Calculate distance from player (can be negative)
-var distanceFromPlayer = opponent.x - characterID.x;
+var distanceFromPlayer = opponent.xHome - characterID.xHome;
 
 // Increase the event timer
 if (AIState != eAIState.INACTIVE)
@@ -150,14 +150,14 @@ switch (AIState)
 			controllerID.buttonUp = true;
 		}
 		
-		if (abs(distanceFromPlayer) <= 28)
+		if (abs(distanceFromPlayer) <= 28 && (characterID.grounded || AIEventTimer >= 20) && characterID.state != eState.JUMPSQUAT)
 		{
 			AIState = eAIState.PRESSURE;
 			randomDelayTimer = irandom_range(0, 100);
 			AIEventTimer = 0;
 		}
 		
-		if (AIEventTimer >= randomDelayTimer)
+		if (AIEventTimer >= randomDelayTimer && characterID.grounded)
 		{
 			AIEventTimer = 0;
 			
@@ -205,14 +205,14 @@ switch (AIState)
 			controllerID.buttonUp = true;
 		}
 		
-		if (abs(distanceFromPlayer) <= 28)
+		if (abs(distanceFromPlayer) <= 28 && (characterID.grounded || AIEventTimer >= 20) && characterID.state != eState.JUMPSQUAT)
 		{
 			AIState = eAIState.PRESSURE;
 			randomDelayTimer = irandom_range(0, 100);
 			AIEventTimer = 0;
 		}
 		
-		if (AIEventTimer >= randomDelayTimer)
+		if (AIEventTimer >= randomDelayTimer && characterID.grounded)
 		{
 			AIEventTimer = 0;
 			
@@ -268,10 +268,13 @@ switch (AIState)
 		}
 		else if (characterID.cancelable)
 		{
-			AIState = eAIState.PERFORM_COMBO;
-			AIEventTimer = 0;
+			CPUChooseCombo(characterID.prevState, comboRoutes);
 			
-			CPUChooseCombo( characterID.prevState, comboRoutes);
+			if (array_length(currentComboRoute) > 0)
+			{
+				AIState = eAIState.PERFORM_COMBO;
+				AIEventTimer = 0;
+			}
 		}
 		
 	}
@@ -314,10 +317,13 @@ switch (AIState)
 		}
 		else if (characterID.cancelable)
 		{
-			AIState = eAIState.PERFORM_COMBO;
-			AIEventTimer = 0;
-			
 			CPUChooseCombo( characterID.prevState, comboRoutes);
+			
+			if (array_length(currentComboRoute) > 0)
+			{
+				AIState = eAIState.PERFORM_COMBO;
+				AIEventTimer = 0;
+			}
 		}
 	}
 	break;
