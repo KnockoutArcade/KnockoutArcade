@@ -4,7 +4,7 @@
 // Reset controller inputs
 controllerID.buttonLeft = false;
 controllerID.buttonRight = false;
-controllerID.buttonUp = false;
+if (AIState != eAIState.KNOCKDOWN) controllerID.buttonUp = false;
 controllerID.buttonDown = false;
 
 controllerID.buttonLight = false;

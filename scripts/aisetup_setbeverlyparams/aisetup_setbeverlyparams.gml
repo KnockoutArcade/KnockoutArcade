@@ -14,7 +14,7 @@ function AISetup_SetBeverlyParams()
 	pokeAttacks = [
 	[5, 2, 80, true], [2, 2, 50, true], [6, 2, 80, true], [4, 2, 30, true],
 	[5, 3, 40, true], [2, 3, 40, true],
-	[5, 4, 90, true], [2, 4, 70, CPUBehaviorCondition_checkNotSpecialCharge], [6, 4, 50, true],
+	[5, 4, 230, true], [2, 4, 400, CPUBehaviorCondition_checkNotSpecialCharge], [6, 4, 50, true],
 	[5, 6, 50, CPUBehaviorCondition_check50Meter]
 	];
 
