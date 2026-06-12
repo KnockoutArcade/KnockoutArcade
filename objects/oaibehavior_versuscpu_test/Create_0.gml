@@ -185,6 +185,20 @@ function CPUBehaviorCondition_check50Meter()
 	
 	return false;
 }
+
+function CPUBehaviorCondition_checkSpecialCharge()
+{
+	if (characterID.hasSpecialCharge) return true;
+	
+	return false;
+}
+
+function CPUBehaviorCondition_checkNotSpecialCharge()
+{
+	if (!characterID.hasSpecialCharge) return true;
+	
+	return false;
+}
 #endregion
 
 randomDelayTimer = irandom_range(0, 60);
@@ -196,6 +210,13 @@ willReactToGrab = irandom_range(0,1);
 
 willRun = false;
 willJump = false;
+
+comboStep = 0;
+currentComboRoute = [];
+comboAttack = 0;
+comboDir = 0;
+comboInputType = -1;
+hasInputtedAttack = false;
 
 // What moves to use for pressuring the opponent
 // [direction, attack, weight (probability), condition()]
@@ -218,13 +239,6 @@ reversalAttacks = [
 [5, 5, 30, true],
 [5, 6, 100, CPUBehaviorCondition_check50Meter]
 ];
-
-comboStep = 0;
-currentComboRoute = [];
-comboAttack = 0;
-comboDir = 0;
-comboInputType = -1;
-hasInputtedAttack = false;
 
 comboRoutes = [
 	// [InputType(-1 = cancel, 0+ = link (delay x frames after move has ended)), direction, attack]

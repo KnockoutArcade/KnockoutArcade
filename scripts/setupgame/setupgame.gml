@@ -92,6 +92,14 @@ function SetupGame()
 				p2AIBehavior.characterID = p2; // Who this AI is controlling
 				p2AIBehavior.controllerID = p2AIController; // The controller object to communicate with
 				p2AIBehavior.opponent = p1; // Who this AI is targeting
+				
+				if (global.p2SelectedCharacter == oBeverly)
+				{
+					with (p2AIBehavior)
+					{
+						AISetup_SetBeverlyParams();
+					}
+				}
 			}
 			
 			if (global.gameMode != GAMEMODE.TRAINING && p1.controllerSlot == -1)
@@ -103,6 +111,14 @@ function SetupGame()
 				p1AIBehavior.characterID = p1; // Who this AI is controlling
 				p1AIBehavior.controllerID = p1AIController; // The controller object to communicate with
 				p1AIBehavior.opponent = p2; // Who this AI is targeting
+				
+				if (global.p1SelectedCharacter == oBeverly)
+				{
+					with (p1AIBehavior)
+					{
+						AISetup_SetBeverlyParams();
+					}
+				}
 			}
 			#endregion
 		
