@@ -66,6 +66,9 @@ if (screenTransitionObject != noone)
 		
 		room_goto(rTitleScreen);
 		global.isAttractMode = false;
+		
+		global.p1PaletteID = 0;
+		global.p2PaletteID = 1;
 	}
 	exit;
 }

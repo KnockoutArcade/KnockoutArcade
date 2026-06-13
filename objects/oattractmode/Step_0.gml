@@ -30,12 +30,46 @@ if (screenTransitionObject != noone)
 		global.player1ControllerSlot = -1;
 		global.player2ControllerSlot = -1;
 		
+		var rng = irandom(2);
+		var selectedStage = rRusselStage;
+		global.currentBGM = bgm_Russel_Stage;
+		
+		if (rng == 1)
+		{
+			selectedStage = rBeverlyStage;
+			global.currentBGM = bgm_Beverly_Stage;
+		}
+		else if (rng == 2)
+		{
+			selectedStage = rJayStage;
+		}
+		
 		global.p1SelectedCharacter = oRussel;
 		global.p2SelectedCharacter = oRussel;
 		
-		global.p1PaletteID = 0;
-		global.p2PaletteID = 1;
+		rng = irandom(1);
+		if (rng == 1)
+		{
+			global.p1SelectedCharacter = oBeverly;
+		}
 		
-		room_goto(rRusselStage);
+		rng = irandom(1);
+		if (rng == 1)
+		{
+			global.p2SelectedCharacter = oBeverly;
+		}
+		
+		global.p1PaletteID = irandom(11);
+		global.p2PaletteID = irandom(11);
+		
+		if (global.p1SelectedCharacter == global.p2SelectedCharacter && global.p1PaletteID == global.p2PaletteID)
+		{
+			global.p2PaletteID++;
+			
+			if (global.p2PaletteID > 11) global.p2PaletteID = 0;
+		}
+		
+		
+		room_goto(selectedStage);
 	}
 }
