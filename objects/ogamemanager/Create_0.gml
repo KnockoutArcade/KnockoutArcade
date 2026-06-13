@@ -53,6 +53,7 @@ SetupGame();
 global.p1Rounds = 0;
 global.p2Rounds = 0;
 
+audio_sound_gain(global.currentBGM, global.musicVolume, 0);
 audio_play_sound(global.currentBGM, 0, true);
 
 momentWhenBothPlayersWereStable = 0; // During round win, the frame when both players entered a stable state
@@ -66,6 +67,13 @@ shouldBringUpPauseMenu = false; // Whether the pause menu should be brought up o
 pauseMenuButtonHeldTimer_P1 = 0; // Keeps track of how many frames P1 has held down the pause button
 pauseMenuButtonHeldTimer_P2 = 0; // Keeps track of how many frames P2 has held down the pause button
 pauseMenuHoldRequirement = 30; // How long the player must hold the pause button in order to pause
+
+// Screen Transition
+screenTransitionObject = noone;
+attractHasInputtedButton = false;
+attractPressStartTimer = 0;
+attractPressStartPeriod = 30;
+attractPressStartShow = false;
 
 // Training mode position reset
 p1SelectHeldTimer = 0;

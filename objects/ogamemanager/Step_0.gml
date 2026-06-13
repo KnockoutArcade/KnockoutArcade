@@ -26,12 +26,57 @@ else if (playerID == 2 && !isInCutscene) // Player 2
 }
 */
 
+if (global.isAttractMode)
+{
+	if (keyboard_check(vk_anykey)) attractHasInputtedButton = true;
+
+	for (var i = 0; i < gamepad_get_device_count(); i++)
+	{
+		for (var j = gp_face1; j < gp_axisrv; j++) {    
+			if (gamepad_button_check(i, j)) {
+			    attractHasInputtedButton = true;
+			}
+		}
+	}
+	
+	if (screenTransitionObject == noone && attractHasInputtedButton)
+	{
+		state = eGameManagerState.POST_MATCH;
+		audio_sound_gain(global.currentBGM, 0, 2000);
+		
+		screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+	}
+	
+	attractPressStartTimer++;
+	
+	if (attractPressStartTimer >= attractPressStartPeriod) 
+	{
+		attractPressStartShow = !attractPressStartShow;
+		attractPressStartTimer = 0;
+	}
+}
+
+// Attract Mode
+if (screenTransitionObject != noone)
+{
+	// Transition To other screens
+	if (screenTransitionObject.image_index >= 15)
+	{
+		ResetGame();
+		
+		room_goto(rTitleScreen);
+		global.isAttractMode = false;
+	}
+	exit;
+}
+
+
 switch (global.gameMode)
 {
 	case GAMEMODE.VERSUS:
 	{
 		// Handle Pausing
-		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene) // Check to see if we are in the during match state
+		if (state == eGameManagerState.DURING_MATCH && !global.game_paused && !p1.isInCutscene && !p2.isInCutscene && !global.isAttractMode) // Check to see if we are in the during match state
 		{
 			var p1PauseButton = false;
 			if (p1ControllerInstance != -1)
@@ -396,35 +441,65 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == momentWhenBothPlayersWereStable + 140 && momentWhenBothPlayersWereStable != 0)
 			{
-				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(global.currentBGM);
+				if (!global.isAttractMode)
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_stop_sound(global.currentBGM);
 				
-				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
-				victoryScreen.skipIntro = true;
-				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
-				victoryScreen.state = eVictoryScreenState.OPTIONS;
+					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+					victoryScreen.skipIntro = true;
+					victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
+					victoryScreen.state = eVictoryScreenState.OPTIONS;
+				}
+				else
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_sound_gain(global.currentBGM, 0, 2000);
+					
+					screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+				}
 			}
 		}
 		else if (global.p1Rounds >= 2)
 		{
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
-				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(global.currentBGM);
+				if (!global.isAttractMode)
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_stop_sound(global.currentBGM);
 				
-				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
-				victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
+					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+					victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
+				}
+				else
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_sound_gain(global.currentBGM, 0, 2000);
+					
+					screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+				}
 			}
 		}
 		else if (global.p2Rounds >= 2)
 		{ 
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
-				state = eGameManagerState.POST_MATCH;
-				audio_stop_sound(global.currentBGM);
+				if (!global.isAttractMode)
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_stop_sound(global.currentBGM);
 				
-				var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
-				victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter, global.p2PaletteID);
+					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
+					victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter, global.p2PaletteID);
+				}
+				else
+				{
+					state = eGameManagerState.POST_MATCH;
+					audio_sound_gain(global.currentBGM, 0, 2000);
+					
+					screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+				}
 			}
 		}
 		

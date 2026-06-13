@@ -44,3 +44,7 @@ switch (global.gameMode)
 	break;	
 }
 
+if (global.isAttractMode && attractPressStartShow)
+{
+	draw_sprite(sStartText, 0, global.camObj.x-80, global.camObj.y - 70);
+}
