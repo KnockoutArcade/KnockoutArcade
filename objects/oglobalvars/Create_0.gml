@@ -92,3 +92,5 @@ global.roomTransitionData = {
 
 // Current song
 global.currentBGM = bgm_Russel_Stage;
+
+global.isAttractMode = false;
