@@ -1,3 +1,9 @@
+// Hack-y way of disabling this object when the game is going into attract mode
+if (instance_exists(oAttractMode) && oAttractMode.screenTransitionObject != noone)
+{
+	exit;
+}
+
 // Find the first controller
 var slot0Controller = FindController(0); // Find the first gamepad ID
 var wasdController = FindController(13); // Find the WASD controller object

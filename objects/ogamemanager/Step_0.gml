@@ -37,12 +37,18 @@ if (global.isAttractMode)
 			    attractHasInputtedButton = true;
 			}
 		}
+		
+		for (var j = gp_axislh; j < gp_axisrv; j++) {    
+			if (gamepad_axis_value(i, j)) {
+			    attractHasInputtedButton = true;
+			}
+		}
 	}
 	
 	if (screenTransitionObject == noone && attractHasInputtedButton)
 	{
 		state = eGameManagerState.POST_MATCH;
-		audio_sound_gain(global.currentBGM, 0, 2000);
+		audio_sound_gain(global.currentBGM, 0, 1000);
 		
 		screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
 	}

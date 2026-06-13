@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 attractModeTimer++;
+show_debug_message(attractModeTimer);
 
 if (keyboard_check(vk_anykey)) attractModeTimer = 0;
 
@@ -12,11 +13,19 @@ for (var i = 0; i < gamepad_get_device_count(); i++)
 		    attractModeTimer = 0;
 		}
 	}
+	
+	for (var j = gp_axislh; j < gp_axisrv; j++) {    
+		if (gamepad_axis_value(i, j)) {
+		    attractModeTimer = 0;
+		}
+	}
 }
 
 if (attractModeTimer >= attractModeWait && screenTransitionObject == noone)
 {
 	screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+	
+	if (audio_is_playing(bgm_MainMenu)) audio_sound_gain(bgm_MainMenu, 0, 1000);
 }
 
 if (screenTransitionObject != noone)

@@ -1,0 +1,1 @@
+attractModeWait = 7600;
