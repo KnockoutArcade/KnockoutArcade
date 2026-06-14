@@ -160,22 +160,24 @@ function ResultsScreen()
 	{
 		var prioritySelection = max(P1resultSelRow, P2resultSelRow);
 		
-		font_delete(victoryFont);
-		
 		audio_stop_sound(bgm_VictoryScreen_Loop);
 		audio_stop_sound(bgm_VictoryScreen_Russel);
 		
 		switch (prioritySelection)
 		{
 			case 0:
+				font_delete(victoryFont);
 				global.isDoingRematch = true;
 				room_restart();
 			break;
 			case 1:
+				font_delete(victoryFont);
 				room_goto(rCharacterSelectScreen);
 			break;
 			case 2:
-				room_goto(rMainMenu);
+				screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+				audio_sound_gain(bgm_VictoryScreen_Loop, 0, 800);
+				audio_sound_gain(bgm_VictoryScreen_Russel, 0, 800);
 			break;
 		}
 	}

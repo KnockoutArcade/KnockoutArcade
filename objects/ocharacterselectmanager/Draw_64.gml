@@ -30,10 +30,11 @@ if (P2charSelCol == 2 && P2charSelRow == 0) || (P2charSelCol == 0 && P2charSelRo
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
+	draw_set_font(fntTrainingMode);
 	draw_text(585, 175, @"This character
-	is unfinished
-	and may show 
-	incorrect sprites");
+is unfinished
+and may show 
+incorrect sprites");
 }
 
 if (P1charSelCol == 2 && P1charSelRow == 0) || (P1charSelCol == 0 && P1charSelRow == 1) || (P1charSelCol == 1 && P1charSelRow == 1)
@@ -44,8 +45,9 @@ if (P1charSelCol == 2 && P1charSelRow == 0) || (P1charSelCol == 0 && P1charSelRo
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
+	draw_set_font(fntTrainingMode);
 	draw_text(70, 175, @"This character 
-	is unfinished
-	and may show 
-	incorrect sprites");
+is unfinished
+and may show 
+incorrect sprites");
 }

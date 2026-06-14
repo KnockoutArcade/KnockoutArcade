@@ -29,6 +29,7 @@ if (screenTransitionObject != noone)
 {
 	if (screenTransitionObject.image_index >= 15)
 	{
+		font_delete(victoryFont);
 		audio_stop_sound(bgm_VictoryScreen_Loop);
 		audio_stop_sound(bgm_VictoryScreen_Russel);
 		room_goto(rMainMenu);
