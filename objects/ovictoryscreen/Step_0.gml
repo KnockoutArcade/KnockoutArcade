@@ -6,6 +6,35 @@ if (!audio_is_playing(bgm_VictoryScreen_Russel) && !audio_is_playing(bgm_Victory
 }
 
 animTimer++;
+returnToMainMenuTimer++;
+
+if (keyboard_check(vk_anykey)) returnToMainMenuTimer = 0;
+
+for (var i = 0; i < gamepad_get_device_count(); i++)
+{
+	for (var j = gp_face1; j < gp_axisrv; j++) {    
+		if (gamepad_button_check(i, j)) {
+		    returnToMainMenuTimer = 0;
+		}
+	}
+	
+	for (var j = gp_axislh; j < gp_axisrv; j++) {    
+		if (gamepad_axis_value(i, j)) {
+		    returnToMainMenuTimer = 0;
+		}
+	}
+}
+
+if (screenTransitionObject != noone)
+{
+	if (screenTransitionObject.image_index >= 15)
+	{
+		audio_stop_sound(bgm_VictoryScreen_Loop);
+		audio_stop_sound(bgm_VictoryScreen_Russel);
+		room_goto(rMainMenu);
+	}
+	exit;
+}
 
 switch (state)
 {
@@ -38,8 +67,9 @@ switch (state)
 			if (quotePrintingLength < quoteLength)
 			{
 				quotePrintingLength += 1;
-				
 				displayQuote = string_copy(winQuote, 1, quotePrintingLength);
+				
+				returnToMainMenuTimer = 0;
 			}
 		}
 		
@@ -67,7 +97,14 @@ switch (state)
 			{
 				// Otherwise, transition into the options state.
 				state = eVictoryScreenState.OPTIONS;
+				returnToMainMenuTimer = 0;
 			}
+		}
+		else if (returnToMainMenuTimer >= returnToMainMenuWait)
+		{
+			// Otherwise, transition into the options state.
+			state = eVictoryScreenState.OPTIONS;
+			returnToMainMenuTimer = 0;
 		}
 	}
 	break;
@@ -75,6 +112,14 @@ switch (state)
 	case eVictoryScreenState.OPTIONS:
 	{
 		image_speed = 0;
+		
+		if (returnToMainMenuTimer >= returnToMainMenuWait && screenTransitionObject == noone)
+		{
+			screenTransitionObject = instance_create_depth(0, 0, -10000, oScreenTransition);
+			audio_sound_gain(bgm_VictoryScreen_Loop, 0, 800);
+			audio_sound_gain(bgm_VictoryScreen_Russel, 0, 800);
+			exit;
+		}
 		
 		ResultsScreen();
 	}

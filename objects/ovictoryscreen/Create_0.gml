@@ -42,6 +42,11 @@ quotePrintingLength = 0; // How much of the quote we have currently printed.
 
 skipIntro = false; // Whether to skip the opening and win quote animations (used for tie games)
 
+returnToMainMenuTimer = 0;
+returnToMainMenuWait = 1800;
+
+screenTransitionObject = noone;
+
 // Menu Vars
 P1resultSelRow = 0;
 P1resultSelCol = 0;

@@ -2,7 +2,6 @@
 // You can write your code in this editor
 
 attractModeTimer++;
-show_debug_message(attractModeTimer);
 
 if (keyboard_check(vk_anykey)) attractModeTimer = 0;
 
