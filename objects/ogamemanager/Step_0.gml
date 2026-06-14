@@ -410,9 +410,10 @@ switch (global.gameMode)
 			}
 			else if (gameHaltTimer == 1) // Initial End
 			{
+				audio_play_sound(bgm_Timeout, 0, false);
+				
 				// Set the game manager's state to round win
 				state = eGameManagerState.ROUND_WIN;
-			
 				
 				if (p1.hp/p1.maxHitPoints > p2.hp/p2.maxHitPoints)
 				{
@@ -442,9 +443,13 @@ switch (global.gameMode)
 		// When a player meets the win requirement for the match return players to the character selection screen
 		if (global.p1Rounds >= 2 && global.p2Rounds >= 2)
 		{
+			audio_sound_gain(global.currentBGM, 0, 800);
+			
 			// Once both players have been in a stable state, display the Draw... text
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 60 && momentWhenBothPlayersWereStable != 0)
 			{
+				audio_play_sound(bgm_DrawGame, 0, false);
+				
 				var particle = instance_create_layer(global.camObj.x-80, 0, "KO_Text", oParticles);
 				with (particle)
 				{
@@ -453,13 +458,13 @@ switch (global.gameMode)
 					lifetime = 1000000000;
 				}
 			}
-			else if (gameHaltTimer == momentWhenBothPlayersWereStable + 140 && momentWhenBothPlayersWereStable != 0)
+			else if (gameHaltTimer == momentWhenBothPlayersWereStable + 200 && momentWhenBothPlayersWereStable != 0)
 			{
 				if (!global.isAttractMode)
 				{
 					state = eGameManagerState.POST_MATCH;
 					audio_stop_sound(global.currentBGM);
-				
+					
 					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 					victoryScreen.skipIntro = true;
 					victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
@@ -476,13 +481,16 @@ switch (global.gameMode)
 		}
 		else if (global.p1Rounds >= 2)
 		{
+			audio_sound_gain(global.currentBGM, 0, 800);
+			
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				if (!global.isAttractMode)
 				{
 					state = eGameManagerState.POST_MATCH;
 					audio_stop_sound(global.currentBGM);
-				
+					
+					audio_play_sound(bgm_VictoryScreen_Russel, 0, false);
 					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 					victoryScreen.setupfunction(global.p1SelectedCharacter, global.p2SelectedCharacter, global.p1PaletteID);
 				}
@@ -497,13 +505,16 @@ switch (global.gameMode)
 		}
 		else if (global.p2Rounds >= 2)
 		{ 
+			audio_sound_gain(global.currentBGM, 0, 800);
+			
 			if (gameHaltTimer == momentWhenBothPlayersWereStable + 30 && momentWhenBothPlayersWereStable != 0)
 			{
 				if (!global.isAttractMode)
 				{
 					state = eGameManagerState.POST_MATCH;
 					audio_stop_sound(global.currentBGM);
-				
+					
+					audio_play_sound(bgm_VictoryScreen_Russel, 0, false);
 					var victoryScreen = instance_create_depth(global.camObj.x - 80, global.camObj.y, -10000, oVictoryScreen);
 					victoryScreen.setupfunction(global.p2SelectedCharacter, global.p1SelectedCharacter, global.p2PaletteID);
 				}
