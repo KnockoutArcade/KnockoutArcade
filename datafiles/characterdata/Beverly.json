@@ -7031,8 +7031,8 @@
           "Pushback": 14.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
-          "ParticleEffect": "sHitEffect",
-          "ParticleDuration": 10,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
@@ -7150,10 +7150,39 @@
         "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.5,
-        "FallScale": 0.5
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 0,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 6,
+            "HorizontalSpeed": 0.9,
+            "VerticalSpeed": -0.5,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 7,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 8,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 0.70000005,
+        "FallScale": 0.70000005
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -9572,6 +9601,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-06-13T20:04:08.4491141-07:00",
+  "LastModified": "2026-06-13T20:15:29.1468648-07:00",
   "LastModifiedBy": "creep"
 }
