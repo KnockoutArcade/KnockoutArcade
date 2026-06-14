@@ -1435,8 +1435,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Knockdown",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 22
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -1690,8 +1699,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 18
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -1789,7 +1803,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "",
+          "HitSound": "sfx_Grab",
           "FinalBlow": false,
           "ActivateTimeStop": false,
           "ChipDamage": 0,
@@ -1881,8 +1895,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Grab_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2091,8 +2110,17 @@
       },
       "UseMoveScript": true,
       "SupplementaryMoveScript": "NeutralSpecialDeepBreathing",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 3
+        },
+        {
+          "SoundEffect": "sfx_BeverlySuper_Hit",
+          "SFXPlayFrame": 21
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2424,8 +2452,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2603,8 +2636,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Light_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -2730,7 +2768,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2",
+          "HitSound": "sfx_Light_Hit",
           "CauseHardKnockdown": false,
           "CauseFloorBounce": false
         }
@@ -2805,8 +2843,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Light_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3035,8 +3078,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3256,8 +3304,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3623,8 +3676,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3806,8 +3864,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Light_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -3993,8 +4056,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -4284,8 +4352,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 3
+        },
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 9
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -4407,7 +4484,7 @@
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
-          "HitSound": "sfx_light_hit2",
+          "HitSound": "sfx_Light_Hit",
           "CauseHardKnockdown": false,
           "CauseFloorBounce": false
         }
@@ -4467,8 +4544,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Light_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -4674,8 +4756,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -4959,8 +5046,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 11
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -5288,8 +5384,13 @@
       },
       "UseMoveScript": true,
       "SupplementaryMoveScript": "UpSpecialDeepBreathing",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -5924,8 +6025,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 11
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -6172,8 +6278,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Landing",
+          "SFXPlayFrame": 20
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -6420,8 +6535,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Landing",
+          "SFXPlayFrame": 20
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -6752,8 +6876,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Medium_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -7028,8 +7157,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 3
+        },
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 13
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -7254,8 +7392,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -7509,8 +7652,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Jump",
+          "SFXPlayFrame": 3
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -7775,8 +7927,13 @@
       },
       "UseMoveScript": true,
       "SupplementaryMoveScript": "SideSpecialDeepBreathing",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -7953,8 +8110,17 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        },
+        {
+          "SoundEffect": "sfx_Landing",
+          "SFXPlayFrame": 20
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -8294,8 +8460,13 @@
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 1,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 1
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -8804,8 +8975,17 @@
       },
       "UseMoveScript": true,
       "SupplementaryMoveScript": "BevEnhancedUpSpecial",
-      "NumberOfSounds": 0,
-      "MoveSoundData": [],
+      "NumberOfSounds": 2,
+      "MoveSoundData": [
+        {
+          "SoundEffect": "sfx_SuperJump",
+          "SFXPlayFrame": 1
+        },
+        {
+          "SoundEffect": "sfx_Heavy_Whiff",
+          "SFXPlayFrame": 2
+        }
+      ],
       "SpiritData": {
         "ToggleState": false,
         "PerformAttack": false,
@@ -9392,6 +9572,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-06-05T21:46:47.7235182-07:00",
+  "LastModified": "2026-06-13T19:59:35.3454241-07:00",
   "LastModifiedBy": "creep"
 }
