@@ -491,7 +491,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 			P1charSelCol = 0;
 			P1cursorCooldown = 5;
 			P2charSelRow = 0;
-			P2charSelCol = 2;
+			P2charSelCol = 1;
 			P2cursorCooldown = 5;
 			
 			p1ArcadeButtonsObject.controllerSlot = -1;
@@ -673,7 +673,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
 			P1charSelCol = 0;
 			P1cursorCooldown = 5;
 			P2charSelRow = 0;
-			P2charSelCol = 2;
+			P2charSelCol = 1;
 			P2cursorCooldown = 5;
 			
 			p1ArcadeButtonsObject.controllerSlot = -1;

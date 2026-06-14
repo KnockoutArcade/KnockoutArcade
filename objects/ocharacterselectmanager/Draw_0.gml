@@ -307,7 +307,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
     }
     else if (P1charSelCol == 2 && P1charSelRow == 0)
     {
-        draw_sprite(sJay_Idle, 0 + P1charSelCurrentFrame, 29, 65);
+		draw_sprite(sJay_Idle, 0 + P1charSelCurrentFrame, 29, 65);
     }
 	else if (P1charSelCol == 0 && P1charSelRow == 1)
     {
