@@ -259,7 +259,7 @@ function PressAttackButton(attack, _late = false)
 			
 			case 7: // Taunt
 			{
-				if (grounded)
+				if (grounded && selectedCharacter.Name == "Russel")
 				{
 					state = eState.TAUNT;
 					sprite_index = sRussel_Taunt;
