@@ -227,7 +227,6 @@ else
 	pressSpecialButtonTimer++;
 }
 
-
 // Handles running
 if (canRun)
 {
@@ -248,6 +247,7 @@ if (canRun)
 			runningForward = false;
 		}
 		holdRunButtonTimer++;
+		holdForwardTimer++;
 	}
 	else if (movedir == image_xscale) // If moving forward
 	{
