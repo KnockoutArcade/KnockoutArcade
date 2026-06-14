@@ -194,6 +194,11 @@ switch (global.gameMode)
 			global.roundOver = true;
 			gameHaltTimer++;
 			
+			if (gameHaltTimer == 1)
+			{
+				audio_play_sound(sfx_CharSel_Ready, 0, false);
+			}
+			
 			// If we're past the slowdown and both players are stable AND we havent set mWBPWS yet...
 			if (gameHaltTimer >= 180 && p1.isInStableState && p2.isInStableState && momentWhenBothPlayersWereStable == 0)
 			{
