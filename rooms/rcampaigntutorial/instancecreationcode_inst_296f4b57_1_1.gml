@@ -1,6 +1,6 @@
-levelDestination = rRusselMap;
+levelDestination = rDemoCampaignMap;
 
-mapReturnX = 160;
-mapReturnY = 244;
+mapReturnX = 40;
+mapReturnY = 64;
 
 levelName = "CampaignTutorial";

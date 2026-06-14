@@ -10,8 +10,8 @@ if (followTarget != noone)
 x = xPosition;
 y = yPosition;
 
-x = clamp(x, 85, room_width-85);
-y = clamp(y, 65, room_height-65);
+x = clamp(x, 80, room_width-80);
+y = clamp(y, 60, room_height-60);
 
 
 

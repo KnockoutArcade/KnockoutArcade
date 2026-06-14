@@ -111,10 +111,10 @@ if (screenTransitionObject != noone)
 		}
 		else if (sprite_index == sScreenTransition && image_index >= 16)
 		{
-			room_goto(rRusselMap);
+			room_goto(rDemoCampaignMap);
 	
-			global.campaignMapLocationX = 160;
-			global.campaignMapLocationY = 244;
+			global.campaignMapLocationX = 40;
+			global.campaignMapLocationY = 64;
 			
 			font_delete(other.fileFont);
 		}

@@ -277,6 +277,7 @@
     {"id":{"name":"sRussel_Jumping_Medium","path":"sprites/sRussel_Jumping_Medium/sRussel_Jumping_Medium.yy",},"order":16,},
     {"id":{"name":"sfx_SprintStop","path":"sounds/sfx_SprintStop/sfx_SprintStop.yy",},"order":11,},
     {"id":{"name":"sCommandLists_Beverly_Specials","path":"sprites/sCommandLists_Beverly_Specials/sCommandLists_Beverly_Specials.yy",},"order":2,},
+    {"id":{"name":"sDemoCampaignMap","path":"sprites/sDemoCampaignMap/sDemoCampaignMap.yy",},"order":4,},
     {"id":{"name":"sfx_UseEnhancedMove","path":"sounds/sfx_UseEnhancedMove/sfx_UseEnhancedMove.yy",},"order":2,},
     {"id":{"name":"sControlsMenuUI_InputNames","path":"sprites/sControlsMenuUI_InputNames/sControlsMenuUI_InputNames.yy",},"order":6,},
     {"id":{"name":"sSpecialChargeIcon","path":"sprites/sSpecialChargeIcon/sSpecialChargeIcon.yy",},"order":20,},
@@ -327,6 +328,7 @@
     {"id":{"name":"ResultsScreen","path":"scripts/ResultsScreen/ResultsScreen.yy",},"order":33,},
     {"id":{"name":"sPlatformingStage_Russel2_part1","path":"sprites/sPlatformingStage_Russel2_part1/sPlatformingStage_Russel2_part1.yy",},"order":0,},
     {"id":{"name":"sRussel_UpSpecialFinisher","path":"sprites/sRussel_UpSpecialFinisher/sRussel_UpSpecialFinisher.yy",},"order":33,},
+    {"id":{"name":"rDemoCampaignMap","path":"rooms/rDemoCampaignMap/rDemoCampaignMap.yy",},"order":9,},
     {"id":{"name":"sBeverly_Launched","path":"sprites/sBeverly_Launched/sBeverly_Launched.yy",},"order":31,},
     {"id":{"name":"sConstructionGuy_Walk_Forwards","path":"sprites/sConstructionGuy_Walk_Forwards/sConstructionGuy_Walk_Forwards.yy",},"order":5,},
     {"id":{"name":"sHealthbar","path":"sprites/sHealthbar/sHealthbar.yy",},"order":7,},
@@ -813,6 +815,7 @@
     {"roomId":{"name":"rLevelTransitionTest1","path":"rooms/rLevelTransitionTest1/rLevelTransitionTest1.yy",},},
     {"roomId":{"name":"rLevelTransitionTest2","path":"rooms/rLevelTransitionTest2/rLevelTransitionTest2.yy",},},
     {"roomId":{"name":"rLevelTransitionTest3","path":"rooms/rLevelTransitionTest3/rLevelTransitionTest3.yy",},},
+    {"roomId":{"name":"rDemoCampaignMap","path":"rooms/rDemoCampaignMap/rDemoCampaignMap.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":1,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
