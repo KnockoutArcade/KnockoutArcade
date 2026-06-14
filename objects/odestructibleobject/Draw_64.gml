@@ -11,8 +11,9 @@ draw_set_color(c_white);
 	
 //draw_text(750, 10, duration);
 //draw_text(750, 30, canSpawnHitboxes);
-draw_text(100, 130, mostRecentIDHitBy);
+draw_text(100, 130, environmentDisplacement);
 
+/*
 var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
 	for (var j = 0; j < array_length(hitByIDs); j++)

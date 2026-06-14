@@ -219,17 +219,18 @@ if (state != eState.HITSTOP)
 	}
 	
 	// Collisions With Walls
-	if (place_meeting(x+hsp, y, oWall) && state != eState.BEING_GRABBED)
+	if (place_meeting(x+hsp + environmentDisplacement, y, oWall) && state != eState.BEING_GRABBED)
 	{
-		while (!place_meeting(x+sign(hsp), y, oWall)) 
+		while (!place_meeting(x+sign(hsp + environmentDisplacement), y, oWall)) 
 		{
-			x += sign(hsp);
+			x += sign(hsp + environmentDisplacement);
 		}
 		
 		// Handle bouncing off of terrain
 		if (!doesBounceOnTerrain)
 		{
 			hsp = 0;
+			environmentDisplacement = 0;
 		}
 		else
 		{

@@ -62,6 +62,7 @@ if (screenTransitionObject != noone)
 	// Transition To other screens
 	if (screenTransitionObject.image_index >= 15)
 	{
+		audio_stop_sound(bgm_MainMenu);
 		room_goto(roomToTransitionTo);
 	}
 	else
@@ -192,23 +193,5 @@ else if (percyBlinkTimer >= percyEyesClosedTimerCap) && (isPercyEyesClosed)
 {
 	percyBlinkTimer = 0;
 	isPercyEyesClosed = false;
-}
-
-// Enable no-Numpad mode
-/*
-if (keyboard_check_pressed(vk_backspace))
-{
-	if (global.noNumpadMode)
-	{
-		RestorePlayer2DefaultControls();
-		global.noNumpadMode = false;
-	}
-	else
-	{
-		SetNoNumpadButtons();
-		global.noNumpadMode = true;
-	}
-	
-	audio_play_sound(sfx_UI_Select, 0, false);
 }
 
