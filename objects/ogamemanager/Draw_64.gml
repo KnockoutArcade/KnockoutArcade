@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-
+/*
 if (global.toggleHitboxVisibility) 
 {
 	draw_set_alpha(.5);
@@ -11,7 +11,7 @@ if (global.toggleHitboxVisibility)
 
 	draw_text(200, 200, frameAdvantage);
 }
-
+*/
 if (global.gameMode == GAMEMODE.TRAINING && pauseMenuObject == noone)
 {
 	draw_set_alpha(0.8);

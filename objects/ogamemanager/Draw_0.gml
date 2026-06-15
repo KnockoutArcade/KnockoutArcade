@@ -8,6 +8,7 @@ switch (global.gameMode)
 	case GAMEMODE.VERSUS:
 	{
 		// Frame-by-frame
+		/*
 		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
 		{
 			if (!global.game_paused)
@@ -20,7 +21,7 @@ switch (global.gameMode)
 				global.game_paused = false;
 			}
 		}
-
+		
 		if (global.game_paused && keyboard_check_pressed(ord("O")))
 		{
 			global.frameskip = 1;
@@ -31,7 +32,7 @@ switch (global.gameMode)
 			global.game_paused = false;
 			global.frameskip = -1;
 		}
-		
+		*/
 		var pauseFillAmount = max(pauseMenuButtonHeldTimer_P1, pauseMenuButtonHeldTimer_P2);
 		
 		if (pauseFillAmount > 0)

@@ -247,6 +247,7 @@ setupfunction = function EstablishWinningCharacter(characterThatWon, characterTh
 	quoteLength = string_length(winQuote);
 }
 
-
+audio_sound_gain(bgm_VictoryScreen_Loop, global.musicVolume, 0);
+audio_sound_gain(bgm_VictoryScreen_Russel, global.musicVolume, 0);
 
 

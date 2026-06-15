@@ -160,18 +160,19 @@ function ResultsScreen()
 	{
 		var prioritySelection = max(P1resultSelRow, P2resultSelRow);
 		
-		audio_stop_sound(bgm_VictoryScreen_Loop);
-		audio_stop_sound(bgm_VictoryScreen_Russel);
-		
 		switch (prioritySelection)
 		{
 			case 0:
 				font_delete(victoryFont);
 				global.isDoingRematch = true;
+				audio_stop_sound(bgm_VictoryScreen_Loop);
+				audio_stop_sound(bgm_VictoryScreen_Russel);
 				room_restart();
 			break;
 			case 1:
 				font_delete(victoryFont);
+				audio_stop_sound(bgm_VictoryScreen_Loop);
+				audio_stop_sound(bgm_VictoryScreen_Russel);
 				room_goto(rCharacterSelectScreen);
 			break;
 			case 2:
