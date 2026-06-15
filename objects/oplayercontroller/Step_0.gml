@@ -3261,6 +3261,11 @@ switch state
 	
 	case eState.ENEMY_KO:
 	{
+		if (animTimer == 1)
+		{
+			audio_play_sound(sfx_EnemyKO, 0, false);
+		}
+		
 		// Cause the enemy to flicker
 		if (animTimer mod 3 == 0)
 		{

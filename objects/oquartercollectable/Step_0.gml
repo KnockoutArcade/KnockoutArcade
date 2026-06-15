@@ -20,7 +20,8 @@ if (collidingPlayer != noone)
 					lifetime = 25;
 					sprite_index = sCollectionSparkle;
 				}
-	
+				
+				audio_play_sound(sfx_CollectablePickup, 0, false);
 				instance_destroy();
 			}
 		}

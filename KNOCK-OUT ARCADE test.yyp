@@ -34,6 +34,7 @@
     {"id":{"name":"sConstructionGuy_Hurt","path":"sprites/sConstructionGuy_Hurt/sConstructionGuy_Hurt.yy",},"order":2,},
     {"id":{"name":"sBeverly_SideSpecial2_MOCKUP","path":"sprites/sBeverly_SideSpecial2_MOCKUP/sBeverly_SideSpecial2_MOCKUP.yy",},"order":3,},
     {"id":{"name":"sBeverly_Hold","path":"sprites/sBeverly_Hold/sBeverly_Hold.yy",},"order":37,},
+    {"id":{"name":"sfx_EnemyKO","path":"sounds/sfx_EnemyKO/sfx_EnemyKO.yy",},"order":1,},
     {"id":{"name":"sDashParticle","path":"sprites/sDashParticle/sDashParticle.yy",},"order":0,},
     {"id":{"name":"sControlsMenu_Opening","path":"sprites/sControlsMenu_Opening/sControlsMenu_Opening.yy",},"order":1,},
     {"id":{"name":"sJay_Walk_Backward","path":"sprites/sJay_Walk_Backward/sJay_Walk_Backward.yy",},"order":31,},
@@ -157,6 +158,7 @@
     {"id":{"name":"oVictoryScreen","path":"objects/oVictoryScreen/oVictoryScreen.yy",},"order":15,},
     {"id":{"name":"sWall","path":"sprites/sWall/sWall.yy",},"order":5,},
     {"id":{"name":"sJay_SideSpecial","path":"sprites/sJay_SideSpecial/sJay_SideSpecial.yy",},"order":52,},
+    {"id":{"name":"sfx_CollectablePickup","path":"sounds/sfx_CollectablePickup/sfx_CollectablePickup.yy",},"order":0,},
     {"id":{"name":"oOptionIcons","path":"objects/oOptionIcons/oOptionIcons.yy",},"order":8,},
     {"id":{"name":"sJay_SC_StandingHeavy_MOCKUP_strip5","path":"sprites/sJay_SC_StandingHeavy_MOCKUP_strip5/sJay_SC_StandingHeavy_MOCKUP_strip5.yy",},"order":11,},
     {"id":{"name":"sTimeUp","path":"sprites/sTimeUp/sTimeUp.yy",},"order":3,},
@@ -931,6 +933,7 @@
     {"folderPath":"folders/Sounds/SuperAlarms.yy","order":20,"resourceVersion":"1.0","name":"SuperAlarms","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sounds/UI_Sounds/CharacterVoices.yy","order":4,"resourceVersion":"1.0","name":"CharacterVoices","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/AIScripts.yy","order":45,"resourceVersion":"1.0","name":"AIScripts","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sounds/Singleplayer.yy","order":21,"resourceVersion":"1.0","name":"Singleplayer","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},
