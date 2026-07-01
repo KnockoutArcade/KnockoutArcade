@@ -16,9 +16,11 @@ function HandleHitboxCollision(ownerType)
 	}
 
 	// Prevent air moves from being lows
-	if (!ownerType.grounded && attackProperty.AttackType == eAttackType.LOW)
+	var tempAttackType = attackProperty.AttackType;
+	
+	if (!ownerType.grounded && tempAttackType == eAttackType.LOW)
 	{
-		attackProperty.AttackType = eAttackType.MID;
+		tempAttackType = eAttackType.MID;
 	}
 
 	var collisionCheck = place_meeting(x, y, oPlayerHurtbox);
@@ -95,7 +97,7 @@ function HandleHitboxCollision(ownerType)
 				}
 
 				// Throw Teching
-				if (attackProperty.AttackType == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
+				if (tempAttackType == eAttackType.GRAB && (collision_list[| i].owner.state == eState.GRAB || collision_list[| i].owner.state == eState.HOLD) && collision_list[| i].owner.animTimer <= 8)
 				{
 					// Put both players in a throw tech state
 					ownerType.state = eState.THROW_TECH;
@@ -183,7 +185,7 @@ function HandleHitboxCollision(ownerType)
 					
 					ds_list_add(hasHit, collision_list[| i].owner.id);
 				} 
-				else if (attackProperty.AttackType == eAttackType.GRAB && // Grabbing
+				else if (tempAttackType == eAttackType.GRAB && // Grabbing
 					collision_list[| i].owner.hitstun < 1 &&
 					collision_list[| i].owner.blockstun < 1 &&
 					collision_list[| i].owner.grounded &&
@@ -270,7 +272,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 				}
-				else if (attackProperty.AttackType == eAttackType.COMMAND_GRAB && // Command Grabs
+				else if (tempAttackType == eAttackType.COMMAND_GRAB && // Command Grabs
 					collision_list[| i].owner.state != eState.THROW_TECH &&
 					collision_list[| i].owner.blockstun < 1 &&
 					collision_list[| i].owner.throwProtectionTimer <= 0 &&
@@ -373,11 +375,11 @@ function HandleHitboxCollision(ownerType)
 				}
 				else if (collision_list[| i].owner.canBlock) && // Blocking
 					(collision_list[| i].owner.isAbleToBlock) &&
-					(((attackProperty.AttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) ||
-						attackProperty.AttackType == eAttackType.MID ||
-						attackProperty.AttackType == eAttackType.HITGRAB ||
-						(attackProperty.AttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
-					(((collision_list[| i].owner.movedir == blockingDirection && blockingDirection != 0) || collision_list[| i].owner.toggleIdleBlock || (collision_list[| i].owner.movedir != 0 && blockingDirection == 0)) || ((attackProperty.AttackType == eAttackType.MID || attackProperty.AttackType == eAttackType.HITGRAB) && collision_list[| i].owner.blockstun > 0))// Check if the opponent is holding back
+					(((tempAttackType == eAttackType.LOW && (collision_list[| i].owner.verticalMoveDir == -1 || collision_list[| i].owner.toggleIdleBlock)) ||
+						tempAttackType == eAttackType.MID ||
+						tempAttackType == eAttackType.HITGRAB ||
+						(tempAttackType == eAttackType.HIGH && collision_list[| i].owner.verticalMoveDir != -1))) &&
+					(((collision_list[| i].owner.movedir == blockingDirection && blockingDirection != 0) || collision_list[| i].owner.toggleIdleBlock || (collision_list[| i].owner.movedir != 0 && blockingDirection == 0)) || ((tempAttackType == eAttackType.MID || tempAttackType == eAttackType.HITGRAB) && collision_list[| i].owner.blockstun > 0))// Check if the opponent is holding back
 				{
 					if (isProjectile && collision_list[| i].owner.projectileInvincible)
 					{
@@ -426,7 +428,7 @@ function HandleHitboxCollision(ownerType)
 					}
 
 					// Handle if the opponent is Crouch blocking or not
-					if (collision_list[| i].owner.verticalMoveDir == -1 || attackProperty.AttackType == eAttackType.LOW)
+					if (collision_list[| i].owner.verticalMoveDir == -1 || tempAttackType == eAttackType.LOW)
 					{
 						collision_list[| i].owner.sprite_index = collision_list[| i].owner.CharacterSprites.crouchBlock_Sprite;
 						collision_list[| i].owner.isCrouchBlocking = true;
@@ -561,7 +563,7 @@ function HandleHitboxCollision(ownerType)
 					//Play sound effect
 					audio_play_sound(sfx_blocking, 1, false);
 				}
-				else if (attackProperty.AttackType == eAttackType.HITGRAB && // Hit Grabs
+				else if (tempAttackType == eAttackType.HITGRAB && // Hit Grabs
 					collision_list[| i].owner.state != eState.THROW_TECH &&
 					collision_list[| i].owner.isThrowable)
 				{
@@ -672,7 +674,7 @@ function HandleHitboxCollision(ownerType)
 					exit;
 					
 				}
-				else if (attackProperty.AttackType != eAttackType.GRAB && attackProperty.AttackType != eAttackType.COMMAND_GRAB && attackProperty.AttackType != eAttackType.HITGRAB) // Hitting
+				else if (tempAttackType != eAttackType.GRAB && tempAttackType != eAttackType.COMMAND_GRAB && tempAttackType != eAttackType.HITGRAB) // Hitting
 				{
 					if (isProjectile && collision_list[| i].owner.projectileInvincible)
 					{
