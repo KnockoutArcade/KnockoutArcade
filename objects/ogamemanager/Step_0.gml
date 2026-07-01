@@ -691,7 +691,7 @@ switch (global.gameMode)
 		}
 		
 		// Frame-by-frame
-		/*
+		
 		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
 		{
 			if (!global.game_paused)
@@ -715,7 +715,7 @@ switch (global.gameMode)
 			global.game_paused = false;
 			global.frameskip = -1;
 		}
-		*/
+		
 	}
 	break;
 	
@@ -852,7 +852,7 @@ switch (global.gameMode)
 		}
 		
 		// Frame-by-frame
-		/*
+		
 		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
 		{
 			if (!global.game_paused)
@@ -876,7 +876,7 @@ switch (global.gameMode)
 			global.game_paused = false;
 			global.frameskip = -1;
 		}
-		*/
+		
 	}
 	break;
 }
