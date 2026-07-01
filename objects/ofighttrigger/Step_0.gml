@@ -19,7 +19,7 @@ if (isTriggered)
 		playerID = 0;
 		
 		// Set HP (Temporary)
-		hp = 50;
+		hp = 500;
 		
 		// Flip and set opponent
 		image_xscale = other.enemyInitialDirection;

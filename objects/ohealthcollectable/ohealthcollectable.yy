@@ -28,7 +28,7 @@
   "properties": [],
   "overriddenProperties": [
     {"propertyId":{"name":"coinValue","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"objectId":{"name":"oQuarterCollectable","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"value":"0","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
-    {"propertyId":{"name":"healthValue","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"objectId":{"name":"oQuarterCollectable","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"value":"5","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
+    {"propertyId":{"name":"healthValue","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"objectId":{"name":"oQuarterCollectable","path":"objects/oQuarterCollectable/oQuarterCollectable.yy",},"value":"50","resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMOverriddenProperty",},
   ],
   "parent": {
     "name": "Collectables",
