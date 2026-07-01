@@ -1,6 +1,6 @@
 {
   "Name": "ConstructionGuy",
-  "MaxHitPoints": 50,
+  "MaxHitPoints": 500,
   "RegenSpeed": 0.0,
   "KORegenSpeed": 0.0,
   "HorizontalSpeed": 0.0,
@@ -259,7 +259,7 @@
           "WidthOffset": 5,
           "HeightOffset": 0,
           "Group": 0,
-          "Damage": 1,
+          "Damage": 10,
           "MeterGain": 1.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
@@ -295,7 +295,7 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 1,
+          "Damage": 10,
           "MeterGain": 1.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 20,
@@ -451,6 +451,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2026-01-23T20:44:35.9388895-07:00",
+  "LastModified": "2026-06-30T21:16:22.9462368-07:00",
   "LastModifiedBy": "creep"
 }
