@@ -115,7 +115,7 @@
       "WidthOffset": 0,
       "HeightOffset": -5,
       "Group": 0,
-      "Damage": 5,
+      "Damage": 50,
       "MeterGain": 0.0,
       "ComboScaling": 1.0,
       "AttackHitStop": 9,
@@ -140,7 +140,7 @@
       "SupplementaryHitScript": "",
       "CausesWallbounce": false,
       "HitSound": "sfx_Medium_Hit",
-      "ChipDamage": 1,
+      "ChipDamage": 10,
       "CauseHardKnockdown": false,
       "CauseFloorBounce": false
     }
@@ -149,7 +149,7 @@
     {
       "CounterHitLevel": 2,
       "Group": 0,
-      "Damage": 6,
+      "Damage": 60,
       "MeterGain": 0.0,
       "ComboScaling": 1.0,
       "AttackHitStop": 16,
@@ -181,6 +181,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
-  "LastModified": "2026-06-30T20:09:34.6172697-07:00",
+  "LastModified": "2026-06-30T21:09:13.263778-07:00",
   "LastModifiedBy": "creep"
 }
