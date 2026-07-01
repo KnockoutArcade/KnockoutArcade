@@ -40,7 +40,6 @@ if (lifetime < 1)
 	exit;
 }
 
-show_debug_message("AttackType: " + string(attackProperty.AttackType));
 // Handle non-projectiles
 if (!isProjectile)
 {
