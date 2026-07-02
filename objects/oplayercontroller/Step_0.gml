@@ -2577,6 +2577,13 @@ switch state
 			spiritObject.state = state;
 		}
 		
+		if (heldOpponent != noone)
+		{
+			heldOpponent.state = eState.IDLE;
+			heldOpponent.animTimer = 0;
+			heldOpponent = noone;
+		}
+		
 		animTimer = 1;
 		cancelable = false;
 		canTurnAround = false;

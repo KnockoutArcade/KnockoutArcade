@@ -20,7 +20,7 @@ if (playerID == 1)
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, holdRunButtonTimer);
 	draw_text(20, 70, holdForwardTimer);
-	draw_text(20, 90, runningForward);
+	draw_text(20, 90, heldOpponent);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
