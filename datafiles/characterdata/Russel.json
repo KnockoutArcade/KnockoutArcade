@@ -1866,7 +1866,7 @@
         {
           "Start": 5,
           "Lifetime": 2,
-          "AttackWidth": 17,
+          "AttackWidth": 21,
           "AttackHeight": 20,
           "WidthOffset": 0,
           "HeightOffset": 0,
@@ -8384,6 +8384,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-06-30T20:22:57.9316648-07:00",
+  "LastModified": "2026-07-02T21:27:54.7473773-07:00",
   "LastModifiedBy": "creep"
 }

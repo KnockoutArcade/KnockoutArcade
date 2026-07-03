@@ -4,7 +4,7 @@
 // Training Mode stuff
 if (global.gameMode == GAMEMODE.TRAINING) 
 {
-	if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE && hp < maxHitPoints)
+	if (state != eState.HURT && state != eState.LAUNCHED && hitstop <= 0 && state != eState.BEING_GRABBED && state != eState.SCREEN_FREEZE && hp < maxHitPoints && blockstun <= 0)
 	{
 		hp += 10;
 	}
