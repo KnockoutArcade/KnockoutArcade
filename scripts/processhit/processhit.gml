@@ -399,6 +399,9 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 			scriptToExecute();
 		}
 		
+		// Reset Speed
+		collision_list.owner.hsp = 0;
+		
 		// Combo Scaling
 		if (!collision_list.owner.isDestructibleObject)
 		{
