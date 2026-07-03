@@ -15,7 +15,6 @@ if (global.gameMode == GAMEMODE.TRAINING)
 	}
 }
 
-
 // Handle Player Intros
 if (!hasPerformedIntro) 
 {
