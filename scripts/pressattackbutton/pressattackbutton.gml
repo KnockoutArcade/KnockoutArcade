@@ -247,6 +247,7 @@ function PressAttackButton(attack, _late = false)
 				{
 					superMeter -= 50;
 					state = eState.SUPER;
+					invincible = true;
 					sprite_index = selectedCharacter.Super.SpriteId;
 					image_index = 0;
 					
