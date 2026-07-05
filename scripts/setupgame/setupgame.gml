@@ -64,6 +64,7 @@ function SetupGame()
 				PaletteSetup(global.p2PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 2; // Set this player's team score
+				currentPaletteID = global.p2PaletteID;
 				
 				controllerSlot = global.player2ControllerSlot;
 			}
@@ -78,6 +79,7 @@ function SetupGame()
 				PaletteSetup(global.p1PaletteID, selectedCharacter);
 				isInCutscene = true;
 				teamID = 1; // Set this player's team score
+				currentPaletteID = global.p1PaletteID;
 				
 				controllerSlot = global.player1ControllerSlot;
 			}
@@ -308,6 +310,7 @@ function SetupGame()
 				isInCutscene = true;
 				
 				teamID = 1; // Set this player's team score
+				currentPaletteID = global.p1PaletteID;
 				
 				// There's not a reason for the player to be locked to the screen
 				shouldStayOnScreen = false;

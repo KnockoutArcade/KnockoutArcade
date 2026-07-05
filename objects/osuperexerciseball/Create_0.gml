@@ -40,7 +40,8 @@ hasLifetime = false;
 projectileHealth = 999;
 
 displayEXFlash = false;
-PaletteSetup(1, selectedProjectile);
+PaletteSetup(0, selectedProjectile);
+hasSetPalette = false;
 
 duration = 60 * 10; // The amount of time (in frames) that this object exists for
 

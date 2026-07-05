@@ -409,6 +409,7 @@ PaletteSetup(0, selectedCharacter);
 isEXFlash = false; // Whether or not the player should be flashing
 EXFlashTimer = 0; // Timer for EXFlash
 displayEXFlash = false; // Toggle for the flashing
+currentPaletteID = 0; // Which palette the character is using
 
 // Character speed trail variables
 speedTrailTimer = 0;

@@ -12,6 +12,12 @@ event_inherited();
 if (instance_exists(playerOwner))
 {
 	playerOwner.meterPenalty = 0.25;
+	
+	if (!hasSetPalette)
+	{
+		PaletteSetup(playerOwner.currentPaletteID, selectedProjectile);
+		hasSetPalette = true;
+	}
 }
 
 if (hitstun != 0)
