@@ -48,7 +48,7 @@
   "BaseColor": {
     "UID": "c7e5b149-ceba-4389-8bdf-000fe758671a",
     "Name": "",
-    "NumberOfReplacableColors": 16,
+    "NumberOfReplacableColors": 20,
     "ColorPalette": [
       {
         "Red": 0.47843137,
@@ -129,6 +129,26 @@
         "Red": 0.0,
         "Blue": 1.0,
         "Green": 0.33333334
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
       }
     ]
   },
@@ -137,7 +157,7 @@
     {
       "UID": "48769fd7-d894-44e5-87df-03b42821fd18",
       "Name": "Default",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -218,13 +238,33 @@
           "Red": 0.14901961,
           "Blue": 0.011764706,
           "Green": 0.06666667
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "571f0426-6f3d-476c-823b-a3a23f3dc2b7",
       "Name": "Blue",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -305,13 +345,33 @@
           "Red": 0.11892312,
           "Blue": 0.13203752,
           "Green": 0.117435515
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "75b2497f-fb9c-44c1-a387-c37818c84b31",
       "Name": "White - Doofenshmirtz",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -392,13 +452,33 @@
           "Red": 0.05882353,
           "Blue": 0.011764706,
           "Green": 0.011764706
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "3d084ea3-6694-4ddb-9bc5-40790324ccee",
       "Name": "Yellow - Terumi",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -479,13 +559,33 @@
           "Red": 0.14901961,
           "Blue": 0.011764706,
           "Green": 0.06666667
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "7696a43a-0586-49ae-8c2d-ac7e40fcfbe3",
       "Name": "Red",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -566,13 +666,33 @@
           "Red": 0.36862746,
           "Blue": 0.37254903,
           "Green": 0.37254903
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "21eba704-b7a8-4add-aff5-0d8a423488dd",
       "Name": "Green",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -653,13 +773,33 @@
           "Red": 0.05882353,
           "Blue": 0.011764706,
           "Green": 0.011764706
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "8b5d67a0-cdb2-4149-a220-6c4ebc8df3c0",
       "Name": "Black - Jotaro",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -740,13 +880,33 @@
           "Red": 0.05882353,
           "Blue": 0.011764706,
           "Green": 0.011764706
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "3c2468d2-7961-4d23-91d2-e3f3ca501a0f",
       "Name": "Dante",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -827,13 +987,33 @@
           "Red": 0.16078432,
           "Blue": 0.047058824,
           "Green": 0.015686275
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "f88b717e-c676-4888-a16c-034e4a694008",
       "Name": "Vergil",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -914,13 +1094,33 @@
           "Red": 0.039990693,
           "Blue": 0.054959774,
           "Green": 0.028990176
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "150fa2d3-2f55-44e8-ae71-0a6b73bc7c84",
       "Name": "Giorno",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -1001,13 +1201,33 @@
           "Red": 0.09019608,
           "Blue": 0.36078432,
           "Green": 0.019607844
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "92410671-c439-4942-8608-7eb1ad2a0b7d",
       "Name": "Seto Kaiba",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -1088,13 +1308,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "9f8abe7f-6bab-48e6-8823-7ac648c7597b",
       "Name": "Slash",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.47843137,
@@ -1175,6 +1415,26 @@
           "Red": 0.42352942,
           "Blue": 0.33333334,
           "Green": 0.08235294
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     }
@@ -9780,6 +10040,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-06-30T21:44:05.2534888-07:00",
+  "LastModified": "2026-07-05T14:05:40.0270601-07:00",
   "LastModifiedBy": "creep"
 }

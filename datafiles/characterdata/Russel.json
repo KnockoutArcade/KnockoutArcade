@@ -48,7 +48,7 @@
   "BaseColor": {
     "UID": "6c88c9ad-404e-4045-906c-0fba9e8f0eb4",
     "Name": "Base Palette",
-    "NumberOfReplacableColors": 16,
+    "NumberOfReplacableColors": 20,
     "ColorPalette": [
       {
         "Red": 1.0,
@@ -129,6 +129,26 @@
         "Red": 1.0,
         "Blue": 1.0,
         "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
       }
     ]
   },
@@ -137,7 +157,7 @@
     {
       "UID": "3cee27aa-540e-4e82-b59b-9e63668d47ef",
       "Name": "Default",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 1.0,
@@ -218,13 +238,33 @@
           "Red": 1.0,
           "Blue": 1.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "8a186ab3-015e-46a2-9951-bc194eb819ae",
       "Name": "Blue",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.14509805,
@@ -305,13 +345,33 @@
           "Red": 1.0,
           "Blue": 1.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "3c97c614-d777-4292-8e4c-c89202efe0ba",
       "Name": "Yellow",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -392,13 +452,33 @@
           "Red": 1.0,
           "Blue": 1.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "80cf977b-afc3-4c42-bd98-e7e1f3294cbf",
       "Name": "Green",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.34509805,
@@ -479,13 +559,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "2e43ed1e-e123-4b56-ba0a-fa174e0c694e",
       "Name": "Black - Kyo",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.2784314,
@@ -566,13 +666,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "8bf7d2a2-9c03-4abb-a538-ba0c557c3697",
       "Name": "White - Ryu",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.96862745,
@@ -653,13 +773,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "e30d8fb7-5419-43dd-a4ab-66c077e471df",
       "Name": "Purple - T. Turner",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.92156863,
@@ -740,13 +880,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "f12bb9e4-5c34-4666-8670-1290d33fa376",
       "Name": "Orange",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9607843,
@@ -827,13 +987,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "b6ad645e-0e9a-4f70-b292-92a3f90ccbf2",
       "Name": "DIO",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -914,13 +1094,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "3dcf46da-eb7c-467f-a62a-8e262ca8b9a9",
       "Name": "Rock Howard",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 1.0,
@@ -1001,13 +1201,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "06689ccc-5de5-47f3-8d94-33158beeff67",
       "Name": "Scorpion",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8901961,
@@ -1088,13 +1308,33 @@
           "Red": 1.0,
           "Blue": 1.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "ffe68f47-6117-483e-a925-b165471d1ad5",
       "Name": "Sub-Zero",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.36078432,
@@ -1174,6 +1414,26 @@
         {
           "Red": 1.0,
           "Blue": 1.0,
+          "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
           "Green": 0.0
         }
       ]

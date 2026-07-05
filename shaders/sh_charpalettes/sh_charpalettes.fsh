@@ -22,6 +22,10 @@ uniform vec4 colorMatch13;
 uniform vec4 colorMatch14;
 uniform vec4 colorMatch15;
 uniform vec4 colorMatch16;
+uniform vec4 colorMatch17;
+uniform vec4 colorMatch18;
+uniform vec4 colorMatch19;
+uniform vec4 colorMatch20;
 uniform vec4 EXmatch;
 // Each color to replace also has its own vec4
 uniform vec4 colorReplace1;
@@ -40,6 +44,10 @@ uniform vec4 colorReplace13;
 uniform vec4 colorReplace14;
 uniform vec4 colorReplace15;
 uniform vec4 colorReplace16;
+uniform vec4 colorReplace17;
+uniform vec4 colorReplace18;
+uniform vec4 colorReplace19;
+uniform vec4 colorReplace20;
 uniform vec4 EXreplace;
 
 void main()
@@ -192,7 +200,41 @@ void main()
 		}
 	}
 	
+	// 17
+	if(abs(pixelColor.r - colorMatch17.r) <= newRange) {
+		if(abs(pixelColor.g - colorMatch17.g) <= newRange) {
+			if(abs(pixelColor.b - colorMatch17.b) <= newRange) {
+				pixelColor.rgb = colorReplace17.rgb;
+			}
+		}
+	}
 	
+	// 18
+	if(abs(pixelColor.r - colorMatch18.r) <= newRange) {
+		if(abs(pixelColor.g - colorMatch18.g) <= newRange) {
+			if(abs(pixelColor.b - colorMatch18.b) <= newRange) {
+				pixelColor.rgb = colorReplace18.rgb;
+			}
+		}
+	}
+	
+	// 19
+	if(abs(pixelColor.r - colorMatch19.r) <= newRange) {
+		if(abs(pixelColor.g - colorMatch19.g) <= newRange) {
+			if(abs(pixelColor.b - colorMatch19.b) <= newRange) {
+				pixelColor.rgb = colorReplace19.rgb;
+			}
+		}
+	}
+	
+	// 20
+	if(abs(pixelColor.r - colorMatch20.r) <= newRange) {
+		if(abs(pixelColor.g - colorMatch20.g) <= newRange) {
+			if(abs(pixelColor.b - colorMatch20.b) <= newRange) {
+				pixelColor.rgb = colorReplace20.rgb;
+			}
+		}
+	}
 	
 	pixelColor.rgb += (EXreplace.rgb * .3);
 	

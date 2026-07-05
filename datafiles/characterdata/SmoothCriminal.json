@@ -48,7 +48,7 @@
   "BaseColor": {
     "UID": "930db45a-20ad-41c3-a127-bf670207c52d",
     "Name": "",
-    "NumberOfReplacableColors": 16,
+    "NumberOfReplacableColors": 20,
     "ColorPalette": [
       {
         "Red": 0.9411765,
@@ -129,6 +129,26 @@
         "Red": 1.0,
         "Blue": 1.0,
         "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
       }
     ]
   },
@@ -137,7 +157,7 @@
     {
       "UID": "0000e62b-e5c1-4f2c-ae66-4991c0c5b7f7",
       "Name": "Default",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9411765,
@@ -218,13 +238,33 @@
           "Red": 0.07450981,
           "Blue": 0.62352943,
           "Green": 0.3372549
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "5b43dad0-97b6-482d-a414-0a22ca62735e",
       "Name": "Zoot Suit Riot",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.105882354,
@@ -305,13 +345,33 @@
           "Red": 0.09411765,
           "Blue": 0.12156863,
           "Green": 0.32941177
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "5104fd8c-fb22-4ddc-add2-01b8f646e55a",
       "Name": "Agent P",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.12156863,
@@ -392,13 +452,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "f879e898-6977-46ab-9a38-e4a986d5fa6b",
       "Name": "Hazama",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.23137255,
@@ -479,13 +559,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "dd4efd5c-96df-46d7-b29d-865a06e2d9f1",
       "Name": "The Mask",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.92941177,
@@ -566,13 +666,33 @@
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "40e27178-4e55-4420-8394-1df4afd4cf6f",
       "Name": "Inspector Gadget",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.48235294,
@@ -653,13 +773,33 @@
           "Red": 0.72156864,
           "Blue": 0.8784314,
           "Green": 0.7882353
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "a720851a-985e-46c9-9023-397ff43405f5",
       "Name": "Star Platinum",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.5176471,
@@ -740,13 +880,33 @@
           "Red": 0.6862745,
           "Blue": 0.7294118,
           "Green": 0.29803923
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "c467f04b-65d0-4fe0-9618-ff6251dd6f78",
       "Name": "Fedora Vergil",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.14117648,
@@ -827,13 +987,33 @@
           "Red": 0.07450981,
           "Blue": 0.12941177,
           "Green": 0.078431375
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "936590dd-fe76-490c-9bd1-b90f7d7bec8d",
       "Name": "Q",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9529412,
@@ -914,13 +1094,33 @@
           "Red": 0.6901961,
           "Blue": 0.20784314,
           "Green": 0.1254902
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "2a9b0394-03ed-4c2c-a423-2496fc2ff1d6",
       "Name": "Gold Experience",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.8509804,
@@ -1001,13 +1201,33 @@
           "Red": 0.09411765,
           "Blue": 0.12156863,
           "Green": 0.32941177
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "e83c9b05-d279-4a5a-8bb4-7ab9eac3b7ac",
       "Name": "Blue Eyes White Dragon",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9411765,
@@ -1088,13 +1308,33 @@
           "Red": 0.07450981,
           "Blue": 0.62352943,
           "Green": 0.3372549
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "105e6cd8-f692-4d34-b1f9-4842a3f6fae0",
       "Name": "Fernandez",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.23137255,
@@ -1175,6 +1415,26 @@
           "Red": 0.6901961,
           "Blue": 0.20784314,
           "Green": 0.1254902
+        },
+      	{
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     }
@@ -6304,6 +6564,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-06-30T21:57:37.2840332-07:00",
+  "LastModified": "2026-07-05T14:06:03.4381857-07:00",
   "LastModifiedBy": "creep"
 }

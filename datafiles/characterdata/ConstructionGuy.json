@@ -48,7 +48,7 @@
   "BaseColor": {
     "UID": "b1155186-3342-41f5-afff-fd6a206f1fdd",
     "Name": "",
-    "NumberOfReplacableColors": 16,
+    "NumberOfReplacableColors": 20,
     "ColorPalette": [
       {
         "Red": 0.0,
@@ -129,6 +129,26 @@
         "Red": 0.0,
         "Blue": 0.0,
         "Green": 0.0
+      },
+     {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
+      },
+      {
+        "Red": 0.0,
+        "Blue": 0.0,
+        "Green": 0.0
       }
     ]
   },
@@ -137,7 +157,7 @@
     {
       "UID": "d8026c41-af7a-481e-a8fa-8f97b5479319",
       "Name": "Default",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.0,
@@ -200,6 +220,26 @@
           "Green": 0.0
         },
         {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+      	{
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0

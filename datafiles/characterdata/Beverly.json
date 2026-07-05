@@ -48,7 +48,7 @@
   "BaseColor": {
     "UID": "74ab7666-7e20-4d84-8b4e-b2d9221735f8",
     "Name": "",
-    "NumberOfReplacableColors": 16,
+    "NumberOfReplacableColors": 20,
     "ColorPalette": [
       {
         "Red": 0.92941177,
@@ -129,6 +129,26 @@
         "Red": 0.0,
         "Blue": 1.0,
         "Green": 1.0
+      },
+      {
+        "Red": 0.42745098,
+        "Blue": 1.0,
+        "Green": 0.7372549
+      },
+      {
+        "Red": 0.38431373,
+        "Blue": 1.0,
+        "Green": 0.4862745
+      },
+      {
+        "Red": 0.14117648,
+        "Blue": 0.69803923,
+        "Green": 0.4
+      },
+      {
+        "Red": 0.13333334,
+        "Blue": 0.6156863,
+        "Green": 0.09019608
       }
     ]
   },
@@ -137,7 +157,7 @@
     {
       "UID": "b0da4ab6-a494-40ef-a8ea-29284ecc4337",
       "Name": "Default",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.92941177,
@@ -218,13 +238,33 @@
           "Red": 0.7254902,
           "Blue": 0.23529412,
           "Green": 0.3647059
+        },
+        {
+          "Red": 0.42745098,
+          "Blue": 1.0,
+          "Green": 0.7372549
+        },
+        {
+          "Red": 0.38431373,
+          "Blue": 1.0,
+          "Green": 0.4862745
+        },
+        {
+          "Red": 0.14117648,
+          "Blue": 0.69803923,
+          "Green": 0.4
+        },
+        {
+          "Red": 0.13333334,
+          "Blue": 0.6156863,
+          "Green": 0.09019608
         }
       ]
     },
     {
       "UID": "c3c8f7b8-1522-4fd2-ad41-c10bcface464",
       "Name": "Blue - Arina",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.14509805,
@@ -305,13 +345,33 @@
           "Red": 0.36078432,
           "Blue": 0.20392157,
           "Green": 0.16862746
+        },
+        {
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.37254903,
+          "Blue": 0.89411765,
+          "Green": 0.8039216
+        },
+        {
+          "Red": 0.3882353,
+          "Blue": 1.0,
+          "Green": 0.60784316
+        },
+        {
+          "Red": 0.35686275,
+          "Blue": 0.88235295,
+          "Green": 0.43137255
         }
       ]
     },
     {
       "UID": "1a7c0eb7-7274-4a66-acdb-4534bad1251c",
       "Name": "Yellow",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 1.0,
@@ -392,13 +452,33 @@
           "Red": 0.7254902,
           "Blue": 0.23529412,
           "Green": 0.3647059
+        },
+        {
+          "Red": 0.96862745,
+          "Blue": 0.6392157,
+          "Green": 0.93333334
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.3764706,
+          "Green": 0.8784314
+        },
+        {
+          "Red": 0.92941177,
+          "Blue": 0.21960784,
+          "Green": 0.67058825
+        },
+        {
+          "Red": 0.7254902,
+          "Blue": 0.23529412,
+          "Green": 0.3647059
         }
       ]
     },
     {
       "UID": "9f44f8ff-bf6e-4f46-b7d2-949b75db876c",
       "Name": "Green",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.2627451,
@@ -479,13 +559,33 @@
           "Red": 0.36078432,
           "Blue": 0.20392157,
           "Green": 0.16862746
+        },
+        {
+          "Red": 0.6117647,
+          "Blue": 0.5529412,
+          "Green": 0.92156863
+        },
+        {
+          "Red": 0.34509805,
+          "Blue": 0.39215687,
+          "Green": 0.8392157
+        },
+        {
+          "Red": 0.23921569,
+          "Blue": 0.28627452,
+          "Green": 0.6313726
+        },
+        {
+          "Red": 0.09411765,
+          "Blue": 0.12156863,
+          "Green": 0.32941177
         }
       ]
     },
     {
       "UID": "c305d9b0-da5c-4b0b-b9fc-c8e3e16aba30",
       "Name": "Black",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.2784314,
@@ -566,13 +666,33 @@
           "Red": 0.101960786,
           "Blue": 0.08627451,
           "Green": 0.08627451
+        },
+        {
+          "Red": 0.45882353,
+          "Blue": 0.42352942,
+          "Green": 0.42352942
+        },
+        {
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
+        },
+        {
+          "Red": 0.14117648,
+          "Blue": 0.11764706,
+          "Green": 0.11764706
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
         }
       ]
     },
     {
       "UID": "2028905c-fa05-4bc0-b895-053c690a975f",
       "Name": "White - Wii Fit",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.37254903,
@@ -653,13 +773,33 @@
           "Red": 0.4117647,
           "Blue": 0.41568628,
           "Green": 0.41568628
+        },
+        {
+          "Red": 0.827451,
+          "Blue": 0.87058824,
+          "Green": 0.85490197
+        },
+        {
+          "Red": 0.60784316,
+          "Blue": 0.7176471,
+          "Green": 0.6784314
+        },
+        {
+          "Red": 0.4117647,
+          "Blue": 0.41568628,
+          "Green": 0.41568628
+        },
+        {
+          "Red": 0.2784314,
+          "Blue": 0.23921569,
+          "Green": 0.23921569
         }
       ]
     },
     {
       "UID": "fee5f05d-580e-452f-811f-1bd076f50d68",
       "Name": "Purple",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.98039216,
@@ -740,13 +880,33 @@
           "Red": 0.36078432,
           "Blue": 0.20392157,
           "Green": 0.16862746
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.8392157,
+          "Green": 0.79607844
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.7764706,
+          "Green": 0.6039216
+        },
+        {
+          "Red": 0.8901961,
+          "Blue": 0.72156864,
+          "Green": 0.42745098
+        },
+        {
+          "Red": 0.4862745,
+          "Blue": 0.67058825,
+          "Green": 0.16862746
         }
       ]
     },
     {
       "UID": "6defc61e-26d5-445e-aef5-9380912b6d70",
       "Name": "Orange",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9607843,
@@ -827,13 +987,33 @@
           "Red": 0.7254902,
           "Blue": 0.23529412,
           "Green": 0.3647059
+        },
+        {
+          "Red": 1.0,
+          "Blue": 0.5294118,
+          "Green": 0.9372549
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.19215687,
+          "Green": 0.627451
+        },
+        {
+          "Red": 0.9019608,
+          "Blue": 0.11764706,
+          "Green": 0.45490196
+        },
+        {
+          "Red": 0.67058825,
+          "Blue": 0.02745098,
+          "Green": 0.13333334
         }
       ]
     },
     {
       "UID": "e95e581b-971c-4ff7-9217-f03c94c25fbf",
       "Name": "Ariel",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.92156863,
@@ -914,13 +1094,33 @@
           "Red": 0.7607843,
           "Blue": 0.31764707,
           "Green": 0.18431373
+        },
+        {
+          "Red": 0.9607843,
+          "Blue": 0.7764706,
+          "Green": 0.6039216
+        },
+        {
+          "Red": 0.92156863,
+          "Blue": 0.6901961,
+          "Green": 0.36862746
+        },
+        {
+          "Red": 0.7882353,
+          "Blue": 0.6627451,
+          "Green": 0.23529412
+        },
+        {
+          "Red": 0.4509804,
+          "Blue": 0.19607843,
+          "Green": 0.02745098
         }
       ]
     },
     {
       "UID": "d43e0083-2116-4dfa-9608-83162b633ec7",
       "Name": "Blue Hair",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.2784314,
@@ -1001,13 +1201,33 @@
           "Red": 0.07450981,
           "Blue": 0.62352943,
           "Green": 0.3372549
+        },
+        {
+          "Red": 0.5019608,
+          "Blue": 1.0,
+          "Green": 0.8156863
+        },
+        {
+          "Red": 0.16470589,
+          "Blue": 0.7411765,
+          "Green": 0.5764706
+        },
+        {
+          "Red": 0.047058824,
+          "Blue": 0.52156866,
+          "Green": 0.21960784
+        },
+        {
+          "Red": 0.0627451,
+          "Blue": 0.2901961,
+          "Green": 0.043137256
         }
       ]
     },
     {
       "UID": "f144e0d1-c6ec-44a8-b350-819827b63355",
       "Name": "Justin Bailey",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.9019608,
@@ -1088,13 +1308,33 @@
           "Red": 0.011764706,
           "Blue": 0.18039216,
           "Green": 0.43137255
+        },
+        {
+          "Red": 0.34509805,
+          "Blue": 0.39215687,
+          "Green": 0.8392157
+        },
+        {
+          "Red": 0.24705882,
+          "Blue": 0.050980393,
+          "Green": 0.70980394
+        },
+        {
+          "Red": 0.011764706,
+          "Blue": 0.18039216,
+          "Green": 0.43137255
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.16862746,
+          "Green": 0.23137255
         }
       ]
     },
     {
       "UID": "67f3d556-74f7-43b1-b86a-e92024d34a3c",
       "Name": "Curly Brace",
-      "NumberOfReplacableColors": 16,
+      "NumberOfReplacableColors": 20,
       "ColorPalette": [
         {
           "Red": 0.83137256,
@@ -1175,6 +1415,26 @@
           "Red": 0.8901961,
           "Blue": 0.23921569,
           "Green": 0.6509804
+        },
+        {
+          "Red": 1.0,
+          "Blue": 0.39215687,
+          "Green": 0.5372549
+        },
+        {
+          "Red": 0.98039216,
+          "Blue": 0.2627451,
+          "Green": 0.2784314
+        },
+        {
+          "Red": 0.83137256,
+          "Blue": 0.12941177,
+          "Green": 0.11764706
+        },
+        {
+          "Red": 0.61960787,
+          "Blue": 0.15686275,
+          "Green": 0.07450981
         }
       ]
     }
@@ -9601,6 +9861,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "eb11e2fc-bf4d-45e7-88d0-10fe49d121d8",
-  "LastModified": "2026-07-02T21:34:11.247729-07:00",
+  "LastModified": "2026-07-05T14:04:48.7231777-07:00",
   "LastModifiedBy": "creep"
 }

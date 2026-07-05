@@ -185,6 +185,30 @@ shader_set_uniform_f(sh_handle_match16,
 	colorMatch16.blue,
 	
 );
+shader_set_uniform_f(sh_handle_match17,
+	colorMatch17.red,
+	colorMatch17.green,
+	colorMatch17.blue,
+	
+);
+shader_set_uniform_f(sh_handle_match18,
+	colorMatch18.red,
+	colorMatch18.green,
+	colorMatch18.blue,
+	
+);
+shader_set_uniform_f(sh_handle_match19,
+	colorMatch19.red,
+	colorMatch19.green,
+	colorMatch19.blue,
+	
+);
+shader_set_uniform_f(sh_handle_match20,
+	colorMatch20.red,
+	colorMatch20.green,
+	colorMatch20.blue,
+	
+);
 shader_set_uniform_f(sh_handle_EXmatch,
 	EXmatch.red,
 	EXmatch.green,
@@ -291,6 +315,29 @@ shader_set_uniform_f(sh_handle_replace16,
 	colorReplace16.green,
 	colorReplace16.blue,
 	
+);
+shader_set_uniform_f(sh_handle_replace17,
+	colorReplace17.red,
+	colorReplace17.green,
+	colorReplace17.blue,
+	
+);
+shader_set_uniform_f(sh_handle_replace18,
+	colorReplace18.red,
+	colorReplace18.green,
+	colorReplace18.blue,
+	
+);
+shader_set_uniform_f(sh_handle_replace19,
+	colorReplace19.red,
+	colorReplace19.green,
+	colorReplace19.blue,
+	
+);
+shader_set_uniform_f(sh_handle_replace20,
+	colorReplace20.red,
+	colorReplace20.green,
+	colorReplace20.blue,
 );
 
 if (displayEXFlash)

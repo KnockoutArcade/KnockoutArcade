@@ -28,6 +28,10 @@ function PaletteSetup(paletteID, paletteData)
 		colorMatch14 = new Color(paletteData.BasePalette[13].Red, paletteData.BasePalette[13].Green, paletteData.BasePalette[13].Blue);
 		colorMatch15 = new Color(paletteData.BasePalette[14].Red, paletteData.BasePalette[14].Green, paletteData.BasePalette[14].Blue);
 		colorMatch16 = new Color(paletteData.BasePalette[15].Red, paletteData.BasePalette[15].Green, paletteData.BasePalette[15].Blue);
+		colorMatch17 = new Color(paletteData.BasePalette[16].Red, paletteData.BasePalette[16].Green, paletteData.BasePalette[16].Blue);
+		colorMatch18 = new Color(paletteData.BasePalette[17].Red, paletteData.BasePalette[17].Green, paletteData.BasePalette[17].Blue);
+		colorMatch19 = new Color(paletteData.BasePalette[18].Red, paletteData.BasePalette[18].Green, paletteData.BasePalette[18].Blue);
+		colorMatch20 = new Color(paletteData.BasePalette[19].Red, paletteData.BasePalette[19].Green, paletteData.BasePalette[19].Blue);
 		EXmatch = new Color(0, 0, 0);
 		colorReplace1 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[0].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[0].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[0].Blue);
 		colorReplace2 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[1].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[1].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[1].Blue);
@@ -45,6 +49,10 @@ function PaletteSetup(paletteID, paletteData)
 		colorReplace14 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[13].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[13].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[13].Blue);
 		colorReplace15 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[14].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[14].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[14].Blue);
 		colorReplace16 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[15].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[15].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[15].Blue);
+		colorReplace17 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[16].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[16].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[16].Blue);
+		colorReplace18 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[17].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[17].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[17].Blue);
+		colorReplace19 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[18].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[18].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[18].Blue);
+		colorReplace20 = new Color(paletteData.AlternatePalettes[paletteID].ColorPalette[19].Red, paletteData.AlternatePalettes[paletteID].ColorPalette[19].Green, paletteData.AlternatePalettes[paletteID].ColorPalette[19].Blue);
 		EXreplace = new Color(0.890, 0.878, 0.376);
 
 		sh_handle_range = shader_get_uniform(sh_CharPalettes, "range");
@@ -64,6 +72,10 @@ function PaletteSetup(paletteID, paletteData)
 		sh_handle_match14 = shader_get_uniform(sh_CharPalettes, "colorMatch14");
 		sh_handle_match15 = shader_get_uniform(sh_CharPalettes, "colorMatch15");
 		sh_handle_match16 = shader_get_uniform(sh_CharPalettes, "colorMatch16");
+		sh_handle_match17 = shader_get_uniform(sh_CharPalettes, "colorMatch17");
+		sh_handle_match18 = shader_get_uniform(sh_CharPalettes, "colorMatch18");
+		sh_handle_match19 = shader_get_uniform(sh_CharPalettes, "colorMatch19");
+		sh_handle_match20 = shader_get_uniform(sh_CharPalettes, "colorMatch20");
 		sh_handle_EXmatch = shader_get_uniform(sh_CharPalettes, "EXmatch");
 
 		sh_handle_replace1 = shader_get_uniform(sh_CharPalettes, "colorReplace1");
@@ -82,6 +94,10 @@ function PaletteSetup(paletteID, paletteData)
 		sh_handle_replace14 = shader_get_uniform(sh_CharPalettes, "colorReplace14");
 		sh_handle_replace15 = shader_get_uniform(sh_CharPalettes, "colorReplace15");
 		sh_handle_replace16 = shader_get_uniform(sh_CharPalettes, "colorReplace16");
+		sh_handle_replace17 = shader_get_uniform(sh_CharPalettes, "colorReplace17");
+		sh_handle_replace18 = shader_get_uniform(sh_CharPalettes, "colorReplace18");
+		sh_handle_replace19 = shader_get_uniform(sh_CharPalettes, "colorReplace19");
+		sh_handle_replace20 = shader_get_uniform(sh_CharPalettes, "colorReplace20");
 		sh_handle_EXreplace = shader_get_uniform(sh_CharPalettes, "EXreplace");
 	}
 }
