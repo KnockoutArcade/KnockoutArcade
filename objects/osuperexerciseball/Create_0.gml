@@ -39,6 +39,9 @@ copyCharacterPalette = false;
 hasLifetime = false;
 projectileHealth = 999;
 
+displayEXFlash = false;
+PaletteSetup(1, selectedProjectile);
+
 duration = 60 * 10; // The amount of time (in frames) that this object exists for
 
 collidedWithProjectileList = ds_list_create(); // The list of projectiles this has recently hit

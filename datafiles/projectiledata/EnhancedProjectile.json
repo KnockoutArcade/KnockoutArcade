@@ -69,14 +69,76 @@
     {
       "UID": "1eaed55b-fd2c-495b-aeb3-e53819135361",
       "Name": "Purple",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 7,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
     },
     {
       "UID": "fcf9751a-fbca-452e-8824-05e800b4fc52",
       "Name": "Orange",
-      "NumberOfReplacableColors": 0,
-      "ColorPalette": []
+      "NumberOfReplacableColors": 5,
+      "ColorPalette": [
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        },
+        {
+          "Red": 0.0,
+          "Blue": 0.0,
+          "Green": 0.0
+        }
+      ]
     },
     {
       "UID": "91404610-78bb-47dc-8b39-97456b30ba48",
@@ -181,6 +243,6 @@
   },
   "Version": "Ver1.2.4",
   "UID": "63a8c981-86f9-445f-997c-dc2850821dd2",
-  "LastModified": "2026-07-02T23:28:26.0650467-07:00",
+  "LastModified": "2026-07-04T20:02:13.8433661-07:00",
   "LastModifiedBy": "creep"
 }
