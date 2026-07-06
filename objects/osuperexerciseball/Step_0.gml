@@ -57,7 +57,7 @@ if (array_length(_hasBeenHitBy) > 0)
 }
 */
 
-if (hasHitSomething || (hsp == 0 && vsp == 0) || isHitByOpponent)
+if (hasHitSomething || (hsp == 0 && vsp == 0) || isHitByOpponent || playerOwner.hitstun > 0 || playerOwner.blockstun > 0 || playerOwner.state == eState.BEING_GRABBED)
 {
 	// With each of the things we've collided with, clear it's projectileHitBy list
 	for (var i = 0; i < ds_list_size(collidedWithProjectileList); i++;)
