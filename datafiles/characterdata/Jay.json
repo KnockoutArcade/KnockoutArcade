@@ -9048,14 +9048,50 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.5,
+        "GravityScale": 1.0,
         "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 1.0000001,
-        "FallScale": 1.0000001
+        "NumberOfWindows": 5,
+        "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -0.5,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 14,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -0.5,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 15,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 0.5,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -10040,6 +10076,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-06T21:12:12.1249057-07:00",
+  "LastModified": "2026-07-06T21:38:05.4820034-07:00",
   "LastModifiedBy": "creep"
 }
