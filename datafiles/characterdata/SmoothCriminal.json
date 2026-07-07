@@ -1,8 +1,8 @@
 {
   "Name": "SmoothCriminal",
   "MaxHitPoints": 300,
-  "RegenSpeed": 1.75,
-  "KORegenSpeed": 1.0,
+  "RegenSpeed": 1.25,
+  "KORegenSpeed": 0.75,
   "HorizontalSpeed": 0.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
@@ -6701,6 +6701,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-06T21:45:12.4270775-07:00",
+  "LastModified": "2026-07-06T21:48:38.0305922-07:00",
   "LastModifiedBy": "creep"
 }
