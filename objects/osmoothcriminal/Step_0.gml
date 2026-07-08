@@ -274,7 +274,7 @@ switch (spiritState)
 		if (hostObject.state != eState.HITSTOP && hostObject.state != eState.SCREEN_FREEZE)
 		{
 			// Special exception for Jay's Spirit OFF Down Special
-			if (hostObject.prevState == eState.DOWN_SPECIAL)
+			if (hostObject.prevState == eState.DOWN_SPECIAL && inSpiritOff)
 			{
 				y = 104;
 			}

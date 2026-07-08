@@ -5033,8 +5033,8 @@
         {
           "SpawnFrame": 16,
           "SpawnXOffset": 20,
-          "SpawnYOffset": 5,
-          "ProjectileObject": "TestLobbingProjectile"
+          "SpawnYOffset": -5,
+          "ProjectileObject": "SmoothCriminal_SpinHat"
         }
       ],
       "RehitData": {
@@ -5043,8 +5043,15 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 3,
         "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
           {
             "StartingFrame": 12,
             "HorizontalSpeed": 2.0,
@@ -5060,29 +5067,36 @@
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 2,
+        "NumberOfWindows": 3,
         "Windows": [
           {
-            "StartingFrame": 0,
+            "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 5.0,
+            "VerticalSpeed": -0.5,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 27,
+            "StartingFrame": 2,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": true,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 3,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -6700,6 +6714,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-07T21:12:02.6804003-07:00",
+  "LastModified": "2026-07-07T22:00:37.5505958-07:00",
   "LastModifiedBy": "creep"
 }

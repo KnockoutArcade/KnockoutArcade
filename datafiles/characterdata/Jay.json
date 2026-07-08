@@ -8475,7 +8475,7 @@
           {
             "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 0.5,
+            "VerticalSpeed": -0.5,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
@@ -8490,8 +8490,8 @@
         "GravityScale": 1.0,
         "FallScale": 0.5
       },
-      "UseMoveScript": false,
-      "SupplementaryMoveScript": "",
+      "UseMoveScript": true,
+      "SupplementaryMoveScript": "JayDownSpecial_AirSlowdown",
       "NumberOfSounds": 0,
       "MoveSoundData": [],
       "SpiritData": {
@@ -10053,6 +10053,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-07T21:10:35.816918-07:00",
+  "LastModified": "2026-07-07T21:59:00.9609401-07:00",
   "LastModifiedBy": "creep"
 }

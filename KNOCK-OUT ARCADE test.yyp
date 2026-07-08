@@ -16,6 +16,7 @@
     {"id":{"name":"sGunther_DownSpecial_mockup_strip13","path":"sprites/sGunther_DownSpecial_mockup_strip13/sGunther_DownSpecial_mockup_strip13.yy",},"order":18,},
     {"id":{"name":"GetPlayerInputs","path":"scripts/GetPlayerInputs/GetPlayerInputs.yy",},"order":1,},
     {"id":{"name":"oGlobalVars","path":"objects/oGlobalVars/oGlobalVars.yy",},"order":3,},
+    {"id":{"name":"sSmoothCriminal_SpinHat","path":"sprites/sSmoothCriminal_SpinHat/sSmoothCriminal_SpinHat.yy",},"order":8,},
     {"id":{"name":"sSmallHitspark","path":"sprites/sSmallHitspark/sSmallHitspark.yy",},"order":1,},
     {"id":{"name":"sBeverly_CrouchMedium_MOCKUP_strip4","path":"sprites/sBeverly_CrouchMedium_MOCKUP_strip4/sBeverly_CrouchMedium_MOCKUP_strip4.yy",},"order":22,},
     {"id":{"name":"sTestSprite","path":"sprites/sTestSprite/sTestSprite.yy",},"order":8,},
@@ -200,6 +201,7 @@
     {"id":{"name":"sHUDPortraits_Beverly","path":"sprites/sHUDPortraits_Beverly/sHUDPortraits_Beverly.yy",},"order":17,},
     {"id":{"name":"sLevelCompleteNumbers","path":"sprites/sLevelCompleteNumbers/sLevelCompleteNumbers.yy",},"order":5,},
     {"id":{"name":"sCharSel_Buttons","path":"sprites/sCharSel_Buttons/sCharSel_Buttons.yy",},"order":2,},
+    {"id":{"name":"oSmoothCriminal_DownSpecial_SpinHat","path":"objects/oSmoothCriminal_DownSpecial_SpinHat/oSmoothCriminal_DownSpecial_SpinHat.yy",},"order":5,},
     {"id":{"name":"sCharSel_ControllerTypes","path":"sprites/sCharSel_ControllerTypes/sCharSel_ControllerTypes.yy",},"order":18,},
     {"id":{"name":"sUIBase","path":"sprites/sUIBase/sUIBase.yy",},"order":0,},
     {"id":{"name":"sBeverly_DownSpecial_Success","path":"sprites/sBeverly_DownSpecial_Success/sBeverly_DownSpecial_Success.yy",},"order":59,},
@@ -960,6 +962,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"BeverlySuperBall.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"KickableObject.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Luchador.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"SmoothCriminal_SpinHat.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
