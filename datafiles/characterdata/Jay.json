@@ -8360,7 +8360,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_DownSpecial1_Mockup_strip4",
-      "Duration": 27,
+      "Duration": 42,
       "NumberOfFrames": 12,
       "FrameData": [
         {
@@ -8421,31 +8421,8 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 2,
-      "SpecialData": [
-        {
-          "NumpadInput": "6",
-          "ButtonPressRequired": true,
-          "StartingFrame": 3,
-          "EndingFrame": 27,
-          "EnhancementMove": 4096,
-          "TransitionImmediately": true,
-          "TransitionFrame": 0,
-          "RequiredPosition": 1,
-          "DeactivateSpirit": false
-        },
-        {
-          "NumpadInput": "2",
-          "ButtonPressRequired": true,
-          "StartingFrame": 6,
-          "EndingFrame": 27,
-          "EnhancementMove": 2048,
-          "TransitionImmediately": true,
-          "TransitionFrame": 0,
-          "RequiredPosition": 1,
-          "DeactivateSpirit": false
-        }
-      ],
+      "NumberOfEnhancements": 0,
+      "SpecialData": [],
       "IsThrow": false,
       "OpponentPositionData": {
         "DistanceFromWall": 0.0,
@@ -8475,42 +8452,42 @@
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 0.25,
-            "VerticalSpeed": 0.0,
-            "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
-          },
-          {
-            "StartingFrame": 27,
+            "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 1.0,
+        "FallScale": 0.5
       },
       "AirMovementData": {
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 0,
+            "StartingFrame": 1,
             "HorizontalSpeed": 0.0,
-            "VerticalSpeed": 5.0,
+            "VerticalSpeed": 0.5,
             "OverwriteVerticalSpeed": true,
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 27,
+            "StartingFrame": 2,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 4.3213367E-07,
-            "OverwriteVerticalSpeed": true,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.0000001,
+        "GravityScale": 1.0,
         "FallScale": 0.5
       },
       "UseMoveScript": false,
@@ -10076,6 +10053,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-06T21:38:05.4820034-07:00",
+  "LastModified": "2026-07-07T21:10:35.816918-07:00",
   "LastModifiedBy": "creep"
 }

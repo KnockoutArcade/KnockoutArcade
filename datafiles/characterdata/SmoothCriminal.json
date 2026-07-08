@@ -4978,33 +4978,25 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SC_DownSpecial1_MOCKUP_strip3",
-      "Duration": 27,
-      "NumberOfFrames": 6,
+      "SpriteName": "sSmoothCriminal_SpiritDownSpecial",
+      "Duration": 42,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
           "Length": 0,
           "ImageIndex": 0
         },
         {
-          "Length": 4,
+          "Length": 12,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 16,
           "ImageIndex": 2
         },
         {
-          "Length": 12,
+          "Length": 18,
           "ImageIndex": 3
-        },
-        {
-          "Length": 14,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 26,
-          "ImageIndex": 5
         }
       ],
       "NumberOfHitboxes": 0,
@@ -5036,10 +5028,17 @@
           "HeightOffset": 0
         }
       ],
-      "NumberOfProjectiles": 0,
-      "ProjectileData": [],
+      "NumberOfProjectiles": 1,
+      "ProjectileData": [
+        {
+          "SpawnFrame": 16,
+          "SpawnXOffset": 20,
+          "SpawnYOffset": 5,
+          "ProjectileObject": "TestLobbingProjectile"
+        }
+      ],
       "RehitData": {
-        "HitBox": 0,
+        "HitBox": 1,
         "NumberOfHits": 0,
         "HitOnFrames": []
       },
@@ -5047,18 +5046,18 @@
         "NumberOfWindows": 2,
         "Windows": [
           {
-            "StartingFrame": 0,
-            "HorizontalSpeed": 0.5,
+            "StartingFrame": 12,
+            "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 27,
+            "StartingFrame": 14,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
-            "OverwriteHorizontalSpeed": true
+            "OverwriteHorizontalSpeed": false
           }
         ],
         "GravityScale": 0.0,
@@ -6701,6 +6700,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-06T21:48:38.0305922-07:00",
+  "LastModified": "2026-07-07T21:12:02.6804003-07:00",
   "LastModifiedBy": "creep"
 }

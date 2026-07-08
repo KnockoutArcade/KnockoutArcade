@@ -9,6 +9,7 @@
     {"id":{"name":"sTimer9","path":"sprites/sTimer9/sTimer9.yy",},"order":10,},
     {"id":{"name":"oSuperKOFirst","path":"objects/oSuperKOFirst/oSuperKOFirst.yy",},"order":6,},
     {"id":{"name":"sBeverly_TechRoll","path":"sprites/sBeverly_TechRoll/sBeverly_TechRoll.yy",},"order":57,},
+    {"id":{"name":"sSmoothCriminal_SpiritDownSpecial","path":"sprites/sSmoothCriminal_SpiritDownSpecial/sSmoothCriminal_SpiritDownSpecial.yy",},"order":25,},
     {"id":{"name":"sfx_Heavy_Whiff","path":"sounds/sfx_Heavy_Whiff/sfx_Heavy_Whiff.yy",},"order":7,},
     {"id":{"name":"sfx_Shorthop","path":"sounds/sfx_Shorthop/sfx_Shorthop.yy",},"order":9,},
     {"id":{"name":"sCam","path":"sprites/sCam/sCam.yy",},"order":3,},
