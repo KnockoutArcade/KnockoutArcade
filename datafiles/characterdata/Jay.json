@@ -8360,7 +8360,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_DownSpecial1_Mockup_strip4",
-      "Duration": 42,
+      "Duration": 40,
       "NumberOfFrames": 12,
       "FrameData": [
         {
@@ -10053,6 +10053,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-07T21:59:00.9609401-07:00",
+  "LastModified": "2026-07-08T21:23:22.784526-07:00",
   "LastModifiedBy": "creep"
 }

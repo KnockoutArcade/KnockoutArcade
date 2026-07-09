@@ -1,6 +1,6 @@
 {
   "Name": "SmoothCriminal",
-  "MaxHitPoints": 300,
+  "MaxHitPoints": 350,
   "RegenSpeed": 1.25,
   "KORegenSpeed": 0.75,
   "HorizontalSpeed": 0.0,
@@ -4979,7 +4979,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sSmoothCriminal_SpiritDownSpecial",
-      "Duration": 42,
+      "Duration": 40,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -4987,15 +4987,15 @@
           "ImageIndex": 0
         },
         {
-          "Length": 12,
+          "Length": 14,
           "ImageIndex": 1
         },
         {
-          "Length": 16,
+          "Length": 18,
           "ImageIndex": 2
         },
         {
-          "Length": 18,
+          "Length": 20,
           "ImageIndex": 3
         }
       ],
@@ -5031,7 +5031,7 @@
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
-          "SpawnFrame": 16,
+          "SpawnFrame": 18,
           "SpawnXOffset": 20,
           "SpawnYOffset": -5,
           "ProjectileObject": "SmoothCriminal_SpinHat"
@@ -5053,14 +5053,14 @@
             "OverwriteHorizontalSpeed": false
           },
           {
-            "StartingFrame": 12,
+            "StartingFrame": 14,
             "HorizontalSpeed": 2.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
           },
           {
-            "StartingFrame": 14,
+            "StartingFrame": 16,
             "HorizontalSpeed": 0.0,
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
@@ -6714,6 +6714,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-07T22:00:37.5505958-07:00",
+  "LastModified": "2026-07-08T21:42:45.8785958-07:00",
   "LastModifiedBy": "creep"
 }

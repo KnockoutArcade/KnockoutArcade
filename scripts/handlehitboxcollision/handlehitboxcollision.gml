@@ -480,7 +480,7 @@ function HandleHitboxCollision(ownerType)
 					// Chip Damage (Spirits prevent their host from taking chip)
 					if (collision_list[| i].owner.spiritON || collision_list[| i].owner.pendingToggle) 
 					{
-						collision_list[| i].owner.spiritCurrentHealth -= attackProperty.ChipDamage;
+						collision_list[| i].owner.spiritCurrentHealth -= attackProperty.ChipDamage * ownerType.spiritONDefenseMultiplier;
 					}
 					else
 					{

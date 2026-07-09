@@ -427,6 +427,7 @@ if (selectedCharacter.UniqueData.AdditionalMovesets > 0) // If this character ha
 
 // Spirit Data
 spiritON = false; // false = Spirit OFF, false = Spirit ON
+spiritONDefenseMultiplier = 0.9; // How much less damage to player takes in Spirit ON
 spirit = noone;
 spiritObject = noone;
 spiritSummoned = false;

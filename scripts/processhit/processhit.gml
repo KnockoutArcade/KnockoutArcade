@@ -22,12 +22,17 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Reset Speed
 		collision_list.owner.hsp = 0;
 		
+		// Spirit Defense
+		var spiritDefenseBonus = 1;
+		if (collision_list.owner.spiritON) spiritDefenseBonus = collision_list.owner.spiritONDefenseMultiplier;
+		
+		
 		// Combo Scaling
 		if (!collision_list.owner.isDestructibleObject)
 		{
 			owner.combo++; // Add 1 to our combo length
 		}
-		var scaledDamage = attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
+		var scaledDamage = (attackProperty.Damage + (owner.damageBonus / 100 * attackProperty.Damage)) * spiritDefenseBonus; // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		
 		// If the attack is a super, use the minimum super scaling. Otherwise, do normal damage scaling.
@@ -402,12 +407,16 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 		// Reset Speed
 		collision_list.owner.hsp = 0;
 		
+		// Spirit Defense
+		var spiritDefenseBonus = 1;
+		if (collision_list.owner.spiritON) spiritDefenseBonus = collision_list.owner.spiritONDefenseMultiplier;
+		
 		// Combo Scaling
 		if (!collision_list.owner.isDestructibleObject)
 		{
 			owner.playerOwner.combo++; // Add 1 to our combo length
 		}
-		var scaledDamage = attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage); // Set the initial amount of damage to do
+		var scaledDamage = (attackProperty.Damage + (owner.playerOwner.damageBonus / 100 * attackProperty.Damage)) * spiritDefenseBonus; // Set the initial amount of damage to do
 		var scaleAmount = 1 - (.1 * owner.playerOwner.comboScaling) // The amount to scale the combo by (decreases by 10% each for each scale)
 		scaleAmount = max(scaleAmount, ScalingMinimum);
 					
