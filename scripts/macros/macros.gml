@@ -8,6 +8,7 @@ function macros()
 	#macro MaximumPushbackDuration 5 // The longest amount of time (in frames) we can get pushed back for
 	#macro ControllerSaveVersionNumber 3 // Which version of the controls we're using
 	#macro ThrowTechDistance 5 // How far to push players away on a throw tech
+	#macro DebugEnabled false // Whether Debug tools should be enabled
 }
 
 enum GAMEMODE

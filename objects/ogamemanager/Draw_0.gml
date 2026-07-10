@@ -9,7 +9,7 @@ switch (global.gameMode)
 	{
 		// Frame-by-frame
 		
-		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0)
+		if (keyboard_check_pressed(vk_tab) || global.frameskip < 0) && (DebugEnabled)
 		{
 			if (!global.game_paused)
 			{
@@ -22,7 +22,7 @@ switch (global.gameMode)
 			}
 		}
 		
-		if (global.game_paused && keyboard_check_pressed(ord("O")))
+		if (global.game_paused && keyboard_check_pressed(ord("O")) && DebugEnabled)
 		{
 			global.frameskip = 1;
 		}
