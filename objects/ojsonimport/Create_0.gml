@@ -75,3 +75,4 @@ instance_create_layer(0, 0, "Instances", oGlobalVars);
 
 // Print debug info
 //show_debug_message(global.characterData[5].DownSpecial);
+audio_debug(true);

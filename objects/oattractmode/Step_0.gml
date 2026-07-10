@@ -77,7 +77,7 @@ if (screenTransitionObject != noone)
 			if (global.p2PaletteID > 11) global.p2PaletteID = 0;
 		}
 		
-		
+		if (audio_is_playing(bgm_MainMenu)) audio_stop_sound(bgm_MainMenu);
 		room_goto(selectedStage);
 	}
 }

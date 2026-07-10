@@ -71,6 +71,7 @@ if (screenTransitionObject != noone)
 		ResetGame();
 		
 		room_goto(rTitleScreen);
+		audio_stop_sound(global.currentBGM);
 		global.isAttractMode = false;
 		
 		global.p1PaletteID = 0;
