@@ -482,7 +482,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             global.p2SelectedCharacter = noone;
 			P2hasSelectedAlt = false;
 		}
-		else
+		else if (P2ControlsMenuObj == noone)
         {
             // Return to controller assignment
 			state = eCharacterSelectState.CONTROLLER_ASSIGN;
@@ -664,7 +664,7 @@ else if (state == eCharacterSelectState.CHARACTER_SELECT)
             global.p1SelectedCharacter = noone;
 			P1hasSelectedAlt = false;
         }
-		else
+		else if (P1ControlsMenuObj == noone)
 		{
 			// Return to controller assignment
 			state = eCharacterSelectState.CONTROLLER_ASSIGN;
