@@ -572,6 +572,7 @@
     {"id":{"name":"sJayScene2","path":"sprites/sJayScene2/sJayScene2.yy",},"order":1,},
     {"id":{"name":"oThrowEnvDetection","path":"objects/oThrowEnvDetection/oThrowEnvDetection.yy",},"order":3,},
     {"id":{"name":"sMainMenuIcons","path":"sprites/sMainMenuIcons/sMainMenuIcons.yy",},"order":1,},
+    {"id":{"name":"sSmoothCriminal_Enhanced_NeutralSpecial","path":"sprites/sSmoothCriminal_Enhanced_NeutralSpecial/sSmoothCriminal_Enhanced_NeutralSpecial.yy",},"order":26,},
     {"id":{"name":"oChest","path":"objects/oChest/oChest.yy",},"order":6,},
     {"id":{"name":"sBeverly_SideSpecial3Overhead_MOCKUP","path":"sprites/sBeverly_SideSpecial3Overhead_MOCKUP/sBeverly_SideSpecial3Overhead_MOCKUP.yy",},"order":6,},
     {"id":{"name":"sBeverly_SideSpecial3Launch_MOCKUP","path":"sprites/sBeverly_SideSpecial3Launch_MOCKUP/sBeverly_SideSpecial3Launch_MOCKUP.yy",},"order":4,},
