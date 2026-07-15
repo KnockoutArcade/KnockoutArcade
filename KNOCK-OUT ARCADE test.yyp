@@ -341,6 +341,7 @@
     {"id":{"name":"SaveControls","path":"scripts/SaveControls/SaveControls.yy",},"order":4,},
     {"id":{"name":"sBeverlyWins","path":"sprites/sBeverlyWins/sBeverlyWins.yy",},"order":1,},
     {"id":{"name":"sRussel_Standing_Heavy","path":"sprites/sRussel_Standing_Heavy/sRussel_Standing_Heavy.yy",},"order":7,},
+    {"id":{"name":"sSmoothCriminal_Enhanced_SideSpecial_Overhead","path":"sprites/sSmoothCriminal_Enhanced_SideSpecial_Overhead/sSmoothCriminal_Enhanced_SideSpecial_Overhead.yy",},"order":27,},
     {"id":{"name":"sBeverly_DownSpecial_Enhanced","path":"sprites/sBeverly_DownSpecial_Enhanced/sBeverly_DownSpecial_Enhanced.yy",},"order":58,},
     {"id":{"name":"sJay_Standing_Medium","path":"sprites/sJay_Standing_Medium/sJay_Standing_Medium.yy",},"order":41,},
     {"id":{"name":"sGunther_StandLight_mockup_strip5","path":"sprites/sGunther_StandLight_mockup_strip5/sGunther_StandLight_mockup_strip5.yy",},"order":11,},
