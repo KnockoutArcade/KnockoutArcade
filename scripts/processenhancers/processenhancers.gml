@@ -45,6 +45,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL, selectedCharacter.EnhancedNeutralSpecial.SpriteId, 1);
 								}
 							}
@@ -69,6 +70,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedSideSpecial.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL, selectedCharacter.EnhancedSideSpecial.SpriteId, 1);
 								}
 							}
@@ -93,6 +95,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedUpSpecial.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_UP_SPECIAL, selectedCharacter.EnhancedUpSpecial.SpriteId, 1);
 								}
 							}
@@ -117,6 +120,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedDownSpecial.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL, selectedCharacter.EnhancedDownSpecial.SpriteId, 1);
 								}
 							}
@@ -141,6 +145,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedNeutralSpecial2.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_NEUTRAL_SPECIAL_2, selectedCharacter.EnhancedNeutralSpecial2.SpriteId, 1);
 								}
 							}
@@ -165,6 +170,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedSideSpecial2.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_SIDE_SPECIAL_2, selectedCharacter.EnhancedSideSpecial2.SpriteId, 1);
 								}
 							}
@@ -189,6 +195,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedUpSpecial2.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_UP_SPECIAL_2, selectedCharacter.EnhancedUpSpecial2.SpriteId, 1);
 								}
 							}
@@ -213,6 +220,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.EnhancedDownSpecial2.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.ENHANCED_DOWN_SPECIAL_2, selectedCharacter.EnhancedDownSpecial2.SpriteId, 1);
 								}
 							}
@@ -240,6 +248,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.RekkaLauncher.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.REKKA_LAUNCHER, selectedCharacter.RekkaLauncher.SpriteId, 1);
 								}
 							}
@@ -268,6 +277,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.RekkaFinisher.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.REKKA_FINISHER, selectedCharacter.RekkaFinisher.SpriteId, 1);
 								}
 							}
@@ -298,6 +308,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.RekkaConnecter.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.REKKA_CONNECTER, selectedCharacter.RekkaConnecter.SpriteId, 1);
 								}
 							}
@@ -328,6 +339,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.RekkaLow.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.REKKA_LOW, selectedCharacter.RekkaLow.SpriteId, 1);
 								}
 							}
@@ -358,6 +370,7 @@ function ProcessEnhancers(Special) {
 								with (spiritObject)
 								{
 									sprite_index = selectedCharacter.RekkaHigh.SpriteId;
+									image_index = 0;
 									CancelIntoMove(eState.REKKA_HIGH, selectedCharacter.RekkaHigh.SpriteId, 1);
 								}
 							}
