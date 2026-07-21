@@ -613,6 +613,7 @@
     {"id":{"name":"ProcessPushback","path":"scripts/ProcessPushback/ProcessPushback.yy",},"order":5,},
     {"id":{"name":"sUISpirit","path":"sprites/sUISpirit/sUISpirit.yy",},"order":4,},
     {"id":{"name":"sFileSelect_Base","path":"sprites/sFileSelect_Base/sFileSelect_Base.yy",},"order":4,},
+    {"id":{"name":"sSmoothCriminal_Enhanced_SideSpecial_Low","path":"sprites/sSmoothCriminal_Enhanced_SideSpecial_Low/sSmoothCriminal_Enhanced_SideSpecial_Low.yy",},"order":28,},
     {"id":{"name":"sTutorialBackgroundTest","path":"sprites/sTutorialBackgroundTest/sTutorialBackgroundTest.yy",},"order":0,},
     {"id":{"name":"sSuperMeterP1","path":"sprites/sSuperMeterP1/sSuperMeterP1.yy",},"order":0,},
     {"id":{"name":"oAIBase","path":"objects/oAIBase/oAIBase.yy",},"order":0,},

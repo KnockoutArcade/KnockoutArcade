@@ -8983,7 +8983,7 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 1,
+      "NumberOfEnhancements": 2,
       "SpecialData": [
         {
           "NumpadInput": "632",
@@ -8994,6 +8994,17 @@
           "TransitionImmediately": false,
           "TransitionFrame": 16,
           "RequiredPosition": 0,
+          "DeactivateSpirit": false
+        },
+        {
+          "NumpadInput": "412",
+          "ButtonPressRequired": false,
+          "StartingFrame": 1,
+          "EndingFrame": 15,
+          "EnhancementMove": 2048,
+          "TransitionImmediately": false,
+          "TransitionFrame": 16,
+          "RequiredPosition": 1,
           "DeactivateSpirit": false
         }
       ],
@@ -10158,6 +10169,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-14T21:56:40.6518178-07:00",
+  "LastModified": "2026-07-20T22:07:48.4173213-07:00",
   "LastModifiedBy": "creep"
 }
