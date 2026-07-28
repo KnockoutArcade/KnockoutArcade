@@ -284,6 +284,10 @@ function PerformAttack(Action, createdBySpirit)
 				{
 					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oSmoothCriminal_DownSpecial_SpinHat);
 				}
+				else if (Action.ProjectileData[i].ProjectileObject == "SmoothCriminal_EnhancedHat")
+				{
+					Projectile = instance_create_layer(x + (Action.ProjectileData[i].SpawnXOffset * other.image_xscale), y + Action.ProjectileData[i].SpawnYOffset, "Instances", oSmoothCriminal_DownSpecial_EnhancedHat);
+				}
 				Projectile.depth = depth - 5;
 				with (Projectile)
 				{

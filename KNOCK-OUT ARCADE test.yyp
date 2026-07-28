@@ -80,6 +80,7 @@
     {"id":{"name":"rRusselMap","path":"rooms/rRusselMap/rRusselMap.yy",},"order":1,},
     {"id":{"name":"sDraw","path":"sprites/sDraw/sDraw.yy",},"order":0,},
     {"id":{"name":"oGarbageCan","path":"objects/oGarbageCan/oGarbageCan.yy",},"order":2,},
+    {"id":{"name":"sSmoothCriminal_EnhancedHat","path":"sprites/sSmoothCriminal_EnhancedHat/sSmoothCriminal_EnhancedHat.yy",},"order":9,},
     {"id":{"name":"sJay_crouchingMedium_mockup_strip5","path":"sprites/sJay_crouchingMedium_mockup_strip5/sJay_crouchingMedium_mockup_strip5.yy",},"order":22,},
     {"id":{"name":"sJayStage","path":"sprites/sJayStage/sJayStage.yy",},"order":4,},
     {"id":{"name":"sHealthPickup","path":"sprites/sHealthPickup/sHealthPickup.yy",},"order":1,},
@@ -734,6 +735,7 @@
     {"id":{"name":"ProcessKnockback","path":"scripts/ProcessKnockback/ProcessKnockback.yy",},"order":4,},
     {"id":{"name":"sBeverly_SideSpecial_RekkaOverhead","path":"sprites/sBeverly_SideSpecial_RekkaOverhead/sBeverly_SideSpecial_RekkaOverhead.yy",},"order":52,},
     {"id":{"name":"sRussel_Hold","path":"sprites/sRussel_Hold/sRussel_Hold.yy",},"order":20,},
+    {"id":{"name":"oSmoothCriminal_DownSpecial_EnhancedHat","path":"objects/oSmoothCriminal_DownSpecial_EnhancedHat/oSmoothCriminal_DownSpecial_EnhancedHat.yy",},"order":6,},
     {"id":{"name":"sControlsMenu_AllSet","path":"sprites/sControlsMenu_AllSet/sControlsMenu_AllSet.yy",},"order":7,},
     {"id":{"name":"sBeverly_JumpDownHeavy_Mockup_strip2","path":"sprites/sBeverly_JumpDownHeavy_Mockup_strip2/sBeverly_JumpDownHeavy_Mockup_strip2.yy",},"order":18,},
     {"id":{"name":"sGunther_Idle","path":"sprites/sGunther_Idle/sGunther_Idle.yy",},"order":21,},
@@ -966,6 +968,7 @@
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"KickableObject.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/characterdata","resourceVersion":"1.0","name":"Luchador.json","resourceType":"GMIncludedFile",},
     {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"SmoothCriminal_SpinHat.json","resourceType":"GMIncludedFile",},
+    {"CopyToMask":-1,"filePath":"datafiles/projectiledata","resourceVersion":"1.0","name":"SmoothCriminal_EnhancedHat.json","resourceType":"GMIncludedFile",},
   ],
   "MetaData": {
     "IDEVersion": "2022.6.0.23",
