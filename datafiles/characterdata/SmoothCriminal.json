@@ -7136,14 +7136,23 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 1,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 30,
+          "AttackWidth": 32,
+          "AttackHeight": 36,
+          "WidthOffset": -10,
+          "HeightOffset": 0
+        }
+      ],
       "NumberOfProjectiles": 1,
       "ProjectileData": [
         {
           "SpawnFrame": 4,
           "SpawnXOffset": 15,
-          "SpawnYOffset": 6,
+          "SpawnYOffset": -6,
           "ProjectileObject": "SmoothCriminal_EnhancedHat"
         }
       ],
@@ -7213,6 +7222,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-27T21:35:19.0501856-07:00",
+  "LastModified": "2026-07-27T21:43:19.7616383-07:00",
   "LastModifiedBy": "creep"
 }

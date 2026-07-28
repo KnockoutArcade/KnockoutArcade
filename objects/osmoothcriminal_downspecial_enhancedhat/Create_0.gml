@@ -17,3 +17,5 @@ for (var i = 0; i < global.numberOfProjectiles; i++;)
 
 event_inherited();
 
+dragSpeed = 0.3;
+minSpeed = 0.25;
