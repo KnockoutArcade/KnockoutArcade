@@ -720,6 +720,7 @@
     {"id":{"name":"sSpiritbar","path":"sprites/sSpiritbar/sSpiritbar.yy",},"order":9,},
     {"id":{"name":"PerformMotionInputs","path":"scripts/PerformMotionInputs/PerformMotionInputs.yy",},"order":1,},
     {"id":{"name":"sBeverly_Crouch_Block","path":"sprites/sBeverly_Crouch_Block/sBeverly_Crouch_Block.yy",},"order":35,},
+    {"id":{"name":"sSmoothCriminal_UpSpecial","path":"sprites/sSmoothCriminal_UpSpecial/sSmoothCriminal_UpSpecial.yy",},"order":29,},
     {"id":{"name":"oTrashBin","path":"objects/oTrashBin/oTrashBin.yy",},"order":1,},
     {"id":{"name":"oSpecialChargeIcon","path":"objects/oSpecialChargeIcon/oSpecialChargeIcon.yy",},"order":10,},
     {"id":{"name":"sLuchador_Crouching_Light","path":"sprites/sLuchador_Crouching_Light/sLuchador_Crouching_Light.yy",},"order":6,},

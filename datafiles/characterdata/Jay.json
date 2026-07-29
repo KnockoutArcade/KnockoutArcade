@@ -8769,7 +8769,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_UpSpecial2_Mockup_strip6",
-      "Duration": 27,
+      "Duration": 35,
       "NumberOfFrames": 6,
       "FrameData": [
         {
@@ -8834,7 +8834,7 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 1,
+        "NumberOfWindows": 2,
         "Windows": [
           {
             "StartingFrame": 0,
@@ -8842,16 +8842,38 @@
             "VerticalSpeed": 0.0,
             "OverwriteVerticalSpeed": false,
             "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 15,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
           }
         ],
-        "GravityScale": 1.0,
-        "FallScale": 1.0
+        "GravityScale": 0.5,
+        "FallScale": 0.5
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 1.0,
-        "FallScale": 1.0
+        "NumberOfWindows": 2,
+        "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -1.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 2,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 0.5,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -10323,6 +10345,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-07-27T21:44:06.794327-07:00",
+  "LastModified": "2026-07-28T21:36:39.2901115-07:00",
   "LastModifiedBy": "creep"
 }

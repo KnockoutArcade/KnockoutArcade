@@ -3460,8 +3460,8 @@
           "WidthOffset": 5,
           "HeightOffset": 15,
           "Group": 25,
-          "Damage": 120,
-          "MeterGain": 9.0,
+          "Damage": 90,
+          "MeterGain": 5.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 11,
           "AttackHitStun": 23,
@@ -3471,9 +3471,9 @@
           "AirKnockbackVertical": -2.5,
           "AirKnockbackHorizontal": -0.75,
           "Launches": true,
-          "LaunchKnockbackVertical": -3.0,
+          "LaunchKnockbackVertical": -4.6,
           "LaunchKnockbackHorizontal": -0.25,
-          "GravityScaling": 4.0,
+          "GravityScaling": 3.0,
           "Pushback": 3.0,
           "ParticleXOffset": 0,
           "ParticleYOffset": 0,
@@ -3496,8 +3496,8 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 150,
-          "MeterGain": 11.0,
+          "Damage": 110,
+          "MeterGain": 6.0,
           "ComboScaling": 1.0,
           "AttackHitStop": 12,
           "AttackHitStun": 30,
@@ -3505,7 +3505,7 @@
           "AirKnockbackVertical": -3.5,
           "AirKnockbackHorizontal": 0.5,
           "Launches": true,
-          "LaunchKnockbackVertical": -5.0,
+          "LaunchKnockbackVertical": -4.6,
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 0.0,
           "Pushback": 3.5,
@@ -3565,14 +3565,14 @@
       "GroundMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 0.5,
+        "FallScale": 0.5
       },
       "AirMovementData": {
         "NumberOfWindows": 0,
         "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "GravityScale": 0.5,
+        "FallScale": 0.5
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -4165,70 +4165,54 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SC_UpSpecial_MOCKUP_strip8",
-      "Duration": 27,
-      "NumberOfFrames": 8,
+      "SpriteName": "sSmoothCriminal_UpSpecial",
+      "Duration": 35,
+      "NumberOfFrames": 4,
       "FrameData": [
         {
-          "Length": 4,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 5,
           "ImageIndex": 1
         },
         {
-          "Length": 8,
+          "Length": 10,
           "ImageIndex": 2
         },
         {
-          "Length": 15,
+          "Length": 13,
           "ImageIndex": 3
-        },
-        {
-          "Length": 17,
-          "ImageIndex": 4
-        },
-        {
-          "Length": 19,
-          "ImageIndex": 5
-        },
-        {
-          "Length": 23,
-          "ImageIndex": 6
-        },
-        {
-          "Length": 25,
-          "ImageIndex": 7
-        },
-        {
-          "Length": 27,
-          "ImageIndex": 8
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 15,
-          "Lifetime": 8,
-          "AttackWidth": 18,
-          "AttackHeight": 47,
-          "WidthOffset": 3,
-          "HeightOffset": 11,
+          "Start": 10,
+          "Lifetime": 3,
+          "AttackWidth": 30,
+          "AttackHeight": 30,
+          "WidthOffset": -9,
+          "HeightOffset": 45,
           "Group": 12,
-          "Damage": 60,
+          "Damage": 120,
           "MeterGain": 6.0,
           "ComboScaling": 2.0,
-          "AttackHitStop": 12,
+          "AttackHitStop": 18,
           "AttackHitStun": 18,
           "AttackType": 1,
-          "BlockStun": 2.0,
-          "KnockBack": 1.0,
-          "AirKnockbackVertical": -3.0,
+          "BlockStun": 10.0,
+          "KnockBack": 8.0,
+          "AirKnockbackVertical": -5.0,
           "AirKnockbackHorizontal": 0.5,
           "Launches": true,
           "LaunchKnockbackVertical": -5.0,
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 3.0,
-          "Pushback": 1.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 10,
+          "Pushback": 8.0,
+          "ParticleXOffset": 25,
+          "ParticleYOffset": 25,
           "ParticleEffect": "sHitEffect",
           "ParticleDuration": 10,
           "HoldXOffset": 0,
@@ -4239,7 +4223,7 @@
           "HitSound": "sfx_Heavy_Hit",
           "FinalBlow": false,
           "ActivateTimeStop": false,
-          "ChipDamage": 0,
+          "ChipDamage": 15,
           "CauseHardKnockdown": false,
           "CauseFloorBounce": false
         }
@@ -4248,10 +4232,10 @@
         {
           "CounterHitLevel": 3,
           "Group": 1,
-          "Damage": 180,
-          "MeterGain": 17.0,
+          "Damage": 150,
+          "MeterGain": 8.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 13,
+          "AttackHitStop": 30,
           "AttackHitStun": 21,
           "KnockBack": 1.0,
           "AirKnockbackVertical": -5.0,
@@ -4261,10 +4245,10 @@
           "LaunchKnockbackHorizontal": 0.5,
           "GravityScaling": 0.0,
           "Pushback": 1.0,
-          "ParticleXOffset": 10,
-          "ParticleYOffset": 10,
-          "ParticleEffect": "sHitbox",
-          "ParticleDuration": 0,
+          "ParticleXOffset": 20,
+          "ParticleYOffset": 20,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
           "UseHitScript": false,
           "SupplementaryHitScript": "",
           "CausesWallbounce": false,
@@ -4291,11 +4275,11 @@
       "NumberOfHurtboxes": 2,
       "HurtboxData": [
         {
-          "Start": 15,
-          "Lifetime": 5,
+          "Start": 14,
+          "Lifetime": 10,
           "AttackWidth": 18,
           "AttackHeight": 35,
-          "WidthOffset": 2,
+          "WidthOffset": -4,
           "HeightOffset": 24
         },
         {
@@ -7222,6 +7206,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-07-27T21:43:19.7616383-07:00",
+  "LastModified": "2026-07-28T21:34:00.3108449-07:00",
   "LastModifiedBy": "creep"
 }
