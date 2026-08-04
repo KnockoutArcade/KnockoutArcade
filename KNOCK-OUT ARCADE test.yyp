@@ -28,6 +28,7 @@
     {"id":{"name":"OptionsConvertDecimaltoWhole","path":"scripts/OptionsConvertDecimaltoWhole/OptionsConvertDecimaltoWhole.yy",},"order":36,},
     {"id":{"name":"oConstructionGuy","path":"objects/oConstructionGuy/oConstructionGuy.yy",},"order":0,},
     {"id":{"name":"sFinishFlag","path":"sprites/sFinishFlag/sFinishFlag.yy",},"order":2,},
+    {"id":{"name":"sSmoothCriminal_EnhancedDownSpecial","path":"sprites/sSmoothCriminal_EnhancedDownSpecial/sSmoothCriminal_EnhancedDownSpecial.yy",},"order":30,},
     {"id":{"name":"sCommandLists_Jay_Supers","path":"sprites/sCommandLists_Jay_Supers/sCommandLists_Jay_Supers.yy",},"order":3,},
     {"id":{"name":"sConstructionGuy_WallSplat","path":"sprites/sConstructionGuy_WallSplat/sConstructionGuy_WallSplat.yy",},"order":6,},
     {"id":{"name":"sStageSelect_Cursor","path":"sprites/sStageSelect_Cursor/sStageSelect_Cursor.yy",},"order":1,},

@@ -56,6 +56,8 @@ if (hostObject.grounded && !isPerformingThrow)
 
 heldOpponent = hostObject.heldOpponent;
 
+show_debug_message(string(spiritState));
+
 switch (spiritState)
 {
 	// while deactivated, hide this object off screen
@@ -148,7 +150,6 @@ switch (spiritState)
 			else if (!hostObject.inAttackState)
 			{
 				hasRecentlyRushCanceled = false;
-				show_debug_message(string(hostObject.state));
 			}
 			
 			#endregion
@@ -274,7 +275,7 @@ switch (spiritState)
 		if (hostObject.state != eState.HITSTOP && hostObject.state != eState.SCREEN_FREEZE)
 		{
 			// Special exception for Jay's Spirit OFF Down Special
-			if (hostObject.prevState == eState.DOWN_SPECIAL && inSpiritOff)
+			if (hostObject.prevState == eState.DOWN_SPECIAL && inSpiritOff) || (hostObject.prevState == eState.ENHANCED_DOWN_SPECIAL)
 			{
 				y = 104;
 			}

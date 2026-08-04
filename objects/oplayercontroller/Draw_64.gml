@@ -19,7 +19,7 @@ if (playerID == 1)
 	draw_text(20, 10, state);
 	draw_text(20, 30, animTimer);
 	draw_text(20, 50, holdRunButtonTimer);
-	draw_text(20, 70, hsp);
+	draw_text(20, 70, spiritON);
 	draw_text(20, 90, hp);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
