@@ -6,8 +6,6 @@ if (global.toggleHitboxVisibility)
 {
 	draw_circle(x, y, 1, true);
 	draw_rectangle_color(bbox_left, bbox_bottom, bbox_right, bbox_top, c_green, c_green, c_green, c_green, true);
-
-	draw_text(x, y - 5, spiritState);
 }
 
 if (isEXFlash)

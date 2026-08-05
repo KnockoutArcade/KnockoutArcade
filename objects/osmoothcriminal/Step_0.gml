@@ -275,9 +275,16 @@ switch (spiritState)
 		if (hostObject.state != eState.HITSTOP && hostObject.state != eState.SCREEN_FREEZE)
 		{
 			// Special exception for Jay's Spirit OFF Down Special
-			if (hostObject.prevState == eState.DOWN_SPECIAL && inSpiritOff) || (hostObject.prevState == eState.ENHANCED_DOWN_SPECIAL)
+			if (hostObject.prevState == eState.DOWN_SPECIAL && inSpiritOff)
 			{
 				y = 104;
+			}
+			else if (hostObject.prevState == eState.ENHANCED_DOWN_SPECIAL)
+			{	
+				y += vsp;
+				if (animTimer <= 2) y = 104;
+				
+				x += hsp + environmentDisplacement;
 			}
 			else
 			{
@@ -491,7 +498,7 @@ x = actualXPos; // Restore the player's actual x position
 y = actualYPos; // Restore the player's actual y position
 
 // Handle going off screen
-if (!nextToPlayer || hostObject.prevState == eState.DOWN_SPECIAL)
+if (!nextToPlayer || hostObject.prevState == eState.DOWN_SPECIAL || hostObject.prevState == eState.ENHANCED_DOWN_SPECIAL)
 {
 	if (x < global.camObj.x-75 || x > global.camObj.x+75)
 	{

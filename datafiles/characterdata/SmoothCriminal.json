@@ -7196,7 +7196,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sSmoothCriminal_EnhancedDownSpecial",
-      "Duration": 36,
+      "Duration": 40,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -7216,9 +7216,77 @@
           "ImageIndex": 3
         }
       ],
-      "NumberOfHitboxes": 0,
-      "AttackData": [],
-      "CounterData": [],
+      "NumberOfHitboxes": 1,
+      "AttackData": [
+        {
+          "Start": 5,
+          "Lifetime": 10,
+          "AttackWidth": 45,
+          "AttackHeight": 50,
+          "WidthOffset": -20,
+          "HeightOffset": 20,
+          "Group": 0,
+          "Damage": 80,
+          "MeterGain": 4.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 21,
+          "AttackHitStun": 15,
+          "AttackType": 1,
+          "BlockStun": 15.0,
+          "KnockBack": 12.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -5.0,
+          "LaunchKnockbackHorizontal": 1.0,
+          "GravityScaling": 3.0,
+          "Pushback": 12.0,
+          "ParticleXOffset": 38,
+          "ParticleYOffset": 38,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
+          "HoldXOffset": 0,
+          "HoldYOffset": 0,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "FinalBlow": false,
+          "ActivateTimeStop": false,
+          "ChipDamage": 15,
+          "CauseHardKnockdown": false,
+          "CauseFloorBounce": false
+        }
+      ],
+      "CounterData": [
+        {
+          "CounterHitLevel": 3,
+          "Group": 0,
+          "Damage": 95,
+          "MeterGain": 5.0,
+          "ComboScaling": 1.0,
+          "AttackHitStop": 30,
+          "AttackHitStun": 15,
+          "KnockBack": 12.0,
+          "AirKnockbackVertical": -3.0,
+          "AirKnockbackHorizontal": 1.0,
+          "Launches": true,
+          "LaunchKnockbackVertical": -5.0,
+          "LaunchKnockbackHorizontal": 1.0,
+          "GravityScaling": 0.0,
+          "Pushback": 12.0,
+          "ParticleXOffset": 35,
+          "ParticleYOffset": 35,
+          "ParticleEffect": "sSparkEffect",
+          "ParticleDuration": 23,
+          "UseHitScript": false,
+          "SupplementaryHitScript": "",
+          "CausesWallbounce": false,
+          "HitSound": "sfx_Heavy_Hit",
+          "CauseHardKnockdown": true,
+          "CauseFloorBounce": false
+        }
+      ],
       "CommandNormalData": {
         "NumpadDirection": 0,
         "Button": 1,
@@ -7234,8 +7302,33 @@
         "NumberOfFrames": 0,
         "Frames": []
       },
-      "NumberOfHurtboxes": 0,
-      "HurtboxData": [],
+      "NumberOfHurtboxes": 3,
+      "HurtboxData": [
+        {
+          "Start": 1,
+          "Lifetime": 4,
+          "AttackWidth": 35,
+          "AttackHeight": 25,
+          "WidthOffset": -16,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 5,
+          "Lifetime": 3,
+          "AttackWidth": 29,
+          "AttackHeight": 30,
+          "WidthOffset": -12,
+          "HeightOffset": 0
+        },
+        {
+          "Start": 8,
+          "Lifetime": 30,
+          "AttackWidth": 32,
+          "AttackHeight": 52,
+          "WidthOffset": -17,
+          "HeightOffset": 9
+        }
+      ],
       "NumberOfProjectiles": 0,
       "ProjectileData": [],
       "RehitData": {
@@ -7244,16 +7337,74 @@
         "HitOnFrames": []
       },
       "GroundMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -3.5,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 34,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 2.0
       },
       "AirMovementData": {
-        "NumberOfWindows": 0,
-        "Windows": [],
-        "GravityScale": 0.0,
-        "FallScale": 0.0
+        "NumberOfWindows": 4,
+        "Windows": [
+          {
+            "StartingFrame": 1,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 9,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": -3.5,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": true
+          },
+          {
+            "StartingFrame": 10,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": false,
+            "OverwriteHorizontalSpeed": false
+          },
+          {
+            "StartingFrame": 34,
+            "HorizontalSpeed": 0.0,
+            "VerticalSpeed": 0.0,
+            "OverwriteVerticalSpeed": true,
+            "OverwriteHorizontalSpeed": false
+          }
+        ],
+        "GravityScale": 1.0,
+        "FallScale": 2.0
       },
       "UseMoveScript": false,
       "SupplementaryMoveScript": "",
@@ -7304,6 +7455,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-08-03T21:41:44.5291346-07:00",
+  "LastModified": "2026-08-04T21:14:31.7806207-07:00",
   "LastModifiedBy": "creep"
 }

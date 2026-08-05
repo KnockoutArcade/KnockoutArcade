@@ -95,7 +95,8 @@ function JumpingAttackScript(moveToDo, onGround, gravityMult, fallingMult, attac
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			JumpingAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, attackID);
+			var spiritAttackState = FindAttackState(other.state);
+			JumpingAttackScript(spiritAttackState, onGround, spiritAttackState.AirMovementData.GravityScale, spiritAttackState.AirMovementData.FallScale, attackID);
 		}
 	}
 	

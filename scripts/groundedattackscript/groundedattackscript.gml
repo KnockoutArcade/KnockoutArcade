@@ -95,7 +95,8 @@ function GroundedAttackScript(moveToDo, onGround, gravityMult, fallingMult, igno
 		{
 			animTimer = other.animTimer;
 			spiritState = eSpiritState.ATTACK;
-			GroundedAttackScript(FindAttackState(other.state), onGround, gravityMult, fallingMult, true, maintainState, attackID);
+			var spiritAttackState = FindAttackState(other.state);
+			GroundedAttackScript(spiritAttackState, onGround, spiritAttackState.AirMovementData.GravityScale, spiritAttackState.AirMovementData.FallScale, true, maintainState, attackID);
 		}
 	}
 	
