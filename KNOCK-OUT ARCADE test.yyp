@@ -639,6 +639,7 @@
     {"id":{"name":"oAIBehavior_Enemy_Hops","path":"objects/oAIBehavior_Enemy_Hops/oAIBehavior_Enemy_Hops.yy",},"order":4,},
     {"id":{"name":"oRussel","path":"objects/oRussel/oRussel.yy",},"order":3,},
     {"id":{"name":"sJay_SC_CrouchingIdle_mockup_strip1","path":"sprites/sJay_SC_CrouchingIdle_mockup_strip1/sJay_SC_CrouchingIdle_mockup_strip1.yy",},"order":8,},
+    {"id":{"name":"sSmoothCriminal_Standing_Medium","path":"sprites/sSmoothCriminal_Standing_Medium/sSmoothCriminal_Standing_Medium.yy",},"order":31,},
     {"id":{"name":"sTVScreen","path":"sprites/sTVScreen/sTVScreen.yy",},"order":12,},
     {"id":{"name":"sEvenSmallerShadow","path":"sprites/sEvenSmallerShadow/sEvenSmallerShadow.yy",},"order":2,},
     {"id":{"name":"rCampaignLevelTemplate","path":"rooms/rCampaignLevelTemplate/rCampaignLevelTemplate.yy",},"order":2,},

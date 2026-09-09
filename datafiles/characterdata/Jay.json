@@ -7577,7 +7577,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJayStandON_Pose_StandMedium_Mockup_strip3",
-      "Duration": 20,
+      "Duration": 29,
       "NumberOfFrames": 3,
       "FrameData": [
         {
@@ -10398,6 +10398,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-08-04T20:52:47.510653-07:00",
+  "LastModified": "2026-09-08T21:47:28.1270038-07:00",
   "LastModifiedBy": "creep"
 }

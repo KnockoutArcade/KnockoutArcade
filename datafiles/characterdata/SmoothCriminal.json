@@ -2623,60 +2623,60 @@
       "InMovesets": [],
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
-      "SpriteName": "sJay_SC_StandMedium_MOCKUP_strip6",
-      "Duration": 20,
+      "SpriteName": "sSmoothCriminal_Standing_Medium",
+      "Duration": 29,
       "NumberOfFrames": 6,
       "FrameData": [
         {
-          "Length": 3,
+          "Length": 0,
+          "ImageIndex": 0
+        },
+        {
+          "Length": 4,
           "ImageIndex": 1
         },
         {
-          "Length": 6,
+          "Length": 9,
           "ImageIndex": 2
         },
         {
-          "Length": 9,
+          "Length": 11,
           "ImageIndex": 3
         },
         {
-          "Length": 12,
+          "Length": 14,
           "ImageIndex": 4
         },
         {
-          "Length": 15,
+          "Length": 17,
           "ImageIndex": 5
-        },
-        {
-          "Length": 18,
-          "ImageIndex": 6
         }
       ],
       "NumberOfHitboxes": 1,
       "AttackData": [
         {
-          "Start": 7,
+          "Start": 9,
           "Lifetime": 3,
-          "AttackWidth": 19,
-          "AttackHeight": 25,
+          "AttackWidth": 40,
+          "AttackHeight": 14,
           "WidthOffset": 6,
-          "HeightOffset": 1,
+          "HeightOffset": 14,
           "Group": 1,
           "Damage": 60,
           "MeterGain": 5.0,
           "ComboScaling": 1.0,
-          "AttackHitStop": 12,
-          "AttackHitStun": 16,
+          "AttackHitStop": 16,
+          "AttackHitStun": 20,
           "AttackType": 1,
-          "BlockStun": 12.0,
-          "KnockBack": 3.0,
+          "BlockStun": 14.0,
+          "KnockBack": 16.0,
           "AirKnockbackVertical": -2.0,
           "AirKnockbackHorizontal": 1.0,
           "Launches": false,
           "LaunchKnockbackVertical": 0.0,
           "LaunchKnockbackHorizontal": 0.0,
           "GravityScaling": 1.0,
-          "Pushback": 2.0,
+          "Pushback": 16.0,
           "ParticleXOffset": 20,
           "ParticleYOffset": 10,
           "ParticleEffect": "sHitEffect",
@@ -7455,6 +7455,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-08-04T21:14:31.7806207-07:00",
+  "LastModified": "2026-09-08T21:50:47.7828508-07:00",
   "LastModifiedBy": "creep"
 }
