@@ -257,6 +257,7 @@
     {"id":{"name":"sRussel_SideSpecial_Enhanced","path":"sprites/sRussel_SideSpecial_Enhanced/sRussel_SideSpecial_Enhanced.yy",},"order":36,},
     {"id":{"name":"OverwriteMoveset","path":"scripts/OverwriteMoveset/OverwriteMoveset.yy",},"order":26,},
     {"id":{"name":"rControlsRoom","path":"rooms/rControlsRoom/rControlsRoom.yy",},"order":11,},
+    {"id":{"name":"sSmoothCriminal_Standing_Heavy","path":"sprites/sSmoothCriminal_Standing_Heavy/sSmoothCriminal_Standing_Heavy.yy",},"order":32,},
     {"id":{"name":"sCOUNTERtext","path":"sprites/sCOUNTERtext/sCOUNTERtext.yy",},"order":0,},
     {"id":{"name":"sBeverly_SideSpecial_RekkaConnecter","path":"sprites/sBeverly_SideSpecial_RekkaConnecter/sBeverly_SideSpecial_RekkaConnecter.yy",},"order":49,},
     {"id":{"name":"rCampaignFileSelect","path":"rooms/rCampaignFileSelect/rCampaignFileSelect.yy",},"order":4,},
