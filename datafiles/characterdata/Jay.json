@@ -7786,7 +7786,7 @@
     {
       "UID": "4afa7429-6d41-4bd5-97f3-04638476f409",
       "MoveType": 1024,
-      "MoveCanCancelInto": 6495000,
+      "MoveCanCancelInto": 6496024,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -10398,6 +10398,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-09-14T21:31:24.2763268-07:00",
+  "LastModified": "2026-09-21T21:55:09.7564064-07:00",
   "LastModifiedBy": "creep"
 }
