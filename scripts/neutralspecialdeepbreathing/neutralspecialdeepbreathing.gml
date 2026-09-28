@@ -7,6 +7,7 @@ function NeutralSpecialDeepBreathing()
 		hasSpecialCharge = false;
 		isEXFlash = true;
 		audio_play_sound(sfx_UseEnhancedMove, 1, false);
+		superMeter += 4;
 		
 		state = eState.ENHANCED_NEUTRAL_SPECIAL;
 		sprite_index = selectedCharacter.EnhancedNeutralSpecial.SpriteId;
