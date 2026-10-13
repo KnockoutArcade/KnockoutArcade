@@ -456,6 +456,13 @@ function HandleHitboxCollision(ownerType)
 							ownerType.pushbackVel = other.attackProperty.Pushback;
 							ownerType.pushbackVelTimer = 0;
 							ownerType.pushbackVelDuration = max(min(other.moveDuration - ownerType.animTimer, MaximumPushbackDuration), 1);
+							
+							if (other.spirit != noone) 
+							{
+								other.spirit.pushbackVel = other.attackProperty.Pushback;
+								other.spirit.pushbackVelTimer = 0;
+								other.spirit.pushbackVelDuration = max(min(other.moveDuration - ownerType.animTimer, MaximumPushbackDuration), 1);
+							}
 						}
 						else
 						{

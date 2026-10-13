@@ -9,10 +9,10 @@ draw_rectangle(55, 0, 105, 100, false);
 draw_set_alpha(1);
 draw_set_color(c_white);
 	
-draw_text(75, 10, spiritState);
-draw_text(75, 30, animTimer);
-draw_text(75, 50, fallSpeed);
-draw_text(75, 70, vsp);
+draw_text(75, 10, pushbackVel);
+draw_text(75, 30, pushbackVelTimer);
+draw_text(75, 50, pushbackVelDuration);
+//draw_text(75, 70, vsp);
 //draw_text(75, 90, y);
 }
 
