@@ -142,6 +142,8 @@ state = eState.IDLE;
 	hasUsedFloorBounce = false; // Has this player already been floorbounced in a combo?
 	
 	environmentDisplacement = 0;
+	
+	cameraBufferAmount = 8;
 
 #endregion
 

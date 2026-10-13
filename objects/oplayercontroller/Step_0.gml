@@ -3115,7 +3115,6 @@ switch state
 			spiritObject.blockstun = blockstun;
 			spiritObject.isCrouchBlocking = isCrouchBlocking;
 			spiritObject.hsp = hsp;
-			spiritObject.knockbackVel = knockbackVel;
 			spiritObject.blockbuffer = blockbuffer;
 		}
 		

@@ -447,11 +447,23 @@ function HandleHitboxCollision(ownerType)
 					}
 
 
-					// Do a quick check to see if there's a wall behind the opponent
+					// Do a quick check to see if there's a wall/screen/other player behind the opponent
 					// If there is, transfer our knockback to the other player 
 					with (collision_list[| i].owner)
 					{
-						if (place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oWall) && other.owner.grounded && grounded && !other.isProjectile)
+						if (
+						(  
+							(place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oWall)) 
+							|| (x - sign(other.attackProperty.Pushback) < global.camObj.x - (80 - cameraBufferAmount)) 
+							|| (x + sign(other.attackProperty.Pushback) > global.camObj.x + (80 - cameraBufferAmount)) 
+							|| (
+								(place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oPlayerController)) 
+								&& (!place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oSmoothCriminal))
+								) 
+						)
+						&& other.owner.grounded 
+						&& grounded 
+						&& !other.isProjectile)
 						{
 							ownerType.pushbackVel = other.attackProperty.Pushback;
 							ownerType.pushbackVelTimer = 0;
@@ -463,12 +475,20 @@ function HandleHitboxCollision(ownerType)
 								other.spirit.pushbackVelTimer = 0;
 								other.spirit.pushbackVelDuration = max(min(other.moveDuration - ownerType.animTimer, MaximumPushbackDuration), 1);
 							}
+							if (spiritObject != noone) 
+							{
+								spiritObject.knockbackVel = other.attackProperty.KnockBack;
+								spiritObject.knockbackVelTimer = 0;
+								spiritObject.knockbackVelDuration = max(min(other.attackProperty.BlockStun, MaximumPushbackDuration), 1);
+							}
 						}
 						else
 						{
 							knockbackVel = other.attackProperty.KnockBack;
 							knockbackVelTimer = 0;
 							knockbackVelDuration = max(min(other.attackProperty.BlockStun, MaximumPushbackDuration), 1); // Always at least 1, but never more than x
+							
+							
 						}
 					}
 					

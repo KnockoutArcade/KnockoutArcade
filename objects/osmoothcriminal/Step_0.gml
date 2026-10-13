@@ -56,7 +56,16 @@ if (hostObject.grounded && !isPerformingThrow)
 
 heldOpponent = hostObject.heldOpponent;
 
-show_debug_message(string(spiritState));
+#region Handle Pushback + knockback
+if (hostObject.state != eState.HITSTOP) 
+{
+	ProcessPushback();
+}
+if ((hostObject.state == eState.HURT || hostObject.state == eState.BLOCKING) && !nextToPlayer)
+{
+	ProcessKnockback();
+}
+#endregion
 
 switch (spiritState)
 {
@@ -95,8 +104,13 @@ switch (spiritState)
 			environmentDisplacement = 0;
 			
 			y = hostObject.y;
+			
+			knockbackVel = 0;
+			knockbackVelTimer = 0;
+			pushbackVel = 0;
+			pushbackVelTimer = 0;
 		}
-		else
+		else if (hostObject.state != eState.HITSTOP)
 		{
 			#region Handle moving when the host's movement is blocked in some way
 			
@@ -400,13 +414,6 @@ switch (spiritState)
 	}
 	break;
 }
-
-#region Handle Pushback
-if (hostObject.state != eState.HITSTOP) 
-{
-	ProcessPushback();
-}
-#endregion
 
 #region Spirit Break
 if (hostObject.spiritCurrentHealth <= 0)
