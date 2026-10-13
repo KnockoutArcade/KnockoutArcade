@@ -116,14 +116,14 @@ switch (spiritState)
 			
 			if (hostObject.state == eState.WALKING) // Handle moving the spirit when the host is walking up against a wall
 			{
-				if (place_meeting(hostObject.x + hostObject.movedir, hostObject.y, oWall) || hostObject.x + hostObject.movedir < global.camObj.x - 80 || hostObject.x + hostObject.movedir > global.camObj.x + 80)
+				if (place_meeting(hostObject.x + hostObject.movedir, hostObject.y, oWall) || hostObject.x + hostObject.movedir < global.camObj.x - (80 - hostObject.cameraBufferAmount) || hostObject.x + hostObject.movedir > global.camObj.x + (80 - hostObject.cameraBufferAmount))
 				{
 					remoteOffset += walkSpeed * hostObject.movedir;
 				}
 			}
 			else if (hostObject.state == eState.JUMPING) // Handle if they are jumping
 			{
-				if (place_meeting(hostObject.x + sign(hostObject.jumpHsp), hostObject.y, oWall) || hostObject.x + sign(hostObject.jumpHsp) < global.camObj.x - 80 || hostObject.x + sign(hostObject.jumpHsp) > global.camObj.x + 80)
+				if (place_meeting(hostObject.x + sign(hostObject.jumpHsp), hostObject.y, oWall) || hostObject.x + sign(hostObject.jumpHsp) < global.camObj.x - (80 - hostObject.cameraBufferAmount) || hostObject.x + sign(hostObject.jumpHsp) > global.camObj.x + (80 - hostObject.cameraBufferAmount))
 				{
 					remoteOffset += hostObject.jumpHsp;
 				}
@@ -131,7 +131,7 @@ switch (spiritState)
 			else if (hostObject.state == eState.RUN_BACKWARD) // Handle if the host is backdashing into a wall
 			{
 				// If the host moves into a wall, transfer the hsp to the remote offset
-				if (place_meeting(hostObject.x + (-sign(hostObject.image_xscale)), hostObject.y, oWall) || hostObject.x + (-sign(hostObject.image_xscale)) < global.camObj.x - 80 || hostObject.x + (-sign(hostObject.image_xscale)) > global.camObj.x + 80)
+				if (place_meeting(hostObject.x + (-sign(hostObject.image_xscale)), hostObject.y, oWall) || hostObject.x + (-sign(hostObject.image_xscale)) < global.camObj.x - (80 - hostObject.cameraBufferAmount) || hostObject.x + (-sign(hostObject.image_xscale)) > global.camObj.x + (80 - hostObject.cameraBufferAmount))
 				{
 					// If the host is supposed to backdash, then set our hsp to the backdash speed.
 					if (hostObject.animTimer == hostObject.backdashStartup)
@@ -143,7 +143,7 @@ switch (spiritState)
 			else if (hostObject.state == eState.RUN_FORWARD) // Handle if the host is forward dashing into a wall
 			{
 				// If the host moves into a wall, transfer the hsp to the remote offset
-				if (place_meeting(hostObject.x + sign(hostObject.image_xscale), hostObject.y, oWall) || hostObject.x + (sign(hostObject.image_xscale)) < global.camObj.x - 80 || hostObject.x + (sign(hostObject.image_xscale)) > global.camObj.x + 80)
+				if (place_meeting(hostObject.x + sign(hostObject.image_xscale), hostObject.y, oWall) || hostObject.x + (sign(hostObject.image_xscale)) < global.camObj.x - (80 - hostObject.cameraBufferAmount) || hostObject.x + (sign(hostObject.image_xscale)) > global.camObj.x + (80 - hostObject.cameraBufferAmount))
 				{
 					// If the host is supposed to dash, then set our hsp to the dash speed.
 					if (hostObject.animTimer == 5)
