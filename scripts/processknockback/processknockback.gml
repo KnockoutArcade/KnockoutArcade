@@ -2,6 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ProcessKnockback()
 {
+	if (!grounded)
+	{
+		knockbackVel = 0;
+		knockbackVelTimer = 0;
+		knockbackVelDuration = 0;
+		exit;
+	}
+	
 	if (knockbackVel != 0)
 	{
 		knockbackVelTimer++;

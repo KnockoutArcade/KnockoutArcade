@@ -460,9 +460,7 @@ function HandleHitboxCollision(ownerType)
 								(place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oPlayerController)) 
 								&& (!place_meeting(x + sign(other.attackProperty.Pushback * -image_xscale), y, oSmoothCriminal))
 								) 
-						)
-						&& other.owner.grounded 
-						&& grounded 
+						) 
 						&& !other.isProjectile)
 						{
 							ownerType.pushbackVel = other.attackProperty.Pushback;
@@ -487,8 +485,6 @@ function HandleHitboxCollision(ownerType)
 							knockbackVel = other.attackProperty.KnockBack;
 							knockbackVelTimer = 0;
 							knockbackVelDuration = max(min(other.attackProperty.BlockStun, MaximumPushbackDuration), 1); // Always at least 1, but never more than x
-							
-							
 						}
 					}
 					

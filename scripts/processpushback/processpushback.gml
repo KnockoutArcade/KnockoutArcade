@@ -2,6 +2,14 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function ProcessPushback()
 {
+	if (!grounded)
+	{
+		pushbackVel = 0;
+		pushbackVelTimer = 0;
+		pushbackVelDuration = 0;
+		exit;
+	}
+	
 	if (pushbackVel != 0)
 	{
 		pushbackVelTimer++;
