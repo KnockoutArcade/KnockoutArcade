@@ -239,7 +239,7 @@
           "Blue": 1.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -346,7 +346,7 @@
           "Blue": 1.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -453,7 +453,7 @@
           "Blue": 1.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -560,7 +560,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -667,7 +667,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -774,7 +774,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -881,7 +881,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -988,7 +988,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -1095,7 +1095,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -1202,7 +1202,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -1309,7 +1309,7 @@
           "Blue": 1.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -1416,7 +1416,7 @@
           "Blue": 1.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -1482,7 +1482,7 @@
           "Group": 1,
           "Damage": 30,
           "MeterGain": 3.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 9,
           "AttackHitStun": 8,
           "AttackType": 1,
@@ -1518,7 +1518,7 @@
           "Group": 1,
           "Damage": 50,
           "MeterGain": 5.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 10,
           "AttackHitStun": 10,
           "KnockBack": 9.0,
@@ -3170,7 +3170,7 @@
           "Group": 1,
           "Damage": 30,
           "MeterGain": 3.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 9,
           "AttackHitStun": 12,
           "AttackType": 1,
@@ -3206,7 +3206,7 @@
           "Group": 1,
           "Damage": 40,
           "MeterGain": 4.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 11,
           "AttackHitStun": 14,
           "KnockBack": -3.0,
@@ -3373,7 +3373,7 @@
           "Group": 1,
           "Damage": 40,
           "MeterGain": 4.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 14,
           "AttackHitStun": 14,
           "AttackType": 1,
@@ -3409,7 +3409,7 @@
           "Group": 1,
           "Damage": 60,
           "MeterGain": 6.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 18,
           "AttackHitStun": 14,
           "KnockBack": 14.0,
@@ -4735,7 +4735,7 @@
           "Group": 1,
           "Damage": 50,
           "MeterGain": 4.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 6,
           "AttackHitStun": 7,
           "AttackType": 0,
@@ -4771,7 +4771,7 @@
           "Group": 1,
           "Damage": 70,
           "MeterGain": 7.0,
-          "ComboScaling": 1.0,
+          "ComboScaling": 2.0,
           "AttackHitStop": 8,
           "AttackHitStun": 6,
           "KnockBack": 2.0,
@@ -8627,6 +8627,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-07-05T14:05:48.7250868-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2026-10-13T22:56:32.4278744-07:00",
+  "LastModifiedBy": "rylan"
 }
