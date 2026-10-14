@@ -142,7 +142,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 							OverwriteMoveset();
 						}
 					}
-					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
@@ -176,8 +175,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					{
 						collision_list.owner.spiritCurrentHealth -= scaledDamage;
 					}
-					
-					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else if (!collision_list.owner.spiritInstall)
 				{
@@ -287,25 +284,48 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					collision_list.owner.spiritObject.grounded = false;
 				}
 			}
-		}
 		
-		// Apply grounded knockback
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		collision_list.owner.knockbackVelTimer = 0 // reset the timer
-		collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+			// Apply grounded knockback
+			collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.knockbackVelTimer = 0 // reset the timer
+			collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
 		
-		// Do a quick check to see if there's a wall behind the opponent
-		// If there is, transfer our knockback to the other player 
-		with (collision_list.owner)
-		{
-			if (place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall) && other.owner.grounded && grounded && !isDestructibleObject)
+		
+			// Do a quick check to see if there's a wall behind the opponent
+			// If there is, transfer our knockback to the other player 
+			with (collision_list.owner)
 			{
-				other.owner.pushbackVel = attackProperty.KnockBack;
-				other.owner.pushbackVelTimer = 0;
-				other.owner.pushbackVelDuration = max(min(other.moveDuration - other.owner.animTimer, MaximumPushbackDuration), 1);
+				if (
+				(  
+					(place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall)) 
+					|| (x - sign(attackProperty.KnockBack) < global.camObj.x - (80 - cameraBufferAmount)) 
+					|| (x + sign(attackProperty.KnockBack) > global.camObj.x + (80 - cameraBufferAmount)) 
+					|| (
+						(place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oPlayerController)) 
+						&& (!place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oSmoothCriminal))
+						) 
+				) 
+				&& !isDestructibleObject)
+				{
+					other.owner.pushbackVel = attackProperty.KnockBack;
+					other.owner.pushbackVelTimer = 0;
+					other.owner.pushbackVelDuration = max(min(other.moveDuration - other.owner.animTimer, MaximumPushbackDuration), 1);
+				
+					if (other.spirit != noone) 
+					{
+						other.spirit.pushbackVel = other.attackProperty.KnockBack;
+						other.spirit.pushbackVelTimer = 0;
+						other.spirit.pushbackVelDuration = max(min(other.moveDuration - other.spirit.animTimer, MaximumPushbackDuration), 1);
+					}
+					if (spiritObject != noone)
+					{
+						spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+						spiritObject.knockbackVelTimer = 0 // reset the timer
+						spiritObject.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+					}
+				}
 			}
 		}
-		
 		// Reset held opponent
 		owner.heldOpponent = noone;
 		
@@ -488,7 +508,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 							OverwriteMoveset();
 						}
 					}
-					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				else
 				{
@@ -508,7 +527,6 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 				if (!collision_list.owner.spiritObject.vulnerable && !collision_list.owner.spiritInstall)
 				{
 					collision_list.owner.spiritCurrentHealth -= scaledDamage;
-					collision_list.owner.spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
 				}
 				//else if (!collision_list.owner.spiritInstall)
 				//{
@@ -612,13 +630,35 @@ function ProcessHit(attackProperty, collision_list, finalBlowSuper, activateTime
 					collision_list.owner.spiritObject.grounded = false;
 				}
 			}
+		
+			// Apply grounded knockback
+			collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+			collision_list.owner.knockbackVelTimer = 0 // reset the timer
+			collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+		
+			with (collision_list.owner)
+			{
+				if (
+				(  
+				(place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oWall)) 
+				|| (x - sign(attackProperty.KnockBack) < global.camObj.x - (80 - cameraBufferAmount)) 
+				|| (x + sign(attackProperty.KnockBack) > global.camObj.x + (80 - cameraBufferAmount)) 
+				|| (
+					(place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oPlayerController)) 
+					&& (!place_meeting(x + sign(attackProperty.KnockBack * -image_xscale), y, oSmoothCriminal))
+					) 
+				) 
+				&& !isDestructibleObject)
+				{
+					if (spiritObject != noone)
+					{
+						spiritObject.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
+						spiritObject.knockbackVelTimer = 0 // reset the timer
+						spiritObject.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
+					}
+				}
+			}
 		}
-		
-		// Apply grounded knockback
-		collision_list.owner.knockbackVel = attackProperty.KnockBack * collision_list.owner.knockbackMultiplier;
-		collision_list.owner.knockbackVelTimer = 0 // reset the timer
-		collision_list.owner.knockbackVelDuration = max(min(attackProperty.AttackHitStun, MaximumPushbackDuration), 1);
-		
 
 		ds_list_add(hasHit, collision_list.owner.id);
 		

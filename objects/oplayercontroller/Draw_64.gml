@@ -16,11 +16,11 @@ if (playerID == 1)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(20, 10, state);
-	draw_text(20, 30, animTimer);
-	draw_text(20, 50, knockbackVelTimer);
-	draw_text(20, 70, x - global.camObj.x);
-	draw_text(20, 90, hp);
+	draw_text(20, 10, knockbackVel);
+	draw_text(20, 30, knockbackVelTimer);
+	draw_text(20, 50, knockbackVelDuration);
+	draw_text(20, 70, pushbackVel);
+	draw_text(20, 90, pushbackVelTimer);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -40,11 +40,11 @@ else
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(750, 10, state);
-	draw_text(750, 30, animTimer);
-	draw_text(750, 50, gravityScaling);
-	draw_text(750, 70, x - global.camObj.x);
-	draw_text(750, 90, hp);
+	draw_text(750, 10, knockbackVel);
+	draw_text(750, 30, knockbackVelTimer);
+	draw_text(750, 50, knockbackVelDuration);
+	draw_text(750, 70, pushbackVel);
+	draw_text(750, 90, pushbackVelTimer);
 	
 	
 }
