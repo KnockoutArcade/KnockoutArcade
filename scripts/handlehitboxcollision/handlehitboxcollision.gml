@@ -572,15 +572,22 @@ function HandleHitboxCollision(ownerType)
 					oGameManager.frameAdvantage = 0;
 
 					var particle = instance_create_layer(collision_list[| i].owner.x, collision_list[| i].owner.y, "Particles", oParticles);
-					with(particle)
+					with (particle)
 					{
 						lifetime = 10;
 						sprite_index = sBlockEffect;
-						if (blockingDirection == 0)
-						{
-							sprite_index = sGeyser;
-						}
 						image_xscale = collision_list[| i].owner.image_xscale;
+					}
+					
+					if (collision_list[| i].owner.spiritObject != noone)
+					{
+						var particle = instance_create_layer(collision_list[| i].owner.spiritObject.x, collision_list[| i].owner.spiritObject.y, "Particles", oParticles);
+						with (particle)
+						{
+							lifetime = 10;
+							sprite_index = sBlockEffect;
+							image_xscale = collision_list[| i].owner.spiritObject.image_xscale;
+						}
 					}
 
 					//Play sound effect
