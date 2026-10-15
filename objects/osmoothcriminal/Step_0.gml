@@ -96,7 +96,7 @@ switch (spiritState)
 	{
 		isPerformingThrow = false;
 		
-		if (nextToPlayer)
+		if (nextToPlayer && hostObject.state != eState.HITSTOP)
 		{
 			x = lerp(x, hostObject.x + (spiritOffsetDistance * hostObject.image_xscale), 0.5);
 			x += environmentDisplacement;
@@ -109,6 +109,9 @@ switch (spiritState)
 			knockbackVelTimer = 0;
 			pushbackVel = 0;
 			pushbackVelTimer = 0;
+			
+			xHome = x;
+			yHome = y;
 		}
 		else if (hostObject.state != eState.HITSTOP)
 		{
@@ -176,10 +179,29 @@ switch (spiritState)
 			environmentDisplacement = 0;
 			
 			y = hostObject.y;
+			
+			xHome = x;
+			yHome = y;
 		}
 		
-		xHome = x;
-		yHome = y;
+		
+		
+		// Handle histop shuffling
+		shuffle = hostObject.shuffle;
+		if (hostObject.state == eState.HITSTOP)
+		{
+			var hitstopShuffleAmmount = 3;
+			if (hostObject.blockstun > 0) hitstopShuffleAmmount = 1;
+			
+			if (shuffle % 2 == 0)
+			{
+				x = xHome + min(hostObject.hitstop, hitstopShuffleAmmount);
+			}
+			else
+			{
+				x = xHome - min(hostObject.hitstop, hitstopShuffleAmmount);
+			}
+		}
 		
 		// Set the direction this spirit is looking
 		if (nextToPlayer)
@@ -514,16 +536,13 @@ y = actualYPos; // Restore the player's actual y position
 // Handle going off screen
 if (!nextToPlayer || hostObject.prevState == eState.DOWN_SPECIAL || hostObject.prevState == eState.ENHANCED_DOWN_SPECIAL)
 {
-	if (x < global.camObj.x-75 || x > global.camObj.x+75)
+	if (x < global.camObj.x-72 || x > global.camObj.x+72)
 	{
 		// Clamp to the screen (with some buffer room)
-		x = clamp(x, global.camObj.x-75, global.camObj.x+75);
+		x = clamp(x, global.camObj.x-72, global.camObj.x+72);
 		
 		remoteOffset = (x - hostObject.x);
 	}
-	
-	xHome = x;
-	yHome = y;
 }
 
 #endregion

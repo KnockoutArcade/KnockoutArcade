@@ -16,7 +16,7 @@ if (playerID == 1)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(20, 10, gravityScaling);
+	draw_text(20, 10, shuffle);
 	draw_text(20, 30, knockbackVelTimer);
 	draw_text(20, 50, knockbackVelDuration);
 	draw_text(20, 70, pushbackVel);
