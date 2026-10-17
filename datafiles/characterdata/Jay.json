@@ -8235,7 +8235,7 @@
         "SpiritInstall": false
       },
       "LandingLag": 0,
-      "IsJumpCancelable": false
+      "IsJumpCancelable": true
     },
     {
       "UID": "9281d28a-f195-44ec-9a6b-11e2d35c1ebc",
@@ -8333,7 +8333,7 @@
         "SpiritInstall": false
       },
       "LandingLag": 0,
-      "IsJumpCancelable": false
+      "IsJumpCancelable": true
     },
     {
       "UID": "06dad826-5599-4ee0-9e32-a8f736d77210",
@@ -8431,7 +8431,7 @@
         "SpiritInstall": false
       },
       "LandingLag": 0,
-      "IsJumpCancelable": false
+      "IsJumpCancelable": true
     },
     {
       "UID": "56c45e09-d1d3-4a12-a03d-82e6c7b01395",
@@ -10456,6 +10456,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-10-16T21:54:12.2988818-07:00",
+  "LastModified": "2026-10-16T21:56:42.1956653-07:00",
   "LastModifiedBy": "rylan"
 }
