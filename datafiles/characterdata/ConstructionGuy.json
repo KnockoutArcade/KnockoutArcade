@@ -130,7 +130,7 @@
         "Blue": 0.0,
         "Green": 0.0
       },
-     {
+      {
         "Red": 0.0,
         "Blue": 0.0,
         "Green": 0.0
@@ -239,7 +239,7 @@
           "Blue": 0.0,
           "Green": 0.0
         },
-      	{
+        {
           "Red": 0.0,
           "Blue": 0.0,
           "Green": 0.0
@@ -469,7 +469,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     }
   ],
   "UniqueData": {
@@ -491,6 +492,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "79a5c17d-a9b3-4ce5-8e81-10fc038da71c",
-  "LastModified": "2026-06-30T21:16:22.9462368-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2026-10-16T21:54:04.0282571-07:00",
+  "LastModifiedBy": "rylan"
 }

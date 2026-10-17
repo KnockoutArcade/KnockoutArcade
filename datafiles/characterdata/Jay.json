@@ -1623,7 +1623,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "c14a5529-c9ef-4e2e-806a-7f48a2c0aa9a",
@@ -1870,7 +1871,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "75601a84-ef21-4269-834d-fda92d4ce626",
@@ -2086,7 +2088,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "189e5d3a-d24c-4e85-8ab1-743575916594",
@@ -2275,7 +2278,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "c902caff-7aa3-4153-a750-34811fa5416a",
@@ -2556,7 +2560,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "15155b21-0122-46a6-9170-41408971b163",
@@ -2711,7 +2716,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
@@ -2849,7 +2855,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "303b54ea-442b-4669-9d47-ae3eac71217d",
@@ -2975,7 +2982,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "40206a36-b3e0-4ea4-98c1-09e0095f218b",
@@ -3198,7 +3206,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "2c9972af-1709-4bc3-902d-f52ba5b41992",
@@ -3468,7 +3477,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "6473b048-2338-423e-8180-d0678ede1588",
@@ -3657,7 +3667,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "1e5281af-724d-4b39-b9eb-49c211f021a9",
@@ -3884,7 +3895,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
@@ -4183,7 +4195,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "e39ebf44-6979-4ff8-8a1b-58b4477fe2cf",
@@ -4396,7 +4409,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "f24751ba-aff2-4d43-938a-377cca031b32",
@@ -4605,7 +4619,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "45336cf1-0e31-4f33-8d5f-0d8d45e27ecb",
@@ -4798,7 +4813,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "e2860bd5-89ca-435a-937c-23f22d6de208",
@@ -5012,7 +5028,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "df89eb6c-5314-4802-beb4-b2d0e0cd946d",
@@ -5398,7 +5415,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 15
+      "LandingLag": 15,
+      "IsJumpCancelable": false
     },
     {
       "UID": "ee9a2e02-b608-4106-83ee-4d64610a304c",
@@ -5545,7 +5563,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "e42052d3-0340-4551-896d-49fc4e61e9e2",
@@ -5774,7 +5793,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "33e46444-1d88-4027-85ed-7d18f0326ff1",
@@ -6007,7 +6027,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "15836936-e561-4ef7-a32b-89b738ad93fd",
@@ -6104,7 +6125,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "8a60301d-8814-4c05-add8-d91a540e7ec5",
@@ -6240,7 +6262,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "46ac906c-3c8d-481a-9434-3b092a1254b0",
@@ -6354,7 +6377,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "35c693ad-4c37-44a0-b066-c9c0d48a7ca0",
@@ -6511,7 +6535,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "723c6e34-dd04-4061-a126-d6037500c92d",
@@ -6635,7 +6660,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "b94a3ffb-f1b1-40b3-afc9-2f0864a00999",
@@ -6716,7 +6742,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "042d57a1-6c74-4049-9cb7-21b4f0224321",
@@ -6797,7 +6824,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "694ea9a5-49d7-4dde-8e1c-12865d9e2760",
@@ -6878,7 +6906,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "bedd35f2-e6b4-45e7-bc23-bd9a81151a4f",
@@ -6959,7 +6988,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "08cbeaee-631d-4f23-b06c-c502ac0e3602",
@@ -7040,7 +7070,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "d8539935-c649-4944-99d7-bc081b4bd553",
@@ -7121,7 +7152,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "f5adf703-e7ea-411c-8cdd-ecb50127efa8",
@@ -7202,7 +7234,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "4e043336-638d-4950-9152-e38f51c7bd92",
@@ -7283,7 +7316,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "1a8a6520-bcf7-4039-9e99-081309c4c8f4",
@@ -7408,7 +7442,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "b0242922-ba00-4698-97fa-f93b9adaa4cf",
@@ -7563,7 +7598,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "2073dfc1-f8a1-4b14-918e-85145648d7ed",
@@ -7668,7 +7704,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "570f35c5-5b42-46a3-91d2-2c0d69de8a6a",
@@ -7781,7 +7818,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "4afa7429-6d41-4bd5-97f3-04638476f409",
@@ -7878,7 +7916,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "b0bd9bb2-37ff-4865-b873-591085816194",
@@ -7975,7 +8014,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "2871012d-430a-4c86-aba6-597111deac51",
@@ -8080,7 +8120,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "6e5b6d3a-cdac-43ad-96fc-843bde9d3097",
@@ -8193,7 +8234,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "9281d28a-f195-44ec-9a6b-11e2d35c1ebc",
@@ -8290,7 +8332,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "06dad826-5599-4ee0-9e32-a8f736d77210",
@@ -8387,7 +8430,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "56c45e09-d1d3-4a12-a03d-82e6c7b01395",
@@ -8570,7 +8614,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "8dbdcc44-e6b8-4158-b757-5e5972a06e01",
@@ -8699,7 +8744,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "f204f0bc-c6e0-4a4a-a28c-8cd27adc18ec",
@@ -8808,7 +8854,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "11e09b5f-3317-44a6-a541-3c9278051207",
@@ -8955,7 +9002,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "9e88615d-8986-4d90-91aa-005e4ebbe2d9",
@@ -9195,7 +9243,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "6406db7f-a360-4eb0-8404-bec650d599f6",
@@ -9304,7 +9353,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "51be4954-f6e1-43c8-ae44-3dcee96400dc",
@@ -9475,7 +9525,8 @@
         "JumpType": 1,
         "SpiritInstall": true
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "0df4ec98-cac5-4d0d-ae85-af95dff1e508",
@@ -9600,7 +9651,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "54fe21cc-73c2-4e48-b60b-50af517e74cd",
@@ -9729,7 +9781,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "56265f4b-8c55-4749-8e2f-942a7206b741",
@@ -9890,7 +9943,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "a52164b1-bb42-4095-9c2b-0cbec4f1e474",
@@ -10046,7 +10100,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "1daf7d91-dbae-4400-9f10-bcbbfe1a5be4",
@@ -10129,7 +10184,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "c4f75788-b0d0-40e1-9d1f-b02b24ea7205",
@@ -10234,7 +10290,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     },
     {
       "UID": "6c16aa51-48f4-4d88-8a5c-f718fc36594c",
@@ -10376,7 +10433,8 @@
         "JumpType": 0,
         "SpiritInstall": false
       },
-      "LandingLag": 0
+      "LandingLag": 0,
+      "IsJumpCancelable": false
     }
   ],
   "UniqueData": {
@@ -10398,6 +10456,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-10-13T22:55:48.5858542-07:00",
+  "LastModified": "2026-10-16T21:54:12.2988818-07:00",
   "LastModifiedBy": "rylan"
 }
