@@ -758,7 +758,7 @@ if (state == eState.HITSTOP)
 		}
 		
 		// Canceling Moves from Hitstop
-		if (!hitstopBuffer && blockstun <= 0 && attack != 0) 
+		if (!hitstopBuffer && blockstun <= 0) 
 		{
 			// We need to know what attack state the player is in so we know which move's cancel data
 			// we should to use.
@@ -1602,9 +1602,9 @@ switch state
 			vsp += fastFallSpeed;
 		}
 		
-		if (canDoubleJump && !hasSpentDoubleJump)
+		if (canDoubleJump && !hasSpentDoubleJump) || (doubleJumpBuffer)
 		{
-			if (verticalMoveDir == 1 && heldUpFrames <= 1)
+			if (verticalMoveDir == 1 && heldUpFrames <= 1) || (doubleJumpBuffer)
 			{
 				// Handle spawning jump particle
 				// Spawn a jump particle once the player leaves the ground
@@ -1630,6 +1630,8 @@ switch state
 				jumpHsp = hsp;
 				hasSpentDoubleJump = true;
 				image_index = 0;
+				
+				doubleJumpBuffer = false;
 			}
 		}
 		
@@ -2590,6 +2592,7 @@ switch state
 		inAttackState = false;
 		canBlock = false;
 		landingLag = 0;
+		doubleJumpBuffer = false;
 		
 		hasUsedAirNeutralSpecial = false;
 		hasUsedAirSideSpecial = false;
@@ -2721,6 +2724,7 @@ switch state
 		inAttackState = false;
 		canBlock = false;
 		landingLag = 0;
+		doubleJumpBuffer = false;
 		
 		FAvictim = false;
 		
@@ -2747,6 +2751,7 @@ switch state
 		isInStableState = true;
 		inAttackState = false;
 		canBlock = false;
+		doubleJumpBuffer = false;
 		
 		cancelCombo = true;
 		
@@ -3135,6 +3140,7 @@ switch state
 		isEXFlash = true;
 		canBlock = false;
 		landingLag = 0;
+		doubleJumpBuffer = false;
 		
 		sprite_index = CharacterSprites.runForward_Sprite;
 		image_speed = 2;
@@ -3187,6 +3193,7 @@ switch state
 		isEXFlash = true;
 		canBlock = false;
 		landingLag = 0;
+		doubleJumpBuffer = false;
 		
 		// Handle spawning jump particle
 		// Spawn a jump particle on the 1st frame of activation
@@ -3227,6 +3234,7 @@ switch state
 		isEXFlash = true;
 		canBlock = false;
 		landingLag = 0;
+		doubleJumpBuffer = false;
 		
 		vsp = global.rcAirSpeed;
 		hsp = global.rcAirHorizontalSpeed * image_xscale;

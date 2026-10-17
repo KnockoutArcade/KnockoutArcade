@@ -16,11 +16,11 @@ if (playerID == 1)
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(20, 10, shuffle);
-	draw_text(20, 30, knockbackVelTimer);
-	draw_text(20, 50, knockbackVelDuration);
+	draw_text(20, 10, state);
+	draw_text(20, 30, prevState);
+	draw_text(20, 50, grounded);
 	draw_text(20, 70, pushbackVel);
-	draw_text(20, 90, pushbackVelTimer);
+	draw_text(20, 90, doubleJumpBuffer);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -41,10 +41,10 @@ else
 	draw_set_color(c_white);
 	
 	draw_text(750, 10, gravityScaling);
-	draw_text(750, 30, knockbackVelTimer);
-	draw_text(750, 50, knockbackVelDuration);
+	draw_text(750, 30, vsp);
+	draw_text(750, 50, hasSpentDoubleJump);
 	draw_text(750, 70, pushbackVel);
-	draw_text(750, 90, pushbackVelTimer);
+	draw_text(750, 90, doubleJumpBuffer);
 	
 	
 }

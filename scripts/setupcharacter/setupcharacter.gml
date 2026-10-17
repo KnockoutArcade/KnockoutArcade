@@ -105,6 +105,7 @@ function SetupCharacter(selectedCharacter, selectedPaletteId = -1)
 		nextMove.UseMoveScript = selectedCharacter.MoveData[i].UseMoveScript;
 		nextMove.SupplementaryMoveScript = selectedCharacter.MoveData[i].SupplementaryMoveScript;
 		nextMove.LandingLag = selectedCharacter.MoveData[i].LandingLag;
+		nextMove.IsJumpCancelable = selectedCharacter.MoveData[i].IsJumpCancelable;
 
 		if(selectedCharacter.MoveData[i].IsThrow)
 		{

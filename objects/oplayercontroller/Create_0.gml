@@ -86,6 +86,7 @@ else
 	canDoubleJump = false;
 }
 hasSpentDoubleJump = false; // Whether the player has spent their Double Jump
+doubleJumpBuffer = false;
 heldUpFrames = 0; // How long the player has held UP for
 
 jumpHsp = 0; // How much momentum the player is carrying with their jump

@@ -45,8 +45,78 @@ function CancelData(_array, _attack, _late)
 	#endregion
 	// Check to see if the player has inputted an attack AND if the inputted attack is a valid cancel
 	
+	// Jump Canceling
+	if (_array.IsJumpCancelable && _attack == 0 && verticalMoveDir == 1 && heldUpFrames <= 5) && (grounded || (!grounded && canDoubleJump && !hasSpentDoubleJump))
+	{
+		prevState = eState.JUMPSQUAT;
+		prevSprite = CharacterSprites.jumpsquat_Sprite;
+		if (!grounded)
+		{
+			prevState = eState.JUMPING;
+			prevSprite = CharacterSprites.jump_Sprite;
+			doubleJumpBuffer = true;
+		}
+		show_debug_message("Jump Canceled?");
+		hitstopBuffer = true;
+		isThrowable = true;
+		bufferAttackInput = 0;
+		landingLag = 0;
+		jumpHsp = 0;
+		vsp = jumpSpeed;
+		
+		if (_late)
+		{
+			animTimer = 0;
+			state = eState.JUMPSQUAT;
+			sprite_index = CharacterSprites.jumpsquat_Sprite;
+			if (!grounded)
+			{
+				state = eState.JUMPING;
+				sprite_index = CharacterSprites.jump_Sprite;
+			}
+			image_index = 0;
+		}
+		
+		
+		
+		//ds_list_clear(hitByGroup);
+		ClearVictimHitByGroups();
+	
+		// Iterate through every hurtbox in the scene and destroy each nonprimary hurtbox
+		var allHurtboxes = [];
+
+		for (var i = 0; i < instance_number(oPlayerHurtbox); i++;) 
+		{
+			allHurtboxes[i] = instance_find(oPlayerHurtbox, i);
+		}
+	
+		for (var i = 0; i < array_length(allHurtboxes); i++;)
+		{
+			if (!allHurtboxes[i].primary && allHurtboxes[i].owner.id == id)
+			{ 
+				instance_destroy(allHurtboxes[i]);
+			}
+		}
+	
+		// Destroy all hitboxes that belong to this player
+		var allHitboxes = [];
+	
+		for (var i = 0; i < instance_number(oHitbox); i++;)
+		{
+			allHitboxes[i] = instance_find(oHitbox, i);
+		
+		}
+	
+		for (var i = 0; i < array_length(allHitboxes); i++;)
+		{
+			if (allHitboxes[i].owner == id)
+			{ 
+				instance_destroy(allHitboxes[i]);
+			}
+		}
+	}
 	// Side Special
-	if ((_array.MoveCanCancelInto & 8 == 8) && (_attack == 5 && movedir != 0 && verticalMoveDir == 0) && !hasUsedAirSideSpecial)
+	else if ((_array.MoveCanCancelInto & 8 == 8) && (_attack == 5 && movedir != 0 && verticalMoveDir == 0) && !hasUsedAirSideSpecial)
 	{
 		if (_late)
 		{
