@@ -4438,7 +4438,7 @@
         "SpiritInstall": false
       },
       "LandingLag": 0,
-      "IsJumpCancelable": true
+      "IsJumpCancelable": false
     },
     {
       "UID": "5dced8f6-ad9e-41be-abee-3d00412aca1e",
@@ -8678,6 +8678,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "bb4d5d18-d3af-48cd-8bc1-761eac4269ff",
-  "LastModified": "2026-10-16T22:35:25.7672855-07:00",
+  "LastModified": "2026-10-18T21:08:31.3259581-07:00",
   "LastModifiedBy": "rylan"
 }
