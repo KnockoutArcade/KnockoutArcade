@@ -731,22 +731,23 @@ if (state == eState.HITSTOP)
 		{
 			if (wallHit)
 			{
-				y = yHome + min(hitstop, 3);
+				hitstunShuffleY = min(hitstop, 3);
+				//y = yHome + min(hitstop, 3);
 			}
 			else
 			{
-				x = xHome + min(hitstop, 3);
+				hitstunShuffleX = min(hitstop, 3);
 			}
 		}
 		else
 		{
 			if (wallHit)
 			{
-				y = yHome - min(hitstop, 3);
+				hitstunShuffleY = -min(hitstop, 3);
 			}
 			else
 			{
-				x = xHome - min(hitstop, 3);
+				hitstunShuffleX = -min(hitstop, 3);
 			}
 		}
 	}
@@ -805,11 +806,11 @@ if (state == eState.HITSTOP)
 
 		if (shuffle % 2 == 1)
 		{
-			x = xHome + min(hitstop, 1);
+			hitstunShuffleX = min(hitstop, 1);
 		}
 		else
 		{
-			x = xHome - min(hitstop, 1);
+			hitstunShuffleX = -min(hitstop, 1);
 		}
 	}
 	
@@ -820,6 +821,8 @@ if (state == eState.HITSTOP)
 	{
 		state = prevState;
 		animTimer++;
+		hitstunShuffleX = 0;
+		hitstunShuffleY = 0;
 		if (hitstopBuffer)
 		{
 			image_index = 0;
@@ -3382,6 +3385,8 @@ else
 	if (hitstun < 1)
 	{
 		hitstunShuffleTimer = 0;
+		hitstunShuffleX = 0;
+		hitstunShuffleY = 0;
 	}
 	
 	//Handle Pushback
@@ -3666,23 +3671,10 @@ if (opponent != noone && !wallHit)
 			
 		environmentDisplacement += (boundingBoxSize - abs((x+hsp+environmentDisplacement) - opponent.x)) * 0.5 * -sign(image_xscale);
 			
-		/*
-		// Move the players away from each other
-		if (x > opponent.x)
-		{
-			environmentDisplacement += .5;
-			opponent.x -= .5;
-		}
-		else 
-		{
-			environmentDisplacement -= .5;
-			opponent.x += .5;
-		}
-		*/
 		opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
 		opponent.x = origanalX; // Return oponent to original position
 		
-		show_debug_message(string(id) + " player collision displacement: " + string(environmentDisplacement) + " at " + string(date_current_datetime()));
+		//show_debug_message(string(id) + " player collision displacement: " + string(environmentDisplacement) + " at " + string(date_current_datetime()));
 	}
 }
 

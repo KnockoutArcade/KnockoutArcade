@@ -320,6 +320,8 @@ xHome = x;
 yHome = y;
 hitstunShuffleTimer = 0;
 shuffle = 0;
+hitstunShuffleX = 0;
+hitstunShuffleY = 0;
 framesSinceHitstun = 0; // Used to help make attacks connect when cancelling special moves
 isExperiencingHardKnockdown = false; // What kind of knockdown we are experiencing (false - soft, true - hard)
 

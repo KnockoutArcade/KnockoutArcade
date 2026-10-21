@@ -259,6 +259,6 @@ else
 }
 #endregion
 
-draw_self();
+draw_sprite_ext(sprite_index, image_index, x + hostObject.hitstunShuffleX, y + hostObject.hitstunShuffleY, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
 
 shader_reset();

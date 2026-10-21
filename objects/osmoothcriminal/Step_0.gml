@@ -184,25 +184,6 @@ switch (spiritState)
 			yHome = y;
 		}
 		
-		
-		
-		// Handle histop shuffling
-		shuffle = hostObject.shuffle;
-		if (hostObject.state == eState.HITSTOP)
-		{
-			var hitstopShuffleAmmount = 3;
-			if (hostObject.blockstun > 0) hitstopShuffleAmmount = 1;
-			
-			if (shuffle % 2 == 0)
-			{
-				x = xHome + min(hostObject.hitstop, hitstopShuffleAmmount);
-			}
-			else
-			{
-				x = xHome - min(hostObject.hitstop, hitstopShuffleAmmount);
-			}
-		}
-		
 		// Set the direction this spirit is looking
 		if (nextToPlayer)
 		{
@@ -491,6 +472,17 @@ if (hostObject.opponent != noone)
 		{
 			hostObject.opponent.x += (hostObject.opponent.hsp*.75) + hostObject.opponent.environmentDisplacement;
 		}
+		
+		// While the players are still touching
+		var boundingBoxSize = round(abs(bbox_left - bbox_right));
+			
+		environmentDisplacement += (boundingBoxSize - abs((x+hsp+environmentDisplacement) - hostObject.opponent.x)) * 0.5 * -sign(image_xscale);
+		
+		if (nextToPlayer)
+		{
+			hostObject.environmentDisplacement += environmentDisplacement;
+		}
+		/*
 		// While the players are still touching
 		while(place_meeting(x+hsp+environmentDisplacement, y , hostObject.opponent))
 		{
@@ -525,6 +517,7 @@ if (hostObject.opponent != noone)
 				}
 			}
 		}
+		*/
 		hostObject.opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
 		hostObject.opponent.x = origanalX; // Return oponent to original position
 	}
