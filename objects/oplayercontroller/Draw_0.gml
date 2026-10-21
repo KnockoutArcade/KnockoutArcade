@@ -60,7 +60,7 @@ if (global.toggleHitboxVisibility)
 	draw_circle(x,y, .5, true);
 	
 	// Draw the collision box
-	draw_rectangle_color(bbox_left, bbox_bottom, bbox_right, bbox_top, c_green, c_green, c_green, c_green, true);
+	draw_rectangle_color(bbox_left, bbox_bottom, bbox_right - 1, bbox_top - 1, c_green, c_green, c_green, c_green, true);
 }
 
 if (isEXFlash)

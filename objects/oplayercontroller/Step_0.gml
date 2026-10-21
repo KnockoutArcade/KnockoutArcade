@@ -3660,23 +3660,29 @@ if (opponent != noone && !wallHit)
 		{
 			opponent.x += (opponent.hsp*.75) + opponent.environmentDisplacement;
 		}
+		
 		// While the players are still touching
-		while(place_meeting(x+hsp+environmentDisplacement, y , opponent))
+		var boundingBoxSize = round(abs(bbox_left - bbox_right));
+			
+		environmentDisplacement += (boundingBoxSize - abs((x+hsp+environmentDisplacement) - opponent.x)) * 0.5 * -sign(image_xscale);
+			
+		/*
+		// Move the players away from each other
+		if (x > opponent.x)
 		{
-			// Move the players away from each other
-			if (x > opponent.x)
-			{
-				environmentDisplacement += .5;
-				opponent.x -= .5;
-			}
-			else 
-			{
-				environmentDisplacement -= .5;
-				opponent.x += .5;
-			}
+			environmentDisplacement += .5;
+			opponent.x -= .5;
 		}
+		else 
+		{
+			environmentDisplacement -= .5;
+			opponent.x += .5;
+		}
+		*/
 		opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
 		opponent.x = origanalX; // Return oponent to original position
+		
+		show_debug_message(string(id) + " player collision displacement: " + string(environmentDisplacement) + " at " + string(date_current_datetime()));
 	}
 }
 

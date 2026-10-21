@@ -18,9 +18,9 @@ if (playerID == 1)
 	
 	draw_text(20, 10, state);
 	draw_text(20, 30, prevState);
-	draw_text(20, 50, grounded);
-	draw_text(20, 70, pushbackVel);
-	draw_text(20, 90, doubleJumpBuffer);
+	draw_text(20, 50, x);
+	draw_text(20, 70, round(abs(bbox_left - bbox_right)));
+	draw_text(20, 90, image_index);
 	
 	var hitByIDs = variable_struct_get_names(hasBeenHitByIds);
 			
@@ -40,17 +40,12 @@ else
 	draw_set_alpha(1);
 	draw_set_color(c_white);
 	
-	draw_text(750, 10, gravityScaling);
-	draw_text(750, 30, vsp);
-	draw_text(750, 50, hasSpentDoubleJump);
-	draw_text(750, 70, pushbackVel);
-	draw_text(750, 90, doubleJumpBuffer);
+	draw_text(750, 10, state);
+	draw_text(750, 30, prevState);
+	draw_text(750, 50, x);
+	draw_text(750, 70, round(abs(bbox_left - bbox_right)));
+	draw_text(750, 90, image_index);
 	
 	
 }
-
-	if (hitstun > 0)
-	{
-		draw_text(400, 550, "TRUE COMBO");
-	}
 }
