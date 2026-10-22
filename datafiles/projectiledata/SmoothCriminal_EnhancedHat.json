@@ -3,7 +3,7 @@
   "HasLifetime": true,
   "Lifetime": 90,
   "AnimationSpeed": 0,
-  "HorizontalSpeed": 4.3,
+  "HorizontalSpeed": 2.0,
   "VerticalSpeed": 0.0,
   "EnvironmentalDisplacement": 0,
   "FallSpeed": 0.0,
@@ -108,6 +108,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "402e934e-3711-44fa-994a-e5c0299ed654",
-  "LastModified": "2026-07-27T22:00:15.757396-07:00",
-  "LastModifiedBy": "creep"
+  "LastModified": "2026-10-21T20:53:03.4971101-07:00",
+  "LastModifiedBy": "rylan"
 }

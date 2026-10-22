@@ -843,11 +843,13 @@ if (state == eState.HITSTOP)
 			wallBouncing = false;
 			wallHit = false;
 			image_xscale *= -1; // Flip opponent around
+			image_index = 0;
 		}
 		if (floorHit)
 		{
 			floorBouncing = false;
 			floorHit = false;
+			image_index = 0;
 		}
 		
 		prevSprite = 0;

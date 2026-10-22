@@ -9121,7 +9121,7 @@
       "NumberOfEnhancements": 2,
       "SpecialData": [
         {
-          "NumpadInput": "632",
+          "NumpadInput": "426",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
           "EndingFrame": 15,
@@ -9132,7 +9132,7 @@
           "DeactivateSpirit": false
         },
         {
-          "NumpadInput": "412",
+          "NumpadInput": "624",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
           "EndingFrame": 15,
@@ -10471,6 +10471,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-10-20T20:13:05.4493627-07:00",
+  "LastModified": "2026-10-21T20:52:33.8088333-07:00",
   "LastModifiedBy": "rylan"
 }

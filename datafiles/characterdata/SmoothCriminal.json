@@ -3493,7 +3493,7 @@
           "AttackType": 1,
           "BlockStun": 9.0,
           "KnockBack": 2.0,
-          "AirKnockbackVertical": -2.5,
+          "AirKnockbackVertical": -3.8,
           "AirKnockbackHorizontal": -0.75,
           "Launches": true,
           "LaunchKnockbackVertical": -4.6,
@@ -3527,7 +3527,7 @@
           "AttackHitStop": 12,
           "AttackHitStun": 30,
           "KnockBack": 1.5,
-          "AirKnockbackVertical": -3.5,
+          "AirKnockbackVertical": -4.6,
           "AirKnockbackHorizontal": 0.5,
           "Launches": true,
           "LaunchKnockbackVertical": -4.6,
@@ -7532,6 +7532,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "84f4e241-e0ed-4b5f-b251-3015908394b4",
-  "LastModified": "2026-10-20T20:15:45.1617181-07:00",
+  "LastModified": "2026-10-21T21:01:16.0315457-07:00",
   "LastModifiedBy": "rylan"
 }

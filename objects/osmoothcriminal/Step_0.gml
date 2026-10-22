@@ -482,42 +482,7 @@ if (hostObject.opponent != noone)
 		{
 			hostObject.environmentDisplacement += environmentDisplacement;
 		}
-		/*
-		// While the players are still touching
-		while(place_meeting(x+hsp+environmentDisplacement, y , hostObject.opponent))
-		{
-			// This logic is different depending on if the spirit is next to its host or not
-			if (nextToPlayer)
-			{
-				if (hostObject.x > hostObject.opponent.x)
-				{
-					environmentDisplacement += .5;
-					hostObject.environmentDisplacement += .5;
-					hostObject.opponent.x -= .5;
-				}
-				else 
-				{
-					environmentDisplacement -= .5;
-					hostObject.environmentDisplacement -= .5;
-					hostObject.opponent.x += .5;
-				}
-			}
-			else
-			{
-				// Move the players away from each other
-				if (x > hostObject.opponent.x)
-				{
-					environmentDisplacement += .5;
-					hostObject.opponent.x -= .5;
-				}
-				else 
-				{
-					environmentDisplacement -= .5;
-					hostObject.opponent.x += .5;
-				}
-			}
-		}
-		*/
+		
 		hostObject.opponent.environmentDisplacement = -environmentDisplacement; // give opponent their environment displacement
 		hostObject.opponent.x = origanalX; // Return oponent to original position
 	}
