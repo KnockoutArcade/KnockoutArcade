@@ -2722,7 +2722,7 @@
     {
       "UID": "e7e60079-de4c-404e-91ba-e42e4a564899",
       "MoveType": 64,
-      "MoveCanCancelInto": 7539096,
+      "MoveCanCancelInto": 8063384,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7322,7 +7322,7 @@
     {
       "UID": "1a8a6520-bcf7-4039-9e99-081309c4c8f4",
       "MoveType": 32,
-      "MoveCanCancelInto": 6490456,
+      "MoveCanCancelInto": 7014744,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7604,7 +7604,7 @@
     {
       "UID": "2073dfc1-f8a1-4b14-918e-85145648d7ed",
       "MoveType": 256,
-      "MoveCanCancelInto": 6492696,
+      "MoveCanCancelInto": 7016984,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7824,7 +7824,7 @@
     {
       "UID": "4afa7429-6d41-4bd5-97f3-04638476f409",
       "MoveType": 1024,
-      "MoveCanCancelInto": 6496024,
+      "MoveCanCancelInto": 7020312,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -7922,7 +7922,7 @@
     {
       "UID": "b0bd9bb2-37ff-4865-b873-591085816194",
       "MoveType": 2048,
-      "MoveCanCancelInto": 6492696,
+      "MoveCanCancelInto": 7016984,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -9118,10 +9118,10 @@
         "GroundOrAir": false,
         "CancelWhenLanding": false
       },
-      "NumberOfEnhancements": 2,
+      "NumberOfEnhancements": 1,
       "SpecialData": [
         {
-          "NumpadInput": "426",
+          "NumpadInput": "632",
           "ButtonPressRequired": false,
           "StartingFrame": 1,
           "EndingFrame": 15,
@@ -9129,17 +9129,6 @@
           "TransitionImmediately": false,
           "TransitionFrame": 16,
           "RequiredPosition": 0,
-          "DeactivateSpirit": false
-        },
-        {
-          "NumpadInput": "624",
-          "ButtonPressRequired": false,
-          "StartingFrame": 1,
-          "EndingFrame": 15,
-          "EnhancementMove": 2048,
-          "TransitionImmediately": false,
-          "TransitionFrame": 16,
-          "RequiredPosition": 1,
           "DeactivateSpirit": false
         }
       ],
@@ -9249,7 +9238,7 @@
     {
       "UID": "6406db7f-a360-4eb0-8404-bec650d599f6",
       "MoveType": 524288,
-      "MoveCanCancelInto": 0,
+      "MoveCanCancelInto": 4390936,
       "EnhanceMoveType": 0,
       "EnhanceMoveCanCancelInto": 0,
       "InMovesets": [
@@ -9258,7 +9247,7 @@
       "SwitchMoveset": false,
       "SwitchToMoveset": 0,
       "SpriteName": "sJay_DownSpecial1_Mockup_strip4",
-      "Duration": 12,
+      "Duration": 21,
       "NumberOfFrames": 4,
       "FrameData": [
         {
@@ -10471,6 +10460,6 @@
   },
   "Version": "Ver1.2.5",
   "UID": "b43c156e-fff7-4aa8-a779-b5eefcae5cb7",
-  "LastModified": "2026-10-21T20:52:33.8088333-07:00",
+  "LastModified": "2026-10-21T21:40:16.7524836-07:00",
   "LastModifiedBy": "rylan"
 }
